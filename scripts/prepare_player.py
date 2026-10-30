@@ -9,7 +9,8 @@ def git(*args,check=True):
 
 def main():
     assert git('branch','--show-current').stdout.strip()=='anjan','Switch the parent repository to anjan before applying source changes'
-    assert git('-C','dash.js','rev-parse','HEAD').stdout.strip()==PIN,'Unexpected dash.js base revision'
+    recorded_pin=git('rev-parse','HEAD:dash.js').stdout.strip()
+    assert git('-C','dash.js','rev-parse','HEAD').stdout.strip() in {PIN,recorded_pin},'Unexpected dash.js revision'
     branch=git('-C','dash.js','branch','--show-current').stdout.strip()
     if branch!='anjan':
         if not branch:

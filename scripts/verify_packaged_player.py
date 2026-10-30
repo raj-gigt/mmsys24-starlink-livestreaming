@@ -13,8 +13,9 @@ scratch=cache/('player-patch-check-'+datetime.now(timezone.utc).strftime('%Y%m%d
 assert not scratch.exists()
 def run(args):return subprocess.run(args,check=True,capture_output=True,text=True)
 run(['git','clone','--shared','--no-checkout',str(root/'dash.js'),str(scratch)])
-assert run(['git','-C',str(scratch),'rev-parse','refs/heads/anjan']).stdout.strip()=='fdd27c559dc2ea8a1e3a6d5f3d4aa88d9bbbbffc'
-run(['git','-C',str(scratch),'checkout','anjan'])
+# Recreate the legacy patch from its original base, even when anjan now has
+# a proper player commit. This checkout is a newly created scratch clone.
+run(['git','-C',str(scratch),'checkout','-B','anjan','fdd27c559dc2ea8a1e3a6d5f3d4aa88d9bbbbffc'])
 patch=root/'patches/dashjs-anjan.patch'
 run(['git','-C',str(scratch),'apply','--check',str(patch)])
 run(['git','-C',str(scratch),'apply',str(patch)])

@@ -14,7 +14,7 @@ def git(*args):return subprocess.check_output(['git',*args],cwd=ROOT,text=True).
 def main():
     assert git('branch','--show-current')=='anjan'
     assert git('-C','dash.js','branch','--show-current')=='anjan'
-    assert git('-C','dash.js','rev-parse','HEAD')=='fdd27c559dc2ea8a1e3a6d5f3d4aa88d9bbbbffc'
+    assert git('-C','dash.js','rev-parse','HEAD')==git('rev-parse','HEAD:dash.js')
     assert git('-C','livesim2','status','--porcelain')==''
     assert git('-C','paper-data','status','--porcelain')==''
     assert (ROOT/'artifacts/setup/net-admin.txt').stat().st_size>0

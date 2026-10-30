@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "fixtures": 44,
+  "recorded_player_fixtures": 40,
+  "max_absolute_logit_error": 0.000030517578125,
+  "max_preprocessing_error": 0,
+  "action_agreement": 1,
+  "return_type": "Completed synchronous object",
+  "invalid_input": "Rejected",
+  "scope": "Numerical and interface correctness; not proof of improved browser QoE"
+}

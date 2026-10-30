@@ -1,0 +1,134 @@
+{
+  "url": "https://lens-starlink.jinwei.me/victoria/irtt/2025/11/2025-11-14/irtt-sttlwax1-10ms-1h-2025-11-14-19-00-00.json.gz",
+  "path": "data/raw/lens/victoria-irtt-20251114-1900.json.gz",
+  "sha256": "fa66c86d53aae72b19dd7506ba149ce06d2ec98744b0dab59ad0bcc9c4d9516c",
+  "downloaded_utc": "2026-10-29T22:30:21.532061+00:00",
+  "compressed_bytes": 36411894,
+  "validated_uncompressed_bytes": 414270392,
+  "gzip_crc_check": "PASS",
+  "kind": "independent measured RTT session",
+  "recording_id": "victoria-20251114-1900",
+  "license": "CC-BY-SA-4.0",
+  "attribution": "Jinwei Zhao and Jianping Pan, LENS: A LEO Satellite Network Measurement Dataset, MMSys 2024, doi:10.1145/3625468.3652170",
+  "stats": {
+    "start_time": {
+      "wall": 1763146800121191189,
+      "monotonic": 82502822
+    },
+    "send_call": {
+      "total": 22077230953,
+      "n": 359416,
+      "min": 4344,
+      "max": 2242497,
+      "mean": 61425,
+      "stddev": 41581,
+      "variance": 1729046553
+    },
+    "timer_error": {
+      "total": 98757040478,
+      "n": 359415,
+      "min": 1,
+      "max": 6645404,
+      "mean": 274771,
+      "stddev": 164116,
+      "variance": 26934094472
+    },
+    "rtt": {
+      "total": 9760540396489,
+      "n": 358129,
+      "min": 12908914,
+      "max": 2416799574,
+      "mean": 27254258,
+      "median": 24432708,
+      "stddev": 39456060,
+      "variance": 1556780686176395
+    },
+    "send_delay": {
+      "total": 7105609023002,
+      "n": 358129,
+      "min": 8858394,
+      "max": 2410508249,
+      "mean": 19840920,
+      "median": 16961251,
+      "stddev": 39082245,
+      "variance": 1527421886774464
+    },
+    "receive_delay": {
+      "total": 2654894363444,
+      "n": 358129,
+      "min": 1080338,
+      "max": 510473983,
+      "mean": 7413234,
+      "median": 6669536,
+      "stddev": 4024321,
+      "variance": 16195164480937
+    },
+    "server_packets_received": 359070,
+    "bytes_sent": 21564960,
+    "bytes_received": 21487740,
+    "duplicates": 0,
+    "late_packets": 36,
+    "wait": 7250398722,
+    "duration": 3607242073331,
+    "packets_sent": 359416,
+    "packets_received": 358129,
+    "packet_loss_percent": 0.3580808867718744,
+    "upstream_loss_percent": 0.09626727802880228,
+    "downstream_loss_percent": 0.2620658924443702,
+    "duplicate_percent": 0,
+    "late_packets_percent": 0.010052243744572486,
+    "ipdv_send": {
+      "total": 1621595457595,
+      "n": 357218,
+      "min": 45,
+      "max": 2396093410,
+      "mean": 4539512,
+      "median": 2705556,
+      "stddev": 7118987,
+      "variance": 50679980368553
+    },
+    "ipdv_receive": {
+      "total": 692223315245,
+      "n": 357218,
+      "min": 0,
+      "max": 492762641,
+      "mean": 1937817,
+      "median": 597650,
+      "stddev": 3103762,
+      "variance": 9633343958893
+    },
+    "ipdv_round_trip": {
+      "total": 1817677476676,
+      "n": 357218,
+      "min": 61,
+      "max": 2343749288,
+      "mean": 5088426,
+      "median": 3283360,
+      "stddev": 7208420,
+      "variance": 51961323063645
+    },
+    "server_processing_time": {
+      "total": 1189179537,
+      "n": 358129,
+      "min": 500,
+      "max": 5865506,
+      "mean": 3320,
+      "stddev": 11243,
+      "variance": 126406712
+    },
+    "timer_err_percent": 2.74771,
+    "timer_misses": 584,
+    "timer_miss_percent": 0.1622222222222222,
+    "send_rate": {
+      "bps": 47922,
+      "string": "47.9 Kbps"
+    },
+    "receive_rate": {
+      "bps": 47750,
+      "string": "47.8 Kbps"
+    }
+  },
+  "purpose": "Post-review calibration reserve; never loaded by the Phase A trainer",
+  "contains_throughput": false,
+  "used_in_pilot_split": false
+}

@@ -1,0 +1,178 @@
+name: leo_abr_rl
+services:
+  chrome:
+    environment:
+      SE_NODE_SESSION_TIMEOUT: "36000"
+    image: selenium/standalone-chrome:4.10.0-20230607
+    networks:
+      dashjs:
+        ipv4_address: 192.167.0.102
+    ports:
+      - mode: ingress
+        target: 4444
+        published: "4444"
+        protocol: tcp
+      - mode: ingress
+        target: 7900
+        published: "7900"
+        protocol: tcp
+    shm_size: "2147483648"
+  dashjs:
+    depends_on:
+      pyodide:
+        condition: service_started
+        required: true
+    image: clarkzjw/dashjs:master
+    networks:
+      dashjs:
+        ipv4_address: 192.167.0.101
+    ports:
+      - mode: ingress
+        target: 3000
+        protocol: tcp
+    restart: always
+  livesim2:
+    image: clarkzjw/dashjs-livesim2:master
+    networks:
+      dashjs:
+        ipv4_address: 192.167.0.108
+    ports:
+      - mode: ingress
+        target: 8888
+        published: "8888"
+        protocol: tcp
+    restart: always
+  mongo:
+    environment:
+      MONGO_INITDB_ROOT_PASSWORD: starlink
+      MONGO_INITDB_ROOT_USERNAME: starlink
+    image: mongo:4.4.22
+    networks:
+      dashjs:
+        ipv4_address: 192.167.0.105
+    ports:
+      - mode: ingress
+        target: 27017
+        published: "27017"
+        protocol: tcp
+    restart: always
+    volumes:
+      - type: volume
+        source: mongodb
+        target: /data/db
+        volume: {}
+  mongo-express:
+    depends_on:
+      mongo:
+        condition: service_started
+        required: true
+    environment:
+      ME_CONFIG_MONGODB_ADMINPASSWORD: starlink
+      ME_CONFIG_MONGODB_ADMINUSERNAME: starlink
+      ME_CONFIG_MONGODB_URL: mongodb://starlink:starlink@mongo:27017/
+    image: mongo-express
+    networks:
+      dashjs:
+        ipv4_address: 192.167.0.106
+    ports:
+      - mode: ingress
+        target: 8081
+        published: "8081"
+        protocol: tcp
+    restart: always
+  nginx:
+    build:
+      context: /mnt/c/Users/HP/Desktop/LEO/LEO_ABR_RL
+      dockerfile: Dockerfile-nginx-emulation
+    cap_add:
+      - NET_ADMIN
+    container_name: dashjs-nginx
+    image: clarkzjw/dashjs-nginx:emulation
+    networks:
+      dashjs:
+        ipv4_address: 192.167.0.107
+    ports:
+      - mode: ingress
+        target: 443
+        published: "443"
+        protocol: tcp
+    restart: always
+    volumes:
+      - type: bind
+        source: /mnt/c/Users/HP/Desktop/LEO/LEO_ABR_RL/runner/trace/isl-trace.csv
+        target: /trace/trace.csv
+        bind: {}
+  pyodide:
+    image: clarkzjw/dashjs-pyodide:master
+    networks:
+      dashjs:
+        ipv4_address: 192.167.0.109
+    ports:
+      - mode: ingress
+        target: 80
+        protocol: tcp
+    restart: always
+  runner:
+    build:
+      context: /mnt/c/Users/HP/Desktop/LEO/LEO_ABR_RL
+      dockerfile: Dockerfile-runner
+    container_name: dashjs-runner
+    depends_on:
+      chrome:
+        condition: service_started
+        required: true
+      dashjs:
+        condition: service_started
+        required: true
+      mongo:
+        condition: service_started
+        required: true
+      stat-server:
+        condition: service_started
+        required: true
+    environment:
+      VIDEO: "0"
+      WORKDIR: /mnt/c/Users/HP/Desktop/LEO/LEO_ABR_RL
+    image: clarkzjw/dashjs-runner:master
+    networks:
+      dashjs:
+        ipv4_address: 192.167.0.103
+    privileged: true
+    volumes:
+      - type: bind
+        source: /mnt/c/Users/HP/Desktop/LEO/LEO_ABR_RL/experiments/batch-example.json
+        target: /batch.json
+        bind: {}
+      - type: bind
+        source: /mnt/c/Users/HP/Desktop/LEO/LEO_ABR_RL/figures
+        target: /figures
+        bind: {}
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
+        bind: {}
+  stat-server:
+    environment:
+      LATENCY_TEST_INTERVAL_SECONDS: "1"
+    image: clarkzjw/dashjs-stats-server:master
+    networks:
+      dashjs:
+        ipv4_address: 192.167.0.104
+    ports:
+      - mode: ingress
+        target: 8000
+        protocol: tcp
+networks:
+  dashjs:
+    name: dashjs
+    driver: bridge
+    driver_opts:
+      com.docker.network.bridge.enable_ip_masquerade: "true"
+    ipam:
+      driver: default
+      config:
+        - subnet: 192.167.0.0/24
+          gateway: 192.167.0.1
+volumes:
+  mongodb:
+    name: leo_abr_rl_mongodb

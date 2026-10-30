@@ -1,0 +1,58 @@
+{
+  "run_id": "phasea-abrAnjanSimple-20261029T222254-d1324b",
+  "decisions": 40,
+  "selected_actions": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "matched_completed_requests": 39,
+  "mongo_logged_decisions_via_existing_route": 42,
+  "played_quality_indices": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "fallbacks": 0,
+  "complete_new_decision_ms_p50_p95_p99": [
+    0.09999999997671694,
+    0.2000000000698492,
+    0.2610000000556465
+  ],
+  "examples": [
+    {
+      "decision_id": "0-1",
+      "action": 0,
+      "representation_id": "cfhd_sets/12.5_25_50/t34/2023-04-28/1",
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/896656286.m4s"
+    },
+    {
+      "decision_id": "0-2",
+      "action": 2,
+      "representation_id": "cfhd_sets/12.5_25_50/t28/2023-04-28/1",
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/896656287.m4s"
+    },
+    {
+      "decision_id": "0-3",
+      "action": 4,
+      "representation_id": "cfhd_sets/12.5_25_50/t25/2023-04-28/1",
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/896656288.m4s"
+    },
+    {
+      "decision_id": "0-4",
+      "action": 4,
+      "representation_id": "cfhd_sets/12.5_25_50/t25/2023-04-28/1",
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/896656289.m4s"
+    }
+  ],
+  "scope": "Integration demonstration; no claim of final-policy improvement.",
+  "high_low_recovery_median_selected_bps": [
+    1500000.0,
+    450000.0,
+    1500000.0
+  ]
+}

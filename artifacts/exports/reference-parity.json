@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "fixtures": 64,
+  "max_absolute_logit_error": 0.00003814697265625,
+  "max_absolute_intermediate_error": 0.00000667572021484375,
+  "max_preprocessing_error": 2.220446049250313e-16,
+  "action_agreement": 1,
+  "minimum_fixture_top_two_logit_gap": 0.0991668701171875,
+  "tie_checks": "First-index exact tie and small positive margin passed",
+  "invalid_input": "Rejected",
+  "scope": "Faithful native-input reference export; not deployed in the eight-action player."
+}

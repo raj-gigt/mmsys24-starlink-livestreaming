@@ -1,0 +1,7 @@
+# Reuse the pinned upstream dependency environment; replace source with this checkout.
+FROM clarkzjw/dashjs:master@sha256:e33ea6a8cb46d026163cab89c4641acbea9ccd8f134c977ac5d8665bdbb7c0a9
+COPY dash.js/src /dash.js/src
+COPY dash.js/samples/starlink/testplayer /dash.js/samples/starlink/testplayer
+COPY rl/web /dash.js/anjan
+WORKDIR /dash.js
+CMD ["npm", "run", "start"]

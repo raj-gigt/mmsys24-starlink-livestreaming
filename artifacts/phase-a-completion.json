@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "completed_utc": "2026-10-30T02:06:09.747555+00:00",
+  "steps": {
+    "1": "Complete",
+    "2": "Complete",
+    "3": "Complete",
+    "4": "Complete",
+    "5": "Complete",
+    "6": "Complete"
+  },
+  "branch": "anjan",
+  "archived_figures": 25,
+  "existing_baseline_algorithms_checked": 4,
+  "matched_fresh_demo_runs": 3,
+  "native_reference_fixtures": 64,
+  "pilot_fixtures": 44,
+  "real_chrome_decisions_verified": 39,
+  "complete_decision_p99_ms": 0.40000000037252903,
+  "test_used_for_model_selection": false,
+  "step7_executed": false,
+  "limitations": [
+    "Integration pilot, not final LEO-aware model",
+    "No statistically supported CMAB improvement claim",
+    "Training capacity synthetic; one pilot seed; incomplete browser calibration",
+    "StarNet throughput not imported"
+  ]
+}

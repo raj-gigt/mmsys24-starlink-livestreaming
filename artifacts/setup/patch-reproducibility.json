@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "base_commit": "fdd27c559dc2ea8a1e3a6d5f3d4aa88d9bbbbffc",
+  "scratch_branch": "anjan",
+  "patch_sha256": "8dfa0e95f6e84cf92c52f611c54cec34fc7075395ae26a26208bfd4dd0d6077e",
+  "files_recreated_identically": {
+    "samples/starlink/testplayer/testplayer.html": "579ce16c64c5aca825f7ec4970585fc8888f94e2973fa77b1b828c140a8ed55e",
+    "src/streaming/constants/Constants.js": "ac78785dec256c16402eba12638a2c8d25ca5a750a9f6c85278f1e75b0201f7a",
+    "src/streaming/rules/abr/ABRRulesCollection.js": "467ed01b63ea511bc1f7a0c83bf24785b8a084191e4d1c7abf18301f77b23a46",
+    "src/streaming/rules/abr/anjan/AnjanRule.js": "b5cc3f2d41ce7c2bbcc9806a835c0af86d7b255ec738e185b5254bc35fc550bf"
+  },
+  "method": "Fresh shared clone outside the project, branch created before patch application",
+  "scratch_path": "C:\\Users\\HP\\AppData\\Local\\LEO-RL\\cache\\builds\\player-patch-check-20261030T015826"
+}

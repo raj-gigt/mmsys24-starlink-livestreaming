@@ -1,0 +1,72 @@
+[
+  {
+    "run_id": "phasea-abrCMAB-20261029T222133-cd2815",
+    "collection_documents": {
+      "events": 13,
+      "metric": 13,
+      "qoe": 63,
+      "decisions": 0
+    },
+    "path": "artifacts/runs/phasea-abrCMAB-20261029T222133-cd2815/mongo"
+  },
+  {
+    "run_id": "phasea-abrDynamic-20261029T221627-f1598d",
+    "collection_documents": {
+      "events": 10,
+      "metric": 10,
+      "qoe": 0,
+      "decisions": 0
+    },
+    "path": "artifacts/runs/phasea-abrDynamic-20261029T221627-f1598d/mongo"
+  },
+  {
+    "run_id": "phasea-abrL2A-20261029T221720-9b93f8",
+    "collection_documents": {
+      "events": 10,
+      "metric": 10,
+      "qoe": 0,
+      "decisions": 0
+    },
+    "path": "artifacts/runs/phasea-abrL2A-20261029T221720-9b93f8/mongo"
+  },
+  {
+    "run_id": "phasea-abrLoLP-20261029T221939-5b3166",
+    "collection_documents": {
+      "events": 10,
+      "metric": 10,
+      "qoe": 0,
+      "decisions": 0
+    },
+    "path": "artifacts/runs/phasea-abrLoLP-20261029T221939-5b3166/mongo"
+  },
+  {
+    "run_id": "phasea-abrAnjanRL-20261030T015230-d5d3b4",
+    "collection_documents": {
+      "events": 16,
+      "metric": 16,
+      "qoe": 0,
+      "decisions": 39
+    },
+    "path": "artifacts/runs/phasea-abrAnjanRL-20261030T015230-d5d3b4/mongo"
+  },
+  {
+    "run_id": "phasea-abrCMAB-20261030T015422-bb83ce",
+    "collection_documents": {
+      "events": 16,
+      "metric": 16,
+      "qoe": 35,
+      "decisions": 0
+    },
+    "path": "artifacts/runs/phasea-abrCMAB-20261030T015422-bb83ce/mongo"
+  },
+  {
+    "run_id": "phasea-abrAnjanSimple-20261030T015622-a545bb",
+    "collection_documents": {
+      "events": 16,
+      "metric": 16,
+      "qoe": 0,
+      "decisions": 39
+    },
+    "path": "artifacts/runs/phasea-abrAnjanSimple-20261030T015622-a545bb/mongo"
+  }
+]

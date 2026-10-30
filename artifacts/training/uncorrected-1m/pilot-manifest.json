@@ -1,0 +1,47 @@
+{
+  "created_utc": "2026-10-29T22:43:44.239238+00:00",
+  "label": "pilot-trained player-compatible A2C adaptation",
+  "algorithm": "Stable-Baselines3 A2C",
+  "seed": 42,
+  "requested_steps": 1000000,
+  "actual_steps": 1000192,
+  "training_wall_s": 291.6678665000072,
+  "steps_per_s": 3429.215607472396,
+  "actor": "36 -> 64 ReLU -> 64 ReLU -> 8 logits",
+  "actor_parameter_count": 7048,
+  "selection": "Highest mean return on the fixed 18-scenario validation set at 20k-decision intervals; no test evaluation.",
+  "validation_interval_decisions": 100000,
+  "selected_at_collected_decisions": 100000,
+  "selected_checkpoint_sha256": "32b3d8344cc6db5636741a3135521109c25a270950a53c839e41e73f9017a83e",
+  "train_manifest_sha256": "f739247bf5d3dcb40eba64c44ffed7f8bf44f499120fe1cabc2966e6ab5da2c9",
+  "validation_manifest_sha256": "615f1439ac5f32a018ae821d949ccbdaa45d468ea35d0cf7ae230f7f84d70fff",
+  "selected_validation_mean_return": 81.04610526213399,
+  "untrained_validation_mean_return": 36.54955048754373,
+  "fixed_low_validation_mean_return": -5.824360636317984,
+  "fixed_1500_validation_mean_return": 106.7052099392845,
+  "reward": {
+    "quality": "Integral of log(nominal bitrate/300kbps) over actually played media seconds / 2",
+    "stall_coefficient_per_s": 4,
+    "startup_coefficient_per_s": 1,
+    "log_quality_variation_coefficient": 0.3,
+    "excess_live_latency_area_coefficient": 0.1,
+    "excess_live_latency_target_s": 3
+  },
+  "catchup": "Approximate LoL+ sigmoid, playback rate 0.83..1.17, buffer minimum 0.5s, drift seek at target+5s.",
+  "status": "Integration pilot only; not calibrated or final LEO-aware policy; one seed; no performance claim over CMAB.",
+  "not_observed_by_actor": [
+    "RTT",
+    "live_latency",
+    "future capacity/outage",
+    "handover state",
+    "trace identity"
+  ],
+  "limitations": [
+    "Whole-segment model",
+    "Synthetic capacity and explicit interruptions",
+    "No TCP/congestion/loss dynamics",
+    "Approximate seek/catch-up lifecycle",
+    "Single-source chronological RTT split",
+    "One pilot seed"
+  ]
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MPD xmlns="urn:mpeg:dash:schema:mpd:2011" profiles="urn:mpeg:dash:profile:isoff-live:2011,urn:mpeg:dash:profile:cmaf:2019,urn:cta:wave:test-content-media-profile:2022" type="dynamic" availabilityStartTime="1970-01-01T00:00:00Z" publishTime="1970-01-01T00:00:00Z" minimumUpdatePeriod="PT2S" minBufferTime="PT2S" timeShiftBufferDepth="PT1M" maxSegmentDuration="PT2S">
+  <ProgramInformation>
+    <Title>croatia, 1920x1080, 25.0fps, cfhd, Test Vector SS1</Title>
+    <Source>croatia_L1_1920x1080@25_30 version 4</Source>
+    <Copyright>© Croatia (2019), credited to EBU, used and licensed under Creative Commons Attribution 4.0 International (CC BY 4.0) (https://creativecommons.org/licenses/by/4.0/) by the Consumer Technology Association (CTA)® / annotated, encoded and compressed from original.</Copyright>
+  </ProgramInformation>
+  <Period id="P0" start="PT0S">
+    <AssetIdentifier schemeIdUri="urn:cta:org:wave-test-mezzanine:unique-id" value="0.1"></AssetIdentifier>
+    <AdaptationSet lang="und" contentType="video" par="16:9" maxWidth="1920" maxHeight="1080" maxFrameRate="50" segmentAlignment="true" initializationPrincipal="cfhd_sets/12.5_25_50/t19/init.mp4" containerProfiles="cmf2 cfhd" startWithSAP="1">
+      <SegmentTemplate media="$RepresentationID$/$Number$.m4s" initialization="$RepresentationID$/init.mp4" duration="25600" startNumber="0" timescale="12800"></SegmentTemplate>
+      <Representation id="cfhd_sets/12.5_25_50/t19/2023-04-28/1" bandwidth="5100000" width="1920" height="1080" sar="1:1" frameRate="25" mimeType="video/mp4" codecs="avc1.640028"></Representation>
+      <Representation id="chdf_sets/12.5_25_50/t20/2023-04-28/1" bandwidth="6000000" width="1920" height="1080" sar="1:1" frameRate="50" mimeType="video/mp4" codecs="avc1.64002A"></Representation>
+      <Representation id="cfhd_sets/12.5_25_50/t23/2023-04-28/1" bandwidth="4900000" width="1920" height="1080" sar="1:1" frameRate="50" mimeType="video/mp4" codecs="avc1.640028"></Representation>
+      <Representation id="cfhd_sets/12.5_25_50/t24/2023-04-28/1" bandwidth="1200000" width="1024" height="576" sar="1:1" frameRate="25" mimeType="video/mp4" codecs="avc1.640028"></Representation>
+      <Representation id="cfhd_sets/12.5_25_50/t25/2023-04-28/1" bandwidth="1500000" width="1024" height="576" sar="1:1" frameRate="25" mimeType="video/mp4" codecs="avc1.640028"></Representation>
+      <Representation id="cfhd_sets/12.5_25_50/t28/2023-04-28/1" bandwidth="900000" width="768" height="432" sar="1:1" frameRate="25" mimeType="video/mp4" codecs="avc1.640028"></Representation>
+      <Representation id="cfhd_sets/12.5_25_50/t32/2023-04-28/1" bandwidth="450000" width="512" height="288" sar="1:1" frameRate="25" mimeType="video/mp4" codecs="avc1.640028"></Representation>
+      <Representation id="cfhd_sets/12.5_25_50/t34/2023-04-28/1" bandwidth="300000" width="480" height="270" sar="1:1" frameRate="12800/1024" mimeType="video/mp4" codecs="avc1.640028"></Representation>
+    </AdaptationSet>
+  </Period>
+  <UTCTiming schemeIdUri="urn:mpeg:dash:utc:http-iso:2014" value="http://time.akamai.com/?isoms"></UTCTiming>
+</MPD>

@@ -1,0 +1,101 @@
+[
+  {
+    "steps": 100000,
+    "validation_return": 81.04610526213399,
+    "validation_stall_s": 3.034023223462853,
+    "train_episode_return": -66.3454502,
+    "action_counts": {
+      "2": 1652
+    }
+  },
+  {
+    "steps": 200000,
+    "validation_return": 77.73060679563976,
+    "validation_stall_s": 2.7057822444723,
+    "train_episode_return": -20.738158029999994,
+    "action_counts": {
+      "0": 91,
+      "2": 1562
+    }
+  },
+  {
+    "steps": 300000,
+    "validation_return": 80.62782005922824,
+    "validation_stall_s": 2.7213244982506497,
+    "train_episode_return": 8.79998346,
+    "action_counts": {
+      "0": 42,
+      "2": 1611
+    }
+  },
+  {
+    "steps": 400000,
+    "validation_return": 74.66631667358625,
+    "validation_stall_s": 2.6374156366884547,
+    "train_episode_return": -4.754049700000001,
+    "action_counts": {
+      "0": 147,
+      "2": 1506
+    }
+  },
+  {
+    "steps": 500000,
+    "validation_return": 80.62782005922824,
+    "validation_stall_s": 2.7213244982506497,
+    "train_episode_return": 21.738848119999997,
+    "action_counts": {
+      "0": 42,
+      "2": 1611
+    }
+  },
+  {
+    "steps": 600000,
+    "validation_return": 78.2557239087129,
+    "validation_stall_s": 2.7057848073558217,
+    "train_episode_return": 20.285121869999998,
+    "action_counts": {
+      "0": 83,
+      "2": 1570
+    }
+  },
+  {
+    "steps": 700000,
+    "validation_return": 76.60307844488392,
+    "validation_stall_s": 2.685406967470536,
+    "train_episode_return": 5.826990200000003,
+    "action_counts": {
+      "0": 111,
+      "2": 1542
+    }
+  },
+  {
+    "steps": 800000,
+    "validation_return": 79.90753875901463,
+    "validation_stall_s": 2.704709808631616,
+    "train_episode_return": 2.01969524,
+    "action_counts": {
+      "0": 56,
+      "2": 1597
+    }
+  },
+  {
+    "steps": 900000,
+    "validation_return": 80.63621232399895,
+    "validation_stall_s": 2.7117376918981835,
+    "train_episode_return": 20.32322313,
+    "action_counts": {
+      "0": 43,
+      "2": 1610
+    }
+  },
+  {
+    "steps": 1000000,
+    "validation_return": 80.63621232399895,
+    "validation_stall_s": 2.7117376918981835,
+    "train_episode_return": 0.040516310000001284,
+    "action_counts": {
+      "0": 43,
+      "2": 1610
+    }
+  }
+]

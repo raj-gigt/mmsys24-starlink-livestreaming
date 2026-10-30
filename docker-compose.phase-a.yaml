@@ -1,0 +1,5 @@
+# Shared repairs/instrumentation. No policy-specific network or player settings.
+services:
+  nginx:
+    volumes:
+      - ./shaper/tc-phase-a.py:/tc-trace.py:ro

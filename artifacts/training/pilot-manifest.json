@@ -1,0 +1,53 @@
+{
+  "created_utc": "2026-10-30T01:48:39.886887+00:00",
+  "label": "pilot-trained player-compatible A2C adaptation",
+  "algorithm": "Stable-Baselines3 A2C",
+  "seed": 42,
+  "requested_steps": 50000,
+  "actual_steps": 50176,
+  "training_wall_s": 16.19104599999264,
+  "steps_per_s": 3098.9968158958236,
+  "actor": "36 -> 64 ReLU -> 64 ReLU -> 8 logits",
+  "actor_parameter_count": 7048,
+  "selection": "Highest mean return on the fixed 18-scenario validation set at 5000-decision intervals; no test evaluation.",
+  "validation_interval_decisions": 5000,
+  "normalize_advantage": true,
+  "learning_rate": 3e-05,
+  "initialization": "Training-only imitation of causal throughput/buffer rule, then A2C",
+  "warmstart_samples": 12000,
+  "warmstart_validation_mean_return": 126.13969087172372,
+  "selected_optimizer_updates": 195,
+  "selected_at_collected_decisions": 50000,
+  "selected_checkpoint_sha256": "9f00f1a5d2fbc33f635e90595de44ccb536d36d93ac65c80670e64af46387471",
+  "train_manifest_sha256": "f739247bf5d3dcb40eba64c44ffed7f8bf44f499120fe1cabc2966e6ab5da2c9",
+  "validation_manifest_sha256": "615f1439ac5f32a018ae821d949ccbdaa45d468ea35d0cf7ae230f7f84d70fff",
+  "selected_validation_mean_return": 127.50399201976082,
+  "untrained_validation_mean_return": 131.6438120782038,
+  "fixed_low_validation_mean_return": -5.824360636317984,
+  "fixed_1500_validation_mean_return": 106.7052099392845,
+  "reward": {
+    "quality": "Integral of log(nominal bitrate/300kbps) over actually played media seconds / 2",
+    "stall_coefficient_per_s": 4,
+    "startup_coefficient_per_s": 1,
+    "log_quality_variation_coefficient": 0.3,
+    "excess_live_latency_area_coefficient": 0.1,
+    "excess_live_latency_target_s": 3
+  },
+  "catchup": "Approximate LoL+ sigmoid, playback rate 0.83..1.17, buffer minimum 0.5s, drift seek at target+5s.",
+  "status": "Integration pilot only; not calibrated or final LEO-aware policy; one seed; no performance claim over CMAB.",
+  "not_observed_by_actor": [
+    "RTT",
+    "live_latency",
+    "future capacity/outage",
+    "handover state",
+    "trace identity"
+  ],
+  "limitations": [
+    "Whole-segment model",
+    "Synthetic capacity and explicit interruptions",
+    "No TCP/congestion/loss dynamics",
+    "Approximate seek/catch-up lifecycle",
+    "Single-source chronological RTT split",
+    "One pilot seed"
+  ]
+}

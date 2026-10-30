@@ -1,0 +1,20 @@
+{
+  "running_image_id": "sha256:d69f07e3f8e02230cc71d35404551a89600c8402162fa58e645b821567aea500",
+  "built_image_id": "sha256:8d757d2aeaf85f7966f4d40da2114a9a99979249a1f3554b6080e0254dda0400",
+  "same_image_id": false,
+  "pinned_base": "clarkzjw/dashjs@sha256:e33ea6a8cb46d026163cab89c4641acbea9ccd8f134c977ac5d8665bdbb7c0a9",
+  "build_marker": "anjan-phase-a-20261030-local-source-v1",
+  "pinned_build": "PASS",
+  "program_content_identical_between_running_and_pinned_build": true,
+  "critical_file_checksums": [
+    "b5cc3f2d41ce7c2bbcc9806a835c0af86d7b255ec738e185b5254bc35fc550bf  /dash.js/src/streaming/rules/abr/anjan/AnjanRule.js",
+    "010578d21f6815904e7493f49fc2dfdb88ecdfa5f41a539bc978621c68e23c2a  /dash.js/src/streaming/rules/abr/ABRRulesCollection.js",
+    "1216ef1b473271da2b77d1356c2d6e6af2358fb38ee31ed2decb1f3fc2597055  /dash.js/src/streaming/constants/Constants.js",
+    "2e48227af378bbce4cc414dbed11e45fb3d25768d71472372078f026091fca7d  /dash.js/samples/starlink/testplayer/testplayer.html",
+    "676b00fa8e5b973a67cde5ff2ae2a06bd26263e37e2615b725cd176368ace8e9  /dash.js/anjan/build_identity.js",
+    "ce5f4c121c4c7b4a8f7510d71d4c226ad5e1e15d999bbd98b8c13e77487aa2af  /dash.js/anjan/pilot_model.js",
+    "3aceb19751168a6b41e0392574e1a014dbb33aff0c6e2a28a770a44c5ad729d2  /dash.js/anjan/pilot_setup.js",
+    "b1fa2777a9efed38c38aaaa98eb76f694ef39e6511b6e06ad2a688daef6a0c83  /dash.js/anjan/policy_core.js",
+    "781f1b2749b6bd630101b918dde5a288b3306e8d9693f6f9f6081baa4c641324  /dash.js/anjan/sync_actor.js"
+  ]
+}

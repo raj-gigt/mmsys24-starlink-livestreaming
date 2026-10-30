@@ -1,0 +1,42 @@
+{
+  "chrome": {
+    "image": "selenium/standalone-chrome:4.10.0-20230607",
+    "id": "sha256:9fd0fe4f8a39f65aeecbdb38fc35eda6e505f217d9c0f0d3420b17cd187e9216",
+    "digest": "selenium/standalone-chrome@sha256:9fd0fe4f8a39f65aeecbdb38fc35eda6e505f217d9c0f0d3420b17cd187e9216"
+  },
+  "runner": {
+    "image": "clarkzjw/dashjs-runner:master",
+    "id": "sha256:6f68a35848178d00e2ff0c96bad9c81058dee988c942419462bb45349ecdc8f2",
+    "digest": "clarkzjw/dashjs-runner@sha256:6f68a35848178d00e2ff0c96bad9c81058dee988c942419462bb45349ecdc8f2"
+  },
+  "stat-server": {
+    "image": "clarkzjw/dashjs-stats-server:master",
+    "id": "sha256:4092caaf45f4d01318152d102a812fba4e27f74fab433c9de697f4e0f26b24dd",
+    "digest": "clarkzjw/dashjs-stats-server@sha256:4092caaf45f4d01318152d102a812fba4e27f74fab433c9de697f4e0f26b24dd"
+  },
+  "mongo": {
+    "image": "mongo:4.4.22",
+    "id": "sha256:dcef38a5b82ca7e1293055ededc22d38fb27fffb526523c70a4cbd864182c310",
+    "digest": "mongo@sha256:dcef38a5b82ca7e1293055ededc22d38fb27fffb526523c70a4cbd864182c310"
+  },
+  "mongo-express": {
+    "image": "mongo-express:latest",
+    "id": "sha256:1b23d7976f0210dbec74045c209e52fbb26d29b2e873d6c6fa3d3f0ae32c2a64",
+    "digest": "mongo-express@sha256:1b23d7976f0210dbec74045c209e52fbb26d29b2e873d6c6fa3d3f0ae32c2a64"
+  },
+  "nginx": {
+    "image": "clarkzjw/dashjs-nginx:emulation",
+    "id": "sha256:dda7dff44d4fe2109b6062ff8d4ea6d56b02abcc1f4b1d463f99eb745d7076d3",
+    "digest": "clarkzjw/dashjs-nginx@sha256:dda7dff44d4fe2109b6062ff8d4ea6d56b02abcc1f4b1d463f99eb745d7076d3"
+  },
+  "livesim2": {
+    "image": "clarkzjw/dashjs-livesim2:master",
+    "id": "sha256:8272fdb9433beebdbdbd1dc8ffdd2ad5feefed63cb43079fcf016e0db207b599",
+    "digest": "clarkzjw/dashjs-livesim2@sha256:8272fdb9433beebdbdbd1dc8ffdd2ad5feefed63cb43079fcf016e0db207b599"
+  },
+  "pyodide": {
+    "image": "clarkzjw/dashjs-pyodide:master",
+    "id": "sha256:8cc80e738d4b7762243d0b64d48cd1bff1c4c795c96f44fab94064a08d8b2d3b",
+    "digest": "clarkzjw/dashjs-pyodide@sha256:8cc80e738d4b7762243d0b64d48cd1bff1c4c795c96f44fab94064a08d8b2d3b"
+  }
+}

@@ -1,0 +1,141 @@
+{
+  "created_utc": "2026-10-29T22:30:38.912450+00:00",
+  "scope": "Local measured RTT plus explicitly synthetic link scenarios; not independent real-session generalization.",
+  "sources": [
+    {
+      "path": "runner\\trace\\irtt\\seychelles-irtt-10ms-1h-2024-01-30-01-00-00.csv",
+      "sha256": "f056e2f58139fb65c704448a1535856606a078dfb26147cc6898dae9e69efc15",
+      "kind": "measured_probe_RTT",
+      "recording_id": "seychelles-20240130-0100",
+      "timestamp_unit": "ns UTC epoch",
+      "rtt_unit": "ms",
+      "start_utc": "2024-01-30T01:00:00.734212+00:00",
+      "duration_s": 3599.988778752,
+      "rows": 353873,
+      "invalid_rtt_rows": 6366,
+      "rtt_positive_p5_p50_p95_ms": [
+        93.4089886,
+        132.325022,
+        271.2103761000001
+      ],
+      "max_sampling_gap_s": 0.027410176000103093,
+      "license": "Bundled in the upstream GPL-3.0 code repository; original LENS dataset distribution states CC-BY-SA-4.0. Preserve original data attribution."
+    },
+    {
+      "path": "runner\\trace\\isl-trace.csv",
+      "sha256": "1e2bd76dec57809c5713ebf72c4b632356e68462c9e7104c8b22e51979b3c627",
+      "kind": "derived_alias",
+      "recording_id": "seychelles-20240130-0100",
+      "not_independent": true,
+      "warning": "Original shaper maps non-positive RTT to 100% link loss; this is an emulation convention, not proof of a real outage."
+    },
+    {
+      "path": "paper-data\\src\\throughput\\downlink\\isl-irtt-10ms-2m-2023-09-21-06-10-00.json",
+      "sha256": "31e5720c1290031815232f532b032430e7d610768953be4749c542dc96aaa1a3",
+      "kind": "measured_probe_RTT_companion_to_short_iperf_example",
+      "probe_count": 11775,
+      "delay_unit": "ns",
+      "use": "Diagnostic only; audit exact timestamp overlap before combining channels."
+    },
+    {
+      "path": "paper-data\\src\\throughput\\downlink\\no-isl-irtt-10ms-2m-2023-09-21-06-10-00.json",
+      "sha256": "1a0542f3d97cb13663e1c1576f2de73e9f2545184acbc7b8c0b557068b174c43",
+      "kind": "measured_probe_RTT_companion_to_short_iperf_example",
+      "probe_count": 11782,
+      "delay_unit": "ns",
+      "use": "Diagnostic only; audit exact timestamp overlap before combining channels."
+    }
+  ],
+  "throughput_examples": [
+    {
+      "path": "paper-data\\src\\throughput\\downlink\\isl-iperf3-0.1s-2m-2023-09-21-06-10-00.json",
+      "sha256": "1bf72250a397fa3095d61b2865f4bb678f452ac1fb495130b1899a463372427c",
+      "rows": 1200,
+      "duration_s": 120.000428,
+      "value_unit": "Mbit/s",
+      "kind": "measured_downlink_goodput_example_not_training_trace",
+      "mbps_p5_p50_p95": [
+        0.5408141510827869,
+        34.52413682128737,
+        100.68706049440122
+      ],
+      "reason": "Two short same-day examples retained for diagnostics; no defensible three-way group split."
+    },
+    {
+      "path": "paper-data\\src\\throughput\\downlink\\no-isl-iperf3-2m-2023-09-21-06-10-00.json",
+      "sha256": "529ccba04c2bebb75d886ddedd8086f6b7d2cd4571bfa9c829149a7dd9a22c9e",
+      "rows": 1200,
+      "duration_s": 120.000178,
+      "value_unit": "Mbit/s",
+      "kind": "measured_downlink_goodput_example_not_training_trace",
+      "mbps_p5_p50_p95": [
+        5.540760499005481,
+        29.325020884483934,
+        79.99046918952868
+      ],
+      "reason": "Two short same-day examples retained for diagnostics; no defensible three-way group split."
+    }
+  ],
+  "playback_logs": [
+    {
+      "run_id": "phasea-abrAnjanSimple-20261029T222254-d1324b",
+      "algorithm": "abrAnjanSimple",
+      "summary_sha256": "313595753f4c76132737ccee7b3cf37dd4a31c5dbdd54c45175ab405e81299c8",
+      "kind": "policy-dependent real player measurements",
+      "use": "calibration/export parity only; not final sealed evaluation"
+    },
+    {
+      "run_id": "phasea-abrCMAB-20261029T221506-0d63aa",
+      "algorithm": "abrCMAB",
+      "summary_sha256": "a06f219dabbe1364e74694dbf10ba074093277e6572cd0c47e8b69b54fa0f480",
+      "kind": "policy-dependent real player measurements",
+      "use": "calibration/export parity only; not final sealed evaluation"
+    },
+    {
+      "run_id": "phasea-abrCMAB-20261029T222133-cd2815",
+      "algorithm": "abrCMAB",
+      "summary_sha256": "1c84e75c8ecb8027f82d07df81bcf5ee68f2df086b75ab2e944175e762c581d7",
+      "kind": "policy-dependent real player measurements",
+      "use": "calibration/export parity only; not final sealed evaluation"
+    },
+    {
+      "run_id": "phasea-abrDynamic-20261029T221627-f1598d",
+      "algorithm": "abrDynamic",
+      "summary_sha256": "4b0ab3203c108dac15c1fa5b73622a38449405e0900f4e7c75d2e05c7d02fa73",
+      "kind": "policy-dependent real player measurements",
+      "use": "calibration/export parity only; not final sealed evaluation"
+    },
+    {
+      "run_id": "phasea-abrL2A-20261029T221720-9b93f8",
+      "algorithm": "abrL2A",
+      "summary_sha256": "0056c0e0905267214843ff73fb4d213ecfab978f4d33d13bed5afa56e157e60a",
+      "kind": "policy-dependent real player measurements",
+      "use": "calibration/export parity only; not final sealed evaluation"
+    },
+    {
+      "run_id": "phasea-abrLoLP-20261029T221813-ce938d",
+      "algorithm": "abrLoLP",
+      "summary_sha256": "ed3f2ddd82e1b342b36306ec4dc8e7c3f0e8ba66b21c4db359a57e11cc6b6dbb",
+      "kind": "policy-dependent real player measurements",
+      "use": "calibration/export parity only; not final sealed evaluation"
+    },
+    {
+      "run_id": "phasea-abrLoLP-20261029T221939-5b3166",
+      "algorithm": "abrLoLP",
+      "summary_sha256": "c9d2f4a59e9cc537e03843c3209481dd47e00482921b67c96fd357fa9fa4f51e",
+      "kind": "policy-dependent real player measurements",
+      "use": "calibration/export parity only; not final sealed evaluation"
+    }
+  ],
+  "archive": {
+    "path": "paper-data/data",
+    "kind": "policy-dependent archived outcomes",
+    "git_commit": "bcf33b9a75680847b6fd53c3c14cfead4cce8e81",
+    "file_count": 3600
+  },
+  "semantics": {
+    "probe_loss": "Unanswered probe, never automatically converted into full data-path outage.",
+    "capacity": "Generated link capacity; measured goodput examples remain separate to avoid double-counting RTT/loss.",
+    "actions": "MongoDB decisions are observations of a policy, not supervised optimal-action labels."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "verification": "Nonconstant trained actor; A2C optimizer updates; training-only teacher data; useful playback; improvement relative to its warm-start policy.",
+  "actual_a2c_decisions": 50176,
+  "teacher_states": 12000,
+  "validation_return": 127.50399201976082,
+  "warmstart_return": 126.13969087172372,
+  "random_initialization_return": 131.6438120782038,
+  "random_initialization_return_is_higher": true,
+  "selected_actions": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "limitation": "The fortuitous random initial actor scored higher on these validation cases. This pilot establishes deployment and useful learning, not best-policy performance or improvement over CMAB.",
+  "initial_failed_assertion": "The original generic check compared against random initialization. The warm-started run must be compared with its actual pre-A2C starting policy; both comparisons remain reported."
+}

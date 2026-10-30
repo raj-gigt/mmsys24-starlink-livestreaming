@@ -1,0 +1,29 @@
+{
+  "recording_id": "seychelles-20240130-0100",
+  "strategy": "chronological blocks with 60-second guards",
+  "guard_s": 60,
+  "blocks": {
+    "train": [
+      0,
+      2088
+    ],
+    "validation": [
+      2148,
+      2844
+    ],
+    "test": [
+      2904,
+      3600
+    ]
+  },
+  "families": [
+    "steady_bandwidth",
+    "bandwidth_variation",
+    "rtt_variation",
+    "handover_interruption",
+    "post_handover_recovery",
+    "mixed_shifted"
+  ],
+  "limitation": "All RTT blocks share one recording; separated windows do not create independent locations/days.",
+  "test_rule": "Test manifests sealed from training, hyperparameter choice and pilot result selection."
+}

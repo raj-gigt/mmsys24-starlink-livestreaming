@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "scenario_counts": {
+    "train": 48,
+    "validation": 18,
+    "test": 18
+  },
+  "total_scenarios": 84,
+  "unique_seeds": 84,
+  "guard_s": 60,
+  "unit_checks": "RTT ms; time s; capacity Mbit/s; bytes from actual media catalog",
+  "test_scenario_values_used_for_model_selection": false,
+  "limitations": [
+    "Single measured RTT recording",
+    "Synthetic capacity/outages",
+    "Short downlink examples not used for fitting"
+  ],
+  "deterministic_regeneration": "PASS",
+  "media_catalog_representations": 8,
+  "independent_LENS_reserve_acquired": true
+}

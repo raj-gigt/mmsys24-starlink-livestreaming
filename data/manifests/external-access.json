@@ -1,0 +1,40 @@
+{
+  "checks": [
+    {
+      "source": "StarNet-US",
+      "url": "https://uillinoisedu-my.sharepoint.com/:f:/g/personal/zikunliu_illinois_edu/IgBaSUJKNIjlQI6KeF1tWc6-AZMwiOlyueqSY4KzOYsVEfw?e=pD0Ix8",
+      "checked_utc": "2026-10-29T22:27:08.592111+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "final_host": "uillinoisedu-my.sharepoint.com",
+      "bytes_inspected": 6120,
+      "login_redirect": false,
+      "raw_measurements_acquired": false
+    },
+    {
+      "source": "LENS-current",
+      "url": "https://lens-starlink.jinwei.me",
+      "checked_utc": "2026-10-29T22:27:08.592111+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "final_host": "lens-starlink.jinwei.me",
+      "bytes_inspected": 16373,
+      "login_redirect": false,
+      "raw_measurements_acquired": false
+    }
+  ],
+  "decision": "Pilot uses the audited local chronological split plus synthetic capacity. An independent LENS RTT session was acquired and reserved for post-review calibration. StarNet throughput was not acquired.",
+  "follow_up": "Obtain an accessible, provenance-preserving StarNet subset and independent LENS sessions before broad generalization claims.",
+  "lens_older_archive_size": "Old monthly CSV bundles are 21-50+ GB; not acquired for this bounded pilot.",
+  "sources": [
+    "https://github.com/ConnectedSystemsLab/StarNet",
+    "https://github.com/clarkzjw/LENS"
+  ],
+  "acquired_reserve": {
+    "url": "https://lens-starlink.jinwei.me/victoria/irtt/2025/11/2025-11-14/irtt-sttlwax1-10ms-1h-2025-11-14-19-00-00.json.gz",
+    "path": "data/raw/lens/victoria-irtt-20251114-1900.json.gz",
+    "sha256": "fa66c86d53aae72b19dd7506ba149ce06d2ec98744b0dab59ad0bcc9c4d9516c",
+    "compressed_bytes": 36411894,
+    "purpose": "Post-review calibration reserve; never loaded by the Phase A trainer"
+  }
+}

@@ -1,0 +1,12 @@
+RTNETLINK answers: No such file or directory
+Traceback (most recent call last):
+  File "/tc-trace.py", line 40, in <module>
+    tc_init()
+  File "/tc-trace.py", line 31, in tc_init
+    subprocess.check_output(["tc", "class", "add", "dev", ETHERNET, "parent", "1:", "classid", "1:1", "htb", "rate", "100mbit", "ceil", "50mbit"])
+  File "/usr/lib/python3.11/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['tc', 'class', 'add', 'dev', 'eth0', 'parent', '1:', 'classid', '1:1', 'htb', 'rate', '100mbit', 'ceil', '50mbit']' returned non-zero exit status 2.

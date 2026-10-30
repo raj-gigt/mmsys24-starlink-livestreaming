@@ -1,0 +1,10 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.14.1+cpu
+stable-baselines3==2.9.2
+gymnasium==1.4.0
+numpy==2.3.5
+matplotlib==3.11.2
+selenium==4.10.0
+pymongo==4.4.0
+requests==2.32.5
+Pillow==13.0.0

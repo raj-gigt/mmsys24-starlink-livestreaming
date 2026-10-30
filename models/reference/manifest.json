@@ -1,0 +1,16 @@
+{
+  "label": "Faithful released Maguro/Puffer 10-action forward-pass reference",
+  "repository": "https://github.com/sagar-pa/abr_rl_test",
+  "commit": "b9c4069a947be0ba3a145ea65c7088e1a5402aea",
+  "checkpoint": "models/maguro_model.pt",
+  "checkpoint_sha256": "ed28046faa624b247237b5700bb8e071b8b9000b0d423e785ab1d7aeb4556e09",
+  "license": "MIT (Sagar Patel 2021); see rl/reference/LICENSE.abr_rl_test",
+  "plume_reference_commit": "7dab8ce3961f8627a453bacd447b7b89052a4fa2",
+  "provenance": "Plume README links abr_rl_test for Gelato models; exact training run/seed of this old Maguro checkpoint is not stated.",
+  "architecture": "3 Conv1d branches -> 256 concatenated features -> Dense256 ReLU -> Dense10",
+  "native_inputs": "10x6 normalized past history, 5x10 future segment sizes, 5x10 future SSIM dB",
+  "clarification": "The chosen Maguro actor does not use TCP cwnd/RTT fields; other Puffer interfaces expose them. It still needs SSIM/future metadata absent from this player.",
+  "deployed_in_player": false,
+  "why": "Eight local representations versus ten native actions; native future SSIM/quality histories unavailable.",
+  "fixture_scope": "Synthetic native-format fixtures for numerical correctness, not Puffer evaluation or invented browser observations."
+}

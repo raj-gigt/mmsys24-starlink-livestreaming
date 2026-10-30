@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "run_id": "phasea-abrAnjanRL-20261030T015230-d5d3b4",
+  "actual_chrome_decisions": 39,
+  "max_absolute_logit_error": 1.52587890625e-05,
+  "action_agreement": 1,
+  "selected_actions": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "complete_new_decision_p50_p95_p99_ms": [
+    0.2000000011175871,
+    0.40000000037252903,
+    0.40000000037252903
+  ],
+  "all_callback_p50_p95_p99_ms": [
+    0.09999999962747097,
+    0.30000000074505806,
+    0.40000000037252903
+  ],
+  "model_cold_assets_and_warmup_ms": 4.599999999627471,
+  "page_load_to_ready_ms": 13570.464699994773,
+  "target_complete_p99_ms": 2,
+  "met_target_on_this_host": true,
+  "host": "Chrome 114 inside Selenium container, WSL2, laptop CPU; no mobile-device inference test",
+  "scope": "Small playback sample. Timing is preliminary; no hard timer preemption or final-runtime conclusion."
+}

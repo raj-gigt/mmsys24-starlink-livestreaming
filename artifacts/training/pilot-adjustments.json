@@ -1,0 +1,8 @@
+{
+  "initial_run": "initial-160k",
+  "observation": "At 160k decisions the deterministic actor always chose 900kbps and lost to a fixed 1500kbps policy. Training returns were still rising.",
+  "next_action": "Extend the same one-seed A2C configuration to a bounded 1M decisions; inspect policy dependence and validation again. Test remains sealed.",
+  "timing_defect": "Waiting for a live segment before issuing HTTP had been included in observed HTTP download duration. Corrected the observation timing while retaining wait in wall-clock, latency and stall accounting.",
+  "final_pilot": "Explicit training-only teacher initialization (12k causal simulated states), then 50k A2C decisions with smaller learning rate. This is a warm-started pilot, not unchanged Gelato or evidence of RL improvement over the teacher.",
+  "random_initialization_outcome": "Corrected 500k fit still collapsed to a near-constant low action and failed learning verification. Preserved as a failed diagnostic."
+}

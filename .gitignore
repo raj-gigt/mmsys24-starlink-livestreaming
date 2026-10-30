@@ -1,4 +1,10 @@
 paper-figures/
+artifacts/logs/
+artifacts/setup/*image.json
+artifacts/runs/
+data/raw/
+data/processed/
+models/checkpoints/
 figures/
 lagos/
 test/
@@ -16,6 +22,9 @@ __pycache__/
 videos
 *.png
 !assets/*.png
+!reports/phase-a/matched-playback.png
+!reports/phase-a/neural-player.png
+!artifacts/training/pilot-learning.png
 # Local .terraform directories
 **/.terraform/*
 

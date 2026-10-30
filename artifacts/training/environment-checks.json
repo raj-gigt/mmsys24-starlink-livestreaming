@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "checks": [
+    "constant capacity",
+    "capacity boundary mid-transfer",
+    "zero-capacity outage and recovery",
+    "full live-segment release time",
+    "played-only quality credit",
+    "LoL+ rate direction",
+    "seek/reset",
+    "Gymnasium contract",
+    "finite random rollouts and truncation"
+  ],
+  "benchmark_steps": 1000,
+  "benchmark_s": 0.12410200000158511,
+  "environment_steps_per_s": 8057.88786632953,
+  "truncations": 13,
+  "scope": "Minimal pilot physics checks; not full browser calibration"
+}

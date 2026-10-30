@@ -1,0 +1,12 @@
+# Linux entry scripts and portable source patches must survive Windows checkout.
+*.sh text eol=lf
+*.py text eol=lf
+*.js text eol=lf
+*.cjs text eol=lf
+# These generated artifacts carry byte hashes; keep the delivered bytes exact.
+*.json -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+rl/web/pilot_model.js -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Preserve verbatim upstream source, command output and patch context whitespace.
+*.patch -text -whitespace
+rl/reference/** -whitespace
+artifacts/setup/*.txt -whitespace

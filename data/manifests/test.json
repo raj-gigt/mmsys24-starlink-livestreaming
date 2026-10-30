@@ -1,0 +1,357 @@
+{
+  "split": "test",
+  "scenarios": [
+    {
+      "id": "test-steady_bandwidth-3000",
+      "path": "data/processed/scenarios/test/test-steady_bandwidth-3000.npz",
+      "sha256": "e96acad44cc8030c89fd3fddca6b4872744d2119ed4d2638946a3777b0d6b720",
+      "family": "steady_bandwidth",
+      "seed": 3000,
+      "source_window_s": [
+        3301,
+        3481
+      ],
+      "recording_id": "seychelles-20240130-0100",
+      "split": "test",
+      "network_kind": "synthetic_capacity_and_explicit_interruptions_with_measured_RTT_or_its_window_median",
+      "causal_inputs_only": true,
+      "parameters": {
+        "base_mbps": 3.0
+      }
+    },
+    {
+      "id": "test-steady_bandwidth-3001",
+      "path": "data/processed/scenarios/test/test-steady_bandwidth-3001.npz",
+      "sha256": "703d68e8f9581f05f8a3280427f76ce83dd6661a5425441f85b4fab73b8dd3c1",
+      "family": "steady_bandwidth",
+      "seed": 3001,
+      "source_window_s": [
+        3074,
+        3254
+      ],
+      "recording_id": "seychelles-20240130-0100",
+      "split": "test",
+      "network_kind": "synthetic_capacity_and_explicit_interruptions_with_measured_RTT_or_its_window_median",
+      "causal_inputs_only": true,
+      "parameters": {
+        "base_mbps": 10.0
+      }
+    },
+    {
+      "id": "test-steady_bandwidth-3002",
+      "path": "data/processed/scenarios/test/test-steady_bandwidth-3002.npz",
+      "sha256": "0d9bdc11efaec4ede5313b7f2fa1feea15b9205abd3050a907eda01c70999db4",
+      "family": "steady_bandwidth",
+      "seed": 3002,
+      "source_window_s": [
+        3140,
+        3320
+      ],
+      "recording_id": "seychelles-20240130-0100",
+      "split": "test",
+      "network_kind": "synthetic_capacity_and_explicit_interruptions_with_measured_RTT_or_its_window_median",
+      "causal_inputs_only": true,
+      "parameters": {
+        "base_mbps": 0.8
+      }
+    },
+    {
+      "id": "test-bandwidth_variation-3100",
+      "path": "data/processed/scenarios/test/test-bandwidth_variation-3100.npz",
+      "sha256": "e703650e50cb7cd718ee67d1988e82064241599f429486ab18abc2953c231bdf",
+      "family": "bandwidth_variation",
+      "seed": 3100,
+      "source_window_s": [
+        3253,
+        3433
+      ],
+      "recording_id": "seychelles-20240130-0100",
+      "split": "test",
+      "network_kind": "synthetic_capacity_and_explicit_interruptions_with_measured_RTT_or_its_window_median",
+      "causal_inputs_only": true,
+      "parameters": {
+        "base_mbps": 10.0
+      }
+    },
+    {
+      "id": "test-bandwidth_variation-3101",
+      "path": "data/processed/scenarios/test/test-bandwidth_variation-3101.npz",
+      "sha256": "d836473d4d21de279bd7d1404dffc0c9003441dbe4753ea64f097e25b731ab68",
+      "family": "bandwidth_variation",
+      "seed": 3101,
+      "source_window_s": [
+        3077,
+        3257
+      ],
+      "recording_id": "seychelles-20240130-0100",
+      "split": "test",
+      "network_kind": "synthetic_capacity_and_explicit_interruptions_with_measured_RTT_or_its_window_median",
+      "causal_inputs_only": true,
+      "parameters": {
+        "base_mbps": 6.0
+      }
+    },
+    {
+      "id": "test-bandwidth_variation-3102",
+      "path": "data/processed/scenarios/test/test-bandwidth_variation-3102.npz",
+      "sha256": "a7b857521dab31a6a41484a6f927b418343da5dc7ed455a1868be40fad373d14",
+      "family": "bandwidth_variation",
+      "seed": 3102,
+      "source_window_s": [
+        3371,
+        3551
+      ],
+      "recording_id": "seychelles-20240130-0100",
+      "split": "test",
+      "network_kind": "synthetic_capacity_and_explicit_interruptions_with_measured_RTT_or_its_window_median",
+      "causal_inputs_only": true,
+      "parameters": {
+        "base_mbps": 10.0
+      }
+    },
+    {
+      "id": "test-rtt_variation-3200",
+      "path": "data/processed/scenarios/test/test-rtt_variation-3200.npz",
+      "sha256": "5ee2597c694a3386fc525967f96159cc430cd526721cd43548ab2743fedf1745",
+      "family": "rtt_variation",
+      "seed": 3200,
+      "source_window_s": [
+        3262,
+        3442
+      ],
+      "recording_id": "seychelles-20240130-0100",
+      "split": "test",
+      "network_kind": "synthetic_capacity_and_explicit_interruptions_with_measured_RTT_or_its_window_median",
+      "causal_inputs_only": true,
+      "parameters": {
+        "base_mbps": 10.0
+      }
+    },
+    {
+      "id": "test-rtt_variation-3201",
+      "path": "data/processed/scenarios/test/test-rtt_variation-3201.npz",
+      "sha256": "a0c8a94c78181832a6d83f1c6406a9bc7cc9c41e91392cde032f3a2e8e63d735",
+      "family": "rtt_variation",
+      "seed": 3201,
+      "source_window_s": [
+        3405,
+        3585
+      ],
+      "recording_id": "seychelles-20240130-0100",
+      "split": "test",
+      "network_kind": "synthetic_capacity_and_explicit_interruptions_with_measured_RTT_or_its_window_median",
+      "causal_inputs_only": true,
+      "parameters": {
+        "base_mbps": 0.8
+      }
+    },
+    {
+      "id": "test-rtt_variation-3202",
+      "path": "data/processed/scenarios/test/test-rtt_variation-3202.npz",
+      "sha256": "ef658920c2ed13028237c3adb4f0c646afbd2ac4a0bc0d1d84e47a756d6c1371",
+      "family": "rtt_variation",
+      "seed": 3202,
+      "source_window_s": [
+        3348,
+        3528
+      ],
+      "recording_id": "seychelles-20240130-0100",
+      "split": "test",
+      "network_kind": "synthetic_capacity_and_explicit_interruptions_with_measured_RTT_or_its_window_median",
+      "causal_inputs_only": true,
+      "parameters": {
+        "base_mbps": 1.5
+      }
+    },
+    {
+      "id": "test-handover_interruption-3300",
+      "path": "data/processed/scenarios/test/test-handover_interruption-3300.npz",
+      "sha256": "6e6f59614d4e2907a3a4e1f16f33020e1ae3bf3a7caf2060e26dc495d5c85e4d",
+      "family": "handover_interruption",
+      "seed": 3300,
+      "source_window_s": [
+        3123,
+        3303
+      ],
+      "recording_id": "seychelles-20240130-0100",
+      "split": "test",
+      "network_kind": "synthetic_capacity_and_explicit_interruptions_with_measured_RTT_or_its_window_median",
+      "causal_inputs_only": true,
+      "parameters": {
+        "base_mbps": 6.0,
+        "outage_start_s": 41,
+        "outage_duration_s": 4
+      }
+    },
+    {
+      "id": "test-handover_interruption-3301",
+      "path": "data/processed/scenarios/test/test-handover_interruption-3301.npz",
+      "sha256": "f47874c9dd2155772aa655e7af8878283b9390e95a93942ebc501c84f35ab6b3",
+      "family": "handover_interruption",
+      "seed": 3301,
+      "source_window_s": [
+        2991,
+        3171
+      ],
+      "recording_id": "seychelles-20240130-0100",
+      "split": "test",
+      "network_kind": "synthetic_capacity_and_explicit_interruptions_with_measured_RTT_or_its_window_median",
+      "causal_inputs_only": true,
+      "parameters": {
+        "base_mbps": 3.0,
+        "outage_start_s": 41,
+        "outage_duration_s": 3
+      }
+    },
+    {
+      "id": "test-handover_interruption-3302",
+      "path": "data/processed/scenarios/test/test-handover_interruption-3302.npz",
+      "sha256": "6c39dfb83f060b55be4bb1bc1317f35f87efd5da88e3714fb2415d2be508ffa0",
+      "family": "handover_interruption",
+      "seed": 3302,
+      "source_window_s": [
+        3135,
+        3315
+      ],
+      "recording_id": "seychelles-20240130-0100",
+      "split": "test",
+      "network_kind": "synthetic_capacity_and_explicit_interruptions_with_measured_RTT_or_its_window_median",
+      "causal_inputs_only": true,
+      "parameters": {
+        "base_mbps": 1.5,
+        "outage_start_s": 98,
+        "outage_duration_s": 2
+      }
+    },
+    {
+      "id": "test-post_handover_recovery-3400",
+      "path": "data/processed/scenarios/test/test-post_handover_recovery-3400.npz",
+      "sha256": "c055935847d538324383ec8375abcf409428a619bb5880e0e9244d1708bda541",
+      "family": "post_handover_recovery",
+      "seed": 3400,
+      "source_window_s": [
+        3409,
+        3589
+      ],
+      "recording_id": "seychelles-20240130-0100",
+      "split": "test",
+      "network_kind": "synthetic_capacity_and_explicit_interruptions_with_measured_RTT_or_its_window_median",
+      "causal_inputs_only": true,
+      "parameters": {
+        "base_mbps": 3.0,
+        "outage_start_s": 73,
+        "outage_duration_s": 1,
+        "recovery_s": 20
+      }
+    },
+    {
+      "id": "test-post_handover_recovery-3401",
+      "path": "data/processed/scenarios/test/test-post_handover_recovery-3401.npz",
+      "sha256": "980f9a9302d1aa47abe257a5bf64ce0015a880aa64daf59d1f51f51deabfb0e6",
+      "family": "post_handover_recovery",
+      "seed": 3401,
+      "source_window_s": [
+        3408,
+        3588
+      ],
+      "recording_id": "seychelles-20240130-0100",
+      "split": "test",
+      "network_kind": "synthetic_capacity_and_explicit_interruptions_with_measured_RTT_or_its_window_median",
+      "causal_inputs_only": true,
+      "parameters": {
+        "base_mbps": 10.0,
+        "outage_start_s": 103,
+        "outage_duration_s": 2,
+        "recovery_s": 14
+      }
+    },
+    {
+      "id": "test-post_handover_recovery-3402",
+      "path": "data/processed/scenarios/test/test-post_handover_recovery-3402.npz",
+      "sha256": "12678a0e352174c401635ec3cb0ed4d969efc63555fb87e36fac537b2ba5acf8",
+      "family": "post_handover_recovery",
+      "seed": 3402,
+      "source_window_s": [
+        2997,
+        3177
+      ],
+      "recording_id": "seychelles-20240130-0100",
+      "split": "test",
+      "network_kind": "synthetic_capacity_and_explicit_interruptions_with_measured_RTT_or_its_window_median",
+      "causal_inputs_only": true,
+      "parameters": {
+        "base_mbps": 10.0,
+        "outage_start_s": 70,
+        "outage_duration_s": 4,
+        "recovery_s": 25
+      }
+    },
+    {
+      "id": "test-mixed_shifted-3500",
+      "path": "data/processed/scenarios/test/test-mixed_shifted-3500.npz",
+      "sha256": "763c4de581c153b7f86ef660525d488c24ecbdf5c7b6e237ea2f0ddd9c577924",
+      "family": "mixed_shifted",
+      "seed": 3500,
+      "source_window_s": [
+        3065,
+        3245
+      ],
+      "recording_id": "seychelles-20240130-0100",
+      "split": "test",
+      "network_kind": "synthetic_capacity_and_explicit_interruptions_with_measured_RTT_or_its_window_median",
+      "causal_inputs_only": true,
+      "parameters": {
+        "base_mbps": 1.5,
+        "outage_start_s": 70,
+        "outage_duration_s": 1,
+        "recovery_s": 13,
+        "synthetic_extra_rtt_ms": 250
+      }
+    },
+    {
+      "id": "test-mixed_shifted-3501",
+      "path": "data/processed/scenarios/test/test-mixed_shifted-3501.npz",
+      "sha256": "2f7cf973e2d58b905aeffe577b51ddb5d197045ae0c0c98ffeedc667efa19b94",
+      "family": "mixed_shifted",
+      "seed": 3501,
+      "source_window_s": [
+        3281,
+        3461
+      ],
+      "recording_id": "seychelles-20240130-0100",
+      "split": "test",
+      "network_kind": "synthetic_capacity_and_explicit_interruptions_with_measured_RTT_or_its_window_median",
+      "causal_inputs_only": true,
+      "parameters": {
+        "base_mbps": 1.5,
+        "outage_start_s": 98,
+        "outage_duration_s": 1,
+        "recovery_s": 10,
+        "synthetic_extra_rtt_ms": 250
+      }
+    },
+    {
+      "id": "test-mixed_shifted-3502",
+      "path": "data/processed/scenarios/test/test-mixed_shifted-3502.npz",
+      "sha256": "4b9128130af244daeb0ab2e463a048c8ad5e122fcfdbaa3324805499c95698f2",
+      "family": "mixed_shifted",
+      "seed": 3502,
+      "source_window_s": [
+        3061,
+        3241
+      ],
+      "recording_id": "seychelles-20240130-0100",
+      "split": "test",
+      "network_kind": "synthetic_capacity_and_explicit_interruptions_with_measured_RTT_or_its_window_median",
+      "causal_inputs_only": true,
+      "parameters": {
+        "base_mbps": 0.8,
+        "outage_start_s": 69,
+        "outage_duration_s": 2,
+        "recovery_s": 16,
+        "synthetic_extra_rtt_ms": 250
+      }
+    }
+  ],
+  "source_sha256": "f056e2f58139fb65c704448a1535856606a078dfb26147cc6898dae9e69efc15"
+}

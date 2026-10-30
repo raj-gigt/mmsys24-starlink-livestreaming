@@ -1,0 +1,6 @@
+services:
+  dashjs:
+    image: leo-abr-rl-player:anjan-phase-a
+    build:
+      context: .
+      dockerfile: Dockerfile-player-anjan

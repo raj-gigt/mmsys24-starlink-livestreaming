@@ -1,0 +1,14 @@
+'use strict';
+const assert = require('node:assert/strict');
+const core = require('../rl/web/policy_core.js');
+const ladder = [300, 450, 900, 1200, 1500, 4900, 5100, 6000].map((k, quality) => ({bandwidth:k*1000, quality}));
+const base = {ladder, buffer_s:2, target_s:3, previous_quality:0, playback_rate:1, history:[]};
+assert.equal(core.features(base).length, 36);
+assert.equal(core.simple(base).action, 0);
+const measured = {...base, history:[{mbps:8, download_s:0.5, age_s:0}]};
+assert.equal(core.simple(measured).action, 7);
+assert.equal(core.simple({...measured, history:[{mbps:1, download_s:2, age_s:0}]}).action, 1);
+assert.equal(core.simple({...measured, history:[{mbps:8, download_s:0.5, age_s:30}]}).action, 0);
+assert.equal(core.simple({...measured, buffer_s:0.2}).action, 3);
+assert.ok(Array.from(core.features(measured)).every(Number.isFinite));
+console.log('Policy startup, capacity response, low buffer, stale history and finite 36-feature preprocessing: PASS');

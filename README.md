@@ -247,3 +247,7 @@ and rebuild the `livesim2` Docker image and replace the image used by the `lives
 ## License
 
 The code in this repository is licensed under [GPL-3.0](./LICENSE).
+
+## Anjan's Phase A work
+
+The implementation progress and verified artifacts for roadmap Steps 1–6 are described in [the Phase A handoff](./reports/phase-a/README.md). The plan remains in [roadmap.md](./roadmap.md). Start the custom local-source testbed with `bash scripts/testbed.sh up` from Linux/WSL; this checks the packaged player patch, uses pinned service images and applies the common shaper repair. The new selectable labels are `abrAnjanSimple` and `abrAnjanRL`. The neural policy is a labelled integration pilot; final LEO-aware training and performance evaluation remain future work.

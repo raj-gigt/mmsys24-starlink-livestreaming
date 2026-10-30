@@ -1,0 +1,169 @@
+{
+  "label": "imitation-initialized, A2C-updated integration pilot; one seed",
+  "checkpoint_sha256": "9f00f1a5d2fbc33f635e90595de44ccb536d36d93ac65c80670e64af46387471",
+  "actor_js_sha256": "ce5f4c121c4c7b4a8f7510d71d4c226ad5e1e15d999bbd98b8c13e77487aa2af",
+  "actor_js_bytes": 143015,
+  "input_count": 36,
+  "actions": [
+    300000,
+    450000,
+    900000,
+    1200000,
+    1500000,
+    4900000,
+    5100000,
+    6000000
+  ],
+  "architecture": "36 -> 64 ReLU -> 64 ReLU -> 8 logits, deterministic first-index argmax",
+  "normalization": "8 chronological rows [throughput_Mbps/10 clipped0..3, download_s/2 clipped0..10, age_s/30 clipped0..1, present]; left-pad [0,0,1,0]; scalars [buffer/target clipped0..4, previous_nominal_bitrate/max_nominal_bitrate, (rate-1)/.17 clipped-1..1, target/6 clipped0..2]",
+  "training_status": "Pilot-trained in the minimal live environment; validation selected; sealed test untouched",
+  "initialization": {
+    "method": "Training-only imitation of causal throughput/buffer rule, then A2C",
+    "teacher_states": 12000,
+    "a2c_decisions": 50176
+  },
+  "native_reference": "models/reference/manifest.json; its ten-action checkpoint is not used here",
+  "main_thread_budget": {
+    "target_complete_decision_p99_ms": 2,
+    "hard_preemption": false,
+    "reason": "A synchronous JS call cannot be interrupted by a timer on the same thread."
+  },
+  "example": {
+    "observation": {
+      "buffer_s": 2.135,
+      "history": [
+        {
+          "age_s": 4.402,
+          "bytes": 77545,
+          "download_s": 0.277,
+          "finished_ms": 1793312576678,
+          "mbps": 2.23956678700361,
+          "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/896656286.m4s"
+        },
+        {
+          "age_s": 3.854,
+          "bytes": 234682,
+          "download_s": 0.418,
+          "finished_ms": 1793312577226,
+          "mbps": 4.491521531100479,
+          "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/896656287.m4s"
+        },
+        {
+          "age_s": 2.13,
+          "bytes": 392343,
+          "download_s": 0.594,
+          "finished_ms": 1793312578950,
+          "mbps": 5.284080808080808,
+          "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/896656288.m4s"
+        },
+        {
+          "age_s": 0.004,
+          "bytes": 388685,
+          "download_s": 0.616,
+          "finished_ms": 1793312581076,
+          "mbps": 5.047857142857143,
+          "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/896656289.m4s"
+        }
+      ],
+      "ladder": [
+        {
+          "bandwidth": 300000,
+          "id": "cfhd_sets/12.5_25_50/t34/2023-04-28/1",
+          "quality": 0
+        },
+        {
+          "bandwidth": 450000,
+          "id": "cfhd_sets/12.5_25_50/t32/2023-04-28/1",
+          "quality": 1
+        },
+        {
+          "bandwidth": 900000,
+          "id": "cfhd_sets/12.5_25_50/t28/2023-04-28/1",
+          "quality": 2
+        },
+        {
+          "bandwidth": 1200000,
+          "id": "cfhd_sets/12.5_25_50/t24/2023-04-28/1",
+          "quality": 3
+        },
+        {
+          "bandwidth": 1500000,
+          "id": "cfhd_sets/12.5_25_50/t25/2023-04-28/1",
+          "quality": 4
+        },
+        {
+          "bandwidth": 4900000,
+          "id": "cfhd_sets/12.5_25_50/t23/2023-04-28/1",
+          "quality": 5
+        },
+        {
+          "bandwidth": 5100000,
+          "id": "cfhd_sets/12.5_25_50/t19/2023-04-28/1",
+          "quality": 6
+        },
+        {
+          "bandwidth": 6000000,
+          "id": "chdf_sets/12.5_25_50/t20/2023-04-28/1",
+          "quality": 7
+        }
+      ],
+      "live_latency_s": 3.069,
+      "playback_rate": 1.0343698788084457,
+      "previous_quality": 4,
+      "target_s": 3
+    },
+    "input": [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.22395667433738708,
+      0.13850000500679016,
+      0.1467333287000656,
+      1.0,
+      0.4491521418094635,
+      0.20900000631809235,
+      0.1284666657447815,
+      1.0,
+      0.5284081101417542,
+      0.296999990940094,
+      0.07100000232458115,
+      1.0,
+      0.5047857165336609,
+      0.30799999833106995,
+      0.00013333333481568843,
+      1.0,
+      0.7116666436195374,
+      0.25,
+      0.20217575132846832,
+      0.5
+    ],
+    "logits": [
+      -31.819049835205078,
+      -28.951683044433594,
+      -5.195990085601807,
+      2.5493364334106445,
+      7.452069282531738,
+      2.841714382171631,
+      -2.6663529872894287,
+      -12.855696678161621
+    ],
+    "action": 4,
+    "kind": "recorded real-player input"
+  },
+  "fixtures": 44,
+  "inference": "window.LEO_ABR.predict(Array.from(window.LEO_ABR.core.features(observation)))",
+  "checkpoint_path": "models/pilot/checkpoint.zip"
+}

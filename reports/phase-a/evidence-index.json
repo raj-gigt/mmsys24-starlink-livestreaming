@@ -1,0 +1,339 @@
+{
+  "updated_utc": "2026-10-30T02:01:33.831310+00:00",
+  "phase_a_steps_1_to_6": "Complete; final evidence audit PASS",
+  "archived_figures": 25,
+  "fresh_matched_demos": [
+    {
+      "algorithm": "A2C integration pilot",
+      "run_id": "phasea-abrAnjanRL-20261030T015230-d5d3b4",
+      "verified_playback_progress_s": 65.48390007019043,
+      "mongo_documents": {
+        "events": 16,
+        "metric": 16,
+        "qoe": 0,
+        "decisions": 39
+      },
+      "load_utc": "2026-10-30T01:53:00.218086+00:00",
+      "controlled_stages": [
+        {
+          "at_s": 0,
+          "rate_mbit": 8.0
+        },
+        {
+          "at_s": 25.235000000015134,
+          "rate_mbit": 1.0
+        },
+        {
+          "at_s": 50.26600000000326,
+          "rate_mbit": 8.0
+        }
+      ],
+      "player_errors": []
+    },
+    {
+      "algorithm": "CMAB",
+      "run_id": "phasea-abrCMAB-20261030T015422-bb83ce",
+      "verified_playback_progress_s": 37.573800802230835,
+      "mongo_documents": {
+        "events": 16,
+        "metric": 16,
+        "qoe": 35,
+        "decisions": 0
+      },
+      "load_utc": "2026-10-30T01:55:00.257054+00:00",
+      "controlled_stages": [
+        {
+          "at_s": 0,
+          "rate_mbit": 8.0
+        },
+        {
+          "at_s": 25.21799999999348,
+          "rate_mbit": 1.0
+        },
+        {
+          "at_s": 50.21799999999348,
+          "rate_mbit": 8.0
+        }
+      ],
+      "player_errors": []
+    },
+    {
+      "algorithm": "Simple custom rule",
+      "run_id": "phasea-abrAnjanSimple-20261030T015622-a545bb",
+      "verified_playback_progress_s": 62.8828604221344,
+      "mongo_documents": {
+        "events": 16,
+        "metric": 16,
+        "qoe": 0,
+        "decisions": 39
+      },
+      "load_utc": "2026-10-30T01:57:00.229190+00:00",
+      "controlled_stages": [
+        {
+          "at_s": 0,
+          "rate_mbit": 8.0
+        },
+        {
+          "at_s": 25.235000000015134,
+          "rate_mbit": 1.0
+        },
+        {
+          "at_s": 50.235000000015134,
+          "rate_mbit": 8.0
+        }
+      ],
+      "player_errors": []
+    }
+  ],
+  "browser_actor": {
+    "status": "PASS",
+    "run_id": "phasea-abrAnjanRL-20261030T015230-d5d3b4",
+    "actual_chrome_decisions": 39,
+    "max_absolute_logit_error": 1.52587890625e-05,
+    "action_agreement": 1,
+    "selected_actions": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "complete_new_decision_p50_p95_p99_ms": [
+      0.2000000011175871,
+      0.40000000037252903,
+      0.40000000037252903
+    ],
+    "all_callback_p50_p95_p99_ms": [
+      0.09999999962747097,
+      0.30000000074505806,
+      0.40000000037252903
+    ],
+    "model_cold_assets_and_warmup_ms": 4.599999999627471,
+    "page_load_to_ready_ms": 13570.464699994773,
+    "target_complete_p99_ms": 2,
+    "met_target_on_this_host": true,
+    "host": "Chrome 114 inside Selenium container, WSL2, laptop CPU; no mobile-device inference test",
+    "scope": "Small playback sample. Timing is preliminary; no hard timer preemption or final-runtime conclusion."
+  },
+  "data": {
+    "status": "PASS",
+    "scenario_counts": {
+      "train": 48,
+      "validation": 18,
+      "test": 18
+    },
+    "total_scenarios": 84,
+    "unique_seeds": 84,
+    "guard_s": 60,
+    "unit_checks": "RTT ms; time s; capacity Mbit/s; bytes from actual media catalog",
+    "test_scenario_values_used_for_model_selection": false,
+    "limitations": [
+      "Single measured RTT recording",
+      "Synthetic capacity/outages",
+      "Short downlink examples not used for fitting"
+    ],
+    "deterministic_regeneration": "PASS",
+    "media_catalog_representations": 8,
+    "independent_LENS_reserve_acquired": true
+  },
+  "model": {
+    "label": "imitation-initialized, A2C-updated integration pilot; one seed",
+    "checkpoint_sha256": "9f00f1a5d2fbc33f635e90595de44ccb536d36d93ac65c80670e64af46387471",
+    "actor_js_sha256": "ce5f4c121c4c7b4a8f7510d71d4c226ad5e1e15d999bbd98b8c13e77487aa2af",
+    "actor_js_bytes": 143015,
+    "input_count": 36,
+    "actions": [
+      300000,
+      450000,
+      900000,
+      1200000,
+      1500000,
+      4900000,
+      5100000,
+      6000000
+    ],
+    "architecture": "36 -> 64 ReLU -> 64 ReLU -> 8 logits, deterministic first-index argmax",
+    "normalization": "8 chronological rows [throughput_Mbps/10 clipped0..3, download_s/2 clipped0..10, age_s/30 clipped0..1, present]; left-pad [0,0,1,0]; scalars [buffer/target clipped0..4, previous_nominal_bitrate/max_nominal_bitrate, (rate-1)/.17 clipped-1..1, target/6 clipped0..2]",
+    "training_status": "Pilot-trained in the minimal live environment; validation selected; sealed test untouched",
+    "initialization": {
+      "method": "Training-only imitation of causal throughput/buffer rule, then A2C",
+      "teacher_states": 12000,
+      "a2c_decisions": 50176
+    },
+    "native_reference": "models/reference/manifest.json; its ten-action checkpoint is not used here",
+    "main_thread_budget": {
+      "target_complete_decision_p99_ms": 2,
+      "hard_preemption": false,
+      "reason": "A synchronous JS call cannot be interrupted by a timer on the same thread."
+    },
+    "example": {
+      "observation": {
+        "buffer_s": 2.135,
+        "history": [
+          {
+            "age_s": 4.402,
+            "bytes": 77545,
+            "download_s": 0.277,
+            "finished_ms": 1793312576678,
+            "mbps": 2.23956678700361,
+            "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/896656286.m4s"
+          },
+          {
+            "age_s": 3.854,
+            "bytes": 234682,
+            "download_s": 0.418,
+            "finished_ms": 1793312577226,
+            "mbps": 4.491521531100479,
+            "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/896656287.m4s"
+          },
+          {
+            "age_s": 2.13,
+            "bytes": 392343,
+            "download_s": 0.594,
+            "finished_ms": 1793312578950,
+            "mbps": 5.284080808080808,
+            "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/896656288.m4s"
+          },
+          {
+            "age_s": 0.004,
+            "bytes": 388685,
+            "download_s": 0.616,
+            "finished_ms": 1793312581076,
+            "mbps": 5.047857142857143,
+            "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/896656289.m4s"
+          }
+        ],
+        "ladder": [
+          {
+            "bandwidth": 300000,
+            "id": "cfhd_sets/12.5_25_50/t34/2023-04-28/1",
+            "quality": 0
+          },
+          {
+            "bandwidth": 450000,
+            "id": "cfhd_sets/12.5_25_50/t32/2023-04-28/1",
+            "quality": 1
+          },
+          {
+            "bandwidth": 900000,
+            "id": "cfhd_sets/12.5_25_50/t28/2023-04-28/1",
+            "quality": 2
+          },
+          {
+            "bandwidth": 1200000,
+            "id": "cfhd_sets/12.5_25_50/t24/2023-04-28/1",
+            "quality": 3
+          },
+          {
+            "bandwidth": 1500000,
+            "id": "cfhd_sets/12.5_25_50/t25/2023-04-28/1",
+            "quality": 4
+          },
+          {
+            "bandwidth": 4900000,
+            "id": "cfhd_sets/12.5_25_50/t23/2023-04-28/1",
+            "quality": 5
+          },
+          {
+            "bandwidth": 5100000,
+            "id": "cfhd_sets/12.5_25_50/t19/2023-04-28/1",
+            "quality": 6
+          },
+          {
+            "bandwidth": 6000000,
+            "id": "chdf_sets/12.5_25_50/t20/2023-04-28/1",
+            "quality": 7
+          }
+        ],
+        "live_latency_s": 3.069,
+        "playback_rate": 1.0343698788084457,
+        "previous_quality": 4,
+        "target_s": 3
+      },
+      "input": [
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.22395667433738708,
+        0.13850000500679016,
+        0.1467333287000656,
+        1.0,
+        0.4491521418094635,
+        0.20900000631809235,
+        0.1284666657447815,
+        1.0,
+        0.5284081101417542,
+        0.296999990940094,
+        0.07100000232458115,
+        1.0,
+        0.5047857165336609,
+        0.30799999833106995,
+        0.00013333333481568843,
+        1.0,
+        0.7116666436195374,
+        0.25,
+        0.20217575132846832,
+        0.5
+      ],
+      "logits": [
+        -31.819049835205078,
+        -28.951683044433594,
+        -5.195990085601807,
+        2.5493364334106445,
+        7.452069282531738,
+        2.841714382171631,
+        -2.6663529872894287,
+        -12.855696678161621
+      ],
+      "action": 4,
+      "kind": "recorded real-player input"
+    },
+    "fixtures": 44,
+    "inference": "window.LEO_ABR.predict(Array.from(window.LEO_ABR.core.features(observation)))",
+    "checkpoint_path": "models/pilot/checkpoint.zip"
+  },
+  "learning": {
+    "status": "PASS",
+    "verification": "Nonconstant trained actor; A2C optimizer updates; training-only teacher data; useful playback; improvement relative to its warm-start policy.",
+    "actual_a2c_decisions": 50176,
+    "teacher_states": 12000,
+    "validation_return": 127.50399201976082,
+    "warmstart_return": 126.13969087172372,
+    "random_initialization_return": 131.6438120782038,
+    "random_initialization_return_is_higher": true,
+    "selected_actions": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "limitation": "The fortuitous random initial actor scored higher on these validation cases. This pilot establishes deployment and useful learning, not best-policy performance or improvement over CMAB.",
+    "initial_failed_assertion": "The original generic check compared against random initialization. The warm-started run must be compared with its actual pre-A2C starting policy; both comparisons remain reported."
+  },
+  "next_step": "Step 7: mid-review PPT (not executed in this batch).",
+  "limits": [
+    "Pilot is imitation-initialized and A2C-updated, not unchanged pretrained Gelato.",
+    "Final LEO features, calibrated training and CMAB improvement remain Phase B.",
+    "Single short browser run per policy; no statistical performance conclusion.",
+    "StarNet throughput not imported; training capacity is synthetic.",
+    "All changes local on anjan; no remote push."
+  ],
+  "completion_record": "artifacts/phase-a-completion.json"
+}

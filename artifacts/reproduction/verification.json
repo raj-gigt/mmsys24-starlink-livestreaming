@@ -1,0 +1,237 @@
+{
+  "kind": "authors_archived_data_figure_regeneration",
+  "figure_count": 25,
+  "groups": [
+    "latency",
+    "streaming",
+    "throughput"
+  ],
+  "figures": [
+    {
+      "path": "paper-figures/latency/isl.png",
+      "bytes": 17597,
+      "size": [
+        500,
+        400
+      ],
+      "sha256": "a24266725737070bae2822a769a9d02d840e3bcbedbd08267c2f1b37d7344ce2"
+    },
+    {
+      "path": "paper-figures/latency/no-isl.png",
+      "bytes": 17903,
+      "size": [
+        500,
+        400
+      ],
+      "sha256": "808e1847024ba84d97619f6d221ccf116c567cf08c83245802c66a47b5c43e01"
+    },
+    {
+      "path": "paper-figures/latency/ping-cdf.png",
+      "bytes": 21512,
+      "size": [
+        500,
+        400
+      ],
+      "sha256": "a76975781eb158564c0001dbc932dbdb647206eb4746ad6bdecea4ec354b3d8c"
+    },
+    {
+      "path": "paper-figures/streaming/average_bitrate_Emulation.png",
+      "bytes": 91939,
+      "size": [
+        1400,
+        1000
+      ],
+      "sha256": "5fea91d58e9ac59e464ea668ca1b3bc90ae2daf4daef9c4b106561b836fb94bb"
+    },
+    {
+      "path": "paper-figures/streaming/average_bitrate_Starlink.png",
+      "bytes": 106237,
+      "size": [
+        1400,
+        1000
+      ],
+      "sha256": "3df9b60ec3b2e549f901a76d3f5f693dc0229e087397b06c7a426d15b7d92944"
+    },
+    {
+      "path": "paper-figures/streaming/average_bitrate_Terrestrial.png",
+      "bytes": 85076,
+      "size": [
+        1400,
+        1000
+      ],
+      "sha256": "981e07217df15739d239b008e1c18828a510209688ed8ded92507bee92e9456a"
+    },
+    {
+      "path": "paper-figures/streaming/average_live_latency_Emulation.png",
+      "bytes": 134793,
+      "size": [
+        1400,
+        1000
+      ],
+      "sha256": "654bf9fe66f80a528263eb42789ae6f2a6daac952aa0a737bfe8e85239512972"
+    },
+    {
+      "path": "paper-figures/streaming/average_live_latency_Starlink.png",
+      "bytes": 159633,
+      "size": [
+        1400,
+        1000
+      ],
+      "sha256": "469886445a57fd6f6ce11368d7e85e44fc934abf9e7e3cad5241bbc3a2656ee1"
+    },
+    {
+      "path": "paper-figures/streaming/average_live_latency_Terrestrial.png",
+      "bytes": 131124,
+      "size": [
+        1400,
+        1000
+      ],
+      "sha256": "bb2554e8e843b8d3ffd8dd82619b9eeaebe261d985297577d1649d5e3cb32061"
+    },
+    {
+      "path": "paper-figures/streaming/average_rebuffering_time_percentage_Emulation.png",
+      "bytes": 68350,
+      "size": [
+        1400,
+        1000
+      ],
+      "sha256": "6a8d7d0383c319caf5fc927ba1ef64a313e46dbcf5f7736bc7367013749a5487"
+    },
+    {
+      "path": "paper-figures/streaming/average_rebuffering_time_percentage_Starlink.png",
+      "bytes": 110657,
+      "size": [
+        1400,
+        1000
+      ],
+      "sha256": "0f99682eb4d70d423352c1c368a76f2d94e47cd633a7f2025fd4e5bca64df2cc"
+    },
+    {
+      "path": "paper-figures/streaming/average_rebuffering_time_percentage_Terrestrial.png",
+      "bytes": 62918,
+      "size": [
+        1400,
+        1000
+      ],
+      "sha256": "ca6b890050c0b33a19d3a645616b7a509eba7e9dbe2256b71728468061d6de75"
+    },
+    {
+      "path": "paper-figures/streaming/average_reward.png",
+      "bytes": 83577,
+      "size": [
+        1400,
+        1000
+      ],
+      "sha256": "15f43bdf5a57fcc8e495ef90e644723b7a074d78db7e876fbc646c47f860a295"
+    },
+    {
+      "path": "paper-figures/streaming/bitrate_switch_Emulation.png",
+      "bytes": 93278,
+      "size": [
+        1400,
+        1000
+      ],
+      "sha256": "1dcdf2a26a3000cdedb592ad175c6496d76084fc6880cf03bf0db31f9afe35c2"
+    },
+    {
+      "path": "paper-figures/streaming/bitrate_switch_Starlink.png",
+      "bytes": 109285,
+      "size": [
+        1400,
+        1000
+      ],
+      "sha256": "c7830b14232968f3a02f1a30a789aa6ef10038bce6170a4ec32ac05da05b86f8"
+    },
+    {
+      "path": "paper-figures/streaming/bitrate_switch_Terrestrial.png",
+      "bytes": 82047,
+      "size": [
+        1400,
+        1000
+      ],
+      "sha256": "1207bcda21c55dd4db73b69affc5563ea9764435fc43079d7a065ccd70409427"
+    },
+    {
+      "path": "paper-figures/streaming/std_bitrate_Emulation.png",
+      "bytes": 106159,
+      "size": [
+        1400,
+        1000
+      ],
+      "sha256": "33d40d5044a0ad122355499316baa71c6f9f806a109ce95fcd9c39166af9e460"
+    },
+    {
+      "path": "paper-figures/streaming/std_bitrate_Starlink.png",
+      "bytes": 125783,
+      "size": [
+        1400,
+        1000
+      ],
+      "sha256": "66f4bdd944a191fb9d550d3c7a99d6212beda429fb3fbe1dc0e45c19a42104bf"
+    },
+    {
+      "path": "paper-figures/streaming/std_bitrate_Terrestrial.png",
+      "bytes": 89171,
+      "size": [
+        1400,
+        1000
+      ],
+      "sha256": "e634369f85df542a61adedb27db6478178b094421f6980cea9b1778f90ac2960"
+    },
+    {
+      "path": "paper-figures/throughput/downlink-throughput-cdf.png",
+      "bytes": 24658,
+      "size": [
+        500,
+        400
+      ],
+      "sha256": "c76e0881ae3013a5c95a2cf644d61160351cb829bfe5537edc9b0ab6f97f091f"
+    },
+    {
+      "path": "paper-figures/throughput/together-downlink-iperf3.png",
+      "bytes": 72838,
+      "size": [
+        1200,
+        600
+      ],
+      "sha256": "99b6fbbafb0022ece1e1498e0b0825aeb1de11f6dc0361a6847434e5e3e228a7"
+    },
+    {
+      "path": "paper-figures/throughput/together-downlink-irtt.png",
+      "bytes": 66090,
+      "size": [
+        1200,
+        600
+      ],
+      "sha256": "6eb219ad20977696afe3f4c9580989d542a8a7a4aee32f8a60aa6edd68bdc0d5"
+    },
+    {
+      "path": "paper-figures/throughput/together-irtt.png",
+      "bytes": 59230,
+      "size": [
+        1200,
+        600
+      ],
+      "sha256": "18b88dde70ace10aca576480afc59387a44d03ebb5f2211ee4eda6a092a93438"
+    },
+    {
+      "path": "paper-figures/throughput/together-uplink-irtt.png",
+      "bytes": 61589,
+      "size": [
+        1200,
+        600
+      ],
+      "sha256": "6d6bdcb6a1070ad48acb243fb0d743598994785ba742ecd0581796abe601ef2e"
+    },
+    {
+      "path": "paper-figures/throughput/uplink-throughput-cdf.png",
+      "bytes": 20139,
+      "size": [
+        500,
+        400
+      ],
+      "sha256": "3b802d399d6971af33d6ef7be617a29e3999dbda088b807023c4dbd9db13f942"
+    }
+  ],
+  "fresh_network_experiments": false
+}

@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-10-29T22:37:20.809947+00:00",
+  "label": "pilot-trained player-compatible A2C adaptation",
+  "algorithm": "Stable-Baselines3 A2C",
+  "seed": 42,
+  "requested_steps": 160000,
+  "actual_steps": 160000,
+  "training_wall_s": 51.53322840001783,
+  "steps_per_s": 3104.792867973019,
+  "actor": "36 -> 64 ReLU -> 64 ReLU -> 8 logits",
+  "actor_parameter_count": 7048,
+  "selection": "Highest mean return on the fixed 18-scenario validation set at 20k-decision intervals; no test evaluation.",
+  "selected_checkpoint_sha256": "cbfb65a04fcc9953d274599ea1f36208ebac764b35cbd7cf7d3e010d66fe516d",
+  "train_manifest_sha256": "f739247bf5d3dcb40eba64c44ffed7f8bf44f499120fe1cabc2966e6ab5da2c9",
+  "validation_manifest_sha256": "615f1439ac5f32a018ae821d949ccbdaa45d468ea35d0cf7ae230f7f84d70fff",
+  "selected_validation_mean_return": 81.04610526213399,
+  "untrained_validation_mean_return": 36.54955048754373,
+  "fixed_low_validation_mean_return": -5.824360636317984,
+  "fixed_1500_validation_mean_return": 106.7052099392845,
+  "reward": {
+    "quality": "Integral of log(nominal bitrate/300kbps) over actually played media seconds / 2",
+    "stall_coefficient_per_s": 4,
+    "startup_coefficient_per_s": 1,
+    "log_quality_variation_coefficient": 0.3,
+    "excess_live_latency_area_coefficient": 0.1,
+    "excess_live_latency_target_s": 3
+  },
+  "catchup": "Approximate LoL+ sigmoid, playback rate 0.83..1.17, buffer minimum 0.5s, drift seek at target+5s.",
+  "status": "Integration pilot only; not calibrated or final LEO-aware policy; one seed; no performance claim over CMAB.",
+  "not_observed_by_actor": [
+    "RTT",
+    "live_latency",
+    "future capacity/outage",
+    "handover state",
+    "trace identity"
+  ],
+  "limitations": [
+    "Whole-segment model",
+    "Synthetic capacity and explicit interruptions",
+    "No TCP/congestion/loss dynamics",
+    "Approximate seek/catch-up lifecycle",
+    "Single-source chronological RTT split",
+    "One pilot seed"
+  ]
+}

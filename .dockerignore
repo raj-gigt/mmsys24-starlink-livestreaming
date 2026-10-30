@@ -1,0 +1,14 @@
+.git
+artifacts
+paper-data
+paper-figures
+figures
+data
+models
+reports
+livesim2
+dash.js/.git
+dash.js/node_modules
+dash.js/dist
+dash.js/test
+dash.js/docs

@@ -23,7 +23,7 @@ Execution: Steps 1-6 authorized as one autonomous batch on 30 October 2026.
 | 4 | Complete | `artifacts/integration/phasea-abrAnjanSimple-20261029T222254-d1324b.json`: 40 live decisions, 39 matched completed requests, MongoDB path and played-quality response verified; lifecycle tests passed |
 | 5 | Complete | 84 deterministic, labelled scenarios; source/split/media manifests; leakage/unit/hash checks passed; independent LENS RTT reserve acquired; StarNet throughput acquisition remains follow-up |
 | 6 | Complete | Reference parity: 64 fixtures; pilot parity: 44 fixtures; 39 real Chrome decisions matched Python, zero fallbacks, complete-decision p99 0.4ms. `artifacts/phase-a-completion.json` and `reports/phase-a/README.md`; final LEO training remains Phase B. |
-| 7 | Deck complete; team rehearsal pending | `reports/mid-review/mid-review.pptx`: 8 slides, technical CMAB intro and README diagram, four implementation deliverables, two future-plan slides; per-slide visual/source checks and editable-chart validation passed. Timed presenter notes target 9m20s. |
+| 7 | Deck and learning guide complete; team rehearsal pending | `reports/mid-review/mid-review.pptx`: 8 slides, technical CMAB intro and README diagram, four implementation deliverables, two future-plan slides; per-slide visual/source checks and editable-chart validation passed. Timed presenter notes target 9m20s. `reports/mid-review/learning-guide.pdf`: 23 visually checked pages in 8 slide-matched sections, worked examples, terminology, evidence pointers and practice Q&A for all three members. |
 
 ### Step 1 - Prepare the repository and experiment host
 

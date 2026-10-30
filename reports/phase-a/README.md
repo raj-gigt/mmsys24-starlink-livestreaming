@@ -1,6 +1,6 @@
 # Phase A handoff — Anjan
 
-This batch completes roadmap Steps 1–6. The mid-review PowerPoint is Step 7 and has not been created. All changes are local in `LEO_ABR_RL`, on the parent and player submodule branches named `anjan`; nothing has been pushed.
+This batch completes roadmap Steps 1–6. Step 7 now has an eight-slide PowerPoint and a 23-page team learning guide in `reports/mid-review/`; team rehearsal remains pending. All changes are local in `LEO_ABR_RL`, on the parent and player submodule branches named `anjan`; nothing has been pushed.
 
 ## What works
 
@@ -109,4 +109,4 @@ Do not add `-v` unless intentionally deleting the database. The delivered artifa
 
 ## Remaining work
 
-Step 7 consolidates this evidence into the mid-review PPT. Phase B then calibrates the environment, develops a stronger RL baseline and LEO-aware policy, performs repeatable training, compares runtimes and runs the sealed final CMAB comparison. The JavaScript/Pyodide/worker runtime study and asynchronous scheduling bridge remain future work.
+Step 7 has consolidated this evidence into the mid-review PPT and a slide-matched learning guide; the team still needs to rehearse. Phase B then calibrates the environment, develops a stronger RL baseline and LEO-aware policy, performs repeatable training, compares runtimes and runs the sealed final CMAB comparison. The JavaScript/Pyodide/worker runtime study and asynchronous scheduling bridge remain future work.

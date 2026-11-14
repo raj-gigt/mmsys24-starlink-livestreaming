@@ -73,7 +73,9 @@ wsl --distribution Ubuntu-22.04 --user root --cd /mnt/c/Users/HP/Desktop/LEO/LEO
 
 `up` first checks/applies the packaged player patch on `anjan`, then builds the local source. It uses the pinned service lock and shared repair. The upstream example runner is not automatically started. Preserve these configurations when comparing policies.
 
-The existing external Python environment was reused. No environment or temporary-work directory was created in the project:
+For browser trials, install `python -m pip install -r requirements-browser.txt` in your virtual environment. The committed actor runs in Chrome as JavaScript; the full `requirements-phase-a.txt` environment is only needed for training and other offline verification tools.
+
+The original Windows run used an existing external Python environment:
 
 ```powershell
 $py = "$env:LOCALAPPDATA\LEO-RL\venvs\contract-v1\Scripts\python.exe"

@@ -19,6 +19,7 @@ import requests
 from pymongo import MongoClient
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from plot_run_timeline import plot_run
 
 ROOT = Path(__file__).resolve().parents[1]
 WSL_ROOT = "/mnt/" + ROOT.drive[0].lower() + ROOT.as_posix()[2:] if os.name == "nt" else str(ROOT)
@@ -105,7 +106,10 @@ def run(args: argparse.Namespace) -> dict:
         if getattr(args, 'align_minute', False):
             while datetime.now(timezone.utc).second != 0:
                 time.sleep(0.2)
-        driver.find_element(By.ID, "load-button").click()
+        # Invoke the page's normal Load handler without relying on the
+        # viewport position of the control in the Selenium container.
+        load_button = driver.find_element(By.ID, "load-button")
+        driver.execute_script("arguments[0].click()", load_button)
         loaded_utc = datetime.now(timezone.utc).isoformat()
         driver.execute_script("window.app.player.on('error',e=>window.__phaseaErrors.push(JSON.parse(JSON.stringify(e))))")
         started = time.monotonic()
@@ -157,6 +161,7 @@ def run(args: argparse.Namespace) -> dict:
                    "console_severe": [c for c in console if c.get("level") == "SEVERE"][-30:]}
         (out / "samples.json").write_text(json.dumps(samples, indent=2), encoding="utf-8")
         (out / "summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
+        print(f"Saved timeline: {plot_run(out)}")
         assert summary['played_advance_s'] > 5, "No sustained real playback advancement"
         assert summary['completed_video_requests'] >= 3, "Too few successful video downloads"
         assert counts["metric"] > 0 and counts["events"] > 0, "No actual MongoDB playback evidence"

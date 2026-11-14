@@ -1,0 +1,4 @@
+# Host-side dependencies for browser trials with the prebuilt JavaScript actor.
+selenium==4.10.0
+pymongo==4.4.0
+requests==2.32.5

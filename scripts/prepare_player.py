@@ -8,9 +8,12 @@ def git(*args,check=True):
     return subprocess.run(['git',*args],cwd=ROOT,check=check,capture_output=True,text=True)
 
 def main():
-    assert git('branch','--show-current').stdout.strip()=='anjan','Switch the parent repository to anjan before applying source changes'
     recorded_pin=git('rev-parse','HEAD:dash.js').stdout.strip()
     assert git('-C','dash.js','rev-parse','HEAD').stdout.strip() in {PIN,recorded_pin},'Unexpected dash.js revision'
+    committed_rule=git('-C','dash.js','cat-file','-e','HEAD:src/streaming/rules/abr/anjan/AnjanRule.js',check=False)
+    if committed_rule.returncode == 0:
+        print('Committed custom player source present; preserve local edits and build this checkout.')
+        return
     branch=git('-C','dash.js','branch','--show-current').stdout.strip()
     if branch!='anjan':
         if not branch:

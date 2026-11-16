@@ -1,0 +1,9 @@
+{
+  "status": "Development in progress; no held-out policy performance inspected",
+  "H1": {"mechanism": "slot reset discards useful history", "state": "paired experiment running", "treatment": "memory", "counterexample": "a genuine capacity shift may make old data harmful"},
+  "H2": {"mechanism": "seven high-rate restart decisions consume buffer and delay learning", "state": "paired experiment running", "treatment": "startup", "counterexample": "conservative restart may unnecessarily reduce quality on an easy link"},
+  "H3": {"mechanism": "immediate proxy feedback is not the new action's realized outcome", "state": "pending", "requirement": "request/media outcome association and attribution coverage"},
+  "H4": {"mechanism": "buffer/live delay and fresh RTT distinguish otherwise similar context", "state": "pending", "requirement": "causal deployed input with validity and age"},
+  "H5": {"mechanism": "refitting/scaling and reseeding affect exploration stability", "state": "pending", "source_fact": "served MABWiser 2.7.0 defaults to seed 123456 and is reconstructed by original code"},
+  "H6": {"mechanism": "unnecessary quality changes or aggressive recovery impair playback", "state": "pending", "requirement": "guard-only comparison and override count"}
+}

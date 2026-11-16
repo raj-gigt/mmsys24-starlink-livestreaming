@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "base": "original CMAB LinTS, three input features, original P1203-derived immediate proxy reward",
+  "variants": {
+    "reference": {
+      "retain_history": false,
+      "forced_choices_per_slot": 7,
+      "startup_action": "highest",
+      "purpose": "Adapter check; the main baseline is still the actual abrCMAB path"
+    },
+    "memory": {
+      "retain_history": true,
+      "max_completed_history_rows": 30,
+      "forced_choices_per_slot": 7,
+      "startup_action": "highest",
+      "hypothesis": "H1: isolate data retention while preserving the forced-choice schedule"
+    },
+    "startup": {
+      "retain_history": false,
+      "forced_choices_per_slot": 1,
+      "startup_action": "highest nominal representation below safe measured throughput",
+      "safety_factor_buffer_below_1s": 0.45,
+      "safety_factor_otherwise": 0.70,
+      "hypothesis": "H2: restart treatment changes both forced duration and initial quality; report this as a package"
+    },
+    "both": {
+      "retain_history": true,
+      "max_completed_history_rows": 30,
+      "forced_choices_per_slot": 1,
+      "startup_action": "same as startup variant",
+      "hypothesis": "H1 x H2 interaction"
+    }
+  },
+  "unchanged_factors": ["three-feature context", "LinTS alpha 1", "default MAB seed", "reward formula and reward timing", "catch-up", "network schedule", "media ladder"],
+  "evidence": {
+    "actual_controller_vm_checks": "scripts/check_cmab_variants.cjs",
+    "browser_integration": "artifacts/final/observer-checks/phasea-abrCMABImproved-20261116T222032-f5a8f2.json",
+    "paired_development": "artifacts/final/development/memory-startup-v1/runs.json"
+  }
+}

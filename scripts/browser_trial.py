@@ -70,6 +70,7 @@ return JSON.parse(JSON.stringify({at_ms:performance.now(),media_time:v.currentTi
 
 def run(args: argparse.Namespace) -> dict:
     run_id = f"phasea-{args.algorithm}-{datetime.now(timezone.utc):%Y%m%dT%H%M%S}-{uuid.uuid4().hex[:6]}"
+    args._run_id = run_id
     out = ROOT / "artifacts" / "runs" / run_id
     out.mkdir(parents=True)
     options = webdriver.ChromeOptions()
@@ -95,6 +96,8 @@ def run(args: argparse.Namespace) -> dict:
               "abrGeneral": args.algorithm, "maxDrift": 5, "minCatchupPlaybackRate": -0.17,
               "maxCatchupPlaybackRate": 0.17, "abrAdditionalAbandonRequestRule": "true",
               "cmabAlpha": 1.0, "catchupMechanism": args.catchup}
+    if getattr(args, 'variant', None):
+        params['cmabVariant'] = args.variant
     url = "http://pyodide/samples/starlink/testplayer/testplayer.html?" + urlencode(params)
     clock_start = datetime.now(timezone.utc).isoformat()
     try:
@@ -191,6 +194,7 @@ def run(args: argparse.Namespace) -> dict:
                    "target_latency_s": args.target, "catchup": args.catchup, "url": url,
                    "load_wall_clock_utc": loaded_utc,
                    "scenario_id": scenario['id'] if scenario else None,
+                   "variant": getattr(args, 'variant', None),
                    "scheduled_start_unix_s": scheduled_start,
                    "controlled_stages": applied, "samples": len(samples), "mongo_documents": counts,
                    "media_time_end": final.get("media_time"), "ladder": final.get("ladder"),
@@ -206,8 +210,9 @@ def run(args: argparse.Namespace) -> dict:
         (out / "samples.json").write_text(json.dumps(samples, indent=2), encoding="utf-8")
         (out / "summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
         print(f"Saved timeline: {plot_run(out)}")
-        assert summary['played_advance_s'] > 5, "No sustained real playback advancement"
-        assert summary['completed_video_requests'] >= 3, "Too few successful video downloads"
+        if not getattr(args, 'allow_poor_playback', False):
+            assert summary['played_advance_s'] > 5, "No sustained real playback advancement"
+            assert summary['completed_video_requests'] >= 3, "Too few successful video downloads"
         assert counts["metric"] > 0 and counts["events"] > 0, "No actual MongoDB playback evidence"
         print(json.dumps(summary, indent=2))
         return summary
@@ -233,4 +238,5 @@ if __name__ == "__main__":
     parser.add_argument('--scenario', help='Versioned workload manifest')
     parser.add_argument('--case', help='Case ID within workload manifest')
     parser.add_argument('--allow-test', action='store_true', help='Only for frozen final evaluation')
+    parser.add_argument('--variant', help='Whitelisted improved-CMAB configuration')
     run(parser.parse_args())

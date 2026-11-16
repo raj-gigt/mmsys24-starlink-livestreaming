@@ -1,305 +1,444 @@
-# LEO-aware RL ABR execution roadmap
+# Project completion roadmap: improve CMAB and evaluate a neural alternative
 
-## Objective and execution rules
+Updated: 17 November 2026. Group 4 / CS6048. Deliverable definitions and figure/table IDs are in [deliverables.md](deliverables.md).
 
-Improve the paper's existing CMAB bitrate controller while keeping the rest of the streaming system the same. Complete only the proposal's mandatory deliverables. The first checkpoint is the mid review on **31 October 2026**; the final phase develops and evaluates the improved RL policy.
+## 1. Objective, authorization and deadlines
 
-- Keep all project code, configurations, models, results and presentation work inside `LEO_ABR_RL`. Work on the parent repository's **`anjan`** branch. Create an `anjan` branch in a submodule before editing its source; a parent branch alone does not protect a submodule's detached checkout.
-- Execute one step at a time. Before execution, explain its objective, intuition, actions and verification, and offer **Codex / manual / coordination**. The user's selection authorizes that step. Verify it, update its status here, then wait before advancing. Routine fixes within the authorized step do not need another design-approval phase.
-- Preserve the upstream experiment configurations. Use separate overrides and new policy labels. Store checksums, source revisions, image identities and commands with actual results. Keep environments, package caches and scratch work outside the project; do not create a project `tmp` folder.
-- Use live measurements collected by the player and its in-memory history to make decisions. Continue using the existing backend/MongoDB path to record and inspect evidence. A database read is not a prerequisite for each decision.
-- For the mid review, both the simple test policy and neural-policy execution use a **synchronous JavaScript call**. Python/PyTorch remain offline development tools. Compare alternative runtimes after the review.
-- The old roadmap's feature count, layer sizes, reward coefficients and worker choice are not automatically reinstated. Select model details from the compatibility checks and validation below; keep a small actor as the initial candidate.
+**Primary track:** understand the reference CMAB in detail, test causal hypotheses, refine it and measure whether the resulting controller improves actual live playback. **Second track:** train a player-compatible Gelato/Plume-inspired actor-critic comparator, with conventional and LEO-aware observations. Preserve the proposal's required throughput/BOLA/RL comparisons and mandatory-only scope.
 
-## Phase A - Establish the system and prepare the mid review
+The user has authorized both this plan and autonomous execution ("begin autonomous run"). **Execution is active from Step 8.** Once that run is authorized, execute the pending steps sequentially without requesting a new mode selection or design agreement at every step. Routine design choices, diagnoses, fixes, verification and continuation are autonomous. The older per-step Codex/manual/coordination approval rule and runtime-study priorities are superseded.
 
-Execution: Steps 1-6 authorized as one autonomous batch on 30 October 2026.
+**Commit/push authorization is now granted for the autonomous run**, by the user's message: "you can commit/push whenever you need to". Publish verified milestones; push edited submodule commits before the parent reference. Do not push unverified or unrelated changes. Preparing a reviewed release or a source patch does not authorize committing it. Retain all permanent code/configuration/result work in LEO_ABR_RL, parent branch anjan and anjan in any edited submodule. Preserve unrelated changes and historical evidence. Keep environments/caches/scratch outside the repository; no project tmp directory. No paid compute, unsolicited external messages or replacement repository.
 
-| Step | Status | Evidence |
+Deadlines, in Asia/Calcutta:
+- **Submission: 18 November 2026, 08:00.**
+- **Presentation/demo: 20 November 2026, 11:00.**
+- User's timing reference: 17 November, 02:50, giving 29 hours 10 minutes until submission. Recalculate the actual remaining time at execution start; do not pretend planning time leaves the full original window.
+- Aim for a verified submission candidate by 18 November 05:00 and an immutable local release by 07:00, leaving upload/last-mile margin. The assistant prepares the package; portal submission requires access and explicit authorization if the user wants it performed.
+- Freeze the submission's source/results/report identities before submission. Later slide/rehearsal improvements must not silently replace the report or introduce new results as if they were in the submitted release.
+
+Use the existing synchronous routes: original CMAB/Pyodide where practical and synchronous JavaScript for the neural actor. No worker scheduling bridge, runtime comparison research, new congestion controller or model zoo. Asynchronous event logging or ordinary telemetry collection is allowed; the ABR decision still returns a completed synchronous result.
+
+## 2. Reuse completed Phase A; do not start over
+
+Historical work completed on 30 October is an existing foundation, not a claim that the host or final algorithms were tested today.
+
+| Existing steps | Reusable assets/evidence | Remaining distinction |
 |---|---|---|
-| 1 | Complete | `artifacts/setup/`: Docker/Compose metadata and successful NET_ADMIN container probe; parent/player branches `anjan` |
-| 2 | Complete | 25 archived-data figures; `artifacts/reproduction/verification.json` and visually inspected contact sheet |
-| 3 | Complete | Fresh CMAB/Dynamic/L2A/LoL+ playback and MongoDB evidence; `artifacts/baselines/verified.json`; measured 2/8-Mbps shaping, outage and recovery. Failed trace CMAB run retained. |
-| 4 | Complete | `artifacts/integration/phasea-abrAnjanSimple-20261029T222254-d1324b.json`: 40 live decisions, 39 matched completed requests, MongoDB path and played-quality response verified; lifecycle tests passed |
-| 5 | Complete | 84 deterministic, labelled scenarios; source/split/media manifests; leakage/unit/hash checks passed; independent LENS RTT reserve acquired; StarNet throughput acquisition remains follow-up |
-| 6 | Complete | Reference parity: 64 fixtures; pilot parity: 44 fixtures; 39 real Chrome decisions matched Python, zero fallbacks, complete-decision p99 0.4ms. `artifacts/phase-a-completion.json` and `reports/phase-a/README.md`; final LEO training remains Phase B. |
-| 7 | Deck and learning guide complete; team rehearsal pending | `reports/mid-review/mid-review.pptx`: 8 slides, technical CMAB intro and README diagram, four implementation deliverables, two future-plan slides; per-slide visual/source checks and editable-chart validation passed. Timed presenter notes target 9m20s. `reports/mid-review/learning-guide.pdf`: 23 visually checked pages in 8 slide-matched sections, worked examples, terminology, evidence pointers and practice Q&A for all three members. |
+| 1: checkout/host | Recursive checkout, pinned service/player revisions, WSL/Docker and NET_ADMIN checks | Recheck readiness and accessible commits; do not reinstall/reclone routinely. |
+| 2: archived reproduction | 25 regenerated author figures and reproduction verification | Archived measurements are not our fresh final experiments. |
+| 3: fresh operation checks | CMAB, Dynamic, L2A-LL, LoL+ and measured shaper checks | Short operation checks do not rank final policies. |
+| 4: custom player integration | AnjanRule, simple policy, real observations/request mapping and lifecycle checks | Extend common instrumentation and add separately selectable CMAB variants. |
+| 5: data preparation | Media byte catalog; 48/18/18 scenarios; provenance/split checks; LENS reserve | Synthetic-assisted data and one main RTT session limit generalization. |
+| 6: neural deployment | Faithful released-reference export; separate 36-64-64-8 pilot; parity/browser evidence | Pilot is not unchanged pretrained Gelato or demonstrated CMAB improvement. |
+| 7: mid-review | PPT and learning guide now in ../mid-review/ | Final report/deck must use new verified results and actual contributions. |
 
-### Step 1 - Prepare the repository and experiment host
+Current planning snapshot: parent branch anjan at ebfb427; player f31314a7 in the accessible anjanrd/dash.js fork. Re-read identities/status at execution start.
 
-**Objective / intuition:** obtain the complete, reproducible codebase and a machine capable of running its Linux networking setup.
+Do not overwrite models/pilot, old manifests, Phase A raw evidence or published reference assets while developing final variants. Version new outputs separately.
 
-**Actions**
+## 3. Execution method and experiment discipline
 
-1. Use the [team fork](https://github.com/raj-gigt/mmsys24-starlink-livestreaming). The fresh-checkout sequence, from its intended parent directory, is:
+For every step:
+1. Read its pending state and relevant evidence. Refine the local actions to match observed conditions without rewriting the whole roadmap.
+2. State objective, simple intuition, concrete actions and verification in a concise progress update.
+3. Implement the step, verify behavioural evidence and store commands/configuration/identities/results.
+4. Update this tracker with status, evidence and any justified deviation, then continue to the next step.
+5. On error: formulate a diagnosis -> create/run the smallest useful diagnostic -> inspect observations -> choose a fix -> implement -> rerun the failing check and relevant regression checks -> continue. A process exit alone is not verification.
 
-   ```bash
-   git clone --recurse-submodules https://github.com/raj-gigt/mmsys24-starlink-livestreaming LEO_ABR_RL
-   cd LEO_ABR_RL
-   git switch -c anjan
-   git submodule update --init --recursive
-   git submodule status --recursive
-   ```
+Maintain a compact execution ledger under artifacts/final/ and this roadmap's status table. Record current step, completed run keys, actual throughput/runtime, hypothesis decisions, failed attempts and next action. Resume verified work rather than rerunning it after an interruption. A run key includes scenario, source phase, policy/config/model hashes, seed and repeat.
 
-   If the checkout or branch already exists, inspect and reuse it rather than cloning over it or resetting changes. **Execution: repository and host/runtime checks completed on 30 October 2026; see `artifacts/setup/`.**
-2. Read `README.md`, `starter.md`, `.gitmodules`, Compose files and Dockerfiles. Record the current parent/submodule commits before edits.
-3. Prefer the team's available Linux x86-64 experiment host. This laptop has WSL2 Ubuntu distributions; verify Docker Engine/Compose and daemon access inside the chosen Linux environment. A Windows Docker CLI was not found during planning. Installation, administrator access or using another teammate's host may require coordination.
-4. Verify Chrome-container support, sufficient disk/RAM/shared memory, Docker socket access, bind-mount paths, required ports and `NET_ADMIN` support for shaping. Run Compose from a Linux shell and verify the resolved `${PWD}` paths. Do not provision paid cloud infrastructure implicitly.
-5. For player edits, create `anjan` inside `dash.js`. Deliver submodule changes through a team-accessible fork/commit and parent pointer, or a parent-tracked patch applied by the build. Verify a teammate can recreate the modified player without unpublished local changes.
+Run one browser streaming trial at a time on the shared shaped link. Do not run another browser experiment or a GPU/CPU-saturating training job concurrently with measured trials. Vectorized training environments within a training step are fine; algorithm development steps still proceed sequentially.
 
-**Verify / output:** correct origin and branch; populated submodules with no `-`, `+` or `U` status prefixes; expected source files present; working Docker/Compose and networking capabilities. Save a host/setup record under `artifacts/setup/` when executed.
+### Working layout and implementation entry points
 
-**Owner / dependency:** Anjan with Rajat and Deviprasad for the experiment host. Host installation/access can require coordination; the remaining CLI work is suitable for Codex.
+Reuse existing files where their responsibilities fit. Proposed new paths are destinations for later implementation, not files created by this planning step:
 
-### Step 2 - Regenerate the authors' figures from archived results
+| Component | Existing foundation / planned extension |
+|---|---|
+| CMAB controller | Preserve cmab/CMABAbrController.js and CMABRule.js; add sibling improved-controller/rule code with named variant configurations. Register one improved policy and forward its whitelisted variant configuration through the player/runner. |
+| Observations, environment and training | Extend rl/features.py, rl/pilot_env.py, rl/train_pilot.py and rl/web/; extract shared outcome/metric code rather than duplicate it across policies. |
+| Experiment definitions | configs/final/ for policy, training, metric, scenario/matrix and release settings; reference existing data/manifests/ rather than copy the data inventory. |
+| Automation | Extend scripts/browser_trial.py; add focused matrix, analysis, verification and packaging entry points under scripts/. Separate final verification from historical verify_phase_a.py checks. |
+| Models | models/final/conventional/ and models/final/leo/ with per-seed checkpoint identities, selected exports and feature/action manifests. Retain old models/pilot and models/reference unchanged. |
+| Evidence | artifacts/final/ for the ledger, compact per-run exports, aggregates, attribution diagnostics and calibration/training checks. Heavy scratch/raw logs may stay ignored but required reproduction inputs must enter the release. |
+| Report, plots and slides | reports/final/ for report source/PDF, generated figures/tables, demo instructions/recording and final deck. Reuse mid-review material only with correct historical labels. |
+| Submission | A named release ZIP and manifest under a dedicated releases/ path, built from an explicit allowlist and tested after extraction outside the project. Avoid committing a duplicate archive as source by accident. |
 
-**Objective / intuition:** prove the analysis pipeline works before spending time running new streaming experiments.
+Stop for genuine access/host failures that cannot be repaired within authorized scope, an unavoidable trajectory-changing decision, required human information, or commit/push/portal authorization. Do not stop for an ordinary test failure, a weak candidate, or a recoverable installation issue. Do not discard a poor result to make an improvement claim.
 
-**Actions**
+### Capacity and deadline management
 
-1. Inspect `paper-data/README.md`, `paper-data/src/Makefile` and the archived data. Preserve the supplied data unchanged.
-2. From the repository root on the Linux experiment host, follow the README's reproduction route:
+RTX 4060 is available. Existing recorded CPU timings are about 16 seconds for 50,176 pilot decisions and 105 seconds for 500,224 in another run; these are evidence that training need not take hours, not forecasts for the revised environment. The current Python lock uses CPU-only PyTorch. Benchmark a separate CUDA-compatible external environment if needed, without breaking the working CPU environment.
 
-   ```bash
-   docker run --rm \
-     -v "$PWD/paper-data/data:/data:ro" \
-     -v "$PWD/paper-figures:/app/src/figures" \
-     clarkzjw/mmsys24-reproducibility
-   ```
+Compare complete environment-plus-training throughput on CPU and RTX 4060, including validation overhead. Small MLP A2C can be faster on CPU; use measured throughput rather than either assuming GPU acceleration or ignoring available GPU capacity. Do not spend hours provisioning Colab/Kaggle when local training works.
 
-3. Record the actual image digest. If the prebuilt image is unavailable, build an equivalent analysis image from the pinned `paper-data` sources and record that substitution.
-4. Check the streaming, latency and throughput figure groups, including bitrate, live latency, rebuffering, switching and QoE. Inspect axes, legends, data counts and correspondence to supplied results.
+These are working allocations/ceilings, **not durations to wait out or predictions that training will consume them**:
 
-**Verify / output:** nonempty, readable figures and successful analysis logs, with source data and image identities. Label these **regenerated figures from the authors' archived measurements**, not newly reproduced network experiments.
+| Work | Default allocation within remaining window | How to expand intelligently |
+|---|---|---|
+| Foundation, Steps 8-10 | About 2.5 hours | Fix measurement defects before increasing run count. |
+| Primary CMAB study, Steps 11-14 | About 5 hours | Spend saved time on justified hypotheses/ablations, not a full grid. |
+| Neural calibration/training/deployment, Steps 15-17 | About 3 hours initially | Millions of decisions and five seeds are the default; extend from measured throughput and validation evidence. |
+| Final browser evaluation, Step 18 | About 7.5 hours for the default matrix | Real playback and phase alignment constrain this; precompute runtime before starting. |
+| Analysis, Step 19 | About 1 hour | Automatically generate from saved logs, then inspect explanations/outliers. |
+| Report, Step 20 | About 2 hours | Build tables/sections as evidence arrives, not from scratch at the end. |
+| Demo/deck, Step 21 | About 45 minutes for submission assets | Final presentation polish/rehearsal can continue after submission. |
+| Packaging/clean verification, Step 22 | About 1.5 hours | Reserve time for real extraction/reproduction and authorization. |
 
-**Owner / dependency:** Anjan/Deviprasad; Step 1. Codex can complete this once the host is ready.
+The initial allocations sum to about 23 hours 15 minutes, leaving roughly 5 hours 55 minutes against the user's original clock reference. Recalculate at execution start. Unused allocation immediately becomes available for stronger evidence or earlier release. Do not reduce the research scope merely because a model is labelled RL. Protect the final report/reproduction/upload margin.
 
-### Step 3 - Run and verify fresh baseline experiments
+Target checkpoints: foundation usable around 06:00 on 17 November; primary candidate by late morning; both tracks available and final protocol frozen around 13:00; core measurements complete around 21:00; report/release checks overnight. These are targets to recompute from actual start, with the fixed submission deadline taking precedence.
 
-**Objective / intuition:** establish that the real player, network controls, measurement storage and result export work together.
+If running late, remove optional searches and matrix extensions first, then reduce additional refinement cycles before touching required baselines, scenario coverage, physical metrics or release checks. Any unavoidable reduction to the core submission scope is a trajectory change to flag to the user. Never conceal it in a smaller sample count.
 
-**Actions**
+## 4. Common evaluation protocol to implement before tuning
 
-1. Start with the actual mounted `experiments/batch-example.json`: one 60-second CMAB round, target latency 3 seconds, with an explicit LoL+ catch-up override. Do not assume Compose selects the README's long batch.
-2. Inspect configuration, pull the images and start the stack:
+### Policies and controls
 
-   ```bash
-   docker compose -f docker-compose-emulation.yaml config
-   docker compose -f docker-compose-emulation.yaml pull
-   docker compose -f docker-compose-emulation.yaml up -d
-   docker logs -f dashjs-runner
-   ```
+- B0: original reference CMAB on the shared corrected infrastructure. Preserve its decisions/reward/reset behaviour, including awkward behaviour; passive observation is allowed.
+- C*: the validation-selected improved CMAB. Its online updates continue during each evaluation session using only its own past feedback.
+- THR: existing throughput rule.
+- BOLA: existing buffer-based rule.
+- N-CONV: trained conventional-input actor-critic baseline.
+- N-LEO: trained LEO-observation actor-critic.
+- Fixed low/mid/high and the Phase A simple rule are development diagnostics, not extra mandatory final-series entries.
 
-3. Verify readiness of livesim2, the player/proxy, Selenium Chrome, statistics server and MongoDB. Inspect playback through the existing noVNC viewer on port 7900. `VIDEO=0` disables the extra recording container, not that viewer.
-4. Verify the active `runner/tc-trace.py`, launched by `shaper/supervisord.conf`. Inspect shaping logs and `tc -s qdisc/class show dev eth0`, then measure effective delay, loss, outages and throughput. The script omits root-qdisc creation and specifies HTB rates above their ceilings; commands may fail even while video plays. Resolve necessary defects, record the exact correction, and rerun CMAB on the corrected setup before comparing any new algorithm.
-5. Treat the hour-long CSV as latency/loss-related input, not varying-bandwidth data. Verify which direction is delayed and distinguish configured egress delay from measured RTT. Log trace start/playback offset, live-source phase and wall-clock phase; align these for paired comparisons. The existing CMAB catch-up controller uses specific seconds of the minute, so matching only the trace offset is insufficient.
-6. Check experiment-specific MongoDB event/metric collections and exported JSON/PNG files. Actual current output is `figures/emulation/target-<n>s/<experiment-id>/`, rather than assuming the README's `figures-emulation` location. Verify nonempty time series and real advancing playback, not just a successful container exit.
-7. In separate short configurations, run CMAB, Dynamic, L2A-LL and LoL+. Retain a baseline snapshot. Use short runs for the review; schedule the full original matrix separately: 160 five-minute trials, approximately 13.3 hours of playback plus overhead.
-8. Preserve results and database data when stopping the stack with `docker compose -f docker-compose-emulation.yaml down`; do not remove its persistent volume as routine cleanup.
+Use the same media catalog, representation mapping, player build, target delay (initial default 3 seconds), catch-up mode (existing explicit LoL+ override), shaper implementation and relevant host settings. No policy-specific TCP/source/catch-up improvement. Keep raw original-CMAB paper-replay settings as a labelled additional group; do not blend them silently with controlled zero-background-loss cases.
 
-**Verify / output:** fresh playback evidence, verified shaping measurements, experiment logs, populated MongoDB records and readable exported plots. Separate unchanged-source reproduction, any common bug repairs, and later policy modifications in the result labels.
+Preload policy dependencies, then start measured playback at the planned phase. Measure cold setup separately. Startup delay for the main experiment is load/play trigger to first actual playback, with the initialization boundary stated; do not mix one policy's cold Pyodide download into a warm actor comparison. A cold-start sample remains part of deployment evidence.
 
-**Owner / dependency:** Deviprasad leads emulation, Rajat supports the player/build, Anjan verifies data needed for ML; Steps 1-2. Coordination may be needed for host access.
+### Common played-outcome ledger and scoring
 
-### Step 4 - Add a simple custom JavaScript policy using actual player data
+Initial common score, reusing the pilot's interpretable components:
+- Q: sum over actually played media of log(nominal representation bitrate / 300 kbps), weighted by media seconds / 2.
+- B: video stall seconds, excluding startup, deliberate pause and seek.
+- S: startup seconds.
+- V: sum of absolute log-utility changes at actually played quality boundaries.
+- A: integral over wall time of max(0, live delay - target delay), including waits/stalls where observable.
+- **QoE_total = Q - 4 B - 1 S - 0.3 V - 0.1 A.** Also report QoE_total / measured wall duration to compare different-length supplementary runs.
 
-**Objective / intuition:** prove that our own policy really controls video requests before introducing a neural model.
+This is an explicit bitrate-utility proxy, not a perceptual MOS/SSIM/VMAF result. Use actual encoded bytes for transfers; do not use nominal bitrate as exact segment size. Track skipped media, discarded bytes, coverage and seeking so catch-up cannot create an unexplained reward gain.
 
-**Actions**
+Define metrics and units in T7 before comparing candidate outcomes. Verify edge cases with hand-calculated fixtures. Fix a unit/accounting defect if discovered and rescore all affected policies from logs; invalidate derived comparisons consistently rather than keeping favourable old scores.
 
-1. Inspect the actual extension points:
+The main coefficients are not tuned to make a policy win. Before final testing, rescore validation logs using one-at-a-time factors of 0.5 and 2 for stall, variation and latency weights; report whether the ordering is fragile. The original CMAB's internal reward is an additional diagnostic, not the shared headline metric.
 
-   | Purpose | Source location |
-   |---|---|
-   | Algorithm identifiers | `dash.js/src/streaming/constants/Constants.js` |
-   | Rule selection and synchronous calls | `dash.js/src/streaming/rules/abr/ABRRulesCollection.js` |
-   | Existing mixed JavaScript/Python example | `dash.js/src/streaming/rules/abr/cmab/CMABRule.js` and `CMABAbrController.js` |
-   | Other implementations | `ThroughputRule.js`, `BolaRule.js`, `L2ARule.js`, `lolp/LoLpRule.js`; Dynamic selection in `AbrController.js` |
-   | Player controls and measurements | `dash.js/samples/starlink/testplayer/testplayer.html` and `main.js` |
-   | Batch configuration propagation | `runner/config.py`, `single_runner.py`, `experiments/` |
-   | Storage and plots | `stats-server/app.py`, `runner/plot.py` |
+Default validation selection:
+1. Valid integration and useful playback.
+2. Highest equal-family mean common QoE, subject to mean stalls not worsening by more than max(0.5 seconds per 120-second session, 10% of B0), p95 live delay not worsening by more than 0.5 seconds, and mean startup not worsening by more than 1 second.
+3. Within measurement noise, prefer the simpler controller and lower variability.
 
-2. Add a dedicated label such as `abrAnjanSimple` and an `anjan/` rule, following FactoryMaker/SwitchRequest integration. Preserve every existing algorithm. Connect the label through rule registration, player controls, URL parsing and runner configuration; explicitly propagate any new fields.
-3. Implement a small synchronous throughput-and-buffer heuristic in JavaScript. For example, start low, select a representation below conservatively estimated recent delivery rate, and step down when the buffer is low. Treat its safety factor as a demonstration setting, not an optimized model.
-4. Obtain buffer, completed video-download history, previous quality, live latency and playback rate from the player's APIs. Add RTT only through an observed, freshness-aware probe result when needed. Use current observations/in-memory history; send decision records through the existing experiment-specific logging route asynchronously. Do not introduce a MongoDB read or network inference request into the ABR call.
-5. Build the modified local player. The upstream `Dockerfile-dashjs` clones a remote branch, and Compose uses a prebuilt image: add a deliberate local-source build/override and verify a unique build marker in Chrome. Keep the other services unchanged except shared necessary repairs from Step 3.
-6. Map actions through actual representation IDs. Associate a decision with its real request; handle repeated callbacks, initialization requests, retries and seeks without duplicate actions. Preserve CMAB's effective rule-selection behaviour for the main replacement comparison.
-7. Use separate configurations with the same media, network, target, catch-up and other playback settings as the corresponding CMAB control. New strategy names otherwise receive a different catch-up default in the current runner, so copy `CATCH_UP` explicitly.
+These margins are initial engineering choices, not course requirements. They may be revised once using metric fixtures/reference variability before candidate search; record the reason and freeze them. Report physical tradeoffs even when the scalar/guardrails pass. Do not choose margins after viewing held-out results.
 
-**Verify / output:** a live-data decision log linking observations -> selected representation -> actual HTTP request -> played quality, matched MongoDB records, and a short demo in which a controlled capacity change causes an explainable policy response. Test startup/missing data and reset behaviour. A hard-coded action sequence or fixture-only test does not satisfy this step.
+### Data and final workload
 
-**Owner / dependency:** Rajat leads player wiring; Anjan implements policy/preprocessing and checks evidence; Deviprasad supplies controlled conditions. Step 3. Codex can implement this with a working testbed.
+Reuse existing train/validation/test source boundaries and 60-second guards. Never change memberships to favour a result. Add versioned workload manifests rather than replacing Phase A manifests.
 
-### Step 5 - Prepare and separate the data
+Default final controlled workload: **10 sealed 120-second scenarios: two per mandatory family**. Prefer one derived from the existing Seychelles test block and one from the previously reserved Victoria RTT session per family. Treat the entire Victoria session as final-only if it has not already been used for performance-based decisions; audit its history first. If it has been used, reserve another disjoint source/block and disclose that weaker independence. Inspect metadata/integrity without viewing policy scores. These are measured-RTT plus synthetic-capacity cases, not ten independent real Starlink recordings.
 
-**Objective / intuition:** build a defensible development dataset before fitting a model, while keeping final test conditions unseen.
+For new 120-second recipes, place interruptions early enough to observe full recovery before the end, e.g. development recipe around 30 seconds and final recipe in a predeclared 35-60-second range, not at 105 seconds with recovery clipped by the horizon. Keep final parameters/seeds separate from development. Do not truncate an existing 180-second scenario and silently change its meaning.
 
-**Actions**
+Include at least one capacity-limited and one easy ordinary condition; do not choose only conditions that make original startup fail. RTT variation, outage severity and recovery rate must be declared before final policy runs. Ground-truth profile labels/future values remain evaluator-only.
 
-1. Inventory local RTT recordings, the two short downlink throughput examples under `paper-data/src/throughput/downlink/`, archived playback results and our new player logs. Record origin, units, dates, duration, gaps, invalid values, checksums and licenses. The derived/local RTT CSVs may represent the same recording; do not count them as independent sessions.
-2. Separate **network inputs** from **policy-dependent playback outcomes**. RL creates experience by interacting with a simulator; MongoDB's stored bitrate decisions are not a complete supervised dataset of correct actions. Use real browser logs for calibration and optional explicitly labelled imitation pretraining.
-3. Seek a manageable independent Starlink-throughput subset from [StarNet](https://github.com/ConnectedSystemsLab/StarNet); audit available latency channels separately. Use [LENS](https://github.com/clarkzjw/LENS) for additional latency/loss diversity where accessible. Verify download access, size and provenance before acquiring large archives. Do not assume satellite-ID metadata is available to the deployed policy.
-4. When matched measurements are unavailable, combine measured RTT/loss with documented synthetic bandwidth/interruption/recovery cases. Label independently combined channels as synthetic-assisted, not synchronized real Starlink recordings. Preserve the original paper-replay workload as a separate comparison group.
-5. Split by original recording/session/day or location before cropping and augmentation. Use approximately 60/20/20 train/validation/test only when there are enough independent groups. If only one recording is available, use separated chronological blocks with guard gaps and explicitly limit the generalization claim. Put all derivatives in the same split.
-6. Generate the five mandatory scenario families and mixed/shifted stress cases with disjoint split seeds/parameter combinations. Never smooth away all outages or turn missing RTT into zero; a lost probe alone is not proof of a full data-path outage.
-7. Save `data/manifests/` entries and immutable split manifests; keep raw data under ignored `data/raw/` with retrieval instructions. Fit any learned transforms using training data only. Seal test data from model selection.
-8. For tomorrow, time-box external acquisition to one hour. If unavailable, finish a truthful local-plus-synthetic development package and record richer acquisition as follow-up. Do not claim this small package establishes broad LEO performance.
+Create a separate sealed reserve cohort before any final performance inspection, with disjoint source windows/parameter seeds where available. This allows one legitimate validation-refinement cycle followed by a fresh comparison if necessary and time permits. Its role and weaker source independence, if applicable, must be explicit. Do not generate a favourable replacement test after seeing the original failures.
 
-**Verify / output:** source inventory, runnable parsers/scenario generation, split manifests and checks showing no recording/window leakage, correct units, reproducible seeds and explicit measured/synthetic labels. No final training configuration is selected from the test set.
+Add a supplementary original-paper-replay comparison of B0 versus C*: 3 repetitions each, 180 seconds, same raw-trace phase and shared original replay convention. Original nonpositive-RTT-to-outage and background loss are labelled emulation choices, not proof of measured full-path outages.
 
-**Owner / dependency:** Anjan, with Deviprasad's scenarios and logs; Step 3 and preferably Step 4. Codex can complete normal CLI work; restricted dataset access can require coordination.
+## 5. Phase B: trustworthy measurement and a usable workbench
 
-### Step 6 - Export and integrate a synchronous neural baseline
+### Step 8 - Revalidate the host and audit original CMAB
+**Status:** Pending. **Owner:** Anjan; Rajat/Deviprasad support only when actual access is needed. **Deliverables:** D1, C1, C10, F2.
 
-**Objective / intuition:** establish a real executable neural policy and verify its calculations before treating it as an improved ABR controller.
+**Objective / intuition:** make sure we are improving the real reference controller rather than an outdated build or an assumed algorithm.
 
-**Actions**
+**Actions:**
+1. Inspect parent/submodule branches, dirty files, recorded commits, existing Python environments, Docker/WSL readiness, space and current image identity. Preserve all completed assets; do not reinstall/reclone unless necessary.
+2. Capture the exact original CMAB source/config/hash separately from new variants. Reconcile the paper with CMABRule, CMABAbrController, the sample page, existing event logging, sidecar and rule-selection/catch-up path.
+3. Trace context/scaler, LinTS fitting/selection, reset boundaries, K-1 forced choices, reward time, stall attribution and exceptions. Audit the pinned MABWiser 2.7.0 RNG: determine whether recreating the MAB also repeats its default seed/draw pattern. Do not assume repeated trials imply distinct exploration.
+4. Reuse the existing node/lifecycle/link checks where applicable and run a short real B0 control. Identify actual dependency readiness, request progression and database evidence.
+5. Start the source-backed audit/hypothesis ledger, naming source evidence, measurement required and expected adverse case for H1-H6.
 
-1. Use [Gelato/Plume](https://github.com/sagar-pa/plume) as the starting reference. Inspect its A2C training code and [released actor definitions/checkpoints](https://github.com/sagar-pa/abr_rl_test). Pin source/checkpoint identity, verify the model's provenance and license, and identify the exact matching architecture. The earlier proposed 128-by-128 actor is a design candidate, not an existing trained model.
-2. Check compatibility before deployment. The inspected Puffer actors assume ten actions and five-chunk size/quality metadata; our supplied source has eight representations, to be re-audited against the running MPD. The Puffer observation interface also exposes information ordinary dash.js does not. Do not silently clamp ten actions to eight, invent SSIM/TCP inputs, or describe changed inputs/weights as the unchanged published policy.
-3. First port a verified released actor's forward calculation faithfully to JavaScript, including its actual dense/convolutional layers and activations. Export numerical weights plus executable `predict()` code and a model manifest. Preload assets before timed playback. `predict()` must return a completed numeric result synchronously; an ONNX `session.run()` Promise does not provide this interface.
-4. Establish Python-to-JavaScript parity on native-format fixtures and recorded inputs: preprocessing, intermediate shapes, numerical output tolerance, action agreement, near ties and invalid-input behaviour. Use Float32-compatible calculations and deterministic selection. Node verifies calculations; Chrome playback is still required to measure deployment behaviour.
-5. Deploy unchanged pretrained weights only if their full input/action requirements really match the player. The expected path is a **player-compatible Gelato-inspired A2C baseline**, clearly labelled as an adaptation rather than pretrained Gelato: retain only causal player-observable inputs and produce one score per actual representation.
-6. If adaptation requires new weights, use Step 5's training-only development scenarios and a minimal, hand-checked streaming environment for a bounded pilot fit. Reuse the simulator approach of Step 8, including live availability and the measured catch-up behaviour; benchmark a short run before choosing its budget. Preserve the released-model export as the numerical reference. Record how many decisions were used and whether the resulting checkpoint is pilot-trained or untrained. A random/re-headed actor is not evidence of a trained baseline. Full calibration, tuning and final model training follow after review.
-7. Register a separate label such as `abrAnjanRL`. Use the same real measurement collector and request actuator proven in Step 4, preload the actor, and log model identity and complete decision duration. No Pyodide installation is required by this new policy; the original CMAB can retain its existing runtime.
-8. Exercise the neural policy on matched short cases and trace its action to the actual requested representation. Measure cold load separately and warmed-up decision percentiles during playback. Set a strict main-thread budget using measured device performance; do not reuse a 50-ms worker target as an acceptable main-thread stall. A JavaScript timer cannot interrupt synchronous calculation midway.
+**Verification / exit:** intended build plays real media; configured link is independently checked; source-backed decision/update trace explains a B0 example; no silent baseline modification. Store readiness failures separately from policy failures. A serious infrastructure issue is diagnosed before evaluating new policies.
 
-**Verify / output:** an executable JavaScript actor, weight/config identity, Python/JS parity report, real-player decision trace and a labelled pilot checkpoint where fitting was required. Keep **faithful published-model export**, **player-compatible adaptation**, and **demonstrated performance improvement** as distinct claims. The first two do not establish the third.
+### Step 9 - Implement common event attribution, metrics and observation freshness
+**Status:** Pending. **Dependency:** 8. **Deliverables:** D1, D5, D7, C2/C6/C10, T7/T8.
 
-**Owner / dependency:** Anjan leads export/model work, Rajat integrates; Steps 4-5. Codex can perform the software work once the testbed is accessible. Treat checkpoint adaptation as a visible schedule risk; if incomplete by review, present its actual status and the verified simple-policy demo rather than fabricate a learned-model result.
+**Objective / intuition:** trustworthy rewards and comparisons require knowing what actually played and which action caused which request.
 
-### Step 7 - Build and rehearse the mid-review presentation
+**Actions:**
+1. Extend passive logging common to all policies. Join decision, request start/completion, representation, media interval, rendered quality and playback events using stable request/segment/epoch IDs; do not attach a completion to whichever decision is merely newest.
+2. Register startup/waiting/playing/seeking/error events before load. Record lightweight timestamped playback/buffer/latency observations at a sufficient interval (initial target 100-250 ms for playback accounting), and download/probe data with actual timestamps. Avoid ever-growing full snapshots each poll; export compact events.
+3. Handle startup, audio versus video stall, duplicate callbacks, init segments, retries, cancellation, seeks, final partial intervals and run cutoff. A rendered-quality event plus actual media advancement establishes played quality; requested quality alone does not.
+4. Expose RTT timestamp/validity/failure through a minimal new endpoint or logged sidecar record; keep the existing scalar endpoint's original-CMAB semantics intact. Provide causal missingness/age for new policies. Use browser memory or a simple synchronous read where needed; no MongoDB read or asynchronous inference bridge. Compose currently uses a prebuilt statistics-server image: if app.py changes, build/select the local stats-server/Dockerfile through an explicit override and verify the served build, rather than assuming source edits are active.
+5. Implement shared offline Q/B/S/V/A metrics and per-run exports. Give every policy the same observer, and test that passive instrumentation does not materially alter B0's choices/behaviour beyond normal variability.
+6. Populate the report skeleton and machine-readable artifact index with definitions now; fill results only when produced.
 
-**Objective / intuition:** present reproducible implementation progress and a credible route to a better RL controller.
+**Verification / exit:** hand-calculated fixtures pass; known stalls/seeks cannot be double counted; selected/requested/played distinctions are demonstrable; unresolved associations are visible, not assigned invented reward. New feature values have known units/age. Original B0 behaviour is preserved.
 
-**Actions**
+### Step 10 - Implement repeatable scenario replay and freeze the development protocol
+**Status:** Pending. **Dependencies:** 8-9. **Deliverables:** D6/D7, C3/C6, T2/T3.
 
-1. Reserve at least the final two preparation hours for the deck and rehearsal; do not let large downloads, the full 13.3-hour matrix or model tuning consume this time.
-2. Consolidate executed evidence from Steps 1-6 into `reports/mid-review/`, including commands, plots, model/export checks and a recorded demo. Reference the original proposal/paper and the model source accurately.
-3. Create `reports/mid-review/mid-review.pptx` with **8 slides**, as refined by the user: cover with Group 4 details; technical introduction to the authors' CMAB policy/reward and its implementation limitations, using the README's emulated-setup diagram; four slides covering testbed reproduction/build changes, custom-policy integration and real-data verification, data provenance/scenario generation/splits, and neural-model choice/export; two slides for future LEO-aware training/evaluation, runtime comparison and the agreed division of labour. Keep the deck concise for ten minutes, with detailed source citations and technical background in speaker notes.
-4. Explain the three planned runtimes: direct synchronous JavaScript; synchronous Python/NumPy through Pyodide/WebAssembly; ONNX Runtime Web in an asynchronous worker. Show why dash.js's synchronous `getMaxIndex()` caller needs an explicit scheduling bridge for a worker response, and why returning a Promise alone does not wait. Keep this study a future phase.
-5. Include future training plans: calibrated live environment, strong A2C baseline, causal LEO inputs, balanced training, development-only tuning, repeated seeds, sealed testing and comparison primarily against CMAB. State that the improved LEO model is future work unless actually completed.
-6. Render and inspect every slide, validate chart labels/units and claims, check the demo from a clean start, and prepare a video/log fallback. Clearly distinguish archived results, fresh runs, fixture tests, pilot learning and final evidence.
+**Objective / intuition:** every policy should face the same changing network, with enough observation time to explain recovery.
 
-**Verify / output:** readable PPTX, inspected slide renders, a rehearsed explanation and an evidence-backed demo package for 31 October. No unsupported improvement claim and no slide marked complete solely because a command exited successfully.
+**Actions:**
+1. Extend the current bandwidth-step runner to scheduled capacity, outgoing delay, loss/outage and recovery profiles inside the shaper container. Preload schedules and record actual applied times/state; do not let slow browser polling delay profile changes.
+2. The existing shaper rejects zero rate. Represent a complete controlled outage with 100% loss and a valid positive rate, then restore the configured state. Verify actual packet behaviour and avoid double-counting one-direction delay as two RTT additions.
+3. Restart/reset replay offsets per trial; match playback/source/wall-clock phase. Existing 60-second source looping and B0's slot schedule require explicit actual-start timestamps/tolerances.
+4. Audit source/split/media manifests; keep validation for design choices and test sealed. Limit new external acquisition to a small easily retrievable subset; no large download prerequisite. Reserve/test the LENS session role before performance use.
+5. Create 90-second development cases for fast diagnostics and six validation cases (five families plus mixed), with distinct source windows/parameters. Build the sealed final 120-second recipes specified above. Keep measured/synthetic and independence labels.
+6. Benchmark a few real trial cycles including ready/load/phase wait/flush/teardown. Freeze metric definitions, initial guardrails, readiness policy and selection rules. Record matrix runtime forecasts from measured cycles.
 
-**Owner / dependency:** Anjan consolidates ML/data results, Rajat supplies integration/demo evidence, Deviprasad supplies experiment results; Steps 1-6 with incomplete items honestly labelled.
+**Verification / exit:** independent checks confirm capacity/delay/outage/recovery; repeat B0 on matching development cases and explain variability; complete profile has time for recovery; workload hashes and split checks pass. The runner preserves failed sessions and can resume completed keys without rerunning them.
 
-## Mid-review checkpoint
+## 6. Phase C: primary CMAB hypothesis experiments
 
-Target evidence: reproducible checkout/host setup; regenerated paper figures; verified fresh baseline run(s); a selectable custom policy using real player observations; a faithful model-export/parity result and, where compatible or pilot-adapted, a synchronous neural player policy; a separated development/validation/test data package; and the reviewed presentation. An unresolved learned-policy adaptation is a reported gap, not permission to label the simple rule or random weights as a pretrained model.
+Candidate configuration budget: initially at most 12 named CMAB settings and 72 development/validation/ablation browser trials of about 90 seconds each. This is a bounded search budget, not a target to exhaust. Reserve coverage for the major hypotheses and confirmations. Reuse a reference run only if all workload/build/protocol identities match.
 
-## Phase B - Develop a better RL bitrate controller
+### Step 11 - Isolate memory/reset and startup effects
+**Status:** Pending. **Dependency:** 10. **Deliverables:** D2/D3, C1, F2/F6, T1/T5.
 
-### Step 8 - Complete and calibrate the fast live-streaming environment
+**Objective / intuition:** test the two strongest source-backed limitations before changing the reward or model family.
 
-**Objective / intuition:** train cheaply in Python while making the learned behaviour transfer to the unchanged player.
+**Actions:**
+1. Implement separately selectable experimental CMAB settings around the original synchronous LinTS route. Retain original features/reward for this step.
+2. Compare original reset+forced startup, memory-only, startup-only and their combination on steady, capacity-drop and interruption development cases.
+3. Separate history retention from forced-choice scheduling with explicit counters where feasible: retaining data must not silently be credited for an unreported startup-policy change. If they remain coupled in an implementation, label the treatment as a reset/restart package and do not claim an isolated memory effect.
+4. Start with a bounded rolling history (for example 30-60 seconds) and conservative data-dependent startup. Avoid forcing seven maximum-rate downloads on every slot. Keep safe exploration observable; do not replace all learning with a hidden throughput rule.
+5. Measure learned-decision fraction, history coverage, stalls, switches, quality and recovery. Test the adverse case where long memory delays adaptation.
 
-**Actions**
+**Verification / exit:** each treatment's actual mechanism is logged; actions remain valid; source-state changes match the named hypothesis; a provisional result is supported by paired development runs. Retain both favourable and unfavourable outcomes. Use no test scores.
 
-1. Implement one reusable Gymnasium environment under `rl/`, separate from the A2C/PPO trainer. Reuse useful reference code, but remove video-on-demand assumptions such as fixed RTT, a 60-second buffer or remaining-video features.
-2. Represent actual segment byte sizes, source release times, playback/live clocks, buffer, startup, stalls, catch-up, seeks/discards and request retries. Reproduce the existing CMAB catch-up controller's wall-clock phase when it is the matched control setting, without presenting that schedule as universal satellite ground truth. Advance transfers across changing bandwidth samples. Check whether active low-latency chunk delivery requires partial-segment availability rather than assuming whole-segment playback.
-3. Model measured goodput and synthetic link capacity differently; avoid charging RTT/loss twice when already embedded in a trace. Include policy-decision waiting and observed telemetry age/missingness.
-4. Hand-check constant capacity, capacity change during a transfer, source wait, outage/recovery, startup, seeking and episode boundaries. Enforce byte/time conservation, finite rewards and nonnegative buffer. Distinguish time-limit truncation from true termination for value bootstrapping.
-5. With Deviprasad and Rajat, compare fixed-low/middle/high-quality runs and existing controllers against Chrome on separate development cases. Compare download time, buffer, stall, latency and catch-up trajectories. Set tolerances from repeated-run variability before fitting parameters; accept no unexplained qualitative mismatch.
+### Step 12 - Test reward timing and outcome-based feedback
+**Status:** Pending. **Dependency:** 11. **Deliverables:** D2/D3, C1/C2, F2/F6, T5.
 
-**Verify / output:** tested environment, shared reward/metric ledger, calibration plots and measured discrepancies. Fix important discrepancies before expensive training; retrain affected pilot models after meaningful dynamics changes.
+**Objective / intuition:** teach the bandit from the action's consequences instead of giving a new choice credit for conditions observed before it was requested.
 
-**Owner / dependency:** Anjan leads; Rajat supplies the instrumented player and fixed-quality controls, Deviprasad supplies verified shaping/calibration runs. Steps 3-6. Target the first 3-4 working days after review.
+**Actions:**
+1. Keep a pending-feedback record containing the original observation, action and stable request/media identity. Mature updates when the corresponding outcome is known; never update an old action using the newest context.
+2. First compare feedback timing/attribution with the reward form otherwise held fixed where meaningful. Then test the common played-quality/stall/switch/excess-delay reward against the original proxy, separately labelled.
+3. For played-outcome feedback, credit only played media, switching at its played boundary and stalls only when the responsible blocking segment is identified. Account for session-level/unattributable effects separately; do not arbitrarily charge the current bitrate. Handle cancellation, seeks, censored end-of-run outcomes and delayed updates explicitly.
+4. Log attribution coverage/residuals. Test two simple scripted outcomes by hand, then steady/change and outage cases. Full session QoE remains independently computed even if the online learner uses a simpler defensible incremental target.
+5. If exact played-outcome attribution is not robust, retain a tested timing-only variant or defer the complex target. Record why; do not ship fabricated action labels merely to claim H3 was implemented.
 
-### Step 9 - Establish a strong conventional RL baseline
+**Verification / exit:** synthetic known-outcome fixtures and real linked requests agree; no duplicate updates/quality credit for unplayed media; attribution ambiguity is reported. Adopt a reward change only on validation benefit and correct accounting, not because it produces larger internal numbers.
 
-**Objective / intuition:** demonstrate useful learning before attributing gains to satellite-specific information.
+### Step 13 - Test context, estimator/exploration and stability changes
+**Status:** Pending. **Dependency:** 12. **Deliverables:** D2/D3/D5, C1, F6, T1/T5.
 
-**Actions**
+**Objective / intuition:** determine whether extra information or better estimation helps beyond the reset/startup changes.
 
-1. Train a player-compatible, Pensieve-style actor-critic using SB3 A2C and PyTorch. Follow the useful [Gelato training implementation](https://github.com/sagar-pa/plume/blob/main/puffer_abr/puffer_abr_training/train.py), without copying unsupported Puffer inputs or reward-scaled hyperparameters blindly.
-2. Start with conventional streaming observations. Benchmark a compact MLP; compare a small causal temporal encoder only if development evidence justifies it. Freeze a feasible architecture after checking browser export cost.
-3. Use easy-to-mixed training cases, then a balanced scenario sampler inspired by Plume. Keep workload sampling independent of policy randomness. Add save/load/resume, optimizer/RNG state, diagnostics and periodic validation.
-4. Verify sensible behaviour against fixed-quality, throughput and BOLA policies. Reuse the browser's existing throughput/BOLA implementations for final comparisons; simulator approximations must be labelled/calibrated.
-5. Retain A2C initially. If justified by instability or a measured development advantage, run a small matched A2C/PPO pilot and choose one common trainer before main training. Do not change the observation set and optimizer simultaneously when identifying their effects.
+**Actions:**
+1. Add buffer and actual live delay first, then a small RTT-history/freshness/disruption feature group if logging supports it. No future profile values, trace identity or ground-truth outage labels enter inference.
+2. Use consistent normalization and a bounded history. Online partial_fit is appropriate only with stable feature coordinates; do not keep accumulated model statistics while silently changing their scaler. Rolling-window refit is an acceptable simple alternative.
+3. Audit/test the MABWiser 2.7.0 API before using incremental updates. Verify unseen-arm handling and persistent RNG behaviour, rather than assuming the newest documentation exactly matches the installed wheel.
+4. Test a small exploration/regularization alternative if diagnostics show unstable or excessive exploration. Keep changes isolated from the context comparison.
+5. If traces show harmful switching/recovery, test a modest buffer-aware action guard or switching margin. Count overrides and compare the guard alone against the simple rule so a heuristic improvement is not misattributed to LinTS.
+6. Use a shifted/reset-phase or stale-RTT development case to expose brittle clock dependence or unavailable features. Keep every extra setting within the configuration/trial budget.
 
-**Verify / output:** useful learning on simple cases, repeatable checkpoints, learning/validation plots and a deployable baseline. A completed training loop is insufficient if its policy always stalls, chooses only the lowest quality or fails an easy case.
+**Verification / exit:** causally available inputs, finite updates, bounded memory and correct scaling; validation metrics show which mechanism helped/hurt. Do not promote unnecessary complexity or infer handover ground truth from probe loss.
 
-**Owner / dependency:** Anjan; Steps 5 and 8. Aim for a stable reference during the first post-review week.
+### Step 14 - Combine, ablate and select the primary candidate
+**Status:** Pending. **Dependency:** 13. **Deliverables:** D2/D3/D8, F6, T1/T5.
 
-### Step 10 - Build and tune the LEO-aware policy
+**Objective / intuition:** obtain a strong controller whose gain can be explained by a few tested mechanisms.
 
-**Objective / intuition:** reduce the damage caused by abrupt delay/capacity changes and interruptions while retaining useful video quality and low live delay.
+**Actions:**
+1. Combine only the most useful changes; compare original B0, accepted isolated versions, the combination and removals of its main contributions.
+2. Confirm the top two candidates on the six validation cases, including ordinary conditions and adverse recovery. Use fresh repeats for a promising result rather than selecting the single best-looking run.
+3. Select C* with the common QoE/guardrail rule. Record parameters, changed components, runtime cost and known losses.
+4. If no candidate improves validation, diagnose the dominant failure and use a limited refinement cycle within the available budget: inspect requests/accounting/state coverage first, then adjust one mechanism. Do not keep adding unrelated algorithms.
+5. Freeze a provisional primary candidate for the later common test; continue only with documented validation evidence if a subsequent integration/calibration defect invalidates it.
 
-**Actions**
+**Verification / exit:** F6/T5 can already be generated from saved validation results; C* is reproducibly selectable; original CMAB is preserved. A positive development outcome is not yet a final-test improvement claim.
 
-1. Add measured RTT history, live latency and a causal recent-disruption indicator to the same controller. Implement the corresponding collector/probe health code in the browser/backend; the current `/ping` can return zero or repeat the last success after failure, so extend freshness/outcome reporting before treating it as current truth.
-2. Treat the disruption flag as an estimate, not satellite-handover ground truth. Train with realistic detection delay, missed/false events and stale samples. Keep future outages and test-trace identity hidden from the actor and critic.
-3. Use the proposal's reward structure: played-quality utility minus stalls, quality variation and excessive live latency. Define units, time accounting and seek/startup treatment explicitly. Charge latency during long waits/outages and avoid quality credit for discarded media.
-4. Tune a bounded development budget, for example six configurations with two pilot seeds, for learning settings and reward tradeoffs. Evaluate every policy with the same final objective and physical metrics; raw returns from different training rewards cannot be ranked directly.
-5. Borrow [Genet's](https://arxiv.org/html/2202.05940v2) development-only hard-case sampling idea where the policy loses to conventional methods. Preserve ordinary cases so improved disruption handling does not destroy normal playback.
-6. Modify architecture only after diagnosing data, dynamics, units, reward and optimization. Keep model versions and a short experiment ledger under `artifacts/`; avoid a large algorithm-by-state-by-reward grid.
+## 7. Phase D: trained neural comparison with measured compute use
 
-**Verify / output:** a validation-selected LEO policy, component metrics, tuning history and event-level recovery plots. Compare primarily against CMAB in the matched testbed; use conventional-versus-LEO RL and feature removals to explain contributions.
+### Step 15 - Calibrate the fast environment and benchmark CPU/GPU
+**Status:** Pending. **Dependencies:** 10 and 14. **Deliverables:** D4/D6, C2/C4, F8.
 
-**Owner / dependency:** Anjan with Rajat's actual observation collector and Deviprasad's development cases; Steps 8-9. Target the second post-review week.
+**Objective / intuition:** train quickly in an environment that captures the browser effects relevant to bitrate decisions.
 
-### Step 11 - Run repeatable main training and focused robustness checks
+**Actions:**
+1. Extend the existing environment rather than reimplementing a general network simulator. Match actual encoded bytes, source availability, playback/live clocks, buffer, stalls, target/catch-up/seek/discard logic, elapsed-time rewards and observation ages.
+2. Add causal RTT/probe validity/disruption estimates to simulated observations with the same semantics as the deployed collector. The evaluator may know future profiles; the policy/critic must not.
+3. Verify constant-rate transfer, a capacity change mid-download, full outage/recovery, startup, reset, seek and episode cutoff. Model measured goodput versus configured capacity distinctly; avoid charging latency/loss twice.
+   Distinguish time-limit truncation from true terminal failure in Gymnasium/SB3 return bootstrapping and test reset/rollout boundaries; otherwise the critic can learn incorrect values despite plausible playback.
+4. Compare fixed-low/mid/high and one adaptive policy with Chrome on a small development calibration set. Initial acceptance targets: median segment-time relative error about 20% or less outside near-zero durations, buffer/live-delay MAE about 1 second or less and correct qualitative stall/recovery behaviour. Set or refine tolerances using repeated reference variability before fitting.
+5. Repair material mismatch, then recheck. If TCP/chunk details cannot be represented cheaply, quantify the limitation and use the environment for candidate training/screening while relying on browser outcomes for final claims. Do not label a failed calibration as passed.
+6. Benchmark end-to-end training with representative batches on working CPU and RTX 4060, recording environment steps/s, optimizer throughput, validation overhead and memory. Keep the CPU environment intact while establishing CUDA if necessary. Use the faster feasible configuration; reallocate saved time to stronger training/evidence.
 
-**Objective / intuition:** establish that a promising pilot is not an unusually lucky training run.
+**Verification / exit:** conservation/edge-case checks pass; F8 quantifies discrepancies; runtime forecast uses measured steps/s rather than an assumed 18-hour training estimate. Stop a severe dynamics bug before interpreting training gains.
 
-**Actions**
+### Step 16 - Train compatible conventional and LEO-aware candidates
+**Status:** Pending. **Dependency:** 15. **Deliverables:** D4, C4/C5, F7.
 
-1. Freeze the selected training configuration and reward before main runs. Aim for five fresh independent seeds for both conventional and LEO policies, with matched interaction/tuning budgets. Benchmark laptop/Colab/Kaggle CPU and GPU throughput before allocating compute; a small policy need not benefit from a GPU.
-2. Save native checkpoints, selected exports, dependencies, code/data hashes, seeds, optimizer/RNG states and complete training/validation curves. Choose checkpoints on validation with a declared rule; never pick a seed using final test performance.
-3. Inspect interruption/recovery behaviour, noisy or missing telemetry, unseen parameter combinations and normal-link regressions. Run a limited retrained feature ablation; distinguish it from masking inputs only at inference.
-4. Track severe sessions and tail stalls alongside average QoE, taking inspiration from [SafeSABR](https://arxiv.org/html/2605.23560v2). Add risk-sensitive training only if a demonstrated failure warrants it and time permits. A new predictor/action shield is an additional algorithm component that must be evaluated and reported separately, not hidden as a player setting.
+**Objective / intuition:** establish genuine useful learning, then test whether LEO observations help under a controlled trainer/data comparison.
 
-**Verify / output:** complete seed results, robustness/ablation plots and honest uncertainty/limitations. If the measured budget permits fewer seeds, report the actual study size rather than claiming the planned one was run.
+**Actions:**
+1. Reuse the 36-input conventional interface and compact two-layer actor initially; add a versioned LEO feature manifest for RTT history with validity/age, actual live-delay context and recent causal interruption/recovery estimates. Derive the feature count from the checked interface rather than calling the old 36-input pilot LEO-aware.
+2. Start with SB3 A2C, preserving the Gelato/Plume provenance and explaining our compatible adaptation. Use balanced scenario-family sampling for both observation variants; label it Plume-inspired rather than claiming the full original clustering framework.
+3. Do not silently truncate ten released actions to eight or invent native future SSIM metadata. Reuse weights only where shapes and meanings are genuinely compatible; otherwise retrain the adapted actor. Preserve the faithful reference export separately.
+4. Default screening budget: up to 4 justified trainer/sampler settings x 2 pilot seeds x 2 observation variants x 250,000 decisions, about 4 million interactions. Compare common validation QoE and physical metrics, not just each run's training reward.
+5. Check gradients/weight changes, value/reward scales, action distribution, actual buffer/stall outcomes and easy-case competence. Compare fixed policies and teacher/pre-RL performance; a policy need not use every action to be valid.
+6. If random starts collapse, use one documented training-only imitation initialization from a causal teacher and compare before/after RL. Never treat logged MongoDB choices as optimal labels.
+7. If two diagnosed A2C refinement attempts remain unproductive, allow one bounded PPO or architecture pilot, changing only that factor under the same state/reward/data. A larger temporal model is justified by a demonstrated limitation, not by GPU availability alone.
+8. Select one common final training recipe where possible for the conventional/LEO comparison. Allow model-specific tuning only if it is reported and does not masquerade as a pure feature ablation.
 
-**Owner / dependency:** Anjan; Step 10. Main training follows the configuration freeze and can overlap runtime engineering using frozen candidate checkpoints.
+**Verification / exit:** saved validation curves, learning checks and compatible candidate weights; failed/collapsed runs retained; no sealed-test selection. Fix data/reward/dynamics/normalization defects before declaring that the optimizer itself is the problem.
 
-### Step 12 - Compare the three inference runtimes
+### Step 17 - Repeat training, select representatives and verify deployment
+**Status:** Pending. **Dependency:** 16. **Deliverables:** D4/D5, C4/C5, F7, T8.
 
-**Objective / intuition:** choose the deployment route using the same trained policy and real playback measurements.
+**Objective / intuition:** demonstrate that the neural result is reproducible and executable in the actual player.
 
-**Actions**
+**Actions:**
+1. Default main budget: 5 fresh seeds per conventional/LEO variant, initially 1 million decisions each (10 million total). Save/resume optimizer/RNG/config/split identities and validation curves. Checkpoint periodically, e.g. every 100,000 decisions, with affordable full validation.
+2. Extend up to 3 million decisions per seed or add a focused sampler/architecture ablation if validation is still improving and measured runtime fits the reserved deadline. Use learning evidence and remaining time, not a predetermined long wait. Do not stop for low training return alone when common validation QoE is improving.
+3. Select checkpoints by the predeclared validation rule. For the main browser matrix, use the median-validation-quality seed's selected checkpoint from each variant rather than choosing a lucky seed on test results. Preserve all five seeds for simulated held-out reporting.
+4. Export the actor to the existing synchronous JavaScript route with identical preprocessing, action ordering, supported operators and model identity. Recheck any architecture/operator change.
+5. Run numerical fixtures including recorded real inputs and missing/stale/extreme cases, then verify actual Chrome decisions against native inference. Verify no invalid actions, real requests/played quality, reset/fallback behaviour and decision timing.
+6. Run short validation browser comparisons. If deployment exposes a material discrepancy, diagnose/export-fix/reverify; retrain only if the observation or dynamics semantics actually changed.
 
-1. Implement equivalent forward passes for the same checkpoint, input transform, action mapping and deterministic postprocessing: (a) direct synchronous JavaScript; (b) synchronous Python/NumPy in the existing Pyodide/WebAssembly runtime; (c) ONNX Runtime Web/WASM in a worker. Export only inference-required actor components.
-2. For the worker route, add a bounded asynchronous scheduling bridge: capture the intended decision, hold its next media request without blocking the main thread, accept a matching result or fallback, then resume the normal request/quality-switch lifecycle. `ABRRulesCollection` immediately reads `getMaxIndex()` results; simply returning a Promise or moving ONNX to the main thread does not make that caller await it.
-3. Deduplicate callbacks, discard obsolete responses after seeks/resets/timeouts and prevent late answers changing committed requests. If cached precomputation is explored, label it as a different observation-timing mode and reproduce its staleness in training; do not mix it into the fresh-input runtime comparison.
-4. First verify numerical/action agreement on identical recorded fixtures, including near ties. Then run repeated browser trials on the same host/resource allocation with the same scenarios and background load. Randomize runtime order and record Chrome/runtime versions and thread settings.
-5. Measure complete decision p50/p95/p99, cold load, memory/CPU, responsiveness, stale responses, fallback frequency and resulting playback QoE. Separate model calculation from preprocessing, messaging and scheduling delay. Use each synchronous implementation's measured main-thread blocking; do not claim a timer can enforce a hard timeout during a blocked call.
-6. Compare outcomes using common fallback rules where applicable and report raw predictions separately from the deployed policy-plus-fallback. Keep JS as the established review route until evidence supports changing it; update simulator timing and retrain only if the chosen mechanism materially changes the learning environment.
+**Verification / exit:** N-CONV/N-LEO are actual trained deployable policies; five-seed learning/validation evidence exists, subject to explicitly recorded compute-driven deviations; representative seed selection is traceable. A learning curve or parity pass alone does not prove better QoE than B0.
 
-**Verify / output:** parity report, runtime benchmark table, playback comparisons and a justified deployment choice. Python/Node-only speed measurements do not establish browser performance.
+## 8. Phase E: frozen common testing and analysis
 
-**Owner / dependency:** Anjan exports/checks models; Rajat owns runtime integration/scheduling; Deviprasad runs matched trials. Steps 6 and 9; complete before final evaluation.
+### Step 18 - Lock the protocol and run the final browser matrix
+**Status:** Pending. **Dependencies:** 14 and 17. **Deliverables:** D7/D8, C6/C10, F3/F4/F5, T3/T4.
 
-### Step 13 - Freeze and run the final comparison
+**Objective / intuition:** measure the finished controllers under matched conditions without using final results to redesign them.
 
-**Objective / intuition:** test whether the new ABR algorithm improves the authors' system rather than benefiting from unrelated player changes.
+**Actions:**
+1. Freeze policy/config/model/source/workload hashes, metric/guardrail definitions, seed/checkpoint rule, scenario weights, repetitions, run order, representative-trajectory rule and uncertainty method before opening test performance.
+2. Default core controlled matrix: 10 scenarios x 6 policies x 2 repeats = 120 browser trials. Add a third repeat for B0 and C* on all 10 cases = 20 more. Add B0/C* original-paper replay with 3 repeats each = 6 trials. **Total default: 146 browser trials.**
+3. Controlled playback time is 140 x 120 seconds plus 6 x 180 seconds = **4 hours 58 minutes**, before initialization, phase waiting, flush and teardown. With approximately 180-second controlled cycles and 240-second supplementary cycles, a planning allowance is about **7 hours 24 minutes**. Replace this with the Step 10 measured forecast; it is not an unconditional promise.
+4. Before unsealing, activate predeclared extensions only if runtime and remaining report/release reserve permit: add the remaining policies' third repeats (40 trials); a second validation-selected neural seed on a small fixed browser subset; mixed/phase-shift stress cases. Do not decide repetition count from whether a p-value or curve looks favourable.
+5. Run paired workloads in balanced/randomized policy order with isolated controller state, matched source/trace phase and the same dependency readiness. Original B0 preserves its own online adaptation. Record actual phase/schedule deviations and classify infrastructure faults separately.
+6. Every finalized run exports enough compact events/metrics to reproduce results without the live database. Check completed requests, actual played coverage, measurement integrity and failure/censoring status before marking a run complete. A policy causing no playback remains an outcome.
+7. Evaluate all five neural seeds on the sealed simulator suite after selection; the main browser result uses the declared representative seed. Clearly separate training-seed variation from browser-repeat variation.
+8. Resume from valid completed run keys. Retry a diagnosed infrastructure failure with the reason retained; do not silently replace algorithmic failures.
 
-**Actions**
+**Verification / exit:** complete frozen-matrix inventory or an explicitly disclosed incomplete portion; all scored runs have identities/logs/valid metrics; correct counts and phase/schedule checks. No new tuning uses this test suite.
 
-1. Freeze models, code, runtime choice and sealed test manifests. Use a common running player build with selectable policies, the same media/ladder, transport, source, network implementation and start offsets, source/wall-clock phase, target latency, catch-up, seek/retry behaviour, startup settings and resource allocation. Change the bitrate decision rule only in the primary comparison. Shared necessary instrumentation/repair is present for both sides.
-2. Make **CMAB versus the proposed LEO policy** the primary comparison. Explicitly carry CMAB's catch-up setting into the new algorithm's configuration, because the runner otherwise assigns its default mode. Preserve the authors' Dynamic/L2A-LL/LoL+ configurations for their reference comparisons, and include proposal-required throughput, BOLA and Pensieve-style baselines. Label any controller-specific playback differences.
-3. Run the five mandatory scenario families plus predefined mixed/shifted diagnostics, using five-minute trials where practical. Cover the authors' 3/4/5/6-second latency targets. Pair policies on conditions, repeat browser trials and randomize order; do not treat adjacent trace crops as independent experiments.
-4. Compute one common offline QoE objective from time-aligned physical events, rather than comparing the authors' CMAB internal reward numerically against an RL training return. Report average played bitrate, rebuffering duration, switch frequency/magnitude, startup, live latency and QoE; include played duration, skipped content, dropped frames and policy/fallback timing.
-5. Report paired differences with uncertainty across independent recording groups and training seeds. Examine per-scenario regressions and severe sessions. Predefine acceptable quality/stall/latency tradeoffs on validation before unsealing tests. Retain failed/no-playback runs. Report mixed or null results honestly.
-6. Complete the full authors' emulation matrix when the remaining time budget permits and identify exactly which parts were rerun. Keep synthetic, emulated-browser and real-satellite evidence distinct; no real Starlink deployment is implied by Docker results.
+**Negative outcome rule:** if final C* does not beat B0, preserve it and use a focused diagnosis/validation refinement if budget permits. Activate the previously sealed reserve cohort for one new B0-versus-revised-C* comparison (initial budget: 5 families x 2 cases x 2 policies x 3 repeats = 60 controlled trials). Both initial and reserve outcomes remain reported; do not combine an inspected development result with a new holdout and call everything untouched. Recompute the runtime before this extension and protect the release gate. If no legitimate fresh evaluation fits, do not manufacture a win or hide the result. Escalate only if a material change to the project's final direction is needed.
 
-**Verify / output:** sealed evaluation configuration, comparable raw logs, aggregate and temporal plots, confidence intervals and a result explaining whether/where the proposed policy improves CMAB. Avoid percentage QoE gains when the reference score is zero or negative.
+### Step 19 - Analyse effects, uncertainty and mechanisms; generate results
+**Status:** Pending. **Dependency:** 18. **Deliverables:** D8, C7, F1-F8 and T1-T8 as applicable.
 
-**Owner / dependency:** Deviprasad leads execution/analysis, Anjan supplies frozen models and validates findings, Rajat verifies builds and policy control. Steps 11-12. Reserve the final several project days for this and delivery.
+**Objective / intuition:** explain the size, reliability and cause of gains, including where the policy loses.
 
-### Step 14 - Package, reproduce and deliver
+**Actions:**
+1. Generate per-run metrics and paired differences using equal weights for the five required families and equal case weights within each. Keep supplementary paper-replay outcomes separate.
+2. Report absolute values, paired QoE effect, per-family stalls/delay, startup, switching and played bitrate. Include raw paired points and 95% intervals where replication supports them.
+3. Treat scenarios/recordings and repeated sessions correctly: never count video segments or related windows as independent experiments. With only two measured RTT sessions and synthetic capacity, intervals describe repeatability on fixed tested workloads, not population-wide Starlink generalization. State the limitations of 2/3 repeats; show ranges/raw data rather than unjustifiably precise significance.
+4. Generate the hypothesis/ablation table from validation evidence and the final performance tables from sealed testing; label those sources. Plot selected trajectories using the frozen rule and include at least one informative failure/regression.
+5. Rescore the frozen sensitivity coefficients from existing logs; no extra learning or test-driven coefficient selection. Check whether apparent gains are simply lower quality, more skipped media or hidden startup.
+6. Verify all figures/tables resolve to source run IDs and calculations. Inspect axes, units, legends, uncertainty, missing runs and component-score sums. Generate PDF/SVG or readable PNG exports and report-ready tables.
 
-**Objective / intuition:** make the trained controller and evidence usable by the team and independently repeatable.
+**Verification / exit:** F3-F7/T4-T5 answer what improved, where, why and with what tradeoffs; F2/F8/T7/T8 support the mechanism and method. No curve is a manually entered final number and no unsupported improvement wording appears.
 
-**Actions**
+## 9. Phase F: report, demo and submission release
 
-1. Deliver Python training/environment code, native model checkpoints, the selected browser artifact, input transform and action mapping, example inputs/outputs, model/data/config identities, and the training/validation/final-result plots under the repository.
-2. Keep a clear layout: `rl/` for ML code and exporters, `experiments/` for run configurations, ignored `data/` for source material plus tracked manifests, `artifacts/` for run evidence, and `reports/` for presentations/report material. Keep useful manifests/scripts tracked even when large binaries/results are ignored.
-3. Verify the team can recreate the player including submodule changes and the custom image, load the identified model, and reproduce one short experiment from a clean checkout. Do not leave required player commits accessible only in Anjan's local submodule.
-4. Consolidate with Rajat's integration and Deviprasad's evaluation. Create the final report/presentation/demo using actual completed results and limitations; preserve the mid-review deck as the earlier checkpoint.
+### Step 20 - Finish the concise evidence-backed report
+**Status:** Pending. **Dependency:** 19; skeleton started in 9. **Deliverables:** final report PDF, D1-D8 synthesis, T6.
 
-**Verify / output:** reproducible clean-checkout demonstration, complete mandatory-deliverable checklist and final team handoff. Completion requires working commands, correctly loaded weights and credible measurements, not only a successful build.
+**Objective / intuition:** turn the tested work into a clear networks-course argument rather than an implementation diary.
 
-**Owner / dependency:** all three teammates; Step 13.
+**Actions:**
+1. Write the sections specified in deliverables.md: team/abstract; problem and related work; CMAB audit and hypotheses; selected CMAB; neural adaptation/training; controlled methodology; results/mechanisms; limitations/conclusion; reproduction/references.
+2. Use the six most useful main-result/system figures and compact policy/data/results/ablation/contribution tables. Put long settings, detailed audit/calibration and deployment evidence in an appendix/repository. Do not invent a page limit; keep the prose concise.
+3. Every result claim cites its actual figure/table, experiment scope and uncertainty. Label measured versus generated channels, unchanged reference versus our modifications, and the compatible neural adaptation versus published weights.
+4. Include all names/roll numbers and 2-3 sentences of actual work per member. Use verifiable contributions and seek factual clarification if needed; do not infer that a person did work merely from their initial assigned role.
+5. Include the accessible GitHub link and exact release/workspace identity; update it after any authorized publication. Give saved-results, demo, evaluation and training reproduction commands with measured hardware/time expectations.
+6. Compile, extract text and render the final PDF; inspect every page and all cross-references. Verify the requirements image's five report items and the proposal's mandatory coverage.
+
+**Verification / exit:** readable concise PDF, correct contributions/references, complete graphs/tables, source-backed numbers and no placeholders/mid-review claims presented as final results. Source and report remain reproducible.
+
+### Step 21 - Prepare the working demo and submission presentation assets
+**Status:** Pending. **Dependencies:** 17-20. **Deliverables:** C8, demo commands/recording, final-results deck draft.
+
+**Objective / intuition:** show real controlled streaming behaviour and make the project presentable without depending on a fragile live experiment.
+
+**Actions:**
+1. Build/select the final local-source image with all relevant policy assets; keep original CMAB and neural options selectable. Ensure scripts/prepare_player.py and packaging do not require the historical Phase A patch to match every later source edit.
+2. Provide a short, named bandwidth-change/interruption/recovery demo with actual video, policy identity, selected/played bitrate and buffer/live delay; use the same settings for B0 and C*. Save logs and a comparison plot.
+3. Record a short real run as a fallback, plus launcher/readiness/reset instructions. Do not replace the working policy with a scripted action sequence or an animation.
+4. Create a concise final deck reusing the verified report figures: objective/system, CMAB mechanism/change, neural comparison, experiment, gains/tradeoffs, ablations and conclusions/contributions. Keep the exact duration/page count adjustable because presentation rules have not been supplied.
+5. Perform the executable demo and slide visual/factual checks now. Actual team speaking/rehearsal is a human activity; provide the rehearsal checklist rather than falsely marking it complete.
+
+**Verification / exit:** real advancing playback and linked media requests; demo can be restarted safely; recording and slides agree with submitted results. Full worker/runtime comparison is not introduced.
+
+### Step 22 - Verify clean reproduction and assemble the submission
+**Status:** Pending. **Dependencies:** 20-21. **Deliverables:** C9/C10, final ZIP, release manifest, GitHub publication readiness.
+
+**Objective / intuition:** someone else should be able to inspect the evidence, reproduce plots and run the demonstrated source.
+
+**Actions:**
+1. Provide distinct documented commands for prerequisites, data preparation, training, evaluation, plots-from-saved-results and demo. Reuse scripts/testbed.sh and the established build/requirements where possible.
+2. Allowlist the final report/deck, developed code, actual modified player source, model/controller assets, configurations, compact evidence, tables/figures, licenses and artifact index. Exclude environments, caches, personal credentials and duplicate huge/raw data.
+3. Audit .gitignore: artifacts/runs, figures, processed/raw data, checkpoint folders and most PNGs are ignored. Required results/plots must be intentionally included in the release and, when authorized, in the published artifact set. A local ignored file is not available to teammates.
+4. A normal GitHub parent ZIP does not include submodule contents. Bundle the exact required player source or a complete versioned patch+base/recreation route, and verify the resulting source hashes. Preserve the historical Phase A patch separately.
+5. Since no commits are implicit, identify uncommitted parent and submodule edits in the release manifest using source/file hashes and a reproducible patch/snapshot. Do not claim an old committed SHA fully identifies new workspace contents.
+6. When the exact tested code/results/report publication set is reviewable, use the already granted commit/push authorization, publish verified child commits before the parent, and verify fresh remote retrieval. Do not ask again for the authorization already granted.
+7. Extract the ZIP outside the project. Regenerate final metrics/figures from its included exports, inspect generated figures/PDFs, verify model/action/normalization assets and check demo build/source preparation. Test accessible submodule commits/retrieval separately; no hidden dependency on an unpublished local commit or MongoDB volume.
+8. Compute the final ZIP/report/source/result hashes, check internal links/references and generate a concise submission checklist. Confirm the report links to the intended accessible GitHub state. Prepare the upload-ready package before 07:00; actual portal upload is separate if access/authorization is required.
+
+**Verification / exit:** extracted package reproduces saved-results analysis; exact demo source/model is recoverable; report, code, results and manifest identities agree. Missing remote publication or portal submission is explicitly outstanding rather than falsely marked submitted. A successful ZIP command alone is insufficient.
+
+## 10. Phase G: presentation/demo readiness after submission
+
+### Step 23 - Final presentation polish and rehearsal preparation
+**Status:** Pending; human rehearsal outstanding. **Dependencies:** immutable submission package. **Deadline:** ready by 19 November evening; presentation 20 November 11:00.
+
+**Objective / intuition:** explain the verified contribution clearly and recover gracefully if the live testbed fails.
+
+**Actions:**
+1. Preserve the submitted ZIP/report/evidence unchanged. Refine slides and speaker notes around their exact results; mark any later correction/update explicitly.
+2. Confirm the course's presentation duration/format if supplied, then trim the deck and assign speakers using the existing domain split: Rajat integration/builds, Anjan algorithms/training, Deviprasad experiments/QoE.
+3. Prepare short answers for reward attribution, reset/memory evidence, data independence, neural adaptation, test leakage, ablations, negative outcomes and reproduction.
+4. Run a final demo/readiness check and keep the recorded fallback locally available. Give the team concise start/reset/troubleshooting commands and a timed rehearsal checklist.
+5. Human members rehearse and confirm their contribution statements. Do not autonomously send group messages or schedule follow-up jobs unless explicitly requested.
+
+**Verification / exit:** slides/video/demo agree with the frozen submission; the team has a clear speaking/demo plan. Human rehearsal is not claimed complete by a script. Most assets are prepared during Step 21; this step is not permission to spend the remaining submission window polishing slides instead of finishing the report.
+
+## 11. Stop, escalation and scope rules
+
+- A broken test initiates the diagnosis/fix/verify loop; it does not require a design meeting.
+- A hypothesis not helping is a result. Refine within validation budgets or reject/defer it with evidence.
+- A calibration limitation is reported honestly. Do not silently replace real browser comparison with simulator-only claims.
+- If all good candidates lose on final test, retain the result and apply Step 18's fresh-test rule. Ask only if a consequential project-direction change becomes necessary; do not use repeated test tuning as autonomous persistence.
+- Freeze final experiment additions when remaining time threatens the report/clean-release checks. Extra training uses measured spare capacity, not the upload margin.
+- Commit/push/public upload, protected access, paid resources and unavailable required human facts are genuine authorization/input boundaries. Prepare the concrete work before asking.
+- Do not promise that a future test must yield a win. The objective is a better controller; the scientific obligation is accurate evidence, including limitations and failures.
+
+## 12. Active progress tracker
+
+Autonomous execution is active; see the per-step tracker and artifacts/final/state.json. Phase A evidence is reused, not re-executed. Fill exact evidence/status/deviation links during the authorized run.
+
+| Step | Status | Next verification gate / main output |
+|---|---|---|
+| 8 | Complete | artifacts/final/reference-audit.json; artifacts/final/link-verification.json; real CMAB control phasea-abrCMAB-20261116T214650-ee42c4 |
+| 9 | Running | Implementing common event ledger, metric fixtures and typed RTT freshness; original controller files unchanged |
+| 10 | Pending | Verified replay, splits and measured matrix budget, T2/T3 |
+| 11 | Pending | Memory/startup evidence |
+| 12 | Pending | Feedback timing/attribution evidence |
+| 13 | Pending | Context/estimator/stability evidence |
+| 14 | Pending | Validation-selected C*, F6/T5 |
+| 15 | Pending | Quantified environment calibration and CPU/RTX benchmark, F8 |
+| 16 | Pending | Compatible conventional/LEO training candidates |
+| 17 | Pending | Repeated training, representative checkpoints, real-browser export checks |
+| 18 | Pending | Frozen final matrix and complete run inventory |
+| 19 | Pending | Verified common results, figures/tables and claim boundaries |
+| 20 | Pending | Reviewed final report PDF and contributions |
+| 21 | Pending | Working demo, recording and report-consistent slide draft |
+| 22 | Pending | Extracted/reproduced release ZIP and publication/submission status |
+| 23 | Pending | Presentation/demo polish and human rehearsal checklist |
+
+### Method references used for this revision
+
+- Source of truth for CMAB behaviour: pinned CMABAbrController.js/CMABRule.js and the local Zhao/Pan reference paper. Inspect the installed 2.7.0 wheel before relying on newer API details.
+- [MABWiser public API](https://fidelity.github.io/mabwiser/api.html): fit/partial_fit, arm handling and linear policies.
+- [Gelato/Plume training source](https://github.com/sagar-pa/plume/blob/main/puffer_abr/puffer_abr_training/train.py): actor-critic training and workload sampling; adapt without importing the full Puffer/Ray system.
+- [Stable-Baselines3 A2C guidance](https://stable-baselines3.readthedocs.io/en/master/modules/a2c.html): CPU/vectorized execution can outperform GPU for small non-CNN policies; measure actual throughput.
+- [SB3 RL development/evaluation guidance](https://stable-baselines3.readthedocs.io/en/master/guide/rl_tips.html): custom-environment checks, normalization, repeated runs and separate evaluation.

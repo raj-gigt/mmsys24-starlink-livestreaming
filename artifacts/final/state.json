@@ -1,0 +1,23 @@
+{
+  "submission_deadline": "2026-11-18T08:00:00+05:30",
+  "presentation": "2026-11-20T11:00:00+05:30",
+  "authorization": {
+    "autonomous_execution": true,
+    "commit_push": true,
+    "basis": "User: you can commit/push whenever you need to"
+  },
+  "steps": {
+    "8": {
+      "status": "Complete",
+      "evidence": "artifacts/final/reference-audit.json; artifacts/final/link-verification.json; real CMAB control phasea-abrCMAB-20261116T214650-ee42c4",
+      "updated_utc": "2026-11-16T21:51:31.103323+00:00"
+    },
+    "9": {
+      "status": "Running",
+      "evidence": "Implementing common event ledger, metric fixtures and typed RTT freshness; original controller files unchanged",
+      "updated_utc": "2026-11-16T21:51:31.213799+00:00"
+    }
+  },
+  "updated_utc": "2026-11-16T21:51:31.213799+00:00",
+  "current_step": 9
+}

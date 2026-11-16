@@ -5,7 +5,10 @@ compose=(docker compose -f docker-compose-emulation.yaml -f docker-compose.lock.
 case "${1:-status}" in
   up)
     python3 scripts/prepare_player.py
-    "${compose[@]}" up -d --build dashjs chrome stat-server mongo mongo-express nginx livesim2 pyodide
+    # Only the player is built locally. Nginx inherits a build definition
+    # from upstream, but the Phase A lock selects a pinned registry image.
+    "${compose[@]}" build dashjs
+    "${compose[@]}" up -d --no-build dashjs chrome stat-server mongo mongo-express nginx livesim2 pyodide
     ;;
   down) "${compose[@]}" down ;;
   status) "${compose[@]}" ps ;;

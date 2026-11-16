@@ -34,6 +34,11 @@ def main():
     paths = ['dash.js/src/streaming/rules/abr/cmab/CMABAbrController.js',
              'dash.js/src/streaming/rules/abr/cmab/CMABRule.js', 'stats-server/app.py']
     controller = (ROOT / paths[0]).read_text()
+    original = subprocess.check_output(['git', '-C', str(ROOT/'dash.js'), 'show',
+        'f31314a7:src/streaming/rules/abr/cmab/CMABAbrController.js'], text=True)
+    stripped = re.sub(r'^        // BEGIN LEO PASSIVE AUDIT\n.*?^        // END LEO PASSIVE AUDIT\n',
+                      '', controller, flags=re.M | re.S)
+    assert stripped == original, 'Reference decision logic has changed'
     assert 'LearningPolicy.LinTS(alpha=cmab_alpha)' in controller
     assert '_selectedArmsArray.length < cmabArms.length - 1' in controller
     report = {
@@ -47,7 +52,8 @@ def main():
         'forced_choices_after_reset': len(summary['ladder']) - 1,
         'feedback': 'Reward computed after selection and before new request completes',
         'rng_finding': 'MAB is constructed with its default seed on each fitted decision; investigate repeated draw initialization',
-        'control_files_changed': False,
+        'control_decision_logic_unchanged': True,
+        'passive_hook_present': controller != stripped,
         'scope': 'Source/runtime audit and useful playback; no performance improvement claim',
     }
     out = ROOT / 'artifacts/final'

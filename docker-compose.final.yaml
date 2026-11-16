@@ -1,0 +1,5 @@
+services:
+  stat-server:
+    image: leo-abr-stats:final
+    build:
+      context: ./stats-server

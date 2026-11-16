@@ -96,6 +96,9 @@ def run(args: argparse.Namespace) -> dict:
         else:
             raise RuntimeError("Player/model assets did not become ready")
         page_ready_ms=(time.perf_counter()-page_started)*1000
+        if getattr(args, 'final_telemetry', False):
+            driver.execute_script('window.LEO_FINAL_DURATION_S=arguments[0]', args.seconds)
+            driver.execute_script((ROOT/'rl/web/telemetry.js').read_text(encoding='utf-8'))
         driver.execute_script(r"""
           window.__phaseaEvents=[];
           window.__phaseaErrors=[];
@@ -133,6 +136,9 @@ def run(args: argparse.Namespace) -> dict:
         console = driver.get_log("browser")
         (out / "console.json").write_text(json.dumps(console, indent=2), encoding="utf-8")
         final = driver.execute_script(SNAPSHOT)
+        if getattr(args, 'final_telemetry', False):
+            telemetry = driver.execute_script("const c=window.LEO_FINAL_COLLECTOR;c.stop();return {version:c.version,samples:c.samples,events:c.events,requests:c.requests,probes:c.probes,cmab_decisions:window.__LEO_CMAB_TRACE||[],custom_decisions:window.__anjanDecisionLog||[]};")
+            (out/'telemetry.json').write_text(json.dumps(telemetry),encoding='utf-8')
         if final:
             final["elapsed_s"] = time.monotonic() - started
             samples.append(final)
@@ -185,4 +191,5 @@ if __name__ == "__main__":
     parser.add_argument("--catchup", default="liveCatchupModeLoLP")
     parser.add_argument("--stages", default="", help="Controlled link: seconds:Mbps,...; blank replays original trace")
     parser.add_argument("--align-minute", action='store_true', help='Load at UTC minute boundary for matching source/catch-up phase')
+    parser.add_argument('--final-telemetry', action='store_true', help='Capture passive 100ms actually-rendered playback ledger')
     run(parser.parse_args())

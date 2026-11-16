@@ -39,12 +39,15 @@ count = 0
 ping_thread = None
 last_value = -1
 current_experiment_id = None
+probe_health = {'ok': False, 'probe_at_s': None, 'success_at_s': None, 'rtt_ms': None}
 
 
 def py_ping(hostname: str) -> None:
     global count
     global last_value
+    global probe_health
     count += 1
+    probe_ok = False
 
     try:
         if not INTERFACE:
@@ -58,11 +61,17 @@ def py_ping(hostname: str) -> None:
             pm = PingMetric(time.time(), count, rtt)
             last_value = rtt
             ping_metric.append(pm)
+            probe_ok = True
     
     except subprocess.CalledProcessError as e:
         print(e.output)
         pm = PingMetric(time.time(), count, last_value)
         ping_metric.append(pm)
+    # Preserve legacy scalar semantics; publish health separately for new policies.
+    now = time.time()
+    probe_health = {'ok': probe_ok, 'probe_at_s': now,
+                    'success_at_s': now if probe_ok else probe_health['success_at_s'],
+                    'rtt_ms': last_value if last_value >= 0 else None}
 
 
 @app.route("/qoe/", methods=methods)
@@ -153,6 +162,17 @@ def get_ping_stats():
         return jsonify(ping_metric[-1].rtt)
     else:
         return jsonify(0)
+
+
+@app.route('/ping/details', methods=['GET'])
+@cross_origin()
+def get_ping_details():
+    snapshot = dict(probe_health)
+    now = time.time()
+    snapshot['server_at_s'] = now
+    snapshot['age_s'] = None if snapshot['success_at_s'] is None else max(0, now-snapshot['success_at_s'])
+    snapshot['valid'] = bool(snapshot['ok'] and snapshot['age_s'] is not None and snapshot['age_s'] < 3)
+    return jsonify(snapshot)
     
 
 def print_ping_stats():

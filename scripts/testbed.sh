@@ -2,12 +2,16 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 compose=(docker compose -f docker-compose-emulation.yaml -f docker-compose.lock.yaml -f docker-compose.phase-a.yaml -f docker-compose.player.yaml)
+if [[ -f docker-compose.final.yaml ]]; then
+  compose+=(-f docker-compose.final.yaml)
+fi
 case "${1:-status}" in
   up)
     python3 scripts/prepare_player.py
     # Only the player is built locally. Nginx inherits a build definition
     # from upstream, but the Phase A lock selects a pinned registry image.
     "${compose[@]}" build dashjs
+    if [[ -f docker-compose.final.yaml ]]; then "${compose[@]}" build stat-server; fi
     "${compose[@]}" up -d --no-build dashjs chrome stat-server mongo mongo-express nginx livesim2 pyodide
     ;;
   down) "${compose[@]}" down ;;

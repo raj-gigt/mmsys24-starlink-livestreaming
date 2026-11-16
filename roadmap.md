@@ -8,7 +8,7 @@ Updated: 17 November 2026. Group 4 / CS6048. Deliverable definitions and figure/
 
 The user has authorized both this plan and autonomous execution ("begin autonomous run"). **Execution is active from Step 8.** Once that run is authorized, execute the pending steps sequentially without requesting a new mode selection or design agreement at every step. Routine design choices, diagnoses, fixes, verification and continuation are autonomous. The older per-step Codex/manual/coordination approval rule and runtime-study priorities are superseded.
 
-**Commit/push authorization is now granted for the autonomous run**, by the user's message: "you can commit/push whenever you need to". Publish verified milestones; push edited submodule commits before the parent reference. Do not push unverified or unrelated changes. Preparing a reviewed release or a source patch does not authorize committing it. Retain all permanent code/configuration/result work in LEO_ABR_RL, parent branch anjan and anjan in any edited submodule. Preserve unrelated changes and historical evidence. Keep environments/caches/scratch outside the repository; no project tmp directory. No paid compute, unsolicited external messages or replacement repository.
+**Commit/push authorization is now granted for the autonomous run**, by the user's message: "you can commit/push whenever you need to". Publish verified milestones; push edited submodule commits before the parent reference. Do not push unverified or unrelated changes. Retain all permanent code/configuration/result work in LEO_ABR_RL, parent branch anjan and anjan in any edited submodule. Preserve unrelated changes and historical evidence. Keep environments/caches/scratch outside the repository; no project tmp directory. No paid compute, unsolicited external messages or replacement repository.
 
 Deadlines, in Asia/Calcutta:
 - **Submission: 18 November 2026, 08:00.**
@@ -148,7 +148,7 @@ Add a supplementary original-paper-replay comparison of B0 versus C*: 3 repetiti
 ## 5. Phase B: trustworthy measurement and a usable workbench
 
 ### Step 8 - Revalidate the host and audit original CMAB
-**Status:** Pending. **Owner:** Anjan; Rajat/Deviprasad support only when actual access is needed. **Deliverables:** D1, C1, C10, F2.
+**Status:** Complete. **Owner:** Anjan; Rajat/Deviprasad support only when actual access is needed. **Deliverables:** D1, C1, C10, F2.
 
 **Objective / intuition:** make sure we are improving the real reference controller rather than an outdated build or an assumed algorithm.
 
@@ -162,7 +162,7 @@ Add a supplementary original-paper-replay comparison of B0 versus C*: 3 repetiti
 **Verification / exit:** intended build plays real media; configured link is independently checked; source-backed decision/update trace explains a B0 example; no silent baseline modification. Store readiness failures separately from policy failures. A serious infrastructure issue is diagnosed before evaluating new policies.
 
 ### Step 9 - Implement common event attribution, metrics and observation freshness
-**Status:** Pending. **Dependency:** 8. **Deliverables:** D1, D5, D7, C2/C6/C10, T7/T8.
+**Status:** Complete. **Dependency:** 8. **Deliverables:** D1, D5, D7, C2/C6/C10, T7/T8.
 
 **Objective / intuition:** trustworthy rewards and comparisons require knowing what actually played and which action caused which request.
 
@@ -177,7 +177,7 @@ Add a supplementary original-paper-replay comparison of B0 versus C*: 3 repetiti
 **Verification / exit:** hand-calculated fixtures pass; known stalls/seeks cannot be double counted; selected/requested/played distinctions are demonstrable; unresolved associations are visible, not assigned invented reward. New feature values have known units/age. Original B0 behaviour is preserved.
 
 ### Step 10 - Implement repeatable scenario replay and freeze the development protocol
-**Status:** Pending. **Dependencies:** 8-9. **Deliverables:** D6/D7, C3/C6, T2/T3.
+**Status:** Running. **Dependencies:** 8-9. **Deliverables:** D6/D7, C3/C6, T2/T3.
 
 **Objective / intuition:** every policy should face the same changing network, with enough observation time to explain recovery.
 
@@ -409,7 +409,7 @@ Candidate configuration budget: initially at most 12 named CMAB settings and 72 
 - A calibration limitation is reported honestly. Do not silently replace real browser comparison with simulator-only claims.
 - If all good candidates lose on final test, retain the result and apply Step 18's fresh-test rule. Ask only if a consequential project-direction change becomes necessary; do not use repeated test tuning as autonomous persistence.
 - Freeze final experiment additions when remaining time threatens the report/clean-release checks. Extra training uses measured spare capacity, not the upload margin.
-- Commit/push/public upload, protected access, paid resources and unavailable required human facts are genuine authorization/input boundaries. Prepare the concrete work before asking.
+- Public portal uploads, protected access, paid resources and unavailable required human facts are genuine authorization/input boundaries; commit/push approval is already granted for this run. Prepare the concrete work before asking.
 - Do not promise that a future test must yield a win. The objective is a better controller; the scientific obligation is accurate evidence, including limitations and failures.
 
 ## 12. Active progress tracker
@@ -419,8 +419,8 @@ Autonomous execution is active; see the per-step tracker and artifacts/final/sta
 | Step | Status | Next verification gate / main output |
 |---|---|---|
 | 8 | Complete | artifacts/final/reference-audit.json; artifacts/final/link-verification.json; real CMAB control phasea-abrCMAB-20261116T214650-ee42c4 |
-| 9 | Running | Implementing common event ledger, metric fixtures and typed RTT freshness; original controller files unchanged |
-| 10 | Pending | Verified replay, splits and measured matrix budget, T2/T3 |
+| 9 | Complete | Played-quality ledger and fixtures pass; typed RTT Flask checks pass; passive-source equality verified; observer-checks/phasea-abrCMAB-20261116T220201-450cb8.json |
+| 10 | Running | Extending scheduled replay, versioned development/validation/test cohorts and measured matrix budgets |
 | 11 | Pending | Memory/startup evidence |
 | 12 | Pending | Feedback timing/attribution evidence |
 | 13 | Pending | Context/estimator/stability evidence |

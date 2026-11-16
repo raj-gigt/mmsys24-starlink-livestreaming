@@ -1,0 +1,23 @@
+{
+  "run_id": "phasea-abrCMAB-20261116T215413-1b5fde",
+  "metrics": {
+    "quality_utility": 38.084271424736016,
+    "stall_s": 4.562469621738321,
+    "startup_s": 2.4460999999999764,
+    "variation": 2.2221578438814316,
+    "latency_area": 94.7071101999998,
+    "played_media_s": 28.305490970611572,
+    "unattributed_media_s": 0.0007150173187255859,
+    "skipped_media_s": 2.054408073425293,
+    "switches": 3,
+    "duration_s": 36.55909999999998,
+    "stall_count": 14,
+    "quality_attribution_fraction": 0.9999747392716322,
+    "played_bitrate_bps": 5149495.209416433,
+    "mean_live_latency_s": 5.689511052433263,
+    "p95_live_latency_s": 7.452,
+    "qoe_total": 7.250934564618346,
+    "qoe_per_wall_s": 0.19833460245515755
+  },
+  "scope": "Observer/ledger integration check, not comparative final evidence"
+}

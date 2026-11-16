@@ -28,6 +28,8 @@ def update(step, status, evidence):
     text = roadmap.read_text(encoding='utf-8')
     text = re.sub(rf'(^\| {step} \| )[^|]+(\| )[^\n]+',
                   lambda m: m[1] + status + ' ' + m[2] + evidence + ' |', text, flags=re.M)
+    text = re.sub(rf'(### Step {step} -[^\n]*\n\*\*Status:\*\* )[^.\n]+',
+                  lambda m: m[1] + status, text)
     roadmap.write_text(text, encoding='utf-8')
     print(json.dumps(state['steps'][str(step)]))
 

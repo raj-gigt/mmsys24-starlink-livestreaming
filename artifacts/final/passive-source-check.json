@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "base_player_commit": "f31314a7",
+  "method": "Exact source equality after removing delimited observation-only block",
+  "controller_logic_unchanged": true
+}

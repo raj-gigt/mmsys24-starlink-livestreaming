@@ -42,5 +42,7 @@
       "loss_percent": 100,
       "relative_s": 2.4010627269744873
     }
-  ]
+  ],
+  "source_delay_membership_check": "PASS",
+  "max_nearest_matching_source_time_error_s": 0.006110639571943466
 }

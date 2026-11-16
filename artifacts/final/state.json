@@ -23,11 +23,28 @@
       "updated_utc": "2026-11-16T22:18:09.168222+00:00"
     },
     "11": {
+      "status": "Complete",
+      "evidence": "12 paired development sessions complete; startup improves all three cases, retained memory alone does not; paired-results.json preserves every outcome",
+      "updated_utc": "2026-11-16T22:51:04.955050+00:00"
+    },
+    "12": {
       "status": "Running",
-      "evidence": "Implementing isolated memory/reset and startup variants with original LinTS/reward retained",
-      "updated_utc": "2026-11-16T22:18:09.175055+00:00"
+      "evidence": "Implementing exact request-object feedback links and explicit download-surrogate rewards; full played-outcome attribution remains offline",
+      "updated_utc": "2026-11-16T22:51:05.045679+00:00"
     }
   },
-  "updated_utc": "2026-11-16T22:18:09.175055+00:00",
-  "current_step": 11
+  "updated_utc": "2026-11-16T22:51:05.045679+00:00",
+  "current_step": 12,
+  "active_experiment": {
+    "step": 11,
+    "command": "python scripts/run_development_matrix.py",
+    "session_id": 31025,
+    "ledger": "artifacts/final/development/memory-startup-v1/runs.json",
+    "resume": "Rerun same command; complete run keys skipped",
+    "do_not_modify_during_measurement": [
+      "CMAB controller code",
+      "workload manifest",
+      "player image"
+    ]
+  }
 }

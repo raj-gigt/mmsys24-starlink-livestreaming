@@ -196,7 +196,7 @@ Add a supplementary original-paper-replay comparison of B0 versus C*: 3 repetiti
 Candidate configuration budget: initially at most 12 named CMAB settings and 72 development/validation/ablation browser trials of about 90 seconds each. This is a bounded search budget, not a target to exhaust. Reserve coverage for the major hypotheses and confirmations. Reuse a reference run only if all workload/build/protocol identities match.
 
 ### Step 11 - Isolate memory/reset and startup effects
-**Status:** Running. **Dependency:** 10. **Deliverables:** D2/D3, C1, F2/F6, T1/T5.
+**Status:** Complete. **Dependency:** 10. **Deliverables:** D2/D3, C1, F2/F6, T1/T5.
 
 **Objective / intuition:** test the two strongest source-backed limitations before changing the reward or model family.
 
@@ -210,7 +210,7 @@ Candidate configuration budget: initially at most 12 named CMAB settings and 72 
 **Verification / exit:** each treatment's actual mechanism is logged; actions remain valid; source-state changes match the named hypothesis; a provisional result is supported by paired development runs. Retain both favourable and unfavourable outcomes. Use no test scores.
 
 ### Step 12 - Test reward timing and outcome-based feedback
-**Status:** Pending. **Dependency:** 11. **Deliverables:** D2/D3, C1/C2, F2/F6, T5.
+**Status:** Running. **Dependency:** 11. **Deliverables:** D2/D3, C1/C2, F2/F6, T5.
 
 **Objective / intuition:** teach the bandit from the action's consequences instead of giving a new choice credit for conditions observed before it was requested.
 
@@ -421,8 +421,8 @@ Autonomous execution is active; see the per-step tracker and artifacts/final/sta
 | 8 | Complete | artifacts/final/reference-audit.json; artifacts/final/link-verification.json; real CMAB control phasea-abrCMAB-20261116T214650-ee42c4 |
 | 9 | Complete | Played-quality ledger and fixtures pass; typed RTT Flask checks pass; passive-source equality verified; observer-checks/phasea-abrCMAB-20261116T220201-450cb8.json |
 | 10 | Complete | Verified 86 live schedule transitions within 14ms; physical outage/100ms RTT/recovery passed; six development/six validation/ten test/ten sealed reserve cases; raw offset replay checked |
-| 11 | Running | Implementing isolated memory/reset and startup variants with original LinTS/reward retained |
-| 12 | Pending | Feedback timing/attribution evidence |
+| 11 | Complete | 12 paired development sessions complete; startup improves all three cases, retained memory alone does not; paired-results.json preserves every outcome |
+| 12 | Running | Implementing exact request-object feedback links and explicit download-surrogate rewards; full played-outcome attribution remains offline |
 | 13 | Pending | Context/estimator/stability evidence |
 | 14 | Pending | Validation-selected C*, F6/T5 |
 | 15 | Pending | Quantified environment calibration and CPU/RTX benchmark, F8 |

@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "role": "test",
+  "cases": [
+    {
+      "id": "test-original-paper-replay",
+      "role": "test",
+      "family": "original_paper_replay",
+      "mode": "trace",
+      "seconds": 180,
+      "trace_offset_s": 2904,
+      "source_window_s": [
+        2904,
+        3084
+      ],
+      "recording_id": "seychelles-20240130-0100",
+      "network_kind": "original raw probe-to-delay/loss emulation convention; fixed20Mbps; positive RTT1percentloss, nonpositive100percentloss",
+      "policy_may_read_future_profile": false
+    }
+  ]
+}

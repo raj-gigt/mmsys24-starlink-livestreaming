@@ -30,6 +30,9 @@ def main():
     assert seek['skipped_media_s'] == 20 and seek['played_media_s'] == 2
     initial_live = evaluate_samples([row(0, 0), row(1, 1700000000, seek_epoch=1), row(2, 1700000001, seek_epoch=1)])
     assert initial_live['skipped_media_s'] == 0 and initial_live['startup_s'] == 1
+    automatic_seek = evaluate_samples([row(0, 0), row(1, 1, seeking=True, waiting=True),
+                                       row(2, 1), row(3, 2)])
+    assert automatic_seek['stall_s'] == 1 and automatic_seek['automatic_seek_wait_s'] == 1
     paused = evaluate_samples([row(0, 0, paused=True), row(1, 0), row(2, 1)])
     assert paused['stall_s'] == paused['startup_s'] == 0
     try:

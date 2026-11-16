@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "run_id": "phasea-abrCMAB-20261116T220900-ca06d5",
+  "scenario_id": "development-post_handover_recovery-4104",
+  "verified_transitions": 86,
+  "max_transition_error_s": 0.013921022415161133,
+  "metrics": {
+    "quality_utility": 20.67521205125615,
+    "stall_s": 67.7374919461907,
+    "startup_s": 5.02727898941026,
+    "variation": 1.8971199848858813,
+    "latency_area": 592.7340975000008,
+    "played_media_s": 15.16236400604248,
+    "unattributed_media_s": 0.010276079177856445,
+    "skipped_media_s": 66.39363598823547,
+    "automatic_seek_wait_s": 53.97391138599135,
+    "switches": 1,
+    "metric_version": "played-ledger-v2",
+    "duration_s": 90.02930000000005,
+    "stall_count": 17,
+    "quality_attribution_fraction": 0.9993222640497378,
+    "played_bitrate_bps": 5283014.253908617,
+    "mean_live_latency_s": 9.736619744355991,
+    "p95_live_latency_s": 17.852,
+    "qoe_total": -315.14458046838274,
+    "qoe_per_wall_s": -3.500466853217592
+  },
+  "plot_generated": true,
+  "runner_plot_envelope_repair": true,
+  "scope": "Development replay verification; no test performance used"
+}

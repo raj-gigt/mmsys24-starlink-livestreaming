@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "matrix_trials": 146,
+  "playback_minutes": 298,
+  "forecast_cycle_minutes": 444,
+  "observed_development_run": "phasea-abrCMAB-20261116T220900-ca06d5",
+  "basis": "Measured browser readiness plus 90s replay; fixed-source-phase cycles round to 180s for 120s runs and 240s for 180s runs",
+  "caveat": "Recompute from actual matrix cycles; no overlap of training with measured streaming"
+}

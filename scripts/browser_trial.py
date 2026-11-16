@@ -41,6 +41,11 @@ def set_profile(rate: float | None, delay: float = 40, loss: float = 0) -> None:
                json.dumps({"rate_mbit": rate, "delay_ms": delay, "loss_percent": loss}))
 
 
+def set_schedule(profile: dict) -> None:
+    code = "import sys;from pathlib import Path;p=Path('/run/leo-link-profile.new');p.write_text(sys.argv[1]);p.replace('/run/leo-link-profile.json')"
+    docker('exec', 'dashjs-nginx', 'python3', '-c', code, json.dumps(profile))
+
+
 SNAPSHOT = r"""
 const a=window.app, p=a && a.player, v=document.querySelector('video');
 if (!p || !v) return null;
@@ -74,6 +79,15 @@ def run(args: argparse.Namespace) -> dict:
     options.set_capability("goog:loggingPrefs", {"browser": "ALL"})
     driver = webdriver.Remote(os.getenv("LEO_SELENIUM", "http://localhost:4444"), options=options)
     stages = [(float(pair.split(":")[0]), float(pair.split(":")[1])) for pair in args.stages.split(",")] if args.stages else []
+    scenario = None
+    if getattr(args, 'scenario', None):
+        spec = json.loads(Path(args.scenario).read_text())
+        scenario = next(r for r in spec['cases'] if r['id'] == args.case)
+        if scenario['role'] in ['test', 'reserve'] and not getattr(args, 'allow_test', False):
+            raise ValueError('Sealed test workload requires explicit frozen-evaluation permission')
+        if stages:
+            raise ValueError('Use either a full scenario or legacy bandwidth steps')
+        args.seconds = scenario['seconds']
     samples, applied = [], []
     params = {"experimentID": run_id,
               "mpdURL": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/stream.mpd",
@@ -105,8 +119,22 @@ def run(args: argparse.Namespace) -> dict:
           const v=document.querySelector('video');
           ['playing','waiting','stalled','seeking','seeked','pause','error','loadedmetadata'].forEach(n=>v.addEventListener(n,()=>window.__phaseaEvents.push({event:n,at_ms:performance.now(),media_time:v.currentTime})));
         """)
-        set_profile(stages[0][1] if stages and stages[0][0] == 0 else None)
-        if getattr(args, 'align_minute', False):
+        scheduled_start = None
+        if scenario:
+            scheduled_start = time.time()+2
+            if getattr(args, 'align_minute', False):
+                scheduled_start = (int((time.time()+2)/60)+1)*60
+            profile = {'profile_id': run_id, 'start_at_unix_s': scheduled_start}
+            if scenario.get('mode') == 'trace':
+                profile.update(mode='trace', trace_offset_s=scenario['trace_offset_s'])
+            else:
+                profile['stages'] = scenario['stages']
+            set_schedule(profile)
+            while time.time() < scheduled_start:
+                time.sleep(min(.1, max(.001, scheduled_start-time.time())))
+        else:
+            set_profile(stages[0][1] if stages and stages[0][0] == 0 else None)
+        if getattr(args, 'align_minute', False) and not scenario:
             while datetime.now(timezone.utc).second != 0:
                 time.sleep(0.2)
         # Invoke the page's normal Load handler without relying on the
@@ -142,6 +170,14 @@ def run(args: argparse.Namespace) -> dict:
         if final:
             final["elapsed_s"] = time.monotonic() - started
             samples.append(final)
+        if scenario:
+            applied_profile = json.loads(docker('exec', 'dashjs-nginx', 'cat', '/run/leo-profile-applied.json'))
+            assert applied_profile['profile_id'] == run_id, 'Wrong active link schedule'
+            (out/'scenario.json').write_text(json.dumps(scenario, indent=2))
+            (out/'applied-profile.json').write_text(json.dumps(applied_profile, indent=2))
+            applied = [{'at_s': r.get('relative_s', 0), 'rate_mbit': r['rate_mbit'],
+                        'delay_ms': r['delay_ms'], 'loss_percent': r['loss_percent']}
+                       for r in applied_profile['applied']]
         # Existing player flush interval is 5 seconds. Keep it alive for one final flush.
         time.sleep(6)
         db = MongoClient(os.getenv("LEO_MONGO", "mongodb://starlink:starlink@localhost:27017/"), serverSelectionTimeoutMS=10000)["starlink"]
@@ -154,6 +190,8 @@ def run(args: argparse.Namespace) -> dict:
                    "started_utc": clock_start, "wall_clock_start_second": int(clock_start[17:19]),
                    "target_latency_s": args.target, "catchup": args.catchup, "url": url,
                    "load_wall_clock_utc": loaded_utc,
+                   "scenario_id": scenario['id'] if scenario else None,
+                   "scheduled_start_unix_s": scheduled_start,
                    "controlled_stages": applied, "samples": len(samples), "mongo_documents": counts,
                    "media_time_end": final.get("media_time"), "ladder": final.get("ladder"),
                    "build": final.get("build"), "model": final.get("model"),
@@ -192,4 +230,7 @@ if __name__ == "__main__":
     parser.add_argument("--stages", default="", help="Controlled link: seconds:Mbps,...; blank replays original trace")
     parser.add_argument("--align-minute", action='store_true', help='Load at UTC minute boundary for matching source/catch-up phase')
     parser.add_argument('--final-telemetry', action='store_true', help='Capture passive 100ms actually-rendered playback ledger')
+    parser.add_argument('--scenario', help='Versioned workload manifest')
+    parser.add_argument('--case', help='Case ID within workload manifest')
+    parser.add_argument('--allow-test', action='store_true', help='Only for frozen final evaluation')
     run(parser.parse_args())

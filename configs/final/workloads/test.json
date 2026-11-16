@@ -1,0 +1,4427 @@
+{
+  "version": 2,
+  "role": "test",
+  "cases": [
+    {
+      "id": "test-steady_bandwidth-6100",
+      "role": "test",
+      "family": "steady_bandwidth",
+      "seed": 6100,
+      "seconds": 120,
+      "source_window_s": [
+        2962,
+        3082
+      ],
+      "network_kind": "synthetic capacity/outages; measured RTT window or declared constant/augmented delay",
+      "probe_observed_fraction": 1.0,
+      "policy_may_read_future_profile": false,
+      "stages": [
+        {
+          "at_s": 0,
+          "rate_mbit": 8.0,
+          "delay_ms": 40.0,
+          "loss_percent": 0.0
+        }
+      ],
+      "recording_id": "seychelles-20240130-0100"
+    },
+    {
+      "id": "test-steady_bandwidth-6101",
+      "role": "test",
+      "family": "steady_bandwidth",
+      "seed": 6101,
+      "seconds": 120,
+      "source_window_s": [
+        657,
+        777
+      ],
+      "network_kind": "synthetic capacity/outages; measured RTT window or declared constant/augmented delay",
+      "probe_observed_fraction": 1.0,
+      "policy_may_read_future_profile": false,
+      "stages": [
+        {
+          "at_s": 0,
+          "rate_mbit": 8.0,
+          "delay_ms": 40.0,
+          "loss_percent": 0.0
+        }
+      ],
+      "recording_id": "victoria-20251114-1900"
+    },
+    {
+      "id": "test-bandwidth_variation-6110",
+      "role": "test",
+      "family": "bandwidth_variation",
+      "seed": 6110,
+      "seconds": 120,
+      "source_window_s": [
+        3103,
+        3223
+      ],
+      "network_kind": "synthetic capacity/outages; measured RTT window or declared constant/augmented delay",
+      "probe_observed_fraction": 1.0,
+      "policy_may_read_future_profile": false,
+      "stages": [
+        {
+          "at_s": 0,
+          "rate_mbit": 8.0,
+          "delay_ms": 40.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 47,
+          "rate_mbit": 0.8,
+          "delay_ms": 40.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 72,
+          "rate_mbit": 6.0,
+          "delay_ms": 40.0,
+          "loss_percent": 0.0
+        }
+      ],
+      "recording_id": "seychelles-20240130-0100"
+    },
+    {
+      "id": "test-bandwidth_variation-6111",
+      "role": "test",
+      "family": "bandwidth_variation",
+      "seed": 6111,
+      "seconds": 120,
+      "source_window_s": [
+        520,
+        640
+      ],
+      "network_kind": "synthetic capacity/outages; measured RTT window or declared constant/augmented delay",
+      "probe_observed_fraction": 1.0,
+      "policy_may_read_future_profile": false,
+      "stages": [
+        {
+          "at_s": 0,
+          "rate_mbit": 8.0,
+          "delay_ms": 40.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 47,
+          "rate_mbit": 1.0,
+          "delay_ms": 40.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 72,
+          "rate_mbit": 6.0,
+          "delay_ms": 40.0,
+          "loss_percent": 0.0
+        }
+      ],
+      "recording_id": "victoria-20251114-1900"
+    },
+    {
+      "id": "test-rtt_variation-6120",
+      "role": "test",
+      "family": "rtt_variation",
+      "seed": 6120,
+      "seconds": 120,
+      "source_window_s": [
+        3050,
+        3170
+      ],
+      "network_kind": "synthetic capacity/outages; measured RTT window or declared constant/augmented delay",
+      "probe_observed_fraction": 1.0,
+      "policy_may_read_future_profile": false,
+      "stages": [
+        {
+          "at_s": 0,
+          "rate_mbit": 8.0,
+          "delay_ms": 245.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 1,
+          "rate_mbit": 8.0,
+          "delay_ms": 245.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 2,
+          "rate_mbit": 8.0,
+          "delay_ms": 244.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 3,
+          "rate_mbit": 8.0,
+          "delay_ms": 241.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 4,
+          "rate_mbit": 8.0,
+          "delay_ms": 242.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 5,
+          "rate_mbit": 8.0,
+          "delay_ms": 242.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 6,
+          "rate_mbit": 8.0,
+          "delay_ms": 174.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 7,
+          "rate_mbit": 8.0,
+          "delay_ms": 166.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 8,
+          "rate_mbit": 8.0,
+          "delay_ms": 165.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 9,
+          "rate_mbit": 8.0,
+          "delay_ms": 166.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 10,
+          "rate_mbit": 8.0,
+          "delay_ms": 165.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 11,
+          "rate_mbit": 8.0,
+          "delay_ms": 166.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 12,
+          "rate_mbit": 8.0,
+          "delay_ms": 165.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 13,
+          "rate_mbit": 8.0,
+          "delay_ms": 163.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 14,
+          "rate_mbit": 8.0,
+          "delay_ms": 164.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 15,
+          "rate_mbit": 8.0,
+          "delay_ms": 166.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 16,
+          "rate_mbit": 8.0,
+          "delay_ms": 166.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 17,
+          "rate_mbit": 8.0,
+          "delay_ms": 167.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 18,
+          "rate_mbit": 8.0,
+          "delay_ms": 165.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 19,
+          "rate_mbit": 8.0,
+          "delay_ms": 164.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 20,
+          "rate_mbit": 8.0,
+          "delay_ms": 164.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 21,
+          "rate_mbit": 8.0,
+          "delay_ms": 162.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 22,
+          "rate_mbit": 8.0,
+          "delay_ms": 159.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 23,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 24,
+          "rate_mbit": 8.0,
+          "delay_ms": 156.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 25,
+          "rate_mbit": 8.0,
+          "delay_ms": 158.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 26,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 27,
+          "rate_mbit": 8.0,
+          "delay_ms": 156.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 28,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 29,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 30,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 31,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 32,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 33,
+          "rate_mbit": 8.0,
+          "delay_ms": 158.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 34,
+          "rate_mbit": 8.0,
+          "delay_ms": 156.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 35,
+          "rate_mbit": 8.0,
+          "delay_ms": 156.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 36,
+          "rate_mbit": 8.0,
+          "delay_ms": 158.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 37,
+          "rate_mbit": 8.0,
+          "delay_ms": 156.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 38,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 39,
+          "rate_mbit": 8.0,
+          "delay_ms": 160.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 40,
+          "rate_mbit": 8.0,
+          "delay_ms": 159.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 41,
+          "rate_mbit": 8.0,
+          "delay_ms": 277.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 42,
+          "rate_mbit": 8.0,
+          "delay_ms": 277.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 43,
+          "rate_mbit": 8.0,
+          "delay_ms": 276.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 44,
+          "rate_mbit": 8.0,
+          "delay_ms": 276.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 46,
+          "rate_mbit": 8.0,
+          "delay_ms": 276.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 47,
+          "rate_mbit": 8.0,
+          "delay_ms": 277.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 48,
+          "rate_mbit": 8.0,
+          "delay_ms": 276.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 49,
+          "rate_mbit": 8.0,
+          "delay_ms": 277.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 50,
+          "rate_mbit": 8.0,
+          "delay_ms": 277.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 51,
+          "rate_mbit": 8.0,
+          "delay_ms": 280.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 52,
+          "rate_mbit": 8.0,
+          "delay_ms": 274.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 53,
+          "rate_mbit": 8.0,
+          "delay_ms": 281.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 54,
+          "rate_mbit": 8.0,
+          "delay_ms": 278.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 55,
+          "rate_mbit": 8.0,
+          "delay_ms": 281.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 56,
+          "rate_mbit": 8.0,
+          "delay_ms": 285.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 57,
+          "rate_mbit": 8.0,
+          "delay_ms": 282.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 58,
+          "rate_mbit": 8.0,
+          "delay_ms": 287.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 59,
+          "rate_mbit": 8.0,
+          "delay_ms": 283.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 60,
+          "rate_mbit": 8.0,
+          "delay_ms": 282.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 61,
+          "rate_mbit": 8.0,
+          "delay_ms": 163.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 62,
+          "rate_mbit": 8.0,
+          "delay_ms": 163.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 63,
+          "rate_mbit": 8.0,
+          "delay_ms": 162.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 64,
+          "rate_mbit": 8.0,
+          "delay_ms": 162.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 65,
+          "rate_mbit": 8.0,
+          "delay_ms": 160.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 66,
+          "rate_mbit": 8.0,
+          "delay_ms": 214.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 67,
+          "rate_mbit": 8.0,
+          "delay_ms": 218.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 68,
+          "rate_mbit": 8.0,
+          "delay_ms": 218.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 69,
+          "rate_mbit": 8.0,
+          "delay_ms": 217.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 70,
+          "rate_mbit": 8.0,
+          "delay_ms": 218.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 71,
+          "rate_mbit": 8.0,
+          "delay_ms": 217.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 72,
+          "rate_mbit": 8.0,
+          "delay_ms": 219.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 73,
+          "rate_mbit": 8.0,
+          "delay_ms": 217.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 74,
+          "rate_mbit": 8.0,
+          "delay_ms": 217.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 75,
+          "rate_mbit": 8.0,
+          "delay_ms": 220.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 76,
+          "rate_mbit": 8.0,
+          "delay_ms": 221.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 77,
+          "rate_mbit": 8.0,
+          "delay_ms": 217.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 78,
+          "rate_mbit": 8.0,
+          "delay_ms": 217.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 79,
+          "rate_mbit": 8.0,
+          "delay_ms": 217.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 80,
+          "rate_mbit": 8.0,
+          "delay_ms": 221.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 81,
+          "rate_mbit": 8.0,
+          "delay_ms": 220.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 82,
+          "rate_mbit": 8.0,
+          "delay_ms": 215.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 83,
+          "rate_mbit": 8.0,
+          "delay_ms": 219.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 84,
+          "rate_mbit": 8.0,
+          "delay_ms": 218.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 85,
+          "rate_mbit": 8.0,
+          "delay_ms": 215.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 86,
+          "rate_mbit": 8.0,
+          "delay_ms": 216.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 87,
+          "rate_mbit": 8.0,
+          "delay_ms": 217.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 88,
+          "rate_mbit": 8.0,
+          "delay_ms": 220.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 89,
+          "rate_mbit": 8.0,
+          "delay_ms": 217.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 90,
+          "rate_mbit": 8.0,
+          "delay_ms": 217.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 91,
+          "rate_mbit": 8.0,
+          "delay_ms": 218.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 92,
+          "rate_mbit": 8.0,
+          "delay_ms": 217.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 93,
+          "rate_mbit": 8.0,
+          "delay_ms": 217.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 94,
+          "rate_mbit": 8.0,
+          "delay_ms": 221.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 95,
+          "rate_mbit": 8.0,
+          "delay_ms": 224.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 96,
+          "rate_mbit": 8.0,
+          "delay_ms": 211.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 97,
+          "rate_mbit": 8.0,
+          "delay_ms": 208.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 98,
+          "rate_mbit": 8.0,
+          "delay_ms": 207.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 99,
+          "rate_mbit": 8.0,
+          "delay_ms": 206.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 100,
+          "rate_mbit": 8.0,
+          "delay_ms": 207.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 101,
+          "rate_mbit": 8.0,
+          "delay_ms": 206.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 102,
+          "rate_mbit": 8.0,
+          "delay_ms": 207.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 103,
+          "rate_mbit": 8.0,
+          "delay_ms": 208.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 104,
+          "rate_mbit": 8.0,
+          "delay_ms": 207.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 105,
+          "rate_mbit": 8.0,
+          "delay_ms": 210.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 106,
+          "rate_mbit": 8.0,
+          "delay_ms": 209.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 107,
+          "rate_mbit": 8.0,
+          "delay_ms": 208.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 109,
+          "rate_mbit": 8.0,
+          "delay_ms": 207.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 110,
+          "rate_mbit": 8.0,
+          "delay_ms": 206.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 111,
+          "rate_mbit": 8.0,
+          "delay_ms": 207.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 112,
+          "rate_mbit": 8.0,
+          "delay_ms": 205.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 113,
+          "rate_mbit": 8.0,
+          "delay_ms": 204.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 114,
+          "rate_mbit": 8.0,
+          "delay_ms": 204.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 116,
+          "rate_mbit": 8.0,
+          "delay_ms": 205.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 117,
+          "rate_mbit": 8.0,
+          "delay_ms": 205.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 118,
+          "rate_mbit": 8.0,
+          "delay_ms": 205.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 119,
+          "rate_mbit": 8.0,
+          "delay_ms": 204.6,
+          "loss_percent": 0.0
+        }
+      ],
+      "recording_id": "seychelles-20240130-0100"
+    },
+    {
+      "id": "test-rtt_variation-6121",
+      "role": "test",
+      "family": "rtt_variation",
+      "seed": 6121,
+      "seconds": 120,
+      "source_window_s": [
+        951,
+        1071
+      ],
+      "network_kind": "synthetic capacity/outages; measured RTT window or declared constant/augmented delay",
+      "probe_observed_fraction": 1.0,
+      "policy_may_read_future_profile": false,
+      "stages": [
+        {
+          "at_s": 0,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 1,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 2,
+          "rate_mbit": 8.0,
+          "delay_ms": 24.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 3,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 4,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 5,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 6,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 7,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 8,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 9,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 10,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 11,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 12,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 13,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 14,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 15,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 17,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 18,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 19,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 20,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 21,
+          "rate_mbit": 8.0,
+          "delay_ms": 27.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 22,
+          "rate_mbit": 8.0,
+          "delay_ms": 23.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 23,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 24,
+          "rate_mbit": 8.0,
+          "delay_ms": 23.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 25,
+          "rate_mbit": 8.0,
+          "delay_ms": 23.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 26,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 27,
+          "rate_mbit": 8.0,
+          "delay_ms": 27.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 28,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 29,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 30,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 31,
+          "rate_mbit": 8.0,
+          "delay_ms": 23.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 32,
+          "rate_mbit": 8.0,
+          "delay_ms": 23.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 33,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 34,
+          "rate_mbit": 8.0,
+          "delay_ms": 24.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 35,
+          "rate_mbit": 8.0,
+          "delay_ms": 26.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 36,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 37,
+          "rate_mbit": 8.0,
+          "delay_ms": 26.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 38,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 39,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 40,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 41,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 42,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 43,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 44,
+          "rate_mbit": 8.0,
+          "delay_ms": 27.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 45,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 46,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 47,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 48,
+          "rate_mbit": 8.0,
+          "delay_ms": 140.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 49,
+          "rate_mbit": 8.0,
+          "delay_ms": 141.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 50,
+          "rate_mbit": 8.0,
+          "delay_ms": 142.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 51,
+          "rate_mbit": 8.0,
+          "delay_ms": 144.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 52,
+          "rate_mbit": 8.0,
+          "delay_ms": 143.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 53,
+          "rate_mbit": 8.0,
+          "delay_ms": 143.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 54,
+          "rate_mbit": 8.0,
+          "delay_ms": 141.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 55,
+          "rate_mbit": 8.0,
+          "delay_ms": 141.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 56,
+          "rate_mbit": 8.0,
+          "delay_ms": 143.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 57,
+          "rate_mbit": 8.0,
+          "delay_ms": 145.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 58,
+          "rate_mbit": 8.0,
+          "delay_ms": 141.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 59,
+          "rate_mbit": 8.0,
+          "delay_ms": 143.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 60,
+          "rate_mbit": 8.0,
+          "delay_ms": 143.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 61,
+          "rate_mbit": 8.0,
+          "delay_ms": 141.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 62,
+          "rate_mbit": 8.0,
+          "delay_ms": 142.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 63,
+          "rate_mbit": 8.0,
+          "delay_ms": 143.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 64,
+          "rate_mbit": 8.0,
+          "delay_ms": 141.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 65,
+          "rate_mbit": 8.0,
+          "delay_ms": 141.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 66,
+          "rate_mbit": 8.0,
+          "delay_ms": 142.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 67,
+          "rate_mbit": 8.0,
+          "delay_ms": 141.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 68,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 69,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 70,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 72,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 73,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 74,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 75,
+          "rate_mbit": 8.0,
+          "delay_ms": 24.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 76,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 77,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 78,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 79,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 80,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 81,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 82,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 83,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 84,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 85,
+          "rate_mbit": 8.0,
+          "delay_ms": 23.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 86,
+          "rate_mbit": 8.0,
+          "delay_ms": 24.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 87,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 88,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 89,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 90,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 91,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 92,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 93,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 94,
+          "rate_mbit": 8.0,
+          "delay_ms": 23.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 95,
+          "rate_mbit": 8.0,
+          "delay_ms": 23.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 96,
+          "rate_mbit": 8.0,
+          "delay_ms": 29.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 97,
+          "rate_mbit": 8.0,
+          "delay_ms": 28.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 98,
+          "rate_mbit": 8.0,
+          "delay_ms": 28.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 99,
+          "rate_mbit": 8.0,
+          "delay_ms": 32.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 100,
+          "rate_mbit": 8.0,
+          "delay_ms": 28.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 101,
+          "rate_mbit": 8.0,
+          "delay_ms": 28.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 102,
+          "rate_mbit": 8.0,
+          "delay_ms": 29.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 103,
+          "rate_mbit": 8.0,
+          "delay_ms": 34.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 104,
+          "rate_mbit": 8.0,
+          "delay_ms": 28.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 105,
+          "rate_mbit": 8.0,
+          "delay_ms": 29.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 106,
+          "rate_mbit": 8.0,
+          "delay_ms": 30.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 107,
+          "rate_mbit": 8.0,
+          "delay_ms": 29.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 108,
+          "rate_mbit": 8.0,
+          "delay_ms": 33.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 109,
+          "rate_mbit": 8.0,
+          "delay_ms": 28.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 110,
+          "rate_mbit": 8.0,
+          "delay_ms": 28.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 111,
+          "rate_mbit": 8.0,
+          "delay_ms": 24.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 112,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 113,
+          "rate_mbit": 8.0,
+          "delay_ms": 23.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 114,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 115,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 116,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 117,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 118,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 119,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.1,
+          "loss_percent": 0.0
+        }
+      ],
+      "recording_id": "victoria-20251114-1900"
+    },
+    {
+      "id": "test-handover_interruption-6130",
+      "role": "test",
+      "family": "handover_interruption",
+      "seed": 6130,
+      "seconds": 120,
+      "source_window_s": [
+        3011,
+        3131
+      ],
+      "network_kind": "synthetic capacity/outages; measured RTT window or declared constant/augmented delay",
+      "probe_observed_fraction": 1.0,
+      "policy_may_read_future_profile": false,
+      "stages": [
+        {
+          "at_s": 0,
+          "rate_mbit": 8.0,
+          "delay_ms": 236.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 1,
+          "rate_mbit": 8.0,
+          "delay_ms": 235.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 2,
+          "rate_mbit": 8.0,
+          "delay_ms": 234.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 3,
+          "rate_mbit": 8.0,
+          "delay_ms": 234.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 4,
+          "rate_mbit": 8.0,
+          "delay_ms": 235.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 5,
+          "rate_mbit": 8.0,
+          "delay_ms": 234.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 6,
+          "rate_mbit": 8.0,
+          "delay_ms": 235.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 7,
+          "rate_mbit": 8.0,
+          "delay_ms": 235.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 9,
+          "rate_mbit": 8.0,
+          "delay_ms": 235.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 10,
+          "rate_mbit": 8.0,
+          "delay_ms": 235.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 11,
+          "rate_mbit": 8.0,
+          "delay_ms": 236.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 12,
+          "rate_mbit": 8.0,
+          "delay_ms": 235.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 13,
+          "rate_mbit": 8.0,
+          "delay_ms": 235.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 14,
+          "rate_mbit": 8.0,
+          "delay_ms": 234.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 15,
+          "rate_mbit": 8.0,
+          "delay_ms": 240.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 16,
+          "rate_mbit": 8.0,
+          "delay_ms": 237.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 17,
+          "rate_mbit": 8.0,
+          "delay_ms": 236.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 18,
+          "rate_mbit": 8.0,
+          "delay_ms": 238.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 19,
+          "rate_mbit": 8.0,
+          "delay_ms": 236.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 20,
+          "rate_mbit": 8.0,
+          "delay_ms": 236.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 21,
+          "rate_mbit": 8.0,
+          "delay_ms": 237.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 22,
+          "rate_mbit": 8.0,
+          "delay_ms": 237.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 23,
+          "rate_mbit": 8.0,
+          "delay_ms": 242.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 24,
+          "rate_mbit": 8.0,
+          "delay_ms": 241.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 25,
+          "rate_mbit": 8.0,
+          "delay_ms": 244.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 26,
+          "rate_mbit": 8.0,
+          "delay_ms": 243.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 27,
+          "rate_mbit": 8.0,
+          "delay_ms": 243.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 28,
+          "rate_mbit": 8.0,
+          "delay_ms": 244.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 29,
+          "rate_mbit": 8.0,
+          "delay_ms": 244.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 30,
+          "rate_mbit": 8.0,
+          "delay_ms": 244.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 31,
+          "rate_mbit": 8.0,
+          "delay_ms": 244.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 32,
+          "rate_mbit": 8.0,
+          "delay_ms": 244.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 33,
+          "rate_mbit": 8.0,
+          "delay_ms": 245.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 34,
+          "rate_mbit": 8.0,
+          "delay_ms": 245.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 35,
+          "rate_mbit": 8.0,
+          "delay_ms": 244.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 36,
+          "rate_mbit": 8.0,
+          "delay_ms": 244.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 37,
+          "rate_mbit": 8.0,
+          "delay_ms": 244.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 38,
+          "rate_mbit": 8.0,
+          "delay_ms": 244.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 39,
+          "rate_mbit": 8.0,
+          "delay_ms": 245.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 40,
+          "rate_mbit": 8.0,
+          "delay_ms": 245.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 41,
+          "rate_mbit": 8.0,
+          "delay_ms": 244.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 42,
+          "rate_mbit": 8.0,
+          "delay_ms": 241.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 43,
+          "rate_mbit": 8.0,
+          "delay_ms": 242.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 44,
+          "rate_mbit": 0.0,
+          "delay_ms": 242.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 45,
+          "rate_mbit": 0.0,
+          "delay_ms": 174.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 46,
+          "rate_mbit": 0.0,
+          "delay_ms": 166.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 47,
+          "rate_mbit": 8.0,
+          "delay_ms": 165.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 48,
+          "rate_mbit": 8.0,
+          "delay_ms": 166.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 49,
+          "rate_mbit": 8.0,
+          "delay_ms": 165.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 50,
+          "rate_mbit": 8.0,
+          "delay_ms": 166.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 51,
+          "rate_mbit": 8.0,
+          "delay_ms": 165.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 52,
+          "rate_mbit": 8.0,
+          "delay_ms": 163.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 53,
+          "rate_mbit": 8.0,
+          "delay_ms": 164.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 54,
+          "rate_mbit": 8.0,
+          "delay_ms": 166.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 55,
+          "rate_mbit": 8.0,
+          "delay_ms": 166.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 56,
+          "rate_mbit": 8.0,
+          "delay_ms": 167.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 57,
+          "rate_mbit": 8.0,
+          "delay_ms": 165.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 58,
+          "rate_mbit": 8.0,
+          "delay_ms": 164.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 59,
+          "rate_mbit": 8.0,
+          "delay_ms": 164.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 60,
+          "rate_mbit": 8.0,
+          "delay_ms": 162.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 61,
+          "rate_mbit": 8.0,
+          "delay_ms": 159.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 62,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 63,
+          "rate_mbit": 8.0,
+          "delay_ms": 156.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 64,
+          "rate_mbit": 8.0,
+          "delay_ms": 158.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 65,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 66,
+          "rate_mbit": 8.0,
+          "delay_ms": 156.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 67,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 68,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 69,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 70,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 71,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 72,
+          "rate_mbit": 8.0,
+          "delay_ms": 158.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 73,
+          "rate_mbit": 8.0,
+          "delay_ms": 156.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 74,
+          "rate_mbit": 8.0,
+          "delay_ms": 156.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 75,
+          "rate_mbit": 8.0,
+          "delay_ms": 158.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 76,
+          "rate_mbit": 8.0,
+          "delay_ms": 156.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 77,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 78,
+          "rate_mbit": 8.0,
+          "delay_ms": 160.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 79,
+          "rate_mbit": 8.0,
+          "delay_ms": 159.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 80,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 81,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 82,
+          "rate_mbit": 8.0,
+          "delay_ms": 156.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 83,
+          "rate_mbit": 8.0,
+          "delay_ms": 156.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 85,
+          "rate_mbit": 8.0,
+          "delay_ms": 156.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 86,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 87,
+          "rate_mbit": 8.0,
+          "delay_ms": 156.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 88,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 89,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 90,
+          "rate_mbit": 8.0,
+          "delay_ms": 160.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 91,
+          "rate_mbit": 8.0,
+          "delay_ms": 154.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 92,
+          "rate_mbit": 8.0,
+          "delay_ms": 161.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 93,
+          "rate_mbit": 8.0,
+          "delay_ms": 158.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 94,
+          "rate_mbit": 8.0,
+          "delay_ms": 161.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 95,
+          "rate_mbit": 8.0,
+          "delay_ms": 165.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 96,
+          "rate_mbit": 8.0,
+          "delay_ms": 162.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 97,
+          "rate_mbit": 8.0,
+          "delay_ms": 167.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 98,
+          "rate_mbit": 8.0,
+          "delay_ms": 163.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 99,
+          "rate_mbit": 8.0,
+          "delay_ms": 162.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 100,
+          "rate_mbit": 8.0,
+          "delay_ms": 163.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 101,
+          "rate_mbit": 8.0,
+          "delay_ms": 163.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 102,
+          "rate_mbit": 8.0,
+          "delay_ms": 162.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 103,
+          "rate_mbit": 8.0,
+          "delay_ms": 162.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 104,
+          "rate_mbit": 8.0,
+          "delay_ms": 160.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 105,
+          "rate_mbit": 8.0,
+          "delay_ms": 214.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 106,
+          "rate_mbit": 8.0,
+          "delay_ms": 218.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 107,
+          "rate_mbit": 8.0,
+          "delay_ms": 218.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 108,
+          "rate_mbit": 8.0,
+          "delay_ms": 217.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 109,
+          "rate_mbit": 8.0,
+          "delay_ms": 218.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 110,
+          "rate_mbit": 8.0,
+          "delay_ms": 217.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 111,
+          "rate_mbit": 8.0,
+          "delay_ms": 219.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 112,
+          "rate_mbit": 8.0,
+          "delay_ms": 217.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 113,
+          "rate_mbit": 8.0,
+          "delay_ms": 217.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 114,
+          "rate_mbit": 8.0,
+          "delay_ms": 220.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 115,
+          "rate_mbit": 8.0,
+          "delay_ms": 221.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 116,
+          "rate_mbit": 8.0,
+          "delay_ms": 217.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 117,
+          "rate_mbit": 8.0,
+          "delay_ms": 217.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 118,
+          "rate_mbit": 8.0,
+          "delay_ms": 217.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 119,
+          "rate_mbit": 8.0,
+          "delay_ms": 221.1,
+          "loss_percent": 0.0
+        }
+      ],
+      "recording_id": "seychelles-20240130-0100"
+    },
+    {
+      "id": "test-handover_interruption-6131",
+      "role": "test",
+      "family": "handover_interruption",
+      "seed": 6131,
+      "seconds": 120,
+      "source_window_s": [
+        1205,
+        1325
+      ],
+      "network_kind": "synthetic capacity/outages; measured RTT window or declared constant/augmented delay",
+      "probe_observed_fraction": 1.0,
+      "policy_may_read_future_profile": false,
+      "stages": [
+        {
+          "at_s": 0,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 1,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 2,
+          "rate_mbit": 8.0,
+          "delay_ms": 23.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 3,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 4,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 5,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 7,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 8,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 9,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 10,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 11,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 12,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 13,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 14,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 15,
+          "rate_mbit": 8.0,
+          "delay_ms": 19.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 16,
+          "rate_mbit": 8.0,
+          "delay_ms": 19.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 17,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 19,
+          "rate_mbit": 8.0,
+          "delay_ms": 19.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 20,
+          "rate_mbit": 8.0,
+          "delay_ms": 19.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 21,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 22,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 23,
+          "rate_mbit": 8.0,
+          "delay_ms": 23.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 24,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 25,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 26,
+          "rate_mbit": 8.0,
+          "delay_ms": 23.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 27,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 28,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 29,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 30,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 31,
+          "rate_mbit": 8.0,
+          "delay_ms": 24.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 32,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 33,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 34,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 35,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 36,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 37,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 38,
+          "rate_mbit": 8.0,
+          "delay_ms": 23.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 39,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 40,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 41,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 42,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 43,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 44,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 45,
+          "rate_mbit": 8.0,
+          "delay_ms": 23.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 46,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 47,
+          "rate_mbit": 8.0,
+          "delay_ms": 19.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 48,
+          "rate_mbit": 0.0,
+          "delay_ms": 22.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 49,
+          "rate_mbit": 0.0,
+          "delay_ms": 22.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 50,
+          "rate_mbit": 8.0,
+          "delay_ms": 19.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 51,
+          "rate_mbit": 8.0,
+          "delay_ms": 19.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 53,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 54,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 55,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 56,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 57,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 58,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 59,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 60,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 61,
+          "rate_mbit": 8.0,
+          "delay_ms": 19.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 62,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 63,
+          "rate_mbit": 8.0,
+          "delay_ms": 19.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 64,
+          "rate_mbit": 8.0,
+          "delay_ms": 19.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 65,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 66,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 67,
+          "rate_mbit": 8.0,
+          "delay_ms": 26.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 68,
+          "rate_mbit": 8.0,
+          "delay_ms": 27.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 69,
+          "rate_mbit": 8.0,
+          "delay_ms": 28.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 70,
+          "rate_mbit": 8.0,
+          "delay_ms": 27.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 72,
+          "rate_mbit": 8.0,
+          "delay_ms": 26.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 73,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 74,
+          "rate_mbit": 8.0,
+          "delay_ms": 26.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 75,
+          "rate_mbit": 8.0,
+          "delay_ms": 26.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 76,
+          "rate_mbit": 8.0,
+          "delay_ms": 31.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 77,
+          "rate_mbit": 8.0,
+          "delay_ms": 27.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 78,
+          "rate_mbit": 8.0,
+          "delay_ms": 26.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 79,
+          "rate_mbit": 8.0,
+          "delay_ms": 29.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 80,
+          "rate_mbit": 8.0,
+          "delay_ms": 27.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 81,
+          "rate_mbit": 8.0,
+          "delay_ms": 27.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 82,
+          "rate_mbit": 8.0,
+          "delay_ms": 29.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 83,
+          "rate_mbit": 8.0,
+          "delay_ms": 32.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 84,
+          "rate_mbit": 8.0,
+          "delay_ms": 28.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 85,
+          "rate_mbit": 8.0,
+          "delay_ms": 31.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 86,
+          "rate_mbit": 8.0,
+          "delay_ms": 30.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 87,
+          "rate_mbit": 8.0,
+          "delay_ms": 29.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 88,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 89,
+          "rate_mbit": 8.0,
+          "delay_ms": 27.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 90,
+          "rate_mbit": 8.0,
+          "delay_ms": 30.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 91,
+          "rate_mbit": 8.0,
+          "delay_ms": 27.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 92,
+          "rate_mbit": 8.0,
+          "delay_ms": 29.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 93,
+          "rate_mbit": 8.0,
+          "delay_ms": 26.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 94,
+          "rate_mbit": 8.0,
+          "delay_ms": 30.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 95,
+          "rate_mbit": 8.0,
+          "delay_ms": 27.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 96,
+          "rate_mbit": 8.0,
+          "delay_ms": 28.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 97,
+          "rate_mbit": 8.0,
+          "delay_ms": 26.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 98,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 99,
+          "rate_mbit": 8.0,
+          "delay_ms": 26.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 101,
+          "rate_mbit": 8.0,
+          "delay_ms": 24.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 102,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 103,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 104,
+          "rate_mbit": 8.0,
+          "delay_ms": 26.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 105,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 106,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 107,
+          "rate_mbit": 8.0,
+          "delay_ms": 24.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 108,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 109,
+          "rate_mbit": 8.0,
+          "delay_ms": 24.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 110,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 111,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 112,
+          "rate_mbit": 8.0,
+          "delay_ms": 27.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 113,
+          "rate_mbit": 8.0,
+          "delay_ms": 29.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 114,
+          "rate_mbit": 8.0,
+          "delay_ms": 31.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 115,
+          "rate_mbit": 8.0,
+          "delay_ms": 30.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 116,
+          "rate_mbit": 8.0,
+          "delay_ms": 32.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 117,
+          "rate_mbit": 8.0,
+          "delay_ms": 31.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 118,
+          "rate_mbit": 8.0,
+          "delay_ms": 29.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 119,
+          "rate_mbit": 8.0,
+          "delay_ms": 30.5,
+          "loss_percent": 0.0
+        }
+      ],
+      "recording_id": "victoria-20251114-1900"
+    },
+    {
+      "id": "test-post_handover_recovery-6140",
+      "role": "test",
+      "family": "post_handover_recovery",
+      "seed": 6140,
+      "seconds": 120,
+      "source_window_s": [
+        2968,
+        3088
+      ],
+      "network_kind": "synthetic capacity/outages; measured RTT window or declared constant/augmented delay",
+      "probe_observed_fraction": 1.0,
+      "policy_may_read_future_profile": false,
+      "stages": [
+        {
+          "at_s": 0,
+          "rate_mbit": 8.0,
+          "delay_ms": 240.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 2,
+          "rate_mbit": 8.0,
+          "delay_ms": 241.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 3,
+          "rate_mbit": 8.0,
+          "delay_ms": 241.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 4,
+          "rate_mbit": 8.0,
+          "delay_ms": 241.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 5,
+          "rate_mbit": 8.0,
+          "delay_ms": 241.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 6,
+          "rate_mbit": 8.0,
+          "delay_ms": 240.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 7,
+          "rate_mbit": 8.0,
+          "delay_ms": 241.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 8,
+          "rate_mbit": 8.0,
+          "delay_ms": 240.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 9,
+          "rate_mbit": 8.0,
+          "delay_ms": 241.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 10,
+          "rate_mbit": 8.0,
+          "delay_ms": 241.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 11,
+          "rate_mbit": 8.0,
+          "delay_ms": 241.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 13,
+          "rate_mbit": 8.0,
+          "delay_ms": 212.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 14,
+          "rate_mbit": 8.0,
+          "delay_ms": 202.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 15,
+          "rate_mbit": 8.0,
+          "delay_ms": 205.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 16,
+          "rate_mbit": 8.0,
+          "delay_ms": 202.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 17,
+          "rate_mbit": 8.0,
+          "delay_ms": 204.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 18,
+          "rate_mbit": 8.0,
+          "delay_ms": 201.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 19,
+          "rate_mbit": 8.0,
+          "delay_ms": 201.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 20,
+          "rate_mbit": 8.0,
+          "delay_ms": 204.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 21,
+          "rate_mbit": 8.0,
+          "delay_ms": 201.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 22,
+          "rate_mbit": 8.0,
+          "delay_ms": 203.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 23,
+          "rate_mbit": 8.0,
+          "delay_ms": 201.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 24,
+          "rate_mbit": 8.0,
+          "delay_ms": 201.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 25,
+          "rate_mbit": 8.0,
+          "delay_ms": 200.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 26,
+          "rate_mbit": 8.0,
+          "delay_ms": 200.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 27,
+          "rate_mbit": 8.0,
+          "delay_ms": 201.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 28,
+          "rate_mbit": 8.0,
+          "delay_ms": 234.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 29,
+          "rate_mbit": 8.0,
+          "delay_ms": 227.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 30,
+          "rate_mbit": 8.0,
+          "delay_ms": 227.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 31,
+          "rate_mbit": 8.0,
+          "delay_ms": 227.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 32,
+          "rate_mbit": 8.0,
+          "delay_ms": 229.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 33,
+          "rate_mbit": 8.0,
+          "delay_ms": 226.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 34,
+          "rate_mbit": 8.0,
+          "delay_ms": 232.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 35,
+          "rate_mbit": 8.0,
+          "delay_ms": 233.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 36,
+          "rate_mbit": 8.0,
+          "delay_ms": 228.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 37,
+          "rate_mbit": 8.0,
+          "delay_ms": 225.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 38,
+          "rate_mbit": 8.0,
+          "delay_ms": 227.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 39,
+          "rate_mbit": 8.0,
+          "delay_ms": 227.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 40,
+          "rate_mbit": 8.0,
+          "delay_ms": 230.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 41,
+          "rate_mbit": 8.0,
+          "delay_ms": 232.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 42,
+          "rate_mbit": 8.0,
+          "delay_ms": 297.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 43,
+          "rate_mbit": 8.0,
+          "delay_ms": 236.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 44,
+          "rate_mbit": 8.0,
+          "delay_ms": 235.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 45,
+          "rate_mbit": 8.0,
+          "delay_ms": 234.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 46,
+          "rate_mbit": 8.0,
+          "delay_ms": 234.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 47,
+          "rate_mbit": 8.0,
+          "delay_ms": 235.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 48,
+          "rate_mbit": 8.0,
+          "delay_ms": 234.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 49,
+          "rate_mbit": 8.0,
+          "delay_ms": 235.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 50,
+          "rate_mbit": 8.0,
+          "delay_ms": 235.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 52,
+          "rate_mbit": 8.0,
+          "delay_ms": 235.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 53,
+          "rate_mbit": 8.0,
+          "delay_ms": 235.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 54,
+          "rate_mbit": 8.0,
+          "delay_ms": 236.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 55,
+          "rate_mbit": 0.0,
+          "delay_ms": 235.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 56,
+          "rate_mbit": 0.0,
+          "delay_ms": 235.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 57,
+          "rate_mbit": 0.0,
+          "delay_ms": 234.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 58,
+          "rate_mbit": 0.0,
+          "delay_ms": 240.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 59,
+          "rate_mbit": 0.5,
+          "delay_ms": 237.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 60,
+          "rate_mbit": 0.8947368421052632,
+          "delay_ms": 236.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 61,
+          "rate_mbit": 1.2894736842105263,
+          "delay_ms": 238.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 62,
+          "rate_mbit": 1.6842105263157894,
+          "delay_ms": 236.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 63,
+          "rate_mbit": 2.0789473684210527,
+          "delay_ms": 236.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 64,
+          "rate_mbit": 2.473684210526316,
+          "delay_ms": 237.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 65,
+          "rate_mbit": 2.8684210526315788,
+          "delay_ms": 237.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 66,
+          "rate_mbit": 3.263157894736842,
+          "delay_ms": 242.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 67,
+          "rate_mbit": 3.6578947368421053,
+          "delay_ms": 241.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 68,
+          "rate_mbit": 4.052631578947368,
+          "delay_ms": 244.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 69,
+          "rate_mbit": 4.447368421052632,
+          "delay_ms": 243.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 70,
+          "rate_mbit": 4.842105263157895,
+          "delay_ms": 243.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 71,
+          "rate_mbit": 5.2368421052631575,
+          "delay_ms": 244.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 72,
+          "rate_mbit": 5.631578947368421,
+          "delay_ms": 244.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 73,
+          "rate_mbit": 6.026315789473684,
+          "delay_ms": 244.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 74,
+          "rate_mbit": 6.421052631578948,
+          "delay_ms": 244.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 75,
+          "rate_mbit": 6.815789473684211,
+          "delay_ms": 244.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 76,
+          "rate_mbit": 7.2105263157894735,
+          "delay_ms": 245.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 77,
+          "rate_mbit": 7.605263157894737,
+          "delay_ms": 245.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 78,
+          "rate_mbit": 8.0,
+          "delay_ms": 244.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 79,
+          "rate_mbit": 8.0,
+          "delay_ms": 244.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 80,
+          "rate_mbit": 8.0,
+          "delay_ms": 244.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 81,
+          "rate_mbit": 8.0,
+          "delay_ms": 244.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 82,
+          "rate_mbit": 8.0,
+          "delay_ms": 245.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 83,
+          "rate_mbit": 8.0,
+          "delay_ms": 245.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 84,
+          "rate_mbit": 8.0,
+          "delay_ms": 244.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 85,
+          "rate_mbit": 8.0,
+          "delay_ms": 241.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 86,
+          "rate_mbit": 8.0,
+          "delay_ms": 242.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 87,
+          "rate_mbit": 8.0,
+          "delay_ms": 242.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 88,
+          "rate_mbit": 8.0,
+          "delay_ms": 174.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 89,
+          "rate_mbit": 8.0,
+          "delay_ms": 166.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 90,
+          "rate_mbit": 8.0,
+          "delay_ms": 165.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 91,
+          "rate_mbit": 8.0,
+          "delay_ms": 166.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 92,
+          "rate_mbit": 8.0,
+          "delay_ms": 165.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 93,
+          "rate_mbit": 8.0,
+          "delay_ms": 166.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 94,
+          "rate_mbit": 8.0,
+          "delay_ms": 165.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 95,
+          "rate_mbit": 8.0,
+          "delay_ms": 163.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 96,
+          "rate_mbit": 8.0,
+          "delay_ms": 164.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 97,
+          "rate_mbit": 8.0,
+          "delay_ms": 166.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 98,
+          "rate_mbit": 8.0,
+          "delay_ms": 166.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 99,
+          "rate_mbit": 8.0,
+          "delay_ms": 167.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 100,
+          "rate_mbit": 8.0,
+          "delay_ms": 165.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 101,
+          "rate_mbit": 8.0,
+          "delay_ms": 164.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 102,
+          "rate_mbit": 8.0,
+          "delay_ms": 164.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 103,
+          "rate_mbit": 8.0,
+          "delay_ms": 162.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 104,
+          "rate_mbit": 8.0,
+          "delay_ms": 159.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 105,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 106,
+          "rate_mbit": 8.0,
+          "delay_ms": 156.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 107,
+          "rate_mbit": 8.0,
+          "delay_ms": 158.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 108,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 109,
+          "rate_mbit": 8.0,
+          "delay_ms": 156.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 110,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 111,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 112,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 113,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 114,
+          "rate_mbit": 8.0,
+          "delay_ms": 157.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 115,
+          "rate_mbit": 8.0,
+          "delay_ms": 158.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 116,
+          "rate_mbit": 8.0,
+          "delay_ms": 156.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 117,
+          "rate_mbit": 8.0,
+          "delay_ms": 156.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 118,
+          "rate_mbit": 8.0,
+          "delay_ms": 158.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 119,
+          "rate_mbit": 8.0,
+          "delay_ms": 156.1,
+          "loss_percent": 0.0
+        }
+      ],
+      "recording_id": "seychelles-20240130-0100"
+    },
+    {
+      "id": "test-post_handover_recovery-6141",
+      "role": "test",
+      "family": "post_handover_recovery",
+      "seed": 6141,
+      "seconds": 120,
+      "source_window_s": [
+        850,
+        970
+      ],
+      "network_kind": "synthetic capacity/outages; measured RTT window or declared constant/augmented delay",
+      "probe_observed_fraction": 1.0,
+      "policy_may_read_future_profile": false,
+      "stages": [
+        {
+          "at_s": 0,
+          "rate_mbit": 8.0,
+          "delay_ms": 19.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 1,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 2,
+          "rate_mbit": 8.0,
+          "delay_ms": 24.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 4,
+          "rate_mbit": 8.0,
+          "delay_ms": 26.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 5,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 6,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 7,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 8,
+          "rate_mbit": 8.0,
+          "delay_ms": 24.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 9,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 10,
+          "rate_mbit": 8.0,
+          "delay_ms": 24.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 11,
+          "rate_mbit": 8.0,
+          "delay_ms": 27.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 12,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 13,
+          "rate_mbit": 8.0,
+          "delay_ms": 26.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 14,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 15,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 16,
+          "rate_mbit": 8.0,
+          "delay_ms": 26.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 17,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 18,
+          "rate_mbit": 8.0,
+          "delay_ms": 26.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 19,
+          "rate_mbit": 8.0,
+          "delay_ms": 26.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 20,
+          "rate_mbit": 8.0,
+          "delay_ms": 24.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 21,
+          "rate_mbit": 8.0,
+          "delay_ms": 26.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 22,
+          "rate_mbit": 8.0,
+          "delay_ms": 30.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 23,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 24,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 25,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 26,
+          "rate_mbit": 8.0,
+          "delay_ms": 26.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 27,
+          "rate_mbit": 8.0,
+          "delay_ms": 30.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 28,
+          "rate_mbit": 8.0,
+          "delay_ms": 26.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 29,
+          "rate_mbit": 8.0,
+          "delay_ms": 25.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 30,
+          "rate_mbit": 8.0,
+          "delay_ms": 26.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 31,
+          "rate_mbit": 8.0,
+          "delay_ms": 27.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 33,
+          "rate_mbit": 8.0,
+          "delay_ms": 26.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 34,
+          "rate_mbit": 8.0,
+          "delay_ms": 26.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 35,
+          "rate_mbit": 8.0,
+          "delay_ms": 27.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 36,
+          "rate_mbit": 8.0,
+          "delay_ms": 26.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 37,
+          "rate_mbit": 8.0,
+          "delay_ms": 26.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 38,
+          "rate_mbit": 8.0,
+          "delay_ms": 27.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 39,
+          "rate_mbit": 8.0,
+          "delay_ms": 27.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 40,
+          "rate_mbit": 8.0,
+          "delay_ms": 26.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 41,
+          "rate_mbit": 8.0,
+          "delay_ms": 27.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 42,
+          "rate_mbit": 8.0,
+          "delay_ms": 27.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 43,
+          "rate_mbit": 8.0,
+          "delay_ms": 27.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 44,
+          "rate_mbit": 8.0,
+          "delay_ms": 28.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 45,
+          "rate_mbit": 8.0,
+          "delay_ms": 28.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 46,
+          "rate_mbit": 8.0,
+          "delay_ms": 28.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 47,
+          "rate_mbit": 8.0,
+          "delay_ms": 30.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 48,
+          "rate_mbit": 0.0,
+          "delay_ms": 28.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 49,
+          "rate_mbit": 0.0,
+          "delay_ms": 27.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 50,
+          "rate_mbit": 0.0,
+          "delay_ms": 28.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 51,
+          "rate_mbit": 0.0,
+          "delay_ms": 29.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 52,
+          "rate_mbit": 0.5,
+          "delay_ms": 28.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 53,
+          "rate_mbit": 0.8947368421052632,
+          "delay_ms": 25.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 54,
+          "rate_mbit": 1.2894736842105263,
+          "delay_ms": 31.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 55,
+          "rate_mbit": 1.6842105263157894,
+          "delay_ms": 28.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 56,
+          "rate_mbit": 2.0789473684210527,
+          "delay_ms": 27.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 57,
+          "rate_mbit": 2.473684210526316,
+          "delay_ms": 27.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 58,
+          "rate_mbit": 2.8684210526315788,
+          "delay_ms": 27.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 59,
+          "rate_mbit": 3.263157894736842,
+          "delay_ms": 28.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 60,
+          "rate_mbit": 3.6578947368421053,
+          "delay_ms": 28.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 61,
+          "rate_mbit": 4.052631578947368,
+          "delay_ms": 28.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 62,
+          "rate_mbit": 4.447368421052632,
+          "delay_ms": 19.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 63,
+          "rate_mbit": 4.842105263157895,
+          "delay_ms": 20.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 64,
+          "rate_mbit": 5.2368421052631575,
+          "delay_ms": 19.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 65,
+          "rate_mbit": 5.631578947368421,
+          "delay_ms": 19.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 66,
+          "rate_mbit": 6.026315789473684,
+          "delay_ms": 20.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 67,
+          "rate_mbit": 6.421052631578948,
+          "delay_ms": 20.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 68,
+          "rate_mbit": 6.815789473684211,
+          "delay_ms": 21.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 69,
+          "rate_mbit": 7.2105263157894735,
+          "delay_ms": 19.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 70,
+          "rate_mbit": 7.605263157894737,
+          "delay_ms": 20.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 71,
+          "rate_mbit": 8.0,
+          "delay_ms": 19.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 72,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 74,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 75,
+          "rate_mbit": 8.0,
+          "delay_ms": 19.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 76,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 77,
+          "rate_mbit": 8.0,
+          "delay_ms": 19.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 78,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 79,
+          "rate_mbit": 8.0,
+          "delay_ms": 19.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 80,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 81,
+          "rate_mbit": 8.0,
+          "delay_ms": 19.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 82,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 83,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.0,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 84,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 86,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 87,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 88,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 89,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 90,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 91,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 92,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 93,
+          "rate_mbit": 8.0,
+          "delay_ms": 22.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 94,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 95,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 96,
+          "rate_mbit": 8.0,
+          "delay_ms": 19.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 97,
+          "rate_mbit": 8.0,
+          "delay_ms": 19.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 98,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.9,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 99,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 100,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 101,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 102,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 103,
+          "rate_mbit": 8.0,
+          "delay_ms": 24.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 104,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 105,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 106,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 107,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.2,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 108,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.5,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 109,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 110,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.6,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 111,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 112,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.3,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 113,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.1,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 114,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 115,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.4,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 116,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.8,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 118,
+          "rate_mbit": 8.0,
+          "delay_ms": 20.7,
+          "loss_percent": 0.0
+        },
+        {
+          "at_s": 119,
+          "rate_mbit": 8.0,
+          "delay_ms": 21.6,
+          "loss_percent": 0.0
+        }
+      ],
+      "recording_id": "victoria-20251114-1900"
+    }
+  ],
+  "independent_RTT_recordings": 2,
+  "test_rule": "No performance inspection until policies/selection protocol frozen",
+  "limitation": "Related windows and synthetic channels are not independent measured full-link sessions"
+}

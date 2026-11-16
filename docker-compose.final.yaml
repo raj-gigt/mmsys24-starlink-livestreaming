@@ -1,4 +1,7 @@
 services:
+  nginx:
+    volumes:
+      - ./shaper/tc-final.py:/tc-trace.py:ro
   stat-server:
     image: leo-abr-stats:final
     build:

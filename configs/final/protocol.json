@@ -1,0 +1,37 @@
+{
+  "status": "development-definition; candidate identities frozen later before final tests",
+  "version": 2,
+  "metrics": {
+    "version": "played-ledger-v2",
+    "quality": "log(nominal_bps/300000)*played_media_s/2",
+    "stall": 4,
+    "startup": 1,
+    "variation": 0.3,
+    "excess_live_latency_area": 0.1,
+    "automatic_seek_wait_in_stalls": true,
+    "user_interaction_allowed_in_automated_runs": false
+  },
+  "playback": {
+    "target_s": 3,
+    "catchup": "liveCatchupModeLoLP",
+    "align_source_and_wall_clock": true
+  },
+  "selection": {
+    "aggregate": "equal weight per mandatory family, equal case weight within family",
+    "max_extra_mean_stall_s": 0.5,
+    "max_extra_mean_stall_fraction": 0.1,
+    "max_extra_p95_latency_s": 0.5,
+    "max_extra_startup_s": 1
+  },
+  "final_matrix": {
+    "controlled_cases": 10,
+    "policies": 6,
+    "repeats": 2,
+    "primary_extra_repeats": 20,
+    "paper_replay_trials": 6,
+    "total_trials": 146,
+    "playback_minutes": 298
+  },
+  "sensitivity": "rescore stall,variation,latency coefficients at .5x and 2x one at a time; never select final score by test outcome",
+  "test_access": "explicit frozen-evaluation flag only; no test performance viewed yet"
+}

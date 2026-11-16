@@ -112,7 +112,7 @@ Preload policy dependencies, then start measured playback at the planned phase. 
 
 Initial common score, reusing the pilot's interpretable components:
 - Q: sum over actually played media of log(nominal representation bitrate / 300 kbps), weighted by media seconds / 2.
-- B: video stall seconds, excluding startup, deliberate pause and seek.
+- B: video stall seconds, excluding startup, deliberate pause and user-initiated seek; automatic catch-up seek waiting is included and separately reported.
 - S: startup seconds.
 - V: sum of absolute log-utility changes at actually played quality boundaries.
 - A: integral over wall time of max(0, live delay - target delay), including waits/stalls where observable.
@@ -177,7 +177,7 @@ Add a supplementary original-paper-replay comparison of B0 versus C*: 3 repetiti
 **Verification / exit:** hand-calculated fixtures pass; known stalls/seeks cannot be double counted; selected/requested/played distinctions are demonstrable; unresolved associations are visible, not assigned invented reward. New feature values have known units/age. Original B0 behaviour is preserved.
 
 ### Step 10 - Implement repeatable scenario replay and freeze the development protocol
-**Status:** Running. **Dependencies:** 8-9. **Deliverables:** D6/D7, C3/C6, T2/T3.
+**Status:** Complete. **Dependencies:** 8-9. **Deliverables:** D6/D7, C3/C6, T2/T3.
 
 **Objective / intuition:** every policy should face the same changing network, with enough observation time to explain recovery.
 
@@ -196,7 +196,7 @@ Add a supplementary original-paper-replay comparison of B0 versus C*: 3 repetiti
 Candidate configuration budget: initially at most 12 named CMAB settings and 72 development/validation/ablation browser trials of about 90 seconds each. This is a bounded search budget, not a target to exhaust. Reserve coverage for the major hypotheses and confirmations. Reuse a reference run only if all workload/build/protocol identities match.
 
 ### Step 11 - Isolate memory/reset and startup effects
-**Status:** Pending. **Dependency:** 10. **Deliverables:** D2/D3, C1, F2/F6, T1/T5.
+**Status:** Running. **Dependency:** 10. **Deliverables:** D2/D3, C1, F2/F6, T1/T5.
 
 **Objective / intuition:** test the two strongest source-backed limitations before changing the reward or model family.
 
@@ -420,8 +420,8 @@ Autonomous execution is active; see the per-step tracker and artifacts/final/sta
 |---|---|---|
 | 8 | Complete | artifacts/final/reference-audit.json; artifacts/final/link-verification.json; real CMAB control phasea-abrCMAB-20261116T214650-ee42c4 |
 | 9 | Complete | Played-quality ledger and fixtures pass; typed RTT Flask checks pass; passive-source equality verified; observer-checks/phasea-abrCMAB-20261116T220201-450cb8.json |
-| 10 | Running | Extending scheduled replay, versioned development/validation/test cohorts and measured matrix budgets |
-| 11 | Pending | Memory/startup evidence |
+| 10 | Complete | Verified 86 live schedule transitions within 14ms; physical outage/100ms RTT/recovery passed; six development/six validation/ten test/ten sealed reserve cases; raw offset replay checked |
+| 11 | Running | Implementing isolated memory/reset and startup variants with original LinTS/reward retained |
 | 12 | Pending | Feedback timing/attribution evidence |
 | 13 | Pending | Context/estimator/stability evidence |
 | 14 | Pending | Validation-selected C*, F6/T5 |

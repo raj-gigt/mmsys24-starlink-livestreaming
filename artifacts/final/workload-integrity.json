@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "counts": {
+    "development": 6,
+    "validation": 6,
+    "test": 10,
+    "reserve": 10
+  },
+  "source_roles_disjoint": true,
+  "phase_a_manifests_preserved": true,
+  "test_performance_used": false
+}

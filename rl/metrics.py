@@ -20,7 +20,8 @@ def evaluate_samples(samples, target=3.0, horizon=None):
     if len(samples) < 2:
         raise ValueError('At least two timestamped samples required')
     totals = dict(quality_utility=0., stall_s=0., startup_s=0., variation=0.,
-                  latency_area=0., played_media_s=0., unattributed_media_s=0., skipped_media_s=0., switches=0)
+                  latency_area=0., played_media_s=0., unattributed_media_s=0., skipped_media_s=0.,
+                  automatic_seek_wait_s=0., switches=0)
     started = False
     previous_bitrate = None
     latencies, latency_weights = [], []
@@ -36,7 +37,7 @@ def evaluate_samples(samples, target=3.0, horizon=None):
             totals['latency_area'] += max(0, latency-target)*dt
             latencies.append(latency)
             latency_weights.append(dt)
-        if a.get('paused') or a.get('seeking'):
+        if a.get('paused') or a.get('user_seeking'):
             was_stalled = False
             continue
         delta = max(0., float(b['media_s']) - float(a['media_s']))
@@ -48,7 +49,6 @@ def evaluate_samples(samples, target=3.0, horizon=None):
                 totals['skipped_media_s'] += delta
             else:
                 totals['startup_s'] += dt
-            was_stalled = False
             continue
         was_started = started
         played_wall = min(dt, delta/rate)
@@ -72,10 +72,13 @@ def evaluate_samples(samples, target=3.0, horizon=None):
         else:
             # Playback clocks are quantized. Minor clock drift while playing
             # is not a stall; prefer the collector's actual waiting state.
-            stalled = bool(a.get('waiting', delta <= 1e-5)) and idle > .02
+            waiting_now = bool(a.get('waiting', delta <= 1e-5))
+            stalled = waiting_now and idle > .02
             totals['stall_s'] += idle if stalled else 0
+            if stalled and a.get('seeking'):
+                totals['automatic_seek_wait_s'] += idle
             stall_count += int(stalled and not was_stalled)
-            was_stalled = stalled
+            was_stalled = waiting_now and (was_stalled or stalled)
     duration = float(samples[-1]['t_s'])-float(samples[0]['t_s'])
     if horizon is not None and abs(duration-horizon) > .5:
         raise ValueError('Incomplete observation horizon')
@@ -88,7 +91,7 @@ def evaluate_samples(samples, target=3.0, horizon=None):
         p95 = float(vals[np.searchsorted(np.cumsum(weights), .95*sum(weights))])
     else:
         mean_latency = p95 = None
-    return {**totals, 'duration_s': duration, 'stall_count': stall_count,
+    return {**totals, 'metric_version': 'played-ledger-v2', 'duration_s': duration, 'stall_count': stall_count,
             'quality_attribution_fraction': 1-totals['unattributed_media_s']/max(totals['played_media_s'],1e-9),
             'played_bitrate_bps': played_bitrate_sum/max(totals['played_media_s']-totals['unattributed_media_s'], 1e-9),
             'mean_live_latency_s': mean_latency, 'p95_live_latency_s': p95,

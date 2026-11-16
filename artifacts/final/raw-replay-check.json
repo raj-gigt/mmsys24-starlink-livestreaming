@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "trace_offset_s": 2904,
+  "applied": [
+    {
+      "at_unix_s": 1794867442.343524,
+      "profile_id": "raw-offset-verification",
+      "rate_mbit": 20.0,
+      "delay_ms": 195,
+      "loss_percent": 1,
+      "relative_s": 2.2861106395721436
+    },
+    {
+      "at_unix_s": 1794867442.3564239,
+      "profile_id": "raw-offset-verification",
+      "rate_mbit": 20.0,
+      "delay_ms": 100,
+      "loss_percent": 100,
+      "relative_s": 2.2990105152130127
+    },
+    {
+      "at_unix_s": 1794867442.4310434,
+      "profile_id": "raw-offset-verification",
+      "rate_mbit": 20.0,
+      "delay_ms": 118,
+      "loss_percent": 1,
+      "relative_s": 2.3736300468444824
+    },
+    {
+      "at_unix_s": 1794867442.4449449,
+      "profile_id": "raw-offset-verification",
+      "rate_mbit": 20.0,
+      "delay_ms": 100,
+      "loss_percent": 1,
+      "relative_s": 2.3875315189361572
+    },
+    {
+      "at_unix_s": 1794867442.458476,
+      "profile_id": "raw-offset-verification",
+      "rate_mbit": 20.0,
+      "delay_ms": 100,
+      "loss_percent": 100,
+      "relative_s": 2.4010627269744873
+    }
+  ]
+}

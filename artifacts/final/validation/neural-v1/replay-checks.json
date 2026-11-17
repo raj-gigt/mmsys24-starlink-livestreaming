@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "scope": "Controlled schedule/phase integrity, independent of outcome quality",
+  "runs": [
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrAnjanRL-20261117T082241-38275b",
+      "start_phase_error_s": 0.12852191925048828,
+      "actual_player_start_phase_s": 0.15000009536743164,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrAnjanRL-20261117T082638-1a0889",
+      "start_phase_error_s": 0.12555909156799316,
+      "actual_player_start_phase_s": 0.08899998664855957,
+      "verified_transitions": 86,
+      "max_transition_error_s": 0.012427568435668945,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrAnjanRL-20261117T083038-2cadcb",
+      "start_phase_error_s": 0.13802695274353027,
+      "actual_player_start_phase_s": 0.11500000953674316,
+      "verified_transitions": 85,
+      "max_transition_error_s": 0.015116691589355469,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrAnjanRL-20261117T083429-343ed4",
+      "start_phase_error_s": 0.2407240867614746,
+      "actual_player_start_phase_s": 0.14700007438659668,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrAnjanRL-20261117T083648-b0a700",
+      "start_phase_error_s": 0.18168997764587402,
+      "actual_player_start_phase_s": 0.1510000228881836,
+      "verified_transitions": 86,
+      "max_transition_error_s": 0.013296842575073242,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrAnjanRL-20261117T083838-d1fbd0",
+      "start_phase_error_s": 0.14775991439819336,
+      "actual_player_start_phase_s": 0.10700011253356934,
+      "verified_transitions": 85,
+      "max_transition_error_s": 0.015123367309570312,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    }
+  ]
+}

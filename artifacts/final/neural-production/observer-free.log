@@ -1,0 +1,175 @@
+Saved timeline: C:\Users\HP\Desktop\LEO\LEO_ABR_RL\artifacts\runs\phasea-abrAnjanRL-20261117T084630-73bcff\run-timeline.svg
+{
+  "run_id": "phasea-abrAnjanRL-20261117T084630-73bcff",
+  "algorithm": "abrAnjanRL",
+  "requested_seconds": 18,
+  "started_utc": "2026-11-17T08:46:30.785096+00:00",
+  "wall_clock_start_second": 30,
+  "target_latency_s": 3,
+  "catchup": "liveCatchupModeLoLP",
+  "url": "http://pyodide/samples/starlink/testplayer/testplayer.html?experimentID=phasea-abrAnjanRL-20261117T084630-73bcff&mpdURL=https%3A%2F%2Fnginx%2Flivesim2%2Fvectors%2Fswitching_sets%2F12.5_25_50%2Fss1%2F2023-04-28%2Fstream.mpd&targetLatency=3&constantVideoBitrate=-1&abrGeneral=abrAnjanRL&maxDrift=5&minCatchupPlaybackRate=-0.17&maxCatchupPlaybackRate=0.17&abrAdditionalAbandonRequestRule=true&cmabAlpha=1.0&catchupMechanism=liveCatchupModeLoLP&hostClock=1&neuralVariant=leo",
+  "load_wall_clock_utc": "2026-11-17T08:46:31.566308+00:00",
+  "scenario_id": null,
+  "variant": null,
+  "actual_abr_strategy": "abrAnjanRL",
+  "auto_switch_video": true,
+  "shared_probe_active": true,
+  "diagnostic_model_failure": false,
+  "fixed_kbps": -1,
+  "neural_variant": "leo",
+  "scheduled_start_unix_s": null,
+  "controlled_stages": [
+    {
+      "at_s": 0,
+      "rate_mbit": 8.0
+    }
+  ],
+  "samples": 10,
+  "mongo_documents": {
+    "events": 4,
+    "metric": 4,
+    "qoe": 0,
+    "decisions": 11
+  },
+  "media_time_end": 1794905206.791949,
+  "ladder": [
+    {
+      "bitrate": 300000,
+      "height": 270,
+      "qualityIndex": 0,
+      "width": 480
+    },
+    {
+      "bitrate": 450000,
+      "height": 288,
+      "qualityIndex": 1,
+      "width": 512
+    },
+    {
+      "bitrate": 900000,
+      "height": 432,
+      "qualityIndex": 2,
+      "width": 768
+    },
+    {
+      "bitrate": 1200000,
+      "height": 576,
+      "qualityIndex": 3,
+      "width": 1024
+    },
+    {
+      "bitrate": 1500000,
+      "height": 576,
+      "qualityIndex": 4,
+      "width": 1024
+    },
+    {
+      "bitrate": 4900000,
+      "height": 1080,
+      "qualityIndex": 5,
+      "width": 1920
+    },
+    {
+      "bitrate": 5100000,
+      "height": 1080,
+      "qualityIndex": 6,
+      "width": 1920
+    },
+    {
+      "bitrate": 6000000,
+      "height": 1080,
+      "qualityIndex": 7,
+      "width": 1920
+    }
+  ],
+  "build": "anjan-final-20261117-common-v1",
+  "model": {
+    "kind": "leo",
+    "label": "Final player-compatible leo A2C; median validation seed",
+    "seed": 101,
+    "sha256": "ddb03478f6c7e57a08c6c48ac9f002eb06c45d550a738b3ae504ee09d401ad6c"
+  },
+  "page_load_to_ready_ms": 376.20239998796023,
+  "runtime_prewarm_ms": null,
+  "clock_mode": "host",
+  "utc_synchronization_enabled": false,
+  "model_assets_cold_load_ms": 5.699999995529652,
+  "decision_count": 11,
+  "played_advance_s": 16.325786113739014,
+  "completed_video_requests": 10,
+  "player_errors": [],
+  "console_severe": [
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 82846 WebSocket connection to 'ws://pyodide:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED",
+      "source": "network",
+      "timestamp": 1794905191100
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 83789:22 \"[webpack-dev-server]\" Event",
+      "source": "console-api",
+      "timestamp": 1794905191100
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/favicon.ico - Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "network",
+      "timestamp": 1794905191160
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 4316:18 \"Settings parameter streaming.abr.buffer is not supported\"",
+      "source": "console-api",
+      "timestamp": 1794905191542
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 82846 WebSocket connection to 'ws://pyodide:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED",
+      "source": "network",
+      "timestamp": 1794905192124
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 83789:22 \"[webpack-dev-server]\" Event",
+      "source": "console-api",
+      "timestamp": 1794905192124
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 82846 WebSocket connection to 'ws://pyodide:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED",
+      "source": "network",
+      "timestamp": 1794905194221
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 83789:22 \"[webpack-dev-server]\" Event",
+      "source": "console-api",
+      "timestamp": 1794905194221
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 82846 WebSocket connection to 'ws://pyodide:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED",
+      "source": "network",
+      "timestamp": 1794905198276
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 83789:22 \"[webpack-dev-server]\" Event",
+      "source": "console-api",
+      "timestamp": 1794905198276
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 82846 WebSocket connection to 'ws://pyodide:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED",
+      "source": "network",
+      "timestamp": 1794905206323
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 83789:22 \"[webpack-dev-server]\" Event",
+      "source": "console-api",
+      "timestamp": 1794905206323
+    }
+  ]
+}

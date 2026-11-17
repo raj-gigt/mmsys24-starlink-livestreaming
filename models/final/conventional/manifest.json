@@ -1,0 +1,232 @@
+{
+  "created_utc": "2026-11-17T06:44:49.073998+00:00",
+  "kind": "conventional",
+  "config": "d",
+  "seed": 167,
+  "hyperparameters": {
+    "learning_rate": 0.0001,
+    "n_steps": 64,
+    "ent_coef": 0.02
+  },
+  "steps": 1000448,
+  "requested_steps": 1000000,
+  "wall_s": 250.36272049997933,
+  "device": "cpu",
+  "initialization": {
+    "samples": 8000,
+    "epochs": 10,
+    "teacher": "causal throughput/buffer rule; training scenarios only",
+    "teacher_labels": {
+      "0": 2832,
+      "1": 1902,
+      "2": 640,
+      "3": 583,
+      "4": 2043
+    },
+    "loss": [
+      1.746312886238098,
+      1.208534242630005,
+      0.9850799946784973,
+      0.8124039902687072,
+      0.7042738151550293,
+      0.6329399061203003,
+      0.5778589944839477,
+      0.5346886270046234,
+      0.5045071318149567,
+      0.4757332332134247
+    ]
+  },
+  "input_count": 36,
+  "architecture": [
+    36,
+    64,
+    64,
+    8
+  ],
+  "selected_step": 400384,
+  "selected_validation_qoe": 0.081715551492176,
+  "checkpoint_sha256": "656fcf08eef6d4aa81d1f315389646631789c421738317cd1316e12092e79ff2",
+  "selection": "Maximum equal-family mean validation QoE, checkpoints including warmstart; no test access",
+  "scope": "Player-compatible A2C adaptation inspired by Pensieve/Gelato/Plume; not their published pretrained model",
+  "environment_sha256": "087e7ba2b4987c9a0c7ce4aa8f0a0ac5270a79f7f7ce1c2805f5efa02aba4b4c",
+  "simulator_config_sha256": "2562c0809dbf4cb4adf0e297ff283f90002d8dc44a7b1f3c3c3ec8c9546039e5",
+  "data_identity": {
+    "data/manifests/train.json": "f739247bf5d3dcb40eba64c44ffed7f8bf44f499120fe1cabc2966e6ab5da2c9",
+    "data/manifests/validation.json": "615f1439ac5f32a018ae821d949ccbdaa45d468ea35d0cf7ae230f7f84d70fff",
+    "data/manifests/media.json": "c546cd7bd3054486de1f68f023bbf34a010ebfebefa0776524443960b988b552",
+    "rl/features.py": "3bb2804949524529bf87df080076bf35114968ac66adb26c0c6f52e2c3273272",
+    "configs/final/neural-interface.json": "9be1d48edb5c990f3116b487f54443154d5df5adb3855955015c3db2445ba618"
+  },
+  "checkpoint_path": "models/final/conventional/checkpoint.zip",
+  "normalization": "rl/features.py conventional36; rl/final_env.py final_features appends28 causal LEO coordinates",
+  "action_bitrates": [
+    300000,
+    450000,
+    900000,
+    1200000,
+    1500000,
+    4900000,
+    5100000,
+    6000000
+  ],
+  "inference": "Synchronous Float32 JavaScript, first-index argmax; no async bridge",
+  "input_example": {
+    "kind": "simulator",
+    "observation": {
+      "history": [
+        {
+          "mbps": 0.6127306926970592,
+          "download_s": 1.531139228345861,
+          "finished_s": 24.993267588014533,
+          "bytes": 117272.0,
+          "age_s": 0
+        }
+      ],
+      "buffer_s": 0.9660637151310709,
+      "target_s": 3.0,
+      "live_latency_s": 4.5311392283458645,
+      "playback_rate": 0.8557917812072228,
+      "previous_quality": 1,
+      "ladder": [
+        {
+          "quality": 0,
+          "bandwidth": 300000,
+          "id": "cfhd_sets/12.5_25_50/t34/2023-04-28/1"
+        },
+        {
+          "quality": 1,
+          "bandwidth": 450000,
+          "id": "cfhd_sets/12.5_25_50/t32/2023-04-28/1"
+        },
+        {
+          "quality": 2,
+          "bandwidth": 900000,
+          "id": "cfhd_sets/12.5_25_50/t28/2023-04-28/1"
+        },
+        {
+          "quality": 3,
+          "bandwidth": 1200000,
+          "id": "cfhd_sets/12.5_25_50/t24/2023-04-28/1"
+        },
+        {
+          "quality": 4,
+          "bandwidth": 1500000,
+          "id": "cfhd_sets/12.5_25_50/t25/2023-04-28/1"
+        },
+        {
+          "quality": 5,
+          "bandwidth": 4900000,
+          "id": "cfhd_sets/12.5_25_50/t23/2023-04-28/1"
+        },
+        {
+          "quality": 6,
+          "bandwidth": 5100000,
+          "id": "cfhd_sets/12.5_25_50/t19/2023-04-28/1"
+        },
+        {
+          "quality": 7,
+          "bandwidth": 6000000,
+          "id": "chdf_sets/12.5_25_50/t20/2023-04-28/1"
+        }
+      ],
+      "probes": [
+        {
+          "rtt_ms": 235.54896300000001,
+          "ok": true,
+          "age_s": 3.757718625014533
+        },
+        {
+          "rtt_ms": 235.54896300000001,
+          "ok": true,
+          "age_s": 3.257718625014533
+        },
+        {
+          "rtt_ms": 234.755139,
+          "ok": true,
+          "age_s": 2.758512449014532
+        },
+        {
+          "rtt_ms": 234.755139,
+          "ok": true,
+          "age_s": 2.258512449014532
+        },
+        {
+          "rtt_ms": 234.541837,
+          "ok": true,
+          "age_s": 1.7587257510145342
+        },
+        {
+          "rtt_ms": 234.541837,
+          "ok": true,
+          "age_s": 1.2587257510145342
+        },
+        {
+          "rtt_ms": 234.766378,
+          "ok": true,
+          "age_s": 0.7585012100145327
+        },
+        {
+          "rtt_ms": 234.766378,
+          "ok": true,
+          "age_s": 0.25850121001453275
+        }
+      ],
+      "probe_success_age_s": 0.25850121001453275,
+      "probe_valid": true
+    },
+    "input": [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.06127306818962097,
+      0.7655696272850037,
+      0.0,
+      1.0,
+      0.3220212459564209,
+      0.07500000298023224,
+      -0.8482836484909058,
+      0.5
+    ],
+    "logits": [
+      3.671908140182495,
+      1.871498703956604,
+      0.19608290493488312,
+      -0.8966699838638306,
+      -4.815484046936035,
+      -7.105225563049316,
+      -7.050998687744141,
+      -7.034631729125977
+    ],
+    "action": 0
+  },
+  "limitations": [
+    "Fluid approximate simulator; final claims require Chrome",
+    "Synthetic capacity/outages; RTT does not identify true handovers"
+  ],
+  "selection_record": "artifacts/final/training/main-selection.json"
+}

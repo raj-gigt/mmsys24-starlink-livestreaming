@@ -6,193 +6,241 @@
       "status": "PASS",
       "run_id": "phasea-abrCMABImproved-20261117T034110-0a505b",
       "start_phase_error_s": 0.0794839859008789,
+      "actual_player_start_phase_s": 0.10199999809265137,
       "verified_transitions": 0,
       "max_transition_error_s": 0,
-      "raw_replay": false
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
     },
     {
       "status": "PASS",
       "run_id": "phasea-abrCMABImproved-20261117T034337-6f0d1d",
       "start_phase_error_s": 0.09064197540283203,
+      "actual_player_start_phase_s": 0.056999921798706055,
       "verified_transitions": 0,
       "max_transition_error_s": 0,
-      "raw_replay": false
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
     },
     {
       "status": "PASS",
       "run_id": "phasea-abrCMAB-20261117T034537-022e9e",
       "start_phase_error_s": 0.07847094535827637,
+      "actual_player_start_phase_s": 0.03800010681152344,
       "verified_transitions": 0,
       "max_transition_error_s": 0,
-      "raw_replay": false
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
     },
     {
       "status": "PASS",
       "run_id": "phasea-abrCMABImproved-20261117T034737-b5906a",
       "start_phase_error_s": 0.0981290340423584,
+      "actual_player_start_phase_s": 0.09299993515014648,
       "verified_transitions": 0,
       "max_transition_error_s": 0,
-      "raw_replay": false
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
     },
     {
       "status": "PASS",
       "run_id": "phasea-abrCMABImproved-20261117T034937-66d89f",
       "start_phase_error_s": 0.07899093627929688,
+      "actual_player_start_phase_s": 0.22900009155273438,
       "verified_transitions": 2,
       "max_transition_error_s": 0.013981342315673828,
-      "raw_replay": false
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
     },
     {
       "status": "PASS",
       "run_id": "phasea-abrCMAB-20261117T035137-c9e2ce",
       "start_phase_error_s": 0.08605194091796875,
+      "actual_player_start_phase_s": 0.14299988746643066,
       "verified_transitions": 2,
       "max_transition_error_s": 0.012977123260498047,
-      "raw_replay": false
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
     },
     {
       "status": "PASS",
       "run_id": "phasea-abrCMABImproved-20261117T035337-aa9939",
       "start_phase_error_s": 0.08090400695800781,
+      "actual_player_start_phase_s": 0.013000011444091797,
       "verified_transitions": 2,
       "max_transition_error_s": 0.010430574417114258,
-      "raw_replay": false
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
     },
     {
       "status": "PASS",
       "run_id": "phasea-abrCMABImproved-20261117T035537-cc9331",
       "start_phase_error_s": 0.07984709739685059,
+      "actual_player_start_phase_s": 0.14899992942810059,
       "verified_transitions": 2,
       "max_transition_error_s": 0.010207891464233398,
-      "raw_replay": false
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
     },
     {
       "status": "PASS",
       "run_id": "phasea-abrCMAB-20261117T035737-b9440c",
       "start_phase_error_s": 0.08711504936218262,
+      "actual_player_start_phase_s": 0.06100010871887207,
       "verified_transitions": 86,
       "max_transition_error_s": 0.012347221374511719,
-      "raw_replay": false
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
     },
     {
       "status": "PASS",
       "run_id": "phasea-abrCMABImproved-20261117T035937-e18a9d",
       "start_phase_error_s": 0.08518791198730469,
+      "actual_player_start_phase_s": 0.12899994850158691,
       "verified_transitions": 86,
       "max_transition_error_s": 0.013143062591552734,
-      "raw_replay": false
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
     },
     {
       "status": "PASS",
       "run_id": "phasea-abrCMABImproved-20261117T040137-01c141",
       "start_phase_error_s": 0.0937960147857666,
+      "actual_player_start_phase_s": 0.0009999275207519531,
       "verified_transitions": 86,
       "max_transition_error_s": 0.012883901596069336,
-      "raw_replay": false
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
     },
     {
       "status": "PASS",
       "run_id": "phasea-abrCMABImproved-20261117T040337-7cb095",
       "start_phase_error_s": 0.07778501510620117,
+      "actual_player_start_phase_s": 0.15000009536743164,
       "verified_transitions": 86,
       "max_transition_error_s": 0.013504266738891602,
-      "raw_replay": false
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
     },
     {
       "status": "PASS",
       "run_id": "phasea-abrCMABImproved-20261117T040537-e5d7dc",
       "start_phase_error_s": 0.07483196258544922,
+      "actual_player_start_phase_s": 0.07299995422363281,
       "verified_transitions": 85,
       "max_transition_error_s": 0.01220250129699707,
-      "raw_replay": false
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
     },
     {
       "status": "PASS",
       "run_id": "phasea-abrCMABImproved-20261117T040737-bc82d1",
       "start_phase_error_s": 0.08052802085876465,
+      "actual_player_start_phase_s": 0.09299993515014648,
       "verified_transitions": 85,
       "max_transition_error_s": 0.013881206512451172,
-      "raw_replay": false
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
     },
     {
       "status": "PASS",
       "run_id": "phasea-abrCMABImproved-20261117T040937-d8d940",
       "start_phase_error_s": 0.08101606369018555,
+      "actual_player_start_phase_s": 0.012000083923339844,
       "verified_transitions": 85,
       "max_transition_error_s": 0.012526512145996094,
-      "raw_replay": false
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
     },
     {
       "status": "PASS",
       "run_id": "phasea-abrCMAB-20261117T041137-8b08a3",
       "start_phase_error_s": 0.0726480484008789,
+      "actual_player_start_phase_s": 0.20099997520446777,
       "verified_transitions": 85,
       "max_transition_error_s": 0.013466596603393555,
-      "raw_replay": false
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
     },
     {
       "status": "PASS",
       "run_id": "phasea-abrCMABImproved-20261117T041337-f0ec43",
       "start_phase_error_s": 0.08646488189697266,
+      "actual_player_start_phase_s": 0.05299997329711914,
       "verified_transitions": 85,
       "max_transition_error_s": 0.013938426971435547,
-      "raw_replay": false
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
     },
     {
       "status": "PASS",
       "run_id": "phasea-abrCMABImproved-20261117T041537-c80fe9",
       "start_phase_error_s": 0.0918889045715332,
+      "actual_player_start_phase_s": 0.10100007057189941,
       "verified_transitions": 85,
       "max_transition_error_s": 0.013477325439453125,
-      "raw_replay": false
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
     },
     {
       "status": "PASS",
       "run_id": "phasea-abrCMAB-20261117T041737-d70c7f",
       "start_phase_error_s": 0.07729506492614746,
+      "actual_player_start_phase_s": 0.020999908447265625,
       "verified_transitions": 85,
       "max_transition_error_s": 0.013988971710205078,
-      "raw_replay": false
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
     },
     {
       "status": "PASS",
       "run_id": "phasea-abrCMABImproved-20261117T041937-286dcd",
       "start_phase_error_s": 0.0857839584350586,
+      "actual_player_start_phase_s": 0.056999921798706055,
       "verified_transitions": 85,
       "max_transition_error_s": 0.014347076416015625,
-      "raw_replay": false
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
     },
     {
       "status": "PASS",
       "run_id": "phasea-abrCMABImproved-20261117T042137-3aeaf5",
       "start_phase_error_s": 0.0885779857635498,
+      "actual_player_start_phase_s": 0.20099997520446777,
       "verified_transitions": 86,
       "max_transition_error_s": 0.013700008392333984,
-      "raw_replay": false
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
     },
     {
       "status": "PASS",
       "run_id": "phasea-abrCMAB-20261117T042337-11914f",
       "start_phase_error_s": 0.09580111503601074,
+      "actual_player_start_phase_s": 0.06200003623962402,
       "verified_transitions": 86,
       "max_transition_error_s": 0.014062166213989258,
-      "raw_replay": false
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
     },
     {
       "status": "PASS",
       "run_id": "phasea-abrCMABImproved-20261117T042537-ef831b",
       "start_phase_error_s": 0.07701301574707031,
+      "actual_player_start_phase_s": 0.046000003814697266,
       "verified_transitions": 86,
       "max_transition_error_s": 0.013900279998779297,
-      "raw_replay": false
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
     },
     {
       "status": "PASS",
       "run_id": "phasea-abrCMABImproved-20261117T042737-bf9d0d",
       "start_phase_error_s": 0.08797693252563477,
+      "actual_player_start_phase_s": 0.10500001907348633,
       "verified_transitions": 86,
       "max_transition_error_s": 0.014933109283447266,
-      "raw_replay": false
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
     }
   ]
 }

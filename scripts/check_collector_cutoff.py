@@ -9,6 +9,8 @@ for r in rows:
     assert d['version']==2
     duration=(d['stopped_at_ms']-d['started_at_ms'])/1000
     assert abs(duration-d['samples'][-1]['t_s'])<.1
+    if all('epoch_ms' in s for s in d['samples']):
+        assert max(abs((s['epoch_ms']-d['started_at_ms'])/1000-s['t_s']) for s in d['samples'][1:])<.1
     assert all(e['at_ms']<=d['stopped_at_ms'] for key in ['cmab_decisions','custom_decisions','feedback'] for e in d[key])
     assert all(e['t_s']<=duration+.02 for key in ['events','requests','samples'] for e in d[key])
 print('PASS: shared cutoff and bounded event/decision horizon for',len(rows),'sessions')

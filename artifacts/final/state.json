@@ -53,38 +53,32 @@
       "updated_utc": "2026-11-17T06:05:07.036824+00:00"
     },
     "17": {
+      "status": "Complete",
+      "evidence": "10.004million main interactions across10 fresh-seed fits; selected median seeds167/101; 394 JS fixtures and6 valid Chrome checks PASS; observer-free RTT and real fallback playback PASS; late training decline retained",
+      "updated_utc": "2026-11-17T08:49:30.867617+00:00"
+    },
+    "18": {
       "status": "Running",
-      "evidence": "Five fresh seeds47/71/101/131/167 for each observation type; initial1million decisions per run, then validation-guided extension if useful; no test access",
-      "updated_utc": "2026-11-17T06:05:07.139292+00:00"
+      "evidence": "Publish exact verified code/model identities, freeze179 trials before test access, then run matched seven-policy held-out browser matrix; guest clock guarded and restored automatically",
+      "updated_utc": "2026-11-17T08:49:30.952669+00:00"
     }
   },
-  "updated_utc": "2026-11-17T06:05:07.139292+00:00",
-  "current_step": 17,
+  "updated_utc": "2026-11-17T08:49:30.952669+00:00",
+  "current_step": 18,
   "pending_protocol_refinements": [
-    "Before final freeze, retain full raw-replay tc history: bounded256-event log truncates high-rate raw replay. Add append-only export and source-index checks without changing shaper decisions.",
-    "Add per-sample epoch/performance clock consistency check before final freeze; preserve the one invalid calibration recording.",
-    "After1million decisions per seed, inspect late validation improvements; extend equally up to3million if useful and release reserve remains."
+    "Full raw tc log implemented and source-verified479 events versus256 bounded status; physical outage/100ms/recovery PASS. Need final replay checks after actual runs.",
+    "Per-sample epoch/performance consistency and production neural adapter prepared; build only after final actor export.",
+    "Source freeze uses canonical LF for text plus raw-byte release hashes so Windows/Linux Git line endings do not block reproduction.",
+    "After1million decisions per seed inspect late validation trends; keep selected peaks if more training is unproductive."
   ],
   "contribution_section": "User requested blank contribution template; fill later, do not invent teammate work",
   "active_experiment": {
     "step": 17,
-    "session_id": 64280,
-    "command": "python -m rl.train_final --stage main --device cpu",
-    "resume": "Same command skips completed runs and resumes optimizer/env/RNG snapshots for unfinished runs",
-    "outputs": "artifacts/final/training/main and main-selection.json",
-    "fresh_seeds": [
-      47,
-      71,
-      101,
-      131,
-      167
-    ],
-    "immutable_during_training": [
-      "rl/final_env.py",
-      "rl/train_final.py",
-      "rl/features.py",
-      "configs/final/simulator.json",
-      "train/validation data and manifests"
-    ]
-  }
+    "command": "python scripts/run_neural_validation.py",
+    "ledger": "artifacts/final/validation/neural-v1/runs.json",
+    "resume": "Same command skips completed deployment cases; do not retrain the10 completed main models",
+    "native_exports": "394fixtures PASS, maxlogiterror1.14e-5; conventional seed167/LEOseed101",
+    "next": "After6 Chrome checks, run observer-free/fallback tests, archive evidence and freeze final matrix"
+  },
+  "training_extension_decision": "No extension: both aggregate late validation trends nonpositive. All10 seeds improved initialization; selected peaks retained. Main10.004million interactions,44.33min actual training."
 }

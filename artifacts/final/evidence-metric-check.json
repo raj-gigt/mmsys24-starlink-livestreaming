@@ -1,34 +1,16 @@
 {
   "status": "PASS",
   "runs": [
-    "phasea-abrCMABImproved-20261117T034110-0a505b",
-    "phasea-abrCMABImproved-20261117T034337-6f0d1d",
-    "phasea-abrCMAB-20261117T034537-022e9e",
-    "phasea-abrCMABImproved-20261117T034737-b5906a",
-    "phasea-abrCMABImproved-20261117T034937-66d89f",
-    "phasea-abrCMAB-20261117T035137-c9e2ce",
-    "phasea-abrCMABImproved-20261117T035337-aa9939",
-    "phasea-abrCMABImproved-20261117T035537-cc9331",
-    "phasea-abrCMAB-20261117T035737-b9440c",
-    "phasea-abrCMABImproved-20261117T035937-e18a9d",
-    "phasea-abrCMABImproved-20261117T040137-01c141",
-    "phasea-abrCMABImproved-20261117T040337-7cb095",
-    "phasea-abrCMABImproved-20261117T040537-e5d7dc",
-    "phasea-abrCMABImproved-20261117T040737-bc82d1",
-    "phasea-abrCMABImproved-20261117T040937-d8d940",
-    "phasea-abrCMAB-20261117T041137-8b08a3",
-    "phasea-abrCMABImproved-20261117T041337-f0ec43",
-    "phasea-abrCMABImproved-20261117T041537-c80fe9",
-    "phasea-abrCMAB-20261117T041737-d70c7f",
-    "phasea-abrCMABImproved-20261117T041937-286dcd",
-    "phasea-abrCMABImproved-20261117T042137-3aeaf5",
-    "phasea-abrCMAB-20261117T042337-11914f",
-    "phasea-abrCMABImproved-20261117T042537-ef831b",
-    "phasea-abrCMABImproved-20261117T042737-bf9d0d"
+    "phasea-abrAnjanRL-20261117T082241-38275b",
+    "phasea-abrAnjanRL-20261117T082638-1a0889",
+    "phasea-abrAnjanRL-20261117T083038-2cadcb",
+    "phasea-abrAnjanRL-20261117T083429-343ed4",
+    "phasea-abrAnjanRL-20261117T083648-b0a700",
+    "phasea-abrAnjanRL-20261117T083838-d1fbd0"
   ],
-  "count": 24,
+  "count": 6,
   "metrics_source_sha256": "b1a60542aa44188f60dacf3c8e9b009905df7b4dca8f637c7a3b6d97d8e3d56b",
   "ledger_sha256": {
-    "artifacts/final/validation/finalists-v2/runs.json": "c894568ba4515a1ae46faca4dff2b4ec69308d6430c273a7f58c143d72b6bbbc"
+    "artifacts/final/validation/neural-v1/runs.json": "924699a9911b77c558927f71e495f01382972a873c953b47f2996123a504e1a3"
   }
 }

@@ -12,6 +12,7 @@
         const rep = ladder.find(x => x.qualityIndex === state.quality);
         const latency = p.getCurrentLiveLatency();
         const row = {t_s: (performance.now()-state.start)/1000,
+            epoch_ms: Date.now(),
             media_s: v.currentTime, paused: state.played && v.paused,
             seeking: v.seeking, seek_epoch: state.epoch,
             waiting: state.waiting, ready_state: v.readyState,

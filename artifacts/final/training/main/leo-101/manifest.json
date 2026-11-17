@@ -1,0 +1,60 @@
+{
+  "created_utc": "2026-11-17T06:31:22.537344+00:00",
+  "kind": "leo",
+  "config": "d",
+  "seed": 101,
+  "hyperparameters": {
+    "learning_rate": 0.0001,
+    "n_steps": 64,
+    "ent_coef": 0.02
+  },
+  "steps": 1000448,
+  "requested_steps": 1000000,
+  "wall_s": 288.06637200000114,
+  "device": "cpu",
+  "initialization": {
+    "samples": 8000,
+    "epochs": 10,
+    "teacher": "causal throughput/buffer rule; training scenarios only",
+    "teacher_labels": {
+      "0": 2832,
+      "1": 1902,
+      "2": 640,
+      "3": 583,
+      "4": 2043
+    },
+    "loss": [
+      1.6455832195281983,
+      1.1793143320083619,
+      0.9901699085235596,
+      0.8602652997970581,
+      0.753831039428711,
+      0.6698359808921814,
+      0.6084045443534851,
+      0.5601383662223816,
+      0.5286278414726258,
+      0.4974984149932861
+    ]
+  },
+  "input_count": 64,
+  "architecture": [
+    64,
+    64,
+    64,
+    8
+  ],
+  "selected_step": 500224,
+  "selected_validation_qoe": 0.059100702457033284,
+  "checkpoint_sha256": "ddb03478f6c7e57a08c6c48ac9f002eb06c45d550a738b3ae504ee09d401ad6c",
+  "selection": "Maximum equal-family mean validation QoE, checkpoints including warmstart; no test access",
+  "scope": "Player-compatible A2C adaptation inspired by Pensieve/Gelato/Plume; not their published pretrained model",
+  "environment_sha256": "087e7ba2b4987c9a0c7ce4aa8f0a0ac5270a79f7f7ce1c2805f5efa02aba4b4c",
+  "simulator_config_sha256": "2562c0809dbf4cb4adf0e297ff283f90002d8dc44a7b1f3c3c3ec8c9546039e5",
+  "data_identity": {
+    "data/manifests/train.json": "f739247bf5d3dcb40eba64c44ffed7f8bf44f499120fe1cabc2966e6ab5da2c9",
+    "data/manifests/validation.json": "615f1439ac5f32a018ae821d949ccbdaa45d468ea35d0cf7ae230f7f84d70fff",
+    "data/manifests/media.json": "c546cd7bd3054486de1f68f023bbf34a010ebfebefa0776524443960b988b552",
+    "rl/features.py": "3bb2804949524529bf87df080076bf35114968ac66adb26c0c6f52e2c3273272",
+    "configs/final/neural-interface.json": "9be1d48edb5c990f3116b487f54443154d5df5adb3855955015c3db2445ba618"
+  }
+}

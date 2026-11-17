@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "run_id": "phasea-abrAnjanRL-20261117T082010-96baa7",
+  "kind": "conventional",
+  "decisions": 47,
+  "matched_completed_request_links": 46,
+  "valid_probe_decisions": 46,
+  "max_absolute_logit_error": 3.814697265625e-06,
+  "action_agreement": 1,
+  "complete_decision_p50_p95_p99_ms": [
+    0.20000000298023224,
+    0.3999999985098839,
+    0.5080000035464762
+  ],
+  "max_decision_ms": 0.6000000014901161,
+  "model_assets_cold_load_ms": 5.600000001490116,
+  "timing_scope": "Observed Chrome114/WSL laptop CPU; no hard preemption or mobile guarantee"
+}

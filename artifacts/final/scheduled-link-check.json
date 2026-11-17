@@ -1,44 +1,44 @@
 {
   "status": "PASS",
-  "healthy": "PING nginx (192.167.0.107) 56(84) bytes of data.\n64 bytes from dashjs-nginx.dashjs (192.167.0.107): icmp_seq=1 ttl=64 time=40.1 ms\n\n--- nginx ping statistics ---\n1 packets transmitted, 1 received, 0% packet loss, time 0ms\nrtt min/avg/max/mdev = 40.108/40.108/40.108/0.000 ms",
+  "healthy": "PING nginx (192.167.0.107) 56(84) bytes of data.\n64 bytes from dashjs-nginx.dashjs (192.167.0.107): icmp_seq=1 ttl=64 time=80.5 ms\n\n--- nginx ping statistics ---\n1 packets transmitted, 1 received, 0% packet loss, time 0ms\nrtt min/avg/max/mdev = 80.463/80.463/80.463/0.000 ms",
   "outage": "PING nginx (192.167.0.107) 56(84) bytes of data.\n\n--- nginx ping statistics ---\n1 packets transmitted, 0 received, 100% packet loss, time 0ms",
   "configured_delayed_ms": 100,
   "measured_delayed_rtt_ms": 100.0,
-  "recovery": "PING nginx (192.167.0.107) 56(84) bytes of data.\n64 bytes from dashjs-nginx.dashjs (192.167.0.107): icmp_seq=1 ttl=64 time=40.2 ms\n\n--- nginx ping statistics ---\n1 packets transmitted, 1 received, 0% packet loss, time 0ms\nrtt min/avg/max/mdev = 40.161/40.161/40.161/0.000 ms",
+  "recovery": "PING nginx (192.167.0.107) 56(84) bytes of data.\n64 bytes from dashjs-nginx.dashjs (192.167.0.107): icmp_seq=1 ttl=64 time=40.1 ms\n\n--- nginx ping statistics ---\n1 packets transmitted, 1 received, 0% packet loss, time 0ms\nrtt min/avg/max/mdev = 40.135/40.135/40.135/0.000 ms",
   "applied": {
     "profile_id": "physical-final-link-check",
     "applied": [
       {
-        "at_unix_s": 1794867276.8651905,
+        "at_unix_s": 1794897182.2080402,
         "profile_id": "physical-final-link-check",
         "rate_mbit": 8.0,
         "delay_ms": 40.0,
         "loss_percent": 0.0,
-        "relative_s": -1.7648553848266602
+        "relative_s": -1.7416656017303467
       },
       {
-        "at_unix_s": 1794867282.6378553,
+        "at_unix_s": 1794897187.9591227,
         "profile_id": "physical-final-link-check",
         "rate_mbit": 0.05,
         "delay_ms": 40.0,
         "loss_percent": 100.0,
-        "relative_s": 4.007809400558472
+        "relative_s": 4.009416818618774
       },
       {
-        "at_unix_s": 1794867285.6407475,
+        "at_unix_s": 1794897190.956644,
         "profile_id": "physical-final-link-check",
         "rate_mbit": 8.0,
         "delay_ms": 100.0,
         "loss_percent": 0.0,
-        "relative_s": 7.010701656341553
+        "relative_s": 7.006938219070435
       },
       {
-        "at_unix_s": 1794867289.6353574,
+        "at_unix_s": 1794897194.9529705,
         "profile_id": "physical-final-link-check",
         "rate_mbit": 8.0,
         "delay_ms": 40.0,
         "loss_percent": 0.0,
-        "relative_s": 11.005311489105225
+        "relative_s": 11.003264665603638
       }
     ]
   }

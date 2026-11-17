@@ -1,0 +1,22 @@
+[
+  {
+    "run_id": "phasea-abrAnjanRL-20261117T084630-73bcff",
+    "status": "PASS",
+    "diagnostic_failure_injected": false,
+    "injected_observer": false,
+    "decisions": 11,
+    "played_advance_s": 16.325786113739014,
+    "completed_video_requests": 10,
+    "mongo_metrics": 4
+  },
+  {
+    "run_id": "phasea-abrAnjanRL-20261117T084656-c38a78",
+    "status": "PASS",
+    "diagnostic_failure_injected": true,
+    "injected_observer": false,
+    "decisions": 11,
+    "played_advance_s": 16.298413038253784,
+    "completed_video_requests": 10,
+    "mongo_metrics": 4
+  }
+]

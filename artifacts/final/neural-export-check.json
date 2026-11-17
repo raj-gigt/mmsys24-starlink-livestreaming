@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "fixtures": 394,
+  "max_absolute_logit_error": 0.000011444091796875,
+  "scope": "Native/JS preprocessing, logits, actions and invalid-input rejection"
+}

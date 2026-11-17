@@ -288,7 +288,7 @@ Candidate configuration budget: initially at most 12 named CMAB settings and 72 
 **Verification / exit:** saved validation curves, learning checks and compatible candidate weights; failed/collapsed runs retained; no sealed-test selection. Fix data/reward/dynamics/normalization defects before declaring that the optimizer itself is the problem.
 
 ### Step 17 - Repeat training, select representatives and verify deployment
-**Status:** Running. **Dependency:** 16. **Deliverables:** D4/D5, C4/C5, F7, T8.
+**Status:** Complete. **Dependency:** 16. **Deliverables:** D4/D5, C4/C5, F7, T8.
 
 **Objective / intuition:** demonstrate that the neural result is reproducible and executable in the actual player.
 
@@ -305,7 +305,7 @@ Candidate configuration budget: initially at most 12 named CMAB settings and 72 
 ## 8. Phase E: frozen common testing and analysis
 
 ### Step 18 - Lock the protocol and run the final browser matrix
-**Status:** Pending. **Dependencies:** 14 and 17. **Deliverables:** D7/D8, C6/C10, F3/F4/F5, T3/T4.
+**Status:** Running. **Dependencies:** 14 and 17. **Deliverables:** D7/D8, C6/C10, F3/F4/F5, T3/T4.
 
 **Objective / intuition:** measure the finished controllers under matched conditions without using final results to redesign them.
 
@@ -427,8 +427,8 @@ Autonomous execution is active; see the per-step tracker and artifacts/final/sta
 | 14 | Complete | All24 corrected-clock validation runs verified; guardedCMAB passes frozen gates; guard-only remains competitive; real online-state replay PASS; portable evidence archived |
 | 15 | Complete | Six real calibration runs; transfer medians below13percent each, bufferMAE0.49s, overall delayMAE2.06s misses target and is disclosed; causal/Gym/reward checks PASS; measured CPU beats working RTX4060 |
 | 16 | Complete | 16 equal-budget fits verified; 4.004million interactions; all improve own initialization; common recipe d selected by joint validation; finite changed weights and valid checkpoints |
-| 17 | Running | Five fresh seeds47/71/101/131/167 for each observation type; initial1million decisions per run, then validation-guided extension if useful; no test access |
-| 18 | Pending | Frozen final matrix and complete run inventory |
+| 17 | Complete | 10.004million main interactions across10 fresh-seed fits; selected median seeds167/101; 394 JS fixtures and6 valid Chrome checks PASS; observer-free RTT and real fallback playback PASS; late training decline retained |
+| 18 | Running | Publish exact verified code/model identities, freeze179 trials before test access, then run matched seven-policy held-out browser matrix; guest clock guarded and restored automatically |
 | 19 | Pending | Verified common results, figures/tables and claim boundaries |
 | 20 | Pending | Reviewed final report PDF and contributions |
 | 21 | Pending | Working demo, recording and report-consistent slide draft |
@@ -448,3 +448,5 @@ Execution revision at Step14: first validation failed the unchanged startup gate
 Final-matrix extension chosen before test access: include competitive guard-only as a seventh separate policy, with3 repeats alongside B0/C*. Controlled170 + raw replay9 =179 sessions (367min playback; about9h06 cycles). Source raw offset2940 is metadata-aligned, not performance-selected. Retain4h release/report reserve.
 
 Uncertainty refinement before final freeze: because related windows share only two RTT recordings, keep the10 benchmark cases fixed and resample paired browser repeats within each case. Report conditional repeatability intervals and raw case effects; do not resample related windows as independent real recordings or claim Starlink-population confidence.
+
+Clock-control refinement before final freeze: per-sample epoch/monotonic checks exposed guest wall-clock steps during active NTP. Pause guest timesync during measured tests, schedule starts from guest epoch, and restore prior service state afterwards. Reuse valid deployment checks; retain/retry only clock-invalid records. No training rerun or controller change is needed.

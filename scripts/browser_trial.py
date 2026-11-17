@@ -63,6 +63,7 @@ return JSON.parse(JSON.stringify({at_ms:performance.now(),media_time:v.currentTi
  model:window.LEO_ABR && window.LEO_ABR.modelIdentity||null,
  utc_synchronization_enabled:p.getSettings().streaming.utcSynchronization.enabled, actual_abr_strategy:p.getSettings().streaming.abr.ABRStrategy,
  auto_switch_video:p.getSettings().streaming.abr.autoSwitchBitrate.video,
+ shared_probe_active:window.LEO_SHARED_PROBE_ACTIVE===true,
 
  model_load_ms:window.LEO_ABR && window.LEO_ABR.modelLoadMs||null,
  rendered:window.__anjanRendered||[],player_errors:window.__phaseaErrors||[],
@@ -129,6 +130,8 @@ def run(args: argparse.Namespace) -> dict:
           ['playing','waiting','stalled','seeking','seeked','pause','error','loadedmetadata'].forEach(n=>v.addEventListener(n,()=>window.__phaseaEvents.push({event:n,at_ms:performance.now(),media_time:v.currentTime})));
         """)
         runtime_prewarm_ms = None
+        if getattr(args,'simulate_model_failure',False):
+            driver.execute_script('window.LEO_ABR.predict=()=>{throw new Error("diagnostic-missing-model")};')
         if args.algorithm in ['abrCMAB','abrCMABImproved'] and getattr(args,'prewarm',True):
             driver.set_script_timeout(120)
             warmed=driver.execute_async_script("""
@@ -140,17 +143,20 @@ def run(args: argparse.Namespace) -> dict:
             runtime_prewarm_ms=warmed['ms']
         scheduled_start = None
         if scenario:
-            scheduled_start = time.time()+2
+            guest_now=driver.execute_script('return Date.now()/1000')
+            scheduled_start = guest_now+2
             if getattr(args, 'align_minute', False):
-                scheduled_start = (int((time.time()+2)/60)+1)*60
+                scheduled_start = (int((guest_now+2)/60)+1)*60
             profile = {'profile_id': run_id, 'start_at_unix_s': scheduled_start}
             if scenario.get('mode') == 'trace':
                 profile.update(mode='trace', trace_offset_s=scenario['trace_offset_s'])
             else:
                 profile['stages'] = scenario['stages']
             set_schedule(profile)
-            while time.time() < scheduled_start:
-                time.sleep(min(.1, max(.001, scheduled_start-time.time())))
+            while True:
+                remaining=scheduled_start-driver.execute_script('return Date.now()/1000')
+                if remaining<=0:break
+                time.sleep(min(.1,max(.001,remaining)))
         else:
             set_profile(stages[0][1] if stages and stages[0][0] == 0 else None)
         if getattr(args, 'align_minute', False) and not scenario:
@@ -192,6 +198,12 @@ def run(args: argparse.Namespace) -> dict:
         if scenario:
             applied_profile = json.loads(docker('exec', 'dashjs-nginx', 'cat', '/run/leo-profile-applied.json'))
             assert applied_profile['profile_id'] == run_id, 'Wrong active link schedule'
+            # Raw replay changes at much more than1Hz; the bounded live status
+            # view alone cannot preserve an entire180s experiment.
+            full = docker('exec','dashjs-nginx','cat','/run/leo-profile-applied.jsonl')
+            applied_profile['applied']=[json.loads(line) for line in full.splitlines() if line.strip()]
+            applied_profile['captured_at_unix_s']=float(docker('exec','dashjs-nginx','python3','-c','import time;print(time.time())'))
+            assert applied_profile['applied'] and all(r['profile_id']==run_id for r in applied_profile['applied'])
             (out/'scenario.json').write_text(json.dumps(scenario, indent=2))
             (out/'applied-profile.json').write_text(json.dumps(applied_profile, indent=2))
             applied = [{'at_s': r.get('relative_s', 0), 'rate_mbit': r['rate_mbit'],
@@ -212,6 +224,7 @@ def run(args: argparse.Namespace) -> dict:
                    "scenario_id": scenario['id'] if scenario else None,
                    "variant": getattr(args, 'variant', None),
                    "actual_abr_strategy":final.get('actual_abr_strategy'),"auto_switch_video":final.get('auto_switch_video'),
+                   "shared_probe_active":final.get('shared_probe_active'),"diagnostic_model_failure":getattr(args,'simulate_model_failure',False),
                    "fixed_kbps":getattr(args,'fixed_kbps',-1),"neural_variant":getattr(args,'neural_variant',None),
                    "scheduled_start_unix_s": scheduled_start,
                    "controlled_stages": applied, "samples": len(samples), "mongo_documents": counts,

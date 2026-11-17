@@ -1,0 +1,200 @@
+[
+  {
+    "steps": 0,
+    "validation_qoe": -0.1680151073542094,
+    "validation_stall_s": 13.56757044594298,
+    "validation_played_s": 178.24123346211994,
+    "actions": {
+      "0": 443,
+      "1": 1004,
+      "2": 26,
+      "3": 16,
+      "4": 152
+    },
+    "training_return": null,
+    "actor_parameter_sha256": "cd2ebb1e63bbca15d287e50646645b38ad9d20d5aa2a8f565b47fee252a353fc",
+    "optimizer_updates": 0,
+    "gradient_l2": 1.2269974604042815,
+    "elapsed_wall_s": 2.0002861999964807
+  },
+  {
+    "steps": 100352,
+    "validation_qoe": -0.0064496883216213045,
+    "validation_stall_s": 17.058350823940362,
+    "validation_played_s": 177.20236546876737,
+    "actions": {
+      "0": 107,
+      "1": 622,
+      "2": 264,
+      "3": 35,
+      "4": 608
+    },
+    "training_return": -29.562381549999994,
+    "actor_parameter_sha256": "4f3e2321308702c0a523ac9373c07eac596752814b0f66e11310766fc7745704",
+    "optimizer_updates": 196,
+    "gradient_l2": 0.004655144560587463,
+    "elapsed_wall_s": 24.85594849998597
+  },
+  {
+    "steps": 200192,
+    "validation_qoe": 0.07657061459419033,
+    "validation_stall_s": 17.962183642205993,
+    "validation_played_s": 177.11370029607468,
+    "actions": {
+      "0": 96,
+      "1": 292,
+      "2": 296,
+      "3": 172,
+      "4": 780
+    },
+    "training_return": -35.232293940000005,
+    "actor_parameter_sha256": "df7169b253167ee9301ab3acbe0f1b280055a7fdc91dc0879b5d9b5cc2c608da",
+    "optimizer_updates": 391,
+    "gradient_l2": 0.01061520284986771,
+    "elapsed_wall_s": 47.791711300000316
+  },
+  {
+    "steps": 300032,
+    "validation_qoe": 0.08152381682340674,
+    "validation_stall_s": 18.775593396120755,
+    "validation_played_s": 176.43383926183142,
+    "actions": {
+      "0": 143,
+      "1": 114,
+      "2": 395,
+      "3": 148,
+      "4": 833
+    },
+    "training_return": -31.84977581,
+    "actor_parameter_sha256": "650e886a8acddc2105c61153c3b670d351e3444dedd6c779d4b4aca10a63b8ab",
+    "optimizer_updates": 586,
+    "gradient_l2": 0.00457022676409124,
+    "elapsed_wall_s": 71.88647999998648
+  },
+  {
+    "steps": 400384,
+    "validation_qoe": 0.08446505042572998,
+    "validation_stall_s": 18.415087434285642,
+    "validation_played_s": 176.77018441094057,
+    "actions": {
+      "0": 129,
+      "1": 130,
+      "2": 450,
+      "3": 115,
+      "4": 810
+    },
+    "training_return": -19.96223861,
+    "actor_parameter_sha256": "2e3a1e956c8777b6aad991acc6a62e5c53c01b99c64ecdc07e5529fa6597ec70",
+    "optimizer_updates": 782,
+    "gradient_l2": 0.0009500841093423501,
+    "elapsed_wall_s": 94.91825659997994
+  },
+  {
+    "steps": 500224,
+    "validation_qoe": 0.06824031050418077,
+    "validation_stall_s": 17.804385779160967,
+    "validation_played_s": 177.1435862529047,
+    "actions": {
+      "0": 184,
+      "1": 114,
+      "2": 542,
+      "3": 121,
+      "4": 674
+    },
+    "training_return": -27.217325759999998,
+    "actor_parameter_sha256": "4463c4338591a5fd127cf320bbc8bf0a2419a2e739cd1dcf79f6f705ed3084db",
+    "optimizer_updates": 977,
+    "gradient_l2": 0.0071386376166134346,
+    "elapsed_wall_s": 118.29469939999399
+  },
+  {
+    "steps": 600064,
+    "validation_qoe": 0.08086447415028603,
+    "validation_stall_s": 18.110453245593785,
+    "validation_played_s": 177.15256760650288,
+    "actions": {
+      "0": 157,
+      "1": 188,
+      "2": 212,
+      "3": 344,
+      "4": 734
+    },
+    "training_return": -25.23660762,
+    "actor_parameter_sha256": "2e8bcee0cf31acafabbe6e96c5ce98aedea92d54e621079416ba9d0d20b8f127",
+    "optimizer_updates": 1172,
+    "gradient_l2": 0.0026882320897850124,
+    "elapsed_wall_s": 141.40728369998396
+  },
+  {
+    "steps": 700416,
+    "validation_qoe": 0.06031564805349667,
+    "validation_stall_s": 18.079944501855028,
+    "validation_played_s": 176.86588895685895,
+    "actions": {
+      "0": 88,
+      "1": 353,
+      "3": 810,
+      "2": 5,
+      "4": 378
+    },
+    "training_return": -34.53253390999999,
+    "actor_parameter_sha256": "80f37d87b11a2ce3f2ad7700dee7266b4d50fc2ec29d4c888dca5e3dd0570240",
+    "optimizer_updates": 1368,
+    "gradient_l2": 0.001145588011068795,
+    "elapsed_wall_s": 165.10211419998086
+  },
+  {
+    "steps": 800256,
+    "validation_qoe": -0.017163930811048483,
+    "validation_stall_s": 16.57605015432854,
+    "validation_played_s": 177.2302128430129,
+    "actions": {
+      "0": 236,
+      "1": 541,
+      "3": 524,
+      "2": 9,
+      "4": 326
+    },
+    "training_return": -24.53008429,
+    "actor_parameter_sha256": "081003797e0fd5d047c30b88e805358d60a3ab645de90d604ca9b91fd09b3d57",
+    "optimizer_updates": 1563,
+    "gradient_l2": 0.0015636931726817687,
+    "elapsed_wall_s": 188.2695967000036
+  },
+  {
+    "steps": 900096,
+    "validation_qoe": -0.07610951467090825,
+    "validation_stall_s": 15.047994756805432,
+    "validation_played_s": 178.09746109037576,
+    "actions": {
+      "0": 335,
+      "1": 710,
+      "2": 63,
+      "3": 273,
+      "4": 258
+    },
+    "training_return": -25.424348100000003,
+    "actor_parameter_sha256": "fc2cf87426a2cf90e81782004013308cdc6a31931b981987b4eabb09a72550e8",
+    "optimizer_updates": 1758,
+    "gradient_l2": 0.002435109575060904,
+    "elapsed_wall_s": 211.3582492999849
+  },
+  {
+    "steps": 1000448,
+    "validation_qoe": -0.050187690154440585,
+    "validation_stall_s": 16.37013060503585,
+    "validation_played_s": 177.2385827607294,
+    "actions": {
+      "0": 314,
+      "1": 533,
+      "2": 161,
+      "3": 256,
+      "4": 372
+    },
+    "training_return": -43.308112090000016,
+    "actor_parameter_sha256": "94f67096b371c74c6f68216189ef0e92ce1253bb6998596d2556d6fa50c1620f",
+    "optimizer_updates": 1954,
+    "gradient_l2": 0.007589661505352105,
+    "elapsed_wall_s": 234.52305029999116
+  }
+]

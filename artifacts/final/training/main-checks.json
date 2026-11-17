@@ -1,0 +1,145 @@
+{
+  "status": "PASS",
+  "runs": 10,
+  "interactions": 10004480,
+  "total_wall_s": 2659.986693999992,
+  "fresh_seeds": [
+    47,
+    71,
+    101,
+    131,
+    167
+  ],
+  "selected_seeds": {
+    "conventional": 167,
+    "leo": 101
+  },
+  "late_validation_trend": {
+    "conventional": -0.03468767772116132,
+    "leo": -0.0043945652579111035
+  },
+  "all_improve_initialization": true,
+  "extension_signal": false,
+  "records": [
+    {
+      "kind": "conventional",
+      "seed": 101,
+      "steps": 1000448,
+      "selected_step": 500224,
+      "initial_qoe": -0.169034628235737,
+      "selected_qoe": 0.0765794696251404,
+      "final_qoe": 0.05615292303957472,
+      "last3_mean_qoe": 0.041682683949400896,
+      "preceding3_mean_qoe": 0.057356004090479085,
+      "wall_s": 233.96676060001482
+    },
+    {
+      "kind": "conventional",
+      "seed": 131,
+      "steps": 1000448,
+      "selected_step": 400384,
+      "initial_qoe": -0.16334105858893097,
+      "selected_qoe": 0.09225172041951381,
+      "final_qoe": 0.04779352699712402,
+      "last3_mean_qoe": 0.05464958449751781,
+      "preceding3_mean_qoe": 0.06072384095872529,
+      "wall_s": 250.72812539999723
+    },
+    {
+      "kind": "conventional",
+      "seed": 167,
+      "steps": 1000448,
+      "selected_step": 400384,
+      "initial_qoe": -0.16824572278293268,
+      "selected_qoe": 0.081715551492176,
+      "final_qoe": 0.06658831993196808,
+      "last3_mean_qoe": 0.048326200291434786,
+      "preceding3_mean_qoe": 0.06553031813566891,
+      "wall_s": 250.36272049997933
+    },
+    {
+      "kind": "conventional",
+      "seed": 47,
+      "steps": 1000448,
+      "selected_step": 400384,
+      "initial_qoe": -0.1680151073542094,
+      "selected_qoe": 0.08446505042572998,
+      "final_qoe": -0.050187690154440585,
+      "last3_mean_qoe": -0.04782037854546577,
+      "preceding3_mean_qoe": 0.06980681090265449,
+      "wall_s": 234.53945739998017
+    },
+    {
+      "kind": "conventional",
+      "seed": 71,
+      "steps": 1000448,
+      "selected_step": 600064,
+      "initial_qoe": -0.16530994783410852,
+      "selected_qoe": 0.05557901599967332,
+      "final_qoe": 0.03979873215183608,
+      "last3_mean_qoe": 0.011115877899098273,
+      "preceding3_mean_qoe": 0.02797538261026485,
+      "wall_s": 235.39424530000542
+    },
+    {
+      "kind": "leo",
+      "seed": 101,
+      "steps": 1000448,
+      "selected_step": 500224,
+      "initial_qoe": -0.17414727406697572,
+      "selected_qoe": 0.059100702457033284,
+      "final_qoe": 0.010125191492622842,
+      "last3_mean_qoe": -0.029519403958972328,
+      "preceding3_mean_qoe": 0.012158718575391386,
+      "wall_s": 288.06637200000114
+    },
+    {
+      "kind": "leo",
+      "seed": 131,
+      "steps": 1000448,
+      "selected_step": 400384,
+      "initial_qoe": -0.17495332336073802,
+      "selected_qoe": 0.07406075826127669,
+      "final_qoe": -0.09326891217072979,
+      "last3_mean_qoe": -0.0880558070133232,
+      "preceding3_mean_qoe": -0.023078682592335618,
+      "wall_s": 304.8371409000247
+    },
+    {
+      "kind": "leo",
+      "seed": 167,
+      "steps": 1000448,
+      "selected_step": 300032,
+      "initial_qoe": -0.16992691673949537,
+      "selected_qoe": 0.07721134840466741,
+      "final_qoe": 0.013606873260587002,
+      "last3_mean_qoe": 0.011127438055164052,
+      "preceding3_mean_qoe": -0.011511851157812421,
+      "wall_s": 285.8615424000018
+    },
+    {
+      "kind": "leo",
+      "seed": 47,
+      "steps": 1000448,
+      "selected_step": 400384,
+      "initial_qoe": -0.17393596897264063,
+      "selected_qoe": 0.032641233841692374,
+      "final_qoe": -0.057840540865794154,
+      "last3_mean_qoe": -0.05713022417128886,
+      "preceding3_mean_qoe": -0.049378813094621825,
+      "wall_s": 287.6428952999995
+    },
+    {
+      "kind": "leo",
+      "seed": 71,
+      "steps": 1000448,
+      "selected_step": 300032,
+      "initial_qoe": -0.1680896401356594,
+      "selected_qoe": 0.05765784178631452,
+      "final_qoe": -0.009719723901982951,
+      "last3_mean_qoe": -0.0051138292215914035,
+      "preceding3_mean_qoe": -0.07490837175107774,
+      "wall_s": 288.5874341999879
+    }
+  ]
+}

@@ -40,6 +40,7 @@ def main():
     last = None
     profile_file = Path('/run/leo-link-profile.json')
     log_file = Path('/run/leo-profile-applied.json')
+    full_log = Path('/run/leo-profile-applied.jsonl')
     identity = None
     applied = []
     last_trace_log = -1
@@ -71,6 +72,7 @@ def main():
         new_identity = profile_id != identity
         if new_identity:
             applied, identity = [], profile_id
+            full_log.write_text('')
         changed = current != last
         if changed:
             rate, delay, loss = current
@@ -85,6 +87,10 @@ def main():
                      'rate_mbit': current[0], 'delay_ms': current[1], 'loss_percent': current[2]}
             if profile and 'start_at_unix_s' in profile:
                 event['relative_s'] = event['at_unix_s']-profile['start_at_unix_s']
+            if profile and profile.get('mode') == 'trace':
+                event.update(source_trace_at_s=at,source_trace_index=index)
+            with full_log.open('a') as stream:
+                stream.write(json.dumps(event,separators=(',',':'))+'\n')
             applied.append(event)
             applied = applied[-256:]
             temp = log_file.with_suffix('.new')

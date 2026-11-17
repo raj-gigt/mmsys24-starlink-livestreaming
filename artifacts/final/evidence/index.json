@@ -1,4 +1,130 @@
 {
+  "phasea-abrAnjanRL-20261117T082010-96baa7": {
+    "bytes": 613828,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T082010-96baa7.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/validation/neural-v1/invalid-runs.json",
+    "scientific_status": "retained_unscored_retry_same_case",
+    "sha256": "952d6e4cbd5a4a2fe2255060bff62b3ea75ca483c98225f8cd463b649a590ca3"
+  },
+  "phasea-abrAnjanRL-20261117T082241-38275b": {
+    "bytes": 728420,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T082241-38275b.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/validation/neural-v1/runs.json",
+    "scientific_status": "complete",
+    "sha256": "75bc65ba8389662704670be2fbe41ab9eb986d25ff0ac93929a79c1fd11939d7"
+  },
+  "phasea-abrAnjanRL-20261117T082438-ed5647": {
+    "bytes": 589200,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T082438-ed5647.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/validation/neural-v1/invalid-runs.json",
+    "scientific_status": "retained_unscored_retry_same_case",
+    "sha256": "6476ca02ed68af888c90c79022a70441b79d2b93117f9110f21a63f458b181a3"
+  },
+  "phasea-abrAnjanRL-20261117T082638-1a0889": {
+    "bytes": 715418,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T082638-1a0889.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/validation/neural-v1/runs.json",
+    "scientific_status": "complete",
+    "sha256": "b63100eea262e1e48f71796956fdb9b6653c3c6eec0b13f9ff6678b28371e7e2"
+  },
+  "phasea-abrAnjanRL-20261117T082838-4688b2": {
+    "bytes": 600047,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T082838-4688b2.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/validation/neural-v1/invalid-runs.json",
+    "scientific_status": "retained_unscored_retry_same_case",
+    "sha256": "34a5d6a37874c7b957211ff8d049dcf3b5a35f54eca1089febb5df0ae43bdf13"
+  },
+  "phasea-abrAnjanRL-20261117T083038-2cadcb": {
+    "bytes": 740519,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T083038-2cadcb.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/validation/neural-v1/runs.json",
+    "scientific_status": "complete",
+    "sha256": "fc162cf8377c953c5e1a07893d6c6ff7b94a5b38ac089991467f98cf6ccb3171"
+  },
+  "phasea-abrAnjanRL-20261117T083429-343ed4": {
+    "bytes": 614851,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T083429-343ed4.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/validation/neural-v1/runs.json",
+    "scientific_status": "complete",
+    "sha256": "2134d351558e915a8c9346d3fbb15b31d222b78ffd848820c770fe1a54ca98d5"
+  },
+  "phasea-abrAnjanRL-20261117T083648-b0a700": {
+    "bytes": 583060,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T083648-b0a700.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/validation/neural-v1/runs.json",
+    "scientific_status": "complete",
+    "sha256": "b758494d59b16bf7417414aa8e657d55a29d65d7dfc722558bea46d0f6bcfbb1"
+  },
+  "phasea-abrAnjanRL-20261117T083838-d1fbd0": {
+    "bytes": 610213,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T083838-d1fbd0.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/validation/neural-v1/runs.json",
+    "scientific_status": "complete",
+    "sha256": "bca640d37479a28ff9c64ce7908f73eb88f4c74afbb4a363ff469b3db72fbf3b"
+  },
   "phasea-abrAnjanSimple-20261117T052017-94e776": {
     "bytes": 44690,
     "file": "artifacts/final/evidence/phasea-abrAnjanSimple-20261117T052017-94e776.json.gz",

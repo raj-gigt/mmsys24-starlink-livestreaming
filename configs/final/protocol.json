@@ -16,7 +16,8 @@
     "catchup": "liveCatchupModeLoLP",
     "align_source_and_wall_clock": true,
     "clock_mode": "host",
-    "clock_scope": "Explicit hostClock=1 only in the single-WSL-host emulator; original externalUTC remains default for remote clients"
+    "clock_scope": "Explicit hostClock=1 only in the single-WSL-host emulator; original externalUTC remains default for remote clients",
+    "phase_reference": "Browser guest epoch; shaper/source/player share guest clock. Windows dispatch clock is diagnostic only."
   },
   "selection": {
     "aggregate": "equal weight per mandatory family, equal case weight within family",
@@ -37,5 +38,11 @@
   },
   "sensitivity": "rescore stall,variation,latency coefficients at .5x and 2x one at a time; never select final score by test outcome",
   "test_access": "explicit frozen-evaluation flag only; no test performance viewed yet",
-  "initialization_revision": "All policies prewarmed; external clock synchronization removed equally after pre-ABR timing diagnosis. Startup coefficient and physical gates unchanged."
+  "initialization_revision": "All policies prewarmed; external clock synchronization removed equally after pre-ABR timing diagnosis. Startup coefficient and physical gates unchanged.",
+  "clock_stability": {
+    "guest_ntp": "Temporarily pause systemd-timesyncd during measured test matrix; restore previous active state afterwards",
+    "sample_check": "Epoch/monotonic elapsed must agree within0.1s",
+    "reason": "Recorded0.41s clock steps while NTP active; not an ABR failure",
+    "infrastructure_retry": "Up to3 attempts only for explicit dual-clock inconsistency; all invalid recordings retained; no poor-policy exclusion"
+  }
 }

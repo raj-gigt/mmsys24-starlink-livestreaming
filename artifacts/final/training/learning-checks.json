@@ -1,0 +1,117 @@
+{
+  "scope": "Training/validation only; actual browser comparison required",
+  "runs": [
+    {
+      "kind": "conventional",
+      "seed": 101,
+      "collected_steps": 1000448,
+      "selected_step": 500224,
+      "validation_qoe": 0.0765794696251404,
+      "initial_validation_qoe": -0.169034628235737,
+      "gain_after_rl": 0.2456140978608774,
+      "wall_s": 233.96676060001482,
+      "representative": false
+    },
+    {
+      "kind": "conventional",
+      "seed": 131,
+      "collected_steps": 1000448,
+      "selected_step": 400384,
+      "validation_qoe": 0.09225172041951381,
+      "initial_validation_qoe": -0.16334105858893097,
+      "gain_after_rl": 0.2555927790084448,
+      "wall_s": 250.72812539999723,
+      "representative": false
+    },
+    {
+      "kind": "conventional",
+      "seed": 167,
+      "collected_steps": 1000448,
+      "selected_step": 400384,
+      "validation_qoe": 0.081715551492176,
+      "initial_validation_qoe": -0.16824572278293268,
+      "gain_after_rl": 0.24996127427510867,
+      "wall_s": 250.36272049997933,
+      "representative": true
+    },
+    {
+      "kind": "conventional",
+      "seed": 47,
+      "collected_steps": 1000448,
+      "selected_step": 400384,
+      "validation_qoe": 0.08446505042572998,
+      "initial_validation_qoe": -0.1680151073542094,
+      "gain_after_rl": 0.2524801577799394,
+      "wall_s": 234.53945739998017,
+      "representative": false
+    },
+    {
+      "kind": "conventional",
+      "seed": 71,
+      "collected_steps": 1000448,
+      "selected_step": 600064,
+      "validation_qoe": 0.05557901599967332,
+      "initial_validation_qoe": -0.16530994783410852,
+      "gain_after_rl": 0.22088896383378184,
+      "wall_s": 235.39424530000542,
+      "representative": false
+    },
+    {
+      "kind": "leo",
+      "seed": 101,
+      "collected_steps": 1000448,
+      "selected_step": 500224,
+      "validation_qoe": 0.059100702457033284,
+      "initial_validation_qoe": -0.17414727406697572,
+      "gain_after_rl": 0.233247976524009,
+      "wall_s": 288.06637200000114,
+      "representative": true
+    },
+    {
+      "kind": "leo",
+      "seed": 131,
+      "collected_steps": 1000448,
+      "selected_step": 400384,
+      "validation_qoe": 0.07406075826127669,
+      "initial_validation_qoe": -0.17495332336073802,
+      "gain_after_rl": 0.24901408162201472,
+      "wall_s": 304.8371409000247,
+      "representative": false
+    },
+    {
+      "kind": "leo",
+      "seed": 167,
+      "collected_steps": 1000448,
+      "selected_step": 300032,
+      "validation_qoe": 0.07721134840466741,
+      "initial_validation_qoe": -0.16992691673949537,
+      "gain_after_rl": 0.24713826514416276,
+      "wall_s": 285.8615424000018,
+      "representative": false
+    },
+    {
+      "kind": "leo",
+      "seed": 47,
+      "collected_steps": 1000448,
+      "selected_step": 400384,
+      "validation_qoe": 0.032641233841692374,
+      "initial_validation_qoe": -0.17393596897264063,
+      "gain_after_rl": 0.206577202814333,
+      "wall_s": 287.6428952999995,
+      "representative": false
+    },
+    {
+      "kind": "leo",
+      "seed": 71,
+      "collected_steps": 1000448,
+      "selected_step": 300032,
+      "validation_qoe": 0.05765784178631452,
+      "initial_validation_qoe": -0.1680896401356594,
+      "gain_after_rl": 0.22574748192197394,
+      "wall_s": 288.5874341999879,
+      "representative": false
+    }
+  ],
+  "all_five_seeds_per_kind": true,
+  "note": "A selected step0 checkpoint is retained and explicitly counted; teacher fidelity is not ABR accuracy."
+}

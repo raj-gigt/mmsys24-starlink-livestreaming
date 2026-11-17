@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "scope": "Infrastructure-only development trace0; no video/controller or held-out policy performance",
+  "full_events": 479,
+  "bounded_status_events": 256,
+  "every_source_index_and_applied_tuple_verified": true,
+  "full_log_sha256": "45d4217c1da7a01cd370b880d57c513d2f17fe648e9238f9b7a5fbb07eabb894",
+  "covered_trace_s": [
+    0,
+    6.693131923675537
+  ]
+}

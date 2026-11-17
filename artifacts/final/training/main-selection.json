@@ -1,0 +1,727 @@
+{
+  "rule": "Median validation seed per observation type, each seed uses its best validation checkpoint",
+  "selected": {
+    "conventional": {
+      "created_utc": "2026-11-17T06:44:49.073998+00:00",
+      "kind": "conventional",
+      "config": "d",
+      "seed": 167,
+      "hyperparameters": {
+        "learning_rate": 0.0001,
+        "n_steps": 64,
+        "ent_coef": 0.02
+      },
+      "steps": 1000448,
+      "requested_steps": 1000000,
+      "wall_s": 250.36272049997933,
+      "device": "cpu",
+      "initialization": {
+        "samples": 8000,
+        "epochs": 10,
+        "teacher": "causal throughput/buffer rule; training scenarios only",
+        "teacher_labels": {
+          "0": 2832,
+          "1": 1902,
+          "2": 640,
+          "3": 583,
+          "4": 2043
+        },
+        "loss": [
+          1.746312886238098,
+          1.208534242630005,
+          0.9850799946784973,
+          0.8124039902687072,
+          0.7042738151550293,
+          0.6329399061203003,
+          0.5778589944839477,
+          0.5346886270046234,
+          0.5045071318149567,
+          0.4757332332134247
+        ]
+      },
+      "input_count": 36,
+      "architecture": [
+        36,
+        64,
+        64,
+        8
+      ],
+      "selected_step": 400384,
+      "selected_validation_qoe": 0.081715551492176,
+      "checkpoint_sha256": "656fcf08eef6d4aa81d1f315389646631789c421738317cd1316e12092e79ff2",
+      "selection": "Maximum equal-family mean validation QoE, checkpoints including warmstart; no test access",
+      "scope": "Player-compatible A2C adaptation inspired by Pensieve/Gelato/Plume; not their published pretrained model",
+      "environment_sha256": "087e7ba2b4987c9a0c7ce4aa8f0a0ac5270a79f7f7ce1c2805f5efa02aba4b4c",
+      "simulator_config_sha256": "2562c0809dbf4cb4adf0e297ff283f90002d8dc44a7b1f3c3c3ec8c9546039e5",
+      "data_identity": {
+        "data/manifests/train.json": "f739247bf5d3dcb40eba64c44ffed7f8bf44f499120fe1cabc2966e6ab5da2c9",
+        "data/manifests/validation.json": "615f1439ac5f32a018ae821d949ccbdaa45d468ea35d0cf7ae230f7f84d70fff",
+        "data/manifests/media.json": "c546cd7bd3054486de1f68f023bbf34a010ebfebefa0776524443960b988b552",
+        "rl/features.py": "3bb2804949524529bf87df080076bf35114968ac66adb26c0c6f52e2c3273272",
+        "configs/final/neural-interface.json": "9be1d48edb5c990f3116b487f54443154d5df5adb3855955015c3db2445ba618"
+      }
+    },
+    "leo": {
+      "created_utc": "2026-11-17T06:31:22.537344+00:00",
+      "kind": "leo",
+      "config": "d",
+      "seed": 101,
+      "hyperparameters": {
+        "learning_rate": 0.0001,
+        "n_steps": 64,
+        "ent_coef": 0.02
+      },
+      "steps": 1000448,
+      "requested_steps": 1000000,
+      "wall_s": 288.06637200000114,
+      "device": "cpu",
+      "initialization": {
+        "samples": 8000,
+        "epochs": 10,
+        "teacher": "causal throughput/buffer rule; training scenarios only",
+        "teacher_labels": {
+          "0": 2832,
+          "1": 1902,
+          "2": 640,
+          "3": 583,
+          "4": 2043
+        },
+        "loss": [
+          1.6455832195281983,
+          1.1793143320083619,
+          0.9901699085235596,
+          0.8602652997970581,
+          0.753831039428711,
+          0.6698359808921814,
+          0.6084045443534851,
+          0.5601383662223816,
+          0.5286278414726258,
+          0.4974984149932861
+        ]
+      },
+      "input_count": 64,
+      "architecture": [
+        64,
+        64,
+        64,
+        8
+      ],
+      "selected_step": 500224,
+      "selected_validation_qoe": 0.059100702457033284,
+      "checkpoint_sha256": "ddb03478f6c7e57a08c6c48ac9f002eb06c45d550a738b3ae504ee09d401ad6c",
+      "selection": "Maximum equal-family mean validation QoE, checkpoints including warmstart; no test access",
+      "scope": "Player-compatible A2C adaptation inspired by Pensieve/Gelato/Plume; not their published pretrained model",
+      "environment_sha256": "087e7ba2b4987c9a0c7ce4aa8f0a0ac5270a79f7f7ce1c2805f5efa02aba4b4c",
+      "simulator_config_sha256": "2562c0809dbf4cb4adf0e297ff283f90002d8dc44a7b1f3c3c3ec8c9546039e5",
+      "data_identity": {
+        "data/manifests/train.json": "f739247bf5d3dcb40eba64c44ffed7f8bf44f499120fe1cabc2966e6ab5da2c9",
+        "data/manifests/validation.json": "615f1439ac5f32a018ae821d949ccbdaa45d468ea35d0cf7ae230f7f84d70fff",
+        "data/manifests/media.json": "c546cd7bd3054486de1f68f023bbf34a010ebfebefa0776524443960b988b552",
+        "rl/features.py": "3bb2804949524529bf87df080076bf35114968ac66adb26c0c6f52e2c3273272",
+        "configs/final/neural-interface.json": "9be1d48edb5c990f3116b487f54443154d5df5adb3855955015c3db2445ba618"
+      }
+    }
+  },
+  "all_runs": [
+    {
+      "created_utc": "2026-11-17T06:09:07.909772+00:00",
+      "kind": "conventional",
+      "config": "d",
+      "seed": 47,
+      "hyperparameters": {
+        "learning_rate": 0.0001,
+        "n_steps": 64,
+        "ent_coef": 0.02
+      },
+      "steps": 1000448,
+      "requested_steps": 1000000,
+      "wall_s": 234.53945739998017,
+      "device": "cpu",
+      "initialization": {
+        "samples": 8000,
+        "epochs": 10,
+        "teacher": "causal throughput/buffer rule; training scenarios only",
+        "teacher_labels": {
+          "0": 2832,
+          "1": 1902,
+          "2": 640,
+          "3": 583,
+          "4": 2043
+        },
+        "loss": [
+          1.718380470275879,
+          1.1950172128677368,
+          0.960894268989563,
+          0.7944473257064819,
+          0.6894799432754517,
+          0.6208775510787964,
+          0.5686739664077759,
+          0.5280767886638641,
+          0.5013671677112579,
+          0.47558543443679807
+        ]
+      },
+      "input_count": 36,
+      "architecture": [
+        36,
+        64,
+        64,
+        8
+      ],
+      "selected_step": 400384,
+      "selected_validation_qoe": 0.08446505042572998,
+      "checkpoint_sha256": "d93db86202daf432beb41f47719d6bfcb269e8cae19fccfefa62979c61803197",
+      "selection": "Maximum equal-family mean validation QoE, checkpoints including warmstart; no test access",
+      "scope": "Player-compatible A2C adaptation inspired by Pensieve/Gelato/Plume; not their published pretrained model",
+      "environment_sha256": "087e7ba2b4987c9a0c7ce4aa8f0a0ac5270a79f7f7ce1c2805f5efa02aba4b4c",
+      "simulator_config_sha256": "2562c0809dbf4cb4adf0e297ff283f90002d8dc44a7b1f3c3c3ec8c9546039e5",
+      "data_identity": {
+        "data/manifests/train.json": "f739247bf5d3dcb40eba64c44ffed7f8bf44f499120fe1cabc2966e6ab5da2c9",
+        "data/manifests/validation.json": "615f1439ac5f32a018ae821d949ccbdaa45d468ea35d0cf7ae230f7f84d70fff",
+        "data/manifests/media.json": "c546cd7bd3054486de1f68f023bbf34a010ebfebefa0776524443960b988b552",
+        "rl/features.py": "3bb2804949524529bf87df080076bf35114968ac66adb26c0c6f52e2c3273272",
+        "configs/final/neural-interface.json": "9be1d48edb5c990f3116b487f54443154d5df5adb3855955015c3db2445ba618"
+      }
+    },
+    {
+      "created_utc": "2026-11-17T06:13:55.742563+00:00",
+      "kind": "leo",
+      "config": "d",
+      "seed": 47,
+      "hyperparameters": {
+        "learning_rate": 0.0001,
+        "n_steps": 64,
+        "ent_coef": 0.02
+      },
+      "steps": 1000448,
+      "requested_steps": 1000000,
+      "wall_s": 287.6428952999995,
+      "device": "cpu",
+      "initialization": {
+        "samples": 8000,
+        "epochs": 10,
+        "teacher": "causal throughput/buffer rule; training scenarios only",
+        "teacher_labels": {
+          "0": 2832,
+          "1": 1902,
+          "2": 640,
+          "3": 583,
+          "4": 2043
+        },
+        "loss": [
+          1.6496936712265016,
+          1.17650732421875,
+          0.9972626399993897,
+          0.856884711265564,
+          0.7485562005043029,
+          0.6703401179313659,
+          0.6119121594429016,
+          0.5635602760314942,
+          0.5312250757217407,
+          0.4993329277038574
+        ]
+      },
+      "input_count": 64,
+      "architecture": [
+        64,
+        64,
+        64,
+        8
+      ],
+      "selected_step": 400384,
+      "selected_validation_qoe": 0.032641233841692374,
+      "checkpoint_sha256": "08879694ba07a175a135ba1ee3016fd7e58cd070c3ad91c3458bb6ab9063a668",
+      "selection": "Maximum equal-family mean validation QoE, checkpoints including warmstart; no test access",
+      "scope": "Player-compatible A2C adaptation inspired by Pensieve/Gelato/Plume; not their published pretrained model",
+      "environment_sha256": "087e7ba2b4987c9a0c7ce4aa8f0a0ac5270a79f7f7ce1c2805f5efa02aba4b4c",
+      "simulator_config_sha256": "2562c0809dbf4cb4adf0e297ff283f90002d8dc44a7b1f3c3c3ec8c9546039e5",
+      "data_identity": {
+        "data/manifests/train.json": "f739247bf5d3dcb40eba64c44ffed7f8bf44f499120fe1cabc2966e6ab5da2c9",
+        "data/manifests/validation.json": "615f1439ac5f32a018ae821d949ccbdaa45d468ea35d0cf7ae230f7f84d70fff",
+        "data/manifests/media.json": "c546cd7bd3054486de1f68f023bbf34a010ebfebefa0776524443960b988b552",
+        "rl/features.py": "3bb2804949524529bf87df080076bf35114968ac66adb26c0c6f52e2c3273272",
+        "configs/final/neural-interface.json": "9be1d48edb5c990f3116b487f54443154d5df5adb3855955015c3db2445ba618"
+      }
+    },
+    {
+      "created_utc": "2026-11-17T06:17:51.336218+00:00",
+      "kind": "conventional",
+      "config": "d",
+      "seed": 71,
+      "hyperparameters": {
+        "learning_rate": 0.0001,
+        "n_steps": 64,
+        "ent_coef": 0.02
+      },
+      "steps": 1000448,
+      "requested_steps": 1000000,
+      "wall_s": 235.39424530000542,
+      "device": "cpu",
+      "initialization": {
+        "samples": 8000,
+        "epochs": 10,
+        "teacher": "causal throughput/buffer rule; training scenarios only",
+        "teacher_labels": {
+          "0": 2832,
+          "1": 1902,
+          "2": 640,
+          "3": 583,
+          "4": 2043
+        },
+        "loss": [
+          1.7251036920547484,
+          1.204735008239746,
+          0.9721940336227417,
+          0.8025908722877503,
+          0.6966462125778198,
+          0.6263809127807617,
+          0.57178169298172,
+          0.5291139876842499,
+          0.5006247348785401,
+          0.47391676664352417
+        ]
+      },
+      "input_count": 36,
+      "architecture": [
+        36,
+        64,
+        64,
+        8
+      ],
+      "selected_step": 600064,
+      "selected_validation_qoe": 0.05557901599967332,
+      "checkpoint_sha256": "bd45abb429f10a99e586d56d7dc55f166d947444c235bf2bf7a085c341a7e426",
+      "selection": "Maximum equal-family mean validation QoE, checkpoints including warmstart; no test access",
+      "scope": "Player-compatible A2C adaptation inspired by Pensieve/Gelato/Plume; not their published pretrained model",
+      "environment_sha256": "087e7ba2b4987c9a0c7ce4aa8f0a0ac5270a79f7f7ce1c2805f5efa02aba4b4c",
+      "simulator_config_sha256": "2562c0809dbf4cb4adf0e297ff283f90002d8dc44a7b1f3c3c3ec8c9546039e5",
+      "data_identity": {
+        "data/manifests/train.json": "f739247bf5d3dcb40eba64c44ffed7f8bf44f499120fe1cabc2966e6ab5da2c9",
+        "data/manifests/validation.json": "615f1439ac5f32a018ae821d949ccbdaa45d468ea35d0cf7ae230f7f84d70fff",
+        "data/manifests/media.json": "c546cd7bd3054486de1f68f023bbf34a010ebfebefa0776524443960b988b552",
+        "rl/features.py": "3bb2804949524529bf87df080076bf35114968ac66adb26c0c6f52e2c3273272",
+        "configs/final/neural-interface.json": "9be1d48edb5c990f3116b487f54443154d5df5adb3855955015c3db2445ba618"
+      }
+    },
+    {
+      "created_utc": "2026-11-17T06:22:40.113849+00:00",
+      "kind": "leo",
+      "config": "d",
+      "seed": 71,
+      "hyperparameters": {
+        "learning_rate": 0.0001,
+        "n_steps": 64,
+        "ent_coef": 0.02
+      },
+      "steps": 1000448,
+      "requested_steps": 1000000,
+      "wall_s": 288.5874341999879,
+      "device": "cpu",
+      "initialization": {
+        "samples": 8000,
+        "epochs": 10,
+        "teacher": "causal throughput/buffer rule; training scenarios only",
+        "teacher_labels": {
+          "0": 2832,
+          "1": 1902,
+          "2": 640,
+          "3": 583,
+          "4": 2043
+        },
+        "loss": [
+          1.6723957595825196,
+          1.183602168083191,
+          0.977801531791687,
+          0.8380184960365296,
+          0.7312651042938232,
+          0.6563424983024597,
+          0.6011789422035217,
+          0.5565293560028076,
+          0.5275936489105224,
+          0.496489278793335
+        ]
+      },
+      "input_count": 64,
+      "architecture": [
+        64,
+        64,
+        64,
+        8
+      ],
+      "selected_step": 300032,
+      "selected_validation_qoe": 0.05765784178631452,
+      "checkpoint_sha256": "66746ec91594500ccc27329367d732962351f79c9896b44448c867806717ae33",
+      "selection": "Maximum equal-family mean validation QoE, checkpoints including warmstart; no test access",
+      "scope": "Player-compatible A2C adaptation inspired by Pensieve/Gelato/Plume; not their published pretrained model",
+      "environment_sha256": "087e7ba2b4987c9a0c7ce4aa8f0a0ac5270a79f7f7ce1c2805f5efa02aba4b4c",
+      "simulator_config_sha256": "2562c0809dbf4cb4adf0e297ff283f90002d8dc44a7b1f3c3c3ec8c9546039e5",
+      "data_identity": {
+        "data/manifests/train.json": "f739247bf5d3dcb40eba64c44ffed7f8bf44f499120fe1cabc2966e6ab5da2c9",
+        "data/manifests/validation.json": "615f1439ac5f32a018ae821d949ccbdaa45d468ea35d0cf7ae230f7f84d70fff",
+        "data/manifests/media.json": "c546cd7bd3054486de1f68f023bbf34a010ebfebefa0776524443960b988b552",
+        "rl/features.py": "3bb2804949524529bf87df080076bf35114968ac66adb26c0c6f52e2c3273272",
+        "configs/final/neural-interface.json": "9be1d48edb5c990f3116b487f54443154d5df5adb3855955015c3db2445ba618"
+      }
+    },
+    {
+      "created_utc": "2026-11-17T06:26:34.274776+00:00",
+      "kind": "conventional",
+      "config": "d",
+      "seed": 101,
+      "hyperparameters": {
+        "learning_rate": 0.0001,
+        "n_steps": 64,
+        "ent_coef": 0.02
+      },
+      "steps": 1000448,
+      "requested_steps": 1000000,
+      "wall_s": 233.96676060001482,
+      "device": "cpu",
+      "initialization": {
+        "samples": 8000,
+        "epochs": 10,
+        "teacher": "causal throughput/buffer rule; training scenarios only",
+        "teacher_labels": {
+          "0": 2832,
+          "1": 1902,
+          "2": 640,
+          "3": 583,
+          "4": 2043
+        },
+        "loss": [
+          1.7088639516830444,
+          1.1962680206298828,
+          0.9674065146446228,
+          0.7991832971572876,
+          0.6916451630592346,
+          0.6212395610809326,
+          0.567787232875824,
+          0.5255449216365814,
+          0.4974957168102264,
+          0.47093186950683597
+        ]
+      },
+      "input_count": 36,
+      "architecture": [
+        36,
+        64,
+        64,
+        8
+      ],
+      "selected_step": 500224,
+      "selected_validation_qoe": 0.0765794696251404,
+      "checkpoint_sha256": "8666af3145dded96e53a30b4838fa12ad6db590033e78ead823a19c368d20cf9",
+      "selection": "Maximum equal-family mean validation QoE, checkpoints including warmstart; no test access",
+      "scope": "Player-compatible A2C adaptation inspired by Pensieve/Gelato/Plume; not their published pretrained model",
+      "environment_sha256": "087e7ba2b4987c9a0c7ce4aa8f0a0ac5270a79f7f7ce1c2805f5efa02aba4b4c",
+      "simulator_config_sha256": "2562c0809dbf4cb4adf0e297ff283f90002d8dc44a7b1f3c3c3ec8c9546039e5",
+      "data_identity": {
+        "data/manifests/train.json": "f739247bf5d3dcb40eba64c44ffed7f8bf44f499120fe1cabc2966e6ab5da2c9",
+        "data/manifests/validation.json": "615f1439ac5f32a018ae821d949ccbdaa45d468ea35d0cf7ae230f7f84d70fff",
+        "data/manifests/media.json": "c546cd7bd3054486de1f68f023bbf34a010ebfebefa0776524443960b988b552",
+        "rl/features.py": "3bb2804949524529bf87df080076bf35114968ac66adb26c0c6f52e2c3273272",
+        "configs/final/neural-interface.json": "9be1d48edb5c990f3116b487f54443154d5df5adb3855955015c3db2445ba618"
+      }
+    },
+    {
+      "created_utc": "2026-11-17T06:31:22.537344+00:00",
+      "kind": "leo",
+      "config": "d",
+      "seed": 101,
+      "hyperparameters": {
+        "learning_rate": 0.0001,
+        "n_steps": 64,
+        "ent_coef": 0.02
+      },
+      "steps": 1000448,
+      "requested_steps": 1000000,
+      "wall_s": 288.06637200000114,
+      "device": "cpu",
+      "initialization": {
+        "samples": 8000,
+        "epochs": 10,
+        "teacher": "causal throughput/buffer rule; training scenarios only",
+        "teacher_labels": {
+          "0": 2832,
+          "1": 1902,
+          "2": 640,
+          "3": 583,
+          "4": 2043
+        },
+        "loss": [
+          1.6455832195281983,
+          1.1793143320083619,
+          0.9901699085235596,
+          0.8602652997970581,
+          0.753831039428711,
+          0.6698359808921814,
+          0.6084045443534851,
+          0.5601383662223816,
+          0.5286278414726258,
+          0.4974984149932861
+        ]
+      },
+      "input_count": 64,
+      "architecture": [
+        64,
+        64,
+        64,
+        8
+      ],
+      "selected_step": 500224,
+      "selected_validation_qoe": 0.059100702457033284,
+      "checkpoint_sha256": "ddb03478f6c7e57a08c6c48ac9f002eb06c45d550a738b3ae504ee09d401ad6c",
+      "selection": "Maximum equal-family mean validation QoE, checkpoints including warmstart; no test access",
+      "scope": "Player-compatible A2C adaptation inspired by Pensieve/Gelato/Plume; not their published pretrained model",
+      "environment_sha256": "087e7ba2b4987c9a0c7ce4aa8f0a0ac5270a79f7f7ce1c2805f5efa02aba4b4c",
+      "simulator_config_sha256": "2562c0809dbf4cb4adf0e297ff283f90002d8dc44a7b1f3c3c3ec8c9546039e5",
+      "data_identity": {
+        "data/manifests/train.json": "f739247bf5d3dcb40eba64c44ffed7f8bf44f499120fe1cabc2966e6ab5da2c9",
+        "data/manifests/validation.json": "615f1439ac5f32a018ae821d949ccbdaa45d468ea35d0cf7ae230f7f84d70fff",
+        "data/manifests/media.json": "c546cd7bd3054486de1f68f023bbf34a010ebfebefa0776524443960b988b552",
+        "rl/features.py": "3bb2804949524529bf87df080076bf35114968ac66adb26c0c6f52e2c3273272",
+        "configs/final/neural-interface.json": "9be1d48edb5c990f3116b487f54443154d5df5adb3855955015c3db2445ba618"
+      }
+    },
+    {
+      "created_utc": "2026-11-17T06:35:33.451373+00:00",
+      "kind": "conventional",
+      "config": "d",
+      "seed": 131,
+      "hyperparameters": {
+        "learning_rate": 0.0001,
+        "n_steps": 64,
+        "ent_coef": 0.02
+      },
+      "steps": 1000448,
+      "requested_steps": 1000000,
+      "wall_s": 250.72812539999723,
+      "device": "cpu",
+      "initialization": {
+        "samples": 8000,
+        "epochs": 10,
+        "teacher": "causal throughput/buffer rule; training scenarios only",
+        "teacher_labels": {
+          "0": 2832,
+          "1": 1902,
+          "2": 640,
+          "3": 583,
+          "4": 2043
+        },
+        "loss": [
+          1.6838675327301025,
+          1.199112844467163,
+          0.959150908946991,
+          0.7864193592071533,
+          0.6790922923088074,
+          0.6115428261756897,
+          0.5611033086776733,
+          0.5221934993267059,
+          0.4957926449775696,
+          0.4692994575500488
+        ]
+      },
+      "input_count": 36,
+      "architecture": [
+        36,
+        64,
+        64,
+        8
+      ],
+      "selected_step": 400384,
+      "selected_validation_qoe": 0.09225172041951381,
+      "checkpoint_sha256": "875d80869ddfb95b78c2f6c54b3e0545cbfe148b3a14b7fe5e9340d47be46d2d",
+      "selection": "Maximum equal-family mean validation QoE, checkpoints including warmstart; no test access",
+      "scope": "Player-compatible A2C adaptation inspired by Pensieve/Gelato/Plume; not their published pretrained model",
+      "environment_sha256": "087e7ba2b4987c9a0c7ce4aa8f0a0ac5270a79f7f7ce1c2805f5efa02aba4b4c",
+      "simulator_config_sha256": "2562c0809dbf4cb4adf0e297ff283f90002d8dc44a7b1f3c3c3ec8c9546039e5",
+      "data_identity": {
+        "data/manifests/train.json": "f739247bf5d3dcb40eba64c44ffed7f8bf44f499120fe1cabc2966e6ab5da2c9",
+        "data/manifests/validation.json": "615f1439ac5f32a018ae821d949ccbdaa45d468ea35d0cf7ae230f7f84d70fff",
+        "data/manifests/media.json": "c546cd7bd3054486de1f68f023bbf34a010ebfebefa0776524443960b988b552",
+        "rl/features.py": "3bb2804949524529bf87df080076bf35114968ac66adb26c0c6f52e2c3273272",
+        "configs/final/neural-interface.json": "9be1d48edb5c990f3116b487f54443154d5df5adb3855955015c3db2445ba618"
+      }
+    },
+    {
+      "created_utc": "2026-11-17T06:40:38.514101+00:00",
+      "kind": "leo",
+      "config": "d",
+      "seed": 131,
+      "hyperparameters": {
+        "learning_rate": 0.0001,
+        "n_steps": 64,
+        "ent_coef": 0.02
+      },
+      "steps": 1000448,
+      "requested_steps": 1000000,
+      "wall_s": 304.8371409000247,
+      "device": "cpu",
+      "initialization": {
+        "samples": 8000,
+        "epochs": 10,
+        "teacher": "causal throughput/buffer rule; training scenarios only",
+        "teacher_labels": {
+          "0": 2832,
+          "1": 1902,
+          "2": 640,
+          "3": 583,
+          "4": 2043
+        },
+        "loss": [
+          1.6747641792297363,
+          1.1939894847869874,
+          0.9735120759010315,
+          0.8390342674255371,
+          0.737761643409729,
+          0.664728235244751,
+          0.6072785024642944,
+          0.5604947929382325,
+          0.5278039615154266,
+          0.5004695429801941
+        ]
+      },
+      "input_count": 64,
+      "architecture": [
+        64,
+        64,
+        64,
+        8
+      ],
+      "selected_step": 400384,
+      "selected_validation_qoe": 0.07406075826127669,
+      "checkpoint_sha256": "15eb98969500e551b04421f798f9a546ce3bf551e2af8503edc8ca04b7e42992",
+      "selection": "Maximum equal-family mean validation QoE, checkpoints including warmstart; no test access",
+      "scope": "Player-compatible A2C adaptation inspired by Pensieve/Gelato/Plume; not their published pretrained model",
+      "environment_sha256": "087e7ba2b4987c9a0c7ce4aa8f0a0ac5270a79f7f7ce1c2805f5efa02aba4b4c",
+      "simulator_config_sha256": "2562c0809dbf4cb4adf0e297ff283f90002d8dc44a7b1f3c3c3ec8c9546039e5",
+      "data_identity": {
+        "data/manifests/train.json": "f739247bf5d3dcb40eba64c44ffed7f8bf44f499120fe1cabc2966e6ab5da2c9",
+        "data/manifests/validation.json": "615f1439ac5f32a018ae821d949ccbdaa45d468ea35d0cf7ae230f7f84d70fff",
+        "data/manifests/media.json": "c546cd7bd3054486de1f68f023bbf34a010ebfebefa0776524443960b988b552",
+        "rl/features.py": "3bb2804949524529bf87df080076bf35114968ac66adb26c0c6f52e2c3273272",
+        "configs/final/neural-interface.json": "9be1d48edb5c990f3116b487f54443154d5df5adb3855955015c3db2445ba618"
+      }
+    },
+    {
+      "created_utc": "2026-11-17T06:44:49.073998+00:00",
+      "kind": "conventional",
+      "config": "d",
+      "seed": 167,
+      "hyperparameters": {
+        "learning_rate": 0.0001,
+        "n_steps": 64,
+        "ent_coef": 0.02
+      },
+      "steps": 1000448,
+      "requested_steps": 1000000,
+      "wall_s": 250.36272049997933,
+      "device": "cpu",
+      "initialization": {
+        "samples": 8000,
+        "epochs": 10,
+        "teacher": "causal throughput/buffer rule; training scenarios only",
+        "teacher_labels": {
+          "0": 2832,
+          "1": 1902,
+          "2": 640,
+          "3": 583,
+          "4": 2043
+        },
+        "loss": [
+          1.746312886238098,
+          1.208534242630005,
+          0.9850799946784973,
+          0.8124039902687072,
+          0.7042738151550293,
+          0.6329399061203003,
+          0.5778589944839477,
+          0.5346886270046234,
+          0.5045071318149567,
+          0.4757332332134247
+        ]
+      },
+      "input_count": 36,
+      "architecture": [
+        36,
+        64,
+        64,
+        8
+      ],
+      "selected_step": 400384,
+      "selected_validation_qoe": 0.081715551492176,
+      "checkpoint_sha256": "656fcf08eef6d4aa81d1f315389646631789c421738317cd1316e12092e79ff2",
+      "selection": "Maximum equal-family mean validation QoE, checkpoints including warmstart; no test access",
+      "scope": "Player-compatible A2C adaptation inspired by Pensieve/Gelato/Plume; not their published pretrained model",
+      "environment_sha256": "087e7ba2b4987c9a0c7ce4aa8f0a0ac5270a79f7f7ce1c2805f5efa02aba4b4c",
+      "simulator_config_sha256": "2562c0809dbf4cb4adf0e297ff283f90002d8dc44a7b1f3c3c3ec8c9546039e5",
+      "data_identity": {
+        "data/manifests/train.json": "f739247bf5d3dcb40eba64c44ffed7f8bf44f499120fe1cabc2966e6ab5da2c9",
+        "data/manifests/validation.json": "615f1439ac5f32a018ae821d949ccbdaa45d468ea35d0cf7ae230f7f84d70fff",
+        "data/manifests/media.json": "c546cd7bd3054486de1f68f023bbf34a010ebfebefa0776524443960b988b552",
+        "rl/features.py": "3bb2804949524529bf87df080076bf35114968ac66adb26c0c6f52e2c3273272",
+        "configs/final/neural-interface.json": "9be1d48edb5c990f3116b487f54443154d5df5adb3855955015c3db2445ba618"
+      }
+    },
+    {
+      "created_utc": "2026-11-17T06:49:35.137175+00:00",
+      "kind": "leo",
+      "config": "d",
+      "seed": 167,
+      "hyperparameters": {
+        "learning_rate": 0.0001,
+        "n_steps": 64,
+        "ent_coef": 0.02
+      },
+      "steps": 1000448,
+      "requested_steps": 1000000,
+      "wall_s": 285.8615424000018,
+      "device": "cpu",
+      "initialization": {
+        "samples": 8000,
+        "epochs": 10,
+        "teacher": "causal throughput/buffer rule; training scenarios only",
+        "teacher_labels": {
+          "0": 2832,
+          "1": 1902,
+          "2": 640,
+          "3": 583,
+          "4": 2043
+        },
+        "loss": [
+          1.6991256160736083,
+          1.189658604621887,
+          0.9870141663551331,
+          0.8460210461616516,
+          0.7386764516830444,
+          0.6634851279258728,
+          0.6077379384040833,
+          0.5608362627029418,
+          0.5301106586456299,
+          0.4993603415489197
+        ]
+      },
+      "input_count": 64,
+      "architecture": [
+        64,
+        64,
+        64,
+        8
+      ],
+      "selected_step": 300032,
+      "selected_validation_qoe": 0.07721134840466741,
+      "checkpoint_sha256": "bdea5b904902ca2fdd12f8cab23c1201609396516197320d7746b383f247c1a0",
+      "selection": "Maximum equal-family mean validation QoE, checkpoints including warmstart; no test access",
+      "scope": "Player-compatible A2C adaptation inspired by Pensieve/Gelato/Plume; not their published pretrained model",
+      "environment_sha256": "087e7ba2b4987c9a0c7ce4aa8f0a0ac5270a79f7f7ce1c2805f5efa02aba4b4c",
+      "simulator_config_sha256": "2562c0809dbf4cb4adf0e297ff283f90002d8dc44a7b1f3c3c3ec8c9546039e5",
+      "data_identity": {
+        "data/manifests/train.json": "f739247bf5d3dcb40eba64c44ffed7f8bf44f499120fe1cabc2966e6ab5da2c9",
+        "data/manifests/validation.json": "615f1439ac5f32a018ae821d949ccbdaa45d468ea35d0cf7ae230f7f84d70fff",
+        "data/manifests/media.json": "c546cd7bd3054486de1f68f023bbf34a010ebfebefa0776524443960b988b552",
+        "rl/features.py": "3bb2804949524529bf87df080076bf35114968ac66adb26c0c6f52e2c3273272",
+        "configs/final/neural-interface.json": "9be1d48edb5c990f3116b487f54443154d5df5adb3855955015c3db2445ba618"
+      }
+    }
+  ]
+}

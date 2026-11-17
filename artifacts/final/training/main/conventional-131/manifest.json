@@ -1,0 +1,60 @@
+{
+  "created_utc": "2026-11-17T06:35:33.451373+00:00",
+  "kind": "conventional",
+  "config": "d",
+  "seed": 131,
+  "hyperparameters": {
+    "learning_rate": 0.0001,
+    "n_steps": 64,
+    "ent_coef": 0.02
+  },
+  "steps": 1000448,
+  "requested_steps": 1000000,
+  "wall_s": 250.72812539999723,
+  "device": "cpu",
+  "initialization": {
+    "samples": 8000,
+    "epochs": 10,
+    "teacher": "causal throughput/buffer rule; training scenarios only",
+    "teacher_labels": {
+      "0": 2832,
+      "1": 1902,
+      "2": 640,
+      "3": 583,
+      "4": 2043
+    },
+    "loss": [
+      1.6838675327301025,
+      1.199112844467163,
+      0.959150908946991,
+      0.7864193592071533,
+      0.6790922923088074,
+      0.6115428261756897,
+      0.5611033086776733,
+      0.5221934993267059,
+      0.4957926449775696,
+      0.4692994575500488
+    ]
+  },
+  "input_count": 36,
+  "architecture": [
+    36,
+    64,
+    64,
+    8
+  ],
+  "selected_step": 400384,
+  "selected_validation_qoe": 0.09225172041951381,
+  "checkpoint_sha256": "875d80869ddfb95b78c2f6c54b3e0545cbfe148b3a14b7fe5e9340d47be46d2d",
+  "selection": "Maximum equal-family mean validation QoE, checkpoints including warmstart; no test access",
+  "scope": "Player-compatible A2C adaptation inspired by Pensieve/Gelato/Plume; not their published pretrained model",
+  "environment_sha256": "087e7ba2b4987c9a0c7ce4aa8f0a0ac5270a79f7f7ce1c2805f5efa02aba4b4c",
+  "simulator_config_sha256": "2562c0809dbf4cb4adf0e297ff283f90002d8dc44a7b1f3c3c3ec8c9546039e5",
+  "data_identity": {
+    "data/manifests/train.json": "f739247bf5d3dcb40eba64c44ffed7f8bf44f499120fe1cabc2966e6ab5da2c9",
+    "data/manifests/validation.json": "615f1439ac5f32a018ae821d949ccbdaa45d468ea35d0cf7ae230f7f84d70fff",
+    "data/manifests/media.json": "c546cd7bd3054486de1f68f023bbf34a010ebfebefa0776524443960b988b552",
+    "rl/features.py": "3bb2804949524529bf87df080076bf35114968ac66adb26c0c6f52e2c3273272",
+    "configs/final/neural-interface.json": "9be1d48edb5c990f3116b487f54443154d5df5adb3855955015c3db2445ba618"
+  }
+}

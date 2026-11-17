@@ -1,0 +1,200 @@
+[
+  {
+    "run_id": "phasea-abrCMABImproved-20261117T033744-b81cac",
+    "algorithm": "abrCMABImproved",
+    "clock_mode": "host",
+    "utc_synchronization_enabled": false,
+    "startup_s": 0.8297469539642334,
+    "first_request_s": 0.3777000000029802,
+    "startup_events": [
+      {
+        "t_s": 0.23510000000149012,
+        "type": "manifestLoaded"
+      },
+      {
+        "media_s": 1794886620.368,
+        "t_s": 0.379,
+        "type": "loadedmetadata"
+      },
+      {
+        "t_s": 0.37910000000149013,
+        "type": "streamInitialized"
+      },
+      {
+        "media_s": 1794886677.380401,
+        "t_s": 0.8422000000029802,
+        "type": "playing"
+      },
+      {
+        "media_s": 1794886677.913918,
+        "t_s": 1.5814000000022352,
+        "type": "playing"
+      }
+    ],
+    "resources": [
+      {
+        "duration_ms": 214.80000000074506,
+        "end_ms": 15251.5,
+        "initiator": "xmlhttprequest",
+        "name": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/stream.mpd",
+        "start_ms": 15036.699999999255,
+        "relative_start_s": 0.015
+      },
+      {
+        "duration_ms": 261.19999999925494,
+        "end_ms": 17662.300000000745,
+        "initiator": "xmlhttprequest",
+        "name": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/stream.mpd",
+        "start_ms": 17401.10000000149,
+        "relative_start_s": 2.379400000002235
+      },
+      {
+        "duration_ms": 471.80000000074506,
+        "end_ms": 20144.5,
+        "initiator": "xmlhttprequest",
+        "name": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/stream.mpd",
+        "start_ms": 19672.699999999255,
+        "relative_start_s": 4.651
+      },
+      {
+        "duration_ms": 130.90000000223517,
+        "end_ms": 22283.60000000149,
+        "initiator": "xmlhttprequest",
+        "name": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/stream.mpd",
+        "start_ms": 22152.699999999255,
+        "relative_start_s": 7.131
+      },
+      {
+        "duration_ms": 424.5,
+        "end_ms": 24713.60000000149,
+        "initiator": "xmlhttprequest",
+        "name": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/stream.mpd",
+        "start_ms": 24289.10000000149,
+        "relative_start_s": 9.267400000002235
+      },
+      {
+        "duration_ms": 326.69999999925494,
+        "end_ms": 27047.300000000745,
+        "initiator": "xmlhttprequest",
+        "name": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/stream.mpd",
+        "start_ms": 26720.60000000149,
+        "relative_start_s": 11.698900000002235
+      },
+      {
+        "duration_ms": 125.19999999925494,
+        "end_ms": 29182,
+        "initiator": "xmlhttprequest",
+        "name": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/stream.mpd",
+        "start_ms": 29056.800000000745,
+        "relative_start_s": 14.03510000000149
+      },
+      {
+        "duration_ms": 163.5,
+        "end_ms": 31348.300000000745,
+        "initiator": "xmlhttprequest",
+        "name": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/stream.mpd",
+        "start_ms": 31184.800000000745,
+        "relative_start_s": 16.16310000000149
+      }
+    ]
+  },
+  {
+    "run_id": "phasea-abrCMAB-20261117T033825-ce51b9",
+    "algorithm": "abrCMAB",
+    "clock_mode": "host",
+    "utc_synchronization_enabled": false,
+    "startup_s": 0.8341000247970224,
+    "first_request_s": 0.38410000000149014,
+    "startup_events": [
+      {
+        "t_s": 0.23610000000149012,
+        "type": "manifestLoaded"
+      },
+      {
+        "media_s": 1794886680.549,
+        "t_s": 0.38460000000149014,
+        "type": "loadedmetadata"
+      },
+      {
+        "t_s": 0.3846999999992549,
+        "type": "streamInitialized"
+      },
+      {
+        "media_s": 1794886737.626131,
+        "t_s": 0.9103000000007451,
+        "type": "playing"
+      },
+      {
+        "media_s": 1794886737.906085,
+        "t_s": 2.89539999999851,
+        "type": "playing"
+      }
+    ],
+    "resources": [
+      {
+        "duration_ms": 216,
+        "end_ms": 34911.5,
+        "initiator": "xmlhttprequest",
+        "name": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/stream.mpd",
+        "start_ms": 34695.5,
+        "relative_start_s": 0.014300000000745059
+      },
+      {
+        "duration_ms": 568.6999999992549,
+        "end_ms": 37632.599999997765,
+        "initiator": "xmlhttprequest",
+        "name": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/stream.mpd",
+        "start_ms": 37063.89999999851,
+        "relative_start_s": 2.382699999999255
+      },
+      {
+        "duration_ms": 351.5,
+        "end_ms": 39991,
+        "initiator": "xmlhttprequest",
+        "name": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/stream.mpd",
+        "start_ms": 39639.5,
+        "relative_start_s": 4.958300000000745
+      },
+      {
+        "duration_ms": 177.5,
+        "end_ms": 42175.300000000745,
+        "initiator": "xmlhttprequest",
+        "name": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/stream.mpd",
+        "start_ms": 41997.800000000745,
+        "relative_start_s": 7.31660000000149
+      },
+      {
+        "duration_ms": 535.4000000022352,
+        "end_ms": 44719,
+        "initiator": "xmlhttprequest",
+        "name": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/stream.mpd",
+        "start_ms": 44183.599999997765,
+        "relative_start_s": 9.50239999999851
+      },
+      {
+        "duration_ms": 264.4000000022352,
+        "end_ms": 46992,
+        "initiator": "xmlhttprequest",
+        "name": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/stream.mpd",
+        "start_ms": 46727.599999997765,
+        "relative_start_s": 12.04639999999851
+      },
+      {
+        "duration_ms": 531,
+        "end_ms": 49553.300000000745,
+        "initiator": "xmlhttprequest",
+        "name": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/stream.mpd",
+        "start_ms": 49022.300000000745,
+        "relative_start_s": 14.34110000000149
+      },
+      {
+        "duration_ms": 552.3000000007451,
+        "end_ms": 52111.89999999851,
+        "initiator": "xmlhttprequest",
+        "name": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/stream.mpd",
+        "start_ms": 51559.599999997765,
+        "relative_start_s": 16.87839999999851
+      }
+    ]
+  }
+]

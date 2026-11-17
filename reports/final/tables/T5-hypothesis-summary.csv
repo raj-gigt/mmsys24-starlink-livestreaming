@@ -1,0 +1,12 @@
+study,hypothesis,treatment,baseline,cases,repeats_per_case,positive_qoe_cases,mean_paired_qoe_difference,mean_paired_stall_difference_s
+memory-startup-v1,H1,memory,original,3,1,0,-0.10141000624485567,1.3538361980657285
+memory-startup-v1,H2,startup,original,3,1,3,0.9285875532535507,-13.87860506553155
+memory-startup-v1,H1xH2,both,original,3,1,3,0.5410516828162197,-8.192266247265174
+feedback-v1,H3 timing,delayed,both,3,1,2,0.026714346647659443,-1.2509884428254712
+feedback-v1,H3 reward,outcome,delayed,3,1,3,0.4421308777481316,-9.00725334269385
+context-guard-v2,H5 scaling+bias,scaled,outcome,3,1,1,0.1975055915684276,-3.8282626629407965
+context-guard-v2,H4 buffer+delay,buffer,scaled,3,1,3,0.5394144640801765,-10.777659692569541
+context-guard-v2,H4 RTT health/history,context,buffer,3,1,2,0.27282654588397187,-2.972203164977671
+context-guard-v2,H5 refit seed,seeded,context,3,1,1,-0.20705021567514828,5.38496069224004
+context-guard-v2,H6 guard,guard,context,3,1,3,0.9072283816857016,-15.514967611868803
+context-guard-v2,H6 guard-only,guard_only,guard,3,1,3,0.21981836810143218,-2.4965790809917245

@@ -10,10 +10,11 @@
     },
     "memory": {
       "retain_history": true,
-      "max_completed_history_rows": 30,
       "forced_choices_per_slot": 7,
       "startup_action": "highest",
-      "hypothesis": "H1: isolate data retention while preserving the forced-choice schedule"
+      "hypothesis": "H1: isolate data retention while preserving the forced-choice schedule",
+      "max_history_rows": 30,
+      "history_clock": "Immediate decision/reward rows, not completed downloads; at most30 prior rows plus current choice"
     },
     "startup": {
       "retain_history": false,
@@ -25,10 +26,11 @@
     },
     "both": {
       "retain_history": true,
-      "max_completed_history_rows": 30,
       "forced_choices_per_slot": 1,
       "startup_action": "same as startup variant",
-      "hypothesis": "H1 x H2 interaction"
+      "hypothesis": "H1 x H2 interaction",
+      "max_history_rows": 30,
+      "history_clock": "Immediate decision/reward rows, not completed downloads; at most30 prior rows plus current choice"
     },
     "delayed": {
       "base": "both",
@@ -83,7 +85,8 @@
     "guard_only": {
       "base": "guard",
       "change": "Choose that throughput/buffer/delay/freshness ceiling directly, with no LinTS call",
-      "purpose": "Isolate whether the guard explains improvement; not a learned controller"
+      "purpose": "Isolate whether the guard explains improvement; not a learned controller",
+      "qualification": "Standalone ceiling policy also replaces conservative forced-slot actions; compare the complete bandit/restart package against this heuristic, not a pure learning-only ablation."
     }
   },
   "unchanged_factors": [

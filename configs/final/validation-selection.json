@@ -17,5 +17,7 @@
   "cases": 6,
   "order": "One fixed random policy permutation rotated across cases; no performance-based order",
   "guardrails": "configs/final/protocol.json",
-  "development_choice_evidence": "artifacts/final/development/context-guard-v2/paired-results.json"
+  "development_choice_evidence": "artifacts/final/development/context-guard-v2/paired-results.json",
+  "clock_mode": "host",
+  "protocol_revision": "Same candidates, cases, metrics and gates; repeat all24 comparisons after removing uncontrolled externalUTC startup dependency"
 }

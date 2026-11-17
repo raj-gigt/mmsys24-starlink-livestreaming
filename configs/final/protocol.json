@@ -14,7 +14,9 @@
   "playback": {
     "target_s": 3,
     "catchup": "liveCatchupModeLoLP",
-    "align_source_and_wall_clock": true
+    "align_source_and_wall_clock": true,
+    "clock_mode": "host",
+    "clock_scope": "Explicit hostClock=1 only in the single-WSL-host emulator; original externalUTC remains default for remote clients"
   },
   "selection": {
     "aggregate": "equal weight per mandatory family, equal case weight within family",
@@ -33,5 +35,6 @@
     "playback_minutes": 298
   },
   "sensitivity": "rescore stall,variation,latency coefficients at .5x and 2x one at a time; never select final score by test outcome",
-  "test_access": "explicit frozen-evaluation flag only; no test performance viewed yet"
+  "test_access": "explicit frozen-evaluation flag only; no test performance viewed yet",
+  "initialization_revision": "All policies prewarmed; external clock synchronization removed equally after pre-ABR timing diagnosis. Startup coefficient and physical gates unchanged."
 }

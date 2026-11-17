@@ -1,0 +1,6 @@
+{
+  "status": "Complete under externalUTC configuration; no eligible bandit",
+  "reason": "GuardedCMAB failed unchanged mean startup limit; context-only failed useful-playback gate",
+  "next": "Allfour policies rerun under verified common single-host clock asfinalists-v2",
+  "retention": "All24 original outcomes and original selection rule retained; not merged with host-clock repetitions"
+}

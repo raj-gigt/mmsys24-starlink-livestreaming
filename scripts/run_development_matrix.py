@@ -26,6 +26,7 @@ def main():
     parser.add_argument('--name', default='memory-startup-v1')
     parser.add_argument('--role',choices=['development','validation'],default='development')
     parser.add_argument('--balanced-order',action='store_true')
+    parser.add_argument('--local-clock',action='store_true')
     parser.add_argument('--variants', default='original,memory,startup,both')
     parser.add_argument('--repeats', type=int, default=1)
     parser.add_argument('--families', default='steady_bandwidth,bandwidth_variation,post_handover_recovery')
@@ -42,8 +43,10 @@ def main():
         assert actual == expected, f'Rebuild player before measuring: {path}'
     measurement = {'manifest':sha(manifest),'observer':sha(ROOT/'rl/web/telemetry.js'),
         'runner':sha(ROOT/'scripts/browser_trial.py'),'stats_server':sha(ROOT/'stats-server/app.py'),
-        'shaper':sha(ROOT/'shaper/tc-final.py'),'metrics':sha(ROOT/'rl/metrics.py')}
+        'shaper':sha(ROOT/'shaper/tc-final.py'),'metrics':sha(ROOT/'rl/metrics.py'),
+        'player_main':sha(ROOT/'dash.js/samples/starlink/testplayer/main.js'),'clock_mode':'host' if args.local_clock else 'external'}
     assert docker('exec','leo_abr_rl-stat-server-1','sha256sum','/usr/src/app/app.py').split()[0] == measurement['stats_server']
+    assert docker('exec','leo_abr_rl-dashjs-1','sha256sum','/dash.js/samples/starlink/testplayer/main.js').split()[0] == measurement['player_main']
     fingerprint = hashlib.sha256(json.dumps({'sources':identity,'measurement':measurement},sort_keys=True).encode()).hexdigest()
     out = ROOT/'artifacts/final'/args.role/args.name
     out.mkdir(parents=True, exist_ok=True)
@@ -64,7 +67,7 @@ def main():
                     continue
                 trial = Namespace(algorithm='abrCMAB' if variant=='original' else 'abrCMABImproved',
                     variant=None if variant=='original' else variant,seconds=case['seconds'],stages='',target=3,
-                    catchup='liveCatchupModeLoLP',align_minute=True,final_telemetry=True,
+                    catchup='liveCatchupModeLoLP',local_clock=args.local_clock,align_minute=True,final_telemetry=True,
                     scenario=str(manifest),case=case['id'],allow_test=False,allow_poor_playback=True)
                 output = io.StringIO()
                 began = datetime.now(timezone.utc).isoformat()

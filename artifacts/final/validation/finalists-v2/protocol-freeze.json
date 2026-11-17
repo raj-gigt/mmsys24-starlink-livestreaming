@@ -1,0 +1,8 @@
+{
+  "scope": "Validation protocol; candidates and numeric criteria set before this batch; no final-test performance inspected",
+  "selection_sha256": "80081692dd6d6f47896e26018446ae7fb551bcd58edd8dfb7f8db4d38f2d1966",
+  "protocol_sha256": "2521e554c6dbf2c1e821a49706628505d5c9ae983416a478336b05b1056e3492",
+  "workload_sha256": "7f1e7b2da47a205dc0076db0c71746b573a1a51b56bf8c6942208de096a2e97d",
+  "clock": "hostClock=1",
+  "source_revision": "9682a597"
+}

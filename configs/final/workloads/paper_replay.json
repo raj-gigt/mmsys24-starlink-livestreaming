@@ -17,5 +17,7 @@
       "network_kind": "original raw probe-to-delay/loss emulation convention; fixed20Mbps; positive RTT1percentloss, nonpositive100percentloss",
       "policy_may_read_future_profile": false
     }
-  ]
+  ],
+  "display_label": "Author-repository raw replay; not exact published emulator profile",
+  "paper_difference": "PaperSection5 describes40ms/0.1%normal and100ms/1%handover; distributed shaper uses measured RTT with1%positive/100%nonpositive loss"
 }

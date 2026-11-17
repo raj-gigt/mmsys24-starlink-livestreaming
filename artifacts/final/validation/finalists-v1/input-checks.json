@@ -1,0 +1,270 @@
+{
+  "status": "PASS",
+  "scope": "Contract and observed synchronous cost; not a hard timing guarantee",
+  "runs": [
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T023507-e90b89",
+      "variant": "guard_only",
+      "decisions": 72,
+      "learned_calls": 0,
+      "guard_overrides": 0,
+      "invalid_probe_calls": 0,
+      "median_ms": 4.599999999627471,
+      "p95_ms": 6.0,
+      "max_ms": 8.100000001490116
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T023737-e566e4",
+      "variant": "context",
+      "decisions": 141,
+      "learned_calls": 130,
+      "guard_overrides": 0,
+      "invalid_probe_calls": 0,
+      "median_ms": 9.300000000745058,
+      "p95_ms": 11.699999999254942,
+      "max_ms": 16.600000001490116
+    },
+    {
+      "run_id": "phasea-abrCMAB-20261117T023937-11e0ca",
+      "variant": "original",
+      "decisions": 83,
+      "learned_calls": 40,
+      "guard_overrides": 0,
+      "invalid_probe_calls": null,
+      "median_ms": null,
+      "p95_ms": null,
+      "max_ms": null
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T024137-fb7fb4",
+      "variant": "guard",
+      "decisions": 131,
+      "learned_calls": 119,
+      "guard_overrides": 26,
+      "invalid_probe_calls": 0,
+      "median_ms": 9.300000000745058,
+      "p95_ms": 12.349999999627471,
+      "max_ms": 18.099999997764826
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T024337-c79cd5",
+      "variant": "context",
+      "decisions": 125,
+      "learned_calls": 115,
+      "guard_overrides": 0,
+      "invalid_probe_calls": 5,
+      "median_ms": 9.399999998509884,
+      "p95_ms": 12.359999999403954,
+      "max_ms": 20.800000000745058
+    },
+    {
+      "run_id": "phasea-abrCMAB-20261117T024537-e4b16b",
+      "variant": "original",
+      "decisions": 35,
+      "learned_calls": 3,
+      "guard_overrides": 0,
+      "invalid_probe_calls": null,
+      "median_ms": null,
+      "p95_ms": null,
+      "max_ms": null
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T024737-df7f68",
+      "variant": "guard",
+      "decisions": 110,
+      "learned_calls": 99,
+      "guard_overrides": 77,
+      "invalid_probe_calls": 2,
+      "median_ms": 9.199999999254942,
+      "p95_ms": 12.709999999403953,
+      "max_ms": 16.100000001490116
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T024937-47a859",
+      "variant": "guard_only",
+      "decisions": 66,
+      "learned_calls": 0,
+      "guard_overrides": 0,
+      "invalid_probe_calls": 2,
+      "median_ms": 4.699999999254942,
+      "p95_ms": 7.1499999994412065,
+      "max_ms": 10.900000002235174
+    },
+    {
+      "run_id": "phasea-abrCMAB-20261117T025137-db93bc",
+      "variant": "original",
+      "decisions": 23,
+      "learned_calls": 0,
+      "guard_overrides": 0,
+      "invalid_probe_calls": null,
+      "median_ms": null,
+      "p95_ms": null,
+      "max_ms": null
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T025337-220664",
+      "variant": "guard",
+      "decisions": 67,
+      "learned_calls": 57,
+      "guard_overrides": 47,
+      "invalid_probe_calls": 0,
+      "median_ms": 9.0,
+      "p95_ms": 11.169999998807906,
+      "max_ms": 17.700000002980232
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T025537-f77ed0",
+      "variant": "guard_only",
+      "decisions": 63,
+      "learned_calls": 0,
+      "guard_overrides": 0,
+      "invalid_probe_calls": 0,
+      "median_ms": 4.5,
+      "p95_ms": 6.800000000372529,
+      "max_ms": 11.399999998509884
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T025737-8b5ad8",
+      "variant": "context",
+      "decisions": 64,
+      "learned_calls": 55,
+      "guard_overrides": 0,
+      "invalid_probe_calls": 0,
+      "median_ms": 9.650000000372529,
+      "p95_ms": 12.6699999993667,
+      "max_ms": 17.600000001490116
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T025937-8856ea",
+      "variant": "guard",
+      "decisions": 68,
+      "learned_calls": 59,
+      "guard_overrides": 52,
+      "invalid_probe_calls": 0,
+      "median_ms": 9.300000000745058,
+      "p95_ms": 13.189999997988343,
+      "max_ms": 18.699999999254942
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T030137-a244ed",
+      "variant": "guard_only",
+      "decisions": 63,
+      "learned_calls": 0,
+      "guard_overrides": 0,
+      "invalid_probe_calls": 0,
+      "median_ms": 4.600000001490116,
+      "p95_ms": 6.490000000223517,
+      "max_ms": 11
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T030337-1f88db",
+      "variant": "context",
+      "decisions": 47,
+      "learned_calls": 38,
+      "guard_overrides": 0,
+      "invalid_probe_calls": 0,
+      "median_ms": 9.700000002980232,
+      "p95_ms": 14.300000001490112,
+      "max_ms": 19.300000000745058
+    },
+    {
+      "run_id": "phasea-abrCMAB-20261117T030537-f39780",
+      "variant": "original",
+      "decisions": 32,
+      "learned_calls": 9,
+      "guard_overrides": 0,
+      "invalid_probe_calls": null,
+      "median_ms": null,
+      "p95_ms": null,
+      "max_ms": null
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T030737-39b198",
+      "variant": "guard_only",
+      "decisions": 96,
+      "learned_calls": 0,
+      "guard_overrides": 0,
+      "invalid_probe_calls": 0,
+      "median_ms": 4.600000001490116,
+      "p95_ms": 5.724999999627471,
+      "max_ms": 7.100000001490116
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T030937-348a7e",
+      "variant": "context",
+      "decisions": 82,
+      "learned_calls": 74,
+      "guard_overrides": 0,
+      "invalid_probe_calls": 0,
+      "median_ms": 9.399999998509884,
+      "p95_ms": 14.425000000000004,
+      "max_ms": 16.300000000745058
+    },
+    {
+      "run_id": "phasea-abrCMAB-20261117T031137-382970",
+      "variant": "original",
+      "decisions": 29,
+      "learned_calls": 0,
+      "guard_overrides": 0,
+      "invalid_probe_calls": null,
+      "median_ms": null,
+      "p95_ms": null,
+      "max_ms": null
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T031337-bc739e",
+      "variant": "guard",
+      "decisions": 74,
+      "learned_calls": 65,
+      "guard_overrides": 62,
+      "invalid_probe_calls": 0,
+      "median_ms": 9.100000001490116,
+      "p95_ms": 11.774999999068674,
+      "max_ms": 16.599999997764826
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T031537-b7c762",
+      "variant": "context",
+      "decisions": 68,
+      "learned_calls": 59,
+      "guard_overrides": 0,
+      "invalid_probe_calls": 2,
+      "median_ms": 9.550000000745058,
+      "p95_ms": 12.865000001713634,
+      "max_ms": 19.100000001490116
+    },
+    {
+      "run_id": "phasea-abrCMAB-20261117T031737-68392a",
+      "variant": "original",
+      "decisions": 24,
+      "learned_calls": 0,
+      "guard_overrides": 0,
+      "invalid_probe_calls": null,
+      "median_ms": null,
+      "p95_ms": null,
+      "max_ms": null
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T031937-59ca98",
+      "variant": "guard",
+      "decisions": 77,
+      "learned_calls": 69,
+      "guard_overrides": 53,
+      "invalid_probe_calls": 0,
+      "median_ms": 9.199999999254942,
+      "p95_ms": 11.380000001937153,
+      "max_ms": 19.900000002235174
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T032137-1a3712",
+      "variant": "guard_only",
+      "decisions": 76,
+      "learned_calls": 0,
+      "guard_overrides": 0,
+      "invalid_probe_calls": 0,
+      "median_ms": 4.5,
+      "p95_ms": 5.79999999795109,
+      "max_ms": 7.400000002235174
+    }
+  ]
+}

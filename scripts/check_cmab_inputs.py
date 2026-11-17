@@ -15,7 +15,7 @@ for row in rows:
     dims=4 if variant=='scaled' else 6 if variant=='buffer' else 9
     for r in trace:
         assert isinstance(r['action'],int) and 0<=r['action']<8
-        assert r['duration_ms']>=0 and math.isfinite(r['duration_ms'])
+        if 'duration_ms' in r:assert r['duration_ms']>=0 and math.isfinite(r['duration_ms'])
         if physical:
             x=r['model_input'];assert len(x)==dims and x[0]==1 and all(math.isfinite(v) for v in x)
             if dims==9:
@@ -25,12 +25,12 @@ for row in rows:
             assert r['action']<=r['guard_maximum']
             if variant=='guard':assert r['action']==min(r['proposal'],r['guard_maximum'])
             else:assert r['selection_source']=='guard-only' and r['action']==r['guard_maximum']
-    times=[r['duration_ms'] for r in trace]
+    times=[r['duration_ms'] for r in trace if 'duration_ms' in r]
     reports.append({'run_id':row['run_id'],'variant':variant,'decisions':len(trace),
-        'learned_calls':sum(r['selection_source']=='LinTS' for r in trace),
-        'guard_overrides':sum(r['guard_override'] for r in trace),
-        'invalid_probe_calls':sum(not r['observation']['probe_valid'] for r in trace),
-        'median_ms':float(np.median(times)),'p95_ms':float(np.percentile(times,95)), 'max_ms':max(times)})
+        'learned_calls':sum(r.get('selection_source')=='LinTS' if 'selection_source' in r else not r['forced'] for r in trace),
+        'guard_overrides':sum(r.get('guard_override',False) for r in trace),
+        'invalid_probe_calls':sum(not r['observation'].get('probe_valid',True) for r in trace) if variant!='original' else None,
+        'median_ms':float(np.median(times)) if times else None,'p95_ms':float(np.percentile(times,95)) if times else None, 'max_ms':max(times) if times else None})
 report={'status':'PASS','scope':'Contract and observed synchronous cost; not a hard timing guarantee','runs':reports}
 output=Path(args.ledger).parent/'input-checks.json';output.write_text(json.dumps(report,indent=2))
 print(json.dumps({'status':'PASS','verified_sessions':len(reports),'decisions':sum(r['decisions'] for r in reports)}))

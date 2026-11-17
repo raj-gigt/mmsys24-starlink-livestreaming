@@ -38,6 +38,7 @@
                 sample();
             });
         });
+        ['manifestLoaded','streamInitialized'].forEach(type=>player.on(type,()=>event(type,{})));
         player.on('qualityChangeRendered', e => {
             if (e.mediaType !== 'video') return;
             sample(); state.quality = e.newQuality;

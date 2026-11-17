@@ -1,0 +1,198 @@
+{
+  "status": "PASS",
+  "scope": "Controlled schedule/phase integrity, independent of outcome quality",
+  "runs": [
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T023507-e90b89",
+      "start_phase_error_s": 0.08340001106262207,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T023737-e566e4",
+      "start_phase_error_s": 0.08020997047424316,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMAB-20261117T023937-11e0ca",
+      "start_phase_error_s": 0.07863211631774902,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T024137-fb7fb4",
+      "start_phase_error_s": 0.09856200218200684,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T024337-c79cd5",
+      "start_phase_error_s": 0.08023905754089355,
+      "verified_transitions": 2,
+      "max_transition_error_s": 0.013090133666992188,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMAB-20261117T024537-e4b16b",
+      "start_phase_error_s": 0.08358907699584961,
+      "verified_transitions": 2,
+      "max_transition_error_s": 0.012770414352416992,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T024737-df7f68",
+      "start_phase_error_s": 0.0868380069732666,
+      "verified_transitions": 2,
+      "max_transition_error_s": 0.012455940246582031,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T024937-47a859",
+      "start_phase_error_s": 0.07418394088745117,
+      "verified_transitions": 2,
+      "max_transition_error_s": 0.011124372482299805,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMAB-20261117T025137-db93bc",
+      "start_phase_error_s": 0.08409500122070312,
+      "verified_transitions": 86,
+      "max_transition_error_s": 0.013228178024291992,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T025337-220664",
+      "start_phase_error_s": 0.08899998664855957,
+      "verified_transitions": 86,
+      "max_transition_error_s": 0.012567281723022461,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T025537-f77ed0",
+      "start_phase_error_s": 0.0770559310913086,
+      "verified_transitions": 86,
+      "max_transition_error_s": 0.013405323028564453,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T025737-8b5ad8",
+      "start_phase_error_s": 0.09851193428039551,
+      "verified_transitions": 86,
+      "max_transition_error_s": 0.013792753219604492,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T025937-8856ea",
+      "start_phase_error_s": 0.08748602867126465,
+      "verified_transitions": 85,
+      "max_transition_error_s": 0.013715744018554688,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T030137-a244ed",
+      "start_phase_error_s": 0.08267688751220703,
+      "verified_transitions": 85,
+      "max_transition_error_s": 0.014021158218383789,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T030337-1f88db",
+      "start_phase_error_s": 0.09701704978942871,
+      "verified_transitions": 85,
+      "max_transition_error_s": 0.013712644577026367,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMAB-20261117T030537-f39780",
+      "start_phase_error_s": 0.08234906196594238,
+      "verified_transitions": 85,
+      "max_transition_error_s": 0.012597799301147461,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T030737-39b198",
+      "start_phase_error_s": 0.08262991905212402,
+      "verified_transitions": 85,
+      "max_transition_error_s": 0.013764142990112305,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T030937-348a7e",
+      "start_phase_error_s": 0.07754707336425781,
+      "verified_transitions": 85,
+      "max_transition_error_s": 0.01439046859741211,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMAB-20261117T031137-382970",
+      "start_phase_error_s": 0.08426904678344727,
+      "verified_transitions": 85,
+      "max_transition_error_s": 0.01395726203918457,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T031337-bc739e",
+      "start_phase_error_s": 0.07983899116516113,
+      "verified_transitions": 85,
+      "max_transition_error_s": 0.014869213104248047,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T031537-b7c762",
+      "start_phase_error_s": 0.08734297752380371,
+      "verified_transitions": 86,
+      "max_transition_error_s": 0.01407933235168457,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMAB-20261117T031737-68392a",
+      "start_phase_error_s": 0.07709503173828125,
+      "verified_transitions": 86,
+      "max_transition_error_s": 0.01391911506652832,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T031937-59ca98",
+      "start_phase_error_s": 0.0852060317993164,
+      "verified_transitions": 86,
+      "max_transition_error_s": 0.013680696487426758,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T032137-1a3712",
+      "start_phase_error_s": 0.08211398124694824,
+      "verified_transitions": 86,
+      "max_transition_error_s": 0.014164209365844727,
+      "raw_replay": false
+    }
+  ]
+}

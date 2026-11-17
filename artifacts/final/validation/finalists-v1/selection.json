@@ -1,0 +1,75 @@
+{
+  "selected": null,
+  "eligibility": {
+    "context": {
+      "useful_playback": false,
+      "stalls": true,
+      "tail_delay": true,
+      "startup": true
+    },
+    "guard": {
+      "useful_playback": true,
+      "stalls": true,
+      "tail_delay": true,
+      "startup": false
+    }
+  },
+  "summary": {
+    "context": {
+      "qoe_per_wall_s": -1.2394357878183784,
+      "stall_s": 34.08614164469732,
+      "startup_s": 2.88764643554613,
+      "p95_live_latency_s": 12.7178,
+      "mean_live_latency_s": 6.581240655669662,
+      "played_bitrate_bps": 3368310.9550082707,
+      "switches": 18.2,
+      "played_media_s": 59.84003582000732,
+      "skipped_media_s": 26.340748357772828,
+      "minimum_played_fraction": 0.36922437304506966,
+      "mixed_stress_qoe": -1.4546953482764409
+    },
+    "guard": {
+      "qoe_per_wall_s": -0.6206474499050002,
+      "stall_s": 22.284618761072434,
+      "startup_s": 5.377809860916435,
+      "p95_live_latency_s": 9.8336,
+      "mean_live_latency_s": 5.235476265302353,
+      "played_bitrate_bps": 2106452.824123148,
+      "switches": 13.4,
+      "played_media_s": 70.75629377365112,
+      "skipped_media_s": 13.654324007034301,
+      "minimum_played_fraction": 0.71306709870546,
+      "mixed_stress_qoe": -0.11034542989906797
+    },
+    "guard_only": {
+      "qoe_per_wall_s": -0.3969809915626502,
+      "stall_s": 20.624628704250945,
+      "startup_s": 2.8933387438967824,
+      "p95_live_latency_s": 9.405800000000001,
+      "mean_live_latency_s": 5.3079703347144385,
+      "played_bitrate_bps": 2346878.1962610213,
+      "switches": 6.0,
+      "played_media_s": 76.123015832901,
+      "skipped_media_s": 11.28542742729187,
+      "minimum_played_fraction": 0.7548915733811273,
+      "mixed_stress_qoe": -0.14608915567729816
+    },
+    "original": {
+      "qoe_per_wall_s": -2.190852468766183,
+      "stall_s": 50.588707927448525,
+      "startup_s": 3.5443325245656077,
+      "p95_live_latency_s": 16.616799999999998,
+      "mean_live_latency_s": 8.591299310602205,
+      "played_bitrate_bps": 5657904.885236514,
+      "switches": 3.6,
+      "played_media_s": 40.57537407875061,
+      "skipped_media_s": 42.41470813751221,
+      "minimum_played_fraction": 0.10613826959362722,
+      "mixed_stress_qoe": -2.7268914270111786
+    }
+  },
+  "status": "no_eligible_bandit",
+  "ledger": "artifacts/final/validation/finalists-v1/runs.json",
+  "scope": "Validation selection; no final-test scores inspected",
+  "limitations": "One session per case/policy; descriptive component ablations, not statistical proof"
+}

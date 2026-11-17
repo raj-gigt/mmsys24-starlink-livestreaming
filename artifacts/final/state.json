@@ -39,7 +39,7 @@
     },
     "14": {
       "status": "Running",
-      "evidence": "Select CMAB among context and guard on six validation cases; retain guard-only ablation control; all final test outcomes remain sealed",
+      "evidence": "First validation preserved with no eligible bandit. ExternalUTC delays reproduced before ABR; verified shared-WSL clock removes them. Repeat all24 sessions with unchanged numeric gates.",
       "updated_utc": "2026-11-17T02:33:37.301284+00:00"
     }
   },
@@ -47,15 +47,15 @@
   "current_step": 14,
   "active_experiment": {
     "step": 14,
-    "session_id": 65650,
-    "command": "python scripts/run_development_matrix.py --role validation --name finalists-v1 --variants original,context,guard,guard_only --families steady_bandwidth,bandwidth_variation,rtt_variation,handover_interruption,post_handover_recovery,mixed_shifted --balanced-order",
-    "ledger": "artifacts/final/validation/finalists-v1/runs.json",
-    "resume": "Same command skips complete keys",
+    "session_id": 89900,
+    "command": "python scripts/run_development_matrix.py --role validation --name finalists-v2 --variants original,context,guard,guard_only --families steady_bandwidth,bandwidth_variation,rtt_variation,handover_interruption,post_handover_recovery,mixed_shifted --balanced-order --local-clock",
+    "ledger": "artifacts/final/validation/finalists-v2/runs.json",
+    "resume": "Same command skips completed keys",
     "do_not_modify_during_measurement": [
-      "Player/controller sources",
-      "stats-server image",
-      "observer/runner code",
-      "workload and selection rules"
+      "Player/controller sources and image",
+      "Stats-server source/image",
+      "Observer/runner code",
+      "Workloads and selection rules"
     ]
   },
   "pending_protocol_refinements": [

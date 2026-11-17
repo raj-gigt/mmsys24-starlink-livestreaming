@@ -143,7 +143,7 @@ Include at least one capacity-limited and one easy ordinary condition; do not ch
 
 Create a separate sealed reserve cohort before any final performance inspection, with disjoint source windows/parameter seeds where available. This allows one legitimate validation-refinement cycle followed by a fresh comparison if necessary and time permits. Its role and weaker source independence, if applicable, must be explicit. Do not generate a favourable replacement test after seeing the original failures.
 
-Add a supplementary original-paper-replay comparison of B0 versus C*: 3 repetitions each, 180 seconds, same raw-trace phase and shared original replay convention. Original nonpositive-RTT-to-outage and background loss are labelled emulation choices, not proof of measured full-path outages.
+Add a supplementary author-repository raw-replay comparison of B0 versus C*: 3 repetitions each, 180 seconds, same raw-trace phase and shared original replay convention. Original nonpositive-RTT-to-outage and background loss are labelled emulation choices, not proof of measured full-path outages.
 
 ## 5. Phase B: trustworthy measurement and a usable workbench
 
@@ -311,7 +311,7 @@ Candidate configuration budget: initially at most 12 named CMAB settings and 72 
 
 **Actions:**
 1. Freeze policy/config/model/source/workload hashes, metric/guardrail definitions, seed/checkpoint rule, scenario weights, repetitions, run order, representative-trajectory rule and uncertainty method before opening test performance.
-2. Default core controlled matrix: 10 scenarios x 6 policies x 2 repeats = 120 browser trials. Add a third repeat for B0 and C* on all 10 cases = 20 more. Add B0/C* original-paper replay with 3 repeats each = 6 trials. **Total default: 146 browser trials.**
+2. Default core controlled matrix: 10 scenarios x 6 policies x 2 repeats = 120 browser trials. Add a third repeat for B0 and C* on all 10 cases = 20 more. Add B0/C* author-repository raw replay with 3 repeats each = 6 trials. **Total default: 146 browser trials.**
 3. Controlled playback time is 140 x 120 seconds plus 6 x 180 seconds = **4 hours 58 minutes**, before initialization, phase waiting, flush and teardown. With approximately 180-second controlled cycles and 240-second supplementary cycles, a planning allowance is about **7 hours 24 minutes**. Replace this with the Step 10 measured forecast; it is not an unconditional promise.
 4. Before unsealing, activate predeclared extensions only if runtime and remaining report/release reserve permit: add the remaining policies' third repeats (40 trials); a second validation-selected neural seed on a small fixed browser subset; mixed/phase-shift stress cases. Do not decide repetition count from whether a p-value or curve looks favourable.
 5. Run paired workloads in balanced/randomized policy order with isolated controller state, matched source/trace phase and the same dependency readiness. Original B0 preserves its own online adaptation. Record actual phase/schedule deviations and classify infrastructure faults separately.
@@ -329,7 +329,7 @@ Candidate configuration budget: initially at most 12 named CMAB settings and 72 
 **Objective / intuition:** explain the size, reliability and cause of gains, including where the policy loses.
 
 **Actions:**
-1. Generate per-run metrics and paired differences using equal weights for the five required families and equal case weights within each. Keep supplementary paper-replay outcomes separate.
+1. Generate per-run metrics and paired differences using equal weights for the five required families and equal case weights within each. Keep supplementary repository-replay outcomes separate.
 2. Report absolute values, paired QoE effect, per-family stalls/delay, startup, switching and played bitrate. Include raw paired points and 95% intervals where replication supports them.
 3. Treat scenarios/recordings and repeated sessions correctly: never count video segments or related windows as independent experiments. With only two measured RTT sessions and synthetic capacity, intervals describe repeatability on fixed tested workloads, not population-wide Starlink generalization. State the limitations of 2/3 repeats; show ranges/raw data rather than unjustifiably precise significance.
 4. Generate the hypothesis/ablation table from validation evidence and the final performance tables from sealed testing; label those sources. Plot selected trajectories using the frozen rule and include at least one informative failure/regression.
@@ -442,3 +442,5 @@ Autonomous execution is active; see the per-step tracker and artifacts/final/sta
 - [Gelato/Plume training source](https://github.com/sagar-pa/plume/blob/main/puffer_abr/puffer_abr_training/train.py): actor-critic training and workload sampling; adapt without importing the full Puffer/Ray system.
 - [Stable-Baselines3 A2C guidance](https://stable-baselines3.readthedocs.io/en/master/modules/a2c.html): CPU/vectorized execution can outperform GPU for small non-CNN policies; measure actual throughput.
 - [SB3 RL development/evaluation guidance](https://stable-baselines3.readthedocs.io/en/master/guide/rl_tips.html): custom-environment checks, normalization, repeated runs and separate evaluation.
+
+Execution revision at Step14: first validation failed the unchanged startup gate. A measured externalUTC dependency delayed pre-ABR initialization. Revalidate all24 sessions under the verified shared-WSL-clock option, preserving the first pass; research-session budget90 instead of72 is for this infrastructure correction, not extra model search. Final test remains sealed.

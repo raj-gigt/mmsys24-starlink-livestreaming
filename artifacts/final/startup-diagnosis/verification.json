@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "external_clock_startup_s": [
+    4.937174178697169,
+    3.732708918761462
+  ],
+  "host_clock_startup_s": [
+    0.8297469539642334,
+    0.8341000247970224
+  ],
+  "controller_logic_changed": false,
+  "scope": "Common single-host emulator initialization repair; not ABR improvement"
+}

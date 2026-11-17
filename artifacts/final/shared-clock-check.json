@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "reference": "Shared WSL/Linux kernel clock, not Windows command-dispatch clock",
+  "scope": "Single-host emulator only; not remote client/server clock synchronization",
+  "checks": [
+    {
+      "container": "leo_abr_rl-dashjs-1",
+      "container_unix_s": 1794887357.938,
+      "wsl_before_s": 1794887357.7776484,
+      "wsl_after_s": 1794887357.9479613,
+      "midpoint_difference_s": 0.0751950740814209
+    },
+    {
+      "container": "dashjs-nginx",
+      "container_unix_s": 1794887358.085012,
+      "wsl_before_s": 1794887357.947966,
+      "wsl_after_s": 1794887358.0905018,
+      "midpoint_difference_s": 0.06577801704406738
+    },
+    {
+      "container": "leo_abr_rl-stat-server-1",
+      "container_unix_s": 1794887358.2446034,
+      "wsl_before_s": 1794887358.0905068,
+      "wsl_after_s": 1794887358.2510114,
+      "midpoint_difference_s": 0.07384419441223145
+    }
+  ]
+}

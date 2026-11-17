@@ -61,6 +61,7 @@ return JSON.parse(JSON.stringify({at_ms:performance.now(),media_time:v.currentTi
  ladder:ladder,requests:req,decisions:window.__anjanDecisionLog||[],
  events:window.__phaseaEvents||[],build:window.__anjanBuild||null,
  model:window.LEO_ABR && window.LEO_ABR.modelIdentity||null,
+ utc_synchronization_enabled:p.getSettings().streaming.utcSynchronization.enabled,
  model_load_ms:window.LEO_ABR && window.LEO_ABR.modelLoadMs||null,
  rendered:window.__anjanRendered||[],player_errors:window.__phaseaErrors||[],
  callbacks:window.__anjanCallbackDurations||[],
@@ -96,6 +97,8 @@ def run(args: argparse.Namespace) -> dict:
               "abrGeneral": args.algorithm, "maxDrift": 5, "minCatchupPlaybackRate": -0.17,
               "maxCatchupPlaybackRate": 0.17, "abrAdditionalAbandonRequestRule": "true",
               "cmabAlpha": 1.0, "catchupMechanism": args.catchup}
+    if getattr(args,'local_clock',False):
+        params['hostClock']=1
     if getattr(args, 'variant', None):
         params['cmabVariant'] = args.variant
     url = "http://pyodide/samples/starlink/testplayer/testplayer.html?" + urlencode(params)
@@ -178,7 +181,7 @@ def run(args: argparse.Namespace) -> dict:
         (out / "console.json").write_text(json.dumps(console, indent=2), encoding="utf-8")
         final = driver.execute_script(SNAPSHOT)
         if getattr(args, 'final_telemetry', False):
-            telemetry = driver.execute_script("const c=window.LEO_FINAL_COLLECTOR;c.stop();return {version:c.version,started_at_ms:c.started_at_ms,stopped_at_ms:c.stopped_at_ms,samples:c.samples,events:c.events,requests:c.requests,probes:c.probes,cmab_decisions:(window.__LEO_CMAB_TRACE||[]).filter(r=>r.at_ms<=c.stopped_at_ms),custom_decisions:(window.__anjanDecisionLog||[]).filter(r=>r.at_ms<=c.stopped_at_ms),feedback:(window.__LEO_FEEDBACK_TRACE||[]).filter(r=>r.at_ms<=c.stopped_at_ms)};")
+            telemetry = driver.execute_script("const c=window.LEO_FINAL_COLLECTOR;c.stop();return {version:c.version,start_performance_ms:c.start,resource_timings:performance.getEntriesByType('resource').filter(r=>r.responseEnd>=c.start).map(r=>({name:r.name,start_ms:r.startTime,duration_ms:r.duration,end_ms:r.responseEnd,initiator:r.initiatorType})),started_at_ms:c.started_at_ms,stopped_at_ms:c.stopped_at_ms,samples:c.samples,events:c.events,requests:c.requests,probes:c.probes,cmab_decisions:(window.__LEO_CMAB_TRACE||[]).filter(r=>r.at_ms<=c.stopped_at_ms),custom_decisions:(window.__anjanDecisionLog||[]).filter(r=>r.at_ms<=c.stopped_at_ms),feedback:(window.__LEO_FEEDBACK_TRACE||[]).filter(r=>r.at_ms<=c.stopped_at_ms)};")
             (out/'telemetry.json').write_text(json.dumps(telemetry),encoding='utf-8')
         if final:
             final["elapsed_s"] = time.monotonic() - started
@@ -209,7 +212,7 @@ def run(args: argparse.Namespace) -> dict:
                    "controlled_stages": applied, "samples": len(samples), "mongo_documents": counts,
                    "media_time_end": final.get("media_time"), "ladder": final.get("ladder"),
                    "build": final.get("build"), "model": final.get("model"),
-                   "page_load_to_ready_ms":page_ready_ms,"runtime_prewarm_ms":runtime_prewarm_ms,"model_assets_cold_load_ms":final.get('model_load_ms'),
+                   "page_load_to_ready_ms":page_ready_ms,"runtime_prewarm_ms":runtime_prewarm_ms,"clock_mode":"host" if getattr(args,"local_clock",False) else "external","utc_synchronization_enabled":final.get("utc_synchronization_enabled"),"model_assets_cold_load_ms":final.get('model_load_ms'),
                    "decision_count": len(decisions),
                    "played_advance_s": sum(b['media_time'] - a['media_time'] for a, b in zip(samples, samples[1:])
                         if not b['paused'] and b['ready_state'] >= 3 and
@@ -248,5 +251,6 @@ if __name__ == "__main__":
     parser.add_argument('--scenario', help='Versioned workload manifest')
     parser.add_argument('--case', help='Case ID within workload manifest')
     parser.add_argument('--allow-test', action='store_true', help='Only for frozen final evaluation')
+    parser.add_argument('--local-clock',action='store_true',help='Explicit single-host emulator clock; avoid external UTC HTTP dependencies')
     parser.add_argument('--variant', help='Whitelisted improved-CMAB configuration')
     run(parser.parse_args())

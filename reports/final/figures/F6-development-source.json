@@ -1,0 +1,131 @@
+{
+  "studies": [
+    "memory-startup-v1",
+    "feedback-v1",
+    "context-guard-v2"
+  ],
+  "scope": "Development only; no final test scores",
+  "records": [
+    {
+      "study": "memory-startup-v1",
+      "hypothesis": "H1",
+      "treatment": "memory",
+      "baseline": "original",
+      "cases": 3,
+      "repeats_per_case": 1,
+      "positive_qoe_cases": 0,
+      "mean_paired_qoe_difference": -0.10141000624485567,
+      "mean_paired_stall_difference_s": 1.3538361980657285
+    },
+    {
+      "study": "memory-startup-v1",
+      "hypothesis": "H2",
+      "treatment": "startup",
+      "baseline": "original",
+      "cases": 3,
+      "repeats_per_case": 1,
+      "positive_qoe_cases": 3,
+      "mean_paired_qoe_difference": 0.9285875532535507,
+      "mean_paired_stall_difference_s": -13.87860506553155
+    },
+    {
+      "study": "memory-startup-v1",
+      "hypothesis": "H1xH2",
+      "treatment": "both",
+      "baseline": "original",
+      "cases": 3,
+      "repeats_per_case": 1,
+      "positive_qoe_cases": 3,
+      "mean_paired_qoe_difference": 0.5410516828162197,
+      "mean_paired_stall_difference_s": -8.192266247265174
+    },
+    {
+      "study": "feedback-v1",
+      "hypothesis": "H3 timing",
+      "treatment": "delayed",
+      "baseline": "both",
+      "cases": 3,
+      "repeats_per_case": 1,
+      "positive_qoe_cases": 2,
+      "mean_paired_qoe_difference": 0.026714346647659443,
+      "mean_paired_stall_difference_s": -1.2509884428254712
+    },
+    {
+      "study": "feedback-v1",
+      "hypothesis": "H3 reward",
+      "treatment": "outcome",
+      "baseline": "delayed",
+      "cases": 3,
+      "repeats_per_case": 1,
+      "positive_qoe_cases": 3,
+      "mean_paired_qoe_difference": 0.4421308777481316,
+      "mean_paired_stall_difference_s": -9.00725334269385
+    },
+    {
+      "study": "context-guard-v2",
+      "hypothesis": "H5 scaling+bias",
+      "treatment": "scaled",
+      "baseline": "outcome",
+      "cases": 3,
+      "repeats_per_case": 1,
+      "positive_qoe_cases": 1,
+      "mean_paired_qoe_difference": 0.1975055915684276,
+      "mean_paired_stall_difference_s": -3.8282626629407965
+    },
+    {
+      "study": "context-guard-v2",
+      "hypothesis": "H4 buffer+delay",
+      "treatment": "buffer",
+      "baseline": "scaled",
+      "cases": 3,
+      "repeats_per_case": 1,
+      "positive_qoe_cases": 3,
+      "mean_paired_qoe_difference": 0.5394144640801765,
+      "mean_paired_stall_difference_s": -10.777659692569541
+    },
+    {
+      "study": "context-guard-v2",
+      "hypothesis": "H4 RTT health/history",
+      "treatment": "context",
+      "baseline": "buffer",
+      "cases": 3,
+      "repeats_per_case": 1,
+      "positive_qoe_cases": 2,
+      "mean_paired_qoe_difference": 0.27282654588397187,
+      "mean_paired_stall_difference_s": -2.972203164977671
+    },
+    {
+      "study": "context-guard-v2",
+      "hypothesis": "H5 refit seed",
+      "treatment": "seeded",
+      "baseline": "context",
+      "cases": 3,
+      "repeats_per_case": 1,
+      "positive_qoe_cases": 1,
+      "mean_paired_qoe_difference": -0.20705021567514828,
+      "mean_paired_stall_difference_s": 5.38496069224004
+    },
+    {
+      "study": "context-guard-v2",
+      "hypothesis": "H6 guard",
+      "treatment": "guard",
+      "baseline": "context",
+      "cases": 3,
+      "repeats_per_case": 1,
+      "positive_qoe_cases": 3,
+      "mean_paired_qoe_difference": 0.9072283816857016,
+      "mean_paired_stall_difference_s": -15.514967611868803
+    },
+    {
+      "study": "context-guard-v2",
+      "hypothesis": "H6 guard-only",
+      "treatment": "guard_only",
+      "baseline": "guard",
+      "cases": 3,
+      "repeats_per_case": 1,
+      "positive_qoe_cases": 3,
+      "mean_paired_qoe_difference": 0.21981836810143218,
+      "mean_paired_stall_difference_s": -2.4965790809917245
+    }
+  ]
+}

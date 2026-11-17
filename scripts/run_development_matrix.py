@@ -24,13 +24,15 @@ def sha(path):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--name', default='memory-startup-v1')
+    parser.add_argument('--role',choices=['development','validation'],default='development')
+    parser.add_argument('--balanced-order',action='store_true')
     parser.add_argument('--variants', default='original,memory,startup,both')
     parser.add_argument('--repeats', type=int, default=1)
     parser.add_argument('--families', default='steady_bandwidth,bandwidth_variation,post_handover_recovery')
     args = parser.parse_args()
-    manifest = ROOT/'configs/final/workloads/development.json'
+    manifest = ROOT/f'configs/final/workloads/{args.role}.json'
     cases = [c for c in json.loads(manifest.read_text())['cases'] if c['family'] in args.families.split(',')]
-    assert cases and all(c['role'] == 'development' for c in cases)
+    assert cases and all(c['role'] == args.role for c in cases)
     sources = ['CMABAbrController.js', 'CMABImprovedController.js', 'CMABRule.js', 'CMABImprovedRule.js', 'CMABFeedback.js', 'CMABRuntime.js', '../NetworkObservations.js']
     base = ROOT/'dash.js/src/streaming/rules/abr/cmab'
     identity = {p: sha(base/p) for p in sources}
@@ -43,14 +45,19 @@ def main():
         'shaper':sha(ROOT/'shaper/tc-final.py'),'metrics':sha(ROOT/'rl/metrics.py')}
     assert docker('exec','leo_abr_rl-stat-server-1','sha256sum','/usr/src/app/app.py').split()[0] == measurement['stats_server']
     fingerprint = hashlib.sha256(json.dumps({'sources':identity,'measurement':measurement},sort_keys=True).encode()).hexdigest()
-    out = ROOT/'artifacts/final/development'/args.name
+    out = ROOT/'artifacts/final'/args.role/args.name
     out.mkdir(parents=True, exist_ok=True)
     ledger = out/'runs.json'
     rows = json.loads(ledger.read_text()) if ledger.exists() else []
     for repeat in range(args.repeats):
         for case_index, case in enumerate(cases):
             variants = args.variants.split(',')
-            random.Random(8000+repeat*100+case_index).shuffle(variants)
+            if args.balanced_order:
+                random.Random(8000).shuffle(variants)
+                shift=(repeat*len(cases)+case_index)%len(variants)
+                variants=variants[shift:]+variants[:shift]
+            else:
+                random.Random(8000+repeat*100+case_index).shuffle(variants)
             for variant in variants:
                 key = f'{fingerprint}:{case["id"]}:{variant}:{repeat}'
                 if any(r['key']==key and r['status']=='complete' for r in rows):

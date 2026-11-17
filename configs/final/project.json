@@ -1,0 +1,27 @@
+{
+  "group": 4,
+  "course_code": "CS6048",
+  "course_name": "Modern Networking Methods (Beyond TCP & IP)",
+  "proposal_title": "LEO-Aware Live Video Streaming: RL-Based Adaptive Bitrate Selection with an Optional Context-Aware Congestion-Control Extension",
+  "submission_title": "LEO-Aware Live Video Streaming: RL-Based Adaptive Bitrate Selection",
+  "scope": "Mandatory ABR work only; optional congestion-control extension excluded",
+  "members": [
+    {
+      "name": "Anjan R D",
+      "roll": "ME23B157",
+      "domain": "Algorithms and model training"
+    },
+    {
+      "name": "Rajat Dugar",
+      "roll": "ME23B114",
+      "domain": "Player integration and builds"
+    },
+    {
+      "name": "Deviprasad V K",
+      "roll": "ME23B164",
+      "domain": "Experiment design and QoE evaluation"
+    }
+  ],
+  "contributions_status": "Awaiting confirmation of actual teammate work outside repository; do not infer completed work from assigned domain",
+  "proposal_sha256": "67287bd5aa167630625b1d5585ebf5c85c31f3f24ec6ea718152ddcbbda24953"
+}

@@ -11,8 +11,9 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument('--name', default='memory-startup-v1')
     p.add_argument('--baseline', default='original')
+    p.add_argument('--role',choices=['development','validation'],default='development')
     args = p.parse_args()
-    folder = ROOT/'artifacts/final/development'/args.name
+    folder = ROOT/'artifacts/final'/args.role/args.name
     rows = json.loads((folder/'runs.json').read_text())
     baselines = {(r['case_id'], r['repeat']):r for r in rows if r['variant']==args.baseline}
     fields = ['case_id','variant','repeat','run_id','qoe_per_wall_s','stall_s','startup_s',
@@ -39,7 +40,7 @@ def main():
     with (folder/'paired-results.csv').open('w',newline='') as f:
         writer=csv.DictWriter(f,fieldnames=fields)
         writer.writeheader();writer.writerows(exported)
-    report = {'scope':'Development-only, not held-out evaluation; do not infer significance from single repeats',
+    report = {'scope':args.role+' only, not held-out evaluation; do not infer significance from single repeats',
               'baseline':args.baseline,'sessions':len(rows),'paired_rows':sum(r['paired_qoe_difference'] is not None for r in exported),
               'rows':exported}
     (folder/'paired-results.json').write_text(json.dumps(report,indent=2))

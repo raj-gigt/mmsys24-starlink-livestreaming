@@ -36,29 +36,34 @@
   },
   "H4": {
     "mechanism": "buffer/live delay and fresh RTT distinguish otherwise similar context",
-    "state": "warm development comparison ready",
+    "state": "development complete; retain context group for validation",
     "requirement": "causal deployed input with validity and age",
     "treatments": [
       "scaled -> buffer -> context"
     ],
-    "meaning": "RTT history/failure are causal observations, not ground-truth handovers"
+    "meaning": "RTT history/failure are causal observations, not ground-truth handovers",
+    "evidence": "development/context-guard-v2/paired-results.json",
+    "outcome": "Context group improves steady/recovery but not RTT-variation case; no universal feature gain"
   },
   "H5": {
     "mechanism": "refitting/scaling and reseeding affect exploration stability",
-    "state": "pinned-runtime zero-context/intercept/RNG fixture passes; browser comparisons ready",
+    "state": "development complete",
     "source_fact": "served MABWiser 2.7.0 defaults to seed 123456 and is reconstructed by original code",
     "evidence": "runtime-check.json",
     "treatments": [
       "outcome -> scaled",
       "context -> seeded"
-    ]
+    ],
+    "outcome": "Fixed scaling/intercept has mixed per-case results; required stable coordinates for extended contexts. Changing refit seed worsens three-family mean, so retain defaultseed. No persistent-model claim."
   },
   "H6": {
     "mechanism": "unnecessary quality changes or aggressive recovery impair playback",
-    "state": "guard and guard-only ready for paired development",
+    "state": "development supports guard; learning benefit unestablished",
     "requirement": "guard-only comparison and override count",
     "treatments": [
       "context -> guard -> guard_only"
-    ]
+    ],
+    "outcome": "Guard improves allthree cases versus context; guard-only is best in allthree single-repeat cases",
+    "decision": "Validate guard and context against original CMAB; include guard-only control and retain it as a deployable simple policy"
   }
 }

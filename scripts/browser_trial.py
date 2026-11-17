@@ -178,7 +178,7 @@ def run(args: argparse.Namespace) -> dict:
         (out / "console.json").write_text(json.dumps(console, indent=2), encoding="utf-8")
         final = driver.execute_script(SNAPSHOT)
         if getattr(args, 'final_telemetry', False):
-            telemetry = driver.execute_script("const c=window.LEO_FINAL_COLLECTOR;c.stop();return {version:c.version,samples:c.samples,events:c.events,requests:c.requests,probes:c.probes,cmab_decisions:window.__LEO_CMAB_TRACE||[],custom_decisions:window.__anjanDecisionLog||[],feedback:window.__LEO_FEEDBACK_TRACE||[]};")
+            telemetry = driver.execute_script("const c=window.LEO_FINAL_COLLECTOR;c.stop();return {version:c.version,started_at_ms:c.started_at_ms,stopped_at_ms:c.stopped_at_ms,samples:c.samples,events:c.events,requests:c.requests,probes:c.probes,cmab_decisions:(window.__LEO_CMAB_TRACE||[]).filter(r=>r.at_ms<=c.stopped_at_ms),custom_decisions:(window.__anjanDecisionLog||[]).filter(r=>r.at_ms<=c.stopped_at_ms),feedback:(window.__LEO_FEEDBACK_TRACE||[]).filter(r=>r.at_ms<=c.stopped_at_ms)};")
             (out/'telemetry.json').write_text(json.dumps(telemetry),encoding='utf-8')
         if final:
             final["elapsed_s"] = time.monotonic() - started

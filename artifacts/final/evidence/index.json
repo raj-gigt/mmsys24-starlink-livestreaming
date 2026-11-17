@@ -345,5 +345,278 @@
     ],
     "ledger": "artifacts/final/development/context-guard-v1/runs.json",
     "sha256": "9fcf729d1be0dc842a9ade96bb1772aa609045ca6f501749eda028f2c20759f7"
+  },
+  "phasea-abrCMABImproved-20261117T014927-58ac15": {
+    "bytes": 51116,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T014927-58ac15.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/context-guard-v2/runs.json",
+    "sha256": "8e208ab5aa93ec6e8eb0bf6d1b24512a0af72165f238e86a8aea54b82acb66b7"
+  },
+  "phasea-abrCMABImproved-20261117T015137-3b4ffb": {
+    "bytes": 42979,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T015137-3b4ffb.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/context-guard-v2/runs.json",
+    "sha256": "e043475e8588900d90176529c9e38a451daf2b298b2972064201028430005839"
+  },
+  "phasea-abrCMABImproved-20261117T015337-ce7865": {
+    "bytes": 57007,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T015337-ce7865.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/context-guard-v2/runs.json",
+    "sha256": "1ea54f137258b3f1206df52301ca556e8c91cce15576a51ce1f7c03be449661c"
+  },
+  "phasea-abrCMABImproved-20261117T015537-e5b878": {
+    "bytes": 57704,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T015537-e5b878.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/context-guard-v2/runs.json",
+    "sha256": "df54c7f7d291c7931402277cbc6cad81f8c6a788a10cef3e4f41644181f79f25"
+  },
+  "phasea-abrCMABImproved-20261117T015737-6f981f": {
+    "bytes": 36213,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T015737-6f981f.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/context-guard-v2/runs.json",
+    "sha256": "ad92ba3262486167c0b412355cc73b23cc8374fe476be8b818ca13005a921661"
+  },
+  "phasea-abrCMABImproved-20261117T015937-bace90": {
+    "bytes": 50590,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T015937-bace90.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/context-guard-v2/runs.json",
+    "sha256": "ad37c3c5c298aa72d29a14edc604aa385dc7af8f505c730f0c5b75f5a81eb891"
+  },
+  "phasea-abrCMABImproved-20261117T020137-8bef24": {
+    "bytes": 52706,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T020137-8bef24.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/context-guard-v2/runs.json",
+    "sha256": "4e2614c2a382c9546673705033b4fb6744c07a65e7b84ac5ebc7ac69480cfe6e"
+  },
+  "phasea-abrCMABImproved-20261117T020337-67eef1": {
+    "bytes": 59480,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T020337-67eef1.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/context-guard-v2/runs.json",
+    "sha256": "b26344819da5aa6c5dc0753ca703806de7f99a6a7a2488424ecc40d0876b4f33"
+  },
+  "phasea-abrCMABImproved-20261117T020537-796069": {
+    "bytes": 65239,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T020537-796069.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/context-guard-v2/runs.json",
+    "sha256": "b26b7de55fb65ecb726ca6d4db928dd05de837ec51ad0c47e63b7a71f031b65e"
+  },
+  "phasea-abrCMABImproved-20261117T020737-869cbc": {
+    "bytes": 64222,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T020737-869cbc.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/context-guard-v2/runs.json",
+    "sha256": "d8f7e1d52111bf19d5b2aa9028a6ab3dfb2789b03f8bdb92accffa150e29656e"
+  },
+  "phasea-abrCMABImproved-20261117T020937-0a51f3": {
+    "bytes": 56013,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T020937-0a51f3.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/context-guard-v2/runs.json",
+    "sha256": "53d8db671f7f2509b161dc4c03c9b8823461a2811ede154b772136e59cca0223"
+  },
+  "phasea-abrCMABImproved-20261117T021137-b8cf94": {
+    "bytes": 60700,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T021137-b8cf94.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/context-guard-v2/runs.json",
+    "sha256": "1e5f2b7261644b933a45268711c16bfccada34f9ce5d633dd58f49edf97cf5d8"
+  },
+  "phasea-abrCMABImproved-20261117T021337-9a8e9a": {
+    "bytes": 63855,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T021337-9a8e9a.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/context-guard-v2/runs.json",
+    "sha256": "fb5c9448a08ca45bab9d2af1cb37607c9dfac0e603c5dbb20f4232c3792327c1"
+  },
+  "phasea-abrCMABImproved-20261117T021537-a3598e": {
+    "bytes": 66814,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T021537-a3598e.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/context-guard-v2/runs.json",
+    "sha256": "7d12f6e5ccdfdfc974ae99f23bc2d9a19faab1541ed4f12948d2f42db1b6b454"
+  },
+  "phasea-abrCMABImproved-20261117T021737-051282": {
+    "bytes": 55455,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T021737-051282.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/context-guard-v2/runs.json",
+    "sha256": "a17418738845b4072fed44bc1b72177285cb955f270f7941186e6e3777e5b2b0"
+  },
+  "phasea-abrCMABImproved-20261117T021937-22b171": {
+    "bytes": 49953,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T021937-22b171.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/context-guard-v2/runs.json",
+    "sha256": "8f1d5d891cb8bca328f766d0c08b2dacb555b27a14f86694275da55de9fe0600"
+  },
+  "phasea-abrCMABImproved-20261117T022137-db0343": {
+    "bytes": 50787,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T022137-db0343.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/context-guard-v2/runs.json",
+    "sha256": "439d03d9be4cfcc3b50b3463d6f4bf4de2006aa738c55ecbe184e9d532cd165e"
+  },
+  "phasea-abrCMABImproved-20261117T022337-53c702": {
+    "bytes": 55199,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T022337-53c702.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/context-guard-v2/runs.json",
+    "sha256": "062d9362d691036134266e2c68c37cfcc6bb398e375232c32653eac0b7c3f4c3"
+  },
+  "phasea-abrCMABImproved-20261117T022537-2a205e": {
+    "bytes": 54607,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T022537-2a205e.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/context-guard-v2/runs.json",
+    "sha256": "ec2e6adacefb8da738b1d523919c2037b6f868789bdceabde208615bfd4fa2ef"
+  },
+  "phasea-abrCMABImproved-20261117T022737-6570c8": {
+    "bytes": 49190,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T022737-6570c8.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/context-guard-v2/runs.json",
+    "sha256": "c916fb43495965f1f7b7831bd541fb05817d158420906c7ee1b56867c62d320b"
+  },
+  "phasea-abrCMABImproved-20261117T022937-ee662d": {
+    "bytes": 53915,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T022937-ee662d.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/context-guard-v2/runs.json",
+    "sha256": "f8b9557b15dbb2afd9dfd254d0d5b2311d5a51fdb1a5a83b94c75efaaa8e1a94"
   }
 }

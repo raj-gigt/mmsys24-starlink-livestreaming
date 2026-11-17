@@ -224,7 +224,7 @@ Candidate configuration budget: initially at most 12 named CMAB settings and 72 
 **Verification / exit:** synthetic known-outcome fixtures and real linked requests agree; no duplicate updates/quality credit for unplayed media; attribution ambiguity is reported. Adopt a reward change only on validation benefit and correct accounting, not because it produces larger internal numbers.
 
 ### Step 13 - Test context, estimator/exploration and stability changes
-**Status:** Running. **Dependency:** 12. **Deliverables:** D2/D3/D5, C1, F6, T1/T5.
+**Status:** Complete. **Dependency:** 12. **Deliverables:** D2/D3/D5, C1, F6, T1/T5.
 
 **Objective / intuition:** determine whether extra information or better estimation helps beyond the reset/startup changes.
 
@@ -239,7 +239,7 @@ Candidate configuration budget: initially at most 12 named CMAB settings and 72 
 **Verification / exit:** causally available inputs, finite updates, bounded memory and correct scaling; validation metrics show which mechanism helped/hurt. Do not promote unnecessary complexity or infer handover ground truth from probe loss.
 
 ### Step 14 - Combine, ablate and select the primary candidate
-**Status:** Pending. **Dependency:** 13. **Deliverables:** D2/D3/D8, F6, T1/T5.
+**Status:** Running. **Dependency:** 13. **Deliverables:** D2/D3/D8, F6, T1/T5.
 
 **Objective / intuition:** obtain a strong controller whose gain can be explained by a few tested mechanisms.
 
@@ -423,8 +423,8 @@ Autonomous execution is active; see the per-step tracker and artifacts/final/sta
 | 10 | Complete | Verified 86 live schedule transitions within 14ms; physical outage/100ms RTT/recovery passed; six development/six validation/ten test/ten sealed reserve cases; raw offset replay checked |
 | 11 | Complete | 12 paired development sessions complete; startup improves all three cases, retained memory alone does not; paired-results.json preserves every outcome |
 | 12 | Complete | 9 browser sessions; six request-identity checks pass; explicit download surrogate improves all three development cases; original delayed proxy mixed; completion-censoring limitation disclosed |
-| 13 | Running | Test physical normalization/intercept, causal context and action guard; correct shared CMAB dependency prewarm before validation |
-| 14 | Pending | Validation-selected C*, F6/T5 |
+| 13 | Complete | 21 warm browser sessions; all request/input/replay/portable-metric checks pass; guard helps, guard-only best, context mixed, reseeding rejected |
+| 14 | Running | Select CMAB among context and guard on six validation cases; retain guard-only ablation control; all final test outcomes remain sealed |
 | 15 | Pending | Quantified environment calibration and CPU/RTX benchmark, F8 |
 | 16 | Pending | Compatible conventional/LEO training candidates |
 | 17 | Pending | Repeated training, representative checkpoints, real-browser export checks |

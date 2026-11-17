@@ -1,0 +1,174 @@
+{
+  "status": "PASS",
+  "scope": "Controlled schedule/phase integrity, independent of outcome quality",
+  "runs": [
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T014927-58ac15",
+      "start_phase_error_s": 0.08881211280822754,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T015137-3b4ffb",
+      "start_phase_error_s": 0.08148694038391113,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T015337-ce7865",
+      "start_phase_error_s": 0.08646488189697266,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T015537-e5b878",
+      "start_phase_error_s": 0.08275198936462402,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T015737-6f981f",
+      "start_phase_error_s": 0.08736610412597656,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T015937-bace90",
+      "start_phase_error_s": 0.08276605606079102,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T020137-8bef24",
+      "start_phase_error_s": 0.08646488189697266,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T020337-67eef1",
+      "start_phase_error_s": 0.08635711669921875,
+      "verified_transitions": 79,
+      "max_transition_error_s": 0.013515233993530273,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T020537-796069",
+      "start_phase_error_s": 0.08514404296875,
+      "verified_transitions": 79,
+      "max_transition_error_s": 0.012349605560302734,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T020737-869cbc",
+      "start_phase_error_s": 0.0930180549621582,
+      "verified_transitions": 79,
+      "max_transition_error_s": 0.013364315032958984,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T020937-0a51f3",
+      "start_phase_error_s": 0.08376002311706543,
+      "verified_transitions": 79,
+      "max_transition_error_s": 0.012358903884887695,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T021137-b8cf94",
+      "start_phase_error_s": 0.0773320198059082,
+      "verified_transitions": 79,
+      "max_transition_error_s": 0.012419939041137695,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T021337-9a8e9a",
+      "start_phase_error_s": 0.09583497047424316,
+      "verified_transitions": 79,
+      "max_transition_error_s": 0.012106180191040039,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T021537-a3598e",
+      "start_phase_error_s": 0.08217692375183105,
+      "verified_transitions": 79,
+      "max_transition_error_s": 0.012132644653320312,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T021737-051282",
+      "start_phase_error_s": 0.0836329460144043,
+      "verified_transitions": 86,
+      "max_transition_error_s": 0.01281595230102539,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T021937-22b171",
+      "start_phase_error_s": 0.08901691436767578,
+      "verified_transitions": 86,
+      "max_transition_error_s": 0.014108657836914062,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T022137-db0343",
+      "start_phase_error_s": 0.09293389320373535,
+      "verified_transitions": 86,
+      "max_transition_error_s": 0.013966798782348633,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T022337-53c702",
+      "start_phase_error_s": 0.09801888465881348,
+      "verified_transitions": 86,
+      "max_transition_error_s": 0.013843059539794922,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T022537-2a205e",
+      "start_phase_error_s": 0.07946395874023438,
+      "verified_transitions": 86,
+      "max_transition_error_s": 0.013946771621704102,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T022737-6570c8",
+      "start_phase_error_s": 0.0818779468536377,
+      "verified_transitions": 86,
+      "max_transition_error_s": 0.01339411735534668,
+      "raw_replay": false
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T022937-ee662d",
+      "start_phase_error_s": 0.08693289756774902,
+      "verified_transitions": 86,
+      "max_transition_error_s": 0.014670133590698242,
+      "raw_replay": false
+    }
+  ]
+}

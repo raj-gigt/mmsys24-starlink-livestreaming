@@ -1,0 +1,21 @@
+{
+  "frozen_before_validation": true,
+  "candidate_bandits": [
+    "context",
+    "guard"
+  ],
+  "controls": [
+    "original",
+    "guard_only"
+  ],
+  "candidate_choice": "Highest mean common QoE over five mandatory families, subject to frozen physical guardrails and useful-playback gate",
+  "mixed_shifted": "Reported separately as stress case; not added to mandatory-family average",
+  "minimum_candidate_played_fraction_each_case": 0.5,
+  "useful_gate_scope": "Candidate eligibility only; never discard scored control or poor-policy outcomes",
+  "heuristic_control": "guard_only is separately deployable and its result is reported; it is not labelled CMAB or RL",
+  "repetitions": 1,
+  "cases": 6,
+  "order": "One fixed random policy permutation rotated across cases; no performance-based order",
+  "guardrails": "configs/final/protocol.json",
+  "development_choice_evidence": "artifacts/final/development/context-guard-v2/paired-results.json"
+}

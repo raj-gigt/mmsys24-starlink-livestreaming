@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "runs": [
+    "phasea-abrCMABImproved-20261117T014927-58ac15",
+    "phasea-abrCMABImproved-20261117T015137-3b4ffb",
+    "phasea-abrCMABImproved-20261117T015337-ce7865",
+    "phasea-abrCMABImproved-20261117T015537-e5b878",
+    "phasea-abrCMABImproved-20261117T015737-6f981f",
+    "phasea-abrCMABImproved-20261117T015937-bace90",
+    "phasea-abrCMABImproved-20261117T020137-8bef24",
+    "phasea-abrCMABImproved-20261117T020337-67eef1",
+    "phasea-abrCMABImproved-20261117T020537-796069",
+    "phasea-abrCMABImproved-20261117T020737-869cbc",
+    "phasea-abrCMABImproved-20261117T020937-0a51f3",
+    "phasea-abrCMABImproved-20261117T021137-b8cf94",
+    "phasea-abrCMABImproved-20261117T021337-9a8e9a",
+    "phasea-abrCMABImproved-20261117T021537-a3598e",
+    "phasea-abrCMABImproved-20261117T021737-051282",
+    "phasea-abrCMABImproved-20261117T021937-22b171",
+    "phasea-abrCMABImproved-20261117T022137-db0343",
+    "phasea-abrCMABImproved-20261117T022337-53c702",
+    "phasea-abrCMABImproved-20261117T022537-2a205e",
+    "phasea-abrCMABImproved-20261117T022737-6570c8",
+    "phasea-abrCMABImproved-20261117T022937-ee662d"
+  ],
+  "count": 21,
+  "metrics_source_sha256": "b1a60542aa44188f60dacf3c8e9b009905df7b4dca8f637c7a3b6d97d8e3d56b",
+  "ledger_sha256": {
+    "artifacts/final/development/context-guard-v2/runs.json": "e9fffce99a56c0fd0185f7ec98cf5e8a1804a9c7dd4f0860e051c5763bfb8fb4"
+  }
+}

@@ -2,9 +2,9 @@
 (function () {
     'use strict';
     if (window.LEO_FINAL_COLLECTOR) return;
-    const state = {version: 1, samples: [], events: [], requests: [], epoch: 0,
+    const state = {version: 2, samples: [], events: [], requests: [], epoch: 0,
         waiting: true, played: false, quality: null, player: null, timer: null, probes: []};
-    const event = (type, data) => state.events.push({type, t_s: (performance.now()-state.start)/1000, ...data});
+    const event = (type, data) => {if (!state.stopped) state.events.push({type, t_s: (performance.now()-state.start)/1000, ...data});};
     function sample() {
         const v = document.querySelector('video'), p = state.player;
         if (!p || !v || state.stopped) return;
@@ -44,6 +44,7 @@
             event('rendered', {quality: e.newQuality}); sample();
         });
         player.on('fragmentLoadingCompleted', e => {
+            if (state.stopped) return;
             const r = e.request;
             if (!r || r.mediaType !== 'video' || r.type !== 'MediaSegment') return;
             state.requests.push({t_s: (performance.now()-state.start)/1000,
@@ -65,6 +66,7 @@
         });
         state.timer = setInterval(sample, 100);
         function probe() {
+            if (state.stopped) return;
             if (window.LEO_SHARED_PROBE_ACTIVE) {
                 const row=window.LEO_PROBE;
                 if (row && (!state.probes.length || row.probe_at_s !== state.probes[state.probes.length-1].probe_at_s)) state.probes.push(row);
@@ -75,6 +77,7 @@
             fetch('http://stat-server:8000/ping/details', {signal: abort.signal})
                 .then(r => {if (!r.ok) throw new Error('probe-health-http'); return r.json();})
                 .then(r => {
+                    if (state.stopped) return;
                     window.LEO_PROBE = r;
                     if (!state.probes.length || r.probe_at_s !== state.probes[state.probes.length-1].probe_at_s) {
                         state.probes.push(r);
@@ -90,12 +93,12 @@
     }
     const original = App.prototype._load;
     App.prototype._load = function () {
-        state.start = performance.now(); state.stopped = false;
+        state.start = performance.now(); state.started_at_ms = Date.now(); state.stopped = false;
         const result = original.apply(this, arguments);
         bind(this.player);
         if (window.LEO_FINAL_DURATION_S) setTimeout(() => state.stop(), window.LEO_FINAL_DURATION_S*1000);
         return result;
     };
-    state.stop = function () {sample(); state.stopped = true; clearInterval(state.timer); clearInterval(state.probeTimer);};
+    state.stop = function () {if (state.stopped) return;sample(); state.stopped_at_ms = Date.now(); state.stopped = true; clearInterval(state.timer); clearInterval(state.probeTimer);};
     window.LEO_FINAL_COLLECTOR = state;
 })();

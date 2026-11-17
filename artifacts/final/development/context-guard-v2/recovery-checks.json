@@ -1,0 +1,107 @@
+[
+  {
+    "run_id": "phasea-abrCMABImproved-20261117T021737-051282",
+    "variant": "guard",
+    "recoveries": [
+      {
+        "outage_start_s": 30,
+        "outage_end_s": 34,
+        "first_playing_after_end_s": 3.7779999999999987,
+        "sustained_playback_recovery_s": 6.478499999999997,
+        "recovery_censored": false,
+        "stable_window_s": 2,
+        "censor_horizon_after_end_s": 56.02029999999888
+      }
+    ]
+  },
+  {
+    "run_id": "phasea-abrCMABImproved-20261117T021937-22b171",
+    "variant": "outcome",
+    "recoveries": [
+      {
+        "outage_start_s": 30,
+        "outage_end_s": 34,
+        "first_playing_after_end_s": 6.159199999999252,
+        "sustained_playback_recovery_s": 23.287800000000743,
+        "recovery_censored": false,
+        "stable_window_s": 2,
+        "censor_horizon_after_end_s": 56.021199999999254
+      }
+    ]
+  },
+  {
+    "run_id": "phasea-abrCMABImproved-20261117T022137-db0343",
+    "variant": "buffer",
+    "recoveries": [
+      {
+        "outage_start_s": 30,
+        "outage_end_s": 34,
+        "first_playing_after_end_s": 7.698400000000376,
+        "sustained_playback_recovery_s": 32.776700000001114,
+        "recovery_censored": false,
+        "stable_window_s": 2,
+        "censor_horizon_after_end_s": 56.02830000000074
+      }
+    ]
+  },
+  {
+    "run_id": "phasea-abrCMABImproved-20261117T022337-53c702",
+    "variant": "guard_only",
+    "recoveries": [
+      {
+        "outage_start_s": 30,
+        "outage_end_s": 34,
+        "first_playing_after_end_s": 4.291899999998513,
+        "sustained_playback_recovery_s": 12.758800000000747,
+        "recovery_censored": false,
+        "stable_window_s": 2,
+        "censor_horizon_after_end_s": 56.02180000000075
+      }
+    ]
+  },
+  {
+    "run_id": "phasea-abrCMABImproved-20261117T022537-2a205e",
+    "variant": "context",
+    "recoveries": [
+      {
+        "outage_start_s": 30,
+        "outage_end_s": 34,
+        "first_playing_after_end_s": 4.436999999999998,
+        "sustained_playback_recovery_s": 23.419199999999257,
+        "recovery_censored": false,
+        "stable_window_s": 2,
+        "censor_horizon_after_end_s": 56.02069999999925
+      }
+    ]
+  },
+  {
+    "run_id": "phasea-abrCMABImproved-20261117T022737-6570c8",
+    "variant": "scaled",
+    "recoveries": [
+      {
+        "outage_start_s": 30,
+        "outage_end_s": 34,
+        "first_playing_after_end_s": 7.562800000000742,
+        "sustained_playback_recovery_s": 10.234000000000002,
+        "recovery_censored": false,
+        "stable_window_s": 2,
+        "censor_horizon_after_end_s": 56.02230000000074
+      }
+    ]
+  },
+  {
+    "run_id": "phasea-abrCMABImproved-20261117T022937-ee662d",
+    "variant": "seeded",
+    "recoveries": [
+      {
+        "outage_start_s": 30,
+        "outage_end_s": 34,
+        "first_playing_after_end_s": 2.2284000000022317,
+        "sustained_playback_recovery_s": 4.7194000000022385,
+        "recovery_censored": false,
+        "stable_window_s": 2,
+        "censor_horizon_after_end_s": 56.0265
+      }
+    ]
+  }
+]

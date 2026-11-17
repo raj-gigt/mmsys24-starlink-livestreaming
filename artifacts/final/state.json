@@ -33,25 +33,33 @@
       "updated_utc": "2026-11-17T01:24:45.567830+00:00"
     },
     "13": {
+      "status": "Complete",
+      "evidence": "21 warm browser sessions; all request/input/replay/portable-metric checks pass; guard helps, guard-only best, context mixed, reseeding rejected",
+      "updated_utc": "2026-11-17T02:33:37.206700+00:00"
+    },
+    "14": {
       "status": "Running",
-      "evidence": "Test physical normalization/intercept, causal context and action guard; correct shared CMAB dependency prewarm before validation",
-      "updated_utc": "2026-11-17T01:24:45.648953+00:00"
+      "evidence": "Select CMAB among context and guard on six validation cases; retain guard-only ablation control; all final test outcomes remain sealed",
+      "updated_utc": "2026-11-17T02:33:37.301284+00:00"
     }
   },
-  "updated_utc": "2026-11-17T01:24:45.648953+00:00",
-  "current_step": 13,
+  "updated_utc": "2026-11-17T02:33:37.301284+00:00",
+  "current_step": 14,
   "active_experiment": {
-    "step": 13,
-    "command": "python scripts/run_development_matrix.py --name context-guard-v2 --variants outcome,scaled,buffer,context,seeded,guard,guard_only --families steady_bandwidth,rtt_variation,post_handover_recovery",
-    "session_id": 86051,
-    "ledger": "artifacts/final/development/context-guard-v2/runs.json",
-    "resume": "Rerun same command; complete run keys skipped",
+    "step": 14,
+    "session_id": 65650,
+    "command": "python scripts/run_development_matrix.py --role validation --name finalists-v1 --variants original,context,guard,guard_only --families steady_bandwidth,bandwidth_variation,rtt_variation,handover_interruption,post_handover_recovery,mixed_shifted --balanced-order",
+    "ledger": "artifacts/final/validation/finalists-v1/runs.json",
+    "resume": "Same command skips complete keys",
     "do_not_modify_during_measurement": [
-      "CMAB controller code",
-      "workload manifest",
-      "player image",
+      "Player/controller sources",
       "stats-server image",
-      "observer collection code"
+      "observer/runner code",
+      "workload and selection rules"
     ]
-  }
+  },
+  "pending_protocol_refinements": [
+    "For supplementary original raw replay, use a predeclared whole-minute source offset such as2940s within test block when playback starts atminute0; use authors custom CMAB catchup for both. This phase correction is metadata-driven, before any final scores.",
+    "Consider guard-only final-matrix extension before unsealing because it beat the hybrid on all three development cases. Recompute runtime and protect release."
+  ]
 }

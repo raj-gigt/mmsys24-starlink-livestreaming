@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "run_id": "phasea-abrCMABImproved-20261117T020937-0a51f3",
+  "starts": 42,
+  "settled": 41,
+  "accepted": 35,
+  "linked_start_fraction": 0.9047619047619048,
+  "outcomes": {
+    "complete": 39,
+    "seek-censored": 2
+  },
+  "limitation": "Censored/unmatched transfers are not trained. Reward is a request-completion proxy, not played quality or causal segment-level stall attribution."
+}

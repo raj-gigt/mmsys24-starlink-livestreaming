@@ -82,15 +82,29 @@
     "resume": "Same command skips completed keys; do not edit frozen sources/models/configs. Clock helper holds/restores guest NTP automatically.",
     "source_publication": "be131536f260d64a6c7e6e4478d51e01e60bcf62; player60f56693032bb7e12c174951da4ee05818383527",
     "do_not_modify": "Every file in freeze.sources, or add files under dash.js/src, testplayer or rl/web; no heavy training or parallel browser experiments while measured matrix runs.",
-    "next": "Archive portable results, verify all179, analyse figures/tables, produce/report/render/check PDF and8-slide final deck, real recorded demo, clean reproduction ZIP, publish; contributions intentionally blank template."
+    "next": "Archive portable results, verify all179, analyse figures/tables, produce/report/render/check PDF and8-slide final deck, real recorded demo, clean reproduction ZIP, publish; contributions intentionally blank template.",
+    "analysis_followthrough_session": 77824,
+    "followthrough": "After179 and automatic clock release, archive complete/invalid raw events and run reproduce_final --saved-results; source/model/metric/cutoff/replay checks then analyse_final. Visual checks and report/deck/demo/package still require continuation."
   },
   "training_extension_decision": "No extension: both aggregate late validation trends nonpositive. All10 seeds improved initialization; selected peaks retained. Main10.004million interactions,44.33min actual training.",
   "recovery_20261117": {
     "checked_at": "2026-11-17T16:52:33.875194",
     "matrix_session": 11016,
-    "verified_portable_final_trials": 47,
+    "verified_portable_final_trials": 59,
     "frozen_source_files": 303,
     "reused": "Completed CMAB research, calibration,16 screening fits,10 main fits,394 export fixtures and six browser deployment checks",
-    "prepared_not_executed": "Report/deck source, live recording launcher, saved-results verifier, submission builder and clean-extraction verifier; final matrix remains active"
+    "prepared_not_executed": "Report/deck source, live recording launcher, saved-results verifier, submission builder and clean-extraction verifier; final matrix remains active",
+    "additional_checks": "All59 archived final trials pass actual input/action and numerical dense replay plus unique request feedback; T7/T8 completion prepared."
+  },
+  "artifact_authoring": {
+    "presentations_marker_done": true,
+    "pdf_marker_done": false,
+    "presentation_source": "scripts/build_final_presentation.mjs",
+    "report_source": "scripts/build_final_report.py",
+    "external_build_root": "C:/Users/HP/AppData/Local/LEO-RL-final-artifacts",
+    "runtime": "C:/Program Files/WindowsApps/OpenAI.CodexPrimaryRuntime.v26-1112-737-0_26.1112.737.0_x64__3k8sg7r9htsxt/dependencies",
+    "latest_pushed_parent": "1882607",
+    "draft_assembly_session": 29217,
+    "future_process": "Waits for verified analysis179, then PDF marker once and ReportLab PDF, then ArtifactTool eight-slide PPTX/imported-file previews. Drafts require visual/factual review before release."
   }
 }

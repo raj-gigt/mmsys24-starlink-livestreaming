@@ -91,7 +91,9 @@ def main():
     fig.text(.07,.015,'Points: 10 fixed-case means. Diamonds: equal-family means, 95% paired-repeat intervals conditional on these cases; not Starlink population intervals.',fontsize=7.2)
     fig.tight_layout(rect=(0,.06,1,.95));save(fig,'F3-overall-paired',figures)
     # F4 all required families, paired differences for each component.
-    fig,axes=plt.subplots(1,3,figsize=(11,3.8));x=np.arange(5);width=.12
+    # Size for a full report column: avoid shrinking an11-inch figure until
+    # the six-policy legend and scenario labels become illegible in the PDF.
+    fig,axes=plt.subplots(1,3,figsize=(7.8,3.9));x=np.arange(5);width=.12
     for j,p in enumerate(compare):
         for ax,key in zip(axes,['qoe_per_wall_s','stall_s','mean_live_latency_s']):
             vals=[]
@@ -101,9 +103,11 @@ def main():
                 vals.append(a[key]-b[key])
             ax.bar(x+(j-2.5)*width,vals,width,color=COLORS[p],label=LABELS[p])
     for ax,ylabel in zip(axes,['QoE difference / wall s','Stall difference (s)','Mean live-delay difference (s)']):
-        ax.axhline(0,color='#263B58',lw=.8);ax.set(xticks=x,xticklabels=['Steady','Capacity','RTT','Outage','Recovery'],ylabel=ylabel);ax.tick_params(axis='x',labelsize=8);ax.grid(axis='y',alpha=.15)
-    axes[0].legend(fontsize=6.5,ncol=2,frameon=False)
-    fig.suptitle('Scenario effects: higher QoE and lower stalls/delay are better',fontsize=12);fig.tight_layout();save(fig,'F4-family-effects',figures)
+        ax.axhline(0,color='#263B58',lw=.8);ax.set(xticks=x,xticklabels=['Steady','Cap.','RTT','Outage','Recov.'],ylabel=ylabel);ax.tick_params(axis='x',labelsize=8.5);ax.grid(axis='y',alpha=.15)
+    handles,names=axes[0].get_legend_handles_labels()
+    fig.legend(handles,names,loc='lower center',ncol=3,frameon=False,fontsize=9)
+    fig.suptitle('Scenario effects: higher QoE and lower stalls/delay are better',fontsize=11)
+    fig.tight_layout(rect=(0,.16,1,.94));save(fig,'F4-family-effects',figures)
     # F5 fixed, predeclared trajectories, with the worst case explicitly added.
     for family in ['bandwidth_variation','post_handover_recovery']:
         case=next(r['case_id'] for r in controlled if r['family']==family and r['recording_id'].startswith('sey'))

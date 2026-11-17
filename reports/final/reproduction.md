@@ -19,7 +19,9 @@ python scripts/reproduce_final.py --saved-results
 
 This checks all 303 frozen source identities, all 179 trial keys, compressed-event
 hashes, actual playback metrics, shared observation cutoffs, epoch/monotonic clock
-agreement, applied network schedules and source phase. It regenerates
+agreement, applied network schedules and source phase. It also replays actual
+neural preprocessing/logits/actions and checks unique CMAB request feedback.
+It regenerates T7 metric definitions and T8 observed deployment costs, plus
 `artifacts/final/evaluation/analysis.json`, F3-F5 and T3-T4. It needs neither Docker
 nor MongoDB nor the original local `artifacts/runs` directory. There is no training
 or new network experiment in this command. Windows/Linux text line endings are

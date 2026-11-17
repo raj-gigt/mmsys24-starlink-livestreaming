@@ -70,13 +70,15 @@ const signed=(v,d=2)=>(v>=0?'+':'')+fmt(v,d);
 }
 // 2: reference mechanism; reuse the source-backed technical diagram.
 {
-  const s=slide('Reference system and CMAB policy','Sources: reports/final/cmab-audit.md; pinned CMABAbrController.js and CMABRule.js; Zhao & Pan, MMSys2024, doi:10.1145/3625468.3647616. Original reward uses an immediate single-segment P1203 proxy, not observed eventual playback. This criticism concerns its use here, not P1203 generally.');
-  s.images.add({path:path.join(ROOT,'reports/final/figures/F1-system.png'),alt:'Common Docker streaming and measurement testbed',fit:'contain',position:{left:54,top:124,width:670,height:355}});
+  const s=slide('Reference system and CMAB policy','Sources: upstream README and assets/Emulation-Testbed.png (supplied project diagram); reports/final/cmab-audit.md; pinned CMABAbrController.js and CMABRule.js; Zhao & Pan, MMSys2024, doi:10.1145/3625468.3647616. Original reward uses an immediate single-segment P1203 proxy, not observed eventual playback. This criticism concerns its use here, not P1203 generally.');
+  s.images.add({path:path.join(ROOT,'assets/Emulation-Testbed.png'),alt:'Supplied README diagram of the Docker emulator',fit:'contain',position:{left:54,top:136,width:670,height:370}});
   text(s,'Original policy',768,137,435,45,29,C.teal,true);
-  text(s,'LinTS bandit: throughput, playback rate and legacy RTT\n\nEvery 15 s: reset; first 7 decision callbacks force the highest quality',768,195,435,231,26);
-  text(s,'Immediate reward proxy',64,495,650,42,28,C.teal,true);
-  text(s,'O46 × (target / current delay) × (bitrate / max)\n− selected-quality stall share',64,546,680,82,25);
-  text(s,'Weak outcome attribution\nMissing buffer/RTT health\nAggressive restarts',768,490,435,143,26,C.ink);
+  text(s,'LinTS: throughput, playback rate and legacy RTT\n\n15 s resets; first 7 callbacks force the highest quality',768,195,435,164,25);
+  text(s,'Chrome → Nginx/tc → live source',64,536,650,43,29,C.navy,true);
+  text(s,'Same services and media; our build copies the modified player source.',64,594,650,64,25);
+  text(s,'Immediate reward proxy',768,380,435,42,28,C.teal,true);
+  text(s,'O46 × target/L × bitrate/max\n− selected-quality stall share',768,436,435,85,24);
+  text(s,'Weak outcome attribution\nMissing buffer and RTT health',768,560,435,81,25,C.ink);
 }
 // 3: native editable evidence table; keep the guard-only caveat visible.
 {
@@ -165,8 +167,9 @@ await finalizePresentation({workspaceDir:BUILD,candidatePath:candidate,finalPath
   explicitTotalSlideCount:8,requiredNativeTableOwnerSlides:[3,5],requiredNativeChartOwnerSlides:[4,6,7],
   materializeLiteralChartWorkbooks:true,fontPolicy:{basis:'design',families:[font]},
   verifyArtifactToolImport:true,receiptPath:path.join(BUILD,'validation-'+stamp+'.json')});
-for(const [i,s] of presentation.slides.items.entries()){
-  const png=await presentation.export({slide:s,format:'png',scale:1});
+const finalPresentation=await Presentation.load(finalPath);
+for(const [i,s] of finalPresentation.slides.items.entries()){
+  const png=await finalPresentation.export({slide:s,format:'png',scale:1});
   await fs.writeFile(path.join(BUILD,'slide-'+String(i+1).padStart(2,'0')+'.png'),new Uint8Array(await png.arrayBuffer()));
 }
 await fs.copyFile(finalPath,path.join(ROOT,'reports/final/Group4-final-presentation.pptx'));

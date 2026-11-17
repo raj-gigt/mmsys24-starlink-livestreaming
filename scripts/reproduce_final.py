@@ -16,6 +16,7 @@ sys.path.insert(0, str(ROOT))
 from rl.evidence import load_run
 from rl.metrics import evaluate_samples
 from rl.replay_validation import verify_replay
+from rl.decision_validation import check_decisions
 
 
 def canonical_hash(path):
@@ -62,11 +63,12 @@ def check_evidence(require_complete=True):
     freeze = json.loads(freeze_path.read_text())
     digest = hashlib.sha256(freeze_path.read_bytes()).hexdigest()
     expected = {f'{digest}:{p["case_id"]}:{p["policy"]}:{p["repeat"]}' for p in freeze['plan']}
+    plans={f'{digest}:{p["case_id"]}:{p["policy"]}:{p["repeat"]}':p for p in freeze['plan']}
     keys = [r['key'] for r in rows]
     assert len(keys) == len(set(keys)) and set(keys) <= expected
     if require_complete:
         assert set(keys) == expected and len(rows) == 179, 'Final inventory is incomplete'
-    replay = []
+    replay = [];decisions=[]
     for row in rows:
         assert row['status'] == 'complete' and row['freeze_sha256'] == digest
         payload = load_run(row['run_id'])  # Checks compressed file hash and run identity.
@@ -86,10 +88,11 @@ def check_evidence(require_complete=True):
             else:
                 assert actual[key] == value, (row['run_id'],key)
         replay.append(verify_replay(payload))
+        decisions.append(check_decisions(payload,plans[row['key']]))
     report = {'status':'PASS', 'verified_sessions':len(rows),
               'inventory_complete':set(keys)==expected, 'freeze_sha256':digest,
-              'checks':['exact inventory','compressed hashes','metric recomputation','shared cutoff','dual clock','actual applied schedule and source phase'],
-              'replay_checks':replay}
+              'checks':['exact inventory','compressed hashes','metric recomputation','shared cutoff','dual clock','actual applied schedule and source phase','actual policy/action/input and dense numerical replay','unique request-outcome attribution'],
+              'replay_checks':replay,'decision_checks':decisions}
     (folder/'saved-results-check.json').write_text(json.dumps(report,indent=2))
     return report
 
@@ -106,6 +109,7 @@ def main():
     report = check_evidence(require_complete=args.saved_results)
     print(json.dumps({'status':'PASS','frozen_source_files':count,'verified_models':models,'verified_sessions':report['verified_sessions']}),flush=True)
     if args.saved_results:
+        subprocess.run([sys.executable,str(ROOT/'scripts/summarize_final_deployment.py')],cwd=ROOT,check=True)
         subprocess.run([sys.executable,str(ROOT/'scripts/analyse_final.py')],cwd=ROOT,check=True)
         print('Reproduced final analysis.json and F3-F5 / T3-T4 from portable events. No Docker or MongoDB used.')
 

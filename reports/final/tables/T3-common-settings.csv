@@ -1,0 +1,10 @@
+setting,value
+status,"""development-definition; candidate identities frozen later before final tests"""
+version,2
+metrics,"{""version"": ""played-ledger-v2"", ""quality"": ""log(nominal_bps/300000)*played_media_s/2"", ""stall"": 4, ""startup"": 1, ""variation"": 0.3, ""excess_live_latency_area"": 0.1, ""automatic_seek_wait_in_stalls"": true, ""user_interaction_allowed_in_automated_runs"": false}"
+playback,"{""target_s"": 3, ""catchup"": ""liveCatchupModeLoLP"", ""align_source_and_wall_clock"": true, ""clock_mode"": ""host"", ""clock_scope"": ""Explicit hostClock=1 only in the single-WSL-host emulator; original externalUTC remains default for remote clients""}"
+selection,"{""aggregate"": ""equal weight per mandatory family, equal case weight within family"", ""max_extra_mean_stall_s"": 0.5, ""max_extra_mean_stall_fraction"": 0.1, ""max_extra_p95_latency_s"": 0.5, ""max_extra_startup_s"": 1}"
+final_matrix,"{""controlled_cases"": 10, ""policies"": 7, ""repeats"": 2, ""primary_extra_repeats"": 30, ""paper_replay_trials"": 9, ""total_trials"": 179, ""playback_minutes"": 367, ""extension"": ""Guard-only separately included before final performance access, based on development and validation; three repeats for original/improved/guard-only, two for other baselines""}"
+sensitivity,"""rescore stall,variation,latency coefficients at .5x and 2x one at a time; never select final score by test outcome"""
+test_access,"""explicit frozen-evaluation flag only; no test performance viewed yet"""
+initialization_revision,"""All policies prewarmed; external clock synchronization removed equally after pre-ABR timing diagnosis. Startup coefficient and physical gates unchanged."""

@@ -1,0 +1,53 @@
+[
+  {
+    "steps": 0,
+    "validation_qoe": -0.17207309738537754,
+    "validation_stall_s": 13.49460617449998,
+    "validation_played_s": 178.2203800643159,
+    "actions": {
+      "0": 438,
+      "1": 1028,
+      "2": 25,
+      "3": 10,
+      "4": 140
+    },
+    "training_return": null,
+    "actor_parameter_sha256": "6af60cf30e0a710073324faee7ce5eb4d9540648acd92d0efd9c032db2451677",
+    "optimizer_updates": 0,
+    "gradient_l2": 0.9402447958015826
+  },
+  {
+    "steps": 125440,
+    "validation_qoe": -0.053095210484189366,
+    "validation_stall_s": 15.575267590111382,
+    "validation_played_s": 177.81419570789015,
+    "actions": {
+      "0": 82,
+      "1": 989,
+      "2": 45,
+      "3": 94,
+      "4": 429
+    },
+    "training_return": -28.753573520000003,
+    "actor_parameter_sha256": "e927a8c8915d343e3bd6667a888153f9b205392370c5b803a83f91179fd592e2",
+    "optimizer_updates": 245,
+    "gradient_l2": 0.0028635702539164484
+  },
+  {
+    "steps": 250368,
+    "validation_qoe": -0.0024556256405254572,
+    "validation_stall_s": 16.670822316199303,
+    "validation_played_s": 177.4385479171043,
+    "actions": {
+      "0": 93,
+      "1": 685,
+      "2": 122,
+      "3": 235,
+      "4": 502
+    },
+    "training_return": -44.681000299999994,
+    "actor_parameter_sha256": "68d7749f4bf209c54bac3c67f611cafa011e576cdaab39145c1bc764a4fd30b8",
+    "optimizer_updates": 489,
+    "gradient_l2": 0.003599223537096221
+  }
+]

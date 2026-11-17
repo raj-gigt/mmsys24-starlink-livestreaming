@@ -1,0 +1,10 @@
+{
+  "selected": "d",
+  "scores": {
+    "a": -0.04860614201920991,
+    "b": -0.0267426679981769,
+    "c": -0.06808848341714382,
+    "d": 0.013832205813677407
+  },
+  "rule": "Joint mean across both observation types and two seeds; all have identical budgets"
+}

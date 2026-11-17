@@ -1,0 +1,191 @@
+{
+  "status": "PASS",
+  "runs": 16,
+  "interactions": 4003840,
+  "selected_common_recipe": "d",
+  "joint_scores": {
+    "a": -0.04860614201920991,
+    "b": -0.0267426679981769,
+    "c": -0.06808848341714382,
+    "d": 0.013832205813677407
+  },
+  "all_improve_own_initialization": true,
+  "records": [
+    {
+      "kind": "conventional",
+      "config": "a",
+      "seed": 11,
+      "steps": 250112,
+      "initial_qoe": -0.16867495969625587,
+      "selected_qoe": -0.06060533316899242,
+      "rl_gain": 0.10806962652726346,
+      "selected_step": 250112,
+      "wall_s": 61.580635199992685
+    },
+    {
+      "kind": "conventional",
+      "config": "a",
+      "seed": 29,
+      "steps": 250112,
+      "initial_qoe": -0.17207309738537754,
+      "selected_qoe": -0.07036091846928426,
+      "rl_gain": 0.10171217891609328,
+      "selected_step": 250112,
+      "wall_s": 62.566600199992536
+    },
+    {
+      "kind": "conventional",
+      "config": "b",
+      "seed": 11,
+      "steps": 250112,
+      "initial_qoe": -0.16867495969625587,
+      "selected_qoe": 0.08714663214398238,
+      "rl_gain": 0.2558215918402382,
+      "selected_step": 125184,
+      "wall_s": 60.84793789999094
+    },
+    {
+      "kind": "conventional",
+      "config": "b",
+      "seed": 29,
+      "steps": 250112,
+      "initial_qoe": -0.17207309738537754,
+      "selected_qoe": -0.0019086332687791793,
+      "rl_gain": 0.17016446411659836,
+      "selected_step": 250112,
+      "wall_s": 61.048840400006156
+    },
+    {
+      "kind": "conventional",
+      "config": "c",
+      "seed": 11,
+      "steps": 250368,
+      "initial_qoe": -0.16867495969625587,
+      "selected_qoe": -0.0408752873400171,
+      "rl_gain": 0.12779967235623876,
+      "selected_step": 250368,
+      "wall_s": 65.68705690000206
+    },
+    {
+      "kind": "conventional",
+      "config": "c",
+      "seed": 29,
+      "steps": 250368,
+      "initial_qoe": -0.17207309738537754,
+      "selected_qoe": -0.09016733249335544,
+      "rl_gain": 0.0819057648920221,
+      "selected_step": 250368,
+      "wall_s": 60.2117455000116
+    },
+    {
+      "kind": "conventional",
+      "config": "d",
+      "seed": 11,
+      "steps": 250368,
+      "initial_qoe": -0.16867495969625587,
+      "selected_qoe": 0.07622755803057901,
+      "rl_gain": 0.24490251772683488,
+      "selected_step": 125440,
+      "wall_s": 59.292955600016285
+    },
+    {
+      "kind": "conventional",
+      "config": "d",
+      "seed": 29,
+      "steps": 250368,
+      "initial_qoe": -0.17207309738537754,
+      "selected_qoe": -0.0024556256405254572,
+      "rl_gain": 0.1696174717448521,
+      "selected_step": 250368,
+      "wall_s": 60.90731209999649
+    },
+    {
+      "kind": "leo",
+      "config": "a",
+      "seed": 11,
+      "steps": 250112,
+      "initial_qoe": -0.17518151623410042,
+      "selected_qoe": -0.02528327701992877,
+      "rl_gain": 0.14989823921417164,
+      "selected_step": 250112,
+      "wall_s": 74.91965219998383
+    },
+    {
+      "kind": "leo",
+      "config": "a",
+      "seed": 29,
+      "steps": 250112,
+      "initial_qoe": -0.17449836631143303,
+      "selected_qoe": -0.03817503941863418,
+      "rl_gain": 0.13632332689279886,
+      "selected_step": 250112,
+      "wall_s": 75.00012430001516
+    },
+    {
+      "kind": "leo",
+      "config": "b",
+      "seed": 11,
+      "steps": 250112,
+      "initial_qoe": -0.17518151623410042,
+      "selected_qoe": -0.04717913541396541,
+      "rl_gain": 0.12800238082013501,
+      "selected_step": 125184,
+      "wall_s": 77.98826060001738
+    },
+    {
+      "kind": "leo",
+      "config": "b",
+      "seed": 29,
+      "steps": 250112,
+      "initial_qoe": -0.17449836631143303,
+      "selected_qoe": -0.1450295354539454,
+      "rl_gain": 0.029468830857487638,
+      "selected_step": 125184,
+      "wall_s": 77.41091440001037
+    },
+    {
+      "kind": "leo",
+      "config": "c",
+      "seed": 11,
+      "steps": 250368,
+      "initial_qoe": -0.17518151623410042,
+      "selected_qoe": -0.053833532599462136,
+      "rl_gain": 0.12134798363463828,
+      "selected_step": 250368,
+      "wall_s": 80.90643639999325
+    },
+    {
+      "kind": "leo",
+      "config": "c",
+      "seed": 29,
+      "steps": 250368,
+      "initial_qoe": -0.17449836631143303,
+      "selected_qoe": -0.08747778123574063,
+      "rl_gain": 0.08702058507569241,
+      "selected_step": 250368,
+      "wall_s": 74.55014270002721
+    },
+    {
+      "kind": "leo",
+      "config": "d",
+      "seed": 11,
+      "steps": 250368,
+      "initial_qoe": -0.17518151623410042,
+      "selected_qoe": 0.009677088470831733,
+      "rl_gain": 0.18485860470493215,
+      "selected_step": 250368,
+      "wall_s": 72.81304370000726
+    },
+    {
+      "kind": "leo",
+      "config": "d",
+      "seed": 29,
+      "steps": 250368,
+      "initial_qoe": -0.17449836631143303,
+      "selected_qoe": -0.028120197606175668,
+      "rl_gain": 0.14637816870525736,
+      "selected_step": 250368,
+      "wall_s": 73.42360310000367
+    }
+  ]
+}

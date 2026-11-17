@@ -1,0 +1,8 @@
+dataset,cases,source,measured,generated,use
+Neural train,48,Seychelles20240130 chronological block,RTT only,"Capacity, interruptions and recovery",Training
+Neural validation,18,Seychelles20240130 chronological block,RTT only,"Capacity, interruptions and recovery",Checkpoint selection
+Neural test,18,Seychelles20240130 chronological block,RTT only,"Capacity, interruptions and recovery",Post-selection simulator evaluation
+Browser development,6,Seychelles20240130,RTT windows or explicitly constant RTT,"Capacity, interruptions and recovery",Development
+Browser validation,6,Seychelles20240130,RTT windows or explicitly constant RTT,"Capacity, interruptions and recovery",Candidate selection
+Browser test,10,Seychelles20240130 + Victoria20251114,RTT windows or explicitly constant RTT,"Capacity, interruptions and recovery",Frozen final comparison
+Browser reserve,10,Seychelles20240130 + Victoria20251114,RTT windows or explicitly constant RTT,"Capacity, interruptions and recovery",Untouched fallback cohort

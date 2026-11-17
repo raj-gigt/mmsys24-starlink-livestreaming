@@ -1,0 +1,8 @@
+policy,inputs,learning,runtime,status
+Original CMAB,"Throughput, playback rate, legacy RTT",Online LinTS; slot resets; repeated highest-arm starts,Synchronous Pyodide,Preserved source control
+Guarded CMAB,9 physical context coordinates; buffer/live delay/RTT validity,30 linked completed outcomes; explicit download surrogate; conservative starts and action ceiling,Synchronous Pyodide,Validation-selected primary
+Guard only,Same current throughput/buffer/live-delay/RTT-health ceiling,None; also replaces conservative forced choices,JavaScript within sibling controller,"Heuristic control, not a pure learning-only removal"
+Throughput,Native dash.js throughput history,Native ThroughputRule and configured auxiliary rules,JavaScript,Built-in reference
+BOLA,Native buffer-occupancy logic,Native BolaRule and configured auxiliary rules,JavaScript,Built-in reference
+Conventional A2C,36 causal history/buffer/previous-quality/rate coordinates,Same eight-action A2C recipe and fixed physical reward,Synchronous Float32 JavaScript,Compatible retrained baseline; not faithful released Pensieve weights
+LEO A2C,64 = conventional36 +28 RTT-health/live-delay coordinates,"Same A2C recipe, scenarios, budget and hidden layers",Synchronous Float32 JavaScript,Compatible adaptation; not unchanged released Gelato/Maguro weights

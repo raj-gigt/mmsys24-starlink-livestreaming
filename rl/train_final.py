@@ -91,7 +91,12 @@ class Progress(BaseCallback):
 
 def train(out,kind,config,seed,steps,device='cpu',eval_every=100000):
     out=Path(out);out.mkdir(parents=True,exist_ok=True);manifest=out/'manifest.json'
-    if manifest.exists():return json.loads(manifest.read_text())
+    if manifest.exists():
+        completed=json.loads(manifest.read_text())
+        if completed['steps']>=steps:return completed
+        manifest.replace(out/f'manifest-through-{completed["steps"]}.json')
+        import shutil
+        shutil.copy2(out/'last.zip',out/f'last-through-{completed["steps"]}.zip')
     torch.set_num_threads(1);leo=kind=='leo'
     env=DummyVecEnv([lambda:Monitor(FinalLiveEnv('train',leo=leo)) for _ in range(8)])
     model=A2C('MlpPolicy',env,**CONFIGS[config],gamma=.99,gae_lambda=1,vf_coef=.5,
@@ -142,7 +147,7 @@ def main():
         (base/'screen-selection.json').write_text(json.dumps({'selected':choice,'scores':scores,'rule':'Joint mean across both observation types and two seeds; all have identical budgets'},indent=2))
     else:
         config=json.loads((base/'screen-selection.json').read_text())['selected']
-        for seed in [11,29,47,71,101]:
+        for seed in [47,71,101,131,167]:
             for kind in ['conventional','leo']:
                 records.append(train(base/'main'/f'{kind}-{seed}',kind,config,seed,args.steps or 1000000,args.device))
         selected={}

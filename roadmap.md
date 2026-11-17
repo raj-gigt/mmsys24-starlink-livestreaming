@@ -271,7 +271,7 @@ Candidate configuration budget: initially at most 12 named CMAB settings and 72 
 **Verification / exit:** conservation/edge-case checks pass; F8 quantifies discrepancies; runtime forecast uses measured steps/s rather than an assumed 18-hour training estimate. Stop a severe dynamics bug before interpreting training gains.
 
 ### Step 16 - Train compatible conventional and LEO-aware candidates
-**Status:** Running. **Dependency:** 15. **Deliverables:** D4, C4/C5, F7.
+**Status:** Complete. **Dependency:** 15. **Deliverables:** D4, C4/C5, F7.
 
 **Objective / intuition:** establish genuine useful learning, then test whether LEO observations help under a controlled trainer/data comparison.
 
@@ -288,7 +288,7 @@ Candidate configuration budget: initially at most 12 named CMAB settings and 72 
 **Verification / exit:** saved validation curves, learning checks and compatible candidate weights; failed/collapsed runs retained; no sealed-test selection. Fix data/reward/dynamics/normalization defects before declaring that the optimizer itself is the problem.
 
 ### Step 17 - Repeat training, select representatives and verify deployment
-**Status:** Pending. **Dependency:** 16. **Deliverables:** D4/D5, C4/C5, F7, T8.
+**Status:** Running. **Dependency:** 16. **Deliverables:** D4/D5, C4/C5, F7, T8.
 
 **Objective / intuition:** demonstrate that the neural result is reproducible and executable in the actual player.
 
@@ -426,8 +426,8 @@ Autonomous execution is active; see the per-step tracker and artifacts/final/sta
 | 13 | Complete | 21 warm browser sessions; all request/input/replay/portable-metric checks pass; guard helps, guard-only best, context mixed, reseeding rejected |
 | 14 | Complete | All24 corrected-clock validation runs verified; guardedCMAB passes frozen gates; guard-only remains competitive; real online-state replay PASS; portable evidence archived |
 | 15 | Complete | Six real calibration runs; transfer medians below13percent each, bufferMAE0.49s, overall delayMAE2.06s misses target and is disclosed; causal/Gym/reward checks PASS; measured CPU beats working RTX4060 |
-| 16 | Running | Screen four equal-budget A2C settings across two seeds and conventional/LEO inputs; train/validation only; 4million interactions |
-| 17 | Pending | Repeated training, representative checkpoints, real-browser export checks |
+| 16 | Complete | 16 equal-budget fits verified; 4.004million interactions; all improve own initialization; common recipe d selected by joint validation; finite changed weights and valid checkpoints |
+| 17 | Running | Five fresh seeds47/71/101/131/167 for each observation type; initial1million decisions per run, then validation-guided extension if useful; no test access |
 | 18 | Pending | Frozen final matrix and complete run inventory |
 | 19 | Pending | Verified common results, figures/tables and claim boundaries |
 | 20 | Pending | Reviewed final report PDF and contributions |
@@ -446,3 +446,5 @@ Autonomous execution is active; see the per-step tracker and artifacts/final/sta
 Execution revision at Step14: first validation failed the unchanged startup gate. A measured externalUTC dependency delayed pre-ABR initialization. Revalidate all24 sessions under the verified shared-WSL-clock option, preserving the first pass; research-session budget90 instead of72 is for this infrastructure correction, not extra model search. Final test remains sealed.
 
 Final-matrix extension chosen before test access: include competitive guard-only as a seventh separate policy, with3 repeats alongside B0/C*. Controlled170 + raw replay9 =179 sessions (367min playback; about9h06 cycles). Source raw offset2940 is metadata-aligned, not performance-selected. Retain4h release/report reserve.
+
+Uncertainty refinement before final freeze: because related windows share only two RTT recordings, keep the10 benchmark cases fixed and resample paired browser repeats within each case. Report conditional repeatability intervals and raw case effects; do not resample related windows as independent real recordings or claim Starlink-population confidence.

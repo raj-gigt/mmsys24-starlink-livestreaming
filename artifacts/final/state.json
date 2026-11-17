@@ -48,24 +48,37 @@
       "updated_utc": "2026-11-17T05:44:16.933321+00:00"
     },
     "16": {
+      "status": "Complete",
+      "evidence": "16 equal-budget fits verified; 4.004million interactions; all improve own initialization; common recipe d selected by joint validation; finite changed weights and valid checkpoints",
+      "updated_utc": "2026-11-17T06:05:07.036824+00:00"
+    },
+    "17": {
       "status": "Running",
-      "evidence": "Screen four equal-budget A2C settings across two seeds and conventional/LEO inputs; train/validation only; 4million interactions",
-      "updated_utc": "2026-11-17T05:44:17.033378+00:00"
+      "evidence": "Five fresh seeds47/71/101/131/167 for each observation type; initial1million decisions per run, then validation-guided extension if useful; no test access",
+      "updated_utc": "2026-11-17T06:05:07.139292+00:00"
     }
   },
-  "updated_utc": "2026-11-17T05:44:17.033378+00:00",
-  "current_step": 16,
+  "updated_utc": "2026-11-17T06:05:07.139292+00:00",
+  "current_step": 17,
   "pending_protocol_refinements": [
-    "For supplementary original raw replay, use a predeclared whole-minute source offset such as2940s within test block when playback starts atminute0; use authors custom CMAB catchup for both. This phase correction is metadata-driven, before any final scores.",
-    "Consider guard-only final-matrix extension before unsealing because it beat the hybrid on all three development cases. Recompute runtime and protect release."
+    "Before final freeze, retain full raw-replay tc history: bounded256-event log truncates high-rate raw replay. Add append-only export and source-index checks without changing shaper decisions.",
+    "Add per-sample epoch/performance clock consistency check before final freeze; preserve the one invalid calibration recording.",
+    "After1million decisions per seed, inspect late validation improvements; extend equally up to3million if useful and release reserve remains."
   ],
   "contribution_section": "User requested blank contribution template; fill later, do not invent teammate work",
   "active_experiment": {
-    "step": 16,
-    "session_id": 92064,
-    "command": "python -m rl.train_final --stage screen --device cpu (after final matched CPU/CUDA benchmarks)",
-    "resume": "Same command skips completed manifests and resumes interrupted exact-state snapshots",
-    "outputs": "artifacts/final/training/screen and screen-selection.json",
+    "step": 17,
+    "session_id": 64280,
+    "command": "python -m rl.train_final --stage main --device cpu",
+    "resume": "Same command skips completed runs and resumes optimizer/env/RNG snapshots for unfinished runs",
+    "outputs": "artifacts/final/training/main and main-selection.json",
+    "fresh_seeds": [
+      47,
+      71,
+      101,
+      131,
+      167
+    ],
     "immutable_during_training": [
       "rl/final_env.py",
       "rl/train_final.py",

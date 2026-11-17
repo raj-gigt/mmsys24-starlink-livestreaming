@@ -111,11 +111,11 @@ const signed=(v,d=2)=>(v>=0?'+':'')+fmt(v,d);
 // 5: source/measurement constraints, with concise editable protocol table.
 {
   const s=slide('Data and controlled evaluation','Sources: data/manifests, configs/final/protocol.json, configs/final/workloads/test.json, freeze.json and rl/metrics.py. Only two measured RTT recordings; capacity/outages generated. Conventional inputs can indirectly reflect delay via playback rate. Native throughput/BOLA retain their configured auxiliary rules; primary original-vs-improved comparison is strongest. 170controlled +9repository replay179.');
-  nativeTable(s,[['Shared protocol','Setting'],['Network / data','2 measured RTT sessions; synthetic capacity and outages'],
+  nativeTable(s,[['Shared protocol','Setting'],['Network / data','Seychelles + Victoria RTT (LENS); generated capacity / outages'],
     ['Controlled suite','5 families × 2 cases; 120 s per session'],['Policies / repeats','7 policies; 2 repeats, 3 for CMAB / improved / guard only'],
     ['Player / source','Same video, 8 bitrates, 2 s segments, 3 s target, LoL+'],['Independent score','Actually played quality, stalls, startup, changes, delay']],64,142,1150,358,[310,840],24);
   text(s,'QoE / wall s = (Q − 4B − startup − 0.3V − 0.1A) / duration',64,528,1150,59,29,C.teal,true);
-  text(s,'170 controlled sessions + 9 separate repository replays. Frozen policies; no final-test tuning.',64,605,1140,52,25);
+  text(s,'RTT alone lacks capacity and bitrate outcomes: use fixed scenarios and real player logs.\n170 controlled sessions + 9 separate replays; no final-test tuning.',64,605,1150,64,24);
 }
 // 6: final means and the primary conditional interval, all sourced dynamically.
 {

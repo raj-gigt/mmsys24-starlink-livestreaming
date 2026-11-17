@@ -118,10 +118,12 @@ python scripts/experiment_clock.py release
 
 ## 4. Policy selection and integration
 
-The player is at the mapped port reported by `docker compose -f
-docker-compose-emulation.yaml port dashjs 3000`, under
-`/samples/starlink/testplayer/`. The scripted demo sets all necessary URL/player
-options. Policy query choices are:
+The validated launcher opens
+`http://pyodide/samples/starlink/testplayer/testplayer.html` **inside container
+Chrome**, where the Compose hostnames resolve. Watch it through
+http://localhost:7900. The scripted demo sets the necessary URL/player options;
+opening a player port in a separate host browser does not reproduce that network
+context automatically. Policy query choices are:
 
 | Policy | Query choice |
 |---|---|

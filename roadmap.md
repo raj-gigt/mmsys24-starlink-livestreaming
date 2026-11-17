@@ -428,7 +428,7 @@ Autonomous execution is active; see the per-step tracker and artifacts/final/sta
 | 15 | Complete | Six real calibration runs; transfer medians below13percent each, bufferMAE0.49s, overall delayMAE2.06s misses target and is disclosed; causal/Gym/reward checks PASS; measured CPU beats working RTX4060 |
 | 16 | Complete | 16 equal-budget fits verified; 4.004million interactions; all improve own initialization; common recipe d selected by joint validation; finite changed weights and valid checkpoints |
 | 17 | Complete | 10.004million main interactions across10 fresh-seed fits; selected median seeds167/101; 394 JS fixtures and6 valid Chrome checks PASS; observer-free RTT and real fallback playback PASS; late training decline retained |
-| 18 | Running | Publish exact verified code/model identities, freeze179 trials before test access, then run matched seven-policy held-out browser matrix; guest clock guarded and restored automatically |
+| 18 | Running | First70/179 frozen browser sessions saved (all seven policies across ten cases); no policy/source changes. Continue repeats and raw replay. First59 portable metric/input/action/feedback/replay checks PASS. |
 | 19 | Pending | Verified common results, figures/tables and claim boundaries |
 | 20 | Pending | Reviewed final report PDF and contributions |
 | 21 | Pending | Working demo, recording and report-consistent slide draft |

@@ -59,11 +59,11 @@
     },
     "18": {
       "status": "Running",
-      "evidence": "Publish exact verified code/model identities, freeze179 trials before test access, then run matched seven-policy held-out browser matrix; guest clock guarded and restored automatically",
-      "updated_utc": "2026-11-17T08:49:30.952669+00:00"
+      "evidence": "First70/179 frozen browser sessions saved (all seven policies across ten cases); no policy/source changes. Continue repeats and raw replay. First59 portable metric/input/action/feedback/replay checks PASS.",
+      "updated_utc": "2026-11-17T12:21:00.645435+00:00"
     }
   },
-  "updated_utc": "2026-11-17T08:49:30.952669+00:00",
+  "updated_utc": "2026-11-17T12:21:00.645435+00:00",
   "current_step": 18,
   "pending_protocol_refinements": [
     "Full raw tc log implemented and source-verified479 events versus256 bounded status; physical outage/100ms/recovery PASS. Need final replay checks after actual runs.",
@@ -84,7 +84,8 @@
     "do_not_modify": "Every file in freeze.sources, or add files under dash.js/src, testplayer or rl/web; no heavy training or parallel browser experiments while measured matrix runs.",
     "next": "Archive portable results, verify all179, analyse figures/tables, produce/report/render/check PDF and8-slide final deck, real recorded demo, clean reproduction ZIP, publish; contributions intentionally blank template.",
     "analysis_followthrough_session": 77824,
-    "followthrough": "After179 and automatic clock release, archive complete/invalid raw events and run reproduce_final --saved-results; source/model/metric/cutoff/replay checks then analyse_final. Visual checks and report/deck/demo/package still require continuation."
+    "followthrough": "After179 and automatic clock release, archive complete/invalid raw events and run reproduce_final --saved-results; source/model/metric/cutoff/replay checks then analyse_final. Visual checks and report/deck/demo/package still require continuation.",
+    "last_saved_trials": 70
   },
   "training_extension_decision": "No extension: both aggregate late validation trends nonpositive. All10 seeds improved initialization; selected peaks retained. Main10.004million interactions,44.33min actual training.",
   "recovery_20261117": {
@@ -103,8 +104,14 @@
     "report_source": "scripts/build_final_report.py",
     "external_build_root": "C:/Users/HP/AppData/Local/LEO-RL-final-artifacts",
     "runtime": "C:/Program Files/WindowsApps/OpenAI.CodexPrimaryRuntime.v26-1112-737-0_26.1112.737.0_x64__3k8sg7r9htsxt/dependencies",
-    "latest_pushed_parent": "1882607",
+    "latest_pushed_parent": "5dbe19d",
     "draft_assembly_session": 29217,
     "future_process": "Waits for verified analysis179, then PDF marker once and ReportLab PDF, then ArtifactTool eight-slide PPTX/imported-file previews. Drafts require visual/factual review before release."
+  },
+  "data_publication": {
+    "processed_files": 86,
+    "scenario_arrays_hash_verified": 84,
+    "source_commit": "5dbe19d",
+    "note": "Compact arrays were ignored; now intentionally published without regeneration."
   }
 }

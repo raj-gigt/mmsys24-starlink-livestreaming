@@ -239,7 +239,7 @@ Candidate configuration budget: initially at most 12 named CMAB settings and 72 
 **Verification / exit:** causally available inputs, finite updates, bounded memory and correct scaling; validation metrics show which mechanism helped/hurt. Do not promote unnecessary complexity or infer handover ground truth from probe loss.
 
 ### Step 14 - Combine, ablate and select the primary candidate
-**Status:** Running. **Dependency:** 13. **Deliverables:** D2/D3/D8, F6, T1/T5.
+**Status:** Complete. **Dependency:** 13. **Deliverables:** D2/D3/D8, F6, T1/T5.
 
 **Objective / intuition:** obtain a strong controller whose gain can be explained by a few tested mechanisms.
 
@@ -255,7 +255,7 @@ Candidate configuration budget: initially at most 12 named CMAB settings and 72 
 ## 7. Phase D: trained neural comparison with measured compute use
 
 ### Step 15 - Calibrate the fast environment and benchmark CPU/GPU
-**Status:** Pending. **Dependencies:** 10 and 14. **Deliverables:** D4/D6, C2/C4, F8.
+**Status:** Running. **Dependencies:** 10 and 14. **Deliverables:** D4/D6, C2/C4, F8.
 
 **Objective / intuition:** train quickly in an environment that captures the browser effects relevant to bitrate decisions.
 
@@ -424,8 +424,8 @@ Autonomous execution is active; see the per-step tracker and artifacts/final/sta
 | 11 | Complete | 12 paired development sessions complete; startup improves all three cases, retained memory alone does not; paired-results.json preserves every outcome |
 | 12 | Complete | 9 browser sessions; six request-identity checks pass; explicit download surrogate improves all three development cases; original delayed proxy mixed; completion-censoring limitation disclosed |
 | 13 | Complete | 21 warm browser sessions; all request/input/replay/portable-metric checks pass; guard helps, guard-only best, context mixed, reseeding rejected |
-| 14 | Running | Select CMAB among context and guard on six validation cases; retain guard-only ablation control; all final test outcomes remain sealed |
-| 15 | Pending | Quantified environment calibration and CPU/RTX benchmark, F8 |
+| 14 | Complete | All24 corrected-clock validation runs verified; guardedCMAB passes frozen gates; guard-only remains competitive; real online-state replay PASS; portable evidence archived |
+| 15 | Running | Calibrate fixed-low/mid/high and adaptive browser runs; causal64-input simulator checks pass; benchmark actual CPU/RTX4060 pipeline before training |
 | 16 | Pending | Compatible conventional/LEO training candidates |
 | 17 | Pending | Repeated training, representative checkpoints, real-browser export checks |
 | 18 | Pending | Frozen final matrix and complete run inventory |

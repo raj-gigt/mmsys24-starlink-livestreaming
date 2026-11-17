@@ -38,28 +38,21 @@
       "updated_utc": "2026-11-17T02:33:37.206700+00:00"
     },
     "14": {
+      "status": "Complete",
+      "evidence": "All24 corrected-clock validation runs verified; guardedCMAB passes frozen gates; guard-only remains competitive; real online-state replay PASS; portable evidence archived",
+      "updated_utc": "2026-11-17T05:15:19.952978+00:00"
+    },
+    "15": {
       "status": "Running",
-      "evidence": "First validation preserved with no eligible bandit. ExternalUTC delays reproduced before ABR; verified shared-WSL clock removes them. Repeat all24 sessions with unchanged numeric gates.",
-      "updated_utc": "2026-11-17T02:33:37.301284+00:00"
+      "evidence": "Calibrate fixed-low/mid/high and adaptive browser runs; causal64-input simulator checks pass; benchmark actual CPU/RTX4060 pipeline before training",
+      "updated_utc": "2026-11-17T05:15:20.063547+00:00"
     }
   },
-  "updated_utc": "2026-11-17T02:33:37.301284+00:00",
-  "current_step": 14,
-  "active_experiment": {
-    "step": 14,
-    "session_id": 89900,
-    "command": "python scripts/run_development_matrix.py --role validation --name finalists-v2 --variants original,context,guard,guard_only --families steady_bandwidth,bandwidth_variation,rtt_variation,handover_interruption,post_handover_recovery,mixed_shifted --balanced-order --local-clock",
-    "ledger": "artifacts/final/validation/finalists-v2/runs.json",
-    "resume": "Same command skips completed keys",
-    "do_not_modify_during_measurement": [
-      "Player/controller sources and image",
-      "Stats-server source/image",
-      "Observer/runner code",
-      "Workloads and selection rules"
-    ]
-  },
+  "updated_utc": "2026-11-17T05:15:20.063547+00:00",
+  "current_step": 15,
   "pending_protocol_refinements": [
     "For supplementary original raw replay, use a predeclared whole-minute source offset such as2940s within test block when playback starts atminute0; use authors custom CMAB catchup for both. This phase correction is metadata-driven, before any final scores.",
     "Consider guard-only final-matrix extension before unsealing because it beat the hybrid on all three development cases. Recompute runtime and protect release."
-  ]
+  ],
+  "contribution_section": "User requested blank contribution template; fill later, do not invent teammate work"
 }

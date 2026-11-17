@@ -39,14 +39,15 @@ def choose(rows,rule,protocol):
     return {'selected':chosen,'eligibility':gates,'summary':summary,'status':'selected' if chosen else 'no_eligible_bandit'}
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--ledger',default='artifacts/final/validation/finalists-v1/runs.json');args=p.parse_args()
-    rule=json.loads((ROOT/'configs/final/validation-selection.json').read_text());protocol=json.loads((ROOT/'configs/final/protocol.json').read_text())
+    p=argparse.ArgumentParser();p.add_argument('--ledger',default='artifacts/final/validation/finalists-v2/runs.json');p.add_argument('--selection-rule',default='configs/final/validation-selection.json');args=p.parse_args()
+    rule=json.loads((ROOT/args.selection_rule).read_text());protocol=json.loads((ROOT/'configs/final/protocol.json').read_text())
     path=ROOT/args.ledger;rows=json.loads(path.read_text());cases=json.loads((ROOT/'configs/final/workloads/validation.json').read_text())['cases']
     expected={(c['id'],v,rep) for c in cases for v in rule['candidate_bandits']+rule['controls'] for rep in range(rule['repetitions'])}
     assert len(rows)==len(expected) and {(r['case_id'],r['variant'],r['repeat']) for r in rows}==expected,'Validation matrix incomplete or duplicated'
     assert all(r['status']=='complete' and r['metrics']['metric_version']==protocol['metrics']['version'] for r in rows)
     assert len({json.dumps(r['source_identity'],sort_keys=True) for r in rows})==1
     assert len({json.dumps(r['measurement_identity'],sort_keys=True) for r in rows})==1
+    if 'clock_mode' in rule:assert all(r['measurement_identity'].get('clock_mode','external')==rule['clock_mode'] for r in rows)
     result=choose(rows,rule,protocol)
     result.update(ledger=args.ledger,scope='Validation selection; no final-test scores inspected',
         limitations='One session per case/policy; descriptive component ablations, not statistical proof')
@@ -61,7 +62,7 @@ def main():
             'offline_pretrained_weights':False,'history_rows':30,'alpha':1,'default_seed':123456,
             'source_revision':subprocess.check_output(['git','-C',str(ROOT/'dash.js'),'rev-parse','HEAD'],text=True).strip(),
             'source_sha256':rows[0]['source_identity'],'measurement_identity':rows[0]['measurement_identity'],
-            'configuration':'configs/final/cmab_variants.json','selection':'artifacts/final/validation/finalists-v1/selection.json',
+            'configuration':'configs/final/cmab_variants.json','interface':'configs/final/cmab-interface.json','selection':(path.parent/'selection.json').relative_to(ROOT).as_posix(),
             'reward_qualification':'Download-outcome surrogate, not actual played quality; cancellations/unmatched requests are censored'}
         folder=ROOT/'models/final/cmab';folder.mkdir(parents=True,exist_ok=True)
         (folder/'manifest.json').write_text(json.dumps(manifest,indent=2))

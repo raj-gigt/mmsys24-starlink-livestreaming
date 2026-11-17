@@ -73,3 +73,10 @@ The runtime MPD advertises external Akamai UTC timing. ResourceTiming diagnostic
 Allfour policies are revalidated on allsix cases under that same clock option. The numeric gates and QoE definition are unchanged. First-pass external-clock validation and all diagnostic data remain available. Early development effects remain exploratory because variable clock setup also changes initial live-source phase; final conclusions require the corrected common protocol. The initial72-research-trial budget is expanded to90 to repeat24 validation sessions after this measured infrastructure repair, without adding policy candidates or reducing held-out testing/release checks.
 
 The guard-only control always chooses its ceiling, including forced-slot callbacks; guardedCMAB also retains the more conservative restart choice before learned selection. Thus their difference concerns the **bandit/restart package**, not a perfectly isolated on/off learning intervention. A heuristic win does not by itself prove learning is harmful; it shows the additional package has not demonstrated incremental value.
+
+
+## Corrected-clock validation selection
+
+All24 sessions completed under the shared host clock and passed input, cutoff, replay and portable-metric checks. Guarded CMAB passed every unchanged eligibility gate; context-only fell below the0.5 useful-playback fraction in one case. The selected guarded candidate achieved mean QoE/wall-s -0.396 versus original -2.121 across the five mandatory validation families, with stalls19.67 versus51.00s and essentially matched mean startup1.66s. These are validation observations, not held-out final claims.
+
+Guard-only scored -0.265, slightly better than guarded CMAB, while stalls were similar19.95s. This supports the guard but does not establish incremental benefit from the bandit/restart package. Retain this control in final evaluation. The exported real8-row online-state example exactly reproduced its LinTS proposal6 and applied action6 in the pinned served Pyodide runtime.

@@ -1,0 +1,36 @@
+{
+  "label": "Validation-selected CMAB refinement",
+  "algorithm": "abrCMABImproved",
+  "variant": "guard",
+  "type": "Online contextual bandit with optional action ceiling; not RL",
+  "runtime": "Synchronous Pyodide0.23.4 / MABWiser2.7.0",
+  "fit_scope": "Within each session, only unique linked completed-request outcomes; fresh state each session",
+  "offline_pretrained_weights": false,
+  "history_rows": 30,
+  "alpha": 1,
+  "default_seed": 123456,
+  "source_revision": "9682a5978737809badc0c2062ba198d8d30e50cf",
+  "source_sha256": {
+    "CMABAbrController.js": "3599ff669eff8c2af84953210b3dbb874fa05b5b3f2c3a828f05fa97506df875",
+    "CMABImprovedController.js": "6041e052938a92dd19d3fc1ebb40fb1b67ef09607859b19514d360854d6d3566",
+    "CMABRule.js": "f57a5560db8b4203e0fe927d954aea459585e8f00f61148729b89b8121779b5d",
+    "CMABImprovedRule.js": "074fb0433e111b622bed6cc29f4b9ae3aafc45a53f31e1c8e1ff77389f97670b",
+    "CMABFeedback.js": "d6c8156389212b90df5bc704458395ae215272c96c48af75994d3699f91d1426",
+    "CMABRuntime.js": "6588f64873eb90e9e0ef867e21f5987f5e69301b89e5b0670f8824957b9c6c73",
+    "../NetworkObservations.js": "eda79d0b70fb9acd2b83fbc62459fd870a279fe176a9be36333271e9789351de"
+  },
+  "measurement_identity": {
+    "manifest": "7f1e7b2da47a205dc0076db0c71746b573a1a51b56bf8c6942208de096a2e97d",
+    "observer": "e29c81c16e229f503fb4e1a5f8a4717fc452c359e4da4e5bb69813241c0e9281",
+    "runner": "652dbdbc0381bfce5cb42a4315135fcc9144e21e32299f1de5924e80a2b4fef3",
+    "stats_server": "40ea41554ae310f9355cd78e6a42c8c8ebb4efec4b714e4ea4b63572c9b02fbf",
+    "shaper": "e2867faafe4a1d69e650f9dae5244102e0ebb7bf0cd24de64e48f1b04e083c73",
+    "metrics": "b1a60542aa44188f60dacf3c8e9b009905df7b4dca8f637c7a3b6d97d8e3d56b",
+    "player_main": "1c984502650acadd1029fa9493dda82f738ac4925991506cdeaf78fab6815d14",
+    "clock_mode": "host"
+  },
+  "configuration": "configs/final/cmab_variants.json",
+  "interface": "configs/final/cmab-interface.json",
+  "selection": "artifacts/final/validation/finalists-v2/selection.json",
+  "reward_qualification": "Download-outcome surrogate, not actual played quality; cancellations/unmatched requests are censored"
+}

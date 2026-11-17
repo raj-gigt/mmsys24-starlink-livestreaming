@@ -1,0 +1,156 @@
+{
+  "schema": "cmab-physical-v1",
+  "candidate_variants": [
+    "context",
+    "guard"
+  ],
+  "input_count": 9,
+  "features": [
+    {
+      "index": 0,
+      "name": "bias",
+      "definition": "1",
+      "clip": null
+    },
+    {
+      "index": 1,
+      "name": "throughput",
+      "definition": "DASH safe average throughput in Mbps /10",
+      "clip": [
+        0,
+        3
+      ]
+    },
+    {
+      "index": 2,
+      "name": "playback_rate",
+      "definition": "(playback rate-1)/0.17",
+      "clip": [
+        -1,
+        1
+      ]
+    },
+    {
+      "index": 3,
+      "name": "rtt",
+      "definition": "valid typed RTT ms /200; zero when invalid",
+      "clip": [
+        0,
+        5
+      ]
+    },
+    {
+      "index": 4,
+      "name": "buffer",
+      "definition": "video buffer seconds /3",
+      "clip": [
+        0,
+        4
+      ]
+    },
+    {
+      "index": 5,
+      "name": "live_delay",
+      "definition": "actual live delay seconds /3",
+      "clip": [
+        0,
+        8
+      ]
+    },
+    {
+      "index": 6,
+      "name": "rtt_valid",
+      "definition": "current probe valid, finite and last success younger than3s",
+      "clip": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 7,
+      "name": "rtt_age",
+      "definition": "seconds since last successful probe /3; missing maps to1",
+      "clip": [
+        0,
+        1
+      ]
+    },
+    {
+      "index": 8,
+      "name": "rtt_change",
+      "definition": "latest minus oldest valid RTT in last8 polled health rows /200; zero if fewer than2",
+      "clip": [
+        -1,
+        1
+      ]
+    }
+  ],
+  "training_state": "Up to30 unique matched completed-request rows, each with original9-vector, applied action and download-surrogate reward; fixed coordinates and rolling refit",
+  "runtime": "Synchronous Pyodide call to MABWiser2.7.0 LinTS; alpha1 and seed123456",
+  "entrypoints": {
+    "rule": "CMABImprovedRule.getMaxIndex returns a synchronous SwitchRequest",
+    "controller": "CMABImprovedController.getCMABNextQuality returns one integer arm"
+  },
+  "actions": [
+    {
+      "action": 0,
+      "dash_quality_index": 0,
+      "nominal_bps": 300000,
+      "representation_id": "cfhd_sets/12.5_25_50/t34/2023-04-28/1"
+    },
+    {
+      "action": 1,
+      "dash_quality_index": 1,
+      "nominal_bps": 450000,
+      "representation_id": "cfhd_sets/12.5_25_50/t32/2023-04-28/1"
+    },
+    {
+      "action": 2,
+      "dash_quality_index": 2,
+      "nominal_bps": 900000,
+      "representation_id": "cfhd_sets/12.5_25_50/t28/2023-04-28/1"
+    },
+    {
+      "action": 3,
+      "dash_quality_index": 3,
+      "nominal_bps": 1200000,
+      "representation_id": "cfhd_sets/12.5_25_50/t24/2023-04-28/1"
+    },
+    {
+      "action": 4,
+      "dash_quality_index": 4,
+      "nominal_bps": 1500000,
+      "representation_id": "cfhd_sets/12.5_25_50/t25/2023-04-28/1"
+    },
+    {
+      "action": 5,
+      "dash_quality_index": 5,
+      "nominal_bps": 4900000,
+      "representation_id": "cfhd_sets/12.5_25_50/t23/2023-04-28/1"
+    },
+    {
+      "action": 6,
+      "dash_quality_index": 6,
+      "nominal_bps": 5100000,
+      "representation_id": "cfhd_sets/12.5_25_50/t19/2023-04-28/1"
+    },
+    {
+      "action": 7,
+      "dash_quality_index": 7,
+      "nominal_bps": 6000000,
+      "representation_id": "chdf_sets/12.5_25_50/t20/2023-04-28/1"
+    }
+  ],
+  "reward": {
+    "formula": "log(b_kbps/300)*segment_s/2 -4*max(0,transfer_s-buffer_at_choice_s) -.3*abs(log(b_kbps/max(300,previous_kbps))) -.1*max(0,outcome_live_delay_s-target_s)*transfer_s",
+    "qualification": "Completed-download utility and buffer-budget starvation surrogate, not actual played QoE. Seek/error/unmatched outcomes censored, with acceptance coverage reported."
+  },
+  "startup": "One conservative choice per slot, and until first mature feedback row; startup factor0.45 when buffer<1s else0.70",
+  "guard": "For guard variant, clip proposal to highest nominal rate below safe-throughput times0.55 if buffer<1s, delay>target+2s or probe invalid, else0.85. Lowest arm remains possible below its rate.",
+  "guard_only_control": "Standalone ceiling heuristic replaces both learned and conservative forced choices; not a pure removal of learning",
+  "missing_data": "Typed RTT validity/age explicit; no future scenario labels or direct MongoDB reads",
+  "reset": "Fresh controller/online history per browser trial; shared producer has ref-counted cleanup",
+  "clock": "hostClock=1 only for verified single-host emulation; external clock synchronization remains default otherwise",
+  "source": "dash.js/src/streaming/rules/abr/cmab/CMABImprovedController.js",
+  "example": "models/final/cmab/example-state.json generated after validation selection, including online state needed for replay"
+}

@@ -10,11 +10,11 @@ NAVY='#263B58';TEAL='#128C86';GRAY='#64748B';AMBER='#C17A18'
 fig,ax=plt.subplots(figsize=(10,5.1));ax.set(xlim=(0,10),ylim=(0,5.4));ax.axis('off')
 def box(x,y,w,h,title,detail,color=NAVY):
  ax.add_patch(FancyBboxPatch((x,y),w,h,boxstyle='round,pad=0.04,rounding_size=.08',facecolor='#F6F8FA',edgecolor=color,lw=1.3))
- ax.text(x+w/2,y+h*.72,title,ha='center',va='center',fontsize=10,fontweight='bold',color=color)
- ax.text(x+w/2,y+h*.30,detail,ha='center',va='center',fontsize=8.2,color='#334155',linespacing=1.35)
+ ax.text(x+w/2,y+h*.72,title,ha='center',va='center',fontsize=12,fontweight='bold',color=color)
+ ax.text(x+w/2,y+h*.30,detail,ha='center',va='center',fontsize=10.5,color='#334155',linespacing=1.35)
 def arrow(a,b,label=None,color=GRAY,style='-',rad=0):
  ax.add_patch(FancyArrowPatch(a,b,arrowstyle='-|>',mutation_scale=12,color=color,lw=1.1,linestyle=style,connectionstyle='arc3,rad='+str(rad)))
- if label:ax.text((a[0]+b[0])/2,(a[1]+b[1])/2+.10,label,ha='center',va='bottom',fontsize=7.6,color=color,bbox={'facecolor':'white','edgecolor':'none','pad':1})
+ if label:ax.text((a[0]+b[0])/2,(a[1]+b[1])/2+.10,label,ha='center',va='bottom',fontsize=9.8,color=color,bbox={'facecolor':'white','edgecolor':'none','pad':1})
 box(.2,2.65,2.05,.95,'livesim2 source','8 representations\n2 s segments / 60 s loop')
 box(3.55,2.65,2.25,.95,'Nginx + tc/netem','Media proxy + common\ncapacity / delay / loss replay')
 box(7.15,2.65,2.6,.95,'Chrome + dash.js','Selected synchronous ABR\nActual requested / played quality',TEAL)
@@ -34,7 +34,7 @@ box(7.65,.72,2.1,1.0,'MongoDB + exports','DB events + browser ledger\nAnalysis /
 arrow((6.4,1.15),(7.6,1.15),'records',GRAY)
 arrow((9.35,2.60),(9.35,1.77),'Selenium\nexport',GRAY)
 ax.text(.2,5.25,'Common testbed and policy interfaces',fontsize=14,fontweight='bold',color=NAVY,va='top')
-ax.text(.2,.16,'The policy reads player observations and cached RTT health. MongoDB is for logging, not an inference dependency.',fontsize=8.5,color=GRAY)
+ax.text(.2,.16,'The policy reads player observations and cached RTT health. MongoDB is for logging, not an inference dependency.',fontsize=9.5,color=GRAY)
 fig.subplots_adjust(left=.02,right=.99,top=.98,bottom=.03)
 for ext in ['svg','png']:fig.savefig(OUT/('F1-system.'+ext),dpi=180)
 plt.close(fig);print('Created F1 system data-flow diagram')

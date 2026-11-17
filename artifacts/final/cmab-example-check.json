@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "run_id": "phasea-abrCMABImproved-20261117T034737-b5906a",
+  "decision_id": "cmab-23",
+  "history_rows": 8,
+  "replayed_proposal": 6,
+  "replayed_action": 6,
+  "qualification": "Exact replay of recorded online state, not performance evaluation"
+}

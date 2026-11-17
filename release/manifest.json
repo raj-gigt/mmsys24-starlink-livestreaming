@@ -1,6 +1,6 @@
 {
-  "assembly_parent_revision": "54cde413b4ca6bc6ace42e4c5e675ef195eb8ede",
-  "created_utc": "2026-11-17T19:35:48.346806+00:00",
+  "assembly_parent_revision": "7a0c94da1acb61132c6f0e25d8323a8b9e0f6bf3",
+  "created_utc": "2026-11-17T21:21:20.893482+00:00",
   "excluded_categories": [
     "presentation/demo/learning materials",
     "verbose execution logs",
@@ -41,8 +41,8 @@
       "sha256": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809"
     },
     "README.md": {
-      "bytes": 7912,
-      "sha256": "0d929bb21db4f8ada507a1f2d393ca04b17e8782e4c0587b9fdf7a0ba81de094"
+      "bytes": 7907,
+      "sha256": "c604669b1aba998b33a7dda60047bd3beff3a98d72d5eee61e399f428e8dbd30"
     },
     "artifacts/final/calibration/benchmark-cpu.json": {
       "bytes": 818,
@@ -1321,8 +1321,8 @@
       "sha256": "9be1d48edb5c990f3116b487f54443154d5df5adb3855955015c3db2445ba618"
     },
     "configs/final/project.json": {
-      "bytes": 1038,
-      "sha256": "6fc8d546902039b2514160a115354ceb3f767fea057f68007a845572a3c41bb4"
+      "bytes": 1027,
+      "sha256": "779a87ce9c35f9a1c309231703a68b6d2b24b9e9d0ea40a72522a068fc04ddfc"
     },
     "configs/final/protocol.json": {
       "bytes": 2384,
@@ -2917,16 +2917,16 @@
       "sha256": "08547ce166e843d4206a1658d7ad44ff4500ab1b71ebc2d57490c82cf9e935f9"
     },
     "release/report-check.json": {
-      "bytes": 1385,
-      "sha256": "df7f0c78efaf5a2633ddb452a11462cff74c5374ef63732aeeca5e5df20b5351"
+      "bytes": 1359,
+      "sha256": "91df6485b339e69fdb973725549953a397c22d19d016f23fc93831fc82f87c01"
     },
     "release/submission-files.json": {
       "bytes": 173323,
       "sha256": "4be0ffc6049951307316c3763b3dc9b91a9bf5d1dd66e00b56f9507af65a858d"
     },
     "reports/final/Group4-final-report.pdf": {
-      "bytes": 548374,
-      "sha256": "83a156f42c381cde9d3afc6ad67e92de840a9a15daca1fef2b097c5d39aa2c21"
+      "bytes": 548846,
+      "sha256": "6c6469d1737a7b9f9deaf8814bd71fe5353e3788d0fb36814afe0839b263e322"
     },
     "reports/final/cmab-audit.md": {
       "bytes": 21386,
@@ -2981,8 +2981,8 @@
       "sha256": "c5474189b8e3e0c6065d3f2820e9e08df5c674da7a355969fa04ec2a9731eb84"
     },
     "reports/final/reproduction.md": {
-      "bytes": 12893,
-      "sha256": "b0fd3bb97d355e6467c3b428e728d8ba276e9aed104fac57c2c3c3aadd0d29a2"
+      "bytes": 12872,
+      "sha256": "e83387b8d9d92f432ddc2840d61ce12e3cf9c2a8d6b92fd50dec5af2f721bd5c"
     },
     "reports/final/tables/T1-policy-design.csv": {
       "bytes": 1325,
@@ -3057,8 +3057,8 @@
       "sha256": "7172a4c69406600affaf98b5edf326529ee07ee7304c37f93fdb63e78a6ab724"
     },
     "reports/final/tables/T6-contributions-template.csv": {
-      "bytes": 226,
-      "sha256": "95339e796060d3200dfb18cd433a30aa6e23b0cb7777bdb71d79d9697fdcb7d5"
+      "bytes": 1368,
+      "sha256": "2ad68e8a2c4a654e109f15c499e559ba6d758b880c7ef39ac887c49e259866ae"
     },
     "reports/final/tables/T7-metric-definitions.csv": {
       "bytes": 1998,
@@ -3241,12 +3241,12 @@
       "sha256": "962176845f64757998cfbc7c45485fd2c4a02a5e08403d31ba147e3c7d3c662d"
     },
     "scripts/build_final_report.py": {
-      "bytes": 29274,
-      "sha256": "c69ec1d3dc5d5bc53942a411311ce3246913c7b8c70732779db34cc364152fac"
+      "bytes": 29122,
+      "sha256": "1316fb95e3fa922df53df65c0d70346e02f467b9e4dd03cb6b27ca41b2cf34a5"
     },
     "scripts/build_submission.py": {
-      "bytes": 4239,
-      "sha256": "ebeeebeaa8f47e93a336becb484c4c3bdb1f339e7e8a47517533ba9aa5ec6c30"
+      "bytes": 4154,
+      "sha256": "aa9f9fe11fc303ade5c4cd59941a0dbbffa1337b3ac78b11ef93e81989a5627f"
     },
     "scripts/check_final_export.cjs": {
       "bytes": 1425,
@@ -3360,7 +3360,6 @@
   "format": "group4-source-evidence-release-v2",
   "freeze_sha256": "c6e0730ba18c5515eabe05161594ade20d7f2a4e62ba127ef264aab71aaa1350",
   "human_outstanding": [
-    "Individual contribution statements intentionally remain blank per user instruction",
     "Portal upload by user"
   ],
   "measured_source_publication": {
@@ -3370,7 +3369,7 @@
     "scope": "Published source matches every frozen canonical source/model/config identity; freeze.parent_revision records the earlier Git anchor before staging, and file hashes identify the measured snapshot.",
     "status": "PASS"
   },
-  "payload_bytes": 101328970,
+  "payload_bytes": 101330284,
   "portable_event_runs": 185,
   "presentation_scope": "Deferred; no presentation/demo/learning files or execution requirement in this release",
   "repository": "https://github.com/raj-gigt/mmsys24-starlink-livestreaming/tree/anjan",

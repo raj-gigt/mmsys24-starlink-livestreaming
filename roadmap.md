@@ -433,8 +433,8 @@ Autonomous execution is active; see the per-step tracker and artifacts/final/sta
 | 18 | Complete | All179 frozen sessions complete:170 controlled +9 raw replay;303 source files,2 models, clocks/cutoffs, actual input/action/feedback, schedules and portable metrics verified. Guest NTP restored. |
 | 19 | Complete | F3-F5 and T3-T4/T7-T8 generated and reviewed; primary effect+1.272 [1.227,1.315], stalls-64.87percent;7/10 case gains. Direct guard/LEO contrasts include zero; regressions and coefficient sensitivity retained. STOP beforeStep20. |
 | 20 | Complete | Balanced80-session/all6 contrasts;835 final curated inputs classified and publicly recoverable. Frozen303 files/models unchanged. |
-| 21 | Complete | Eight-page academic report; all pages visually reviewed; result/margin/link checks PASS; contribution fields blank. Focused README, code map and reproduction/index complete. |
-| 22 | Complete | Final75.53MB ZIP,837 files/185 event runs; every byte verified; exact179-session/full and80-session/all6 contrasts reproduced in clean results-only venv; public835-source retrieval PASS. Data/build/nine-asset full-export checks PASS. Contributions blank by request; user uploads. |
+| 21 | Complete | Eight-page academic report; all pages visually reviewed; result/margin/link checks PASS; three approved contribution paragraphs included. Focused README, code map and reproduction/index complete. |
+| 22 | Complete | Final75.53MB ZIP,837 files/185 event runs; every byte verified; exact179-session/full and80-session/all6 contrasts reproduced in clean results-only venv; public835-source retrieval PASS. Data/build/nine-asset full-export checks PASS. Contribution table filled with approved paragraphs; user uploads. |
 | 23 | Deferred | After18November08:00 and new instruction: PPT/demo/learning/human rehearsal |
 
 ### Method references used for this revision

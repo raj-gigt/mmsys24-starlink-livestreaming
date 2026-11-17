@@ -7,7 +7,7 @@ This is the deliverables specification requested in planning Step 1. It defines 
 
 ## Submission/presentation separation (revision:18 November2026)
 
-Submission execution is complete through Step22: eight-page report, balanced four-policy analysis, evaluator README and checked75.53MB focused ZIP. All179 final sessions reproduce from raw evidence; all835 curated source inputs were retrieved from published Git. Contribution details remain deliberately blank. The user handles portal upload; Step23 is deferred.
+Submission execution is complete through Step22: eight-page report, balanced four-policy analysis, evaluator README and checked75.53MB focused ZIP. All179 final sessions reproduce from raw evidence; all835 curated source inputs were retrieved from published Git. The contribution table now contains the three user-approved report-style paragraphs. The user handles portal upload; Step23 is deferred.
 
 This revision and roadmap Steps20-23 supersede older combined hand-in wording below. Steps8-19 are completed evidence; no new training or browser experiment campaign is planned.
 

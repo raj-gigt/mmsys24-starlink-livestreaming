@@ -74,12 +74,12 @@
     },
     "21": {
       "status": "Complete",
-      "evidence": "Eight-page academic report rendered and inspected all pages; margins/results/link/blank contribution fields checked. Root README and reproduction/source index rewritten for evaluator. Clean minimal-environment evidence reproduction and full native export verified.",
+      "evidence": "Eight-page academic report rendered and inspected all pages; margins/results/link/contribution paragraphs inserted and checked. Root README and reproduction/source index rewritten for evaluator. Clean minimal-environment evidence reproduction and full native export verified.",
       "updated_utc": "2026-11-17T19:33:01.076478+00:00"
     },
     "22": {
       "status": "Complete",
-      "evidence": "Final75,529,450-byte ZIP:837 files,185 raw-event runs. Fresh results-only venv (no torch/selenium/pymongo) verifies every byte and exactly reproduces179-session full plus80-session/all6 pair analyses. Public fresh fetch checks all835 source inputs and303 frozen files. PDF8 pages visually verified, all contribution details blank. Data/build/full-export checks PASS. No presentation material included.",
+      "evidence": "Final75,530,173-byte ZIP:837 files,185 raw-event runs. Fresh results-only venv (no torch/selenium/pymongo) verifies every byte and exactly reproduces179-session full plus80-session/all6 pair analyses. Public fresh fetch checks all835 source inputs and303 frozen files. PDF8 pages visually verified, all three approved contribution paragraphs included. Data/build/full-export checks PASS. No presentation material included.",
       "updated_utc": "2026-11-17T19:37:59.364610+00:00"
     },
     "23": {
@@ -87,7 +87,7 @@
       "evidence": "Revised plan only; Deferred presentation/demo/learning/rehearsal"
     }
   },
-  "updated_utc": "2026-11-17T19:50:45.592842+00:00",
+  "updated_utc": "2026-11-17T21:23:38.590433+00:00",
   "current_step": 22,
   "contribution_section": "User-approved report-style paragraphs inserted in Section1.1 and T6; supersedes prior blank-template instruction.",
   "active_experiment": {
@@ -126,7 +126,7 @@
     "draft_assembly_session": null,
     "future_process": "Disabled. Presentation Step23 requires new user instruction.",
     "draft_assembly_status": "Cancelled session29217 before report/PPT generation per user stop-after-Step19 instruction",
-    "verified_submission_source_parent": "54cde413b4ca6bc6ace42e4c5e675ef195eb8ede"
+    "verified_submission_source_parent": "7a0c94da1acb61132c6f0e25d8323a8b9e0f6bf3"
   },
   "data_publication": {
     "processed_files": 86,
@@ -157,7 +157,7 @@
     "preserve_repository_and_required_paths": true
   },
   "submission_user_inputs": {
-    "contributions": "Leave specific contribution statements empty; allocate an unfilled template/space in the report. Do not infer or fill actual work.",
+    "contributions": "Latest instruction supersedes blank template: insert the three approved report-style contribution paragraphs.",
     "report_pages": "6-8 total target",
     "report_style": "Academic and professional research-paper/LaTeX-style format; technical, concise but not shallow; avoid bloat",
     "zip_restrictions": "No known size/name/layout restrictions",
@@ -166,15 +166,15 @@
   },
   "submission_release": {
     "archive": "release/Group4-submission.zip",
-    "zip_bytes": 75529450,
-    "sha256": "676ee5e28514f373d125a253a1c66609ea0588e53d781d568a3601ec3ed08011",
+    "zip_bytes": 75530173,
+    "sha256": "467b103b28f220e314b25915f8ab8d5c84eb529947a624033953ab69b4bf5450",
     "payload_files_including_manifest": 837,
     "portable_event_runs": 185,
     "report_pages": 8,
-    "source_revision": "54cde413b4ca6bc6ace42e4c5e675ef195eb8ede",
+    "source_revision": "7a0c94da1acb61132c6f0e25d8323a8b9e0f6bf3",
     "player_revision": "60f56693032bb7e12c174951da4ee05818383527",
-    "verified_at_utc": "2026-11-17T19:37:59.364610+00:00",
-    "contribution_statements": "Three user-approved paragraphs included",
+    "verified_at_utc": "2026-11-17T21:23:38.590433+00:00",
+    "contribution_statements": "Three user-approved report-style paragraphs included in Section1.1 and T6",
     "portal_upload": "User will upload",
     "presentation": "Not executed; deferred until new user instruction",
     "verification": [
@@ -183,5 +183,15 @@
       "release/report-check.json",
       "artifacts/final/remote-retrieval-check.json"
     ]
+  },
+  "contribution_report_update": {
+    "status": "Complete",
+    "updated_utc": "2026-11-17T21:23:38.590433+00:00",
+    "scope": "Only Section1.1 text/table, editable CSV and matching submission documentation/package metadata",
+    "report_pages": 8,
+    "pages_2_to_8_text_unchanged": true,
+    "clean_extraction": "PASS: all179 saved sessions and80-session/all6 contrasts exactly reproduced",
+    "public_source_retrieval": "PASS: all835 curated inputs and303 frozen sources",
+    "step23": "Not started; remains deferred"
   }
 }

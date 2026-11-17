@@ -65,6 +65,11 @@
         });
         state.timer = setInterval(sample, 100);
         function probe() {
+            if (window.LEO_SHARED_PROBE_ACTIVE) {
+                const row=window.LEO_PROBE;
+                if (row && (!state.probes.length || row.probe_at_s !== state.probes[state.probes.length-1].probe_at_s)) state.probes.push(row);
+                return;
+            }
             const abort = new AbortController();
             const timeout = setTimeout(() => abort.abort(), 1000);
             fetch('http://stat-server:8000/ping/details', {signal: abort.signal})

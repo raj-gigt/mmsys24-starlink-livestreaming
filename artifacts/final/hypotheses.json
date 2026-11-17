@@ -36,17 +36,29 @@
   },
   "H4": {
     "mechanism": "buffer/live delay and fresh RTT distinguish otherwise similar context",
-    "state": "pending",
-    "requirement": "causal deployed input with validity and age"
+    "state": "warm development comparison ready",
+    "requirement": "causal deployed input with validity and age",
+    "treatments": [
+      "scaled -> buffer -> context"
+    ],
+    "meaning": "RTT history/failure are causal observations, not ground-truth handovers"
   },
   "H5": {
     "mechanism": "refitting/scaling and reseeding affect exploration stability",
-    "state": "pending",
-    "source_fact": "served MABWiser 2.7.0 defaults to seed 123456 and is reconstructed by original code"
+    "state": "pinned-runtime zero-context/intercept/RNG fixture passes; browser comparisons ready",
+    "source_fact": "served MABWiser 2.7.0 defaults to seed 123456 and is reconstructed by original code",
+    "evidence": "runtime-check.json",
+    "treatments": [
+      "outcome -> scaled",
+      "context -> seeded"
+    ]
   },
   "H6": {
     "mechanism": "unnecessary quality changes or aggressive recovery impair playback",
-    "state": "pending",
-    "requirement": "guard-only comparison and override count"
+    "state": "guard and guard-only ready for paired development",
+    "requirement": "guard-only comparison and override count",
+    "treatments": [
+      "context -> guard -> guard_only"
+    ]
   }
 }

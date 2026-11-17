@@ -41,10 +41,10 @@
   "updated_utc": "2026-11-17T01:24:45.648953+00:00",
   "current_step": 13,
   "active_experiment": {
-    "step": 12,
-    "command": "python scripts/run_development_matrix.py --name feedback-v1 --variants both,delayed,outcome",
-    "session_id": 94930,
-    "ledger": "artifacts/final/development/feedback-v1/runs.json",
+    "step": 13,
+    "command": "python scripts/run_development_matrix.py --name context-guard-v1 --variants outcome,scaled,buffer,context,seeded,guard,guard_only --families steady_bandwidth,rtt_variation,post_handover_recovery",
+    "session_id": 23520,
+    "ledger": "artifacts/final/development/context-guard-v1/runs.json",
     "resume": "Rerun same command; complete run keys skipped",
     "do_not_modify_during_measurement": [
       "CMAB controller code",

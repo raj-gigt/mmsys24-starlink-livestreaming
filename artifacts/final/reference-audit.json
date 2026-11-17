@@ -1,31 +1,34 @@
 {
   "status": "PASS",
-  "recorded_utc": "2026-11-16T21:48:55.827281+00:00",
-  "reference_run": "phasea-abrCMAB-20261116T214650-ee42c4",
+  "recorded_utc": "2026-11-17T01:37:00.716600+00:00",
+  "reference_run": "phasea-abrCMAB-20261117T013336-5f2b57",
   "reference_summary": {
-    "run_id": "phasea-abrCMAB-20261116T214650-ee42c4",
+    "run_id": "phasea-abrCMAB-20261117T013336-5f2b57",
     "algorithm": "abrCMAB",
-    "requested_seconds": 60,
-    "started_utc": "2026-11-16T21:46:52.029783+00:00",
-    "wall_clock_start_second": 52,
+    "requested_seconds": 35,
+    "started_utc": "2026-11-17T01:33:36.809801+00:00",
+    "wall_clock_start_second": 36,
     "target_latency_s": 3,
     "catchup": "liveCatchupModeLoLP",
-    "url": "http://pyodide/samples/starlink/testplayer/testplayer.html?experimentID=phasea-abrCMAB-20261116T214650-ee42c4&mpdURL=https%3A%2F%2Fnginx%2Flivesim2%2Fvectors%2Fswitching_sets%2F12.5_25_50%2Fss1%2F2023-04-28%2Fstream.mpd&targetLatency=3&constantVideoBitrate=-1&abrGeneral=abrCMAB&maxDrift=5&minCatchupPlaybackRate=-0.17&maxCatchupPlaybackRate=0.17&abrAdditionalAbandonRequestRule=true&cmabAlpha=1.0&catchupMechanism=liveCatchupModeLoLP",
-    "load_wall_clock_utc": "2026-11-16T21:47:00.354332+00:00",
+    "url": "http://pyodide/samples/starlink/testplayer/testplayer.html?experimentID=phasea-abrCMAB-20261117T013336-5f2b57&mpdURL=https%3A%2F%2Fnginx%2Flivesim2%2Fvectors%2Fswitching_sets%2F12.5_25_50%2Fss1%2F2023-04-28%2Fstream.mpd&targetLatency=3&constantVideoBitrate=-1&abrGeneral=abrCMAB&maxDrift=5&minCatchupPlaybackRate=-0.17&maxCatchupPlaybackRate=0.17&abrAdditionalAbandonRequestRule=true&cmabAlpha=1.0&catchupMechanism=liveCatchupModeLoLP",
+    "load_wall_clock_utc": "2026-11-17T01:33:45.422083+00:00",
+    "scenario_id": null,
+    "variant": null,
+    "scheduled_start_unix_s": null,
     "controlled_stages": [
       {
         "at_s": 0,
         "rate_mbit": 8.0
       }
     ],
-    "samples": 28,
+    "samples": 19,
     "mongo_documents": {
-      "events": 13,
-      "metric": 13,
-      "qoe": 57,
+      "events": 8,
+      "metric": 8,
+      "qoe": 36,
       "decisions": 0
     },
-    "media_time_end": 1794865677.562642,
+    "media_time_end": 1794879256.061263,
     "ladder": [
       {
         "bitrate": 300000,
@@ -81,115 +84,104 @@
       "label": "imitation-initialized, A2C-updated integration pilot; one seed",
       "sha256": "9f00f1a5d2fbc33f635e90595de44ccb536d36d93ac65c80670e64af46387471"
     },
-    "page_load_to_ready_ms": 445.39069998427294,
-    "model_assets_cold_load_ms": 5.5,
+    "page_load_to_ready_ms": 359.72760000731796,
+    "runtime_prewarm_ms": 7619.10000000149,
+    "model_assets_cold_load_ms": 4.099999999627471,
     "decision_count": 0,
-    "played_advance_s": 51.56053900718689,
-    "completed_video_requests": 30,
+    "played_advance_s": 24.931198120117188,
+    "completed_video_requests": 18,
     "player_errors": [],
     "console_severe": [
       {
         "level": "SEVERE",
-        "message": "http://pyodide/dist/dash.all.debug.js 81694 WebSocket connection to 'ws://pyodide:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED",
+        "message": "http://pyodide/dist/dash.all.debug.js 82817 WebSocket connection to 'ws://pyodide:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED",
         "source": "network",
-        "timestamp": 1794865612417
+        "timestamp": 1794879217201
       },
       {
         "level": "SEVERE",
-        "message": "http://pyodide/dist/dash.all.debug.js 82637:22 \"[webpack-dev-server]\" Event",
+        "message": "http://pyodide/dist/dash.all.debug.js 83760:22 \"[webpack-dev-server]\" Event",
         "source": "console-api",
-        "timestamp": 1794865612418
+        "timestamp": 1794879217201
       },
       {
         "level": "SEVERE",
         "message": "http://pyodide/favicon.ico - Failed to load resource: the server responded with a status of 404 (Not Found)",
         "source": "network",
-        "timestamp": 1794865612498
+        "timestamp": 1794879217238
       },
       {
         "level": "SEVERE",
-        "message": "http://pyodide/dist/dash.all.debug.js 81694 WebSocket connection to 'ws://pyodide:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED",
+        "message": "http://pyodide/dist/dash.all.debug.js 82817 WebSocket connection to 'ws://pyodide:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED",
         "source": "network",
-        "timestamp": 1794865613486
+        "timestamp": 1794879218738
       },
       {
         "level": "SEVERE",
-        "message": "http://pyodide/dist/dash.all.debug.js 82637:22 \"[webpack-dev-server]\" Event",
+        "message": "http://pyodide/dist/dash.all.debug.js 83760:22 \"[webpack-dev-server]\" Event",
         "source": "console-api",
-        "timestamp": 1794865613486
+        "timestamp": 1794879218738
       },
       {
         "level": "SEVERE",
-        "message": "http://pyodide/dist/dash.all.debug.js 81694 WebSocket connection to 'ws://pyodide:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED",
+        "message": "http://pyodide/dist/dash.all.debug.js 82817 WebSocket connection to 'ws://pyodide:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED",
         "source": "network",
-        "timestamp": 1794865615495
+        "timestamp": 1794879220722
       },
       {
         "level": "SEVERE",
-        "message": "http://pyodide/dist/dash.all.debug.js 82637:22 \"[webpack-dev-server]\" Event",
+        "message": "http://pyodide/dist/dash.all.debug.js 83760:22 \"[webpack-dev-server]\" Event",
         "source": "console-api",
-        "timestamp": 1794865615495
+        "timestamp": 1794879220723
       },
       {
         "level": "SEVERE",
-        "message": "http://pyodide/dist/dash.all.debug.js 81694 WebSocket connection to 'ws://pyodide:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED",
+        "message": "http://pyodide/dist/dash.all.debug.js 82817 WebSocket connection to 'ws://pyodide:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED",
         "source": "network",
-        "timestamp": 1794865619559
+        "timestamp": 1794879225126
       },
       {
         "level": "SEVERE",
-        "message": "http://pyodide/dist/dash.all.debug.js 82637:22 \"[webpack-dev-server]\" Event",
+        "message": "http://pyodide/dist/dash.all.debug.js 83760:22 \"[webpack-dev-server]\" Event",
         "source": "console-api",
-        "timestamp": 1794865619559
+        "timestamp": 1794879225126
       },
       {
         "level": "SEVERE",
         "message": "http://pyodide/dist/dash.all.debug.js 4316:18 \"Settings parameter streaming.abr.buffer is not supported\"",
         "source": "console-api",
-        "timestamp": 1794865620340
+        "timestamp": 1794879225403
       },
       {
         "level": "SEVERE",
-        "message": "http://pyodide/dist/dash.all.debug.js 81694 WebSocket connection to 'ws://pyodide:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED",
+        "message": "http://pyodide/dist/dash.all.debug.js 82817 WebSocket connection to 'ws://pyodide:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED",
         "source": "network",
-        "timestamp": 1794865629319
+        "timestamp": 1794879233219
       },
       {
         "level": "SEVERE",
-        "message": "http://pyodide/dist/dash.all.debug.js 82637:22 \"[webpack-dev-server]\" Event",
+        "message": "http://pyodide/dist/dash.all.debug.js 83760:22 \"[webpack-dev-server]\" Event",
         "source": "console-api",
-        "timestamp": 1794865629320
+        "timestamp": 1794879233219
       },
       {
         "level": "SEVERE",
-        "message": "http://pyodide/dist/dash.all.debug.js 81694 WebSocket connection to 'ws://pyodide:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED",
+        "message": "http://pyodide/dist/dash.all.debug.js 82817 WebSocket connection to 'ws://pyodide:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED",
         "source": "network",
-        "timestamp": 1794865645409
+        "timestamp": 1794879249228
       },
       {
         "level": "SEVERE",
-        "message": "http://pyodide/dist/dash.all.debug.js 82637:22 \"[webpack-dev-server]\" Event",
+        "message": "http://pyodide/dist/dash.all.debug.js 83760:22 \"[webpack-dev-server]\" Event",
         "source": "console-api",
-        "timestamp": 1794865645409
-      },
-      {
-        "level": "SEVERE",
-        "message": "http://pyodide/dist/dash.all.debug.js 81694 WebSocket connection to 'ws://pyodide:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED",
-        "source": "network",
-        "timestamp": 1794865677494
-      },
-      {
-        "level": "SEVERE",
-        "message": "http://pyodide/dist/dash.all.debug.js 82637:22 \"[webpack-dev-server]\" Event",
-        "source": "console-api",
-        "timestamp": 1794865677495
+        "timestamp": 1794879249228
       }
     ]
   },
   "source_sha256": {
-    "dash.js/src/streaming/rules/abr/cmab/CMABAbrController.js": "b59c6910785e04f980f9ed256dcc2b04f4962a380d8ca207868b887b69e1ae19",
-    "dash.js/src/streaming/rules/abr/cmab/CMABRule.js": "d86b701586409cd5422ac5604e1b8f1515bfb73c1b88f9e04e137f659ef0db0b",
-    "stats-server/app.py": "f84d555542479e9be672d392aff9b364b05557f59b44e5a339c352e6e3cbd90f"
+    "dash.js/src/streaming/rules/abr/cmab/CMABAbrController.js": "3599ff669eff8c2af84953210b3dbb874fa05b5b3f2c3a828f05fa97506df875",
+    "dash.js/src/streaming/rules/abr/cmab/CMABRule.js": "f57a5560db8b4203e0fe927d954aea459585e8f00f61148729b89b8121779b5d",
+    "stats-server/app.py": "6e26023896e8337f56956f45af75f45d52ab730a3b1d6b3427f72ecb86731204"
   },
   "mabwiser_wheel_sha256": "636e22d786950922b6c302ec2958fcd1582b0119caa43643b2af755953e6c5c6",
   "mabwiser_version": "2.7.0",
@@ -208,6 +200,7 @@
   "forced_choices_after_reset": 7,
   "feedback": "Reward computed after selection and before new request completes",
   "rng_finding": "MAB is constructed with its default seed on each fitted decision; investigate repeated draw initialization",
-  "control_files_changed": false,
+  "control_decision_logic_unchanged": true,
+  "passive_hook_present": true,
   "scope": "Source/runtime audit and useful playback; no performance improvement claim"
 }

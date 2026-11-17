@@ -122,6 +122,16 @@ def run(args: argparse.Namespace) -> dict:
           const v=document.querySelector('video');
           ['playing','waiting','stalled','seeking','seeked','pause','error','loadedmetadata'].forEach(n=>v.addEventListener(n,()=>window.__phaseaEvents.push({event:n,at_ms:performance.now(),media_time:v.currentTime})));
         """)
+        runtime_prewarm_ms = None
+        if args.algorithm in ['abrCMAB','abrCMABImproved'] and getattr(args,'prewarm',True):
+            driver.set_script_timeout(120)
+            warmed=driver.execute_async_script("""
+                const done=arguments[arguments.length-1],t=performance.now();
+                window.LEO_PREWARM_CMAB().then(()=>done({ok:true,ms:performance.now()-t}))
+                    .catch(e=>done({ok:false,error:String(e)}));
+            """)
+            assert warmed['ok'], warmed
+            runtime_prewarm_ms=warmed['ms']
         scheduled_start = None
         if scenario:
             scheduled_start = time.time()+2
@@ -199,7 +209,7 @@ def run(args: argparse.Namespace) -> dict:
                    "controlled_stages": applied, "samples": len(samples), "mongo_documents": counts,
                    "media_time_end": final.get("media_time"), "ladder": final.get("ladder"),
                    "build": final.get("build"), "model": final.get("model"),
-                   "page_load_to_ready_ms":page_ready_ms,"model_assets_cold_load_ms":final.get('model_load_ms'),
+                   "page_load_to_ready_ms":page_ready_ms,"runtime_prewarm_ms":runtime_prewarm_ms,"model_assets_cold_load_ms":final.get('model_load_ms'),
                    "decision_count": len(decisions),
                    "played_advance_s": sum(b['media_time'] - a['media_time'] for a, b in zip(samples, samples[1:])
                         if not b['paused'] and b['ready_state'] >= 3 and

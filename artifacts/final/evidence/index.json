@@ -38,6 +38,17 @@
     "ledger": "artifacts/final/development/memory-startup-v1/runs.json",
     "sha256": "e7498d806180d62fd29d4a7fb622efe87144d3113f025035cc6692b59987ef66"
   },
+  "phasea-abrCMAB-20261117T013336-5f2b57": {
+    "bytes": 19507,
+    "file": "artifacts/final/evidence/phasea-abrCMAB-20261117T013336-5f2b57.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/warm-player-check.json",
+    "sha256": "ea7c03022a321e23ca23ca50bb59b4431d0caa13827c0b93a4b64eca33fc8979"
+  },
   "phasea-abrCMABImproved-20261116T222432-1fd2a5": {
     "bytes": 32098,
     "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261116T222432-1fd2a5.json.gz",
@@ -271,5 +282,16 @@
     ],
     "ledger": "artifacts/final/development/feedback-v1/runs.json",
     "sha256": "c58d70a6a694c704ef9308bfc27acab3568e91a8213b0f7c1fe50363b88c7ef5"
+  },
+  "phasea-abrCMABImproved-20261117T013427-58244f": {
+    "bytes": 24046,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T013427-58244f.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/warm-player-check.json",
+    "sha256": "96d1f67fb87f88119943ad3736fd1bcfc60f47b7e8860d03c3b31c57b08640d3"
   }
 }

@@ -1,6 +1,6 @@
 # Reference CMAB audit
 
-The control source is unchanged. Exact source/wheel hashes and the completed control run are in artifacts/final/reference-audit.json.
+The original controller's decision code is unchanged; common runtime initialization and a pre-decision buffer-event guard are separately documented below. Exact source/wheel hashes and the completed control run are in artifacts/final/reference-audit.json.
 
 The controller uses MABWiser 2.7.0 LinTS with throughput, playback rate and network latency. It fits StandardScaler on the current slot's past samples, constructs a new MAB, fits past choices/rewards, and predicts one action. Buffer and live delay are absent from the fitted input; live delay appears in reward.
 
@@ -39,3 +39,11 @@ The first six request-feedback development runs enter their first CMAB decision 
 The controlled common catch-up setting is the repository's explicit LoLP override, also present in experiments/batch-example.json. The runner otherwise defaults CMAB to its custom liveCatchupModeCMAB. A supplementary original raw-replay pair should explicitly use that custom mode for both B0 and the improved CMAB, labelled separately from the controlled ABR-isolation comparison.
 
 The nine-session request-feedback comparison completed. Versus the matched immediate-proxy `both` variant, delayed original-proxy QoE differences were +0.112, +0.233 and -0.264 per wall second on steady/change/recovery. The explicit request-outcome surrogate differences were +0.296, +0.245 and +0.865; stall reductions were 5.00, 7.00 and 18.78 seconds. Advance the outcome surrogate for development, without claiming a validated win or ignoring its 71.8 seconds of stalls on the steady low-capacity case. All six delayed/outcome runs passed request-identity checks; acceptance/censoring counts are in the portable raw evidence and paired table.
+
+## Shared initialization repair and estimator fixture verified
+
+The warm check exposed an original lifecycle error: once Pyodide is ready early, the initial BUFFER_LOADED event can execute `rebufferingEvents.get(currentBitrateKbps).push(...)` before any bitrate has been selected. The unknown map key throws and stops scheduling. Both CMAB rules now skip that unassignable startup interval; actual startup remains in the independent ledger. This common guard does not change the controller's feature/action/reward/reset code. A failing real warm run is retained (`phasea-abrCMAB-20261117T013036-f92710`), and the actual-rule lifecycle fixture plus corrected real warm runs pass.
+
+The served MABWiser 2.7.0/Pyodide fixture confirmed zero scores at exactly zero centered inputs. Appending a constant after scaling produced distinguishable approximately0.667/1.333 fitted scores for rewards1/2. Reconstructing with the same seed repeated scores; varying the seed changed them. The pinned API rejects alpha0, so the near-deterministic fixture uses alpha1e-8. Candidate experiments retain alpha1. Cold dependency preparation measured7.64 seconds; a cached lookup measured0.1ms. These are initialization/conditional estimator checks, not standalone QoE improvement evidence.
+
+The next warm development comparison isolates fixed scaling+intercept (`scaled`), buffer/live-delay additions (`buffer`), RTT validity/age/history additions (`context`), a reproducibly changing refit seed (`seeded`), a clipping guard (`guard`) and the same ceiling without LinTS (`guard_only`). The changing-seed variant is not described as an incrementally fitted persistent model. Guards, source readiness and network measurements are logged explicitly.

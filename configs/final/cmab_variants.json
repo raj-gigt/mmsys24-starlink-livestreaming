@@ -42,6 +42,48 @@
       "reward": "log(nominal bitrate/300kbps)*duration/2 - 4*max(0,transfer_elapsed-start_buffer) - .3*abs(log(selected/previous nominal bitrate)) - .1*max(0,outcome_latency-target)*transfer_elapsed",
       "qualification": "Download utility and buffer-budget starvation surrogate. Neither actual played QoE nor exact causal stall attribution. Completed segment may later be skipped.",
       "censored": "same as delayed"
+    },
+    "scaled": {
+      "base": "outcome",
+      "change": "Replace per-refit StandardScaler with fixed physical normalization and explicit intercept",
+      "inputs": [
+        "bias=1",
+        "throughput_mbps/10 clipped0..3",
+        "(rate-1)/.17 clipped-1..1",
+        "RTT_ms/200 clipped0..5"
+      ],
+      "seed": 123456,
+      "alpha": 1,
+      "qualification": "Normalization/intercept package; reward and completion clock unchanged"
+    },
+    "buffer": {
+      "base": "scaled",
+      "change": "Add buffer/3 clipped0..4 and actual live delay/3 clipped0..8"
+    },
+    "context": {
+      "base": "buffer",
+      "change": "RTT is zero-masked if invalid or older than3s; append validity, age/3 and bounded recent RTT difference/200. History is causal, not a handover label."
+    },
+    "seeded": {
+      "base": "context",
+      "change": "MAB refit receives seed123456+decision_index; reproducible continuing draw sequence instead of identical restart seed",
+      "qualification": "Refit with varying seed, not a persistent fitted estimator"
+    },
+    "guard": {
+      "base": "context",
+      "change": "Clip LinTS proposal to highest nominal bitrate below measured safe throughput times0.55 when buffer<1s, delay>target+2s or RTT invalid; otherwise0.85",
+      "logs": [
+        "proposal",
+        "applied action",
+        "ceiling",
+        "override",
+        "selection source"
+      ]
+    },
+    "guard_only": {
+      "base": "guard",
+      "change": "Choose that throughput/buffer/delay/freshness ceiling directly, with no LinTS call",
+      "purpose": "Isolate whether the guard explains improvement; not a learned controller"
     }
   },
   "unchanged_factors": [
@@ -51,5 +93,6 @@
     "actual_controller_vm_checks": "scripts/check_cmab_variants.cjs",
     "browser_integration": "artifacts/final/observer-checks/phasea-abrCMABImproved-20261116T222032-f5a8f2.json",
     "paired_development": "artifacts/final/development/memory-startup-v1/runs.json"
-  }
+  },
+  "initialization": "All new validation/final CMAB trials prewarm the same runtime before Load; earlier factorial and feedback runs used cold in-Load initialization and are labelled separately."
 }

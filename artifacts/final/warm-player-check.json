@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "runs": [
+    {
+      "status": "complete",
+      "run_id": "phasea-abrCMAB-20261117T013336-5f2b57",
+      "algorithm": "abrCMAB",
+      "variant": null,
+      "runtime_prewarm_ms": 7619.10000000149,
+      "first_choice_after_load_s": 1.0809169921875
+    },
+    {
+      "status": "complete",
+      "run_id": "phasea-abrCMABImproved-20261117T013427-58244f",
+      "algorithm": "abrCMABImproved",
+      "variant": "guard",
+      "runtime_prewarm_ms": 7777.200000001118,
+      "first_choice_after_load_s": 1.014052978515625
+    }
+  ]
+}

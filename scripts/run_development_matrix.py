@@ -31,14 +31,14 @@ def main():
     manifest = ROOT/'configs/final/workloads/development.json'
     cases = [c for c in json.loads(manifest.read_text())['cases'] if c['family'] in args.families.split(',')]
     assert cases and all(c['role'] == 'development' for c in cases)
-    sources = ['CMABAbrController.js', 'CMABImprovedController.js', 'CMABRule.js', 'CMABImprovedRule.js', 'CMABFeedback.js']
+    sources = ['CMABAbrController.js', 'CMABImprovedController.js', 'CMABRule.js', 'CMABImprovedRule.js', 'CMABFeedback.js', 'CMABRuntime.js', '../NetworkObservations.js']
     base = ROOT/'dash.js/src/streaming/rules/abr/cmab'
     identity = {p: sha(base/p) for p in sources}
     # Verify the running image includes exactly the intended controller code.
     for path, expected in identity.items():
         actual = docker('exec', 'leo_abr_rl-dashjs-1', 'sha256sum', '/dash.js/src/streaming/rules/abr/cmab/'+path).split()[0]
         assert actual == expected, f'Rebuild player before measuring: {path}'
-    fingerprint = hashlib.sha256(json.dumps({'sources': identity,'manifest':sha(manifest)},sort_keys=True).encode()).hexdigest()
+    fingerprint = hashlib.sha256(json.dumps({'sources': identity,'manifest':sha(manifest),'observer':sha(ROOT/'rl/web/telemetry.js'),'runner':sha(ROOT/'scripts/browser_trial.py')},sort_keys=True).encode()).hexdigest()
     out = ROOT/'artifacts/final/development'/args.name
     out.mkdir(parents=True, exist_ok=True)
     ledger = out/'runs.json'
@@ -72,7 +72,7 @@ def main():
                        'began_utc':began,'completed_utc':datetime.now(timezone.utc).isoformat(),
                        'metrics':metrics,'decisions':len(telemetry['cmab_decisions']),
                        'outcome':'poor_playback' if summary['played_advance_s']<=5 else 'played',
-                       'learned':sum(not d['forced'] for d in telemetry['cmab_decisions'])}
+                       'learned':sum(d.get('selection_source')=='LinTS' if 'selection_source' in d else not d['forced'] for d in telemetry['cmab_decisions'])}
                 rows.append(row)
                 ledger.write_text(json.dumps(rows,indent=2))
                 print(json.dumps({k:row[k] for k in ['case_id','variant','run_id','decisions','learned']} |

@@ -1,0 +1,19 @@
+{
+  "cold_runtime_setup_ms": 7637.5,
+  "fixture": {
+    "changing_seed_changes_scores": true,
+    "post_scaling_intercept_scores": {
+      "0": 0.6666666717609673,
+      "1": 1.3333333384276338
+    },
+    "reset_seed_repeats_scores": true,
+    "version": "2.7.0",
+    "zero_centered_scores": {
+      "0": 0,
+      "1": 0
+    }
+  },
+  "same_runtime": true,
+  "status": "PASS",
+  "warm_runtime_lookup_ms": 0.09999999962747097
+}

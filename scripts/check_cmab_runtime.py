@@ -19,7 +19,7 @@ def scores(context,seed=123456,alpha=1):
     return {str(k):float(v) for k,v in m.predict_expectations(context[-1:]).items()}
 zero=scores(z)
 bias=np.column_stack([z,np.ones(4)])
-intercept=scores(bias,alpha=0)
+intercept=scores(bias,alpha=1e-8)
 same=scores(bias)==scores(bias)
 different=scores(bias,seed=123456)!=scores(bias,seed=123457)
 assert all(v==0 for v in zero.values())
@@ -55,3 +55,4 @@ try:
     (ROOT/'artifacts/final/runtime-check.json').write_text(json.dumps(report,indent=2))
     print(json.dumps(report,indent=2))
 finally:driver.quit()
+

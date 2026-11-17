@@ -6,11 +6,11 @@ const Feedback=ledgerContext.module.exports;
 const path = 'dash.js/src/streaming/rules/abr/cmab/CMABImprovedController.js';
 const source = fs.readFileSync(path, 'utf8').replace(/^import .*;\r?$/gm, '')
     .replace('export default FactoryMaker.getClassFactory(CMABImprovedController);', 'module.exports=CMABImprovedController;');
-function run(variant, originalController=false) {
+function run(variant, originalController=false, freshProbe=false) {
     let wall = Date.UTC(2026,10,17), fits=0;
     class Clock extends Date {constructor(...a) {super(...(a.length?a:[wall]));} static now(){return wall;}}
     const window = {location:{search:'?cmabVariant='+variant}};
-    const context = {window, Date:Clock, Map, URLSearchParams, module:{exports:{}}, FactoryMaker:{}, CMABFeedback:Feedback,
+    const context = {window, Date:Clock, performance:{now:()=>wall}, Map, URLSearchParams, module:{exports:{}}, FactoryMaker:{}, CMABFeedback:Feedback,
         XMLHttpRequest:class {open(){} send(){this.status=200;this.responseText='40';}},
         fetch:()=>Promise.resolve({status:200,json:()=>Promise.resolve({})}), console:{log(){}}};
     const actualSource=originalController ? fs.readFileSync('dash.js/src/streaming/rules/abr/cmab/CMABAbrController.js','utf8')
@@ -21,20 +21,25 @@ function run(variant, originalController=false) {
     const ladder=[300,450,900,1200,1500,4900,5100,6000].map(b=>({bandwidth:b*1000,width:1024,height:576}));
     const arms=ladder.map((_,i)=>i);
     const runtime={runPython(code){
-        if (code.includes('mab.predict(test)')) {
+        if ((code.includes('mab.predict(test)') || code.includes('mab.predict(contexts[-1:])'))) {
             fits++;
             assert.equal(window.js_rewards.length,window.js_selected_arms.length);
             assert.equal(window.js_history.length,window.js_rewards.length+1);
-            return 2;
+            if (code.includes('mab.predict(contexts[-1:])')) {
+                const dim=variant==='scaled'?4:variant==='buffer'?6:9;
+                assert.ok(window.js_physical_contexts.every(x=>x.length===dim && x[0]===1 && x.every(Number.isFinite)));
+            }
+            return variant==='guard' ? 7 : 2;
         }
         return 4;
     }};
     for(let i=0;i<80;i++) {
+        if (freshProbe) window.LEO_PROBE={valid:true,ok:true,success_at_s:wall/1000,rtt_ms:40};
         const ctx={buffer_s:.5,audio_bitrate:128,audio_codec:'mp4a',seg_duration:2,stream_id:0,
             video_codec:'avc1',target_latency:3};
         const a=c.getCMABNextQuality(runtime,ctx,ladder,arms,0,300,6000,3,1,8000,new Map(),1);
         assert.ok(Number.isInteger(a)&&a>=0&&a<8);
-        if (variant==='delayed' || variant==='outcome') {
+        if (['delayed','outcome','scaled','buffer','context','seeded','guard','guard_only'].includes(variant)) {
             const request={mediaType:'video',type:'MediaSegment',quality:a,startTime:i*2,url:'segment-'+i};
             c.onRequestStart(request);
             wall+=1000;
@@ -46,7 +51,7 @@ function run(variant, originalController=false) {
     }
     const log=window.__LEO_CMAB_TRACE;
     if (variant==='memory'||variant==='both') assert.ok(Math.max(...log.map(r=>r.slot_history_count))<=31);
-    return {fits, log, feedback:window.__LEO_FEEDBACK_TRACE||[]};
+    return {fits, log, feedback:window.__LEO_FEEDBACK_TRACE||[], physical:window.js_physical_contexts};
 }
 const ref=run('reference'), memory=run('memory'), startup=run('startup'), both=run('both');
 const actualOriginal=run('reference',true);
@@ -83,3 +88,18 @@ const failed=request();book.start(failed);book.finish(failed,'error',3);assert.e
 for(let i=0;i<40;i++) {book.offer({id:'cap-'+i,action:2,observation:{throughput:i},bitrate:900,reward:()=>i});const r=request();book.start(r);book.finish(r,'complete',3);}
 assert.equal(book.rows.length,30);assert.equal(book.rows[0].reward,10);
 console.log('PASS: delayed/outcome actual controller and hand-calculated request ledger, duplicates, seek censoring, failures, unmatched identities and rolling cap');
+
+for(const variant of ['scaled','buffer','context','seeded','guard','guard_only']) {
+    const result=run(variant);
+    if (variant==='guard_only') assert.equal(result.fits,0,'Guard-only never calls learned selection');
+    else assert.ok(result.fits>50);
+    if (variant==='guard' || variant==='guard_only') assert.ok(result.log.every(r=>r.action<=r.guard_maximum));
+    if (variant==='guard') assert.ok(result.log.some(r=>r.guard_override));
+    assert.ok(result.feedback.some(r=>r.accepted));
+}
+console.log('PASS: physical intercept/dimensions/finite features, model/guard isolation and logged action ceilings');
+
+const freshContext=run('context',false,true),missingContext=run('context');
+assert.ok(freshContext.physical.every(x=>x[3]===.2 && x[6]===1 && x[7]===0));
+assert.ok(missingContext.physical.every(x=>x[3]===0 && x[6]===0 && x[7]===1));
+console.log('PASS: valid RTT vs unavailable RTT/age is explicit and numerically distinct');

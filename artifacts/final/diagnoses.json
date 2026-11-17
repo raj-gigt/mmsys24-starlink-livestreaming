@@ -1,0 +1,16 @@
+{
+  "infrastructure_failures": [
+    {
+      "run_id": "phasea-abrCMAB-20261117T013036-f92710",
+      "scope": "warm initialization check, excluded from policy matrices",
+      "symptom": "One completed request then stalled; no CMAB decisions",
+      "diagnosis": "Prewarmed BUFFER_LOADED preceded bitrate-map initialization; undefined-key push aborted callback scheduling",
+      "fix": "Common initial-unknown-bitrate guard in both rules; no controller action/reward/reset changes",
+      "verified_by": [
+        "scripts/check_cmab_lifecycle.cjs",
+        "artifacts/final/warm-player-check.json"
+      ]
+    }
+  ],
+  "retained_poor_policy_outcomes": "All valid matrix sessions are retained, including first factorial both under steady low capacity; smoke-test minimum-playback assertions are disabled only in experiment matrices."
+}

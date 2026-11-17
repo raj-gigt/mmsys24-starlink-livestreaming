@@ -1,0 +1,3 @@
+comparison,baseline,candidate,mean_difference,ci95_low,ci95_high,positive_cases
+bandit_restart_package_vs_guard_only,guard_only,improved,-0.00094728545236413,-0.05139106015291298,0.0488708712971269,4
+leo_vs_conventional,conventional,leo,0.000825290398455214,-0.02344183466376068,0.024652274180937527,3

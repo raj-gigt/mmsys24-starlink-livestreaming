@@ -305,7 +305,7 @@ Candidate configuration budget: initially at most 12 named CMAB settings and 72 
 ## 8. Phase E: frozen common testing and analysis
 
 ### Step 18 - Lock the protocol and run the final browser matrix
-**Status:** Running. **Dependencies:** 14 and 17. **Deliverables:** D7/D8, C6/C10, F3/F4/F5, T3/T4.
+**Status:** Complete. **Dependencies:** 14 and 17. **Deliverables:** D7/D8, C6/C10, F3/F4/F5, T3/T4.
 
 **Objective / intuition:** measure the finished controllers under matched conditions without using final results to redesign them.
 
@@ -324,7 +324,7 @@ Candidate configuration budget: initially at most 12 named CMAB settings and 72 
 **Negative outcome rule:** if final C* does not beat B0, preserve it and use a focused diagnosis/validation refinement if budget permits. Activate the previously sealed reserve cohort for one new B0-versus-revised-C* comparison (initial budget: 5 families x 2 cases x 2 policies x 3 repeats = 60 controlled trials). Both initial and reserve outcomes remain reported; do not combine an inspected development result with a new holdout and call everything untouched. Recompute the runtime before this extension and protect the release gate. If no legitimate fresh evaluation fits, do not manufacture a win or hide the result. Escalate only if a material change to the project's final direction is needed.
 
 ### Step 19 - Analyse effects, uncertainty and mechanisms; generate results
-**Status:** Pending. **Dependency:** 18. **Deliverables:** D8, C7, F1-F8 and T1-T8 as applicable.
+**Status:** Complete. **Dependency:** 18. **Deliverables:** D8, C7, F1-F8 and T1-T8 as applicable.
 
 **Objective / intuition:** explain the size, reliability and cause of gains, including where the policy loses.
 
@@ -430,8 +430,8 @@ Autonomous execution is active; see the per-step tracker and artifacts/final/sta
 | 15 | Complete | Six real calibration runs; transfer medians below13percent each, bufferMAE0.49s, overall delayMAE2.06s misses target and is disclosed; causal/Gym/reward checks PASS; measured CPU beats working RTX4060 |
 | 16 | Complete | 16 equal-budget fits verified; 4.004million interactions; all improve own initialization; common recipe d selected by joint validation; finite changed weights and valid checkpoints |
 | 17 | Complete | 10.004million main interactions across10 fresh-seed fits; selected median seeds167/101; 394 JS fixtures and6 valid Chrome checks PASS; observer-free RTT and real fallback playback PASS; late training decline retained |
-| 18 | Running | First70/179 frozen browser sessions saved (all seven policies across ten cases); no policy/source changes. Continue repeats and raw replay. First59 portable metric/input/action/feedback/replay checks PASS. |
-| 19 | Pending | Verified common results, figures/tables and claim boundaries |
+| 18 | Complete | All179 frozen sessions complete:170 controlled +9 raw replay;303 source files,2 models, clocks/cutoffs, actual input/action/feedback, schedules and portable metrics verified. Guest NTP restored. |
+| 19 | Complete | F3-F5 and T3-T4/T7-T8 generated and reviewed; primary effect+1.272 [1.227,1.315], stalls-64.87percent;7/10 case gains. Direct guard/LEO contrasts include zero; regressions and coefficient sensitivity retained. STOP beforeStep20. |
 | 20 | Pending | Reviewed final report PDF and contributions |
 | 21 | Pending | Working demo, recording and report-consistent slide draft |
 | 22 | Pending | Extracted/reproduced release ZIP and publication/submission status |

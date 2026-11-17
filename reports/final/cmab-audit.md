@@ -100,3 +100,41 @@ Four common A2C recipes across two seeds and two input designs completed4,003,84
 Per-sample dual-clock logging exposed approximately0.41s wall-clock steps; active guest NTP reported large offsets/jitter. Three clock-invalid conventional deployment runs are retained unscored, with their numerical parity evidence separate. Valid sessions were reused; only invalid sessions repeated. Guest timesync is temporarily paused for measurement and restored afterwards. Start phase now follows guest/browser epoch rather than assuming the Windows dispatch clock is identical. Corrected recordings pass the unchanged0.1s epoch/monotonic check. This is common infrastructure control, not an algorithmic benefit.
 
 The high-rate raw-replay status window retained only256 events. An append-only applied-history export now preserves the full timeline without changing shaping choices. A physical development probe verified all479 source indices/settings while the status view held256; outage/100ms/recovery checks pass. Frozen testing uses seven policies,170 controlled sessions and9 separately labelled repository-replay sessions.
+
+## Verified held-out findings (Step 19)
+
+All179 frozen trials completed and passed source/model, portable-metric,
+clock/cutoff, applied-network and actual decision/request checks. No policy was
+retuned on these results. The temporary guest clock guard has been released.
+
+- Guarded CMAB versus original: paired QoE difference +1.2717 per wall second,
+  conditional95% repeat interval [1.2269,1.3154]. Seven of ten case means improve.
+  Mean stalls fall49.75→17.48s (64.87%); mean live delay6.41→4.37s; startup is
+  essentially matched. Mean played nominal bitrate falls5.64→2.96Mbps and
+  quality changes rise11.4→21.7 per session. These tradeoffs remain visible.
+- Three case means regress: the two steady cases and interruption6131.
+  T4-score-components.csv exactly decomposes the score differences. In each,
+  nominal-quality loss and greater variation outweigh stall/delay improvements.
+  The worst case mean is -0.0601; its predeclared repeat0 trajectory is not the
+  worst individual repeat. Repeat2 is substantially worse, so the case mean and
+  all three raw records must accompany that illustrative plot.
+- The bandit/restart package does not establish an aggregate advantage over
+  guard-only: -0.00095, interval [-0.05139,0.04887]. This comparison changes
+  restart behavior too; it is not an isolated learning intervention.
+- Conventional and LEO A2C score0.23910/0.23993 on the controlled suite. Their
+  matched difference is +0.00083, interval [-0.02344,0.02465]: no LEO-input gain
+  is established. Both have0 logged fallback decisions across2430 fresh neural
+  decisions; observed fresh p95 is about0.4ms, with maxima0.9/1.0ms on this host.
+- Guarded-CMAB improvement stays positive for all six predeclared coefficient
+  rescoring settings (+0.734 to+2.347). Separate repository replay scores are
+  original -4.406, guarded -1.458, guard-only -1.261. Original's poor playback
+  remains scored; these180s runs are not pooled into controlled120s means.
+
+Intervals describe paired browser repeatability on the fixed ten-case suite,
+not a Starlink population. Only two RTT sessions underpin generated capacity/
+outage scenarios. Results do not establish a universal best policy or causal
+benefit from a specific extra observation. See evaluation/contrasts.json,
+T4 tables, F3-F5 and evaluation/step19-review.json for calculations and review.
+
+Execution stops after verified Step19 as requested. Report, slides, demo and
+submission packaging require the user's next instructions.

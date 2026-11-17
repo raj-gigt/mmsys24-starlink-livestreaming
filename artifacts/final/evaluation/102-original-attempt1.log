@@ -1,0 +1,907 @@
+Saved timeline: C:\Users\HP\Desktop\LEO\LEO_ABR_RL\artifacts\runs\phasea-abrCMAB-20261117T135508-37f2e0\run-timeline.svg
+{
+  "run_id": "phasea-abrCMAB-20261117T135508-37f2e0",
+  "algorithm": "abrCMAB",
+  "requested_seconds": 120,
+  "started_utc": "2026-11-17T13:55:08.393321+00:00",
+  "wall_clock_start_second": 8,
+  "target_latency_s": 3,
+  "catchup": "liveCatchupModeLoLP",
+  "url": "http://pyodide/samples/starlink/testplayer/testplayer.html?experimentID=phasea-abrCMAB-20261117T135508-37f2e0&mpdURL=https%3A%2F%2Fnginx%2Flivesim2%2Fvectors%2Fswitching_sets%2F12.5_25_50%2Fss1%2F2023-04-28%2Fstream.mpd&targetLatency=3&constantVideoBitrate=-1&abrGeneral=abrCMAB&maxDrift=5&minCatchupPlaybackRate=-0.17&maxCatchupPlaybackRate=0.17&abrAdditionalAbandonRequestRule=true&cmabAlpha=1.0&catchupMechanism=liveCatchupModeLoLP&hostClock=1",
+  "load_wall_clock_utc": "2026-11-17T13:56:00.181814+00:00",
+  "scenario_id": "test-rtt_variation-6120",
+  "variant": null,
+  "actual_abr_strategy": "abrCMAB",
+  "auto_switch_video": true,
+  "shared_probe_active": false,
+  "diagnostic_model_failure": false,
+  "fixed_kbps": -1,
+  "neural_variant": null,
+  "scheduled_start_unix_s": 1794923760,
+  "controlled_stages": [
+    {
+      "at_s": -39.30137825012207,
+      "rate_mbit": 8.0,
+      "delay_ms": 245.4,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 1.0114898681640625,
+      "rate_mbit": 8.0,
+      "delay_ms": 245.1,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 2.003406286239624,
+      "rate_mbit": 8.0,
+      "delay_ms": 244.5,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 3.0128304958343506,
+      "rate_mbit": 8.0,
+      "delay_ms": 241.9,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 4.008162260055542,
+      "rate_mbit": 8.0,
+      "delay_ms": 242.0,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 5.007085084915161,
+      "rate_mbit": 8.0,
+      "delay_ms": 242.1,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 6.010406494140625,
+      "rate_mbit": 8.0,
+      "delay_ms": 174.3,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 7.009326934814453,
+      "rate_mbit": 8.0,
+      "delay_ms": 166.7,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 8.005542755126953,
+      "rate_mbit": 8.0,
+      "delay_ms": 165.5,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 9.002848148345947,
+      "rate_mbit": 8.0,
+      "delay_ms": 166.0,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 10.003998517990112,
+      "rate_mbit": 8.0,
+      "delay_ms": 165.1,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 11.005257368087769,
+      "rate_mbit": 8.0,
+      "delay_ms": 166.3,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 12.00493597984314,
+      "rate_mbit": 8.0,
+      "delay_ms": 165.6,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 13.011007308959961,
+      "rate_mbit": 8.0,
+      "delay_ms": 163.6,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 14.006263256072998,
+      "rate_mbit": 8.0,
+      "delay_ms": 164.4,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 15.003597497940063,
+      "rate_mbit": 8.0,
+      "delay_ms": 166.3,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 16.00960087776184,
+      "rate_mbit": 8.0,
+      "delay_ms": 166.0,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 17.006758451461792,
+      "rate_mbit": 8.0,
+      "delay_ms": 167.2,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 18.010489225387573,
+      "rate_mbit": 8.0,
+      "delay_ms": 165.1,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 19.00413942337036,
+      "rate_mbit": 8.0,
+      "delay_ms": 164.2,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 20.004417419433594,
+      "rate_mbit": 8.0,
+      "delay_ms": 164.0,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 21.00597906112671,
+      "rate_mbit": 8.0,
+      "delay_ms": 162.1,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 22.007805347442627,
+      "rate_mbit": 8.0,
+      "delay_ms": 159.9,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 23.005276918411255,
+      "rate_mbit": 8.0,
+      "delay_ms": 157.8,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 24.01172399520874,
+      "rate_mbit": 8.0,
+      "delay_ms": 156.7,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 25.008227109909058,
+      "rate_mbit": 8.0,
+      "delay_ms": 158.3,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 26.01040530204773,
+      "rate_mbit": 8.0,
+      "delay_ms": 157.5,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 27.009381532669067,
+      "rate_mbit": 8.0,
+      "delay_ms": 156.7,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 28.011866569519043,
+      "rate_mbit": 8.0,
+      "delay_ms": 157.6,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 29.005737781524658,
+      "rate_mbit": 8.0,
+      "delay_ms": 157.5,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 30.008575677871704,
+      "rate_mbit": 8.0,
+      "delay_ms": 157.8,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 31.006237983703613,
+      "rate_mbit": 8.0,
+      "delay_ms": 157.1,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 32.01184344291687,
+      "rate_mbit": 8.0,
+      "delay_ms": 157.3,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 33.00816321372986,
+      "rate_mbit": 8.0,
+      "delay_ms": 158.7,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 34.01230001449585,
+      "rate_mbit": 8.0,
+      "delay_ms": 156.7,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 35.00906300544739,
+      "rate_mbit": 8.0,
+      "delay_ms": 156.5,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 36.0064799785614,
+      "rate_mbit": 8.0,
+      "delay_ms": 158.6,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 37.003422260284424,
+      "rate_mbit": 8.0,
+      "delay_ms": 156.1,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 38.004964113235474,
+      "rate_mbit": 8.0,
+      "delay_ms": 157.7,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 39.002845764160156,
+      "rate_mbit": 8.0,
+      "delay_ms": 160.5,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 40.002962589263916,
+      "rate_mbit": 8.0,
+      "delay_ms": 159.2,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 41.0101683139801,
+      "rate_mbit": 8.0,
+      "delay_ms": 277.0,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 42.00451898574829,
+      "rate_mbit": 8.0,
+      "delay_ms": 277.5,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 43.004886865615845,
+      "rate_mbit": 8.0,
+      "delay_ms": 276.3,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 44.01176595687866,
+      "rate_mbit": 8.0,
+      "delay_ms": 276.7,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 46.00669193267822,
+      "rate_mbit": 8.0,
+      "delay_ms": 276.8,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 47.00566482543945,
+      "rate_mbit": 8.0,
+      "delay_ms": 277.1,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 48.01272535324097,
+      "rate_mbit": 8.0,
+      "delay_ms": 276.2,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 49.00906276702881,
+      "rate_mbit": 8.0,
+      "delay_ms": 277.4,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 50.01011657714844,
+      "rate_mbit": 8.0,
+      "delay_ms": 277.9,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 51.00855374336243,
+      "rate_mbit": 8.0,
+      "delay_ms": 280.4,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 52.0047652721405,
+      "rate_mbit": 8.0,
+      "delay_ms": 274.2,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 53.010833978652954,
+      "rate_mbit": 8.0,
+      "delay_ms": 281.8,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 54.01351189613342,
+      "rate_mbit": 8.0,
+      "delay_ms": 278.7,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 55.01248073577881,
+      "rate_mbit": 8.0,
+      "delay_ms": 281.8,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 56.008517265319824,
+      "rate_mbit": 8.0,
+      "delay_ms": 285.5,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 57.00370168685913,
+      "rate_mbit": 8.0,
+      "delay_ms": 282.3,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 58.00557065010071,
+      "rate_mbit": 8.0,
+      "delay_ms": 287.0,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 59.00435447692871,
+      "rate_mbit": 8.0,
+      "delay_ms": 283.5,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 60.00240659713745,
+      "rate_mbit": 8.0,
+      "delay_ms": 282.9,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 61.00670313835144,
+      "rate_mbit": 8.0,
+      "delay_ms": 163.0,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 62.003416538238525,
+      "rate_mbit": 8.0,
+      "delay_ms": 163.6,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 63.0029079914093,
+      "rate_mbit": 8.0,
+      "delay_ms": 162.6,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 64.01198673248291,
+      "rate_mbit": 8.0,
+      "delay_ms": 162.8,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 65.00918531417847,
+      "rate_mbit": 8.0,
+      "delay_ms": 160.8,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 66.01328206062317,
+      "rate_mbit": 8.0,
+      "delay_ms": 214.8,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 67.0093994140625,
+      "rate_mbit": 8.0,
+      "delay_ms": 218.1,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 68.00942301750183,
+      "rate_mbit": 8.0,
+      "delay_ms": 218.8,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 69.00654006004333,
+      "rate_mbit": 8.0,
+      "delay_ms": 217.4,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 70.00876021385193,
+      "rate_mbit": 8.0,
+      "delay_ms": 218.2,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 71.00549864768982,
+      "rate_mbit": 8.0,
+      "delay_ms": 217.0,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 72.01074576377869,
+      "rate_mbit": 8.0,
+      "delay_ms": 219.0,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 73.00665521621704,
+      "rate_mbit": 8.0,
+      "delay_ms": 217.2,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 74.00852990150452,
+      "rate_mbit": 8.0,
+      "delay_ms": 217.1,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 75.00693392753601,
+      "rate_mbit": 8.0,
+      "delay_ms": 220.4,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 76.00387811660767,
+      "rate_mbit": 8.0,
+      "delay_ms": 221.6,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 77.0101625919342,
+      "rate_mbit": 8.0,
+      "delay_ms": 217.9,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 78.0127637386322,
+      "rate_mbit": 8.0,
+      "delay_ms": 217.4,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 79.01263499259949,
+      "rate_mbit": 8.0,
+      "delay_ms": 217.1,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 80.007159948349,
+      "rate_mbit": 8.0,
+      "delay_ms": 221.1,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 81.01225733757019,
+      "rate_mbit": 8.0,
+      "delay_ms": 220.4,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 82.00478172302246,
+      "rate_mbit": 8.0,
+      "delay_ms": 215.2,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 83.00668811798096,
+      "rate_mbit": 8.0,
+      "delay_ms": 219.0,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 84.01165127754211,
+      "rate_mbit": 8.0,
+      "delay_ms": 218.1,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 85.00812363624573,
+      "rate_mbit": 8.0,
+      "delay_ms": 215.3,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 86.01030945777893,
+      "rate_mbit": 8.0,
+      "delay_ms": 216.1,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 87.00951623916626,
+      "rate_mbit": 8.0,
+      "delay_ms": 217.6,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 88.0053231716156,
+      "rate_mbit": 8.0,
+      "delay_ms": 220.8,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 89.01276087760925,
+      "rate_mbit": 8.0,
+      "delay_ms": 217.9,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 90.00423121452332,
+      "rate_mbit": 8.0,
+      "delay_ms": 217.2,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 91.00229620933533,
+      "rate_mbit": 8.0,
+      "delay_ms": 218.3,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 92.00735354423523,
+      "rate_mbit": 8.0,
+      "delay_ms": 217.5,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 93.00424194335938,
+      "rate_mbit": 8.0,
+      "delay_ms": 217.8,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 94.00783467292786,
+      "rate_mbit": 8.0,
+      "delay_ms": 221.2,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 95.00689101219177,
+      "rate_mbit": 8.0,
+      "delay_ms": 224.3,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 96.00341463088989,
+      "rate_mbit": 8.0,
+      "delay_ms": 211.0,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 97.01047015190125,
+      "rate_mbit": 8.0,
+      "delay_ms": 208.7,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 98.01284146308899,
+      "rate_mbit": 8.0,
+      "delay_ms": 207.7,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 99.01164650917053,
+      "rate_mbit": 8.0,
+      "delay_ms": 206.7,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 100.00754308700562,
+      "rate_mbit": 8.0,
+      "delay_ms": 207.1,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 101.00409293174744,
+      "rate_mbit": 8.0,
+      "delay_ms": 206.6,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 102.00578260421753,
+      "rate_mbit": 8.0,
+      "delay_ms": 207.8,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 103.00561571121216,
+      "rate_mbit": 8.0,
+      "delay_ms": 208.1,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 104.01269483566284,
+      "rate_mbit": 8.0,
+      "delay_ms": 207.8,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 105.00935339927673,
+      "rate_mbit": 8.0,
+      "delay_ms": 210.2,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 106.01105093955994,
+      "rate_mbit": 8.0,
+      "delay_ms": 209.2,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 107.01130318641663,
+      "rate_mbit": 8.0,
+      "delay_ms": 208.2,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 109.0037350654602,
+      "rate_mbit": 8.0,
+      "delay_ms": 207.7,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 110.00772881507874,
+      "rate_mbit": 8.0,
+      "delay_ms": 206.2,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 111.00881934165955,
+      "rate_mbit": 8.0,
+      "delay_ms": 207.5,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 112.0050904750824,
+      "rate_mbit": 8.0,
+      "delay_ms": 205.3,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 113.01135587692261,
+      "rate_mbit": 8.0,
+      "delay_ms": 204.7,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 114.00332117080688,
+      "rate_mbit": 8.0,
+      "delay_ms": 204.8,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 116.0068109035492,
+      "rate_mbit": 8.0,
+      "delay_ms": 205.2,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 117.00337171554565,
+      "rate_mbit": 8.0,
+      "delay_ms": 205.4,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 118.00615739822388,
+      "rate_mbit": 8.0,
+      "delay_ms": 205.2,
+      "loss_percent": 0.0
+    },
+    {
+      "at_s": 119.00425887107849,
+      "rate_mbit": 8.0,
+      "delay_ms": 204.6,
+      "loss_percent": 0.0
+    }
+  ],
+  "samples": 60,
+  "mongo_documents": {
+    "events": 25,
+    "metric": 25,
+    "qoe": 30,
+    "decisions": 0
+  },
+  "media_time_end": 1794923872,
+  "ladder": [
+    {
+      "bitrate": 300000,
+      "height": 270,
+      "qualityIndex": 0,
+      "width": 480
+    },
+    {
+      "bitrate": 450000,
+      "height": 288,
+      "qualityIndex": 1,
+      "width": 512
+    },
+    {
+      "bitrate": 900000,
+      "height": 432,
+      "qualityIndex": 2,
+      "width": 768
+    },
+    {
+      "bitrate": 1200000,
+      "height": 576,
+      "qualityIndex": 3,
+      "width": 1024
+    },
+    {
+      "bitrate": 1500000,
+      "height": 576,
+      "qualityIndex": 4,
+      "width": 1024
+    },
+    {
+      "bitrate": 4900000,
+      "height": 1080,
+      "qualityIndex": 5,
+      "width": 1920
+    },
+    {
+      "bitrate": 5100000,
+      "height": 1080,
+      "qualityIndex": 6,
+      "width": 1920
+    },
+    {
+      "bitrate": 6000000,
+      "height": 1080,
+      "qualityIndex": 7,
+      "width": 1920
+    }
+  ],
+  "build": "anjan-final-20261117-common-v1",
+  "model": {
+    "label": "imitation-initialized, A2C-updated integration pilot; one seed",
+    "sha256": "9f00f1a5d2fbc33f635e90595de44ccb536d36d93ac65c80670e64af46387471"
+  },
+  "page_load_to_ready_ms": 402.5015999795869,
+  "runtime_prewarm_ms": 10811.60000000149,
+  "clock_mode": "host",
+  "utc_synchronization_enabled": false,
+  "model_assets_cold_load_ms": 4.600000001490116,
+  "decision_count": 0,
+  "played_advance_s": 5.4877610206604,
+  "completed_video_requests": 30,
+  "player_errors": [],
+  "console_severe": [
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 82846 WebSocket connection to 'ws://pyodide:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED",
+      "source": "network",
+      "timestamp": 1794923708732
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 83789:22 \"[webpack-dev-server]\" Event",
+      "source": "console-api",
+      "timestamp": 1794923708732
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/favicon.ico - Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "source": "network",
+      "timestamp": 1794923708791
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 82846 WebSocket connection to 'ws://pyodide:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED",
+      "source": "network",
+      "timestamp": 1794923710831
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 83789:22 \"[webpack-dev-server]\" Event",
+      "source": "console-api",
+      "timestamp": 1794923710831
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 82846 WebSocket connection to 'ws://pyodide:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED",
+      "source": "network",
+      "timestamp": 1794923712945
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 83789:22 \"[webpack-dev-server]\" Event",
+      "source": "console-api",
+      "timestamp": 1794923712945
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 82846 WebSocket connection to 'ws://pyodide:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED",
+      "source": "network",
+      "timestamp": 1794923719860
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 83789:22 \"[webpack-dev-server]\" Event",
+      "source": "console-api",
+      "timestamp": 1794923719860
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 82846 WebSocket connection to 'ws://pyodide:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED",
+      "source": "network",
+      "timestamp": 1794923727972
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 83789:22 \"[webpack-dev-server]\" Event",
+      "source": "console-api",
+      "timestamp": 1794923727972
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 82846 WebSocket connection to 'ws://pyodide:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED",
+      "source": "network",
+      "timestamp": 1794923744005
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 83789:22 \"[webpack-dev-server]\" Event",
+      "source": "console-api",
+      "timestamp": 1794923744005
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 4316:18 \"Settings parameter streaming.abr.buffer is not supported\"",
+      "source": "console-api",
+      "timestamp": 1794923760156
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 82846 WebSocket connection to 'ws://pyodide:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED",
+      "source": "network",
+      "timestamp": 1794923776028
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 83789:22 \"[webpack-dev-server]\" Event",
+      "source": "console-api",
+      "timestamp": 1794923776028
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 82846 WebSocket connection to 'ws://pyodide:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED",
+      "source": "network",
+      "timestamp": 1794923840037
+    },
+    {
+      "level": "SEVERE",
+      "message": "http://pyodide/dist/dash.all.debug.js 83789:22 \"[webpack-dev-server]\" Event",
+      "source": "console-api",
+      "timestamp": 1794923840038
+    }
+  ]
+}

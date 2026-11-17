@@ -105,6 +105,8 @@ def main():
     for ax,ylabel in zip(axes,['QoE difference / wall s','Stall difference (s)','Mean live-delay difference (s)']):
         ax.axhline(0,color='#263B58',lw=.8);ax.set(xticks=x,xticklabels=['Steady','Cap.','RTT','Outage','Recov.'],ylabel=ylabel);ax.tick_params(axis='x',labelsize=8.5);ax.grid(axis='y',alpha=.15)
     handles,names=axes[0].get_legend_handles_labels()
+    for ax in axes:
+        plt.setp(ax.get_xticklabels(),rotation=35,ha='right')
     fig.legend(handles,names,loc='lower center',ncol=3,frameon=False,fontsize=9)
     fig.suptitle('Scenario effects: higher QoE and lower stalls/delay are better',fontsize=11)
     fig.tight_layout(rect=(0,.16,1,.94));save(fig,'F4-family-effects',figures)

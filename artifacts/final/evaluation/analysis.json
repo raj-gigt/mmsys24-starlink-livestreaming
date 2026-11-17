@@ -1,0 +1,1320 @@
+{
+  "status": "complete",
+  "sessions": 179,
+  "controlled_sessions": 170,
+  "raw_replay_sessions": 9,
+  "overall": [
+    {
+      "policy": "original",
+      "sessions": 30,
+      "qoe_per_wall_s": -1.0812426756317275,
+      "stall_s": 49.75223990342319,
+      "startup_s": 1.6987053478360177,
+      "played_bitrate_bps": 5638819.833663934,
+      "switches": 11.4,
+      "mean_live_latency_s": 6.411634919722208,
+      "p95_live_latency_s": 11.362833333333331,
+      "played_media_s": 78.17909012635548,
+      "skipped_media_s": 38.26824602286021,
+      "quality_utility": 113.33391476845233,
+      "latency_area": 406.7710968033143,
+      "variation": 5.751124422849438
+    },
+    {
+      "policy": "improved",
+      "sessions": 30,
+      "qoe_per_wall_s": 0.19042162484461236,
+      "stall_s": 17.476936227568743,
+      "startup_s": 1.6963726103462278,
+      "played_bitrate_bps": 2960721.4349664506,
+      "switches": 21.666666666666664,
+      "mean_live_latency_s": 4.372852228650442,
+      "p95_live_latency_s": 6.405900000000001,
+      "played_media_s": 113.90607474644978,
+      "skipped_media_s": 5.0209719340006504,
+      "quality_utility": 116.03370327620216,
+      "latency_area": 163.6397282966631,
+      "variation": 17.345501274253472
+    },
+    {
+      "policy": "guard_only",
+      "sessions": 30,
+      "qoe_per_wall_s": 0.1913689102969765,
+      "stall_s": 20.37741832948102,
+      "startup_s": 1.6936562383140128,
+      "played_bitrate_bps": 3376981.905238683,
+      "switches": 4.6,
+      "mean_live_latency_s": 4.517834573737633,
+      "p95_live_latency_s": 7.084733333333334,
+      "played_media_s": 111.8950975974401,
+      "skipped_media_s": 6.774550890922546,
+      "quality_utility": 125.25415350494877,
+      "latency_area": 181.05630824332516,
+      "variation": 3.2529229585596946
+    },
+    {
+      "policy": "throughput",
+      "sessions": 20,
+      "qoe_per_wall_s": 0.10450756415468065,
+      "stall_s": 9.386482429584003,
+      "startup_s": 1.6945593350406736,
+      "played_bitrate_bps": 1049278.3968053893,
+      "switches": 16.55,
+      "mean_live_latency_s": 3.6685097598674807,
+      "p95_live_latency_s": 5.3586,
+      "played_media_s": 116.61208364963531,
+      "skipped_media_s": 2.621098244190216,
+      "quality_utility": 62.24659740198852,
+      "latency_area": 79.67782920999753,
+      "variation": 8.313120631184741
+    },
+    {
+      "policy": "bola",
+      "sessions": 20,
+      "qoe_per_wall_s": -0.08432700061702163,
+      "stall_s": 6.4922241009923285,
+      "startup_s": 1.690005330219865,
+      "played_bitrate_bps": 640698.0666148977,
+      "switches": 13.85,
+      "mean_live_latency_s": 3.5561646989759454,
+      "p95_live_latency_s": 5.0863,
+      "played_media_s": 118.79961680173874,
+      "skipped_media_s": 0.5111351490020752,
+      "quality_utility": 27.347647387325033,
+      "latency_area": 66.27304720000004,
+      "variation": 10.608078422203514
+    },
+    {
+      "policy": "conventional",
+      "sessions": 20,
+      "qoe_per_wall_s": 0.23910169161994346,
+      "stall_s": 9.552941450674677,
+      "startup_s": 1.4314309022527187,
+      "played_bitrate_bps": 1251876.9848526495,
+      "switches": 5.05,
+      "mean_live_latency_s": 3.7113039216522936,
+      "p95_live_latency_s": 5.5215499999999995,
+      "played_media_s": 116.06079173088074,
+      "skipped_media_s": 3.1172293424606323,
+      "quality_utility": 77.67321100260945,
+      "latency_area": 84.74569367000404,
+      "variation": 2.85768398357042
+    },
+    {
+      "policy": "leo",
+      "sessions": 20,
+      "qoe_per_wall_s": 0.23992698201839863,
+      "stall_s": 9.135509117050335,
+      "startup_s": 1.4328256823919712,
+      "played_bitrate_bps": 1230740.9937916456,
+      "switches": 5.0,
+      "mean_live_latency_s": 3.7068649478030244,
+      "p95_live_latency_s": 5.381100000000001,
+      "played_media_s": 116.83871680498123,
+      "skipped_media_s": 2.333112871646881,
+      "quality_utility": 76.11163483980584,
+      "latency_area": 84.24798609999637,
+      "variation": 3.048017108058936
+    }
+  ],
+  "paired": {
+    "improved": {
+      "mean_difference": 1.2716643004763402,
+      "ci95_low": 1.22691201149053,
+      "ci95_high": 1.3153779349977779,
+      "positive_cases": 7,
+      "cases": [
+        {
+          "family": "steady_bandwidth",
+          "case_id": "test-steady_bandwidth-6100",
+          "difference": -0.026085803576517092,
+          "paired_repeats": 3
+        },
+        {
+          "family": "steady_bandwidth",
+          "case_id": "test-steady_bandwidth-6101",
+          "difference": -0.02372095294382422,
+          "paired_repeats": 3
+        },
+        {
+          "family": "bandwidth_variation",
+          "case_id": "test-bandwidth_variation-6110",
+          "difference": 1.4894311923051264,
+          "paired_repeats": 3
+        },
+        {
+          "family": "bandwidth_variation",
+          "case_id": "test-bandwidth_variation-6111",
+          "difference": 1.7049660121050962,
+          "paired_repeats": 3
+        },
+        {
+          "family": "rtt_variation",
+          "case_id": "test-rtt_variation-6120",
+          "difference": 3.3973018171596014,
+          "paired_repeats": 3
+        },
+        {
+          "family": "rtt_variation",
+          "case_id": "test-rtt_variation-6121",
+          "difference": 0.02376024872460425,
+          "paired_repeats": 3
+        },
+        {
+          "family": "handover_interruption",
+          "case_id": "test-handover_interruption-6130",
+          "difference": 2.756038006963456,
+          "paired_repeats": 3
+        },
+        {
+          "family": "handover_interruption",
+          "case_id": "test-handover_interruption-6131",
+          "difference": -0.06006576462085467,
+          "paired_repeats": 3
+        },
+        {
+          "family": "post_handover_recovery",
+          "case_id": "test-post_handover_recovery-6140",
+          "difference": 3.020230159709586,
+          "paired_repeats": 3
+        },
+        {
+          "family": "post_handover_recovery",
+          "case_id": "test-post_handover_recovery-6141",
+          "difference": 0.43478808893712584,
+          "paired_repeats": 3
+        }
+      ]
+    },
+    "guard_only": {
+      "mean_difference": 1.2726115859287042,
+      "ci95_low": 1.2460680498358159,
+      "ci95_high": 1.297505017973512,
+      "positive_cases": 8,
+      "cases": [
+        {
+          "family": "steady_bandwidth",
+          "case_id": "test-steady_bandwidth-6100",
+          "difference": -0.012483211279529746,
+          "paired_repeats": 3
+        },
+        {
+          "family": "steady_bandwidth",
+          "case_id": "test-steady_bandwidth-6101",
+          "difference": 0.009615036315451983,
+          "paired_repeats": 3
+        },
+        {
+          "family": "bandwidth_variation",
+          "case_id": "test-bandwidth_variation-6110",
+          "difference": 1.0706576492690814,
+          "paired_repeats": 3
+        },
+        {
+          "family": "bandwidth_variation",
+          "case_id": "test-bandwidth_variation-6111",
+          "difference": 1.2213721779158897,
+          "paired_repeats": 3
+        },
+        {
+          "family": "rtt_variation",
+          "case_id": "test-rtt_variation-6120",
+          "difference": 3.588411218634144,
+          "paired_repeats": 3
+        },
+        {
+          "family": "rtt_variation",
+          "case_id": "test-rtt_variation-6121",
+          "difference": 0.11251918312437248,
+          "paired_repeats": 3
+        },
+        {
+          "family": "handover_interruption",
+          "case_id": "test-handover_interruption-6130",
+          "difference": 3.122988422313026,
+          "paired_repeats": 3
+        },
+        {
+          "family": "handover_interruption",
+          "case_id": "test-handover_interruption-6131",
+          "difference": -0.07323526073541735,
+          "paired_repeats": 3
+        },
+        {
+          "family": "post_handover_recovery",
+          "case_id": "test-post_handover_recovery-6140",
+          "difference": 3.4258462559802396,
+          "paired_repeats": 3
+        },
+        {
+          "family": "post_handover_recovery",
+          "case_id": "test-post_handover_recovery-6141",
+          "difference": 0.26042438774978344,
+          "paired_repeats": 3
+        }
+      ]
+    },
+    "throughput": {
+      "mean_difference": 1.181835679111424,
+      "ci95_low": 1.1647435759433393,
+      "ci95_high": 1.1988198282386662,
+      "positive_cases": 6,
+      "cases": [
+        {
+          "family": "steady_bandwidth",
+          "case_id": "test-steady_bandwidth-6100",
+          "difference": -0.1606073879678337,
+          "paired_repeats": 2
+        },
+        {
+          "family": "steady_bandwidth",
+          "case_id": "test-steady_bandwidth-6101",
+          "difference": -0.12858516764567507,
+          "paired_repeats": 2
+        },
+        {
+          "family": "bandwidth_variation",
+          "case_id": "test-bandwidth_variation-6110",
+          "difference": 1.3452553197564638,
+          "paired_repeats": 2
+        },
+        {
+          "family": "bandwidth_variation",
+          "case_id": "test-bandwidth_variation-6111",
+          "difference": 1.5432432580162105,
+          "paired_repeats": 2
+        },
+        {
+          "family": "rtt_variation",
+          "case_id": "test-rtt_variation-6120",
+          "difference": 3.093062291101579,
+          "paired_repeats": 2
+        },
+        {
+          "family": "rtt_variation",
+          "case_id": "test-rtt_variation-6121",
+          "difference": -0.04846532608849452,
+          "paired_repeats": 2
+        },
+        {
+          "family": "handover_interruption",
+          "case_id": "test-handover_interruption-6130",
+          "difference": 2.986698577463822,
+          "paired_repeats": 2
+        },
+        {
+          "family": "handover_interruption",
+          "case_id": "test-handover_interruption-6131",
+          "difference": -0.13312463794655366,
+          "paired_repeats": 2
+        },
+        {
+          "family": "post_handover_recovery",
+          "case_id": "test-post_handover_recovery-6140",
+          "difference": 3.0326944024382705,
+          "paired_repeats": 2
+        },
+        {
+          "family": "post_handover_recovery",
+          "case_id": "test-post_handover_recovery-6141",
+          "difference": 0.2881854619864518,
+          "paired_repeats": 2
+        }
+      ]
+    },
+    "bola": {
+      "mean_difference": 0.9930011143397218,
+      "ci95_low": 0.9670172532441961,
+      "ci95_high": 1.0190829318704415,
+      "positive_cases": 6,
+      "cases": [
+        {
+          "family": "steady_bandwidth",
+          "case_id": "test-steady_bandwidth-6100",
+          "difference": -0.5951746710469614,
+          "paired_repeats": 2
+        },
+        {
+          "family": "steady_bandwidth",
+          "case_id": "test-steady_bandwidth-6101",
+          "difference": -0.5557472778890988,
+          "paired_repeats": 2
+        },
+        {
+          "family": "bandwidth_variation",
+          "case_id": "test-bandwidth_variation-6110",
+          "difference": 1.3899147355724832,
+          "paired_repeats": 2
+        },
+        {
+          "family": "bandwidth_variation",
+          "case_id": "test-bandwidth_variation-6111",
+          "difference": 1.4207108341370662,
+          "paired_repeats": 2
+        },
+        {
+          "family": "rtt_variation",
+          "case_id": "test-rtt_variation-6120",
+          "difference": 3.1037863063470827,
+          "paired_repeats": 2
+        },
+        {
+          "family": "rtt_variation",
+          "case_id": "test-rtt_variation-6121",
+          "difference": -0.33813808964516145,
+          "paired_repeats": 2
+        },
+        {
+          "family": "handover_interruption",
+          "case_id": "test-handover_interruption-6130",
+          "difference": 2.8931036784759128,
+          "paired_repeats": 2
+        },
+        {
+          "family": "handover_interruption",
+          "case_id": "test-handover_interruption-6131",
+          "difference": -0.5157346648070167,
+          "paired_repeats": 2
+        },
+        {
+          "family": "post_handover_recovery",
+          "case_id": "test-post_handover_recovery-6140",
+          "difference": 3.0671237188721285,
+          "paired_repeats": 2
+        },
+        {
+          "family": "post_handover_recovery",
+          "case_id": "test-post_handover_recovery-6141",
+          "difference": 0.06016657338078266,
+          "paired_repeats": 2
+        }
+      ]
+    },
+    "conventional": {
+      "mean_difference": 1.3164298065766866,
+      "ci95_low": 1.2857648709156362,
+      "ci95_high": 1.3468178393306502,
+      "positive_cases": 7,
+      "cases": [
+        {
+          "family": "steady_bandwidth",
+          "case_id": "test-steady_bandwidth-6100",
+          "difference": -0.044391820067476384,
+          "paired_repeats": 2
+        },
+        {
+          "family": "steady_bandwidth",
+          "case_id": "test-steady_bandwidth-6101",
+          "difference": -0.0015401312534899514,
+          "paired_repeats": 2
+        },
+        {
+          "family": "bandwidth_variation",
+          "case_id": "test-bandwidth_variation-6110",
+          "difference": 1.4358060416401932,
+          "paired_repeats": 2
+        },
+        {
+          "family": "bandwidth_variation",
+          "case_id": "test-bandwidth_variation-6111",
+          "difference": 1.5141845828059228,
+          "paired_repeats": 2
+        },
+        {
+          "family": "rtt_variation",
+          "case_id": "test-rtt_variation-6120",
+          "difference": 3.4206371584032818,
+          "paired_repeats": 2
+        },
+        {
+          "family": "rtt_variation",
+          "case_id": "test-rtt_variation-6121",
+          "difference": 0.09466031470860925,
+          "paired_repeats": 2
+        },
+        {
+          "family": "handover_interruption",
+          "case_id": "test-handover_interruption-6130",
+          "difference": 3.2232650777550442,
+          "paired_repeats": 2
+        },
+        {
+          "family": "handover_interruption",
+          "case_id": "test-handover_interruption-6131",
+          "difference": -0.0466509158763706,
+          "paired_repeats": 2
+        },
+        {
+          "family": "post_handover_recovery",
+          "case_id": "test-post_handover_recovery-6140",
+          "difference": 3.1846168737996456,
+          "paired_repeats": 2
+        },
+        {
+          "family": "post_handover_recovery",
+          "case_id": "test-post_handover_recovery-6141",
+          "difference": 0.3837108838515075,
+          "paired_repeats": 2
+        }
+      ]
+    },
+    "leo": {
+      "mean_difference": 1.317255096975142,
+      "ci95_low": 1.2954379008281054,
+      "ci95_high": 1.3388456170717435,
+      "positive_cases": 7,
+      "cases": [
+        {
+          "family": "steady_bandwidth",
+          "case_id": "test-steady_bandwidth-6100",
+          "difference": -0.05375167560384758,
+          "paired_repeats": 2
+        },
+        {
+          "family": "steady_bandwidth",
+          "case_id": "test-steady_bandwidth-6101",
+          "difference": -0.007454585376035938,
+          "paired_repeats": 2
+        },
+        {
+          "family": "bandwidth_variation",
+          "case_id": "test-bandwidth_variation-6110",
+          "difference": 1.4976090284614423,
+          "paired_repeats": 2
+        },
+        {
+          "family": "bandwidth_variation",
+          "case_id": "test-bandwidth_variation-6111",
+          "difference": 1.5584183367676427,
+          "paired_repeats": 2
+        },
+        {
+          "family": "rtt_variation",
+          "case_id": "test-rtt_variation-6120",
+          "difference": 3.514372457445586,
+          "paired_repeats": 2
+        },
+        {
+          "family": "rtt_variation",
+          "case_id": "test-rtt_variation-6121",
+          "difference": 0.09018311587206274,
+          "paired_repeats": 2
+        },
+        {
+          "family": "handover_interruption",
+          "case_id": "test-handover_interruption-6130",
+          "difference": 3.1879748360306044,
+          "paired_repeats": 2
+        },
+        {
+          "family": "handover_interruption",
+          "case_id": "test-handover_interruption-6131",
+          "difference": -0.10007702302697585,
+          "paired_repeats": 2
+        },
+        {
+          "family": "post_handover_recovery",
+          "case_id": "test-post_handover_recovery-6140",
+          "difference": 3.132889105590528,
+          "paired_repeats": 2
+        },
+        {
+          "family": "post_handover_recovery",
+          "case_id": "test-post_handover_recovery-6141",
+          "difference": 0.3523873735904133,
+          "paired_repeats": 2
+        }
+      ]
+    }
+  },
+  "families": [
+    {
+      "policy": "original",
+      "family": "steady_bandwidth",
+      "sessions": 6,
+      "qoe_per_wall_s": 0.7341347417765077,
+      "stall_s": 16.479395607564516,
+      "startup_s": 0.8616446709943314,
+      "played_bitrate_bps": 5602169.548403042,
+      "switches": 21.666666666666668,
+      "mean_live_latency_s": 4.147759910275489,
+      "p95_live_latency_s": 5.1025,
+      "played_media_s": 118.64086918036143,
+      "skipped_media_s": 0.0,
+      "quality_utility": 171.62061164847933,
+      "latency_area": 137.39574204999698,
+      "variation": 9.919194966302362
+    },
+    {
+      "policy": "original",
+      "family": "bandwidth_variation",
+      "sessions": 6,
+      "qoe_per_wall_s": -1.4042757092640565,
+      "stall_s": 54.46075155099887,
+      "startup_s": 0.847076160620898,
+      "played_bitrate_bps": 5767507.546134763,
+      "switches": 8.833333333333334,
+      "mean_live_latency_s": 7.765482882586968,
+      "p95_live_latency_s": 19.826999999999998,
+      "played_media_s": 73.91692944367726,
+      "skipped_media_s": 41.83540527025858,
+      "quality_utility": 108.41440453785368,
+      "latency_area": 570.4435000999468,
+      "variation": 4.117716089806968
+    },
+    {
+      "policy": "original",
+      "family": "rtt_variation",
+      "sessions": 6,
+      "qoe_per_wall_s": -1.5060920492046093,
+      "stall_s": 58.30291441098223,
+      "startup_s": 2.290614732614408,
+      "played_bitrate_bps": 5662562.088647201,
+      "switches": 8.166666666666666,
+      "mean_live_latency_s": 6.54804166849848,
+      "p95_live_latency_s": 9.570500000000001,
+      "played_media_s": 67.26892054080963,
+      "skipped_media_s": 48.59882311026255,
+      "quality_utility": 98.03185006893564,
+      "latency_area": 422.04525000000535,
+      "variation": 3.6429098482781357
+    },
+    {
+      "policy": "original",
+      "family": "handover_interruption",
+      "sessions": 6,
+      "qoe_per_wall_s": -1.3418285659336826,
+      "stall_s": 54.89539525412854,
+      "startup_s": 2.228205174251149,
+      "played_bitrate_bps": 5619837.253053515,
+      "switches": 10.0,
+      "mean_live_latency_s": 6.384023628569483,
+      "p95_live_latency_s": 8.938666666666666,
+      "played_media_s": 71.14776023228963,
+      "skipped_media_s": 44.22549060980479,
+      "quality_utility": 102.66770937882832,
+      "latency_area": 402.7491328166325,
+      "variation": 5.4688847790862924
+    },
+    {
+      "policy": "original",
+      "family": "post_handover_recovery",
+      "sessions": 6,
+      "qoe_per_wall_s": -1.8881517955327975,
+      "stall_s": 64.62274269344178,
+      "startup_s": 2.2659860006993013,
+      "played_bitrate_bps": 5542022.732081146,
+      "switches": 8.333333333333334,
+      "mean_live_latency_s": 7.212866508680617,
+      "p95_live_latency_s": 13.375499999999997,
+      "played_media_s": 59.92097123463949,
+      "skipped_media_s": 56.68151112397512,
+      "quality_utility": 85.9349982081648,
+      "latency_area": 501.22185904999,
+      "variation": 5.606916430773436
+    },
+    {
+      "policy": "improved",
+      "family": "steady_bandwidth",
+      "sessions": 6,
+      "qoe_per_wall_s": 0.7092313635163371,
+      "stall_s": 12.868309373829774,
+      "startup_s": 0.8588534210200112,
+      "played_bitrate_bps": 4303787.814033686,
+      "switches": 27.333333333333332,
+      "mean_live_latency_s": 3.588898057497938,
+      "p95_live_latency_s": 4.160333333333333,
+      "played_media_s": 119.36766127745311,
+      "skipped_media_s": 0.0,
+      "quality_utility": 151.86944051321666,
+      "latency_area": 70.50401540000065,
+      "variation": 24.478611401857762
+    },
+    {
+      "policy": "improved",
+      "family": "bandwidth_variation",
+      "sessions": 6,
+      "qoe_per_wall_s": 0.19292289294105477,
+      "stall_s": 14.82199599578688,
+      "startup_s": 0.8417751880014936,
+      "played_bitrate_bps": 2507561.89294411,
+      "switches": 22.5,
+      "mean_live_latency_s": 4.182184685640223,
+      "p95_live_latency_s": 7.265333333333333,
+      "played_media_s": 116.64384229977925,
+      "skipped_media_s": 3.0086994965871177,
+      "quality_utility": 102.72277399076124,
+      "latency_area": 141.52622709999915,
+      "variation": 17.606367736952738
+    },
+    {
+      "policy": "improved",
+      "family": "rtt_variation",
+      "sessions": 6,
+      "qoe_per_wall_s": 0.2044389837374935,
+      "stall_s": 15.005424425517882,
+      "startup_s": 2.2903713757817945,
+      "played_bitrate_bps": 2454278.6055378253,
+      "switches": 20.833333333333332,
+      "mean_live_latency_s": 4.436877372979598,
+      "p95_live_latency_s": 5.7715,
+      "played_media_s": 117.09012118975322,
+      "skipped_media_s": 1.3341588179270427,
+      "quality_utility": 108.58162972107,
+      "latency_area": 170.94465130000063,
+      "variation": 15.43942596763551
+    },
+    {
+      "policy": "improved",
+      "family": "handover_interruption",
+      "sessions": 6,
+      "qoe_per_wall_s": 0.006157555237617888,
+      "stall_s": 21.236613808008514,
+      "startup_s": 2.2288325266527633,
+      "played_bitrate_bps": 2835090.9357365426,
+      "switches": 20.166666666666668,
+      "mean_live_latency_s": 4.505566527292132,
+      "p95_live_latency_s": 6.603666666666668,
+      "played_media_s": 109.62094934781392,
+      "skipped_media_s": 8.7406214872996,
+      "quality_utility": 111.11022736622367,
+      "latency_area": 179.3638414500023,
+      "variation": 17.519198695009845
+    },
+    {
+      "policy": "improved",
+      "family": "post_handover_recovery",
+      "sessions": 6,
+      "qoe_per_wall_s": -0.1606426712094415,
+      "stall_s": 23.45233753470067,
+      "startup_s": 2.262030540275077,
+      "played_bitrate_bps": 2702887.92658009,
+      "switches": 17.5,
+      "mean_live_latency_s": 5.150734499842315,
+      "p95_live_latency_s": 8.228666666666667,
+      "played_media_s": 106.80779961744945,
+      "skipped_media_s": 12.021379868189493,
+      "quality_utility": 105.88444478973923,
+      "latency_area": 255.85990623331267,
+      "variation": 11.683902569811508
+    },
+    {
+      "policy": "guard_only",
+      "family": "steady_bandwidth",
+      "sessions": 6,
+      "qoe_per_wall_s": 0.7327006542944688,
+      "stall_s": 16.498465658353247,
+      "startup_s": 0.8481625271464388,
+      "played_bitrate_bps": 5013474.553797253,
+      "switches": 2.0,
+      "mean_live_latency_s": 3.915490956188412,
+      "p95_live_latency_s": 4.204666666666667,
+      "played_media_s": 118.69879043102264,
+      "skipped_media_s": 0.0,
+      "quality_utility": 166.26513208311218,
+      "latency_area": 109.5862258333329,
+      "variation": 1.7346010553881064
+    },
+    {
+      "policy": "guard_only",
+      "family": "bandwidth_variation",
+      "sessions": 6,
+      "qoe_per_wall_s": -0.258260795671571,
+      "stall_s": 28.068163004564237,
+      "startup_s": 0.8398021986645957,
+      "played_bitrate_bps": 2975819.1771504055,
+      "switches": 5.666666666666667,
+      "mean_live_latency_s": 4.528999201659307,
+      "p95_live_latency_s": 9.7795,
+      "played_media_s": 100.55454615751903,
+      "skipped_media_s": 19.137223958969116,
+      "quality_utility": 102.14843513467399,
+      "latency_area": 183.02480091665362,
+      "variation": 5.771787203770258
+    },
+    {
+      "policy": "guard_only",
+      "family": "rtt_variation",
+      "sessions": 6,
+      "qoe_per_wall_s": 0.3443731516746487,
+      "stall_s": 15.45023512456631,
+      "startup_s": 2.2888317057949803,
+      "played_bitrate_bps": 2916138.008604806,
+      "switches": 5.833333333333333,
+      "mean_live_latency_s": 4.348341385921116,
+      "p95_live_latency_s": 5.592833333333334,
+      "played_media_s": 117.69653566678365,
+      "skipped_media_s": 0.6816903352737427,
+      "quality_utility": 122.40621920432375,
+      "latency_area": 160.5137553333328,
+      "variation": 3.106666437082256
+    },
+    {
+      "policy": "guard_only",
+      "family": "handover_interruption",
+      "sessions": 6,
+      "qoe_per_wall_s": 0.18304801485512176,
+      "stall_s": 19.083689262085816,
+      "startup_s": 2.2285049706126254,
+      "played_bitrate_bps": 3069261.415067227,
+      "switches": 4.666666666666667,
+      "mean_live_latency_s": 4.782121615972737,
+      "p95_live_latency_s": 7.2215,
+      "played_media_s": 113.63289252916972,
+      "skipped_media_s": 4.364681680997212,
+      "quality_utility": 122.62213556899104,
+      "latency_area": 212.34932984998855,
+      "variation": 2.8450276607752993
+    },
+    {
+      "policy": "guard_only",
+      "family": "post_handover_recovery",
+      "sessions": 6,
+      "qoe_per_wall_s": -0.045016473667785877,
+      "stall_s": 22.786538597835484,
+      "startup_s": 2.2629797893514234,
+      "played_bitrate_bps": 2910216.371573722,
+      "switches": 4.833333333333333,
+      "mean_live_latency_s": 5.014219708946594,
+      "p95_live_latency_s": 8.625166666666667,
+      "played_media_s": 108.89272320270538,
+      "skipped_media_s": 9.68915847937266,
+      "quality_utility": 112.82884553364285,
+      "latency_area": 239.8074292833179,
+      "variation": 2.806532435782552
+    },
+    {
+      "policy": "throughput",
+      "family": "steady_bandwidth",
+      "sessions": 4,
+      "qoe_per_wall_s": 0.5900882954955413,
+      "stall_s": 2.980449097766943,
+      "startup_s": 0.8411913415901363,
+      "played_bitrate_bps": 1364570.1931035765,
+      "switches": 18.75,
+      "mean_live_latency_s": 3.198153676486249,
+      "p95_live_latency_s": 4.229,
+      "played_media_s": 119.71983748674393,
+      "skipped_media_s": 0.0,
+      "quality_utility": 88.23013170649736,
+      "latency_area": 23.721689174999074,
+      "variation": 7.549399720902813
+    },
+    {
+      "policy": "throughput",
+      "family": "bandwidth_variation",
+      "sessions": 4,
+      "qoe_per_wall_s": 0.05739937769274426,
+      "stall_s": 12.181643730123874,
+      "startup_s": 0.8395845556277781,
+      "played_bitrate_bps": 1166672.57082879,
+      "switches": 21.25,
+      "mean_live_latency_s": 3.690275252453222,
+      "p95_live_latency_s": 6.474500000000001,
+      "played_media_s": 112.70037001371384,
+      "skipped_media_s": 7.012937963008881,
+      "quality_utility": 68.31690302087296,
+      "latency_area": 82.63407009999331,
+      "variation": 11.990539688746344
+    },
+    {
+      "policy": "throughput",
+      "family": "rtt_variation",
+      "sessions": 4,
+      "qoe_per_wall_s": 0.013725068305885851,
+      "stall_s": 9.180208484370615,
+      "startup_s": 2.291021571634337,
+      "played_bitrate_bps": 879493.6344177905,
+      "switches": 12.75,
+      "mean_live_latency_s": 3.642259775235628,
+      "p95_live_latency_s": 4.8252500000000005,
+      "played_media_s": 118.76900345087051,
+      "skipped_media_s": 0.0,
+      "quality_utility": 50.352166752241416,
+      "latency_area": 76.3681934250007,
+      "variation": 6.85342225647463
+    },
+    {
+      "policy": "throughput",
+      "family": "handover_interruption",
+      "sessions": 4,
+      "qoe_per_wall_s": 0.08737568295765777,
+      "stall_s": 8.5807106857605,
+      "startup_s": 2.2236496959701184,
+      "played_bitrate_bps": 973257.7870858016,
+      "switches": 12.75,
+      "mean_live_latency_s": 3.7329843096410724,
+      "p95_live_latency_s": 5.23425,
+      "played_media_s": 118.96155959367752,
+      "skipped_media_s": 0.0,
+      "quality_utility": 57.80883264738911,
+      "latency_area": 87.34704284999765,
+      "variation": 6.795983603967484
+    },
+    {
+      "policy": "throughput",
+      "family": "post_handover_recovery",
+      "sessions": 4,
+      "qoe_per_wall_s": -0.2260506036784259,
+      "stall_s": 14.009400149898088,
+      "startup_s": 2.2773495103809984,
+      "played_bitrate_bps": 862397.7985909871,
+      "switches": 17.25,
+      "mean_live_latency_s": 4.078875785521233,
+      "p95_live_latency_s": 6.029999999999999,
+      "played_media_s": 112.90964770317078,
+      "skipped_media_s": 6.0925532579422,
+      "quality_utility": 46.52495288294168,
+      "latency_area": 128.3181504999969,
+      "variation": 8.37625788583244
+    },
+    {
+      "policy": "bola",
+      "family": "steady_bandwidth",
+      "sessions": 4,
+      "qoe_per_wall_s": 0.1592235988342654,
+      "stall_s": 1.8029808248414922,
+      "startup_s": 0.8434086094871163,
+      "played_bitrate_bps": 728538.9082581922,
+      "switches": 21.5,
+      "mean_live_latency_s": 3.1847638648448653,
+      "p95_live_latency_s": 4.22325,
+      "played_media_s": 119.7288321852684,
+      "skipped_media_s": 0.0,
+      "quality_utility": 34.442667001174755,
+      "latency_area": 22.117875500000082,
+      "variation": 16.879169111000422
+    },
+    {
+      "policy": "bola",
+      "family": "bandwidth_variation",
+      "sessions": 4,
+      "qoe_per_wall_s": 0.018462873661181836,
+      "stall_s": 4.152449817092444,
+      "startup_s": 0.8334605221785605,
+      "played_bitrate_bps": 659612.6728610337,
+      "switches": 14.75,
+      "mean_live_latency_s": 3.2564651197449224,
+      "p95_live_latency_s": 4.25525,
+      "played_media_s": 119.72822779417038,
+      "skipped_media_s": 0.0,
+      "quality_utility": 26.327891642766133,
+      "latency_area": 30.700741299998512,
+      "variation": 11.995455759185825
+    },
+    {
+      "policy": "bola",
+      "family": "rtt_variation",
+      "sessions": 4,
+      "qoe_per_wall_s": -0.1257493058496958,
+      "stall_s": 7.533081083481807,
+      "startup_s": 2.2880299924835565,
+      "played_bitrate_bps": 614977.4995485877,
+      "switches": 10.25,
+      "mean_live_latency_s": 3.518422189342959,
+      "p95_live_latency_s": 4.74575,
+      "played_media_s": 118.97113102674484,
+      "skipped_media_s": 0.0,
+      "quality_utility": 25.898178627348727,
+      "latency_area": 61.635718750002525,
+      "variation": 8.02250219793464
+    },
+    {
+      "policy": "bola",
+      "family": "handover_interruption",
+      "sessions": 4,
+      "qoe_per_wall_s": -0.1507267799665283,
+      "stall_s": 7.640419635077077,
+      "startup_s": 2.2250302663799375,
+      "played_bitrate_bps": 605507.963781072,
+      "switches": 11.25,
+      "mean_live_latency_s": 3.671066478442164,
+      "p95_live_latency_s": 5.199999999999999,
+      "played_media_s": 118.9620897769928,
+      "skipped_media_s": 0.0,
+      "quality_utility": 25.167030177009714,
+      "latency_area": 79.98851139999951,
+      "variation": 8.238263752273477
+    },
+    {
+      "policy": "bola",
+      "family": "post_handover_recovery",
+      "sessions": 4,
+      "qoe_per_wall_s": -0.32284538976433125,
+      "stall_s": 11.33218914446882,
+      "startup_s": 2.260097260570154,
+      "played_bitrate_bps": 594853.288625603,
+      "switches": 11.5,
+      "mean_live_latency_s": 4.150105842504817,
+      "p95_live_latency_s": 7.007249999999999,
+      "played_media_s": 116.60780322551727,
+      "skipped_media_s": 2.555675745010376,
+      "quality_utility": 24.902469488325842,
+      "latency_area": 136.92238904999954,
+      "variation": 7.905001290623208
+    },
+    {
+      "policy": "conventional",
+      "family": "steady_bandwidth",
+      "sessions": 4,
+      "qoe_per_wall_s": 0.7117185976418124,
+      "stall_s": 1.6713990051848808,
+      "startup_s": 0.6650007175449282,
+      "played_bitrate_bps": 1469085.5843144208,
+      "switches": 3.0,
+      "mean_live_latency_s": 3.0821653424783624,
+      "p95_live_latency_s": 3.1822500000000002,
+      "played_media_s": 119.717888712883,
+      "skipped_media_s": 0.0,
+      "quality_utility": 94.24160645538343,
+      "latency_area": 9.835423750000965,
+      "variation": 1.6094379124341003
+    },
+    {
+      "policy": "conventional",
+      "family": "bandwidth_variation",
+      "sessions": 4,
+      "qoe_per_wall_s": 0.08814540102946522,
+      "stall_s": 13.876966559498625,
+      "startup_s": 0.6675288185104727,
+      "played_bitrate_bps": 1322151.6391997642,
+      "switches": 7.75,
+      "mean_live_latency_s": 3.8199294502380026,
+      "p95_live_latency_s": 7.686,
+      "played_media_s": 111.1575517654419,
+      "skipped_media_s": 8.466843247413635,
+      "quality_utility": 78.01841662611625,
+      "latency_area": 98.14830842500669,
+      "variation": 4.828313737302301
+    },
+    {
+      "policy": "conventional",
+      "family": "rtt_variation",
+      "sessions": 4,
+      "qoe_per_wall_s": 0.24907532235528923,
+      "stall_s": 9.733884203625417,
+      "startup_s": 1.9716574619319291,
+      "played_bitrate_bps": 1280709.8670272718,
+      "switches": 4.5,
+      "mean_live_latency_s": 3.9247307069768906,
+      "p95_live_latency_s": 5.29425,
+      "played_media_s": 117.77567934989929,
+      "skipped_media_s": 1.0275972485542297,
+      "quality_utility": 82.51322075938857,
+      "latency_area": 109.86141057500043,
+      "variation": 2.4141568686511503
+    },
+    {
+      "policy": "conventional",
+      "family": "handover_interruption",
+      "sessions": 4,
+      "qoe_per_wall_s": 0.2488957941383604,
+      "stall_s": 8.483619502309509,
+      "startup_s": 1.912782486822456,
+      "played_bitrate_bps": 1179597.587660899,
+      "switches": 4.25,
+      "mean_live_latency_s": 3.6520985686618355,
+      "p95_live_latency_s": 4.9624999999999995,
+      "played_media_s": 118.75344502925873,
+      "skipped_media_s": 0.0,
+      "quality_utility": 74.11166567766932,
+      "latency_area": 77.70170965000025,
+      "variation": 2.0706889083708173
+    },
+    {
+      "policy": "conventional",
+      "family": "post_handover_recovery",
+      "sessions": 4,
+      "qoe_per_wall_s": -0.10232665706521026,
+      "stall_s": 13.998837982754956,
+      "startup_s": 1.9401850264538079,
+      "played_bitrate_bps": 1007840.2460608924,
+      "switches": 5.75,
+      "mean_live_latency_s": 4.077595539906375,
+      "p95_live_latency_s": 6.482749999999999,
+      "played_media_s": 112.89939379692078,
+      "skipped_media_s": 6.091706216335297,
+      "quality_utility": 59.48114549448964,
+      "latency_area": 128.1816159500119,
+      "variation": 3.3658224910937307
+    },
+    {
+      "policy": "leo",
+      "family": "steady_bandwidth",
+      "sessions": 4,
+      "qoe_per_wall_s": 0.7040814428123539,
+      "stall_s": 1.8275597502652974,
+      "startup_s": 0.6698140569683164,
+      "played_bitrate_bps": 1468121.0942801794,
+      "switches": 2.0,
+      "mean_live_latency_s": 3.082486280418926,
+      "p95_live_latency_s": 3.18725,
+      "played_media_s": 119.69921326637268,
+      "skipped_media_s": 0.0,
+      "quality_utility": 93.95847065720395,
+      "latency_area": 9.874033975000657,
+      "variation": 1.6094379124341003
+    },
+    {
+      "policy": "leo",
+      "family": "bandwidth_variation",
+      "sessions": 4,
+      "qoe_per_wall_s": 0.14116377142094966,
+      "stall_s": 12.003814306595926,
+      "startup_s": 0.6663110540360212,
+      "played_bitrate_bps": 1303479.3867761241,
+      "switches": 7.75,
+      "mean_live_latency_s": 3.922397848490132,
+      "p95_live_latency_s": 7.22625,
+      "played_media_s": 114.09853965044022,
+      "skipped_media_s": 5.577042043209076,
+      "quality_utility": 78.32259533325296,
+      "latency_area": 110.41366582499305,
+      "variation": 5.521460917862246
+    },
+    {
+      "policy": "leo",
+      "family": "rtt_variation",
+      "sessions": 4,
+      "qoe_per_wall_s": 0.2937043724581682,
+      "stall_s": 8.676892976905744,
+      "startup_s": 1.9708257680889218,
+      "played_bitrate_bps": 1252634.7849150496,
+      "switches": 4.5,
+      "mean_live_latency_s": 3.7250680405014336,
+      "p95_live_latency_s": 4.73475,
+      "played_media_s": 118.89120590686798,
+      "skipped_media_s": 0.0,
+      "quality_utility": 81.14750063650436,
+      "latency_area": 86.15921517499744,
+      "variation": 2.0086917605429857
+    },
+    {
+      "policy": "leo",
+      "family": "handover_interruption",
+      "sessions": 4,
+      "qoe_per_wall_s": 0.2045376197008378,
+      "stall_s": 9.068122044540349,
+      "startup_s": 1.9156747804656626,
+      "played_bitrate_bps": 1165910.6564160646,
+      "switches": 5.0,
+      "mean_live_latency_s": 3.7584210647712566,
+      "p95_live_latency_s": 5.23975,
+      "played_media_s": 118.54861980676651,
+      "skipped_media_s": 0.0,
+      "quality_utility": 72.5363447317772,
+      "latency_area": 90.3739500750012,
+      "variation": 2.531939904307534
+    },
+    {
+      "policy": "leo",
+      "family": "post_handover_recovery",
+      "sessions": 4,
+      "qoe_per_wall_s": -0.14385229630031643,
+      "stall_s": 14.101156506944351,
+      "startup_s": 1.9415027524009347,
+      "played_bitrate_bps": 963559.0465708107,
+      "switches": 5.75,
+      "mean_live_latency_s": 4.045951504833374,
+      "p95_live_latency_s": 6.5175,
+      "played_media_s": 112.95600539445877,
+      "skipped_media_s": 6.08852231502533,
+      "quality_utility": 54.593262840290706,
+      "latency_area": 124.41906544998952,
+      "variation": 3.568555045147812
+    }
+  ],
+  "raw_replay": [
+    {
+      "policy": "original",
+      "sessions": 3,
+      "qoe_per_wall_s": -4.405902113967067,
+      "stall_s": 109.11698570090891,
+      "startup_s": 66.29840464667977,
+      "played_bitrate_bps": 3957856.0317673204,
+      "switches": 0.3333333333333333,
+      "mean_live_latency_s": 19.540152527229495,
+      "p95_live_latency_s": 36.245,
+      "played_media_s": 4.286346991856893,
+      "skipped_media_s": 100.43398634592693,
+      "quality_utility": 6.344038148352078,
+      "latency_area": 2965.7391844000817,
+      "variation": 0.6323733282952938
+    },
+    {
+      "policy": "improved",
+      "sessions": 3,
+      "qoe_per_wall_s": -1.4581963539848892,
+      "stall_s": 59.975612986299176,
+      "startup_s": 3.3188583960185447,
+      "played_bitrate_bps": 790202.3523898078,
+      "switches": 22.0,
+      "mean_live_latency_s": 6.699241634601708,
+      "p95_live_latency_s": 9.381666666666666,
+      "played_media_s": 127.73506005605061,
+      "skipped_media_s": 46.96525470415751,
+      "quality_utility": 51.36296353721186,
+      "latency_area": 663.2812938666349,
+      "variation": 14.424433892118984
+    },
+    {
+      "policy": "guard_only",
+      "sessions": 3,
+      "qoe_per_wall_s": -1.2607747177983717,
+      "stall_s": 53.35545419364852,
+      "startup_s": 3.279201350276669,
+      "played_bitrate_bps": 806626.8890510319,
+      "switches": 16.0,
+      "mean_live_latency_s": 6.650021784993398,
+      "p95_live_latency_s": 9.976,
+      "played_media_s": 135.29315996170044,
+      "skipped_media_s": 40.670437018076576,
+      "quality_utility": 57.84300879758251,
+      "latency_area": 654.4687007999805,
+      "variation": 8.896252276892495
+    }
+  ],
+  "sensitivity": [
+    {
+      "coefficient": "stall",
+      "factor": 0.5,
+      "qoe": {
+        "original": -0.2522464543165431,
+        "improved": 0.48161133396597444,
+        "guard_only": 0.5309161591867999,
+        "throughput": 0.2609082499528629,
+        "bola": 0.023853018922337644,
+        "conventional": 0.39828319320800715,
+        "leo": 0.39215187052025396
+      },
+      "differences": {
+        "original": 0.0,
+        "improved": 0.7338577882825175,
+        "guard_only": 0.7831626135033429,
+        "throughput": 0.513154704269406,
+        "bola": 0.27609947323888073,
+        "conventional": 0.6505296475245502,
+        "leo": 0.644398324836797
+      }
+    },
+    {
+      "coefficient": "stall",
+      "factor": 2,
+      "qoe": {
+        "original": -2.739235118262097,
+        "improved": -0.3919577933981119,
+        "guard_only": -0.48772558748267036,
+        "throughput": -0.20829380744168366,
+        "bola": -0.3006870396957401,
+        "conventional": -0.07926131155618407,
+        "leo": -0.06452279498531219
+      },
+      "differences": {
+        "original": 0.0,
+        "improved": 2.347277324863985,
+        "guard_only": 2.2515095307794266,
+        "throughput": 2.5309413108204133,
+        "bola": 2.438548078566357,
+        "conventional": 2.6599738067059127,
+        "leo": 2.674712323276785
+      }
+    },
+    {
+      "coefficient": "variation",
+      "factor": 0.5,
+      "qoe": {
+        "original": -1.0740559511585224,
+        "improved": 0.21209579811187645,
+        "guard_only": 0.19543415865842406,
+        "throughput": 0.11489622546390435,
+        "bola": -0.07107007932418519,
+        "conventional": 0.2426730423431119,
+        "leo": 0.24373616396283976
+      },
+      "differences": {
+        "original": 0.0,
+        "improved": 1.2861517492703989,
+        "guard_only": 1.2694901098169464,
+        "throughput": 1.1889521766224267,
+        "bola": 1.0029858718343372,
+        "conventional": 1.3167289935016342,
+        "leo": 1.317792115121362
+      }
+    },
+    {
+      "coefficient": "variation",
+      "factor": 2,
+      "qoe": {
+        "original": -1.095616124578138,
+        "improved": 0.14707327831008404,
+        "guard_only": 0.18323841357408135,
+        "throughput": 0.08373024153623329,
+        "bola": -0.11084084320269452,
+        "conventional": 0.2319589901736064,
+        "leo": 0.23230861812951648
+      },
+      "differences": {
+        "original": 0.0,
+        "improved": 1.242689402888222,
+        "guard_only": 1.2788545381522194,
+        "throughput": 1.1793463661143713,
+        "bola": 0.9847752813754435,
+        "conventional": 1.3275751147517443,
+        "leo": 1.3279247427076544
+      }
+    },
+    {
+      "coefficient": "latency",
+      "factor": 0.5,
+      "qoe": {
+        "original": -0.9117975554525101,
+        "improved": 0.25858476872145253,
+        "guard_only": 0.26679198573696705,
+        "throughput": 0.13769799631877105,
+        "bola": -0.056719353844960664,
+        "conventional": 0.2744048408555365,
+        "leo": 0.2750225265180485
+      },
+      "differences": {
+        "original": 0.0,
+        "improved": 1.1703823241739626,
+        "guard_only": 1.1785895411894771,
+        "throughput": 1.0494955517712812,
+        "bola": 0.8550782016075494,
+        "conventional": 1.1862023963080466,
+        "leo": 1.1868200819705585
+      }
+    },
+    {
+      "coefficient": "latency",
+      "factor": 2,
+      "qoe": {
+        "original": -1.420132915990163,
+        "improved": 0.054095337090931804,
+        "guard_only": 0.040522759416995374,
+        "throughput": 0.03812669982649991,
+        "bola": -0.13954229416114355,
+        "conventional": 0.16849539314875717,
+        "leo": 0.16973589301909883
+      },
+      "differences": {
+        "original": 0.0,
+        "improved": 1.4742282530810948,
+        "guard_only": 1.4606556754071585,
+        "throughput": 1.458259615816663,
+        "bola": 1.2805906218290195,
+        "conventional": 1.5886283091389202,
+        "leo": 1.5898688090092619
+      }
+    }
+  ],
+  "worst_improved_case": {
+    "family": "handover_interruption",
+    "case_id": "test-handover_interruption-6131",
+    "difference": -0.06006576462085467,
+    "paired_repeats": 3
+  },
+  "uncertainty": "Keep10 cases fixed; resample paired browser repeats within each case for conditional95% repeatability intervals. Related windows are not resampled as independent recordings. Raw case/source effects remain descriptive; no Starlink population interval.",
+  "ledger_sha256": "b9b461febecedf68443e7beae4c7192986607544be897584826bdd7859ea6188",
+  "scope": "Common actually-played QoE on fixed synthetic-capacity/outage cases with two measured RTT recordings; raw repository replay reported separately"
+}

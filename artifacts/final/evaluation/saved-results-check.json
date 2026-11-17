@@ -1,7 +1,7 @@
 {
   "status": "PASS",
-  "verified_sessions": 112,
-  "inventory_complete": false,
+  "verified_sessions": 179,
+  "inventory_complete": true,
   "freeze_sha256": "c6e0730ba18c5515eabe05161594ade20d7f2a4e62ba127ef264aab71aaa1350",
   "checks": [
     "exact inventory",
@@ -1133,6 +1133,676 @@
       "max_transition_error_s": 0.013695240020751953,
       "raw_replay": false,
       "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrBola-20261117T142508-6f0078",
+      "start_phase_error_s": 0.15392398834228516,
+      "actual_player_start_phase_s": 0.12899994850158691,
+      "verified_transitions": 117,
+      "max_transition_error_s": 0.013514041900634766,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrThroughput-20261117T142808-7eb6bf",
+      "start_phase_error_s": 0.17419791221618652,
+      "actual_player_start_phase_s": 0.1530001163482666,
+      "verified_transitions": 117,
+      "max_transition_error_s": 0.013312578201293945,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMAB-20261117T143108-9fbdc2",
+      "start_phase_error_s": 0.19051098823547363,
+      "actual_player_start_phase_s": 0.16100001335144043,
+      "verified_transitions": 117,
+      "max_transition_error_s": 0.013214349746704102,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T143408-6fb49e",
+      "start_phase_error_s": 0.16247797012329102,
+      "actual_player_start_phase_s": 0.1359999179840088,
+      "verified_transitions": 117,
+      "max_transition_error_s": 0.013548851013183594,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrAnjanRL-20261117T143708-404491",
+      "start_phase_error_s": 0.18146109580993652,
+      "actual_player_start_phase_s": 0.16100001335144043,
+      "verified_transitions": 117,
+      "max_transition_error_s": 0.013302087783813477,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T144008-267fbf",
+      "start_phase_error_s": 0.15998506546020508,
+      "actual_player_start_phase_s": 0.13299989700317383,
+      "verified_transitions": 117,
+      "max_transition_error_s": 0.013117551803588867,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrAnjanRL-20261117T144308-7a0195",
+      "start_phase_error_s": 0.13825392723083496,
+      "actual_player_start_phase_s": 0.11299991607666016,
+      "verified_transitions": 117,
+      "max_transition_error_s": 0.01430654525756836,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrThroughput-20261117T144608-84bcaa",
+      "start_phase_error_s": 0.15934491157531738,
+      "actual_player_start_phase_s": 0.13299989700317383,
+      "verified_transitions": 114,
+      "max_transition_error_s": 0.013236522674560547,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMAB-20261117T144907-56b6a3",
+      "start_phase_error_s": 0.20324206352233887,
+      "actual_player_start_phase_s": 0.16000008583068848,
+      "verified_transitions": 114,
+      "max_transition_error_s": 0.014085531234741211,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T145208-0f3d14",
+      "start_phase_error_s": 0.18379998207092285,
+      "actual_player_start_phase_s": 0.15599989891052246,
+      "verified_transitions": 114,
+      "max_transition_error_s": 0.013293027877807617,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrAnjanRL-20261117T145508-3f7f93",
+      "start_phase_error_s": 0.16043710708618164,
+      "actual_player_start_phase_s": 0.1359999179840088,
+      "verified_transitions": 114,
+      "max_transition_error_s": 0.015180349349975586,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T145809-199e6b",
+      "start_phase_error_s": 0.1872859001159668,
+      "actual_player_start_phase_s": 0.14499998092651367,
+      "verified_transitions": 114,
+      "max_transition_error_s": 0.013440608978271484,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrAnjanRL-20261117T150108-c94adc",
+      "start_phase_error_s": 0.1602458953857422,
+      "actual_player_start_phase_s": 0.12400007247924805,
+      "verified_transitions": 114,
+      "max_transition_error_s": 0.015098094940185547,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrBola-20261117T150408-076860",
+      "start_phase_error_s": 0.19439005851745605,
+      "actual_player_start_phase_s": 0.16000008583068848,
+      "verified_transitions": 114,
+      "max_transition_error_s": 0.014062881469726562,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMAB-20261117T150707-5160eb",
+      "start_phase_error_s": 0.17228198051452637,
+      "actual_player_start_phase_s": 0.1510000228881836,
+      "verified_transitions": 116,
+      "max_transition_error_s": 0.013518333435058594,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T151008-992809",
+      "start_phase_error_s": 0.18671607971191406,
+      "actual_player_start_phase_s": 0.1510000228881836,
+      "verified_transitions": 116,
+      "max_transition_error_s": 0.01230931282043457,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrAnjanRL-20261117T151308-66ea11",
+      "start_phase_error_s": 0.16559910774230957,
+      "actual_player_start_phase_s": 0.14700007438659668,
+      "verified_transitions": 116,
+      "max_transition_error_s": 0.01464986801147461,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T151608-7e5ab5",
+      "start_phase_error_s": 0.16118693351745605,
+      "actual_player_start_phase_s": 0.13899993896484375,
+      "verified_transitions": 116,
+      "max_transition_error_s": 0.013147354125976562,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrAnjanRL-20261117T151908-bb1e5e",
+      "start_phase_error_s": 0.15024304389953613,
+      "actual_player_start_phase_s": 0.13100004196166992,
+      "verified_transitions": 116,
+      "max_transition_error_s": 0.014278888702392578,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrBola-20261117T152208-fc42ac",
+      "start_phase_error_s": 0.1722888946533203,
+      "actual_player_start_phase_s": 0.1510000228881836,
+      "verified_transitions": 116,
+      "max_transition_error_s": 0.015480518341064453,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrThroughput-20261117T152508-f0932b",
+      "start_phase_error_s": 0.23050689697265625,
+      "actual_player_start_phase_s": 0.17199993133544922,
+      "verified_transitions": 116,
+      "max_transition_error_s": 0.014763116836547852,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T152808-8de183",
+      "start_phase_error_s": 0.18178606033325195,
+      "actual_player_start_phase_s": 0.13899993896484375,
+      "verified_transitions": 114,
+      "max_transition_error_s": 0.015271663665771484,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrAnjanRL-20261117T153108-c682d9",
+      "start_phase_error_s": 0.18282198905944824,
+      "actual_player_start_phase_s": 0.14899992942810059,
+      "verified_transitions": 114,
+      "max_transition_error_s": 0.015738725662231445,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T153409-3114c1",
+      "start_phase_error_s": 0.20829010009765625,
+      "actual_player_start_phase_s": 0.16499996185302734,
+      "verified_transitions": 114,
+      "max_transition_error_s": 0.013789653778076172,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrAnjanRL-20261117T153709-07a78c",
+      "start_phase_error_s": 0.15355992317199707,
+      "actual_player_start_phase_s": 0.12800002098083496,
+      "verified_transitions": 114,
+      "max_transition_error_s": 0.01370549201965332,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrBola-20261117T154008-b4e421",
+      "start_phase_error_s": 0.1438279151916504,
+      "actual_player_start_phase_s": 0.12199997901916504,
+      "verified_transitions": 114,
+      "max_transition_error_s": 0.014589071273803711,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrThroughput-20261117T154308-7a6db4",
+      "start_phase_error_s": 0.18278002738952637,
+      "actual_player_start_phase_s": 0.15700006484985352,
+      "verified_transitions": 114,
+      "max_transition_error_s": 0.014635086059570312,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMAB-20261117T154608-dead21",
+      "start_phase_error_s": 0.2023470401763916,
+      "actual_player_start_phase_s": 0.16300010681152344,
+      "verified_transitions": 114,
+      "max_transition_error_s": 0.014500856399536133,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T154908-7e7fd9",
+      "start_phase_error_s": 0.23667192459106445,
+      "actual_player_start_phase_s": 0.1659998893737793,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMAB-20261117T155208-d767e3",
+      "start_phase_error_s": 0.22620892524719238,
+      "actual_player_start_phase_s": 0.18199992179870605,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T155508-689231",
+      "start_phase_error_s": 0.23132801055908203,
+      "actual_player_start_phase_s": 0.1659998893737793,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMAB-20261117T155808-a08385",
+      "start_phase_error_s": 0.21594905853271484,
+      "actual_player_start_phase_s": 0.15899991989135742,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T160109-6c829d",
+      "start_phase_error_s": 0.2525320053100586,
+      "actual_player_start_phase_s": 0.18600010871887207,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T160409-9c66ca",
+      "start_phase_error_s": 0.18056106567382812,
+      "actual_player_start_phase_s": 0.14700007438659668,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T160708-9b7a9a",
+      "start_phase_error_s": 0.14041590690612793,
+      "actual_player_start_phase_s": 0.12100005149841309,
+      "verified_transitions": 2,
+      "max_transition_error_s": 0.014657258987426758,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T161008-f069bf",
+      "start_phase_error_s": 0.19039011001586914,
+      "actual_player_start_phase_s": 0.1549999713897705,
+      "verified_transitions": 2,
+      "max_transition_error_s": 0.012210369110107422,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMAB-20261117T161308-4731a0",
+      "start_phase_error_s": 0.17282605171203613,
+      "actual_player_start_phase_s": 0.14800000190734863,
+      "verified_transitions": 2,
+      "max_transition_error_s": 0.005464315414428711,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T161608-15398e",
+      "start_phase_error_s": 0.1734309196472168,
+      "actual_player_start_phase_s": 0.14700007438659668,
+      "verified_transitions": 2,
+      "max_transition_error_s": 0.013018369674682617,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMAB-20261117T161908-0ad77a",
+      "start_phase_error_s": 0.1413719654083252,
+      "actual_player_start_phase_s": 0.11700010299682617,
+      "verified_transitions": 2,
+      "max_transition_error_s": 0.013515949249267578,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T162208-cc0ad4",
+      "start_phase_error_s": 0.1433429718017578,
+      "actual_player_start_phase_s": 0.11599993705749512,
+      "verified_transitions": 2,
+      "max_transition_error_s": 0.009821653366088867,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMAB-20261117T162508-7de286",
+      "start_phase_error_s": 0.14937806129455566,
+      "actual_player_start_phase_s": 0.127000093460083,
+      "verified_transitions": 116,
+      "max_transition_error_s": 0.01255178451538086,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T162808-54bf12",
+      "start_phase_error_s": 0.16983509063720703,
+      "actual_player_start_phase_s": 0.1510000228881836,
+      "verified_transitions": 116,
+      "max_transition_error_s": 0.013410568237304688,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T163108-6abfb2",
+      "start_phase_error_s": 0.17201590538024902,
+      "actual_player_start_phase_s": 0.1510000228881836,
+      "verified_transitions": 116,
+      "max_transition_error_s": 0.012387752532958984,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T163408-b0478d",
+      "start_phase_error_s": 0.2000579833984375,
+      "actual_player_start_phase_s": 0.16000008583068848,
+      "verified_transitions": 117,
+      "max_transition_error_s": 0.01269078254699707,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T163708-b685a3",
+      "start_phase_error_s": 0.16818690299987793,
+      "actual_player_start_phase_s": 0.14700007438659668,
+      "verified_transitions": 117,
+      "max_transition_error_s": 0.012953042984008789,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMAB-20261117T164008-fb49af",
+      "start_phase_error_s": 0.17643189430236816,
+      "actual_player_start_phase_s": 0.15199995040893555,
+      "verified_transitions": 117,
+      "max_transition_error_s": 0.013009309768676758,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T164308-c35156",
+      "start_phase_error_s": 0.18096590042114258,
+      "actual_player_start_phase_s": 0.15199995040893555,
+      "verified_transitions": 117,
+      "max_transition_error_s": 0.014543294906616211,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMAB-20261117T164608-4e64ca",
+      "start_phase_error_s": 0.17226195335388184,
+      "actual_player_start_phase_s": 0.1510000228881836,
+      "verified_transitions": 117,
+      "max_transition_error_s": 0.012439966201782227,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T164908-d45a02",
+      "start_phase_error_s": 0.18377208709716797,
+      "actual_player_start_phase_s": 0.1530001163482666,
+      "verified_transitions": 117,
+      "max_transition_error_s": 0.014000892639160156,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMAB-20261117T165208-c81c66",
+      "start_phase_error_s": 0.19122004508972168,
+      "actual_player_start_phase_s": 0.1530001163482666,
+      "verified_transitions": 114,
+      "max_transition_error_s": 0.01460719108581543,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T165508-bd3a2c",
+      "start_phase_error_s": 0.17579293251037598,
+      "actual_player_start_phase_s": 0.15199995040893555,
+      "verified_transitions": 114,
+      "max_transition_error_s": 0.01341867446899414,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T165808-2a6417",
+      "start_phase_error_s": 0.16550207138061523,
+      "actual_player_start_phase_s": 0.14700007438659668,
+      "verified_transitions": 114,
+      "max_transition_error_s": 0.012755155563354492,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T170108-8d97f2",
+      "start_phase_error_s": 0.1724100112915039,
+      "actual_player_start_phase_s": 0.1510000228881836,
+      "verified_transitions": 116,
+      "max_transition_error_s": 0.013057708740234375,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T170408-678168",
+      "start_phase_error_s": 0.13413095474243164,
+      "actual_player_start_phase_s": 0.10800004005432129,
+      "verified_transitions": 116,
+      "max_transition_error_s": 0.014705896377563477,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMAB-20261117T170708-9a50d1",
+      "start_phase_error_s": 0.1583549976348877,
+      "actual_player_start_phase_s": 0.12100005149841309,
+      "verified_transitions": 116,
+      "max_transition_error_s": 0.01626896858215332,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T171008-0e5d77",
+      "start_phase_error_s": 0.19261598587036133,
+      "actual_player_start_phase_s": 0.15599989891052246,
+      "verified_transitions": 114,
+      "max_transition_error_s": 0.01533818244934082,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMAB-20261117T171308-4e817d",
+      "start_phase_error_s": 0.1468520164489746,
+      "actual_player_start_phase_s": 0.12100005149841309,
+      "verified_transitions": 114,
+      "max_transition_error_s": 0.015365362167358398,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T171608-e16303",
+      "start_phase_error_s": 0.14467692375183105,
+      "actual_player_start_phase_s": 0.12100005149841309,
+      "verified_transitions": 114,
+      "max_transition_error_s": 0.016467571258544922,
+      "raw_replay": false,
+      "raw_source_rows_verified": 0
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMAB-20261117T171908-7dc262",
+      "start_phase_error_s": 0.18598008155822754,
+      "actual_player_start_phase_s": 0.16100001335144043,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": true,
+      "raw_source_rows_verified": 12123
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T172313-e1ace3",
+      "start_phase_error_s": 0.1828138828277588,
+      "actual_player_start_phase_s": 0.15599989891052246,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": true,
+      "raw_source_rows_verified": 11679
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T172712-dc9cd4",
+      "start_phase_error_s": 0.16054892539978027,
+      "actual_player_start_phase_s": 0.13299989700317383,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": true,
+      "raw_source_rows_verified": 11690
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T173112-1edc01",
+      "start_phase_error_s": 0.1904590129852295,
+      "actual_player_start_phase_s": 0.16700005531311035,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": true,
+      "raw_source_rows_verified": 12381
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T173514-cc9da0",
+      "start_phase_error_s": 0.17841696739196777,
+      "actual_player_start_phase_s": 0.1549999713897705,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": true,
+      "raw_source_rows_verified": 12556
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMAB-20261117T173915-88f80a",
+      "start_phase_error_s": 0.17876601219177246,
+      "actual_player_start_phase_s": 0.1549999713897705,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": true,
+      "raw_source_rows_verified": 12988
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T174316-f70f37",
+      "start_phase_error_s": 0.20323610305786133,
+      "actual_player_start_phase_s": 0.16100001335144043,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": true,
+      "raw_source_rows_verified": 12483
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMAB-20261117T174715-27513e",
+      "start_phase_error_s": 0.1723039150238037,
+      "actual_player_start_phase_s": 0.1510000228881836,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": true,
+      "raw_source_rows_verified": 12978
+    },
+    {
+      "status": "PASS",
+      "run_id": "phasea-abrCMABImproved-20261117T175116-892424",
+      "start_phase_error_s": 0.17258596420288086,
+      "actual_player_start_phase_s": 0.1510000228881836,
+      "verified_transitions": 0,
+      "max_transition_error_s": 0,
+      "raw_replay": true,
+      "raw_source_rows_verified": 12451
     }
   ],
   "decision_checks": [
@@ -2255,6 +2925,676 @@
       "neural_completed_request_links": 0,
       "accepted_cmab_updates": 60,
       "censored_or_unmatched_outcomes": 1
+    },
+    {
+      "run_id": "phasea-abrBola-20261117T142508-6f0078",
+      "policy": "bola",
+      "decisions": 0,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrThroughput-20261117T142808-7eb6bf",
+      "policy": "throughput",
+      "decisions": 0,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrCMAB-20261117T143108-9fbdc2",
+      "policy": "original",
+      "decisions": 32,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T143408-6fb49e",
+      "policy": "improved",
+      "decisions": 106,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 50,
+      "censored_or_unmatched_outcomes": 6
+    },
+    {
+      "run_id": "phasea-abrAnjanRL-20261117T143708-404491",
+      "policy": "leo",
+      "decisions": 61,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 2.86102294921875e-06,
+      "neural_completed_request_links": 60,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T144008-267fbf",
+      "policy": "guard_only",
+      "decisions": 83,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 52,
+      "censored_or_unmatched_outcomes": 3
+    },
+    {
+      "run_id": "phasea-abrAnjanRL-20261117T144308-7a0195",
+      "policy": "conventional",
+      "decisions": 61,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 2.86102294921875e-06,
+      "neural_completed_request_links": 60,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrThroughput-20261117T144608-84bcaa",
+      "policy": "throughput",
+      "decisions": 0,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrCMAB-20261117T144907-56b6a3",
+      "policy": "original",
+      "decisions": 146,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T145208-0f3d14",
+      "policy": "improved",
+      "decisions": 197,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 60,
+      "censored_or_unmatched_outcomes": 1
+    },
+    {
+      "run_id": "phasea-abrAnjanRL-20261117T145508-3f7f93",
+      "policy": "leo",
+      "decisions": 62,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 3.814697265625e-06,
+      "neural_completed_request_links": 61,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T145809-199e6b",
+      "policy": "guard_only",
+      "decisions": 119,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 60,
+      "censored_or_unmatched_outcomes": 1
+    },
+    {
+      "run_id": "phasea-abrAnjanRL-20261117T150108-c94adc",
+      "policy": "conventional",
+      "decisions": 62,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 5.7220458984375e-06,
+      "neural_completed_request_links": 61,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrBola-20261117T150408-076860",
+      "policy": "bola",
+      "decisions": 0,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrCMAB-20261117T150707-5160eb",
+      "policy": "original",
+      "decisions": 28,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T151008-992809",
+      "policy": "improved",
+      "decisions": 83,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 50,
+      "censored_or_unmatched_outcomes": 6
+    },
+    {
+      "run_id": "phasea-abrAnjanRL-20261117T151308-66ea11",
+      "policy": "leo",
+      "decisions": 58,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 2.86102294921875e-06,
+      "neural_completed_request_links": 56,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T151608-7e5ab5",
+      "policy": "guard_only",
+      "decisions": 71,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 52,
+      "censored_or_unmatched_outcomes": 5
+    },
+    {
+      "run_id": "phasea-abrAnjanRL-20261117T151908-bb1e5e",
+      "policy": "conventional",
+      "decisions": 58,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 2.86102294921875e-06,
+      "neural_completed_request_links": 56,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrBola-20261117T152208-fc42ac",
+      "policy": "bola",
+      "decisions": 0,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrThroughput-20261117T152508-f0932b",
+      "policy": "throughput",
+      "decisions": 0,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T152808-8de183",
+      "policy": "improved",
+      "decisions": 193,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 57,
+      "censored_or_unmatched_outcomes": 4
+    },
+    {
+      "run_id": "phasea-abrAnjanRL-20261117T153108-c682d9",
+      "policy": "leo",
+      "decisions": 60,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 2.86102294921875e-06,
+      "neural_completed_request_links": 58,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T153409-3114c1",
+      "policy": "guard_only",
+      "decisions": 127,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 55,
+      "censored_or_unmatched_outcomes": 2
+    },
+    {
+      "run_id": "phasea-abrAnjanRL-20261117T153709-07a78c",
+      "policy": "conventional",
+      "decisions": 60,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 4.76837158203125e-06,
+      "neural_completed_request_links": 58,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrBola-20261117T154008-b4e421",
+      "policy": "bola",
+      "decisions": 0,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrThroughput-20261117T154308-7a6db4",
+      "policy": "throughput",
+      "decisions": 0,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrCMAB-20261117T154608-dead21",
+      "policy": "original",
+      "decisions": 112,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T154908-7e7fd9",
+      "policy": "guard_only",
+      "decisions": 107,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 60,
+      "censored_or_unmatched_outcomes": 1
+    },
+    {
+      "run_id": "phasea-abrCMAB-20261117T155208-d767e3",
+      "policy": "original",
+      "decisions": 133,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T155508-689231",
+      "policy": "improved",
+      "decisions": 208,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 60,
+      "censored_or_unmatched_outcomes": 1
+    },
+    {
+      "run_id": "phasea-abrCMAB-20261117T155808-a08385",
+      "policy": "original",
+      "decisions": 133,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T160109-6c829d",
+      "policy": "improved",
+      "decisions": 205,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 60,
+      "censored_or_unmatched_outcomes": 1
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T160409-9c66ca",
+      "policy": "guard_only",
+      "decisions": 108,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 60,
+      "censored_or_unmatched_outcomes": 1
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T160708-9b7a9a",
+      "policy": "improved",
+      "decisions": 188,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 54,
+      "censored_or_unmatched_outcomes": 4
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T161008-f069bf",
+      "policy": "guard_only",
+      "decisions": 127,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 49,
+      "censored_or_unmatched_outcomes": 8
+    },
+    {
+      "run_id": "phasea-abrCMAB-20261117T161308-4731a0",
+      "policy": "original",
+      "decisions": 68,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T161608-15398e",
+      "policy": "guard_only",
+      "decisions": 140,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 51,
+      "censored_or_unmatched_outcomes": 6
+    },
+    {
+      "run_id": "phasea-abrCMAB-20261117T161908-0ad77a",
+      "policy": "original",
+      "decisions": 69,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T162208-cc0ad4",
+      "policy": "improved",
+      "decisions": 171,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 60,
+      "censored_or_unmatched_outcomes": 1
+    },
+    {
+      "run_id": "phasea-abrCMAB-20261117T162508-7de286",
+      "policy": "original",
+      "decisions": 32,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T162808-54bf12",
+      "policy": "improved",
+      "decisions": 88,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 59,
+      "censored_or_unmatched_outcomes": 1
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T163108-6abfb2",
+      "policy": "guard_only",
+      "decisions": 83,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 57,
+      "censored_or_unmatched_outcomes": 2
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T163408-b0478d",
+      "policy": "improved",
+      "decisions": 198,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 60,
+      "censored_or_unmatched_outcomes": 1
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T163708-b685a3",
+      "policy": "guard_only",
+      "decisions": 127,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 60,
+      "censored_or_unmatched_outcomes": 1
+    },
+    {
+      "run_id": "phasea-abrCMAB-20261117T164008-fb49af",
+      "policy": "original",
+      "decisions": 142,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T164308-c35156",
+      "policy": "guard_only",
+      "decisions": 83,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 56,
+      "censored_or_unmatched_outcomes": 2
+    },
+    {
+      "run_id": "phasea-abrCMAB-20261117T164608-4e64ca",
+      "policy": "original",
+      "decisions": 31,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T164908-d45a02",
+      "policy": "improved",
+      "decisions": 102,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 49,
+      "censored_or_unmatched_outcomes": 7
+    },
+    {
+      "run_id": "phasea-abrCMAB-20261117T165208-c81c66",
+      "policy": "original",
+      "decisions": 149,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T165508-bd3a2c",
+      "policy": "improved",
+      "decisions": 181,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 60,
+      "censored_or_unmatched_outcomes": 1
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T165808-2a6417",
+      "policy": "guard_only",
+      "decisions": 119,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 60,
+      "censored_or_unmatched_outcomes": 1
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T170108-8d97f2",
+      "policy": "improved",
+      "decisions": 81,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 50,
+      "censored_or_unmatched_outcomes": 6
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T170408-678168",
+      "policy": "guard_only",
+      "decisions": 76,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 54,
+      "censored_or_unmatched_outcomes": 5
+    },
+    {
+      "run_id": "phasea-abrCMAB-20261117T170708-9a50d1",
+      "policy": "original",
+      "decisions": 28,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T171008-0e5d77",
+      "policy": "guard_only",
+      "decisions": 110,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 56,
+      "censored_or_unmatched_outcomes": 2
+    },
+    {
+      "run_id": "phasea-abrCMAB-20261117T171308-4e817d",
+      "policy": "original",
+      "decisions": 124,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T171608-e16303",
+      "policy": "improved",
+      "decisions": 189,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 54,
+      "censored_or_unmatched_outcomes": 4
+    },
+    {
+      "run_id": "phasea-abrCMAB-20261117T171908-7dc262",
+      "policy": "original",
+      "decisions": 21,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T172313-e1ace3",
+      "policy": "improved",
+      "decisions": 109,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 72,
+      "censored_or_unmatched_outcomes": 11
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T172712-dc9cd4",
+      "policy": "guard_only",
+      "decisions": 107,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 66,
+      "censored_or_unmatched_outcomes": 13
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T173112-1edc01",
+      "policy": "improved",
+      "decisions": 99,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 56,
+      "censored_or_unmatched_outcomes": 24
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T173514-cc9da0",
+      "policy": "guard_only",
+      "decisions": 98,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 70,
+      "censored_or_unmatched_outcomes": 12
+    },
+    {
+      "run_id": "phasea-abrCMAB-20261117T173915-88f80a",
+      "policy": "original",
+      "decisions": 19,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T174316-f70f37",
+      "policy": "guard_only",
+      "decisions": 94,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 65,
+      "censored_or_unmatched_outcomes": 18
+    },
+    {
+      "run_id": "phasea-abrCMAB-20261117T174715-27513e",
+      "policy": "original",
+      "decisions": 14,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 0,
+      "censored_or_unmatched_outcomes": 0
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T175116-892424",
+      "policy": "improved",
+      "decisions": 99,
+      "neural_fallbacks": 0,
+      "max_dense_replay_logit_error": 0.0,
+      "neural_completed_request_links": 0,
+      "accepted_cmab_updates": 61,
+      "censored_or_unmatched_outcomes": 19
     }
   ]
 }

@@ -111,6 +111,7 @@ def main():
     if args.saved_results:
         subprocess.run([sys.executable,str(ROOT/'scripts/summarize_final_deployment.py')],cwd=ROOT,check=True)
         subprocess.run([sys.executable,str(ROOT/'scripts/analyse_final.py')],cwd=ROOT,check=True)
+        subprocess.run([sys.executable,str(ROOT/'scripts/analyse_final_contrasts.py')],cwd=ROOT,check=True)
         print('Reproduced final analysis.json and F3-F5 / T3-T4 from portable events. No Docker or MongoDB used.')
 
 

@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "sessions": 179,
+  "controlled": 170,
+  "raw_replay": 9,
+  "source_model_metric_input_replay_checks": "saved-results-check.json",
+  "visual_review": [
+    "F3-overall-paired",
+    "F4-family-effects (labels repaired and rechecked)",
+    "F5-bandwidth_variation",
+    "F5-post_handover_recovery",
+    "F5-worst-case"
+  ],
+  "numeric_checks": [
+    "179 per-run rows",
+    "35 policy-family groups",
+    "3 separate raw means",
+    "6 coefficient sensitivity settings",
+    "score-component sums equal paired case differences",
+    "direct matched-repeat comparisons"
+  ],
+  "primary_predeclared_margins": {
+    "positive_primary_interval": true,
+    "stall_margin": true,
+    "tail_delay_margin": true,
+    "startup_margin": true
+  },
+  "minimum_improved_played_media_s": 96.6536021232605,
+  "clock_restored": true,
+  "scope": "Conditional repeatability on fixed cases; two RTT sessions, generated capacity/outages. No general Starlink population inference.",
+  "stop_boundary": "Step19 verified; no Step20+ execution"
+}

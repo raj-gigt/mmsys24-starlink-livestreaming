@@ -1,0 +1,248 @@
+{
+  "status": "PASS",
+  "direct_contrasts": {
+    "bandit_restart_package_vs_guard_only": {
+      "baseline": "guard_only",
+      "candidate": "improved",
+      "mean_difference": -0.00094728545236413,
+      "ci95_low": -0.05139106015291298,
+      "ci95_high": 0.0488708712971269,
+      "positive_cases": 4,
+      "cases": [
+        {
+          "family": "steady_bandwidth",
+          "case_id": "test-steady_bandwidth-6100",
+          "difference": -0.013602592296987348,
+          "paired_repeats": 3
+        },
+        {
+          "family": "steady_bandwidth",
+          "case_id": "test-steady_bandwidth-6101",
+          "difference": -0.0333359892592762,
+          "paired_repeats": 3
+        },
+        {
+          "family": "bandwidth_variation",
+          "case_id": "test-bandwidth_variation-6110",
+          "difference": 0.418773543036045,
+          "paired_repeats": 3
+        },
+        {
+          "family": "bandwidth_variation",
+          "case_id": "test-bandwidth_variation-6111",
+          "difference": 0.48359383418920654,
+          "paired_repeats": 3
+        },
+        {
+          "family": "rtt_variation",
+          "case_id": "test-rtt_variation-6120",
+          "difference": -0.19110940147454217,
+          "paired_repeats": 3
+        },
+        {
+          "family": "rtt_variation",
+          "case_id": "test-rtt_variation-6121",
+          "difference": -0.08875893439976823,
+          "paired_repeats": 3
+        },
+        {
+          "family": "handover_interruption",
+          "case_id": "test-handover_interruption-6130",
+          "difference": -0.3669504153495704,
+          "paired_repeats": 3
+        },
+        {
+          "family": "handover_interruption",
+          "case_id": "test-handover_interruption-6131",
+          "difference": 0.013169496114562676,
+          "paired_repeats": 3
+        },
+        {
+          "family": "post_handover_recovery",
+          "case_id": "test-post_handover_recovery-6140",
+          "difference": -0.40561609627065365,
+          "paired_repeats": 3
+        },
+        {
+          "family": "post_handover_recovery",
+          "case_id": "test-post_handover_recovery-6141",
+          "difference": 0.17436370118734232,
+          "paired_repeats": 3
+        }
+      ]
+    },
+    "leo_vs_conventional": {
+      "baseline": "conventional",
+      "candidate": "leo",
+      "mean_difference": 0.000825290398455214,
+      "ci95_low": -0.02344183466376068,
+      "ci95_high": 0.024652274180937527,
+      "positive_cases": 3,
+      "cases": [
+        {
+          "family": "steady_bandwidth",
+          "case_id": "test-steady_bandwidth-6100",
+          "difference": -0.009359855536371198,
+          "paired_repeats": 2
+        },
+        {
+          "family": "steady_bandwidth",
+          "case_id": "test-steady_bandwidth-6101",
+          "difference": -0.005914454122545987,
+          "paired_repeats": 2
+        },
+        {
+          "family": "bandwidth_variation",
+          "case_id": "test-bandwidth_variation-6110",
+          "difference": 0.06180298682124916,
+          "paired_repeats": 2
+        },
+        {
+          "family": "bandwidth_variation",
+          "case_id": "test-bandwidth_variation-6111",
+          "difference": 0.04423375396171972,
+          "paired_repeats": 2
+        },
+        {
+          "family": "rtt_variation",
+          "case_id": "test-rtt_variation-6120",
+          "difference": 0.09373529904230446,
+          "paired_repeats": 2
+        },
+        {
+          "family": "rtt_variation",
+          "case_id": "test-rtt_variation-6121",
+          "difference": -0.004477198836546514,
+          "paired_repeats": 2
+        },
+        {
+          "family": "handover_interruption",
+          "case_id": "test-handover_interruption-6130",
+          "difference": -0.03529024172443995,
+          "paired_repeats": 2
+        },
+        {
+          "family": "handover_interruption",
+          "case_id": "test-handover_interruption-6131",
+          "difference": -0.05342610715060525,
+          "paired_repeats": 2
+        },
+        {
+          "family": "post_handover_recovery",
+          "case_id": "test-post_handover_recovery-6140",
+          "difference": -0.051727768209118064,
+          "paired_repeats": 2
+        },
+        {
+          "family": "post_handover_recovery",
+          "case_id": "test-post_handover_recovery-6141",
+          "difference": -0.03132351026109423,
+          "paired_repeats": 2
+        }
+      ]
+    }
+  },
+  "score_components": [
+    {
+      "case_id": "test-bandwidth_variation-6110",
+      "qoe_difference": 1.4894311923051267,
+      "quality_contribution": -0.07249269896931188,
+      "stall_contribution": 1.236852072416338,
+      "startup_contribution": 1.9512849327652654e-05,
+      "variation_contribution": -0.03872588134044211,
+      "latency_contribution": 0.3637781873492147,
+      "regression": false
+    },
+    {
+      "case_id": "test-bandwidth_variation-6111",
+      "qoe_difference": 1.704966012105096,
+      "quality_contribution": -0.0224788159367888,
+      "stall_contribution": 1.4051445005326066,
+      "startup_contribution": 6.992520944611516e-05,
+      "variation_contribution": -0.028693274633525022,
+      "latency_contribution": 0.3509236769333572,
+      "regression": false
+    },
+    {
+      "case_id": "test-handover_interruption-6130",
+      "qoe_difference": 2.756038006963455,
+      "quality_contribution": 0.3043620200587618,
+      "stall_contribution": 2.1490349715426222,
+      "startup_contribution": -2.309369093300706e-05,
+      "variation_contribution": -0.02141640672183416,
+      "latency_contribution": 0.3240805157748383,
+      "regression": false
+    },
+    {
+      "case_id": "test-handover_interruption-6131",
+      "qoe_difference": -0.06006576462085486,
+      "quality_contribution": -0.16375109361043205,
+      "stall_contribution": 0.09434603660299518,
+      "startup_contribution": 1.3584294036360009e-05,
+      "variation_contribution": -0.03881314755213256,
+      "latency_contribution": 0.04813885564467821,
+      "regression": true
+    },
+    {
+      "case_id": "test-post_handover_recovery-6140",
+      "qoe_difference": 3.0202301597095866,
+      "quality_contribution": 0.40172716772914707,
+      "stall_contribution": 2.3299345795923974,
+      "startup_contribution": 1.943428734944158e-05,
+      "variation_contribution": -0.013741208625036874,
+      "latency_contribution": 0.3022901867257291,
+      "regression": false
+    },
+    {
+      "case_id": "test-post_handover_recovery-6141",
+      "qoe_difference": 0.434788088937126,
+      "quality_contribution": -0.06939097399982996,
+      "stall_contribution": 0.41420230222870835,
+      "startup_contribution": 4.723321845605602e-05,
+      "variation_contribution": -0.016632712002393205,
+      "latency_contribution": 0.10656223949218475,
+      "regression": false
+    },
+    {
+      "case_id": "test-rtt_variation-6120",
+      "qoe_difference": 3.397301817159602,
+      "quality_contribution": 0.4417418834443486,
+      "stall_contribution": 2.6556756358931994,
+      "startup_contribution": 3.748080150370314e-05,
+      "variation_contribution": -0.027480767562785228,
+      "latency_contribution": 0.327327584583335,
+      "regression": false
+    },
+    {
+      "case_id": "test-rtt_variation-6121",
+      "qoe_difference": 0.02376024872460382,
+      "quality_contribution": -0.26602540042959677,
+      "stall_contribution": 0.23021926783513852,
+      "startup_contribution": -3.286627616959272e-05,
+      "variation_contribution": -0.031482399910477174,
+      "latency_contribution": 0.09108164750570884,
+      "regression": false
+    },
+    {
+      "case_id": "test-steady_bandwidth-6100",
+      "qoe_difference": -0.02608580357651711,
+      "quality_contribution": -0.1757012520948018,
+      "stall_contribution": 0.12838937576147952,
+      "startup_contribution": 7.367697517759314e-05,
+      "variation_contribution": -0.037792988658190745,
+      "latency_contribution": 0.05894538443981833,
+      "regression": true
+    },
+    {
+      "case_id": "test-steady_bandwidth-6101",
+      "qoe_difference": -0.02372095294382412,
+      "quality_contribution": -0.15356748439244305,
+      "stall_contribution": 0.11233150147096427,
+      "startup_contribution": -2.6028746666270468e-05,
+      "variation_contribution": -0.03497018887436344,
+      "latency_contribution": 0.05251124759868438,
+      "regression": true
+    }
+  ],
+  "qualification": "Conditional paired-repeat intervals on fixed cases only. Guard-only also changes restart choices, so the first comparison is not pure removal of learning. No controller or score coefficient changes."
+}

@@ -1,0 +1,15 @@
+symbol,definition,units,qualification
+Q,Sum log(nominal_bps/300000)*actually_played_media_s/2,utility,Nominal quality proxy; skipped or unknown-quality media not credited
+B,"Waiting idle wall time after playback starts, with idle>0.02s",seconds,Includes automatic catch-up seek wait; excludes deliberate user interactions
+S,Idle wall time before first actual playback,seconds,"Initial live positioning is startup, not skipped epoch-sized media"
+V,Sum abs(log(new_played_bitrate/previous_played_bitrate)),log-ratio,Only changes in actually attributed played quality
+A,"Integral max(0,live_delay_s-3)*wall_dt",seconds squared,Excess over3s target; time weighted
+QoE/T,(Q-4B-S-0.3V-0.1A)/actual_observation_wall_s,utility per wall second,Same independent outcome definition for every policy; negative values are valid
+Mean live delay,Wall-time-weighted mean of finite observed delay,seconds,Case/family tables average session means
+p95 live delay,Weighted95th percentile within each session,seconds,Macro table averages session percentiles; not a pooled percentile
+Played bitrate,Nominal bitrate weighted by attributed played media seconds,bit/s,Actual encoded bytes separately drive network/training dynamics
+Skipped media,Positive media-time jumps after playback started,media seconds,Not credited as watched video; startup positioning excluded
+Sampling,Passive100ms browser samples plus event boundaries,seconds,Shared stop cutoff; actual elapsed and dual clocks verified
+Aggregation,Equal five-family weights; equal two-case weights within family,case/repeat,Raw repository replay is separate
+Uncertainty,Resample paired browser repeats within each fixed case,repeatability,Only2/3 repeats; related windows are not independent Starlink recordings
+CMAB update surrogate,"log(b/300k)*segment_s/2-4max(0,transfer_s-buffer_at_choice)-0.3abs(log(b/previous_b))-0.1max(0,outcome_delay-target)*transfer_s",request proxy,Completed matched requests only; not the final actually-played score

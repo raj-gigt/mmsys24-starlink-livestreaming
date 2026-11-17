@@ -11,3 +11,5 @@ rl/web/final_models.js -text whitespace=blank-at-eol,blank-at-eof,space-before-t
 *.patch -text -whitespace
 rl/reference/** -whitespace
 artifacts/setup/*.txt -whitespace
+# Matplotlib SVG path data intentionally contains line-ending spaces.
+*.svg -whitespace

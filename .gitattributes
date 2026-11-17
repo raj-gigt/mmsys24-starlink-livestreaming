@@ -13,3 +13,4 @@ rl/reference/** -whitespace
 artifacts/setup/*.txt -whitespace
 # Matplotlib SVG path data intentionally contains line-ending spaces.
 *.svg -whitespace
+*.pdf binary

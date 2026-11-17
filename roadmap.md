@@ -345,7 +345,7 @@ Revision:18 November2026. Steps8-19 remain completed evidence. The submission ob
 Planning is authorized now; execution of Steps20-22 awaits the user's remaining inputs and instruction to begin. Existing commit/push authorization remains valid for that later run. Do not rerun completed training or179 experiments, change frozen policies/rewards or silently overwrite Step19 evidence.
 
 ### Step 20 - Finalize the joint analysis and audit the submission dependency set
-**Status:** Pending; planning only. **Dependency:**19. **Deliverables:** balanced four-policy results, direct comparisons, dependency/file inventory and evaluator navigation specification.
+**Status:** Complete. **Dependency:**19. **Deliverables:** balanced four-policy results, direct comparisons, dependency/file inventory and evaluator navigation specification.
 
 **Objective / intuition:** establish one fair scientific story and identify exactly which files support it before writing or packaging.
 
@@ -360,13 +360,13 @@ Planning is authorized now; execution of Steps20-22 awaits the user's remaining 
 **Verification / exit:** exactly20 matched sessions per main policy; source run IDs and score/component sums reconcile; all six contrasts use matched repeats and disclosed uncertainty. An explicit inventory covers every transitive dependency and required evidence; exclusions have reasons. Frozen measured file hashes still match. No report, PPT or demo generation yet.
 
 ### Step 21 - Produce the concise final submission report and evaluator-facing GitHub handoff
-**Status:** Pending. **Dependency:**20. **Deliverables:** reports/final/Group4-final-report.pdf, updated root README/reproduction instructions, final figure/table index and contribution section.
+**Status:** Complete. **Dependency:**20. **Deliverables:** reports/final/Group4-final-report.pdf, updated root README/reproduction instructions, final figure/table index and contribution section.
 
 **Objective / intuition:** let an evaluator understand what we built and assess the joint results without navigating the development diary.
 
 **Actions:**
 1. Revise the existing report builder around the shared four-policy objective. Content: title/group/names/contributions; short abstract; problem/reference/related work; system and policy changes; A2C provenance/state/action/reward/training; measured/generated data and splits; fair browser methodology; joint results/family effects/behavioural explanation; ablations/calibration/limitations; conclusion/reproduction/references. Explain that standard SB3 A2C and a configured standard MLP were trained by us from fresh weights with heuristic warm start, not fine-tuned published Gelato weights or a newly invented RL algorithm.
-2. Select concise tables/figures: four-policy design matrix, data/setup, main metric scoreboard, direct paired effects, family effects, one explanatory trajectory, compact ablation/learning evidence. Put long calibration, definitions and deployment details in supporting files or a short appendix. Unless the user supplies a rule, aim for roughly8-10 pages including references; this is an editorial target, not an invented course limit.
+2. Select concise tables/figures: four-policy design matrix, data/setup, main metric scoreboard, direct paired effects, family effects, one explanatory trajectory, compact ablation/learning evidence. Put long calibration, definitions and deployment details in supporting files or a short appendix. User requirement: target6-8 pages including references, using a professional academic research-paper/LaTeX-style layout, clear mathematical notation and concise technical prose. Concise must not mean shallow. Use a short appendix only if it fits that target; longer support remains in the repository.
 3. Main text uses the matched two-repeat results. Clearly label the earlier three-repeat CMAB result and supplementary raw replay wherever retained. Explain quality/stall/switching tradeoffs, the nearly tied A2C policies, guard-only findings, two measured RTT sessions and synthetic capacity/outages. No universal Starlink or unchanged published-weight claim.
 4. Populate T6 contribution fields only with actual user-supplied work. The prior instruction to leave details blank remains the fallback if the user does not provide them; identify that deliberate omission instead of inventing text. Names, rolls, course and project title already come from the proposal/project metadata.
 5. Update README and reproduction guide to lead to the final code/results, common saved-results command, training/export and full evaluation commands. The submission does not depend on a demo launcher/video. Separate concise evaluator paths from optional full research history; identify inherited source and required pilot-named dependencies honestly.
@@ -375,7 +375,7 @@ Planning is authorized now; execution of Steps20-22 awaits the user's remaining 
 **Verification / exit:** source-backed readable report with the four-policy comparison central; all required report sections covered; contribution omission only if explicitly retained by user. README commands and code map are concrete and consistent with the inventory. No presentation/demo requirement or generated presentation asset.
 
 ### Step 22 - Build, verify and publish the focused submission release
-**Status:** Pending. **Dependencies:**20-21. **Deliverables:** release/Group4-submission.zip, release/manifest.json, checksums/clean-extraction evidence and published final GitHub revision.
+**Status:** Running. **Dependencies:**20-21. **Deliverables:** release/Group4-submission.zip, release/manifest.json, checksums/clean-extraction evidence and published final GitHub revision.
 
 **Objective / intuition:** give the evaluator a clean usable package, while retaining the complete research record in the existing repository.
 
@@ -432,9 +432,9 @@ Autonomous execution is active; see the per-step tracker and artifacts/final/sta
 | 17 | Complete | 10.004million main interactions across10 fresh-seed fits; selected median seeds167/101; 394 JS fixtures and6 valid Chrome checks PASS; observer-free RTT and real fallback playback PASS; late training decline retained |
 | 18 | Complete | All179 frozen sessions complete:170 controlled +9 raw replay;303 source files,2 models, clocks/cutoffs, actual input/action/feedback, schedules and portable metrics verified. Guest NTP restored. |
 | 19 | Complete | F3-F5 and T3-T4/T7-T8 generated and reviewed; primary effect+1.272 [1.227,1.315], stalls-64.87percent;7/10 case gains. Direct guard/LEO contrasts include zero; regressions and coefficient sensitivity retained. STOP beforeStep20. |
-| 20 | Pending | Balanced four-policy analysis; explicit dependency/file inventory |
-| 21 | Pending | Verified report PDF and evaluator-facing GitHub documentation |
-| 22 | Pending | Focused submission-only ZIP, clean reproduction, public source and checksums |
+| 20 | Complete | Balanced80-session four-policy synthesis and all6 paired contrasts generated;185 required portable runs and830 files inventoried via explicit roots/import closure. Frozen303 files/models unchanged; export helper exact parity verified. |
+| 21 | Complete | Eight-page academic report; all pages visually reviewed; result/margin/link checks PASS; contribution fields blank. Focused README, code map and reproduction/index complete. |
+| 22 | Running | Initial ZIP exact179/80-session reproduction PASS in results-only venv;85 arrays regenerated plus Victoria cache verified;full native export nine assets byte-identical; final publication/package checks next. |
 | 23 | Deferred | After18November08:00 and new instruction: PPT/demo/learning/human rehearsal |
 
 ### Method references used for this revision

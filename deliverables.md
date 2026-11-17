@@ -14,6 +14,7 @@ This revision and roadmap Steps20-23 supersede older combined hand-in wording be
 - Step23 covers PPT/demo/learning/rehearsal only after18November08:00IST and a new user instruction. Existing prepared sources are reusable drafts, not authorization to generate them now.
 - Keep the existing repository/submodules/required paths. GitHub retains the complete research record with clear final entry points and historical/support labels; the ZIP is a curated release, not a copy of the development tree. No new repository or history rewrite is needed.
 - Build the exact file list from imports, build paths and result dependencies. Include required player source, selected models/contracts, necessary modules/scripts/configurations/data, report figures/tables, compact evidence and licenses. Exclude duplicate logs/checkpoints, obsolete prototypes and unrelated upstream material unless a real dependency requires them. An old filename alone is not grounds for removal.
+- Confirmed user inputs (18November): target a technical, concise6-8-page academic research-paper/LaTeX-style report; reserve an empty contribution template without filling specific work; no known ZIP restrictions; user handles portal upload.
 - The prior instruction to keep contribution details blank remains valid until the user supplies actual statements. Do not invent them. Portal upload is a separate human handoff unless explicitly requested with access.
 
 ## 1. Objective, scope and submission obligations

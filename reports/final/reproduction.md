@@ -1,15 +1,14 @@
-# Group 4: reproduction and demo
+# Reproducing the final submission
 
-Use the final report for results and interpretation. This document describes the
-actual commands and the distinction between replaying saved evidence and running
-new experiments. Team contribution details in the report are intentionally blank.
+Start with the eight-page report and root README. This guide separates verification
+of measured evidence from new training or network experiments. Individual
+contribution details remain intentionally unfilled; no presentation files or demo
+execution are required by this submission.
 
-## 1. Inspect or reproduce the submitted results
+## 1. Verify and recompute saved results
 
-The submission ZIP includes the player source needed by our Dockerfile. A normal
-GitHub ZIP of the parent repository omits Git submodule contents.
-
-In a new Python 3.11 environment, from the extracted submission root:
+Use Python 3.11 and an external virtual environment. In an extracted submission
+root (any folder name for this route):
 
 ```sh
 python -m pip install -r requirements-results.txt
@@ -17,35 +16,60 @@ python scripts/prepare_player.py
 python scripts/reproduce_final.py --saved-results
 ```
 
-This checks all 303 frozen source identities, all 179 trial keys, compressed-event
-hashes, actual playback metrics, shared observation cutoffs, epoch/monotonic clock
-agreement, applied network schedules and source phase. It also replays actual
-neural preprocessing/logits/actions and checks unique CMAB request feedback.
-It regenerates T7 metric definitions and T8 observed deployment costs, plus
-`artifacts/final/evaluation/analysis.json`, F3-F5 and T3-T4. It needs neither Docker
-nor MongoDB nor the original local `artifacts/runs` directory. There is no training
-or new network experiment in this command. Windows/Linux text line endings are
-normalized only for the scientific source identity; the release manifest records
-exact payload bytes separately.
+Only NumPy/Matplotlib and their installed dependencies are needed: no PyTorch,
+MongoDB, Docker, browser, local run folders or Git history. `prepare_player.py`
+verifies the manifested player snapshot in a ZIP and preserves committed source
+in a recursive Git clone. The reproduction command checks:
 
-The report and presentation are delivered ready to view. To rebuild the report:
+- All 303 canonical frozen source/configuration identities and both model hashes.
+- All 179 distinct planned trial keys and compressed event hashes.
+- Per-session clock/cutoff consistency, applied link schedules and source phase.
+- Actual observation preprocessing, neural logits/actions and unique CMAB feedback.
+- Independent playback score/component recomputation to numerical tolerance.
+
+It regenerates full-matrix `analysis.json`, all six balanced direct contrasts in
+`four-policy-analysis.json`, deployment summaries, report figures and supporting
+tables. Main CSV files are `T4-four-policy.csv`, `T4-four-policy-pairs.csv` and
+`T4-four-policy-families.csv`. Main report figures are F1, F3-four-policy,
+F4-four-policy, F5-four-policy-regression and F7-report-training. Development and
+validation summaries are supporting evidence, not final-test tuning. Text CRLF/LF
+normalization is used only for measured source identity; release hashes record
+exact payload bytes.
+
+With Node.js, separately verify all 394 native/JS export fixtures:
 
 ```sh
-python -m pip install -r requirements-report.txt
-python scripts/build_final_report.py
+node scripts/check_final_export.cjs
 ```
 
-To fill the intentionally deferred contribution section later, edit the last
-column of `reports/final/tables/T6-contributions-template.csv` with each member's
-actual 2-3 sentences, then rebuild and inspect the report. Rebuild/reverify the
-submission ZIP if its report changes. No contribution text has been invented.
+Rebuild the paper with `pip install -r requirements-report.txt` followed by
+`python scripts/build_final_report.py`. Its source uses ReportLab with Times
+serif, numbered sections, scientific tables/figures and references; it does not
+require a TeX installation. All specific contribution statements are blank by
+request. The editable fields are in `reports/final/tables/T6-contributions-template.csv`;
+if filled later, rebuild and inspect the report and reverify/repackage the ZIP.
 
-The authored presentation source is `scripts/build_final_presentation.mjs`. It uses
-the Codex bundled `@oai/artifact-tool` runtime, with runtime/skill paths provided
-as environment variables described at the top of that source. Viewing/editing
-the delivered PPTX does not require that runtime.
+## 2. Full GitHub source versus the focused ZIP
 
-## 2. Obtain a full developer checkout
+### Paper figure/table source index
+
+| Paper item | Reproducible source / output |
+|---|---|
+| Figure 1: system | `plot_final_architecture.py` → `figures/F1-system.*` |
+| Figure 2: learning | `analyse_four_policies.py` + ten `training/main/*/curve.json` → `figures/F7-report-training.*` |
+| Figure 3: paired effects | Same analysis + frozen `evaluation/runs.json` → `figures/F3-four-policy.*` |
+| Figure 4: family differences | Same analysis → `figures/F4-four-policy.*`, `tables/T4-four-policy-families.csv` |
+| Figure 5: regression | Same analysis + actual event payloads → `figures/F5-four-policy-regression.*` |
+| Table 1: four-policy metrics | `tables/T4-four-policy.csv`, balanced analysis JSON |
+| Table 2: all six contrasts | `tables/T4-four-policy-pairs.csv`, balanced analysis JSON |
+| Table 3: hypotheses | Source audit + `plot_cmab_ablation.py` / `plot_cmab_validation.py` → supporting T5 tables |
+| Table 4: runtime | `summarize_final_deployment.py` + actual decisions → `tables/T8-deployment.csv`, `evaluation/deployment.json` |
+
+Script paths above are under `scripts/`; figure/table paths under `reports/final/`;
+training/evaluation paths under `artifacts/final/`. T7 defines the exact score
+semantics; T3 retains every final run, and T4 supporting tables retain complete
+matrix, sensitivity, recovery and raw-replay results. The contribution table uses
+T6 with empty specific-work fields.
 
 ```sh
 git clone --branch anjan --recurse-submodules https://github.com/raj-gigt/mmsys24-starlink-livestreaming LEO_ABR_RL
@@ -54,116 +78,52 @@ git submodule update --init --recursive
 python scripts/prepare_player.py
 ```
 
-The parent pins a published commit in `https://github.com/anjanrd/dash.js`.
-`artifacts/final/evaluation/publication.json` maps the pretest freeze to the
-published measured source. The freeze's older parent Git anchor alone does not
-identify subsequently published files; the canonical file hashes do.
+The published player fork is `https://github.com/anjanrd/dash.js`, pinned at
+`60f56693032bb7e12c174951da4ee05818383527`. The measured-source publication is
+`be131536f260d64a6c7e6e4478d51e01e60bcf62`; the freeze file's older parent anchor
+alone is not a complete source identity. `publication.json` explains this and
+individual source hashes identify the measured snapshot. Later report/packaging
+changes preserve those hashes.
 
-Keep the directory name **LEO_ABR_RL** for live experiments: the existing browser
-runner uses the corresponding Compose player container name. On Windows the
-runner invokes Docker in **Ubuntu-22.04 WSL**, as tested. Linux can run Docker
-directly. The no-browser saved-results route works in other folder names.
+A normal parent GitHub ZIP cannot include submodule contents. The **curated ZIP**
+does include the full measured player source and its runtime dependencies at their
+original paths. `release/submission-files.json` records the dependency closure,
+classification and exclusions; `release/manifest.json` hashes every payload file.
+The ZIP includes 179 final and six calibration event payloads with a matching
+185-run subset index. Supporting development/validation ledgers remain compact;
+their larger raw recordings and additional research records remain on GitHub.
+Redundant training weights, resume caches, environments, execution logs,
+presentation material and unrelated upstream infrastructure are omitted.
 
-## 3. Start the real testbed
+## 3. Data and training reproduction
 
-Requirements: Docker Engine/Compose on Linux or WSL, network access to the pinned
-images, available ports 443/4444/7900/8081/8888/27017, and space for images/media.
-The pinned livesim2 image already contains the shared video; no separate large
-WAVE download is needed. Avoid running multiple browser trials concurrently.
+Delivered arrays are sufficient for training: 48 train, 18 validation and 18 older
+simulator-test scenarios. Final browser workloads are separately frozen; training
+and checkpoint selection use only their intended train/validation inputs.
+The trace supplies RTT, not measured capacity, true handover labels or expert ABR
+actions. Generated schedules and causal probe masks are explicitly recorded.
 
-From a WSL/Linux shell in the checkout:
-
-```sh
-bash scripts/testbed.sh up
-bash scripts/testbed.sh status
-```
-
-The script builds the local modified player and typed RTT statistics sidecar,
-then starts the pinned services without rebuilding upstream Nginx. It uses all
-five Compose files in the project. Do not use only the upstream Compose file:
-that selects a prebuilt player and omits our common fixes/instrumentation.
-
-In the Python environment used for browser trials:
-
-```sh
-python -m pip install -r requirements-phase-a.txt
-python scripts/demo_final.py --policy improved --record
-python scripts/demo_final.py --policy original --record
-```
-
-Watch **http://localhost:7900** (the Selenium image's default VNC password is
-`secret`). Each command uses the same named 90-second development recovery case,
-the actual ABR controller, completed video downloads and MongoDB playback
-records. Recordings, compressed evidence, screenshots and summaries go to
-`reports/final/demo`. Demo sessions are excluded from the final performance table.
-The recorder uses the upstream Selenium video sidecar, pinned by digest.
-
-The launcher refuses to share Chrome with an unfinished final matrix. Stop the
-prior trial before starting another. It temporarily pauses WSL guest NTP and
-restores the previous state, preventing wall-clock steps observed in earlier
-diagnostics. Linux users need permission to manage `systemd-timesyncd` (for
-example, run the launcher through `sudo -E /absolute/venv/bin/python`). The
-explicit `hostClock=1` option is valid for this single-host emulator, not a claim
-that independently clocked remote clients need no synchronization.
-
-If playback/testbed readiness fails, inspect `bash scripts/testbed.sh status`, the
-demo log, and `docker logs dashjs-nginx`. Reset the testbed with
-`bash scripts/testbed.sh down` followed by `up`; this does not delete the MongoDB
-volume. Check the clock guard after any forced process termination:
-
-```sh
-python scripts/experiment_clock.py status
-python scripts/experiment_clock.py release
-```
-
-## 4. Policy selection and integration
-
-The validated launcher opens
-`http://pyodide/samples/starlink/testplayer/testplayer.html` **inside container
-Chrome**, where the Compose hostnames resolve. Watch it through
-http://localhost:7900. The scripted demo sets the necessary URL/player options;
-opening a player port in a separate host browser does not reproduce that network
-context automatically. Policy query choices are:
-
-| Policy | Query choice |
-|---|---|
-| Reference | `abrGeneral=abrCMAB` |
-| Selected CMAB | `abrGeneral=abrCMABImproved&cmabVariant=guard` |
-| Safety-only control | `abrGeneral=abrCMABImproved&cmabVariant=guard_only` |
-| Conventional A2C | `abrGeneral=abrAnjanRL&neuralVariant=conventional` |
-| LEO A2C | `abrGeneral=abrAnjanRL&neuralVariant=leo` |
-
-CMAB uses the existing synchronous Pyodide path. The neural actor is a synchronous
-Float32 JavaScript forward pass on the Chrome host CPU. Its 36/64-input contracts,
-normalization, action mapping, weights and examples are in `models/final` and
-`configs/final`. A background RTT poll caches completed measurements before an
-ABR decision; a policy does not query MongoDB or return a Promise to dash.js.
-`node scripts/check_final_export.cjs` reproduces native/JS fixture agreement.
-
-## 5. Data preparation and training
-
-The included processed arrays and manifests are sufficient for training. They
-contain 48 training, 18 validation and 18 old simulator-test scenarios; only
-training/validation feed model selection. Final browser testing has its own
-separately frozen cases. Measured RTT, generated bandwidth/outages and missing
-probe observations are distinguished in the manifests. Actions recorded by CMAB
-are not treated as optimal supervised labels.
-
-To regenerate arrays in a disposable developer copy:
+In a **disposable copy**, these commands regenerate scenario arrays and workloads:
 
 ```sh
 python scripts/prepare_data.py
 python scripts/prepare_final_workloads.py
 ```
 
-The Victoria one-second cache is included. Recreating it from original probes
-requires downloading the URL in `data/manifests/lens-reserve.json` to the listed
-path and matching its SHA256 before processing. The 36.4MB original archive is
-omitted from the compact submission. Retain the LENS attribution/license.
+`prepare_data.py` reads both bundled Seychelles CSV aliases, verifies timing/RTT
+equality and uses seeded windows with guarded splits. Without the optional
+`paper-data` submodule, auxiliary source-log metadata are absent; scenario values
+do not depend on those logs. The Victoria one-second cache is bundled. To recreate
+that cache from probes, download the source URL in `data/manifests/lens-reserve.json`
+to its listed location and check the recorded SHA-256; the 36.4 MB original archive
+is omitted from the focused ZIP. Never overwrite the submitted data/manifests when
+checking regenerated numeric values.
 
-To train **new fits**, use a disposable copy and move its existing
-`artifacts/final/training` folder to an external archive first. The trainer skips
-already completed fits; invoking it in the submitted tree alone does not retrain.
+For **new fits**, install `requirements-phase-a.txt` in a separate Python 3.11
+environment (the historical filename pins the active ML dependencies). Use a
+disposable copy, and move that copy's existing `artifacts/final/training` to an
+external backup first. The trainer skips a completed manifest; leaving delivered
+summaries in place does not retrain the models.
 
 ```sh
 python -m rl.train_final --stage screen --device cpu
@@ -172,25 +132,61 @@ python -m rl.export_final
 node scripts/check_final_export.cjs
 ```
 
-There are four equal-budget recipes/two screening seeds, then five fresh main
-seeds per observation type. Both use the same selected recipe. Each seed keeps
-its best validation checkpoint, then the median validation seed is exported.
-All curves, native checkpoints and unsuccessful late training are retained.
-The main phase took approximately 44.3 minutes for 10.004 million decisions on
-the measured laptop. A working RTX4060 was benchmarked; CPU was faster for these
-small networks. These are observed times, not guarantees on other machines.
-Training is a compatible A2C adaptation inspired by Pensieve/Gelato/Plume, not an
-unchanged published pretrained model. The published Maguro reference has
-incompatible inputs/actions and is retained separately with its MIT license.
+Screening runs four recipes × two seeds × two observation variants, 250k decisions
+each. Main training uses the joint-selected recipe with five fresh seeds per
+variant, one million decisions each. Each seed retains its best validation
+checkpoint; the median-validation seed is exported per variant. The delivered
+ZIP retains curves/selection records for every fit, plus both selected native
+checkpoints at their original export paths and `models/final` deployment copies.
+Additional checkpoints and interrupted-run resume state are not needed to inspect
+the result. CPU measured faster than the tested RTX 4060 configuration for these
+small networks; observed main fitting time was 44.33 minutes, not a hardware guarantee.
+The A2C actors were trained from fresh networks after causal teacher initialization;
+they are not unchanged pretrained Gelato weights or the full Plume pipeline.
 
-## 6. Full new browser evaluation
+## 4. Testbed and new browser measurements
 
-Keep the delivered ZIP immutable. Use a fresh **recursive Git checkout** named
-LEO_ABR_RL, start the testbed, and archive that copy's existing
-`artifacts/final/evaluation` directory outside the checkout. This avoids both
-overwriting submitted evidence and accidentally skipping its completed keys.
-Do not alter the controller based on submitted test scores and call the same
-suite untouched; revised policies need the sealed reserve or new workloads.
+Use a disposable **recursive Git clone** named `LEO_ABR_RL` for a new campaign;
+the browser runner refers to that Compose project/container name. Windows was
+tested with Ubuntu-22.04 WSL; Linux can run Docker directly. Install Docker Engine
+and Compose, allow ports 443/4444/7900/8081/8888/27017, and retain network access
+and disk space for pinned images. The livesim2 image already contains the shared
+media. Full upstream cloud provisioning is not necessary for this emulation.
+
+From the clone in Linux/WSL:
+
+```sh
+bash scripts/testbed.sh up
+bash scripts/testbed.sh status
+```
+
+The script uses five Compose overlays, builds local modified player source and
+the typed probe sidecar, and starts pinned upstream services without rebuilding
+Nginx. Using only the original Compose file would select the upstream player.
+Install `requirements-browser.txt` in the host trial environment (NumPy and
+Matplotlib from `requirements-results.txt` are needed for analysis). The runner
+drives container Chrome, where service hostnames resolve; an arbitrary host
+Chrome tab is not the same network context. Keep browser trials sequential.
+
+Policy choices in the player URL are:
+
+| Controller | Query options |
+|---|---|
+| Original CMAB | `abrGeneral=abrCMAB` |
+| Improved CMAB | `abrGeneral=abrCMABImproved&cmabVariant=guard` |
+| Guard-only control | `abrGeneral=abrCMABImproved&cmabVariant=guard_only` |
+| Conventional A2C | `abrGeneral=abrAnjanRL&neuralVariant=conventional` |
+| LEO-aware A2C | `abrGeneral=abrAnjanRL&neuralVariant=leo` |
+
+CMAB retains synchronous Pyodide; neural policies execute synchronous JavaScript
+on the Chrome host CPU. Player histories and timestamped cached RTT health are
+the inputs. MongoDB logs outcomes and is not queried by synchronous inference.
+
+Before a **fresh full matrix**, archive that clone's existing
+`artifacts/final/evaluation` directory externally; do not erase the delivered
+evidence or leave completed keys that cause every trial to be skipped. Do not tune
+a policy on submitted test scores and describe the same suite as unseen: revised
+policies need the sealed reserve or new workloads.
 
 ```sh
 python scripts/experiment_clock.py hold
@@ -200,27 +196,48 @@ python scripts/archive_final_runs.py artifacts/final/evaluation/runs.json
 python scripts/reproduce_final.py --saved-results
 ```
 
-The freeze refuses overwrite and verifies the running Docker source. The runner
-resumes completed keys and restores clock control in `finally`. A normal run has
-170 controlled 120-second sessions and nine separate 180-second repository
-replays: about nine hours of measured source-aligned cycles on the original
-host. Only explicit dual-clock faults are automatically retried, with failed
-recordings retained. Bad QoE or no useful playback is never an exclusion rule.
-After a deliberate interruption, rerun the matrix command to resume; a hard kill
-may additionally require `experiment_clock.py release`.
+Freeze creation refuses overwrite and checks running player source against the
+clone. It requires Git metadata; use the recursive clone for a newly recorded
+freeze. The runner restores clock control in `finally`; only dual-clock faults
+are retried automatically, with invalid evidence retained. Poor QoE/no playback
+is never an exclusion criterion. The full schedule contains 170 controlled
+120-second sessions plus nine 180-second raw replays, about nine hours including
+source-phase alignment on the original host. A rerun measures fresh noisy outcomes;
+exact equality is expected only for saved-evidence recomputation.
 
-## 7. Scientific scope and licenses
+The explicit single-host clock option and temporary NTP pause avoid measured
+guest-clock steps. Linux users need permission to manage `systemd-timesyncd`;
+Windows invokes the tested WSL distribution. After a hard kill, inspect/release:
 
-The common score uses actually played nominal-quality utility, stalls, startup,
-quality variation and excess live delay. It is not MOS/VMAF. Fitted CMAB download
-feedback is a surrogate; it is not the independently evaluated playback score.
-Conditional repeat intervals on fixed cases are not population-wide Starlink
-confidence intervals. Related windows from two RTT recordings are not independent
-measured capacity sessions. Raw repository replay differs from the paper's
-stated emulator parameters and is reported separately.
+```sh
+python scripts/experiment_clock.py status
+python scripts/experiment_clock.py release
+```
 
-Parent code: GPLv3 (`LICENSE`). Player: retained dash.js BSD notices. Reference
-model: retained Sagar Patel MIT license. Croatia2019 video: EBU/CTA, CC-BY4.0;
-delivered by the pinned upstream image. LENS traces/derived arrays: Jinwei Zhao
-and Jianping Pan, MMSys2024, doi:10.1145/3625468.3652170, CC-BY-SA4.0 as recorded
-in the manifests. Reproduction requires honoring these original notices.
+## 5. Evidence interpretation and release verification
+
+The common score integrates played nominal-quality utility, startup, rebuffering,
+played-quality variation and excess live delay. Catch-up wait remains rebuffering;
+skipped media earns no played utility. It is not MOS/VMAF or the CMAB internal
+download surrogate. All six main contrasts use identical two-repeat pairs.
+Supporting three-repeat CMAB effects are separately labeled. Related RTT windows,
+synthetic capacity, calibration error and limited repeats restrict generalization.
+Raw repository replay differs from the paper's stated settings and is separate.
+
+To assemble or verify another focused ZIP from a Git checkout:
+
+```sh
+python scripts/build_submission.py
+python scripts/verify_submission.py release/Group4-submission.zip --extract-dir /absolute/external/new/LEO_ABR_RL
+```
+
+Use a new/empty extraction directory outside the project. Verification checks
+every manifest byte, no unexpected files, the absence of presentation/cache
+material, player snapshot preparation, and exact full/joint analysis agreement
+after replaying all saved evidence. `release/clean-extraction-check.json` and
+`SHA256SUMS` identify the actually checked archive. This is a release-integrity
+check, not another 179-session campaign. The user uploads the ZIP to the portal.
+
+Parent code retains GPL-3.0 (`LICENSE`), dash.js its BSD notices, studied Maguro
+code its MIT attribution, Croatia media EBU/CTA CC BY 4.0, and LENS RTT/derived
+arrays Zhao/Pan CC BY-SA 4.0. Source URLs and hashes accompany the data manifests.

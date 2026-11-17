@@ -69,7 +69,7 @@ def main():
              'warning':'Original shaper maps non-positive RTT to 100% link loss; this is an emulation convention, not proof of a real outage.'}],
         'throughput_examples':[], 'playback_logs':[],
         'archive':{'path':'paper-data/data', 'kind':'policy-dependent archived outcomes',
-                   'git_commit':subprocess.check_output(['git','-C','paper-data','rev-parse','HEAD'],text=True).strip(),
+                   'git_commit':subprocess.check_output(['git','-C','paper-data','rev-parse','HEAD'],text=True).strip() if (ROOT/'paper-data/.git').exists() else None,
                    'file_count':sum(p.is_file() for p in (ROOT/'paper-data/data').rglob('*'))},
         'semantics':{'probe_loss':'Unanswered probe, never automatically converted into full data-path outage.',
                      'capacity':'Generated link capacity; measured goodput examples remain separate to avoid double-counting RTT/loss.',

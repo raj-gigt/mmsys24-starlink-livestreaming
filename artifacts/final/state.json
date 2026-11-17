@@ -68,24 +68,27 @@
       "updated_utc": "2026-11-17T17:59:31.662863+00:00"
     },
     "20": {
-      "status": "Pending",
-      "evidence": "Revised plan only; Four-policy analysis and dependency inventory"
+      "status": "Complete",
+      "evidence": "Balanced80-session four-policy synthesis and all6 paired contrasts generated;185 required portable runs and830 files inventoried via explicit roots/import closure. Frozen303 files/models unchanged; export helper exact parity verified.",
+      "updated_utc": "2026-11-17T19:09:06.559953+00:00"
     },
     "21": {
-      "status": "Pending",
-      "evidence": "Revised plan only; Final report and evaluator GitHub handoff"
+      "status": "Complete",
+      "evidence": "Eight-page academic report rendered and inspected all pages; margins/results/link/blank contribution fields checked. Root README and reproduction/source index rewritten for evaluator. Clean minimal-environment evidence reproduction and full native export verified.",
+      "updated_utc": "2026-11-17T19:33:01.076478+00:00"
     },
     "22": {
-      "status": "Pending",
-      "evidence": "Revised plan only; Focused ZIP and clean reproduction"
+      "status": "Running",
+      "evidence": "Initial focused ZIP passes full179-session and balanced80-session exact reproduction in fresh results-only venv. All86 arrays verified (85 regenerated plus Victoria cache); all four workload manifests exact; all build inputs present; nine full export assets byte-identical. Publishing and final immutable ZIP verification next.",
+      "updated_utc": "2026-11-17T19:33:01.076478+00:00"
     },
     "23": {
       "status": "Deferred",
       "evidence": "Revised plan only; Deferred presentation/demo/learning/rehearsal"
     }
   },
-  "updated_utc": "2026-11-17T17:59:31.662863+00:00",
-  "current_step": 19,
+  "updated_utc": "2026-11-17T19:33:01.076478+00:00",
+  "current_step": 22,
   "contribution_section": "User requested blank contribution template; fill later, do not invent teammate work",
   "active_experiment": {
     "step": 18,
@@ -97,7 +100,7 @@
     "resume": "Same command skips completed keys; do not edit frozen sources/models/configs. Clock helper holds/restores guest NTP automatically.",
     "source_publication": "be131536f260d64a6c7e6e4478d51e01e60bcf62; player60f56693032bb7e12c174951da4ee05818383527",
     "do_not_modify": "Every file in freeze.sources, or add files under dash.js/src, testplayer or rl/web; no heavy training or parallel browser experiments while measured matrix runs.",
-    "next": "STOP. Await user instructions for Step20 onwards.",
+    "next": "Measured campaign complete. Submission release Step22 active; Step23 deferred.",
     "analysis_followthrough_session": null,
     "followthrough": "After179 and automatic clock release, archive complete/invalid raw events and run reproduce_final --saved-results; source/model/metric/cutoff/replay checks then analyse_final. Visual checks and report/deck/demo/package still require continuation.",
     "last_saved_trials": 179,
@@ -115,14 +118,14 @@
   },
   "artifact_authoring": {
     "presentations_marker_done": true,
-    "pdf_marker_done": false,
+    "pdf_marker_done": true,
     "presentation_source": "scripts/build_final_presentation.mjs",
     "report_source": "scripts/build_final_report.py",
     "external_build_root": "C:/Users/HP/AppData/Local/LEO-RL-final-artifacts",
     "runtime": "C:/Program Files/WindowsApps/OpenAI.CodexPrimaryRuntime.v26-1112-737-0_26.1112.737.0_x64__3k8sg7r9htsxt/dependencies",
     "latest_pushed_parent": "5dbe19d",
     "draft_assembly_session": null,
-    "future_process": "Disabled. Step20+ requires new user instructions.",
+    "future_process": "Disabled. Presentation Step23 requires new user instruction.",
     "draft_assembly_status": "Cancelled session29217 before report/PPT generation per user stop-after-Step19 instruction"
   },
   "data_publication": {
@@ -132,12 +135,12 @@
     "note": "Compact arrays were ignored; now intentionally published without regeneration."
   },
   "execution_boundary": {
-    "authorized_through_step": 19,
-    "stop_after": "Step19 complete and verified",
-    "step20_onwards": "Await user input and instructions; do not auto-execute",
-    "basis": "User explicitly requested stopping after verified Step19 on2026-11-17"
+    "authorized_through_step": 22,
+    "stop_after": "Verified submission handoff",
+    "step23": "Deferred presentation; no execution before new user instruction",
+    "basis": "User: begin submission run"
   },
-  "execution_state": "Stopped after verified Step19; Steps20-23 revised in planning only, awaiting user inputs/instruction.",
+  "execution_state": "Submission run active: Steps20-22 only",
   "resolved_protocol_refinements": [
     "Full raw tc log implemented and source-verified479 events versus256 bounded status; physical outage/100ms/recovery PASS. Need final replay checks after actual runs.",
     "Per-sample epoch/performance consistency and production neural adapter prepared; build only after final actor export.",
@@ -147,10 +150,18 @@
   "post_step19_plan_revision": {
     "date": "2026-11-18",
     "scope": "Submission only:20 joint analysis/dependency audit;21 report/GitHub handoff;22 focused ZIP/reproduction/publication;23 presentation deferred",
-    "execution_authorized": false,
-    "required_before_execution": "Collect remaining user inputs and instruction to begin; existing commit/push permission persists",
+    "execution_authorized": true,
+    "required_before_execution": "Satisfied: user inputs and explicit begin submission run authorization received.",
     "presentation_not_before": "2026-11-18T08:00:00+05:30",
     "no_new_experiments_or_training": true,
     "preserve_repository_and_required_paths": true
+  },
+  "submission_user_inputs": {
+    "contributions": "Leave specific contribution statements empty; allocate an unfilled template/space in the report. Do not infer or fill actual work.",
+    "report_pages": "6-8 total target",
+    "report_style": "Academic and professional research-paper/LaTeX-style format; technical, concise but not shallow; avoid bloat",
+    "zip_restrictions": "No known size/name/layout restrictions",
+    "portal_upload": "User will upload",
+    "status": "Confirmed and execution authorized; contribution details intentionally remain empty."
   }
 }

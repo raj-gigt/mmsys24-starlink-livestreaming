@@ -5,7 +5,7 @@ import numpy as np
 import torch
 from stable_baselines3 import A2C
 from .final_env import ROOT,FinalLiveEnv,final_features
-from .export_reference import layer
+from .export_layers import layer
 
 def main():
     torch.set_num_threads(1)

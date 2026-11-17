@@ -112,7 +112,10 @@ def main():
         subprocess.run([sys.executable,str(ROOT/'scripts/summarize_final_deployment.py')],cwd=ROOT,check=True)
         subprocess.run([sys.executable,str(ROOT/'scripts/analyse_final.py')],cwd=ROOT,check=True)
         subprocess.run([sys.executable,str(ROOT/'scripts/analyse_final_contrasts.py')],cwd=ROOT,check=True)
-        print('Reproduced final analysis.json and F3-F5 / T3-T4 from portable events. No Docker or MongoDB used.')
+        subprocess.run([sys.executable,str(ROOT/'scripts/analyse_four_policies.py')],cwd=ROOT,check=True)
+        for name in ['plot_final_architecture.py','plot_cmab_ablation.py','plot_cmab_validation.py']:
+            subprocess.run([sys.executable,str(ROOT/'scripts'/name)],cwd=ROOT,check=True)
+        print('Reproduced full and balanced four-policy analyses, report figures and supporting tables. No Docker or MongoDB used.')
 
 
 if __name__ == '__main__':

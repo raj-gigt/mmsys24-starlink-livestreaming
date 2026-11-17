@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "pdf_sha256": "83a156f42c381cde9d3afc6ad67e92de840a9a15daca1fef2b097c5d39aa2c21",
+  "pages": [
+    {
+      "page": 1,
+      "characters": 3297,
+      "all_text_within_page_margins": true
+    },
+    {
+      "page": 2,
+      "characters": 2707,
+      "all_text_within_page_margins": true
+    },
+    {
+      "page": 3,
+      "characters": 2958,
+      "all_text_within_page_margins": true
+    },
+    {
+      "page": 4,
+      "characters": 3352,
+      "all_text_within_page_margins": true
+    },
+    {
+      "page": 5,
+      "characters": 2617,
+      "all_text_within_page_margins": true
+    },
+    {
+      "page": 6,
+      "characters": 2082,
+      "all_text_within_page_margins": true
+    },
+    {
+      "page": 7,
+      "characters": 3520,
+      "all_text_within_page_margins": true
+    },
+    {
+      "page": 8,
+      "characters": 4259,
+      "all_text_within_page_margins": true
+    }
+  ],
+  "layout": "Times serif academic single-column; numbered sections, figures/tables, source link and references",
+  "visual_review": "All eight rendered pages inspected; modified pages re-rendered after final wording/reference corrections. No clipped text, overlapping panels or spill pages.",
+  "contributions": "All three specific-work fields intentionally empty",
+  "checked_utc": "2026-11-17T19:32:13.937115+00:00"
+}

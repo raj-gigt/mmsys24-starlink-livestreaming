@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "verified_npz_arrays": 86,
+  "regenerated_arrays": 85,
+  "retained_Victoria_cache": 1,
+  "comparison": "Exact keys and element values against submitted originals; no Git or paper-data submodule",
+  "regenerated_workloads_exact_json": [
+    "development",
+    "validation",
+    "test",
+    "reserve"
+  ],
+  "compose_services": 9,
+  "build_input_paths": [
+    "dash.js/samples/starlink/testplayer",
+    "dash.js/src",
+    "etc/nginx/conf.d/livesim2.conf",
+    "poetry.lock",
+    "pyproject.toml",
+    "rl/web",
+    "runner/batch_runner.py",
+    "runner/config.py",
+    "runner/plot.py",
+    "runner/single_runner.py",
+    "runner/tc-trace.py",
+    "runner/tc.py",
+    "runner/video.py",
+    "shaper/entrypoint.sh",
+    "shaper/supervisord.conf",
+    "stats-server",
+    "stats-server/requirements.txt"
+  ],
+  "source_build_closure": "Every COPY/ADD source for all merged Compose build definitions exists; all input bind mounts present; inherited figures is output-only",
+  "native_selected_weights": "Both native checkpoints exactly reproduce serialized actor layers using the submitted isolated export helper",
+  "node_parity": {
+    "status": "PASS",
+    "fixtures": 394,
+    "max_absolute_logit_error": 1.1444091796875e-05,
+    "scope": "Native/JS preprocessing, logits, actions and invalid-input rejection"
+  },
+  "qualification": "Read-only Compose config and file closure verified; no new container build or browser campaign performed",
+  "full_export_reproduction": {
+    "status": "PASS",
+    "files_byte_identical": [
+      "rl/web/final_models.js",
+      "models/final/conventional/actor.json",
+      "models/final/conventional/checkpoint.zip",
+      "models/final/conventional/fixtures.json",
+      "models/final/conventional/manifest.json",
+      "models/final/leo/actor.json",
+      "models/final/leo/checkpoint.zip",
+      "models/final/leo/fixtures.json",
+      "models/final/leo/manifest.json"
+    ],
+    "fixtures": 394,
+    "training_cli": "--help imports all training dependencies without starting fits"
+  }
+}

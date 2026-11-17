@@ -7,9 +7,17 @@ from pathlib import Path
 import subprocess
 import tarfile
 import tempfile
+from submission_inventory import inventory
 
 ROOT=Path(__file__).resolve().parents[1]
 TEXT={'.js','.cjs','.ts','.py','.html','.css','.json','.xml','.txt','.yaml','.yml','.md'}
+RELEASE_TEXT=TEXT|{'.svg','.csv','.toml','.lock','.conf','.sh'}
+
+def normalized(name,data):
+    path=Path(name)
+    if path.suffix.lower() in RELEASE_TEXT or path.name.startswith(('Dockerfile','LICENSE','.git','.docker')):
+        return data.replace(b'\r\n',b'\n')
+    return data
 
 
 def git(folder,*args):
@@ -21,6 +29,7 @@ def verify(cache):
            'player':'https://github.com/anjanrd/dash.js'}
     revisions={};archives={}
     freeze=json.loads((ROOT/'artifacts/final/evaluation/freeze.json').read_text())
+    release=inventory();assert not release['missing_required'],release['missing_required']
     for kind,url in repos.items():
         folder=cache/kind;folder.mkdir(parents=True,exist_ok=True)
         subprocess.run(['git','init','--bare',str(folder)],check=True,stdout=subprocess.DEVNULL)
@@ -30,10 +39,13 @@ def verify(cache):
         subprocess.run(['git','--git-dir='+str(folder),'fetch','--depth=1',url,ref],check=True)
         revisions[kind]=git(folder,'rev-parse','FETCH_HEAD').decode().strip()
         if kind=='player':names=['src','samples/starlink/testplayer']
-        else:names=[p for p in freeze['sources'] if not p.startswith('dash.js/')]
-        data=git(folder,'archive','FETCH_HEAD','--',*names)
-        with tarfile.open(fileobj=io.BytesIO(data)) as archive:
-            archives[kind]={m.name:archive.extractfile(m).read() for m in archive.getmembers() if m.isfile()}
+        else:names=[p for p in release['files'] if not p.startswith('dash.js/')]
+        # Bounded argument lists also work under Windows command-line limits.
+        archives[kind]={}
+        for offset in range(0,len(names),60):
+            data=git(folder,'archive','FETCH_HEAD','--',*names[offset:offset+60])
+            with tarfile.open(fileobj=io.BytesIO(data)) as archive:
+                archives[kind].update({m.name:archive.extractfile(m).read() for m in archive.getmembers() if m.isfile()})
     pointer=git(cache/'parent','ls-tree','FETCH_HEAD','dash.js').decode().split()[2]
     assert pointer==revisions['player'],'Parent submodule does not pin the retrieved player branch'
     for name,expected in freeze['sources'].items():
@@ -43,10 +55,17 @@ def verify(cache):
         if Path(key).suffix.lower() in TEXT or Path(key).name.startswith('Dockerfile'):
             data=data.replace(b'\r\n',b'\n')
         assert hashlib.sha256(data).hexdigest()==expected,name
+    for name in release['files']:
+        kind='player' if name.startswith('dash.js/') else 'parent'
+        key=name[len('dash.js/'):] if kind=='player' else name
+        if kind=='player' and key not in archives[kind]:
+            archives[kind][key]=git(cache/'player','show','FETCH_HEAD:'+key)
+        assert normalized(name,archives[kind][key])==normalized(name,(ROOT/name).read_bytes()),name
     result={'status':'PASS','parent_revision':revisions['parent'],'player_revision':revisions['player'],
             'verified_frozen_files':len(freeze['sources']),
+            'verified_submission_source_files':len(release['files']),
             'method':'Fresh public shallow fetches, tar object contents and parent submodule pin; not local remote-tracking refs',
-            'scope':'Measured file contents recoverable from published parent and player fork'}
+            'scope':'Every curated submission input, final report byte content and measured source recoverable from published parent and pinned player fork; text line endings normalized'}
     out=ROOT/'artifacts/final/remote-retrieval-check.json';out.write_text(json.dumps(result,indent=2))
     print(json.dumps(result,indent=2))
 

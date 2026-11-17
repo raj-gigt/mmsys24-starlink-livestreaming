@@ -43,7 +43,7 @@ def main():
   'external_dependencies':'Pinned Docker dependency/media images for new browser experiments; Python libraries from requirements. Saved results require only numpy/matplotlib.',
   'transformation':'Only portable evidence index is subset to the 185 bundled run payloads; parent full research index remains unchanged.',
   'excluded_categories':plan['excluded_categories'],
-  'human_outstanding':['Individual contribution statements intentionally remain blank per user instruction','Portal upload by user'],
+  'human_outstanding':['Portal upload by user'],
   'presentation_scope':'Deferred; no presentation/demo/learning files or execution requirement in this release'}
  manifest_bytes=encoded(manifest);(release/'manifest.json').write_bytes(manifest_bytes)
  target=Path(args.output);target=target if target.is_absolute() else ROOT/target;target.parent.mkdir(parents=True,exist_ok=True)

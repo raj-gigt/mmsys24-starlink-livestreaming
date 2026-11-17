@@ -3,7 +3,7 @@
 **CS6048 · Group 4 · Final submission · branch `anjan`**
 
 Anjan R D (ME23B157), Rajat Dugar (ME23B114), Deviprasad V K (ME23B164).
-Specific individual contribution statements are intentionally blank in the report.
+Individual contribution statements are included in Section 1.1 of the report.
 
 This course project extends Zhao and Pan's MMSys 2024 live-streaming artifact.
 We improve its contextual multi-armed bandit (CMAB) and train compatible

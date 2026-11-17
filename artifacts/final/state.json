@@ -87,9 +87,9 @@
       "evidence": "Revised plan only; Deferred presentation/demo/learning/rehearsal"
     }
   },
-  "updated_utc": "2026-11-17T19:37:59.364610+00:00",
+  "updated_utc": "2026-11-17T19:50:45.592842+00:00",
   "current_step": 22,
-  "contribution_section": "User requested blank contribution template; fill later, do not invent teammate work",
+  "contribution_section": "User-approved report-style paragraphs inserted in Section1.1 and T6; supersedes prior blank-template instruction.",
   "active_experiment": {
     "step": 18,
     "session_id": 11016,
@@ -174,7 +174,7 @@
     "source_revision": "54cde413b4ca6bc6ace42e4c5e675ef195eb8ede",
     "player_revision": "60f56693032bb7e12c174951da4ee05818383527",
     "verified_at_utc": "2026-11-17T19:37:59.364610+00:00",
-    "contribution_statements": "Intentionally empty per user instruction",
+    "contribution_statements": "Three user-approved paragraphs included",
     "portal_upload": "User will upload",
     "presentation": "Not executed; deferred until new user instruction",
     "verification": [

@@ -1,10 +1,10 @@
 {
   "status": "PASS",
-  "pdf_sha256": "83a156f42c381cde9d3afc6ad67e92de840a9a15daca1fef2b097c5d39aa2c21",
+  "pdf_sha256": "6c6469d1737a7b9f9deaf8814bd71fe5353e3788d0fb36814afe0839b263e322",
   "pages": [
     {
       "page": 1,
-      "characters": 3297,
+      "characters": 3930,
       "all_text_within_page_margins": true
     },
     {
@@ -44,7 +44,7 @@
     }
   ],
   "layout": "Times serif academic single-column; numbered sections, figures/tables, source link and references",
-  "visual_review": "All eight rendered pages inspected; modified pages re-rendered after final wording/reference corrections. No clipped text, overlapping panels or spill pages.",
-  "contributions": "All three specific-work fields intentionally empty",
-  "checked_utc": "2026-11-17T19:32:13.937115+00:00"
+  "visual_review": "Contribution table on page1 rendered and inspected; all text fits. Pages2-8 text identical to previously inspected report.",
+  "contributions": "All three user-approved paragraphs present verbatim from T6",
+  "checked_utc": "2026-11-17T19:50:45.586794+00:00"
 }

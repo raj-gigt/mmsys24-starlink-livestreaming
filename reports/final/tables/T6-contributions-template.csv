@@ -1,4 +1,4 @@
 name,roll,domain,specific_completed_work_2_to_3_sentences
-Anjan R D,ME23B157,Algorithms and model training,
-Rajat Dugar,ME23B114,Player integration and builds,
-Deviprasad V K,ME23B164,Experiment design and QoE evaluation,
+Anjan R D,ME23B157,Algorithms and model training,"Anjan investigated and refined the reference CMAB algorithm, including its feedback mechanism, observation features and safety constraints. He developed the training environment and conventional/LEO-aware A2C policies, conducted hyperparameter and multi-seed experiments, selected checkpoints using validation results, and exported numerically verified JavaScript actors for deployment."
+Rajat Dugar,ME23B114,Player integration and builds,"Rajat implemented the browser-side integration of the developed controllers into dash.js and configured Docker to build and run the modified player. He connected player observations, RTT health and request feedback to the policies, verified synchronous inference and fallback behaviour, and coordinated repository integration and submission packaging."
+Deviprasad V K,ME23B164,Experiment design and QoE evaluation,"Deviprasad developed the reproducible network scenarios and evaluation methodology, verified the emulator and calibrated the training environment against browser measurements. He conducted the controlled experiments, analysed all four controllers using a common playback-based QoE score, investigated regressions and uncertainty, and produced the results, figures and evidence-reproduction workflow."

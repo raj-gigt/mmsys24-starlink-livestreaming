@@ -48,9 +48,8 @@ def main():
  h('1. Problem statement and related work')
  p('Our objective is a better adaptive bitrate (ABR) controller for low-latency LEO-network playback, compared with the reference CMAB, under the same media, network schedule and playback controls. We change the policy and its causal observation/feedback interface; optional congestion-control work is excluded. Conditions combine measured round-trip time (RTT) with declared generated capacity and interruptions. Results concern this emulation suite, not a universal improvement on operational Starlink links.')
  p('The MMSys artifact [1,2] supplies a live DASH player and satellite-network emulator. Pensieve [3] motivates client-observation actor-critic control. Plume [4] studies workload representation and sampling for network RL; its Maguro/Gelato implementation [5] has an incompatible ten-action, metadata-rich interface. We train compatible actors using standard A2C [6]; we use balanced scenario families, not Plume\'s full clustering/prioritization framework. Our contribution is an audited controller refinement and a common deployed evaluation, not unchanged published weights or a novel A2C architecture.')
- sub('1.1 Team contribution statements (intentionally unfilled)')
+ sub('1.1 Team contribution statements')
  table([['Member','Roll number','Specific completed work (2-3 factual sentences)']]+[[m['name'],m['roll'],by_roll[m['roll']] or '________________________________________\n________________________________________\n________________________________________'] for m in project['members']],[94,73,W-167])
- p('Contribution details remain empty at the team\'s explicit request. Names and roll numbers are from the proposal.','small')
 
  page();h('2. Shared system and CMAB refinement')
  figure('F1-system.png','Figure 1. Common emulation and evidence paths. MongoDB stores measurements; synchronous decisions consume player state and cached, timestamped RTT health.')

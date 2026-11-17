@@ -2,7 +2,7 @@
 
 Start with the eight-page report and root README. This guide separates verification
 of measured evidence from new training or network experiments. Individual
-contribution details remain intentionally unfilled; no presentation files or demo
+contribution statements are included in Section 1.1; no presentation files or demo
 execution are required by this submission.
 
 ## 1. Verify and recompute saved results
@@ -45,8 +45,8 @@ node scripts/check_final_export.cjs
 Rebuild the paper with `pip install -r requirements-report.txt` followed by
 `python scripts/build_final_report.py`. Its source uses ReportLab with Times
 serif, numbered sections, scientific tables/figures and references; it does not
-require a TeX installation. All specific contribution statements are blank by
-request. The editable fields are in `reports/final/tables/T6-contributions-template.csv`;
+require a TeX installation. The user-approved contribution statements are stored
+in `reports/final/tables/T6-contributions-template.csv`;
 if filled later, rebuild and inspect the report and reverify/repackage the ZIP.
 
 ## 2. Full GitHub source versus the focused ZIP
@@ -69,7 +69,7 @@ Script paths above are under `scripts/`; figure/table paths under `reports/final
 training/evaluation paths under `artifacts/final/`. T7 defines the exact score
 semantics; T3 retains every final run, and T4 supporting tables retain complete
 matrix, sensitivity, recovery and raw-replay results. The contribution table uses
-T6 with empty specific-work fields.
+T6 with the three user-approved statements.
 
 ```sh
 git clone --branch anjan --recurse-submodules https://github.com/raj-gigt/mmsys24-starlink-livestreaming LEO_ABR_RL

@@ -125,6 +125,454 @@
     "scientific_status": "complete",
     "sha256": "bca640d37479a28ff9c64ce7908f73eb88f4c74afbb4a363ff469b3db72fbf3b"
   },
+  "phasea-abrAnjanRL-20261117T090107-222a90": {
+    "bytes": 1280295,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T090107-222a90.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "2d23ba065afd8446e482774c9d338fdb41ba3810dd7835c129c463aa688625ac"
+  },
+  "phasea-abrAnjanRL-20261117T090708-119493": {
+    "bytes": 1048098,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T090708-119493.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "f82ec9efce48b071ca6044346670d84463af3812272bbfcf3375f910acd64a36"
+  },
+  "phasea-abrAnjanRL-20261117T091908-bec614": {
+    "bytes": 1268938,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T091908-bec614.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "bc2640e2236a27bae153be6457e3f825ea606a858d419cea1f74ae62863e0c32"
+  },
+  "phasea-abrAnjanRL-20261117T092508-d9bb4a": {
+    "bytes": 1053212,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T092508-d9bb4a.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "74aefe3efbc12376e1b9ca7866183712bd53f315949d8fe38476330e1462c805"
+  },
+  "phasea-abrAnjanRL-20261117T093707-586bc0": {
+    "bytes": 1223885,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T093707-586bc0.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "5f519ee90a6387a0a354a18cd0277934a4c35fd0a11383ee145b9ebc453d74d1"
+  },
+  "phasea-abrAnjanRL-20261117T094307-fdab9d": {
+    "bytes": 995796,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T094307-fdab9d.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "aa8b098d8ac317d0c953fc2115bd0fa17e5adbead66fa1f7a0287268203119ce"
+  },
+  "phasea-abrAnjanRL-20261117T095508-605281": {
+    "bytes": 1246435,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T095508-605281.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "5732eac6002d48062dc425a28125f8822dcb43d74d9f077ea8b8c5f210eba53a"
+  },
+  "phasea-abrAnjanRL-20261117T100108-761317": {
+    "bytes": 1020832,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T100108-761317.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "827ecc16695118159d7c8281e4c7611eb58470b297d42881ea9126395f06b818"
+  },
+  "phasea-abrAnjanRL-20261117T101307-603ebb": {
+    "bytes": 1294981,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T101307-603ebb.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "efd7782c99caea31d6620b540ace2b3ae2dd39e9bfb1c72f30ac1817097fad08"
+  },
+  "phasea-abrAnjanRL-20261117T101908-d33ea0": {
+    "bytes": 1017652,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T101908-d33ea0.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "8d7a97f57191198f198bab2bc6980b51906a2908de5334b235f4c7e84476f149"
+  },
+  "phasea-abrAnjanRL-20261117T103708-cc7463": {
+    "bytes": 1064546,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T103708-cc7463.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "a80718da7a428ef7631dbb79a38d300caab063ce1a6d5791803b83728b5c12ce"
+  },
+  "phasea-abrAnjanRL-20261117T105207-89a0f7": {
+    "bytes": 1314156,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T105207-89a0f7.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "351b4d6c1dee1984a5d70be60a64f4afb333c6cf4721ef12c61cbdceee719b06"
+  },
+  "phasea-abrAnjanRL-20261117T105508-454b62": {
+    "bytes": 1047287,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T105508-454b62.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "2a7356514361308823d4295632495066726d20a60e1b71646967b21b6041ab27"
+  },
+  "phasea-abrAnjanRL-20261117T111008-8d4027": {
+    "bytes": 1270273,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T111008-8d4027.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "d28ad1e9a4810713f112e4c7e4d066ec744597816ff6d7f51f3a78084037e420"
+  },
+  "phasea-abrAnjanRL-20261117T112808-db1d1e": {
+    "bytes": 1304860,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T112808-db1d1e.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "a4f1f39e93a06f19c271bea8ea882876f1958765a09b824573413c51b412988d"
+  },
+  "phasea-abrAnjanRL-20261117T113408-331e2e": {
+    "bytes": 1055502,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T113408-331e2e.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "44996f1e2a661aa6361a49886afb113f4b288f4d9d7ca6f6eef7c9ba8b852d23"
+  },
+  "phasea-abrAnjanRL-20261117T114608-224caa": {
+    "bytes": 1177196,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T114608-224caa.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "441f2c2396dceb718b01d7900066319d68727835751aab2e447e0860d979158b"
+  },
+  "phasea-abrAnjanRL-20261117T115208-30c921": {
+    "bytes": 982434,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T115208-30c921.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "3c6732fe1dad75b7aae918bb1504821ef5fe9bdbb45147d5e0dc425d17139553"
+  },
+  "phasea-abrAnjanRL-20261117T120408-feb9a8": {
+    "bytes": 1262780,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T120408-feb9a8.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "e43d4c0841e8cd07fdb174e319aa9ace43e21d8c795daf35076a48cb6355941d"
+  },
+  "phasea-abrAnjanRL-20261117T121008-bcf86b": {
+    "bytes": 1026461,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T121008-bcf86b.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "0e0979b48714f345dc290c586a8b76bc4f8bd514f84bcac0ea442b8b8ba26211"
+  },
+  "phasea-abrAnjanRL-20261117T122808-60413c": {
+    "bytes": 1275689,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T122808-60413c.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "8216724827c0f7f64736aa9d27d3d5b049293a763c4a0605919c8db0764a7d26"
+  },
+  "phasea-abrAnjanRL-20261117T123408-9866f8": {
+    "bytes": 1059544,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T123408-9866f8.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "d942e548980665fa72676a0389942f105f204893a8f0a0f687794c43182a0115"
+  },
+  "phasea-abrAnjanRL-20261117T124608-22071b": {
+    "bytes": 1278280,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T124608-22071b.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "70755411739f8c5a05c53d09489f0091309cab970774d3b4aacdd953a6f6b0f4"
+  },
+  "phasea-abrAnjanRL-20261117T125208-a8a67e": {
+    "bytes": 1066707,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T125208-a8a67e.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "88262eafc66c61bb64e1fa9c30f78767f97c449c77af0835b580e106f3e4242a"
+  },
+  "phasea-abrAnjanRL-20261117T130408-4cb849": {
+    "bytes": 1231992,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T130408-4cb849.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "e1515e11cf2a07bbe444ef93bc9576c1d9ccda5122c00b7ffde386e0da26357b"
+  },
+  "phasea-abrAnjanRL-20261117T131008-016d24": {
+    "bytes": 1020293,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T131008-016d24.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "aad94451ed400719a77e0f605ac8ead09fb610b95b6141b66bd9a2c5ebb71145"
+  },
+  "phasea-abrAnjanRL-20261117T132208-0a7bf1": {
+    "bytes": 1243777,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T132208-0a7bf1.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "44b1afd1c17663e032be65a145503c750e6d8354c955f3635862a156fbc5094f"
+  },
+  "phasea-abrAnjanRL-20261117T132808-8c9535": {
+    "bytes": 1032868,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T132808-8c9535.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "a8a70a0c8aa0891b98230ba1b664f9a8a05d77a8e9cde5d13703fc9d85d2a410"
+  },
+  "phasea-abrAnjanRL-20261117T134608-a4913e": {
+    "bytes": 1063844,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T134608-a4913e.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "185f619c59a2254573b469023f2ced53dd7a1617541f594245e5552f10655277"
+  },
+  "phasea-abrAnjanRL-20261117T140108-d6532e": {
+    "bytes": 1291076,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T140108-d6532e.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "b408ca2173f149dee1dd1399f8f5e50a9520c72ca4fdb8343717256d5dab4ee0"
+  },
+  "phasea-abrAnjanRL-20261117T140409-c63216": {
+    "bytes": 1063683,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T140409-c63216.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "1c644801c6843f6bee37b861c4be39c7b360c488a33e9effb2bb4bc8205cb8e9"
+  },
+  "phasea-abrAnjanRL-20261117T141908-b6eab2": {
+    "bytes": 1324748,
+    "file": "artifacts/final/evidence/phasea-abrAnjanRL-20261117T141908-b6eab2.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "93223efa0ec8bc5046498fb34c7d33fdaeba01091cc5faf1fe1ea3489f1af3b2"
+  },
   "phasea-abrAnjanSimple-20261117T052017-94e776": {
     "bytes": 44690,
     "file": "artifacts/final/evidence/phasea-abrAnjanSimple-20261117T052017-94e776.json.gz",
@@ -222,6 +670,230 @@
     "ledger": "artifacts/final/calibration/runs.json",
     "scientific_status": "complete",
     "sha256": "0a05bc17140135edca6472ecccb3090ce41e082ffc696e0c8e02f616ba15ea03"
+  },
+  "phasea-abrBola-20261117T084946-611709": {
+    "bytes": 65325,
+    "file": "artifacts/final/evidence/phasea-abrBola-20261117T084946-611709.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "49f64b43da778259634267b6282d20a1c0dd900e41a0d0c72b9bb0ef82acb927"
+  },
+  "phasea-abrBola-20261117T092808-eda788": {
+    "bytes": 66610,
+    "file": "artifacts/final/evidence/phasea-abrBola-20261117T092808-eda788.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "b565f33fabd45c202e992574872cbd204b5d35453d691e7c1ff80cf599ba30ce"
+  },
+  "phasea-abrBola-20261117T094608-3da91b": {
+    "bytes": 67159,
+    "file": "artifacts/final/evidence/phasea-abrBola-20261117T094608-3da91b.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "bb4554fe6d9981278e90dee90f17c5b318b442992b6c0b4df7af56a055047fb9"
+  },
+  "phasea-abrBola-20261117T100408-292a6e": {
+    "bytes": 68476,
+    "file": "artifacts/final/evidence/phasea-abrBola-20261117T100408-292a6e.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "df9c320d4b0e794647fe55537503ec43b627711ee5f3b5f19d7404b28b24aca8"
+  },
+  "phasea-abrBola-20261117T102208-c3189e": {
+    "bytes": 76700,
+    "file": "artifacts/final/evidence/phasea-abrBola-20261117T102208-c3189e.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "1de11d64c52a2def36de7082c60b2fccc249b9bd332f16d714174c2eccf465c3"
+  },
+  "phasea-abrBola-20261117T104008-1c19a5": {
+    "bytes": 71290,
+    "file": "artifacts/final/evidence/phasea-abrBola-20261117T104008-1c19a5.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "16f3ca67f85eeeeab1c298d061132e00b7522fd2972c1b3e4d6b3334fe48e527"
+  },
+  "phasea-abrBola-20261117T105808-dea88e": {
+    "bytes": 75277,
+    "file": "artifacts/final/evidence/phasea-abrBola-20261117T105808-dea88e.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "ce5e71a1a4599d0baa33113d21e92c5aed6cf803f5da5a783d195e3357eb4d4a"
+  },
+  "phasea-abrBola-20261117T111608-cc609d": {
+    "bytes": 72959,
+    "file": "artifacts/final/evidence/phasea-abrBola-20261117T111608-cc609d.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "2aaa7ec44f8ce6704a97fbf1960236895c63898a6f2aa4d77070dd4919c40dc4"
+  },
+  "phasea-abrBola-20261117T115508-383d30": {
+    "bytes": 72426,
+    "file": "artifacts/final/evidence/phasea-abrBola-20261117T115508-383d30.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "70f5e29fa64df35f9be371102fac3302039f3e0a079d9363d319cdc4669a510e"
+  },
+  "phasea-abrBola-20261117T121308-13e8e5": {
+    "bytes": 73164,
+    "file": "artifacts/final/evidence/phasea-abrBola-20261117T121308-13e8e5.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "f475b1b6a106088d14db303a201dc8f75c20ae52ce35794f59244a0efd6b826e"
+  },
+  "phasea-abrBola-20261117T123708-814c71": {
+    "bytes": 65864,
+    "file": "artifacts/final/evidence/phasea-abrBola-20261117T123708-814c71.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "13060499d654ecfd50b4af223c8b53fe5ce34a1c5ca4552cc3f7cc896d1e7daf"
+  },
+  "phasea-abrBola-20261117T125509-1ff887": {
+    "bytes": 66211,
+    "file": "artifacts/final/evidence/phasea-abrBola-20261117T125509-1ff887.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "c01429bbf831b1957b6fa95ed962eb8a44202c5f77a075ee7ec93021e32cd5b1"
+  },
+  "phasea-abrBola-20261117T131308-05baaa": {
+    "bytes": 67155,
+    "file": "artifacts/final/evidence/phasea-abrBola-20261117T131308-05baaa.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "b398ab73f6db93d80422ceac6d92a4e7c75e7629a9fb6ab5d275415c19ec3409"
+  },
+  "phasea-abrBola-20261117T133108-dd6053": {
+    "bytes": 66928,
+    "file": "artifacts/final/evidence/phasea-abrBola-20261117T133108-dd6053.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "9e1657c49aaeb2163bb09f2dc4c390f5c6b66b844d953a7d4e33d74e2c19eed8"
+  },
+  "phasea-abrBola-20261117T134908-8b742f": {
+    "bytes": 77269,
+    "file": "artifacts/final/evidence/phasea-abrBola-20261117T134908-8b742f.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "5d1cb4e80361409e03650d2446e79e57df0af19feb26a9ba51db6ec1b8a551cb"
+  },
+  "phasea-abrBola-20261117T140708-21733e": {
+    "bytes": 73127,
+    "file": "artifacts/final/evidence/phasea-abrBola-20261117T140708-21733e.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "53eabe82af77887702e83e605cec54dce0233b26d8f55e80ac2fa524070a9dc1"
   },
   "phasea-abrCMAB-20261116T223038-a4285e": {
     "bytes": 28737,
@@ -428,6 +1100,230 @@
     ],
     "ledger": "artifacts/final/validation/finalists-v2/runs.json",
     "sha256": "de917aae5e6956b2379d565c7edb3e38335ed5f531852b38c3d24dafbccb07b3"
+  },
+  "phasea-abrCMAB-20261117T085508-0a7e9f": {
+    "bytes": 93654,
+    "file": "artifacts/final/evidence/phasea-abrCMAB-20261117T085508-0a7e9f.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "19503bb5acb6a6ed4e950193f2ac4d90fd82953d0b75698e04f2f7f135f7ba4f"
+  },
+  "phasea-abrCMAB-20261117T091307-a9a911": {
+    "bytes": 114583,
+    "file": "artifacts/final/evidence/phasea-abrCMAB-20261117T091307-a9a911.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "e3bf0fc8848d073362074d8e9ed87daa1798189c12960b874ca87cc15c807c65"
+  },
+  "phasea-abrCMAB-20261117T093108-778d47": {
+    "bytes": 69892,
+    "file": "artifacts/final/evidence/phasea-abrCMAB-20261117T093108-778d47.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "8279a779645dc8a8287c4af0725bc4f9321ef1b2922e4e5fbb7731632f2a0f15"
+  },
+  "phasea-abrCMAB-20261117T101007-eda7b4": {
+    "bytes": 70839,
+    "file": "artifacts/final/evidence/phasea-abrCMAB-20261117T101007-eda7b4.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "ac2e85c1198afa159d64f85aef4a49b30adf8cbf1d322508d26e46a9647e8ca1"
+  },
+  "phasea-abrCMAB-20261117T102807-a154a6": {
+    "bytes": 74295,
+    "file": "artifacts/final/evidence/phasea-abrCMAB-20261117T102807-a154a6.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "e6c7ed8bd9985aa972afff7ad6c7dee653643e5544fcc0f34207bf6d73cd310e"
+  },
+  "phasea-abrCMAB-20261117T104607-f30d2f": {
+    "bytes": 90874,
+    "file": "artifacts/final/evidence/phasea-abrCMAB-20261117T104607-f30d2f.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "32abf41cd781528f745f3b8100f12895fb9bdf6ea34eea91d4b92432d3c4d974"
+  },
+  "phasea-abrCMAB-20261117T110408-ecc13a": {
+    "bytes": 68529,
+    "file": "artifacts/final/evidence/phasea-abrCMAB-20261117T110408-ecc13a.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "88930f19afd6b3c27eb31afd46aaaeeea05a268efaaa394ad7c17fcd372bd3fb"
+  },
+  "phasea-abrCMAB-20261117T112207-713b2c": {
+    "bytes": 116643,
+    "file": "artifacts/final/evidence/phasea-abrCMAB-20261117T112207-713b2c.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "6bdd2052700913ed3c3bbbeeb7353028ef87093b7d1d0948ef721f670cfa3fa4"
+  },
+  "phasea-abrCMAB-20261117T114008-3b0dd8": {
+    "bytes": 66631,
+    "file": "artifacts/final/evidence/phasea-abrCMAB-20261117T114008-3b0dd8.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "2b06265d78a109c322aed6808126888b51a608f8ce09167089651140a0ea2c5c"
+  },
+  "phasea-abrCMAB-20261117T115808-be2817": {
+    "bytes": 89174,
+    "file": "artifacts/final/evidence/phasea-abrCMAB-20261117T115808-be2817.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "58a233729f3bed3d3f0da9ab2fe7e11d0961600522b1671ad11a95e2480e0c99"
+  },
+  "phasea-abrCMAB-20261117T122208-714c41": {
+    "bytes": 98174,
+    "file": "artifacts/final/evidence/phasea-abrCMAB-20261117T122208-714c41.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "fbd4feb8ac7bad300cbe7195d7ab8aed28edbd19f529a22c51349f122e862768"
+  },
+  "phasea-abrCMAB-20261117T124007-c01c20": {
+    "bytes": 98167,
+    "file": "artifacts/final/evidence/phasea-abrCMAB-20261117T124007-c01c20.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "a5bc70606fa9e67d3bb689d0042be09e8dbf9d4f1b510f8c244ce5b5777c3334"
+  },
+  "phasea-abrCMAB-20261117T131908-9397b4": {
+    "bytes": 70205,
+    "file": "artifacts/final/evidence/phasea-abrCMAB-20261117T131908-9397b4.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "66d0f0d4da7cb261f252b6e64a59e6c79c8cb05907f1d10fe32de0b74d0f5da5"
+  },
+  "phasea-abrCMAB-20261117T133708-c552ec": {
+    "bytes": 72241,
+    "file": "artifacts/final/evidence/phasea-abrCMAB-20261117T133708-c552ec.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "0e06b4a41ddaec13f1f1280a340d73da7ef962a2a3647cdb2fa07f9c23b7b9dd"
+  },
+  "phasea-abrCMAB-20261117T135508-37f2e0": {
+    "bytes": 74164,
+    "file": "artifacts/final/evidence/phasea-abrCMAB-20261117T135508-37f2e0.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "1bd7b25b97f44cd9b47c3fc6f858a44c4b910782e8ef44a84b570006b3da464d"
+  },
+  "phasea-abrCMAB-20261117T141307-6e7248": {
+    "bytes": 94189,
+    "file": "artifacts/final/evidence/phasea-abrCMAB-20261117T141307-6e7248.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "fa4478018a0899d6d33bbcd9efc40620fa12c40f8f4bf1f9706fb35332551dae"
   },
   "phasea-abrCMABImproved-20261116T222432-1fd2a5": {
     "bytes": 32098,
@@ -1466,5 +2362,677 @@
     ],
     "ledger": "artifacts/final/validation/finalists-v2/runs.json",
     "sha256": "ce3c5f4fb908af1c16469b1a5036e2f180f13c58e21bb944a804f616caefd576"
+  },
+  "phasea-abrCMABImproved-20261117T085808-43bbe1": {
+    "bytes": 159831,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T085808-43bbe1.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "ca096295ef6c63bbde88d4deec212ab4f9badf6ea278c4a0fc7c614b9ab3ce43"
+  },
+  "phasea-abrCMABImproved-20261117T090408-bd7e4c": {
+    "bytes": 81706,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T090408-bd7e4c.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "e97dd1c22fd54ab20cd0c1dd15b90ce22d4b329812f2271375f9d526018e3466"
+  },
+  "phasea-abrCMABImproved-20261117T091607-2b4f43": {
+    "bytes": 144792,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T091607-2b4f43.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "c9dc837aabb4246a41ea6b0c664ff182cb7113901a702c3fc502bd0cc03f4222"
+  },
+  "phasea-abrCMABImproved-20261117T092208-c72a58": {
+    "bytes": 82694,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T092208-c72a58.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "713b0a659bcc6e9b97c367b9f06df6715ab40f8f1636ab071a2ceae3a400ece5"
+  },
+  "phasea-abrCMABImproved-20261117T093407-65bd2a": {
+    "bytes": 131936,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T093407-65bd2a.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "5971f4092f26df29a7cab740e3226bd17e34ff44eb14af032cf4f12542188517"
+  },
+  "phasea-abrCMABImproved-20261117T094009-cb7f9e": {
+    "bytes": 84164,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T094009-cb7f9e.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "de5cd02ccc16f7436ec75995b4bf163ff6f44d9816d18ae73898df92f39e89b8"
+  },
+  "phasea-abrCMABImproved-20261117T095208-16b68c": {
+    "bytes": 106117,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T095208-16b68c.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "c84b00b28f19f944b6b14e36de064631efc80236e0f9134ddab5bd08bc56fa7e"
+  },
+  "phasea-abrCMABImproved-20261117T095808-44040d": {
+    "bytes": 83110,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T095808-44040d.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "c0048e0c41176451c2ec0758f125a8480ed63cf2168106f277d8c434da7f83b7"
+  },
+  "phasea-abrCMABImproved-20261117T101608-a7e94f": {
+    "bytes": 84988,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T101608-a7e94f.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "8d09771f898cc9c8a94f80edde4823d4a53e374d6d0d12075b247bf17aae0f6d"
+  },
+  "phasea-abrCMABImproved-20261117T103107-28d5b4": {
+    "bytes": 88225,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T103107-28d5b4.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "c23aa15d27e458f1c60d8d2f1613e53f2da2648d87d35632630275408a6a4289"
+  },
+  "phasea-abrCMABImproved-20261117T103407-1128c1": {
+    "bytes": 94012,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T103407-1128c1.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "43afeff64e0d6005260c226b2267dfade01593a6cdf826d6cb62eb34c5b6bd2b"
+  },
+  "phasea-abrCMABImproved-20261117T104908-cdf1c0": {
+    "bytes": 145039,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T104908-cdf1c0.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "64f9539bbd3e7a6e91dc27b850826de833729f8619d949d4cf56df6769c4db28"
+  },
+  "phasea-abrCMABImproved-20261117T110708-2bcefb": {
+    "bytes": 91404,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T110708-2bcefb.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "af73c0b8d3108622ddca2c7796961b548f2a42d8a181d9a36341e7f9d4aa160d"
+  },
+  "phasea-abrCMABImproved-20261117T111308-0c825a": {
+    "bytes": 84675,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T111308-0c825a.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "0f5071b2109c00fa14865bb477a209fe52835ed07bb3badf2e89da4731343abe"
+  },
+  "phasea-abrCMABImproved-20261117T112508-9c7dd2": {
+    "bytes": 144094,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T112508-9c7dd2.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "0511f29af32f323355e7b7593c75a36b1a02561edfe2ac2fe84c87f5b3aa1359"
+  },
+  "phasea-abrCMABImproved-20261117T113108-a8046f": {
+    "bytes": 91264,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T113108-a8046f.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "111621423fe985548f7bee7ae4002cda57cbe436b65cceed44815b4aecd64b2b"
+  },
+  "phasea-abrCMABImproved-20261117T114308-eca69e": {
+    "bytes": 86585,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T114308-eca69e.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "140ed539421c07b2352993fcaded4cb75c15bfdbfae1feaae4bdd4608f2b3173"
+  },
+  "phasea-abrCMABImproved-20261117T114908-ba440d": {
+    "bytes": 84151,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T114908-ba440d.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "b94646d5a5a7fe3b4f817098435b6d085d1a2c728c0367b748e0481f2cb9c60e"
+  },
+  "phasea-abrCMABImproved-20261117T120108-52a64f": {
+    "bytes": 155486,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T120108-52a64f.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "fbe696a8bb190ac7c083578f31cbf5428738c25acfc8b2aa6613bce1195fc59f"
+  },
+  "phasea-abrCMABImproved-20261117T120708-d55aa8": {
+    "bytes": 89720,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T120708-d55aa8.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "5bc9dc55f6bc1cdba3a607901f9b3ba2d0b2674f141adf114681b6084dfff176"
+  },
+  "phasea-abrCMABImproved-20261117T122508-604e6f": {
+    "bytes": 142196,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T122508-604e6f.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "c0a57e30d2c57f54ddaa3656d59daf0828405986b1dc6ad10a51f728e209b08d"
+  },
+  "phasea-abrCMABImproved-20261117T123108-b4b5d8": {
+    "bytes": 84551,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T123108-b4b5d8.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "19e4549ab93a7d623b77cc7b2da15e4a50e296c84252d44f12b0ee5cada811cb"
+  },
+  "phasea-abrCMABImproved-20261117T124308-ce34e4": {
+    "bytes": 152127,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T124308-ce34e4.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "de5da6ec6ad1ac99c2b32af713c35be04b42aea94f669a256292138d8c7bf2c8"
+  },
+  "phasea-abrCMABImproved-20261117T124909-1877c7": {
+    "bytes": 85207,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T124909-1877c7.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "b4bb94fc95a184fb3914f22b9ee1cf5dcb34dbbeec64c2d70d44c9aa43dc0ef4"
+  },
+  "phasea-abrCMABImproved-20261117T130107-ec13fa": {
+    "bytes": 129670,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T130107-ec13fa.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "3d97faaa83dd436289080ee12791ae42e0726f5218ed445523b95c6492686cd4"
+  },
+  "phasea-abrCMABImproved-20261117T130708-968051": {
+    "bytes": 83195,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T130708-968051.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "ff056f685d362bed06a2ece4a3252592ef89475cec2e6854055005d164ed52bd"
+  },
+  "phasea-abrCMABImproved-20261117T132509-b47f49": {
+    "bytes": 85237,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T132509-b47f49.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "7e727fb6a0bedbf4d8268a5733dd2f686e075b0de0916feaf1ff7a0341ca8e21"
+  },
+  "phasea-abrCMABImproved-20261117T134008-cf166b": {
+    "bytes": 123611,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T134008-cf166b.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "0f67b3484e273b19ec51dd2aedacd1abcc9d797de9907829adccba91836e8f69"
+  },
+  "phasea-abrCMABImproved-20261117T134308-dece40": {
+    "bytes": 84473,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T134308-dece40.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "0068545fbe8f5c9e439e82ffb26bc393cd7a9dffcb9e046741641c3ded1f5901"
+  },
+  "phasea-abrCMABImproved-20261117T135808-89a48f": {
+    "bytes": 87802,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T135808-89a48f.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "84eda4e2705527047bb19a994ee90b50584da227b5b9c8a85d84d5abc59116ad"
+  },
+  "phasea-abrCMABImproved-20261117T141608-fd0382": {
+    "bytes": 147730,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T141608-fd0382.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "40e54e10d879715162dce5f8a53fa93373366fac831e51e9232ed177c0d3094d"
+  },
+  "phasea-abrCMABImproved-20261117T142209-3ca56d": {
+    "bytes": 95000,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T142209-3ca56d.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "5eb15152e99d3b24bdbd33c1de0991a5528e1274a4a55270a41bf35caeaa1b45"
+  },
+  "phasea-abrThroughput-20261117T085208-627b90": {
+    "bytes": 69857,
+    "file": "artifacts/final/evidence/phasea-abrThroughput-20261117T085208-627b90.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "d7e4aa43320b5609af08d3767555880a117f58ae15ab9795096a8044fb58c477"
+  },
+  "phasea-abrThroughput-20261117T091008-883d96": {
+    "bytes": 78678,
+    "file": "artifacts/final/evidence/phasea-abrThroughput-20261117T091008-883d96.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "3cd35bc97985ed878014006e06096fc0f009828b80ea718cc2e272c1d9ee3b16"
+  },
+  "phasea-abrThroughput-20261117T094907-1cd249": {
+    "bytes": 90957,
+    "file": "artifacts/final/evidence/phasea-abrThroughput-20261117T094907-1cd249.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "c7f0b9d707a397f014374c73886b7f60c7d224e8e6b7a057189ccf8a402188c1"
+  },
+  "phasea-abrThroughput-20261117T100707-83b2bf": {
+    "bytes": 87066,
+    "file": "artifacts/final/evidence/phasea-abrThroughput-20261117T100707-83b2bf.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "10468e220b38a9d67a51a6af439ff5cd37b49cdce0bb80b79e135d0533a568d8"
+  },
+  "phasea-abrThroughput-20261117T102508-e2f4f7": {
+    "bytes": 77027,
+    "file": "artifacts/final/evidence/phasea-abrThroughput-20261117T102508-e2f4f7.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "6fe611c83579e3962f842b5cfebe537aa43f4001cc39afced89b72d5a73de690"
+  },
+  "phasea-abrThroughput-20261117T104307-49d109": {
+    "bytes": 74616,
+    "file": "artifacts/final/evidence/phasea-abrThroughput-20261117T104307-49d109.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "abf770fd547545a6f34dc0474ff357086dbe95d000c980d87b4644b9a4c382fc"
+  },
+  "phasea-abrThroughput-20261117T110108-b92ad8": {
+    "bytes": 75855,
+    "file": "artifacts/final/evidence/phasea-abrThroughput-20261117T110108-b92ad8.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "dc603a3cc1863696061ba97a7611b9226e5dce63934abbfee81ed548a9849730"
+  },
+  "phasea-abrThroughput-20261117T111908-7210ce": {
+    "bytes": 72814,
+    "file": "artifacts/final/evidence/phasea-abrThroughput-20261117T111908-7210ce.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "f76d6cc2d8685b8b0f6790083b52fc1eb715b5f39061ee5c13431fe7dc8a3322"
+  },
+  "phasea-abrThroughput-20261117T113708-9a5a23": {
+    "bytes": 74666,
+    "file": "artifacts/final/evidence/phasea-abrThroughput-20261117T113708-9a5a23.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "b658dad93adf4aeb0b6726fdaf1293818c0560f8fe976468bf4518b1e26dd522"
+  },
+  "phasea-abrThroughput-20261117T121608-8798b8": {
+    "bytes": 77332,
+    "file": "artifacts/final/evidence/phasea-abrThroughput-20261117T121608-8798b8.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "f4579ea3367d842d6f743b93e04a32a3e24239393bbba7e893b660512f1480d1"
+  },
+  "phasea-abrThroughput-20261117T121908-e40719": {
+    "bytes": 82844,
+    "file": "artifacts/final/evidence/phasea-abrThroughput-20261117T121908-e40719.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "d93eb60fd083396ed3681b722a1b771df115df3d6ffa1c69b5004941fea231fe"
+  },
+  "phasea-abrThroughput-20261117T125807-1d770f": {
+    "bytes": 71761,
+    "file": "artifacts/final/evidence/phasea-abrThroughput-20261117T125807-1d770f.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "33a4f94508f473132d335325746c53ac0d310d7fef9ea40289beaf90aacb4ff7"
+  },
+  "phasea-abrThroughput-20261117T131607-6c251a": {
+    "bytes": 86013,
+    "file": "artifacts/final/evidence/phasea-abrThroughput-20261117T131607-6c251a.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "fc03a6ace18d3a38b2a87594e3a44ff192b3b478f07abb47f537e856b177c236"
+  },
+  "phasea-abrThroughput-20261117T133407-06fea1": {
+    "bytes": 80137,
+    "file": "artifacts/final/evidence/phasea-abrThroughput-20261117T133407-06fea1.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "f0af963b6b652ed844477613ee63720460251944cab0fc7594e4b2df8e5ab540"
+  },
+  "phasea-abrThroughput-20261117T135208-fe50bb": {
+    "bytes": 77188,
+    "file": "artifacts/final/evidence/phasea-abrThroughput-20261117T135208-fe50bb.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "7066fe99d90931ceb1dbf506ed5bc00a294303e80d7f64ef38965505e16cfb9d"
+  },
+  "phasea-abrThroughput-20261117T141008-36c0bf": {
+    "bytes": 75906,
+    "file": "artifacts/final/evidence/phasea-abrThroughput-20261117T141008-36c0bf.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "scientific_status": "complete",
+    "sha256": "35dfbc2cef3aed09d468cd5186bb33aa06a9f4d133500106f75c3ee07200db58"
   }
 }

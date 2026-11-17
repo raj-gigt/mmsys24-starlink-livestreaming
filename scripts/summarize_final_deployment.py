@@ -46,17 +46,17 @@ def main():
                 if value is not None:target.append(value)
         neural=policy in ['conventional','leo']
         actor=json.loads((ROOT/f'models/final/{policy}/actor.json').read_text()) if neural else None
-        reports.append({'policy':policy,'sessions':len(pool),'fresh_decisions':count,
-            'timed_fresh_decisions':len(durations),'fresh_p50_ms':stats(durations,50),
+        reports.append({'policy':policy,'sessions':len(pool),'fresh_decisions':count if policy not in ['throughput','bola'] else None,
+            'timed_fresh_decisions':len(durations) if neural or policy in ['improved','guard_only'] else None,'fresh_p50_ms':stats(durations,50),
             'fresh_p95_ms':stats(durations,95),'fresh_p99_ms':stats(durations,99),
             'fresh_max_ms':max(durations) if durations else None,
             'page_to_ready_p50_ms':stats(pages,50),'separate_pyodide_prewarm_p50_ms':stats(prewarms,50),
             'model_assets_load_p50_ms':stats(assets,50),'neural_fallbacks':len(fallbacks) if neural else None,
-            'cached_callbacks':cached if neural else None,'guard_overrides':overrides if policy in ['improved','guard_only'] else None,
+            'cached_callbacks':cached if neural else None,'guard_overrides':overrides if policy=='improved' else None,
             'player_errors':player_errors,'actor_parameters':sum(len(x['w'])+len(x['b']) for x in actor['layers']) if neural else None,
             'actor_json_bytes':(ROOT/f'models/final/{policy}/actor.json').stat().st_size if neural else None,
             'combined_served_weights_js_bytes':(ROOT/'rl/web/final_models.js').stat().st_size if neural else None,
-            'runtime':'Synchronous Float32 JS, Chrome main-thread CPU' if neural else 'Synchronous existing Pyodide/WASM' if policy in ['original','improved','guard_only'] else 'Native dash.js JS',
+            'runtime':'Synchronous Float32 JS, Chrome main-thread CPU' if neural else 'JS guard in the Pyodide-initialized CMAB wrapper' if policy=='guard_only' else 'Synchronous existing Pyodide/WASM' if policy in ['original','improved'] else 'Native dash.js JS',
             'timing_scope':'Fresh neural outer-rule instrumented span; cache hits excluded' if neural else 'CMAB controller selection span; outer rule/feedback update excluded' if durations else 'No dedicated decision timing instrumentation',
             'host':'Chrome114, Linux/WSL on the measured laptop; no mobile/hard-deadline claim'})
     tables=ROOT/'reports/final/tables';tables.mkdir(parents=True,exist_ok=True)

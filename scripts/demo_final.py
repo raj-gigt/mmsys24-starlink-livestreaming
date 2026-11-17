@@ -70,6 +70,8 @@ def main():
         (folder/(name+'.json.gz')).write_bytes(gzip.compress(json.dumps(payload,separators=(',',':'),sort_keys=True).encode(),mtime=0))
         if (raw/'browser.png').exists():
             (folder/(name+'.png')).write_bytes((raw/'browser.png').read_bytes())
+        if (raw/'run-timeline.svg').exists():
+            (folder/(name+'-timeline.svg')).write_bytes((raw/'run-timeline.svg').read_bytes())
         result = {'status':'PASS','purpose':'real playback demonstration, excluded from final performance comparison',
             'policy':args.policy,'run_id':summary['run_id'],'case_id':case['id'],'metrics':metrics,
             'completed_video_requests':summary['completed_video_requests'],'mongo_documents':summary['mongo_documents'],
@@ -93,6 +95,7 @@ def main():
             result['video_bytes'] = video.stat().st_size
         (folder/(name+'.json')).write_text(json.dumps(result,indent=2))
         print(json.dumps(result,indent=2))
+        subprocess.run([sys.executable,str(ROOT/'scripts/plot_demo_final.py')],check=True)
 
 
 if __name__ == '__main__':

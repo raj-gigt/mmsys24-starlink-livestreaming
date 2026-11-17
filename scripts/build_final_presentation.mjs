@@ -14,6 +14,7 @@ const SKILL=process.env.LEO_PRESENTATION_SKILL;
 const BUILD=process.env.LEO_DECK_BUILD;
 if(!RUNTIME || !SKILL || !BUILD) throw new Error('Set the three LEO_* authoring paths documented in this source');
 if(path.resolve(BUILD).startsWith(ROOT+path.sep)) throw new Error('Use a private build directory outside the project');
+process.env.RUNTIME_NODE_MODULES ||= path.join(RUNTIME,'node/node_modules');
 const {Presentation,PresentationFile}=await import(pathToFileURL(path.join(RUNTIME,'node/node_modules/@oai/artifact-tool/dist/artifact_tool.mjs')).href);
 const {resolvePresentationFont,applyPresentationChartFont,finalizePresentation}=await import(pathToFileURL(path.join(SKILL,'container_tools/artifact_tool_utils.mjs')).href);
 const read=async p=>JSON.parse(await fs.readFile(path.join(ROOT,p),'utf8'));

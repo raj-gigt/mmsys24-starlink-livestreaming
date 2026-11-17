@@ -42,14 +42,16 @@
   "current_step": 13,
   "active_experiment": {
     "step": 13,
-    "command": "python scripts/run_development_matrix.py --name context-guard-v1 --variants outcome,scaled,buffer,context,seeded,guard,guard_only --families steady_bandwidth,rtt_variation,post_handover_recovery",
-    "session_id": 23520,
-    "ledger": "artifacts/final/development/context-guard-v1/runs.json",
+    "command": "python scripts/run_development_matrix.py --name context-guard-v2 --variants outcome,scaled,buffer,context,seeded,guard,guard_only --families steady_bandwidth,rtt_variation,post_handover_recovery",
+    "session_id": 86051,
+    "ledger": "artifacts/final/development/context-guard-v2/runs.json",
     "resume": "Rerun same command; complete run keys skipped",
     "do_not_modify_during_measurement": [
       "CMAB controller code",
       "workload manifest",
-      "player image"
+      "player image",
+      "stats-server image",
+      "observer collection code"
     ]
   }
 }

@@ -1,0 +1,10 @@
+{
+  "scope": "Development mechanism and conditional estimator fixture; not held-out effects",
+  "run_ids": [
+    "phasea-abrCMAB-20261116T223038-a4285e",
+    "phasea-abrCMABImproved-20261116T223238-c52476"
+  ],
+  "ledger_sha256": "ac5eaf52e053e957e56ca18a05c9a03ad67206e762f3eb9674150578ef169313",
+  "metric_version": "played-ledger-v2",
+  "script": "scripts/plot_cmab_mechanism.py"
+}

@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "scope": "Contract and observed synchronous cost; not a hard timing guarantee",
+  "runs": [
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T013651-2c2d8f",
+      "variant": "context",
+      "decisions": 75,
+      "learned_calls": 66,
+      "guard_overrides": 0,
+      "invalid_probe_calls": 53,
+      "median_ms": 9.099999999627471,
+      "p95_ms": 11.599999999441204,
+      "max_ms": 18.40000000037253
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T013937-ec65f0",
+      "variant": "scaled",
+      "decisions": 32,
+      "learned_calls": 24,
+      "guard_overrides": 0,
+      "invalid_probe_calls": 32,
+      "median_ms": 10.949999999254942,
+      "p95_ms": 15.634999999497085,
+      "max_ms": 15.800000000745058
+    }
+  ]
+}

@@ -293,5 +293,57 @@
     ],
     "ledger": "artifacts/final/warm-player-check.json",
     "sha256": "96d1f67fb87f88119943ad3736fd1bcfc60f47b7e8860d03c3b31c57b08640d3"
+  },
+  "phasea-abrCMABImproved-20261117T013651-2c2d8f": {
+    "bytes": 50362,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T013651-2c2d8f.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/context-guard-v1/runs.json",
+    "sha256": "8f91deef4f42e0173a4fef94078f9eba96741dd10bb70b23ecbb3088a8c418c9"
+  },
+  "phasea-abrCMABImproved-20261117T013937-ec65f0": {
+    "bytes": 35369,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T013937-ec65f0.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/context-guard-v1/runs.json",
+    "sha256": "6ac2cf27220268a469af45feb8de53c0c9440e152e7eeab17f0cd200e8cda7df"
+  },
+  "phasea-abrCMABImproved-20261117T014137-60fc0e": {
+    "bytes": 76181,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T014137-60fc0e.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/context-guard-v1/runs.json",
+    "sha256": "ce6d2c1e7a72650569fd513c21147bbafe1c36963cfa42834ffb793e26ed871d"
+  },
+  "phasea-abrCMABImproved-20261117T014337-80f893": {
+    "bytes": 78012,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T014337-80f893.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/context-guard-v1/runs.json",
+    "sha256": "9fcf729d1be0dc842a9ade96bb1772aa609045ca6f501749eda028f2c20759f7"
   }
 }

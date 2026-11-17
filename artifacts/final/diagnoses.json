@@ -10,6 +10,14 @@
         "scripts/check_cmab_lifecycle.cjs",
         "artifacts/final/warm-player-check.json"
       ]
+    },
+    {
+      "scope": "context-guard-v1",
+      "symptom": "Many invalid probe flags despite completed low-loss transfers",
+      "diagnosis": "Decimal-only parser rejected real integer replies, reproduced physically at120ms and with mocked Flask fixtures",
+      "fix": "Typed health accepts decimal/integer/upper-bound RTT; original scalar parser and state preserved",
+      "verification": "probe-parser-diagnosis.json; scripts/check_probe_health.py",
+      "action": "Retain4 completed diagnostic sessions, restart full comparison ascontext-guard-v2"
     }
   ],
   "retained_poor_policy_outcomes": "All valid matrix sessions are retained, including first factorial both under steady low capacity; smoke-test minimum-playback assertions are disabled only in experiment matrices."

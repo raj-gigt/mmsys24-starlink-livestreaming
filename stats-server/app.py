@@ -48,6 +48,8 @@ def py_ping(hostname: str) -> None:
     global probe_health
     count += 1
     probe_ok = False
+    observed_rtt = None
+    upper_bound = False
 
     try:
         if not INTERFACE:
@@ -55,6 +57,13 @@ def py_ping(hostname: str) -> None:
         else:
             output = subprocess.check_output(["ping", "-I", INTERFACE, "-W", "1", "-c", "1", hostname])
         line = output.decode("utf-8")
+        # Typed health accepts all iputils precision formats. Keep the legacy
+        # decimal-only scalar path below unchanged for original-CMAB control.
+        observed = re.search(r"icmp_seq=(\d+).*time\s*([=<])\s*(\d+(?:\.\d+)?)", line)
+        if observed:
+            observed_rtt = float(observed.group(3))
+            upper_bound = observed.group(2) == '<'
+            probe_ok = True
         match = re.search(r"icmp_seq=(\d+).*time=(\d+\.\d+)", line)
         if match:
             rtt = float(match.group(2))
@@ -71,7 +80,8 @@ def py_ping(hostname: str) -> None:
     now = time.time()
     probe_health = {'ok': probe_ok, 'probe_at_s': now,
                     'success_at_s': now if probe_ok else probe_health['success_at_s'],
-                    'rtt_ms': last_value if last_value >= 0 else None}
+                    'rtt_ms': observed_rtt if probe_ok else probe_health['rtt_ms'],
+                    'rtt_is_upper_bound': upper_bound if probe_ok else probe_health.get('rtt_is_upper_bound', False)}
 
 
 @app.route("/qoe/", methods=methods)

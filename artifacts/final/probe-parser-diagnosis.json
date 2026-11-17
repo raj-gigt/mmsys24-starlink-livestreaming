@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "configured_rtt_ms": 120,
+  "raw_ping": "PING nginx (192.167.0.107) 56(84) bytes of data.\n64 bytes from dashjs-nginx.dashjs (192.167.0.107): icmp_seq=1 ttl=64 time=120 ms\n\n--- nginx ping statistics ---\n1 packets transmitted, 1 received, 0% packet loss, time 0ms\nrtt min/avg/max/mdev = 120.109/120.109/120.109/0.000 ms",
+  "legacy_decimal_match": false,
+  "typed_parsed_rtt_ms": 120.0,
+  "controlled_streaming_active": false,
+  "typed_endpoint": {
+    "age_s": 0.0598750114440918,
+    "ok": true,
+    "probe_at_s": 1794880108.080068,
+    "rtt_is_upper_bound": false,
+    "rtt_ms": 120.0,
+    "server_at_s": 1794880108.1399431,
+    "success_at_s": 1794880108.080068,
+    "valid": true
+  },
+  "unchanged_legacy_scalar": 0
+}

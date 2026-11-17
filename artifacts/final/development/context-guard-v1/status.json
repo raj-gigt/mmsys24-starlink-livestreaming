@@ -1,0 +1,7 @@
+{
+  "status": "diagnostic-only; excluded from candidate selection",
+  "reason": "Integer RTT replies were incorrectly flagged unavailable by typed-health parser; source-backed fixture and actual120ms ping reproduced the defect",
+  "completed_sessions_preserved": 4,
+  "interrupted_next_session": "Session cleaned after Ctrl-C; not scored",
+  "replacement": "context-guard-v2 runs all21 sessions under corrected typed health; legacy CMAB scalar remains unchanged"
+}

@@ -38,7 +38,11 @@ def main():
     for path, expected in identity.items():
         actual = docker('exec', 'leo_abr_rl-dashjs-1', 'sha256sum', '/dash.js/src/streaming/rules/abr/cmab/'+path).split()[0]
         assert actual == expected, f'Rebuild player before measuring: {path}'
-    fingerprint = hashlib.sha256(json.dumps({'sources': identity,'manifest':sha(manifest),'observer':sha(ROOT/'rl/web/telemetry.js'),'runner':sha(ROOT/'scripts/browser_trial.py')},sort_keys=True).encode()).hexdigest()
+    measurement = {'manifest':sha(manifest),'observer':sha(ROOT/'rl/web/telemetry.js'),
+        'runner':sha(ROOT/'scripts/browser_trial.py'),'stats_server':sha(ROOT/'stats-server/app.py'),
+        'shaper':sha(ROOT/'shaper/tc-final.py'),'metrics':sha(ROOT/'rl/metrics.py')}
+    assert docker('exec','leo_abr_rl-stat-server-1','sha256sum','/usr/src/app/app.py').split()[0] == measurement['stats_server']
+    fingerprint = hashlib.sha256(json.dumps({'sources':identity,'measurement':measurement},sort_keys=True).encode()).hexdigest()
     out = ROOT/'artifacts/final/development'/args.name
     out.mkdir(parents=True, exist_ok=True)
     ledger = out/'runs.json'
@@ -68,7 +72,7 @@ def main():
                 if variant!='original':
                     assert {d['variant'] for d in telemetry['cmab_decisions']}=={variant}
                 row = {'key':key,'status':'complete','case_id':case['id'],'family':case['family'],
-                       'variant':variant,'repeat':repeat,'run_id':summary['run_id'],'source_identity':identity,
+                       'variant':variant,'repeat':repeat,'run_id':summary['run_id'],'source_identity':identity,'measurement_identity':measurement,
                        'began_utc':began,'completed_utc':datetime.now(timezone.utc).isoformat(),
                        'metrics':metrics,'decisions':len(telemetry['cmab_decisions']),
                        'outcome':'poor_playback' if summary['played_advance_s']<=5 else 'played',

@@ -4,6 +4,18 @@ Prepared: 17 November 2026. Group 4, CS6048.
 
 This is the deliverables specification requested in planning Step 1. It defines what we must produce and what evidence makes each item complete. The Step 2 phase-by-phase execution plan is now in [roadmap.md](roadmap.md), with the 18 November 08:00 submission deadline, 20 November presentation/demo and RTX 4060 compute context incorporated. Planning does not authorize implementation or commits.
 
+
+## Submission/presentation separation (revision:18 November2026)
+
+This revision and roadmap Steps20-23 supersede older combined hand-in wording below. Steps8-19 are completed evidence; no new training or browser experiment campaign is planned.
+
+- Main scientific story: compare original CMAB, improved CMAB, conventional A2C and LEO-aware A2C together. Main table/figures use the common two repeats across ten cases (80 sessions). Preserve the third CMAB repeats, guard-only/native baselines, ablations and9 raw replays as explicitly labelled support. Raw replay has no A2C comparison; do not imply otherwise. Add direct matched pair contrasts and disclose small-repeat/fixed-case uncertainty.
+- Submission run: Step20 balanced analysis and dependency/file inventory; Step21 report/evaluator-facing GitHub handoff; Step22 focused ZIP, clean reproduction and publication. Presentation, demo execution/video, learning guides and rehearsal are excluded from this run and ZIP.
+- Step23 covers PPT/demo/learning/rehearsal only after18November08:00IST and a new user instruction. Existing prepared sources are reusable drafts, not authorization to generate them now.
+- Keep the existing repository/submodules/required paths. GitHub retains the complete research record with clear final entry points and historical/support labels; the ZIP is a curated release, not a copy of the development tree. No new repository or history rewrite is needed.
+- Build the exact file list from imports, build paths and result dependencies. Include required player source, selected models/contracts, necessary modules/scripts/configurations/data, report figures/tables, compact evidence and licenses. Exclude duplicate logs/checkpoints, obsolete prototypes and unrelated upstream material unless a real dependency requires them. An old filename alone is not grounds for removal.
+- The prior instruction to keep contribution details blank remains valid until the user supplies actual statements. Do not invent them. Portal upload is a separate human handoff unless explicitly requested with access.
+
 ## 1. Objective, scope and submission obligations
 
 **Primary objective:** develop and explain an ABR controller that improves on the reference repository's CMAB implementation under a common streaming system. Track 1 improves CMAB itself. Track 2 provides a trained, player-compatible Gelato/Plume-inspired actor-critic comparison, including LEO observations where usable.
@@ -20,7 +32,7 @@ Use the simplest working synchronous execution route: retain existing Pyodide fo
 | Problem statement and related work | A concise report section establishing the exact CMAB reference, the LEO/live-streaming problem and the relevant bandit/RL alternatives. |
 | Methodology | Exact policy changes, state/action/reward definitions, data provenance, experiment controls, training and selection procedure. |
 | Results and analysis with figures/graphs | The main comparison, component metrics, scenario breakdowns, explanatory trajectories and ablations specified below. |
-| Demo, if applicable | A reproducible demonstration of actual player decisions, media requests and playback under a controlled network change. This project supports a demo, so include one. |
+| Demo, if applicable | Deferred presentation work in Step23; no demo files/video or demo execution requirement for the submission ZIP. |
 | ZIP containing report and developed code; GitHub with scripts and results; GitHub link in report | A checked release ZIP, accessible pinned repositories/submodules, model/configuration assets, compact results and reproduction commands. |
 
 The original proposal also requires throughput, buffer-based and Pensieve-style baselines; a trained LEO-aware RL policy; five scenario families; six playback/QoE metrics; reproducible code; graphs; a presentation and a demonstration. The primary emphasis can move to CMAB improvement, but the neural deliverable remains part of the proposal. Describe the track split explicitly in the final report. The optional congestion-control extension stays excluded.
@@ -196,14 +208,14 @@ The aggregate results table, family figure and trajectories are complementary: t
 Use a concise main report with a short technical appendix. There is no page limit stated in the supplied image, so do not invent one as a course rule. Reuse the figures/tables above and avoid repeating the same finding in several sections.
 
 1. **Title, team and abstract:** project identity, GitHub link and a short factual result summary written after evaluation; use T6 for the required specific contribution statements.
-2. **Problem and objective:** live-streaming quality/stall/delay tradeoff under LEO variation; primary question of improving original CMAB and secondary neural comparison; mandatory-only scope.
+2. **Problem and objective:** live-streaming quality/stall/delay tradeoff under LEO variation; joint question of how the three developed policies compare with original CMAB; mandatory-only scope.
 3. **Reference system and related work:** exact Zhao/Pan implementation and limitations, contextual bandit versus sequential RL, relevant Gelato/Plume/Pensieve and BOLA work, and the gap we investigate. Verify citations against the actual primary sources; distinguish the reference paper from other papers mentioned in the proposal.
 4. **CMAB investigation and changes:** original control flow/reward/reset audit, H1-H6 evidence, selected improved design and isolated variants. Explain online learning and any heuristic guard separately. Use T1 and selected F2 evidence.
 5. **Neural comparator:** compatible state/action/reward, model/weight provenance, LEO inputs, architecture/trainer, workload sampling, split discipline, checkpoint/seed procedure and synchronous deployment. Explicitly distinguish the Phase A pilot from final trained policies. Include a compact F7 result or reference it from results.
 6. **Experimental methodology:** F1, T2/T3, calibrated environment, real-browser validation, common metrics/QoE, matched conditions, budgets, repetitions, uncertainty and failed-run handling. Distinguish original archive reproduction from new measurements.
 7. **Results and analysis:** headline comparison (F3/T4), family outcomes (F4), behavioural explanation (F5), component contributions/negative experiments (F6/T5), neural results (F7) and required tradeoff interpretation. Every conclusion must point to a measured result.
 8. **Limitations and conclusion:** measured-versus-synthetic limitations, independence, approximation/quality-proxy limitations, where policies lose, deployment cost and the actual answer to the research question. No unimplemented future feature should be counted as a contribution.
-9. **Reproduction and references:** repository/revision, short commands for plots/demo/training, hardware/time expectations, data/license attribution and primary citations. Put long configurations, F8, T7/T8 and additional failure traces in the appendix/repository.
+9. **Reproduction and references:** repository/revision, short commands for saved-results reproduction, evaluation and training, hardware/time expectations, data/license attribution and primary citations. Put long configurations, F8, T7/T8 and additional failure traces in the appendix/repository.
 
 ### Final presentation
 
@@ -226,12 +238,12 @@ Paths are proposed destinations within the existing repository; Phase 2 should r
 | C9 | Reproduction entry points | Distinct documented commands for environment/checks, data preparation, training, fresh evaluation, plots-from-saved-results and demo. A full reproduction command may compose them, but must not force retraining to regenerate existing plots. |
 | C10 | Release/diagnostic checks | Check run completeness/required metrics, missing assets, config/model/data hashes, result-to-figure traceability, accessible submodule commits and ZIP contents. Keep diagnostic logs for errors without adding unrelated test infrastructure. |
 
-All CLI entry points should expose or document configuration, seeds, input/output paths and required host/runtime. Commands should produce actionable errors and return nonzero on failed verification. Keep caches/environments/build scratch outside the project, and keep all new permanent work in this repository. Do not add a project `tmp` directory. Do not commit or push without explicit user instruction.
+All CLI entry points should expose or document configuration, seeds, input/output paths and required host/runtime. Commands should produce actionable errors and return nonzero on failed verification. Keep caches/environments/build scratch outside the project, and keep all new permanent work in this repository. Do not add a project `tmp` directory. Commit/push authorization was explicitly granted during this run; use it for the reviewed publication set without requesting it again.
 
 ### Reproduction levels the README must distinguish
 
-1. **Review saved evidence:** regenerate final metrics, tables and figures from the supplied compact run exports, without Docker/GPU or retraining where possible.
-2. **Run the browser demo:** build/select the player, start the common stack, run a fixed network scenario and verify actual requests/playback.
+1. **Review saved evidence (submission):** regenerate final metrics, tables and figures from the supplied compact run exports, without Docker/GPU or retraining where possible.
+2. **Run the browser demo (deferred presentation only):** build/select the player, start the common stack, run a fixed network scenario and verify actual requests/playback.
 3. **Repeat the evaluation:** run the declared comparison matrix with the published policies, then regenerate results.
 4. **Repeat learning/development:** prepare the data and rerun the selected neural training configurations; separately reproduce chosen CMAB hypothesis comparisons. Report realistic compute/time/storage needs and stochastic variability rather than promise identical reward curves.
 
@@ -248,7 +260,7 @@ All CLI entry points should expose or document configuration, seeds, input/outpu
 
 The release must contain:
 
-- Final report PDF, final presentation and demo instructions (recording if prepared).
+- Final report PDF and focused code/results/reproduction material. No PPT, video, demo-only launcher, learning guide or rehearsal material in this submission ZIP.
 - Developed parent code and the modified player source, or a documented source snapshot that can be obtained without private/unpublished submodule commits. A GitHub ZIP alone does not automatically include submodule contents; verify the packaged player source explicitly.
 - Exact dependency/build/experiment configurations; model/controller assets; data provenance/retrieval/split manifests.
 - Compact per-run results needed to rebuild the reported metrics/figures, aggregate tables and final figures. For large/raw assets that cannot sensibly be included, provide working retrieval URLs with hashes and access/license requirements; required evidence must not exist only in a local MongoDB volume.
@@ -258,7 +270,7 @@ Publish the intended reviewed revision and all required submodule commits only a
 
 ## 10. Definition of completion and scope control
 
-The final hand-in is complete when the audited original control, primary CMAB study/selected controller, trained neural comparison, required baseline/scenario metrics, source-backed report/figures, actual-player demo and reproducible release all have their corresponding verification evidence. The strength and limitations of any claimed improvement must match held-out browser results.
+The submission hand-in is ready when the verified four-policy analysis, required supporting metrics, source-backed report/figures, evaluator-facing GitHub and focused reproducible ZIP have their verification evidence. Presentation/demo/learning/rehearsal readiness is a separate Step23 outcome. The strength and limitations of any claimed improvement must match held-out browser results.
 
 The default excludes congestion control, async/worker bridging, runtime comparison studies, many unrelated RL optimizers, a new video service/UI, perceptual-quality model training and dashboards beyond what the demo needs. Independent measured data and simulator fidelity are pursued to the extent needed for credible claims, not as open-ended data collection or networking-framework rewrites.
 

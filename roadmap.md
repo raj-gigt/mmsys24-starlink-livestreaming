@@ -338,69 +338,69 @@ Candidate configuration budget: initially at most 12 named CMAB settings and 72 
 
 **Verification / exit:** F3-F7/T4-T5 answer what improved, where, why and with what tradeoffs; F2/F8/T7/T8 support the mechanism and method. No curve is a manually entered final number and no unsupported improvement wording appears.
 
-## 9. Phase F: report, demo and submission release
+## 9. Phase F: submission only (Steps 20-22)
 
-### Step 20 - Finish the concise evidence-backed report
-**Status:** Pending. **Dependency:** 19; skeleton started in 9. **Deliverables:** final report PDF, D1-D8 synthesis, T6.
+Revision:18 November2026. Steps8-19 remain completed evidence. The submission objective is a joint comparison of original CMAB, improved CMAB, conventional A2C and LEO-aware A2C against the reference CMAB. Submission means report PDF, evaluator-facing GitHub repository and a focused code/results ZIP. PPT, demo execution/recording, learning materials and rehearsal are outside this run. Target final verification by07:00IST; submission deadline08:00IST on18November. Recalculate available time when execution starts.
 
-**Objective / intuition:** turn the tested work into a clear networks-course argument rather than an implementation diary.
+Planning is authorized now; execution of Steps20-22 awaits the user's remaining inputs and instruction to begin. Existing commit/push authorization remains valid for that later run. Do not rerun completed training or179 experiments, change frozen policies/rewards or silently overwrite Step19 evidence.
 
-**Actions:**
-1. Write the sections specified in deliverables.md: team/abstract; problem and related work; CMAB audit and hypotheses; selected CMAB; neural adaptation/training; controlled methodology; results/mechanisms; limitations/conclusion; reproduction/references.
-2. Use the six most useful main-result/system figures and compact policy/data/results/ablation/contribution tables. Put long settings, detailed audit/calibration and deployment evidence in an appendix/repository. Do not invent a page limit; keep the prose concise.
-3. Every result claim cites its actual figure/table, experiment scope and uncertainty. Label measured versus generated channels, unchanged reference versus our modifications, and the compatible neural adaptation versus published weights.
-4. Include all names/roll numbers and 2-3 sentences of actual work per member. Use verifiable contributions and seek factual clarification if needed; do not infer that a person did work merely from their initial assigned role.
-5. Include the accessible GitHub link and exact release/workspace identity; update it after any authorized publication. Give saved-results, demo, evaluation and training reproduction commands with measured hardware/time expectations.
-6. Compile, extract text and render the final PDF; inspect every page and all cross-references. Verify the requirements image's five report items and the proposal's mandatory coverage.
+### Step 20 - Finalize the joint analysis and audit the submission dependency set
+**Status:** Pending; planning only. **Dependency:**19. **Deliverables:** balanced four-policy results, direct comparisons, dependency/file inventory and evaluator navigation specification.
 
-**Verification / exit:** readable concise PDF, correct contributions/references, complete graphs/tables, source-backed numbers and no placeholders/mid-review claims presented as final results. Source and report remain reproducible.
-
-### Step 21 - Prepare the working demo and submission presentation assets
-**Status:** Pending. **Dependencies:** 17-20. **Deliverables:** C8, demo commands/recording, final-results deck draft.
-
-**Objective / intuition:** show real controlled streaming behaviour and make the project presentable without depending on a fragile live experiment.
+**Objective / intuition:** establish one fair scientific story and identify exactly which files support it before writing or packaging.
 
 **Actions:**
-1. Build/select the final local-source image with all relevant policy assets; keep original CMAB and neural options selectable. Ensure scripts/prepare_player.py and packaging do not require the historical Phase A patch to match every later source edit.
-2. Provide a short, named bandwidth-change/interruption/recovery demo with actual video, policy identity, selected/played bitrate and buffer/live delay; use the same settings for B0 and C*. Save logs and a comparison plot.
-3. Record a short real run as a fallback, plus launcher/readiness/reset instructions. Do not replace the working policy with a scripted action sequence or an animation.
-4. Create a concise final deck reusing the verified report figures: objective/system, CMAB mechanism/change, neural comparison, experiment, gains/tradeoffs, ablations and conclusions/contributions. Keep the exact duration/page count adjustable because presentation rules have not been supplied.
-5. Perform the executable demo and slide visual/factual checks now. Actual team speaking/rehearsal is a human activity; provide the rehearsal checklist rather than falsely marking it complete.
+1. Reuse the179 verified sessions. Main comparison: the same ten controlled cases and repeats0/1 for each of four policies (80 sessions). Preserve Step19's complete170-controlled/9-raw analysis and all third CMAB repeats as supporting evidence. Do not present a reorganized analysis as a newly untouched/predeclared experiment.
+2. Extend existing analysis code to produce evaluation/four-policy-analysis.json, T4-four-policy.csv, T4-four-policy-pairs.csv and focused four-policy figures under the existing artifacts/final and reports/final directories. Compute all six direct paired contrasts using fixed-case, within-case repeat resampling; label intervals conditional/descriptive and avoid unqualified multiple-comparison superiority claims. Report shared QoE, stalls, startup, mean/session-tail latency, played nominal bitrate, switching and skipped/played media. Keep raw repository replay separate: A2C was not tested there.
+3. Diagnose family/case regressions and quality/stall tradeoffs using existing logs and score components. Retain guard-only, throughput/BOLA, validation ablations, learning curves and calibration as supporting analyses. Distinguish numerical rank from established improvement; do not invent a LEO-input or bandit benefit.
+4. Audit actual imports, CLI calls, Docker COPY/volume paths, browser assets, model/data manifests and figure/table inputs. Classify files in release/submission-files.json as required runtime/training/evaluation/analysis, supporting scientific evidence, inherited dependency, historical/development-only or excluded scratch/duplicate. Inventory exact files, not blanket inclusion of scripts/, rl/ or artifacts/final/.
+5. Preserve the current repository, branch anjan, submodule URLs and required relative paths. Do not move code into another repository, rewrite Git history or delete files by age/name. In particular final_env.py depends on pilot_env.py; required legacy-named modules remain. Historical/diagnostic material can remain documented in GitHub history/current paths; distinguish it from the evaluator's main entry points.
+6. Specify a single root README entry point: objective/results, four-policy source map, our versus inherited work, exact commands and where supporting/history files live. No speculative codebase-wide refactor or folder renaming is needed to make the release navigable.
 
-**Verification / exit:** real advancing playback and linked media requests; demo can be restarted safely; recording and slides agree with submitted results. Full worker/runtime comparison is not introduced.
+**Verification / exit:** exactly20 matched sessions per main policy; source run IDs and score/component sums reconcile; all six contrasts use matched repeats and disclosed uncertainty. An explicit inventory covers every transitive dependency and required evidence; exclusions have reasons. Frozen measured file hashes still match. No report, PPT or demo generation yet.
 
-### Step 22 - Verify clean reproduction and assemble the submission
-**Status:** Pending. **Dependencies:** 20-21. **Deliverables:** C9/C10, final ZIP, release manifest, GitHub publication readiness.
+### Step 21 - Produce the concise final submission report and evaluator-facing GitHub handoff
+**Status:** Pending. **Dependency:**20. **Deliverables:** reports/final/Group4-final-report.pdf, updated root README/reproduction instructions, final figure/table index and contribution section.
 
-**Objective / intuition:** someone else should be able to inspect the evidence, reproduce plots and run the demonstrated source.
-
-**Actions:**
-1. Provide distinct documented commands for prerequisites, data preparation, training, evaluation, plots-from-saved-results and demo. Reuse scripts/testbed.sh and the established build/requirements where possible.
-2. Allowlist the final report/deck, developed code, actual modified player source, model/controller assets, configurations, compact evidence, tables/figures, licenses and artifact index. Exclude environments, caches, personal credentials and duplicate huge/raw data.
-3. Audit .gitignore: artifacts/runs, figures, processed/raw data, checkpoint folders and most PNGs are ignored. Required results/plots must be intentionally included in the release and, when authorized, in the published artifact set. A local ignored file is not available to teammates.
-4. A normal GitHub parent ZIP does not include submodule contents. Bundle the exact required player source or a complete versioned patch+base/recreation route, and verify the resulting source hashes. Preserve the historical Phase A patch separately.
-5. Since no commits are implicit, identify uncommitted parent and submodule edits in the release manifest using source/file hashes and a reproducible patch/snapshot. Do not claim an old committed SHA fully identifies new workspace contents.
-6. When the exact tested code/results/report publication set is reviewable, use the already granted commit/push authorization, publish verified child commits before the parent, and verify fresh remote retrieval. Do not ask again for the authorization already granted.
-7. Extract the ZIP outside the project. Regenerate final metrics/figures from its included exports, inspect generated figures/PDFs, verify model/action/normalization assets and check demo build/source preparation. Test accessible submodule commits/retrieval separately; no hidden dependency on an unpublished local commit or MongoDB volume.
-8. Compute the final ZIP/report/source/result hashes, check internal links/references and generate a concise submission checklist. Confirm the report links to the intended accessible GitHub state. Prepare the upload-ready package before 07:00; actual portal upload is separate if access/authorization is required.
-
-**Verification / exit:** extracted package reproduces saved-results analysis; exact demo source/model is recoverable; report, code, results and manifest identities agree. Missing remote publication or portal submission is explicitly outstanding rather than falsely marked submitted. A successful ZIP command alone is insufficient.
-
-## 10. Phase G: presentation/demo readiness after submission
-
-### Step 23 - Final presentation polish and rehearsal preparation
-**Status:** Pending; human rehearsal outstanding. **Dependencies:** immutable submission package. **Deadline:** ready by 19 November evening; presentation 20 November 11:00.
-
-**Objective / intuition:** explain the verified contribution clearly and recover gracefully if the live testbed fails.
+**Objective / intuition:** let an evaluator understand what we built and assess the joint results without navigating the development diary.
 
 **Actions:**
-1. Preserve the submitted ZIP/report/evidence unchanged. Refine slides and speaker notes around their exact results; mark any later correction/update explicitly.
-2. Confirm the course's presentation duration/format if supplied, then trim the deck and assign speakers using the existing domain split: Rajat integration/builds, Anjan algorithms/training, Deviprasad experiments/QoE.
-3. Prepare short answers for reward attribution, reset/memory evidence, data independence, neural adaptation, test leakage, ablations, negative outcomes and reproduction.
-4. Run a final demo/readiness check and keep the recorded fallback locally available. Give the team concise start/reset/troubleshooting commands and a timed rehearsal checklist.
-5. Human members rehearse and confirm their contribution statements. Do not autonomously send group messages or schedule follow-up jobs unless explicitly requested.
+1. Revise the existing report builder around the shared four-policy objective. Content: title/group/names/contributions; short abstract; problem/reference/related work; system and policy changes; A2C provenance/state/action/reward/training; measured/generated data and splits; fair browser methodology; joint results/family effects/behavioural explanation; ablations/calibration/limitations; conclusion/reproduction/references. Explain that standard SB3 A2C and a configured standard MLP were trained by us from fresh weights with heuristic warm start, not fine-tuned published Gelato weights or a newly invented RL algorithm.
+2. Select concise tables/figures: four-policy design matrix, data/setup, main metric scoreboard, direct paired effects, family effects, one explanatory trajectory, compact ablation/learning evidence. Put long calibration, definitions and deployment details in supporting files or a short appendix. Unless the user supplies a rule, aim for roughly8-10 pages including references; this is an editorial target, not an invented course limit.
+3. Main text uses the matched two-repeat results. Clearly label the earlier three-repeat CMAB result and supplementary raw replay wherever retained. Explain quality/stall/switching tradeoffs, the nearly tied A2C policies, guard-only findings, two measured RTT sessions and synthetic capacity/outages. No universal Starlink or unchanged published-weight claim.
+4. Populate T6 contribution fields only with actual user-supplied work. The prior instruction to leave details blank remains the fallback if the user does not provide them; identify that deliberate omission instead of inventing text. Names, rolls, course and project title already come from the proposal/project metadata.
+5. Update README and reproduction guide to lead to the final code/results, common saved-results command, training/export and full evaluation commands. The submission does not depend on a demo launcher/video. Separate concise evaluator paths from optional full research history; identify inherited source and required pilot-named dependencies honestly.
+6. Include accessible repository/branch and exact measured-source/publication identity, with final release file identities handled by the release manifest. Preserve licenses/attribution. Render the PDF outside the project, inspect every page and check numbers, captions, references, links and coverage against the submission guidelines. Fix layout/content before release.
 
-**Verification / exit:** slides/video/demo agree with the frozen submission; the team has a clear speaking/demo plan. Human rehearsal is not claimed complete by a script. Most assets are prepared during Step 21; this step is not permission to spend the remaining submission window polishing slides instead of finishing the report.
+**Verification / exit:** source-backed readable report with the four-policy comparison central; all required report sections covered; contribution omission only if explicitly retained by user. README commands and code map are concrete and consistent with the inventory. No presentation/demo requirement or generated presentation asset.
+
+### Step 22 - Build, verify and publish the focused submission release
+**Status:** Pending. **Dependencies:**20-21. **Deliverables:** release/Group4-submission.zip, release/manifest.json, checksums/clean-extraction evidence and published final GitHub revision.
+
+**Objective / intuition:** give the evaluator a clean usable package, while retaining the complete research record in the existing repository.
+
+**Actions:**
+1. Replace the prepared ZIP builder's broad directory traversal and PPT/MP4 requirements with Step20's explicit allowlist and dependency closure. Use external staging/extraction directories; no project tmp folder. Do not copy the entire development repository or blindly move source into new folders.
+2. ZIP root: a submission-specific README with a short folder/command map; final report at reports/final/Group4-final-report.pdf; the necessary original relative paths for policy/player source, rl modules, selected models, configs, scripts, build files, data and results; release/manifest.json. Curate within those paths rather than duplicating all code under a competing project tree.
+3. Include the four policy implementations/shared integration, required built-in rule dependencies, training environment/preprocessing/rewards, relevant data preparation/training/export/evaluation/analysis scripts, deployed native checkpoints and synchronous assets, observation/action contracts, required processed arrays/manifests, build/dependency locks, final results/figures and required compact evidence. Keep meaningful ablation/seed summaries used by the report. Include complete required dash.js src/testplayer snapshot for the existing Docker COPY paths and its license: parent GitHub ZIPs omit submodules. No private/unpublished commit may be required.
+4. Exclude PPT/PDF presentation exports, demo/video files and launchers used only for demo, learning/rehearsal guides, historical PhaseA reports, unused reference/pilot weights, redundant checkpoints, resume state, verbose duplicate logs, scratch/builds, environments, caches, credentials and unrelated upstream infrastructure. Keep any nominally old file actually required by a transitive dependency. Full archived diagnostics may remain on GitHub, clearly indexed as supporting research rather than evaluator-required code.
+5. Default saved-results reproduction is self-contained using the necessary compact event exports. If an actual portal size limit prevents that, keep code/report/models/summary results in the main ZIP and provide explicit pinned, hash-verified evidence retrieval from the existing public GitHub repository. Do not silently omit evidence or introduce a new hosting dependency. State exactly what requires a download.
+6. Check ignored versus tracked assets and stage the intended final report/source/results intentionally. Use existing commit/push authorization; publish any changed required player commit before its parent pin. No new repo, history rewrite or unrelated cleanup. Record byte hashes and measured-file identities without circular ZIP hashes or falsely attributing uncommitted files to an old commit.
+7. Extract the actual ZIP outside the project. Verify every payload hash/path, model/action/normalization assets, manifested player preparation without Git metadata, Docker build-context/config paths and source dependency closure. Regenerate the main four-policy and supporting reported results/figures from included or explicitly retrieved evidence, without the original MongoDB volume, Docker playback or retraining. Compare numeric results exactly/within justified floating-point tolerance and inspect regenerated figures. This is a release check, not another experiment campaign or demo.
+8. Verify fresh public retrieval of the pinned parent/player source and required results; confirm the report GitHub link, manifest, file inventory and ZIP contents agree. Save a final SHA256 and concise upload checklist. Hand off an upload-ready report/ZIP/repository link; portal upload is manual unless separately requested with access details. If required inputs remain absent, disclose them rather than falsely mark submission completed.
+
+**Verification / exit:** allowlisted package with no demo/presentation dependency or accidental development bulk; clean extraction reproduces the submitted joint analysis; essential player/submodule source is recoverable; final commit and checksums are recorded. Stop after this submission handoff; do not start Step23 automatically.
+
+## 10. Phase G: presentation only, deferred until after submission
+
+### Step 23 - Prepare the final PPT, demonstration and team preparation materials
+**Status:** Deferred; outside current scope. **Dependency:**22 and a new user instruction after18November08:00IST. **Presentation:**20November11:00IST.
+
+**Objective / intuition:** explain and demonstrate the submitted work without coupling presentation preparation to the submission deadline.
+
+**Actions after authorization:** preserve the submitted package; agree any new presentation-specific constraints; create a concise final PPT centred on the four policies and report-backed results; prepare/check a real restartable demo with policy selection and controlled network conditions; optionally record a fallback video; update learning notes/FAQ and speaker roles; provide a timed rehearsal/troubleshooting checklist. Demonstrate actual policy decisions/playback, not scripted actions. Keep these assets out of the submission ZIP. Any later result correction is explicitly versioned, not silently substituted into the submitted report.
+
+**Verification / exit:** every slide checked visually/factually; demo produces real advancing playback and linked requests; any recording agrees with the demonstrated run; team learning/speaking materials are complete. Human rehearsal remains a human activity and is never marked complete by a script. No Step23 work is authorized by the submission-only run.
 
 ## 11. Stop, escalation and scope rules
 
@@ -432,10 +432,10 @@ Autonomous execution is active; see the per-step tracker and artifacts/final/sta
 | 17 | Complete | 10.004million main interactions across10 fresh-seed fits; selected median seeds167/101; 394 JS fixtures and6 valid Chrome checks PASS; observer-free RTT and real fallback playback PASS; late training decline retained |
 | 18 | Complete | All179 frozen sessions complete:170 controlled +9 raw replay;303 source files,2 models, clocks/cutoffs, actual input/action/feedback, schedules and portable metrics verified. Guest NTP restored. |
 | 19 | Complete | F3-F5 and T3-T4/T7-T8 generated and reviewed; primary effect+1.272 [1.227,1.315], stalls-64.87percent;7/10 case gains. Direct guard/LEO contrasts include zero; regressions and coefficient sensitivity retained. STOP beforeStep20. |
-| 20 | Pending | Reviewed final report PDF and contributions |
-| 21 | Pending | Working demo, recording and report-consistent slide draft |
-| 22 | Pending | Extracted/reproduced release ZIP and publication/submission status |
-| 23 | Pending | Presentation/demo polish and human rehearsal checklist |
+| 20 | Pending | Balanced four-policy analysis; explicit dependency/file inventory |
+| 21 | Pending | Verified report PDF and evaluator-facing GitHub documentation |
+| 22 | Pending | Focused submission-only ZIP, clean reproduction, public source and checksums |
+| 23 | Deferred | After18November08:00 and new instruction: PPT/demo/learning/human rehearsal |
 
 ### Method references used for this revision
 

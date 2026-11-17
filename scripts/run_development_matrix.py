@@ -31,7 +31,7 @@ def main():
     manifest = ROOT/'configs/final/workloads/development.json'
     cases = [c for c in json.loads(manifest.read_text())['cases'] if c['family'] in args.families.split(',')]
     assert cases and all(c['role'] == 'development' for c in cases)
-    sources = ['CMABAbrController.js', 'CMABImprovedController.js', 'CMABRule.js', 'CMABImprovedRule.js']
+    sources = ['CMABAbrController.js', 'CMABImprovedController.js', 'CMABRule.js', 'CMABImprovedRule.js', 'CMABFeedback.js']
     base = ROOT/'dash.js/src/streaming/rules/abr/cmab'
     identity = {p: sha(base/p) for p in sources}
     # Verify the running image includes exactly the intended controller code.

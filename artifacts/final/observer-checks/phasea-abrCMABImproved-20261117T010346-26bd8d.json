@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "run_id": "phasea-abrCMABImproved-20261117T010346-26bd8d",
+  "metrics": {
+    "quality_utility": 34.087984636816444,
+    "stall_s": 2.1987134821374363,
+    "startup_s": 3.30493611907959,
+    "variation": 6.55009219267051,
+    "latency_area": 58.02827350000095,
+    "played_media_s": 32.27976989746094,
+    "unattributed_media_s": 0.0045359134674072266,
+    "skipped_media_s": 0.0,
+    "automatic_seek_wait_s": 0.0,
+    "switches": 7,
+    "metric_version": "played-ledger-v2",
+    "duration_s": 35.02920000000112,
+    "stall_count": 4,
+    "quality_attribution_fraction": 0.9998594812329266,
+    "played_bitrate_bps": 3351677.301510991,
+    "mean_live_latency_s": 4.723470348997392,
+    "p95_live_latency_s": 6.315,
+    "qoe_total": 14.220339581385863,
+    "qoe_per_wall_s": 0.4059567327082951
+  },
+  "request_completions": 18,
+  "request_starts": 19,
+  "starts_with_decision_link": 16,
+  "ambiguous_candidate_links": 10,
+  "cmab_callback_decisions": 31,
+  "cmab_learned_decisions": 25,
+  "valid_probe_samples": 41,
+  "scope": "Instrumentation verification only; not a policy comparison"
+}

@@ -1,5 +1,8 @@
 // Execute the actual controller with deterministic clock/runtime substitutes.
 const fs = require('node:fs'), vm = require('node:vm'), assert = require('node:assert/strict');
+const ledgerSource=fs.readFileSync('dash.js/src/streaming/rules/abr/cmab/CMABFeedback.js','utf8').replace('export default function','function')+'\nmodule.exports=CMABFeedback;';
+const ledgerContext={module:{exports:{}}};vm.runInNewContext(ledgerSource,ledgerContext);
+const Feedback=ledgerContext.module.exports;
 const path = 'dash.js/src/streaming/rules/abr/cmab/CMABImprovedController.js';
 const source = fs.readFileSync(path, 'utf8').replace(/^import .*;\r?$/gm, '')
     .replace('export default FactoryMaker.getClassFactory(CMABImprovedController);', 'module.exports=CMABImprovedController;');
@@ -7,7 +10,7 @@ function run(variant, originalController=false) {
     let wall = Date.UTC(2026,10,17), fits=0;
     class Clock extends Date {constructor(...a) {super(...(a.length?a:[wall]));} static now(){return wall;}}
     const window = {location:{search:'?cmabVariant='+variant}};
-    const context = {window, Date:Clock, Map, URLSearchParams, module:{exports:{}}, FactoryMaker:{},
+    const context = {window, Date:Clock, Map, URLSearchParams, module:{exports:{}}, FactoryMaker:{}, CMABFeedback:Feedback,
         XMLHttpRequest:class {open(){} send(){this.status=200;this.responseText='40';}},
         fetch:()=>Promise.resolve({status:200,json:()=>Promise.resolve({})}), console:{log(){}}};
     const actualSource=originalController ? fs.readFileSync('dash.js/src/streaming/rules/abr/cmab/CMABAbrController.js','utf8')
@@ -31,7 +34,15 @@ function run(variant, originalController=false) {
             video_codec:'avc1',target_latency:3};
         const a=c.getCMABNextQuality(runtime,ctx,ladder,arms,0,300,6000,3,1,8000,new Map(),1);
         assert.ok(Number.isInteger(a)&&a>=0&&a<8);
-        wall+=2000;
+        if (variant==='delayed' || variant==='outcome') {
+            const request={mediaType:'video',type:'MediaSegment',quality:a,startTime:i*2,url:'segment-'+i};
+            c.onRequestStart(request);
+            wall+=1000;
+            c.onRequestOutcome(request,'complete',3);
+            c.onRequestOutcome(request,'complete',3); // duplicate must not create a second row
+            if (i%20===0) c.onSeek();
+            wall+=1000;
+        } else wall+=2000;
     }
     const log=window.__LEO_CMAB_TRACE;
     if (variant==='memory'||variant==='both') assert.ok(Math.max(...log.map(r=>r.slot_history_count))<=31);
@@ -47,3 +58,24 @@ assert.ok(memory.log.some(x=>x.slot>0 && x.slot_history_count>7));
 assert.equal(startup.log[0].action,4,'Conservative startup chooses highest nominal rate below 8Mbps*0.45');
 assert.equal(ref.log[0].action,7);
 console.log('PASS: actual-controller history alignment/bounds, factorial isolation, startup and learned branch execution');
+
+for(const variant of ['delayed','outcome']) {
+    const result=run(variant);
+    assert.ok(result.fits>50,variant+' must train on mature outcomes');
+    assert.ok(result.log.every(x=>x.reward===null),'No immediate-choice reward is fed back');
+}
+let now=0;const outcomes=[];const book=Feedback(()=>now,row=>outcomes.push(row));
+const request=()=>({mediaType:'video',type:'MediaSegment',quality:2,startTime:10,url:'same-url'});
+book.offer({id:'known',action:2,observation:{throughput:1},bitrate:900,reward:(elapsed,latency)=>2-4*Math.max(0,elapsed-1)-.1*(latency-3)*elapsed});
+const first=request();book.start(first);now=2000;book.finish(first,'complete',4);book.finish(first,'complete',4);
+assert.equal(book.rows.length,1);assert.equal(book.rows[0].reward,-2.2);
+book.offer({id:'censored',action:2,observation:{throughput:2},bitrate:900,reward:()=>100});
+const second=request();book.start(second);book.seek();book.finish(second,'complete',3);
+assert.equal(book.rows.length,1,'Seek/cancel must not invent played quality');
+const unmatched=request();book.start(unmatched);book.finish(unmatched,'complete',3);
+assert.equal(book.rows.length,1,'Unmatched request cannot borrow another action');
+book.offer({id:'failed',action:2,observation:{throughput:3},bitrate:900,reward:()=>100});
+const failed=request();book.start(failed);book.finish(failed,'error',3);assert.equal(book.rows.length,1);
+for(let i=0;i<40;i++) {book.offer({id:'cap-'+i,action:2,observation:{throughput:i},bitrate:900,reward:()=>i});const r=request();book.start(r);book.finish(r,'complete',3);}
+assert.equal(book.rows.length,30);assert.equal(book.rows[0].reward,10);
+console.log('PASS: delayed/outcome actual controller and hand-calculated request ledger, duplicates, seek censoring, failures, unmatched identities and rolling cap');

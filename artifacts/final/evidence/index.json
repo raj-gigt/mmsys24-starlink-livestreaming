@@ -1,0 +1,158 @@
+{
+  "phasea-abrCMAB-20261116T223038-a4285e": {
+    "bytes": 28737,
+    "file": "artifacts/final/evidence/phasea-abrCMAB-20261116T223038-a4285e.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/memory-startup-v1/runs.json",
+    "sha256": "2860e8701c127b9ea07d6a1f35b1daa0db93f98c91ae1c2b4cc557e39a0d76a5"
+  },
+  "phasea-abrCMAB-20261116T223837-7b3045": {
+    "bytes": 38535,
+    "file": "artifacts/final/evidence/phasea-abrCMAB-20261116T223837-7b3045.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/memory-startup-v1/runs.json",
+    "sha256": "77438de9cedb20ef3bcf81d73f2c71c7f66278ad577d221575b5cf56dbeea786"
+  },
+  "phasea-abrCMAB-20261116T224238-c3fdb9": {
+    "bytes": 38687,
+    "file": "artifacts/final/evidence/phasea-abrCMAB-20261116T224238-c3fdb9.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/memory-startup-v1/runs.json",
+    "sha256": "e7498d806180d62fd29d4a7fb622efe87144d3113f025035cc6692b59987ef66"
+  },
+  "phasea-abrCMABImproved-20261116T222432-1fd2a5": {
+    "bytes": 32098,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261116T222432-1fd2a5.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/memory-startup-v1/runs.json",
+    "sha256": "75c25c8293c508303c2584f4f6779a6ed1706aea1d80765b3630adb9a39b6587"
+  },
+  "phasea-abrCMABImproved-20261116T222800-3abb05": {
+    "bytes": 28303,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261116T222800-3abb05.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/memory-startup-v1/runs.json",
+    "sha256": "b864904fdd67a10ebed378580b6eea7f2c1fec2271d10a9983cd1f931b7d6504"
+  },
+  "phasea-abrCMABImproved-20261116T223238-c52476": {
+    "bytes": 37095,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261116T223238-c52476.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/memory-startup-v1/runs.json",
+    "sha256": "209e795ae2a7ef175c8e29c2f2101678046658b05ae1e627fbb303493a58ad2f"
+  },
+  "phasea-abrCMABImproved-20261116T223438-8ca9ed": {
+    "bytes": 44305,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261116T223438-8ca9ed.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/memory-startup-v1/runs.json",
+    "sha256": "9578d01f58e77a15ede8d551ccb98d8bd72010c90ff0e2af2f4a9ba7ba83f4d9"
+  },
+  "phasea-abrCMABImproved-20261116T223638-1495b5": {
+    "bytes": 39018,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261116T223638-1495b5.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/memory-startup-v1/runs.json",
+    "sha256": "7577e663daebdab95d6fa89bb0e064f3472437b304c533a759d01e3917c46a04"
+  },
+  "phasea-abrCMABImproved-20261116T224038-15f573": {
+    "bytes": 43600,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261116T224038-15f573.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/memory-startup-v1/runs.json",
+    "sha256": "b3c50ce122cf37a6485b7678b8aa27251ccb4fae0892f543aa7893e2259920ce"
+  },
+  "phasea-abrCMABImproved-20261116T224438-662c14": {
+    "bytes": 45081,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261116T224438-662c14.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/memory-startup-v1/runs.json",
+    "sha256": "9fbadfc862886a53d32508486537596eaa2973caeebe6b8397b2f954e881b3ea"
+  },
+  "phasea-abrCMABImproved-20261116T224638-cef5b7": {
+    "bytes": 40696,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261116T224638-cef5b7.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/memory-startup-v1/runs.json",
+    "sha256": "7bb2eacce484039fa3410b13f899370a181928d7e80e4f325334d04269135369"
+  },
+  "phasea-abrCMABImproved-20261116T224838-4f7bbc": {
+    "bytes": 37983,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261116T224838-4f7bbc.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/memory-startup-v1/runs.json",
+    "sha256": "23921156d47630558a6f4a1e9b7974c148219557c2355449df1737e27cccfcd8"
+  }
+}

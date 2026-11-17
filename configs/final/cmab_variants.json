@@ -20,7 +20,7 @@
       "forced_choices_per_slot": 1,
       "startup_action": "highest nominal representation below safe measured throughput",
       "safety_factor_buffer_below_1s": 0.45,
-      "safety_factor_otherwise": 0.70,
+      "safety_factor_otherwise": 0.7,
       "hypothesis": "H2: restart treatment changes both forced duration and initial quality; report this as a package"
     },
     "both": {
@@ -29,9 +29,24 @@
       "forced_choices_per_slot": 1,
       "startup_action": "same as startup variant",
       "hypothesis": "H1 x H2 interaction"
+    },
+    "delayed": {
+      "base": "both",
+      "feedback": "Original P1203 proxy evaluated when the associated request completes, using captured action/context and outcome-time latency/stall history",
+      "training_rows": "unique linked completed requests; exact request-object association",
+      "censored": "unmatched, error, abandoned or seek-cancelled requests",
+      "qualification": "Timing/attribution package changes the observation/update clock; not timing in isolation"
+    },
+    "outcome": {
+      "base": "delayed",
+      "reward": "log(nominal bitrate/300kbps)*duration/2 - 4*max(0,transfer_elapsed-start_buffer) - .3*abs(log(selected/previous nominal bitrate)) - .1*max(0,outcome_latency-target)*transfer_elapsed",
+      "qualification": "Download utility and buffer-budget starvation surrogate. Neither actual played QoE nor exact causal stall attribution. Completed segment may later be skipped.",
+      "censored": "same as delayed"
     }
   },
-  "unchanged_factors": ["three-feature context", "LinTS alpha 1", "default MAB seed", "reward formula and reward timing", "catch-up", "network schedule", "media ladder"],
+  "unchanged_factors": [
+    "For the first factorial: three features, LinTS alpha/default seed, reward/timing and system controls. Delayed/outcome changes are separately declared."
+  ],
   "evidence": {
     "actual_controller_vm_checks": "scripts/check_cmab_variants.cjs",
     "browser_integration": "artifacts/final/observer-checks/phasea-abrCMABImproved-20261116T222032-f5a8f2.json",

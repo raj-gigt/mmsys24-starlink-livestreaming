@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "freeze_sha256": "c6e0730ba18c5515eabe05161594ade20d7f2a4e62ba127ef264aab71aaa1350",
+  "published_parent_source_revision": "be131536f260d64a6c7e6e4478d51e01e60bcf62",
+  "player_revision": "60f56693032bb7e12c174951da4ee05818383527",
+  "scope": "Published source matches every frozen canonical source/model/config identity; freeze.parent_revision records the earlier Git anchor before staging, and file hashes identify the measured snapshot."
+}

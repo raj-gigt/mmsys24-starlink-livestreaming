@@ -1,5 +1,7 @@
 """Restore the parent-packaged dash.js changes in a clean recursive checkout."""
 from pathlib import Path
+import hashlib
+import json
 import subprocess
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -8,6 +10,19 @@ def git(*args,check=True):
     return subprocess.run(['git',*args],cwd=ROOT,check=check,capture_output=True,text=True)
 
 def main():
+    if not (ROOT/'.git').exists():
+        # Submission ZIPs contain the exact required player snapshot, not Git
+        # submodule metadata. Verify its byte manifest before building it.
+        manifest_path=ROOT/'release/manifest.json'
+        if not manifest_path.is_file():
+            raise RuntimeError('Not a Git checkout or a manifested submission snapshot')
+        manifest=json.loads(manifest_path.read_text())
+        required=[name for name in manifest['files'] if name.startswith(('dash.js/src/','dash.js/samples/starlink/testplayer/','rl/web/'))]
+        assert required and 'dash.js/src/streaming/rules/abr/anjan/AnjanRule.js' in required
+        for name in required:
+            assert hashlib.sha256((ROOT/name).read_bytes()).hexdigest()==manifest['files'][name]['sha256'],name
+        print('Verified manifested player source snapshot; no historical patch or Git metadata required.')
+        return
     recorded_pin=git('rev-parse','HEAD:dash.js').stdout.strip()
     assert git('-C','dash.js','rev-parse','HEAD').stdout.strip() in {PIN,recorded_pin},'Unexpected dash.js revision'
     committed_rule=git('-C','dash.js','cat-file','-e','HEAD:src/streaming/rules/abr/anjan/AnjanRule.js',check=False)

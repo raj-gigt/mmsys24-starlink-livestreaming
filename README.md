@@ -248,6 +248,29 @@ and rebuild the `livesim2` Docker image and replace the image used by the `lives
 
 The code in this repository is licensed under [GPL-3.0](./LICENSE).
 
-## Anjan's Phase A work
+## Group 4 final project (branch `anjan`)
 
-The implementation progress and verified artifacts for roadmap Steps 1–6 are described in [the Phase A handoff](./reports/phase-a/README.md). The plan remains in [roadmap.md](./roadmap.md). Start the custom local-source testbed with `bash scripts/testbed.sh up` from Linux/WSL; this checks the packaged player patch, uses pinned service images and applies the common shaper repair. The new selectable labels are `abrAnjanSimple` and `abrAnjanRL`. The neural policy is a labelled integration pilot; final LEO-aware training and performance evaluation remain future work.
+The course extension studies improvements to the reference CMAB and compares
+compatible conventional/LEO-aware A2C actors. Start with the
+[final reproduction and demo guide](./reports/final/reproduction.md),
+[CMAB source audit](./reports/final/cmab-audit.md), and
+[presentation guide](./reports/final/presentation-guide.md).
+The existing [roadmap](./roadmap.md) and
+[machine-readable tracker](./artifacts/final/state.json) record verified progress.
+The frozen final evaluation inventory and completed-trial ledger are in
+`artifacts/final/evaluation`; inspect their status rather than treating a partial
+run as final results. Neural training and synchronous browser deployment checks
+are complete; the final measured comparison uses seven policies and179 sessions.
+
+```sh
+python scripts/reproduce_final.py --saved-results
+```
+
+This command requires the complete final portable evidence and verifies its
+identities before regenerating tables/figures. It needs no browser or MongoDB.
+The exact required modified player source is bundled in the submission ZIP;
+developer clones must use `--recurse-submodules` to obtain the published player.
+
+## Historical Phase A work
+
+The implementation progress and verified artifacts for roadmap Steps 1–6 are described in [the Phase A handoff](./reports/phase-a/README.md). Those results concern the earlier integration pilot. Later work preserves its history and replaces the deployed neural option with the trained final36/64-input actors. Start the current local-source testbed with `bash scripts/testbed.sh up` from Linux/WSL; it preserves the committed modified player, builds local source, uses pinned service images and applies the common final shaper/statistics configuration. `abrAnjanSimple` remains the simple integration test; `abrAnjanRL` selects the final conventional/LEO actor through `neuralVariant`.

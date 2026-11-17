@@ -1,0 +1,3 @@
+# Saved-event verification and plots. No PyTorch, browser, database or Docker.
+numpy==2.3.5
+matplotlib==3.11.2

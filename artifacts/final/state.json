@@ -73,12 +73,24 @@
   ],
   "contribution_section": "User requested blank contribution template; fill later, do not invent teammate work",
   "active_experiment": {
-    "step": 17,
-    "command": "python scripts/run_neural_validation.py",
-    "ledger": "artifacts/final/validation/neural-v1/runs.json",
-    "resume": "Same command skips completed deployment cases; do not retrain the10 completed main models",
-    "native_exports": "394fixtures PASS, maxlogiterror1.14e-5; conventional seed167/LEOseed101",
-    "next": "After6 Chrome checks, run observer-free/fallback tests, archive evidence and freeze final matrix"
+    "step": 18,
+    "session_id": 11016,
+    "command": "python scripts/run_final_matrix.py",
+    "ledger": "artifacts/final/evaluation/runs.json",
+    "freeze_sha256": "c6e0730ba18c5515eabe05161594ade20d7f2a4e62ba127ef264aab71aaa1350",
+    "expected_trials": 179,
+    "resume": "Same command skips completed keys; do not edit frozen sources/models/configs. Clock helper holds/restores guest NTP automatically.",
+    "source_publication": "be131536f260d64a6c7e6e4478d51e01e60bcf62; player60f56693032bb7e12c174951da4ee05818383527",
+    "do_not_modify": "Every file in freeze.sources, or add files under dash.js/src, testplayer or rl/web; no heavy training or parallel browser experiments while measured matrix runs.",
+    "next": "Archive portable results, verify all179, analyse figures/tables, produce/report/render/check PDF and8-slide final deck, real recorded demo, clean reproduction ZIP, publish; contributions intentionally blank template."
   },
-  "training_extension_decision": "No extension: both aggregate late validation trends nonpositive. All10 seeds improved initialization; selected peaks retained. Main10.004million interactions,44.33min actual training."
+  "training_extension_decision": "No extension: both aggregate late validation trends nonpositive. All10 seeds improved initialization; selected peaks retained. Main10.004million interactions,44.33min actual training.",
+  "recovery_20261117": {
+    "checked_at": "2026-11-17T16:52:33.875194",
+    "matrix_session": 11016,
+    "verified_portable_final_trials": 47,
+    "frozen_source_files": 303,
+    "reused": "Completed CMAB research, calibration,16 screening fits,10 main fits,394 export fixtures and six browser deployment checks",
+    "prepared_not_executed": "Report/deck source, live recording launcher, saved-results verifier, submission builder and clean-extraction verifier; final matrix remains active"
+  }
 }

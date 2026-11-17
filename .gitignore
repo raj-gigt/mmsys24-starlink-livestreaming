@@ -5,6 +5,7 @@ artifacts/runs/
 data/raw/
 data/processed/
 models/checkpoints/
+release/*.zip
 artifacts/final/training/**/resume.zip
 artifacts/final/training/**/resume-state.pkl
 figures/

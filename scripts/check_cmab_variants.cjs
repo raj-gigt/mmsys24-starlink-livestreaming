@@ -46,7 +46,7 @@ function run(variant, originalController=false) {
     }
     const log=window.__LEO_CMAB_TRACE;
     if (variant==='memory'||variant==='both') assert.ok(Math.max(...log.map(r=>r.slot_history_count))<=31);
-    return {fits, log};
+    return {fits, log, feedback:window.__LEO_FEEDBACK_TRACE||[]};
 }
 const ref=run('reference'), memory=run('memory'), startup=run('startup'), both=run('both');
 const actualOriginal=run('reference',true);
@@ -63,6 +63,10 @@ for(const variant of ['delayed','outcome']) {
     const result=run(variant);
     assert.ok(result.fits>50,variant+' must train on mature outcomes');
     assert.ok(result.log.every(x=>x.reward===null),'No immediate-choice reward is fed back');
+    const accepted=result.feedback.filter(r=>r.accepted);
+    const expected=variant==='delayed' ? 1 : Math.log(5)*.7-2;
+    assert.ok(Math.abs(accepted[0].reward-expected)<1e-10,'Actual controller first completed reward matches hand calculation');
+    assert.equal(new Set(accepted.map(r=>r.decision_id)).size,accepted.length);
 }
 let now=0;const outcomes=[];const book=Feedback(()=>now,row=>outcomes.push(row));
 const request=()=>({mediaType:'video',type:'MediaSegment',quality:2,startTime:10,url:'same-url'});

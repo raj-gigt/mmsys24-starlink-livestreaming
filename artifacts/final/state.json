@@ -28,18 +28,23 @@
       "updated_utc": "2026-11-16T22:51:04.955050+00:00"
     },
     "12": {
+      "status": "Complete",
+      "evidence": "9 browser sessions; six request-identity checks pass; explicit download surrogate improves all three development cases; original delayed proxy mixed; completion-censoring limitation disclosed",
+      "updated_utc": "2026-11-17T01:24:45.567830+00:00"
+    },
+    "13": {
       "status": "Running",
-      "evidence": "Implementing exact request-object feedback links and explicit download-surrogate rewards; full played-outcome attribution remains offline",
-      "updated_utc": "2026-11-16T22:51:05.045679+00:00"
+      "evidence": "Test physical normalization/intercept, causal context and action guard; correct shared CMAB dependency prewarm before validation",
+      "updated_utc": "2026-11-17T01:24:45.648953+00:00"
     }
   },
-  "updated_utc": "2026-11-16T22:51:05.045679+00:00",
-  "current_step": 12,
+  "updated_utc": "2026-11-17T01:24:45.648953+00:00",
+  "current_step": 13,
   "active_experiment": {
-    "step": 11,
-    "command": "python scripts/run_development_matrix.py",
-    "session_id": 31025,
-    "ledger": "artifacts/final/development/memory-startup-v1/runs.json",
+    "step": 12,
+    "command": "python scripts/run_development_matrix.py --name feedback-v1 --variants both,delayed,outcome",
+    "session_id": 94930,
+    "ledger": "artifacts/final/development/feedback-v1/runs.json",
     "resume": "Rerun same command; complete run keys skipped",
     "do_not_modify_during_measurement": [
       "CMAB controller code",

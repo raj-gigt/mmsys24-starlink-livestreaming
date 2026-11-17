@@ -1,0 +1,35 @@
+{
+  "scope": "Development runs initialize Pyodide after Load. Prewarm dependencies before validation/final comparisons and report this boundary change.",
+  "runs": [
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T010502-bf28fb",
+      "variant": "both",
+      "first_cmab_decision_after_load_s": 8.964596923828125
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T010737-18b547",
+      "variant": "delayed",
+      "first_cmab_decision_after_load_s": 9.207633056640624
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T010938-a43cb1",
+      "variant": "outcome",
+      "first_cmab_decision_after_load_s": 9.0046669921875
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T011139-483b7c",
+      "variant": "both",
+      "first_cmab_decision_after_load_s": 9.1899599609375
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T011338-efa79b",
+      "variant": "delayed",
+      "first_cmab_decision_after_load_s": 8.218468994140625
+    },
+    {
+      "run_id": "phasea-abrCMABImproved-20261117T011538-68f0b0",
+      "variant": "outcome",
+      "first_cmab_decision_after_load_s": 8.17963818359375
+    }
+  ]
+}

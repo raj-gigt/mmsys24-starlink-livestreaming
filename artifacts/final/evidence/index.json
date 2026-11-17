@@ -154,5 +154,122 @@
     ],
     "ledger": "artifacts/final/development/memory-startup-v1/runs.json",
     "sha256": "23921156d47630558a6f4a1e9b7974c148219557c2355449df1737e27cccfcd8"
+  },
+  "phasea-abrCMABImproved-20261117T010502-bf28fb": {
+    "bytes": 33373,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T010502-bf28fb.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/feedback-v1/runs.json",
+    "sha256": "6770acbb110e532fba4e73639ff213ace99d094691cc80e63934ee9fe82871bb"
+  },
+  "phasea-abrCMABImproved-20261117T010737-18b547": {
+    "bytes": 35461,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T010737-18b547.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/feedback-v1/runs.json",
+    "sha256": "122379fb96f95832c921279722c355afa719bb896ff0e3b4971c33c5cf429c34"
+  },
+  "phasea-abrCMABImproved-20261117T010938-a43cb1": {
+    "bytes": 34915,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T010938-a43cb1.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/feedback-v1/runs.json",
+    "sha256": "d097823e2cbdfdef5e8186562f113468db77626fbb6f3149e66b185fa2c5d2fe"
+  },
+  "phasea-abrCMABImproved-20261117T011139-483b7c": {
+    "bytes": 45589,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T011139-483b7c.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/feedback-v1/runs.json",
+    "sha256": "9e4e365849998f632c664da8c5706a58d40d74793d95aed5f9c5455be06ebaa3"
+  },
+  "phasea-abrCMABImproved-20261117T011338-efa79b": {
+    "bytes": 44809,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T011338-efa79b.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/feedback-v1/runs.json",
+    "sha256": "499104c2c525b0f1f539d6287bd18707c7dba58a2fa1718069b5e6c12fb1dd23"
+  },
+  "phasea-abrCMABImproved-20261117T011538-68f0b0": {
+    "bytes": 45733,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T011538-68f0b0.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/feedback-v1/runs.json",
+    "sha256": "7ed31e6e418ac636d1479ea358c41ca8c4ede6012a5e5e8897ed9032ffd1d334"
+  },
+  "phasea-abrCMABImproved-20261117T011738-85475e": {
+    "bytes": 41807,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T011738-85475e.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/feedback-v1/runs.json",
+    "sha256": "f5b49043e1b1c8912b362e7d6e5493d85c636b86e3b00d91ae6fc6ca430800be"
+  },
+  "phasea-abrCMABImproved-20261117T011938-964fe3": {
+    "bytes": 44705,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T011938-964fe3.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/feedback-v1/runs.json",
+    "sha256": "6230533b1f10207b61500069e8f3a6205facbf921f3580d0fe741a8ecd57aa97"
+  },
+  "phasea-abrCMABImproved-20261117T012138-e3ac62": {
+    "bytes": 48669,
+    "file": "artifacts/final/evidence/phasea-abrCMABImproved-20261117T012138-e3ac62.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/development/feedback-v1/runs.json",
+    "sha256": "c58d70a6a694c704ef9308bfc27acab3568e91a8213b0f7c1fe50363b88c7ef5"
   }
 }

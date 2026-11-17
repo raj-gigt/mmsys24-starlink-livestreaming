@@ -18,7 +18,7 @@
   },
   "H3": {
     "mechanism": "immediate proxy feedback is not the new action's realized outcome",
-    "state": "request bookkeeping verified; paired browser experiment running",
+    "state": "development complete",
     "requirement": "request/media outcome association and attribution coverage",
     "treatments": [
       "both: immediate proxy",
@@ -29,7 +29,10 @@
       "No invented played-segment reward",
       "Seek/error/unmatched transfers censored; report coverage and resulting selection bias",
       "Timing comparison also moves training rows to unique matched completed requests"
-    ]
+    ],
+    "evidence": "development/feedback-v1/paired-results.json",
+    "decision": "Advance explicit outcome surrogate to estimator/context ablations; delayed original proxy is mixed",
+    "observations": "Outcome surrogate improves common QoE on all three development cases versus immediate proxy; severe steady-link failure remains; one repeat per case, not final proof."
   },
   "H4": {
     "mechanism": "buffer/live delay and fresh RTT distinguish otherwise similar context",

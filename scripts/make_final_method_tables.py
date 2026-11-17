@@ -18,7 +18,7 @@ data=[]
 for role in ['train','validation','test']:
     d=json.loads((ROOT/f'data/manifests/{role}.json').read_text())
     data.append({'dataset':'Neural '+role,'cases':len(d['scenarios']),'source':'Seychelles20240130 chronological block',
-        'measured':'RTT only','generated':'Capacity, interruptions and recovery','use':'Training' if role=='train' else 'Checkpoint selection' if role=='validation' else 'Post-selection simulator evaluation'})
+        'measured':'RTT only','generated':'Capacity, interruptions and recovery','use':'Training' if role=='train' else 'Checkpoint selection' if role=='validation' else 'Legacy simulator split; unused in final selection or reported browser results'})
 for role in ['development','validation','test','reserve']:
     d=json.loads((ROOT/f'configs/final/workloads/{role}.json').read_text())
     data.append({'dataset':'Browser '+role,'cases':len(d['cases']),'source':'Seychelles20240130' if role in ['development','validation'] else 'Seychelles20240130 + Victoria20251114',
@@ -29,5 +29,7 @@ write('T2-media-ladder.csv',[{k:r[k] for k in ['action','nominal_bps','mean_enco
 rules=json.loads((ROOT/'configs/final/protocol.json').read_text())
 write('T3-common-settings.csv',[{'setting':k,'value':json.dumps(v)} for k,v in rules.items()])
 project=json.loads((ROOT/'configs/final/project.json').read_text())
-write('T6-contributions-template.csv',[{**m,'specific_completed_work_2_to_3_sentences':''} for m in project['members']])
+contribution_path=OUT/'T6-contributions-template.csv'
+existing={r['roll']:r.get('specific_completed_work_2_to_3_sentences','') for r in csv.DictReader(contribution_path.open(encoding='utf-8'))} if contribution_path.exists() else {}
+write('T6-contributions-template.csv',[{**m,'specific_completed_work_2_to_3_sentences':existing.get(m['roll'],'')} for m in project['members']])
 print('Created T1/T2/T3 method tables and requested blank T6 contribution template')

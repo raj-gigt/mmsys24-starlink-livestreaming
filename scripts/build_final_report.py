@@ -42,6 +42,9 @@ def main():
     a={r['policy']:r for r in result['overall']};effect=result['paired']['improved'];baseline=a['original'];candidate=a['improved']
     stall_reduction=100*(baseline['stall_s']-candidate['stall_s'])/baseline['stall_s']
     positive=effect['mean_difference']>0
+    contribution_rows=readcsv('T6-contributions-template.csv')
+    contributions={r['roll']:r['specific_completed_work_2_to_3_sentences'].strip() for r in contribution_rows}
+    assert len(contribution_rows)==len(project['members']) and set(contributions)=={m['roll'] for m in project['members']}
     p('LEO-Aware Live Video Streaming:<br/>RL-Based Adaptive Bitrate Selection','ReportTitle')
     p('CMAB refinements and a compatible actor-critic comparison','Sub')
     p('CS6048 - Modern Networking Methods (Beyond TCP &amp; IP)<br/><b>Group 4</b> | Final project report | November 2026')
@@ -50,8 +53,9 @@ def main():
     sub('1. Problem and scope')
     p('The question is whether changing the reference ABR controller improves actual low-latency live playback under constrained bandwidth, changing RTT, interruption and recovery. We pursue a primary CMAB study and a secondary neural comparison. The proposal\'s optional congestion-control extension is excluded. We do not alter the shared transport separately for a policy or equate a successful model call with better playback.')
     sub('Team and individual contributions')
-    table([['Member','Roll number','Assigned domain','Specific completed work (2-3 sentences)']]+[[m['name'],m['roll'],m['domain'],'________________________________\n________________________________\n________________________________'] for m in project['members']],[92,63,114,218])
-    p('Contribution details are intentionally left as a template at the team\'s request. Fill these with actual work before submission.','SmallBody')
+    table([['Member','Roll number','Assigned domain','Specific completed work (2-3 sentences)']]+[[m['name'],m['roll'],m['domain'],contributions[m['roll']] or '________________________________\n________________________________\n________________________________'] for m in project['members']],[92,63,114,218])
+    if not all(contributions.values()):
+        p('Missing contribution details are intentionally left as a template at the team\'s request. Fill these with actual work before submission.','SmallBody')
 
     page();h('2. Reference system and related work')
     figure('F1-system.png','Figure1. Common testbed and our policy interfaces. Player observations and cached RTT health feed inference; MongoDB stores evidence rather than supplying synchronous decisions.')

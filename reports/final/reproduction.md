@@ -35,6 +35,11 @@ python -m pip install -r requirements-report.txt
 python scripts/build_final_report.py
 ```
 
+To fill the intentionally deferred contribution section later, edit the last
+column of `reports/final/tables/T6-contributions-template.csv` with each member's
+actual 2-3 sentences, then rebuild and inspect the report. Rebuild/reverify the
+submission ZIP if its report changes. No contribution text has been invented.
+
 The authored presentation source is `scripts/build_final_presentation.mjs`. It uses
 the Codex bundled `@oai/artifact-tool` runtime, with runtime/skill paths provided
 as environment variables described at the top of that source. Viewing/editing

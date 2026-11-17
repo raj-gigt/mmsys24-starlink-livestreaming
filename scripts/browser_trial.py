@@ -61,7 +61,9 @@ return JSON.parse(JSON.stringify({at_ms:performance.now(),media_time:v.currentTi
  ladder:ladder,requests:req,decisions:window.__anjanDecisionLog||[],
  events:window.__phaseaEvents||[],build:window.__anjanBuild||null,
  model:window.LEO_ABR && window.LEO_ABR.modelIdentity||null,
- utc_synchronization_enabled:p.getSettings().streaming.utcSynchronization.enabled,
+ utc_synchronization_enabled:p.getSettings().streaming.utcSynchronization.enabled, actual_abr_strategy:p.getSettings().streaming.abr.ABRStrategy,
+ auto_switch_video:p.getSettings().streaming.abr.autoSwitchBitrate.video,
+
  model_load_ms:window.LEO_ABR && window.LEO_ABR.modelLoadMs||null,
  rendered:window.__anjanRendered||[],player_errors:window.__phaseaErrors||[],
  callbacks:window.__anjanCallbackDurations||[],
@@ -93,7 +95,7 @@ def run(args: argparse.Namespace) -> dict:
     samples, applied = [], []
     params = {"experimentID": run_id,
               "mpdURL": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/stream.mpd",
-              "targetLatency": args.target, "constantVideoBitrate": -1,
+              "targetLatency": args.target, "constantVideoBitrate": getattr(args,'fixed_kbps',-1),
               "abrGeneral": args.algorithm, "maxDrift": 5, "minCatchupPlaybackRate": -0.17,
               "maxCatchupPlaybackRate": 0.17, "abrAdditionalAbandonRequestRule": "true",
               "cmabAlpha": 1.0, "catchupMechanism": args.catchup}
@@ -101,6 +103,7 @@ def run(args: argparse.Namespace) -> dict:
         params['hostClock']=1
     if getattr(args, 'variant', None):
         params['cmabVariant'] = args.variant
+    if getattr(args,'neural_variant',None):params['neuralVariant']=args.neural_variant
     url = "http://pyodide/samples/starlink/testplayer/testplayer.html?" + urlencode(params)
     clock_start = datetime.now(timezone.utc).isoformat()
     try:
@@ -208,6 +211,8 @@ def run(args: argparse.Namespace) -> dict:
                    "load_wall_clock_utc": loaded_utc,
                    "scenario_id": scenario['id'] if scenario else None,
                    "variant": getattr(args, 'variant', None),
+                   "actual_abr_strategy":final.get('actual_abr_strategy'),"auto_switch_video":final.get('auto_switch_video'),
+                   "fixed_kbps":getattr(args,'fixed_kbps',-1),"neural_variant":getattr(args,'neural_variant',None),
                    "scheduled_start_unix_s": scheduled_start,
                    "controlled_stages": applied, "samples": len(samples), "mongo_documents": counts,
                    "media_time_end": final.get("media_time"), "ladder": final.get("ladder"),
@@ -253,4 +258,6 @@ if __name__ == "__main__":
     parser.add_argument('--allow-test', action='store_true', help='Only for frozen final evaluation')
     parser.add_argument('--local-clock',action='store_true',help='Explicit single-host emulator clock; avoid external UTC HTTP dependencies')
     parser.add_argument('--variant', help='Whitelisted improved-CMAB configuration')
+    parser.add_argument('--fixed-kbps',type=float,default=-1,help='Calibration only: disable video ABR at this nominal rate')
+    parser.add_argument('--neural-variant',choices=['conventional','leo'])
     run(parser.parse_args())

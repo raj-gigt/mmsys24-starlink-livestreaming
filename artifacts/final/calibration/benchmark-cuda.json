@@ -1,0 +1,39 @@
+{
+  "device": "cuda",
+  "torch": "2.14.1+cu130",
+  "cuda_runtime": "13.0",
+  "cuda_device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "threads": 1,
+  "parallel_envs": 8,
+  "runs": [
+    {
+      "leo": false,
+      "repeat": 0,
+      "steps": 16384,
+      "wall_s": 6.045359200012172,
+      "steps_per_s": 2710.17808172044
+    },
+    {
+      "leo": false,
+      "repeat": 1,
+      "steps": 16384,
+      "wall_s": 5.9156254999979865,
+      "steps_per_s": 2769.614134634719
+    },
+    {
+      "leo": true,
+      "repeat": 0,
+      "steps": 16384,
+      "wall_s": 7.020037500013132,
+      "steps_per_s": 2333.8906665340965
+    },
+    {
+      "leo": true,
+      "repeat": 1,
+      "steps": 16384,
+      "wall_s": 7.030809199990472,
+      "steps_per_s": 2330.314979963075
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "device": "cpu",
+  "torch": "2.14.1+cpu",
+  "cuda_runtime": null,
+  "cuda_device": null,
+  "platform": "Windows-10-10.0.26200-SP0",
+  "threads": 1,
+  "parallel_envs": 8,
+  "runs": [
+    {
+      "leo": false,
+      "repeat": 0,
+      "steps": 16384,
+      "wall_s": 3.413446799997473,
+      "steps_per_s": 4799.840442807584
+    },
+    {
+      "leo": false,
+      "repeat": 1,
+      "steps": 16384,
+      "wall_s": 3.412278799980413,
+      "steps_per_s": 4801.483395815736
+    },
+    {
+      "leo": true,
+      "repeat": 0,
+      "steps": 16384,
+      "wall_s": 4.22543229997973,
+      "steps_per_s": 3877.4730812936223
+    },
+    {
+      "leo": true,
+      "repeat": 1,
+      "steps": 16384,
+      "wall_s": 4.297725500015076,
+      "steps_per_s": 3812.249060565298
+    }
+  ]
+}

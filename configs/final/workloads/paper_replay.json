@@ -8,10 +8,10 @@
       "family": "original_paper_replay",
       "mode": "trace",
       "seconds": 180,
-      "trace_offset_s": 2904,
+      "trace_offset_s": 2940,
       "source_window_s": [
-        2904,
-        3084
+        2940,
+        3120
       ],
       "recording_id": "seychelles-20240130-0100",
       "network_kind": "original raw probe-to-delay/loss emulation convention; fixed20Mbps; positive RTT1percentloss, nonpositive100percentloss",
@@ -19,5 +19,6 @@
     }
   ],
   "display_label": "Author-repository raw replay; not exact published emulator profile",
-  "paper_difference": "PaperSection5 describes40ms/0.1%normal and100ms/1%handover; distributed shaper uses measured RTT with1%positive/100%nonpositive loss"
+  "paper_difference": "PaperSection5 describes40ms/0.1%normal and100ms/1%handover; distributed shaper uses measured RTT with1%positive/100%nonpositive loss",
+  "phase_revision": "Whole-minute source offset selected from metadata before final performance access; still within sealed Seychelles test block"
 }

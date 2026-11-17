@@ -1,0 +1,10 @@
+[
+  {
+    "run_id": "phasea-abrAnjanSimple-20261117T052837-964d0f",
+    "reason": "Observation clock/horizon integrity fault; not a policy-outcome exclusion",
+    "requested_s": 90,
+    "performance_horizon_s": 89.34,
+    "epoch_horizon_s": 90.174,
+    "status": "retained_unscored_retry_same_case"
+  }
+]

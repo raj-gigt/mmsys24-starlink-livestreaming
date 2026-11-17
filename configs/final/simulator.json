@@ -1,0 +1,20 @@
+{
+  "capacity_efficiency": 0.9433962264150942,
+  "rtt_multiplier": 5.600000000000004,
+  "request_overhead_s": 0.0,
+  "method": "Bounded robust fit: transfer_s = effective_RTT_factor*RTT + overhead + payload_bits/(capacity*efficiency)",
+  "fit_scope": "Four fixed-policy development runs; outage-adjacent requests excluded. Adaptive cases not used for fit. No validation/test outcomes.",
+  "requests": 126,
+  "bounded_fit_loss": 0.004781326345712329,
+  "source_runs": [
+    "phasea-abrAnjanSimple-20261117T052017-94e776",
+    "phasea-abrAnjanSimple-20261117T052237-d48279",
+    "phasea-abrAnjanSimple-20261117T052437-576100",
+    "phasea-abrAnjanSimple-20261117T053244-9507e6"
+  ],
+  "limitations": [
+    "Phenomenological transport constants do not model TCP retries/loss/RTO",
+    "Fitted transfer residuals are not independent validation",
+    "Exact browser seek/scheduler behavior remains approximate"
+  ]
+}

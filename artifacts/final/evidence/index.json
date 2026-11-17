@@ -1,4 +1,102 @@
 {
+  "phasea-abrAnjanSimple-20261117T052017-94e776": {
+    "bytes": 44690,
+    "file": "artifacts/final/evidence/phasea-abrAnjanSimple-20261117T052017-94e776.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/calibration/runs.json",
+    "scientific_status": "complete",
+    "sha256": "c3ee172b471e206fcda9fd09c0ec8f8bf1e1074934bfd3ee561fac182a37354c"
+  },
+  "phasea-abrAnjanSimple-20261117T052237-d48279": {
+    "bytes": 48183,
+    "file": "artifacts/final/evidence/phasea-abrAnjanSimple-20261117T052237-d48279.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/calibration/runs.json",
+    "scientific_status": "complete",
+    "sha256": "94d5c8e0edb6ebb7a5b2b4d8e199e5e4dbca4b85f87817dc150ef2a066dced83"
+  },
+  "phasea-abrAnjanSimple-20261117T052437-576100": {
+    "bytes": 32774,
+    "file": "artifacts/final/evidence/phasea-abrAnjanSimple-20261117T052437-576100.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/calibration/runs.json",
+    "scientific_status": "complete",
+    "sha256": "9efc85a5d7a32ccc247195f11812dd156f33e9a825fbacb047e29da187b18b8d"
+  },
+  "phasea-abrAnjanSimple-20261117T052637-a3ffbc": {
+    "bytes": 279356,
+    "file": "artifacts/final/evidence/phasea-abrAnjanSimple-20261117T052637-a3ffbc.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/calibration/runs.json",
+    "scientific_status": "complete",
+    "sha256": "eab60466066c0ce5747ed112b0215c15a429d264e8ee847f67dbd41db6357051"
+  },
+  "phasea-abrAnjanSimple-20261117T052837-964d0f": {
+    "bytes": 49951,
+    "file": "artifacts/final/evidence/phasea-abrAnjanSimple-20261117T052837-964d0f.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/calibration/invalid-runs.json",
+    "scientific_status": "retained_unscored_retry_same_case",
+    "sha256": "b61559ab9e90b918ea071b75bb6033b504dde28b7519d9682bf3d8a3f7d51cab"
+  },
+  "phasea-abrAnjanSimple-20261117T053244-9507e6": {
+    "bytes": 49961,
+    "file": "artifacts/final/evidence/phasea-abrAnjanSimple-20261117T053244-9507e6.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/calibration/runs.json",
+    "scientific_status": "complete",
+    "sha256": "5e27329aa4a5b93ea7eefb2d424cfe25fd3a143aeb36270f468d145245f95d41"
+  },
+  "phasea-abrAnjanSimple-20261117T053437-2e76d7": {
+    "bytes": 265507,
+    "file": "artifacts/final/evidence/phasea-abrAnjanSimple-20261117T053437-2e76d7.json.gz",
+    "files": [
+      "telemetry.json",
+      "summary.json",
+      "scenario.json",
+      "applied-profile.json",
+      "samples.json"
+    ],
+    "ledger": "artifacts/final/calibration/runs.json",
+    "scientific_status": "complete",
+    "sha256": "0a05bc17140135edca6472ecccb3090ce41e082ffc696e0c8e02f616ba15ea03"
+  },
   "phasea-abrCMAB-20261116T223038-a4285e": {
     "bytes": 28737,
     "file": "artifacts/final/evidence/phasea-abrCMAB-20261116T223038-a4285e.json.gz",

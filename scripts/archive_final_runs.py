@@ -14,7 +14,7 @@ def main():
         ledger=Path(ledger_name);rows=json.loads(ledger.read_text())
         if isinstance(rows,dict): rows=rows['runs']
         for row in rows:
-            if row.get('status')!='complete':continue
+            if row.get('status') not in ['complete','retained_unscored_retry_same_case']:continue
             run_id=row['run_id'];folder=ROOT/'artifacts/runs'/run_id
             payload={name:json.loads((folder/name).read_text(encoding='utf-8')) for name in FILES if (folder/name).exists()}
             assert {'telemetry.json','summary.json'}<=payload.keys(),run_id
@@ -26,7 +26,7 @@ def main():
             assert json.loads(gzip.decompress(output.read_bytes()))==payload
             index[run_id]={'file':output.relative_to(ROOT).as_posix(),
                 'sha256':hashlib.sha256(compressed).hexdigest(),'bytes':len(compressed),
-                'files':list(payload),'ledger':str(ledger).replace(chr(92),'/')}
+                'files':list(payload),'ledger':str(ledger).replace(chr(92),'/'),'scientific_status':row['status']}
     index_path.write_text(json.dumps(index,indent=2,sort_keys=True))
     print(json.dumps({'portable_runs':len(index),'compressed_bytes':sum(r['bytes'] for r in index.values())}))
 if __name__=='__main__':main()

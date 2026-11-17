@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "scope": "Dynamics bookkeeping and actor causality, not browser calibration",
+  "runs": [
+    {
+      "leo": false,
+      "decisions": 79,
+      "return": -224.23980722680048,
+      "totals": {
+        "quality_utility": 93.93155961483117,
+        "stall_s": 66.29759163007942,
+        "startup_s": 2.173033169600001,
+        "variation": 54.036075392222585,
+        "latency_area": 345.97144534047084,
+        "played_s": 124.82298568919954,
+        "skipped_s": 52.261246752667404,
+        "seeks": 10.0,
+        "downloaded_bytes": 39659257.35339611,
+        "discarded_bytes": 9856897.353396162
+      }
+    },
+    {
+      "leo": true,
+      "decisions": 79,
+      "return": -224.23980722680048,
+      "totals": {
+        "quality_utility": 93.93155961483117,
+        "stall_s": 66.29759163007942,
+        "startup_s": 2.173033169600001,
+        "variation": 54.036075392222585,
+        "latency_area": 345.97144534047084,
+        "played_s": 124.82298568919954,
+        "skipped_s": 52.261246752667404,
+        "seeks": 10.0,
+        "downloaded_bytes": 39659257.35339611,
+        "discarded_bytes": 9856897.353396162
+      }
+    }
+  ]
+}

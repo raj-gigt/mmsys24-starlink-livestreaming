@@ -1,0 +1,2111 @@
+{
+  "scope": "Development calibration; no TCP/loss/retransmission or exact browser scheduling model",
+  "transport_fit": {
+    "capacity_efficiency": 0.9433962264150942,
+    "rtt_multiplier": 5.600000000000004,
+    "request_overhead_s": 0.0,
+    "method": "Bounded robust fit: transfer_s = effective_RTT_factor*RTT + overhead + payload_bits/(capacity*efficiency)",
+    "fit_scope": "Four fixed-policy development runs; outage-adjacent requests excluded. Adaptive cases not used for fit. No validation/test outcomes.",
+    "requests": 126,
+    "bounded_fit_loss": 0.004781326345712329,
+    "source_runs": [
+      "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "phasea-abrAnjanSimple-20261117T052437-576100",
+      "phasea-abrAnjanSimple-20261117T053244-9507e6"
+    ],
+    "limitations": [
+      "Phenomenological transport constants do not model TCP retries/loss/RTO",
+      "Fitted transfer residuals are not independent validation",
+      "Exact browser seek/scheduler behavior remains approximate"
+    ]
+  },
+  "status": "quantified",
+  "median_transfer_relative_error": 0.03771299911124447,
+  "per_case_transfer_median_relative_error": {
+    "steady_bandwidth-0": 0.12480408437383908,
+    "steady_bandwidth-4": 0.0186887250958625,
+    "steady_bandwidth-7": 0.006955258847581638,
+    "steady_bandwidth-None": 0.03919736009778199,
+    "handover_interruption-0": 0.025258477138967197,
+    "handover_interruption-None": 0.09108070037199666
+  },
+  "buffer_mae_s": 0.49480831143730103,
+  "latency_mae_s": 2.060977782654535,
+  "playable_cases_latency_mae_s": 0.5547912819213624,
+  "playable_cases_qualification": "Diagnostic subset only; overloaded no-playback case remains in overall errors and final results",
+  "targets": {
+    "transfer_relative_error": 0.2,
+    "buffer_mae_s": 1,
+    "latency_mae_s": 1
+  },
+  "runs": [
+    {
+      "key": "steady_bandwidth-0",
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "browser": {
+        "quality_utility": 0.0,
+        "stall_s": 0.984562398262737,
+        "startup_s": 1.005583992768079,
+        "variation": 0.0,
+        "latency_area": 9.190673200000145,
+        "played_media_s": 89.70868611335754,
+        "unattributed_media_s": 0.00021600723266601562,
+        "skipped_media_s": 0.0,
+        "automatic_seek_wait_s": 0.0,
+        "switches": 0,
+        "metric_version": "played-ledger-v2",
+        "duration_s": 90.026,
+        "stall_count": 11,
+        "quality_attribution_fraction": 0.9999975921257793,
+        "played_bitrate_bps": 300000.0,
+        "mean_live_latency_s": 3.102458868397381,
+        "p95_live_latency_s": 3.361,
+        "qoe_total": -5.862900905819041,
+        "qoe_per_wall_s": -0.06512452964498079
+      },
+      "simulator": {
+        "quality_utility": 0.0,
+        "stall_s": 0.9120042669527224,
+        "startup_s": 1.042681706666667,
+        "variation": 0.0,
+        "latency_area": 10.494158051447876,
+        "played_s": 89.69252854266367,
+        "skipped_s": 0.0,
+        "seeks": 0.0,
+        "downloaded_bytes": 3619932.999999992,
+        "discarded_bytes": 0.0
+      },
+      "simulator_qoe_per_wall_s": -0.0637790508846927,
+      "buffer_s_mae": 0.3427460267958882,
+      "latency_s_mae": 0.03058089374262399
+    },
+    {
+      "key": "steady_bandwidth-4",
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "browser": {
+        "quality_utility": 39.690177049090174,
+        "stall_s": 43.41753176624215,
+        "startup_s": 2.7934410140998662,
+        "variation": 0.0,
+        "latency_area": 386.3705345000089,
+        "played_media_s": 49.32314610481262,
+        "unattributed_media_s": 0.0013589859008789062,
+        "skipped_media_s": 36.299067974090576,
+        "automatic_seek_wait_s": 23.36899999998882,
+        "switches": 0,
+        "metric_version": "played-ledger-v2",
+        "duration_s": 90.03280000000075,
+        "stall_count": 34,
+        "quality_attribution_fraction": 0.9999724472989214,
+        "played_bitrate_bps": 1500000.0,
+        "mean_live_latency_s": 7.307070918254191,
+        "p95_live_latency_s": 8.525,
+        "qoe_total": -175.41044447997916,
+        "qoe_per_wall_s": -1.948294893416374
+      },
+      "simulator": {
+        "quality_utility": 40.347545189634886,
+        "stall_s": 41.94383337404484,
+        "startup_s": 2.822023146666667,
+        "variation": 0.0,
+        "latency_area": 287.5056837874534,
+        "played_s": 50.13867870008555,
+        "skipped_s": 35.68171243929386,
+        "seeks": 7.0,
+        "downloaded_bytes": 14346933.962264145,
+        "discarded_bytes": 2805757.9622641453
+      },
+      "simulator_qoe_per_wall_s": -1.7666708870217387,
+      "buffer_s_mae": 0.6232324234976389,
+      "latency_s_mae": 1.4163651360871197
+    },
+    {
+      "key": "steady_bandwidth-7",
+      "run_id": "phasea-abrAnjanSimple-20261117T052437-576100",
+      "browser": {
+        "quality_utility": 0.0,
+        "stall_s": 0.0,
+        "startup_s": 90.02,
+        "variation": 0.0,
+        "latency_area": 1073.2964805999864,
+        "played_media_s": 0.0,
+        "unattributed_media_s": 0.0,
+        "skipped_media_s": 0.0,
+        "automatic_seek_wait_s": 0.0,
+        "switches": 0,
+        "metric_version": "played-ledger-v2",
+        "duration_s": 90.02,
+        "stall_count": 0,
+        "quality_attribution_fraction": 1.0,
+        "played_bitrate_bps": 0.0,
+        "mean_live_latency_s": 14.9654411397139,
+        "p95_live_latency_s": 20.309,
+        "qoe_total": -197.34964805999863,
+        "qoe_per_wall_s": -2.1922866925127598
+      },
+      "simulator": {
+        "quality_utility": 0.0,
+        "stall_s": 0.0,
+        "startup_s": 90.0,
+        "variation": 0.0,
+        "latency_area": 223.30481199999983,
+        "played_s": 0.0,
+        "skipped_s": 89.25,
+        "seeks": 17.0,
+        "downloaded_bytes": 15139386.792452825,
+        "discarded_bytes": 15139386.792452825
+      },
+      "simulator_qoe_per_wall_s": -1.2481164577777775,
+      "buffer_s_mae": 0.0,
+      "latency_s_mae": 9.591910286320399
+    },
+    {
+      "key": "steady_bandwidth-None",
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "browser": {
+        "quality_utility": 45.646721209441544,
+        "stall_s": 11.268854669186018,
+        "startup_s": 0.998119040299207,
+        "variation": 1.0986122886681096,
+        "latency_area": 62.96063060000069,
+        "played_media_s": 88.99966788291931,
+        "unattributed_media_s": 0.0010979175567626953,
+        "skipped_media_s": 0.0,
+        "automatic_seek_wait_s": 0.0,
+        "switches": 2,
+        "metric_version": "played-ledger-v2",
+        "duration_s": 90.01820000000298,
+        "stall_count": 39,
+        "quality_attribution_fraction": 0.9999876638016424,
+        "played_bitrate_bps": 853852.461983828,
+        "mean_live_latency_s": 3.701916321620709,
+        "p95_live_latency_s": 4.072,
+        "qoe_total": -7.052463254202236,
+        "qoe_per_wall_s": -0.07834485975282779
+      },
+      "simulator": {
+        "quality_utility": 17.651713758777657,
+        "stall_s": 2.3417477868542456,
+        "startup_s": 1.042681706666667,
+        "variation": 0.4054651081081644,
+        "latency_area": 15.313808764998306,
+        "played_s": 89.69296559278128,
+        "skipped_s": 0.0,
+        "seeks": 0.0,
+        "downloaded_bytes": 5415889.999999994,
+        "discarded_bytes": 0.0
+      },
+      "simulator_qoe_per_wall_s": 0.06210022773068587,
+      "buffer_s_mae": 0.8867734114261179,
+      "latency_s_mae": 0.5267683893337731
+    },
+    {
+      "key": "handover_interruption-0",
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "browser": {
+        "quality_utility": 0.0,
+        "stall_s": 7.9031401553772955,
+        "startup_s": 2.9397689754478633,
+        "variation": 0.0,
+        "latency_area": 92.29136290000076,
+        "played_media_s": 89.14702200889587,
+        "unattributed_media_s": 0.0018792152404785156,
+        "skipped_media_s": 0.0,
+        "automatic_seek_wait_s": 0.0,
+        "switches": 0,
+        "metric_version": "played-ledger-v2",
+        "duration_s": 90.02459999999776,
+        "stall_count": 14,
+        "quality_attribution_fraction": 0.9999789200446842,
+        "played_bitrate_bps": 300000.0,
+        "mean_live_latency_s": 4.0346008611644235,
+        "p95_live_latency_s": 6.508,
+        "qoe_total": -43.78146588695712,
+        "qoe_per_wall_s": -0.4863278024779695
+      },
+      "simulator": {
+        "quality_utility": 0.0,
+        "stall_s": 6.088830787156797,
+        "startup_s": 3.033070420000001,
+        "variation": 0.0,
+        "latency_area": 67.49933755212629,
+        "played_s": 89.084573900817,
+        "skipped_s": 0.0,
+        "seeks": 0.0,
+        "downloaded_bytes": 3619932.9999999553,
+        "discarded_bytes": 0.0
+      },
+      "simulator_qoe_per_wall_s": -0.37931474804266463,
+      "buffer_s_mae": 0.46885271511412896,
+      "latency_s_mae": 0.33397621805708744
+    },
+    {
+      "key": "handover_interruption-None",
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "browser": {
+        "quality_utility": 16.009378660176324,
+        "stall_s": 8.487390585796952,
+        "startup_s": 2.9254519119262694,
+        "variation": 1.2163953243244932,
+        "latency_area": 107.21264509999959,
+        "played_media_s": 89.173171043396,
+        "unattributed_media_s": 0.0010480880737304688,
+        "skipped_media_s": 0.0,
+        "automatic_seek_wait_s": 0.0,
+        "switches": 3,
+        "metric_version": "played-ledger-v2",
+        "duration_s": 90.02690000000223,
+        "stall_count": 19,
+        "quality_attribution_fraction": 0.9999882465985961,
+        "played_bitrate_bps": 432835.18899691594,
+        "mean_live_latency_s": 4.201866766586191,
+        "p95_live_latency_s": 6.842,
+        "qoe_total": -31.95181870223506,
+        "qoe_per_wall_s": -0.35491412791326
+      },
+      "simulator": {
+        "quality_utility": 18.345497532339916,
+        "stall_s": 6.512292686776214,
+        "startup_s": 2.1410576000000003,
+        "variation": 1.7917594692280552,
+        "latency_area": 64.64621413129748,
+        "played_s": 89.06510557572415,
+        "skipped_s": 0.0,
+        "seeks": 0.0,
+        "downloaded_bytes": 5458975.999999948,
+        "discarded_bytes": 0.0
+      },
+      "simulator_qoe_per_wall_s": -0.18718755631847897,
+      "buffer_s_mae": 0.6472452917900327,
+      "latency_s_mae": 0.46626577238620764
+    }
+  ],
+  "transfers": [
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5909998416900635,
+      "predicted_s": 0.6627043200000002,
+      "start_s": 0.40600013732910156,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446428.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5760002136230469,
+      "predicted_s": 0.6477964800000002,
+      "start_s": 1.0,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446429.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.934999942779541,
+      "predicted_s": 0.9874939733333337,
+      "start_s": 2.0850000381469727,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446430.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.6610000133514404,
+      "predicted_s": 0.7360167466666674,
+      "start_s": 4.026000022888184,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446431.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5520000457763672,
+      "predicted_s": 0.6211353600000002,
+      "start_s": 6.206000089645386,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446432.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5350000858306885,
+      "predicted_s": 0.5971426133333342,
+      "start_s": 8.276000022888184,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446433.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5379998683929443,
+      "predicted_s": 0.6114907733333332,
+      "start_s": 9.820000171661377,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446434.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5529999732971191,
+      "predicted_s": 0.6260311466666675,
+      "start_s": 11.877000093460083,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446435.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.567000150680542,
+      "predicted_s": 0.6327246933333335,
+      "start_s": 13.940999984741211,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446436.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.567000150680542,
+      "predicted_s": 0.6437034666666683,
+      "start_s": 16.019999980926514,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446437.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5850000381469727,
+      "predicted_s": 0.6493794133333353,
+      "start_s": 18.100000143051147,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446438.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5850000381469727,
+      "predicted_s": 0.6578198400000019,
+      "start_s": 20.19600009918213,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446439.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5850000381469727,
+      "predicted_s": 0.6603468799999987,
+      "start_s": 21.788000106811523,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446440.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5920000076293945,
+      "predicted_s": 0.6597985066666681,
+      "start_s": 23.884000062942505,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446441.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.682999849319458,
+      "predicted_s": 0.6675322666666652,
+      "start_s": 25.98800015449524,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446442.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5920000076293945,
+      "predicted_s": 0.6620541866666656,
+      "start_s": 28.180000066757202,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446443.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5920000076293945,
+      "predicted_s": 0.6696974933333344,
+      "start_s": 29.7810001373291,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446444.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5940001010894775,
+      "predicted_s": 0.6650391466666647,
+      "start_s": 31.884000062942505,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446445.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5920000076293945,
+      "predicted_s": 0.6691999999999965,
+      "start_s": 33.98800015449524,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446446.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5920000076293945,
+      "predicted_s": 0.668289813333331,
+      "start_s": 36.092000007629395,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446447.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5939998626708984,
+      "predicted_s": 0.6649317333333329,
+      "start_s": 38.19500017166138,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446448.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5930001735687256,
+      "predicted_s": 0.6671026133333271,
+      "start_s": 39.7960000038147,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446449.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5920000076293945,
+      "predicted_s": 0.6668764799999991,
+      "start_s": 41.90000009536743,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446450.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5899999141693115,
+      "predicted_s": 0.6675548799999973,
+      "start_s": 44.004000186920166,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446451.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5909998416900635,
+      "predicted_s": 0.6676340266666614,
+      "start_s": 46.10900020599365,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446452.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5929999351501465,
+      "predicted_s": 0.665050453333329,
+      "start_s": 48.212000131607056,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446453.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5920000076293945,
+      "predicted_s": 0.6630887466666664,
+      "start_s": 49.812000036239624,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446454.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5939998626708984,
+      "predicted_s": 0.6658758399999982,
+      "start_s": 51.915000200271606,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446455.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5850000381469727,
+      "predicted_s": 0.6623877333333326,
+      "start_s": 54.02800011634827,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446456.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5850000381469727,
+      "predicted_s": 0.6606578133333301,
+      "start_s": 56.12400007247925,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446457.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.6000001430511475,
+      "predicted_s": 0.662704319999996,
+      "start_s": 58.22000002861023,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446458.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5829999446868896,
+      "predicted_s": 0.6477964799999967,
+      "start_s": 59.836000204086304,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446459.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.9200000762939453,
+      "predicted_s": 0.9874939733333292,
+      "start_s": 61.94000005722046,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446460.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.6570000648498535,
+      "predicted_s": 0.7360167466666638,
+      "start_s": 63.86800003051758,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446461.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5490000247955322,
+      "predicted_s": 0.6211353599999967,
+      "start_s": 66.03600001335144,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446462.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5349998474121094,
+      "predicted_s": 0.5971426133333324,
+      "start_s": 68.10000014305115,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446463.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5339999198913574,
+      "predicted_s": 0.6114907733333439,
+      "start_s": 70.14600014686584,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446464.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5499999523162842,
+      "predicted_s": 0.6260311466666764,
+      "start_s": 72.19700002670288,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446465.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.568000078201294,
+      "predicted_s": 0.6327246933333441,
+      "start_s": 74.25999999046326,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446466.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5710000991821289,
+      "predicted_s": 0.6437034666666648,
+      "start_s": 75.84400010108948,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446467.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5840001106262207,
+      "predicted_s": 0.6493794133333353,
+      "start_s": 77.93300008773804,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446468.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5829999446868896,
+      "predicted_s": 0.6578198400000019,
+      "start_s": 80.02800011634827,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446469.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5829999446868896,
+      "predicted_s": 0.6603468800000059,
+      "start_s": 82.12400007247925,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446470.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5840001106262207,
+      "predicted_s": 0.6597985066666752,
+      "start_s": 84.22000002861023,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446471.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5929999351501465,
+      "predicted_s": 0.6675322666666688,
+      "start_s": 85.82000017166138,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446472.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052017-94e776",
+      "key": "steady_bandwidth-0",
+      "actual_s": 0.5840001106262207,
+      "predicted_s": 0.6620541866666656,
+      "start_s": 87.92400002479553,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446473.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.385999917984009,
+      "predicted_s": 2.4420457600000005,
+      "start_s": 0.3960001468658447,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446488.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.4119999408721924,
+      "predicted_s": 2.421365866666667,
+      "start_s": 2.7850000858306885,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446489.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 3.3589999675750732,
+      "predicted_s": 3.389267413333334,
+      "start_s": 5.200000047683716,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446490.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.0779998302459717,
+      "predicted_s": 2.13054144,
+      "start_s": 9.36300015449524,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446492.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.074000120162964,
+      "predicted_s": 2.1248937700000017,
+      "start_s": 11.444000005722046,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446493.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.2690000534057617,
+      "predicted_s": 2.3079204266666675,
+      "start_s": 13.519999980926514,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446494.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.3359999656677246,
+      "predicted_s": 2.374103999999999,
+      "start_s": 15.791000127792358,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446495.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.4129998683929443,
+      "predicted_s": 2.4609278933333343,
+      "start_s": 18.379000186920166,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446497.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.4159998893737793,
+      "predicted_s": 2.460984436666667,
+      "start_s": 20.79700016975403,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446498.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.427999973297119,
+      "predicted_s": 2.4838691200000014,
+      "start_s": 23.21500015258789,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446499.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.4539999961853027,
+      "predicted_s": 2.5032035199999996,
+      "start_s": 25.644999980926514,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446500.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.452000141143799,
+      "predicted_s": 2.500280746666668,
+      "start_s": 28.302000045776367,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446502.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.4180002212524414,
+      "predicted_s": 2.463375786666667,
+      "start_s": 30.756999969482422,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446503.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.439000129699707,
+      "predicted_s": 2.481183786666662,
+      "start_s": 33.17700004577637,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446504.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.4060001373291016,
+      "predicted_s": 2.456371306666661,
+      "start_s": 35.61800003051758,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446505.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.4140000343322754,
+      "predicted_s": 2.4626465066666654,
+      "start_s": 38.25500011444092,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446507.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.4030001163482666,
+      "predicted_s": 2.452685333333328,
+      "start_s": 40.6710000038147,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446508.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.4230000972747803,
+      "predicted_s": 2.4682828799999967,
+      "start_s": 43.075000047683716,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446509.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.4059998989105225,
+      "predicted_s": 2.4583273599999984,
+      "start_s": 45.50100016593933,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446510.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.4099998474121094,
+      "predicted_s": 2.4542682666666664,
+      "start_s": 48.15300011634827,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446512.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.4179999828338623,
+      "predicted_s": 2.4585139199999944,
+      "start_s": 50.56599998474121,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446513.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.4749999046325684,
+      "predicted_s": 2.451763839999998,
+      "start_s": 52.986000061035156,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446514.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.493000030517578,
+      "predicted_s": 2.4622338133333272,
+      "start_s": 55.46500015258789,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446515.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.385999917984009,
+      "predicted_s": 2.4375626666666648,
+      "start_s": 58.18300008773804,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446517.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.383999824523926,
+      "predicted_s": 2.442045759999999,
+      "start_s": 60.57000017166138,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446518.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.375,
+      "predicted_s": 2.4213658666666618,
+      "start_s": 62.95700001716614,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446519.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 3.3590002059936523,
+      "predicted_s": 3.389267413333343,
+      "start_s": 65.33599996566772,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446520.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.0759999752044678,
+      "predicted_s": 2.130541440000002,
+      "start_s": 69.4980001449585,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446522.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.0719997882843018,
+      "predicted_s": 2.124893760000006,
+      "start_s": 71.58300018310547,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446523.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.2660000324249268,
+      "predicted_s": 2.3079204266666693,
+      "start_s": 73.65700006484985,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446524.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.371999979019165,
+      "predicted_s": 2.415678613333341,
+      "start_s": 76.72399997711182,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446526.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.4260001182556152,
+      "predicted_s": 2.4609278933333343,
+      "start_s": 79.09800004959106,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446527.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.426999807357788,
+      "predicted_s": 2.46098442666667,
+      "start_s": 81.52700018882751,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446528.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.4600000381469727,
+      "predicted_s": 2.5032035199999996,
+      "start_s": 84.1800000667572,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446530.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052237-d48279",
+      "key": "steady_bandwidth-4",
+      "actual_s": 2.453000068664551,
+      "predicted_s": 2.493943360000003,
+      "start_s": 86.64100003242493,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t25/2023-04-28/1/897446531.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052437-576100",
+      "key": "steady_bandwidth-7",
+      "actual_s": 9.26800012588501,
+      "predicted_s": 9.182345503333337,
+      "start_s": 0.39299988746643066,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/chdf_sets/12.5_25_50/t20/2023-04-28/1/897446548.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052437-576100",
+      "key": "steady_bandwidth-7",
+      "actual_s": 7.9049999713897705,
+      "predicted_s": 7.875571850000004,
+      "start_s": 9.828999996185303,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/chdf_sets/12.5_25_50/t20/2023-04-28/1/897446553.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052437-576100",
+      "key": "steady_bandwidth-7",
+      "actual_s": 9.294999837875366,
+      "predicted_s": 9.233168960000004,
+      "start_s": 17.888000011444092,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/chdf_sets/12.5_25_50/t20/2023-04-28/1/897446557.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052437-576100",
+      "key": "steady_bandwidth-7",
+      "actual_s": 9.40499997138977,
+      "predicted_s": 9.32534656,
+      "start_s": 27.41100001335144,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/chdf_sets/12.5_25_50/t20/2023-04-28/1/897446562.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052437-576100",
+      "key": "steady_bandwidth-7",
+      "actual_s": 9.373000144958496,
+      "predicted_s": 9.29283989333333,
+      "start_s": 37.037999868392944,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/chdf_sets/12.5_25_50/t20/2023-04-28/1/897446566.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052437-576100",
+      "key": "steady_bandwidth-7",
+      "actual_s": 9.264999866485596,
+      "predicted_s": 9.206954453333331,
+      "start_s": 46.621999979019165,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/chdf_sets/12.5_25_50/t20/2023-04-28/1/897446571.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052437-576100",
+      "key": "steady_bandwidth-7",
+      "actual_s": 9.216000080108643,
+      "predicted_s": 9.154514133333336,
+      "start_s": 56.11099982261658,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/chdf_sets/12.5_25_50/t20/2023-04-28/1/897446576.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052437-576100",
+      "key": "steady_bandwidth-7",
+      "actual_s": 9.588000059127808,
+      "predicted_s": 9.511731306666675,
+      "start_s": 65.55199980735779,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/chdf_sets/12.5_25_50/t20/2023-04-28/1/897446581.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052437-576100",
+      "key": "steady_bandwidth-7",
+      "actual_s": 9.080999851226807,
+      "predicted_s": 9.017839146666674,
+      "start_s": 75.36800003051758,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/chdf_sets/12.5_25_50/t20/2023-04-28/1/897446586.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 0.5909998416900635,
+      "predicted_s": 0.6627043300000002,
+      "start_s": 0.40200018882751465,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446608.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 0.818000078201294,
+      "predicted_s": 0.8830486400000002,
+      "start_s": 1.127000093460083,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446609.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.1630001068115234,
+      "predicted_s": 1.2281902933333337,
+      "start_s": 1.9479999542236328,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446610.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 0.8560001850128174,
+      "predicted_s": 0.9235491200000006,
+      "start_s": 4.11899995803833,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446611.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 0.7580001354217529,
+      "predicted_s": 0.830427413333334,
+      "start_s": 5.983999967575073,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446612.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.312999963760376,
+      "predicted_s": 1.381209066666667,
+      "start_s": 7.880000114440918,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446613.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.4279999732971191,
+      "predicted_s": 1.4819571200000006,
+      "start_s": 10.208000183105469,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446614.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.4620001316070557,
+      "predicted_s": 1.5223614933333334,
+      "start_s": 12.144000053405762,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446615.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.4839999675750732,
+      "predicted_s": 1.5483442133333334,
+      "start_s": 14.111000061035156,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446616.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.502000093460083,
+      "predicted_s": 1.566751476666667,
+      "start_s": 16.105000019073486,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446617.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.5150001049041748,
+      "predicted_s": 1.5665309866666668,
+      "start_s": 18.111999988555908,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446618.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.5390000343322754,
+      "predicted_s": 1.5784086399999993,
+      "start_s": 20.136000156402588,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446619.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.5209999084472656,
+      "predicted_s": 1.581093973333335,
+      "start_s": 22.183000087738037,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446620.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.5180001258850098,
+      "predicted_s": 1.5803873066666654,
+      "start_s": 24.207000017166138,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446621.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.5349998474121094,
+      "predicted_s": 1.5876687999999994,
+      "start_s": 26.231000185012817,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446622.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.5199999809265137,
+      "predicted_s": 1.5766730666666682,
+      "start_s": 28.271000146865845,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446623.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.5160000324249268,
+      "predicted_s": 1.5828578133333338,
+      "start_s": 30.295000076293945,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446624.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.503000020980835,
+      "predicted_s": 1.5640152533333307,
+      "start_s": 32.319000005722046,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446625.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.5189998149871826,
+      "predicted_s": 1.5716020266666604,
+      "start_s": 34.3270001411438,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446626.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.5329999923706055,
+      "predicted_s": 1.5691880533333276,
+      "start_s": 36.35199999809265,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446627.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.502000093460083,
+      "predicted_s": 1.555653973333328,
+      "start_s": 37.88700008392334,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446628.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.498999834060669,
+      "predicted_s": 1.5673733333333288,
+      "start_s": 39.896000146865845,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446629.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.503999948501587,
+      "predicted_s": 1.5594247466666644,
+      "start_s": 41.90400004386902,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446630.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.503999948501587,
+      "predicted_s": 1.5624831999999955,
+      "start_s": 43.91100001335144,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446631.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.5,
+      "predicted_s": 1.5630881066666618,
+      "start_s": 45.9210000038147,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446632.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.5899999141693115,
+      "predicted_s": 1.5635912533333283,
+      "start_s": 47.92700004577637,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446633.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.5299999713897705,
+      "predicted_s": 1.558853769999999,
+      "start_s": 50.02300000190735,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446634.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.5139999389648438,
+      "predicted_s": 1.5659826133333326,
+      "start_s": 52.0550000667572,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446635.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.502000093460083,
+      "predicted_s": 1.5574913066666625,
+      "start_s": 54.0789999961853,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446636.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.4839999675750732,
+      "predicted_s": 1.550735573333327,
+      "start_s": 56.087000131607056,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446637.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.4930000305175781,
+      "predicted_s": 1.5491978666666668,
+      "start_s": 58.0789999961853,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446638.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.4800000190734863,
+      "predicted_s": 1.5430357433333342,
+      "start_s": 60.0789999961853,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446639.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 2.1700000762939453,
+      "predicted_s": 2.2126674133333353,
+      "start_s": 62.062999963760376,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446640.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.5699999332427979,
+      "predicted_s": 1.6250429866666707,
+      "start_s": 64.2350001335144,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446641.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.3350000381469727,
+      "predicted_s": 1.3835834666666642,
+      "start_s": 66.31100010871887,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446642.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.316999912261963,
+      "predicted_s": 1.3812090666666705,
+      "start_s": 68.15200018882751,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446643.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.4179999828338623,
+      "predicted_s": 1.4819571200000041,
+      "start_s": 69.97500014305115,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446644.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.4679999351501465,
+      "predicted_s": 1.5223614933333351,
+      "start_s": 71.91200017929077,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446645.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.4809999465942383,
+      "predicted_s": 1.548344213333337,
+      "start_s": 73.88800001144409,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446646.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.5099999904632568,
+      "predicted_s": 1.5667514666666733,
+      "start_s": 75.87700009346008,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446647.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.5209999084472656,
+      "predicted_s": 1.5665309866666774,
+      "start_s": 77.89600014686584,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446648.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.5480000972747803,
+      "predicted_s": 1.5784086400000064,
+      "start_s": 79.92000007629395,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446649.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.5169999599456787,
+      "predicted_s": 1.5810939733333385,
+      "start_s": 81.9760000705719,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446650.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.5139999389648438,
+      "predicted_s": 1.5803873066666654,
+      "start_s": 83.99900007247925,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446651.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.5340001583099365,
+      "predicted_s": 1.587668800000003,
+      "start_s": 86.01699995994568,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446652.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+      "key": "steady_bandwidth-None",
+      "actual_s": 1.511000156402588,
+      "predicted_s": 1.5766730766666655,
+      "start_s": 88.05599999427795,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t28/2023-04-28/1/897446653.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 0.9110000133514404,
+      "predicted_s": 0.8998570600000004,
+      "start_s": 1.252000093460083,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446788.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 0.7709999084472656,
+      "predicted_s": 0.8892218400000007,
+      "start_s": 2.1670000553131104,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446789.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 0.8989999294281006,
+      "predicted_s": 0.9529151200000006,
+      "start_s": 2.940000057220459,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446790.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 0.9030001163482666,
+      "predicted_s": 0.8872831400000001,
+      "start_s": 4.348999977111816,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446791.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 0.9330000877380371,
+      "predicted_s": 0.9245428800000006,
+      "start_s": 6.259999990463257,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446792.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 0.8320000171661377,
+      "predicted_s": 0.8214842400000002,
+      "start_s": 8.203999996185303,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446793.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 0.7559998035430908,
+      "predicted_s": 0.753054520000001,
+      "start_s": 10.044000148773193,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446794.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 0.7899999618530273,
+      "predicted_s": 0.7843408400000005,
+      "start_s": 12.315999984741211,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446795.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 0.8239998817443848,
+      "predicted_s": 0.8141558799999995,
+      "start_s": 14.124000072479248,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446796.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 0.8250000476837158,
+      "predicted_s": 0.8173344,
+      "start_s": 15.956000089645386,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446797.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 0.81600022315979,
+      "predicted_s": 0.8133586400000006,
+      "start_s": 18.286999940872192,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446798.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 0.810999870300293,
+      "predicted_s": 0.8054212199999995,
+      "start_s": 20.116000175476074,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446799.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 0.8299999237060547,
+      "predicted_s": 0.8137350399999974,
+      "start_s": 21.94600009918213,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446800.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 0.7579998970031738,
+      "predicted_s": 0.7559522200000011,
+      "start_s": 24.29200005531311,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446801.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 0.7619998455047607,
+      "predicted_s": 0.7579623000000026,
+      "start_s": 26.05400013923645,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446802.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 0.7630000114440918,
+      "predicted_s": 0.7614151600000021,
+      "start_s": 28.332000017166138,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446803.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 4.858000040054321,
+      "predicted_s": 3.97556823994568,
+      "start_s": 30.10800004005432,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446804.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 0.6579999923706055,
+      "predicted_s": 0.7630948400000008,
+      "start_s": 34.96900010108948,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446805.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 0.6710000038146973,
+      "predicted_s": 0.7705950000000001,
+      "start_s": 36.13199996948242,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446806.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 1.196000099182129,
+      "predicted_s": 1.1601843400000007,
+      "start_s": 38.31599998474121,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446807.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 1.1640000343322754,
+      "predicted_s": 1.164594700000002,
+      "start_s": 39.51200008392334,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446808.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 1.193000078201294,
+      "predicted_s": 1.1577217399999995,
+      "start_s": 41.1800000667572,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446809.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 1.188999891281128,
+      "predicted_s": 1.1576793400000014,
+      "start_s": 43.38000011444092,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446810.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 1.1610000133514404,
+      "predicted_s": 1.1561265400000025,
+      "start_s": 44.57100009918213,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446811.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 1.1929998397827148,
+      "predicted_s": 1.160621380000002,
+      "start_s": 46.741000175476074,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446812.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 1.193000078201294,
+      "predicted_s": 1.1634969600000034,
+      "start_s": 48.444000005722046,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446813.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 1.2000000476837158,
+      "predicted_s": 1.162009140000002,
+      "start_s": 50.140000104904175,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446814.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 1.196000099182129,
+      "predicted_s": 1.1608517200000037,
+      "start_s": 52.348999977111816,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446815.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 1.191999912261963,
+      "predicted_s": 1.1607577000000049,
+      "start_s": 54.05200004577637,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446816.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 1.1979999542236328,
+      "predicted_s": 1.1710733399999995,
+      "start_s": 56.25100016593933,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446817.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 1.2939999103546143,
+      "predicted_s": 1.158017060000006,
+      "start_s": 57.9520001411438,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446818.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 1.5749998092651367,
+      "predicted_s": 1.1479418400000014,
+      "start_s": 60.25100016593933,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446819.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 1.2410001754760742,
+      "predicted_s": 1.2289951200000004,
+      "start_s": 62.335999965667725,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446820.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 1.2159998416900635,
+      "predicted_s": 1.1846431399999915,
+      "start_s": 64.08400011062622,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446821.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 1.187000036239624,
+      "predicted_s": 1.1586228799999958,
+      "start_s": 66.30800008773804,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446822.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 1.2110002040863037,
+      "predicted_s": 1.1698042400000048,
+      "start_s": 68.00399994850159,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446823.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 1.2249999046325684,
+      "predicted_s": 1.1892945200000042,
+      "start_s": 70.22800016403198,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446824.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 1.2300000190734863,
+      "predicted_s": 1.1847408399999892,
+      "start_s": 71.95600008964539,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446825.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 1.2319998741149902,
+      "predicted_s": 1.1966358800000023,
+      "start_s": 74.19600009918213,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446826.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 1.2369999885559082,
+      "predicted_s": 1.2026144000000016,
+      "start_s": 76.43600010871887,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446827.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 1.252000093460083,
+      "predicted_s": 1.2154386400000021,
+      "start_s": 78.1800000667572,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446828.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 1.253000020980835,
+      "predicted_s": 1.2170212200000066,
+      "start_s": 80.44400000572205,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446829.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 1.0770001411437988,
+      "predicted_s": 1.2174950400000029,
+      "start_s": 82.2039999961853,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446830.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 0.7119998931884766,
+      "predicted_s": 0.7128322199999957,
+      "start_s": 84.29200005531311,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446831.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 0.7139999866485596,
+      "predicted_s": 0.7142822999999936,
+      "start_s": 86.01200008392334,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446832.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053244-9507e6",
+      "key": "handover_interruption-0",
+      "actual_s": 0.7070000171661377,
+      "predicted_s": 0.7087751600000018,
+      "start_s": 88.23600006103516,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446833.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 0.9100000858306885,
+      "predicted_s": 0.8998570600000004,
+      "start_s": 1.2400000095367432,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446848.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 0.7699999809265137,
+      "predicted_s": 0.8892218400000007,
+      "start_s": 2.1519999504089355,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446849.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 1.244999885559082,
+      "predicted_s": 0.9885256800000004,
+      "start_s": 3.361999988555908,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446850.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 0.8949999809265137,
+      "predicted_s": 0.9224454600000005,
+      "start_s": 4.608999967575073,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446851.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 1.065999984741211,
+      "predicted_s": 0.9637851400000015,
+      "start_s": 6.006999969482422,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446852.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 0.937999963760376,
+      "predicted_s": 0.8631613200000015,
+      "start_s": 8.078999996185303,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446853.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 0.8619999885559082,
+      "predicted_s": 0.7985889400000001,
+      "start_s": 10.026999950408936,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446854.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 0.9060001373291016,
+      "predicted_s": 0.8371202800000006,
+      "start_s": 11.902999877929688,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446855.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 0.9300000667572021,
+      "predicted_s": 0.8350658800000001,
+      "start_s": 13.822999954223633,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446856.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 0.9429998397827148,
+      "predicted_s": 0.8637737399999992,
+      "start_s": 16.26200008392334,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446857.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 0.9279999732971191,
+      "predicted_s": 0.8598035999999993,
+      "start_s": 18.21499991416931,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446858.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 0.9309999942779541,
+      "predicted_s": 0.850677919999999,
+      "start_s": 20.151000022888184,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446859.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 0.9419999122619629,
+      "predicted_s": 0.8690487400000002,
+      "start_s": 22.09500002861023,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446860.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 0.8669998645782471,
+      "predicted_s": 0.8010753700000031,
+      "start_s": 24.04800009727478,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446861.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 0.8550000190734863,
+      "predicted_s": 0.805088320000003,
+      "start_s": 25.927000045776367,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446862.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 0.8710000514984131,
+      "predicted_s": 0.8105140599999991,
+      "start_s": 27.79099988937378,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446863.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 4.953999996185303,
+      "predicted_s": 3.951861907683714,
+      "start_s": 30.174999952316284,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446864.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 0.6589999198913574,
+      "predicted_s": 0.7625348400000007,
+      "start_s": 35.5,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446865.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 0.6629998683929443,
+      "predicted_s": 0.7705950000000001,
+      "start_s": 36.16000008583069,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446866.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 1.194000005722046,
+      "predicted_s": 1.1601843400000007,
+      "start_s": 38.335999965667725,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446867.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 1.1610000133514404,
+      "predicted_s": 1.164594700000002,
+      "start_s": 39.53200006484985,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t34/2023-04-28/1/897446868.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 1.3680000305175781,
+      "predicted_s": 1.1996277800000001,
+      "start_s": 42.28200006484985,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446869.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 1.193000078201294,
+      "predicted_s": 1.1991741000000005,
+      "start_s": 43.651000022888184,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446870.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 2.062000036239624,
+      "predicted_s": 1.1983156000000008,
+      "start_s": 44.84500002861023,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446871.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 1.1800000667572021,
+      "predicted_s": 1.2020355800000004,
+      "start_s": 46.90899991989136,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446872.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 1.181999921798706,
+      "predicted_s": 1.2051125600000034,
+      "start_s": 48.09100008010864,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446873.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 1.2009999752044678,
+      "predicted_s": 1.2041589800000025,
+      "start_s": 50.27900004386902,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446874.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 1.2279999256134033,
+      "predicted_s": 1.200082100000003,
+      "start_s": 51.98300004005432,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446875.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 1.375999927520752,
+      "predicted_s": 1.2023362000000049,
+      "start_s": 54.23099994659424,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446876.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 1.3609998226165771,
+      "predicted_s": 1.2125702199999964,
+      "start_s": 56.111000061035156,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446877.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 1.3610000610351562,
+      "predicted_s": 1.198973340000002,
+      "start_s": 57.97499990463257,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446878.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 1.3580000400543213,
+      "predicted_s": 1.1965316200000018,
+      "start_s": 59.83899998664856,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446879.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 1.440000057220459,
+      "predicted_s": 1.2741256799999974,
+      "start_s": 62.20700001716614,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446880.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 1.2309999465942383,
+      "predicted_s": 1.2198054600000034,
+      "start_s": 64.15100002288818,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446881.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 1.3599998950958252,
+      "predicted_s": 1.1973051399999974,
+      "start_s": 65.88700008392334,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446882.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 1.4040000438690186,
+      "predicted_s": 1.2114813200000043,
+      "start_s": 68.25499987602234,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446883.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 1.4040000438690186,
+      "predicted_s": 1.2348289399999999,
+      "start_s": 70.16700005531311,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446884.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 1.4049999713897705,
+      "predicted_s": 1.241440279999992,
+      "start_s": 72.0789999961853,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446885.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 1.4059998989105225,
+      "predicted_s": 1.2410658799999936,
+      "start_s": 73.98900008201599,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446886.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 1.4170000553131104,
+      "predicted_s": 1.2456937400000072,
+      "start_s": 75.90299987792969,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446887.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 1.428999900817871,
+      "predicted_s": 1.250123599999995,
+      "start_s": 77.82200002670288,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446888.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 1.441999912261963,
+      "predicted_s": 1.2622779299999962,
+      "start_s": 80.26300001144409,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446889.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 1.073000192642212,
+      "predicted_s": 1.262168740000007,
+      "start_s": 82.21499991416931,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446890.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 0.810999870300293,
+      "predicted_s": 0.764675369999992,
+      "start_s": 83.79900002479553,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446891.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 0.812000036239624,
+      "predicted_s": 0.7586083199999933,
+      "start_s": 86.13499999046326,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446892.m4s"
+    },
+    {
+      "run_id": "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+      "key": "handover_interruption-None",
+      "actual_s": 0.8029999732971191,
+      "predicted_s": 0.7561940599999986,
+      "start_s": 87.95900011062622,
+      "url": "https://nginx/livesim2/vectors/switching_sets/12.5_25_50/ss1/2023-04-28/cfhd_sets/12.5_25_50/t32/2023-04-28/1/897446893.m4s"
+    }
+  ],
+  "targets_met": false
+}

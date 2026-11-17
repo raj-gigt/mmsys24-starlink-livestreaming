@@ -43,16 +43,35 @@
       "updated_utc": "2026-11-17T05:15:19.952978+00:00"
     },
     "15": {
+      "status": "Complete",
+      "evidence": "Six real calibration runs; transfer medians below13percent each, bufferMAE0.49s, overall delayMAE2.06s misses target and is disclosed; causal/Gym/reward checks PASS; measured CPU beats working RTX4060",
+      "updated_utc": "2026-11-17T05:44:16.933321+00:00"
+    },
+    "16": {
       "status": "Running",
-      "evidence": "Calibrate fixed-low/mid/high and adaptive browser runs; causal64-input simulator checks pass; benchmark actual CPU/RTX4060 pipeline before training",
-      "updated_utc": "2026-11-17T05:15:20.063547+00:00"
+      "evidence": "Screen four equal-budget A2C settings across two seeds and conventional/LEO inputs; train/validation only; 4million interactions",
+      "updated_utc": "2026-11-17T05:44:17.033378+00:00"
     }
   },
-  "updated_utc": "2026-11-17T05:15:20.063547+00:00",
-  "current_step": 15,
+  "updated_utc": "2026-11-17T05:44:17.033378+00:00",
+  "current_step": 16,
   "pending_protocol_refinements": [
     "For supplementary original raw replay, use a predeclared whole-minute source offset such as2940s within test block when playback starts atminute0; use authors custom CMAB catchup for both. This phase correction is metadata-driven, before any final scores.",
     "Consider guard-only final-matrix extension before unsealing because it beat the hybrid on all three development cases. Recompute runtime and protect release."
   ],
-  "contribution_section": "User requested blank contribution template; fill later, do not invent teammate work"
+  "contribution_section": "User requested blank contribution template; fill later, do not invent teammate work",
+  "active_experiment": {
+    "step": 16,
+    "session_id": 92064,
+    "command": "python -m rl.train_final --stage screen --device cpu (after final matched CPU/CUDA benchmarks)",
+    "resume": "Same command skips completed manifests and resumes interrupted exact-state snapshots",
+    "outputs": "artifacts/final/training/screen and screen-selection.json",
+    "immutable_during_training": [
+      "rl/final_env.py",
+      "rl/train_final.py",
+      "rl/features.py",
+      "configs/final/simulator.json",
+      "train/validation data and manifests"
+    ]
+  }
 }

@@ -1,0 +1,24 @@
+{
+  "version": "final-causal-v1",
+  "conventional_count": 36,
+  "leo_count": 64,
+  "conventional": {
+    "indices_0_to_31": "Eight oldest-to-newest completed video-request rows: [Mbps/10 clipped0..3, HTTP duration_s/2 clipped0..10, seconds since completion/30 clipped0..1, present]. Left pad [0,0,1,0].",
+    "indices_32_to_35": "[buffer_s/target_s clipped0..4, previous nominal bitrate/max nominal bitrate, (playback_rate-1)/0.17 clipped-1..1, target_s/6 clipped0..2]"
+  },
+  "leo_extension": {
+    "indices_36_to_59": "Eight oldest-to-newest completed polled health rows: [successful RTT_ms/200 clipped0..5 or0 on failure, seconds since probe completion/4 clipped0..1, successful measurement flag]. Left pad [0,1,0].",
+    "indices_60_to_63": "[live_latency_s/3 clipped0..8, last-success age_s/3 clipped0..1 (missing=1), latest probe valid and success younger than3s, fraction of failed rows in available history (empty=1)]"
+  },
+  "history_cadence": "Production RTT health polled every0.5s; last8 distinct probe timestamps retained, not a guaranteed uniform4s window. Simulator approximates response/poll cadence.",
+  "action_nominal_bps": [300000,450000,900000,1200000,1500000,4900000,5100000,6000000],
+  "network": "36/64 ->64 ReLU ->64 ReLU ->8 logits; first-index deterministic argmax",
+  "reward": "Q-4B-S-0.3V-0.1A, with same units as played-ledger-v2; approximate simulator dynamics quantified separately",
+  "normalization": "Fixed physical constants; no fitted test-data transform",
+  "policy_unavailable_inputs": ["future bandwidth/RTT/outages", "scenario identity", "true satellite handover labels", "future SSIM/segment metadata"],
+  "comparison_scope": "LEO group adds explicit RTT history/freshness and live latency together. Conventional playback rate can indirectly reflect latency; this is not an isolated causal test of RTT alone.",
+  "runtime": "Synchronous JS actor in Chrome main thread; asynchronously refreshed measurements are cached before inference. No Promise returned to dash.js.",
+  "fallback": "Lowest representation on missing model, mismatched ladder, invalid input/output; no hard preemption of a synchronous call",
+  "production_entry": "abrAnjanRL with neuralVariant=conventional or neuralVariant=leo",
+  "reference_qualification": "Retrained player-compatible A2C inspired by Pensieve/Gelato/Plume, not unchanged released ten-action Maguro weights"
+}

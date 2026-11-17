@@ -255,7 +255,7 @@ Candidate configuration budget: initially at most 12 named CMAB settings and 72 
 ## 7. Phase D: trained neural comparison with measured compute use
 
 ### Step 15 - Calibrate the fast environment and benchmark CPU/GPU
-**Status:** Running. **Dependencies:** 10 and 14. **Deliverables:** D4/D6, C2/C4, F8.
+**Status:** Complete. **Dependencies:** 10 and 14. **Deliverables:** D4/D6, C2/C4, F8.
 
 **Objective / intuition:** train quickly in an environment that captures the browser effects relevant to bitrate decisions.
 
@@ -271,7 +271,7 @@ Candidate configuration budget: initially at most 12 named CMAB settings and 72 
 **Verification / exit:** conservation/edge-case checks pass; F8 quantifies discrepancies; runtime forecast uses measured steps/s rather than an assumed 18-hour training estimate. Stop a severe dynamics bug before interpreting training gains.
 
 ### Step 16 - Train compatible conventional and LEO-aware candidates
-**Status:** Pending. **Dependency:** 15. **Deliverables:** D4, C4/C5, F7.
+**Status:** Running. **Dependency:** 15. **Deliverables:** D4, C4/C5, F7.
 
 **Objective / intuition:** establish genuine useful learning, then test whether LEO observations help under a controlled trainer/data comparison.
 
@@ -425,8 +425,8 @@ Autonomous execution is active; see the per-step tracker and artifacts/final/sta
 | 12 | Complete | 9 browser sessions; six request-identity checks pass; explicit download surrogate improves all three development cases; original delayed proxy mixed; completion-censoring limitation disclosed |
 | 13 | Complete | 21 warm browser sessions; all request/input/replay/portable-metric checks pass; guard helps, guard-only best, context mixed, reseeding rejected |
 | 14 | Complete | All24 corrected-clock validation runs verified; guardedCMAB passes frozen gates; guard-only remains competitive; real online-state replay PASS; portable evidence archived |
-| 15 | Running | Calibrate fixed-low/mid/high and adaptive browser runs; causal64-input simulator checks pass; benchmark actual CPU/RTX4060 pipeline before training |
-| 16 | Pending | Compatible conventional/LEO training candidates |
+| 15 | Complete | Six real calibration runs; transfer medians below13percent each, bufferMAE0.49s, overall delayMAE2.06s misses target and is disclosed; causal/Gym/reward checks PASS; measured CPU beats working RTX4060 |
+| 16 | Running | Screen four equal-budget A2C settings across two seeds and conventional/LEO inputs; train/validation only; 4million interactions |
 | 17 | Pending | Repeated training, representative checkpoints, real-browser export checks |
 | 18 | Pending | Frozen final matrix and complete run inventory |
 | 19 | Pending | Verified common results, figures/tables and claim boundaries |
@@ -444,3 +444,5 @@ Autonomous execution is active; see the per-step tracker and artifacts/final/sta
 - [SB3 RL development/evaluation guidance](https://stable-baselines3.readthedocs.io/en/master/guide/rl_tips.html): custom-environment checks, normalization, repeated runs and separate evaluation.
 
 Execution revision at Step14: first validation failed the unchanged startup gate. A measured externalUTC dependency delayed pre-ABR initialization. Revalidate all24 sessions under the verified shared-WSL-clock option, preserving the first pass; research-session budget90 instead of72 is for this infrastructure correction, not extra model search. Final test remains sealed.
+
+Final-matrix extension chosen before test access: include competitive guard-only as a seventh separate policy, with3 repeats alongside B0/C*. Controlled170 + raw replay9 =179 sessions (367min playback; about9h06 cycles). Source raw offset2940 is metadata-aligned, not performance-selected. Retain4h release/report reserve.

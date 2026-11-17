@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "first_steps": 1024,
+  "continued_steps": 2048,
+  "resumed_from": 1024,
+  "scope": "Executed teacher initialization, A2C updates, selected checkpoint, optimizer/env/RNG snapshot continuation; not performance evidence"
+}

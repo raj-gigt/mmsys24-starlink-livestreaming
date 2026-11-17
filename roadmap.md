@@ -412,6 +412,8 @@ Candidate configuration budget: initially at most 12 named CMAB settings and 72 
 - Public portal uploads, protected access, paid resources and unavailable required human facts are genuine authorization/input boundaries; commit/push approval is already granted for this run. Prepare the concrete work before asking.
 - Do not promise that a future test must yield a win. The objective is a better controller; the scientific obligation is accurate evidence, including limitations and failures.
 
+Execution boundary (user instruction,17November2026): finish and verify Steps18 and19, then stop. Step20 and later require further user input; queued report/deck generation has been cancelled.
+
 ## 12. Active progress tracker
 
 Autonomous execution is active; see the per-step tracker and artifacts/final/state.json. Phase A evidence is reused, not re-executed. Fill exact evidence/status/deviation links during the authorized run.

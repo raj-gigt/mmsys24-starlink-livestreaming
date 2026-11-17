@@ -82,7 +82,7 @@
     "resume": "Same command skips completed keys; do not edit frozen sources/models/configs. Clock helper holds/restores guest NTP automatically.",
     "source_publication": "be131536f260d64a6c7e6e4478d51e01e60bcf62; player60f56693032bb7e12c174951da4ee05818383527",
     "do_not_modify": "Every file in freeze.sources, or add files under dash.js/src, testplayer or rl/web; no heavy training or parallel browser experiments while measured matrix runs.",
-    "next": "Archive portable results, verify all179, analyse figures/tables, produce/report/render/check PDF and8-slide final deck, real recorded demo, clean reproduction ZIP, publish; contributions intentionally blank template.",
+    "next": "Finish179 frozen trials; archive/verify all evidence and analyse Step19 figures/tables. Visually/scientifically verify Step19, update tracker, then STOP before Step20.",
     "analysis_followthrough_session": 77824,
     "followthrough": "After179 and automatic clock release, archive complete/invalid raw events and run reproduce_final --saved-results; source/model/metric/cutoff/replay checks then analyse_final. Visual checks and report/deck/demo/package still require continuation.",
     "last_saved_trials": 70
@@ -105,13 +105,20 @@
     "external_build_root": "C:/Users/HP/AppData/Local/LEO-RL-final-artifacts",
     "runtime": "C:/Program Files/WindowsApps/OpenAI.CodexPrimaryRuntime.v26-1112-737-0_26.1112.737.0_x64__3k8sg7r9htsxt/dependencies",
     "latest_pushed_parent": "5dbe19d",
-    "draft_assembly_session": 29217,
-    "future_process": "Waits for verified analysis179, then PDF marker once and ReportLab PDF, then ArtifactTool eight-slide PPTX/imported-file previews. Drafts require visual/factual review before release."
+    "draft_assembly_session": null,
+    "future_process": "Disabled. Step20+ requires new user instructions.",
+    "draft_assembly_status": "Cancelled session29217 before report/PPT generation per user stop-after-Step19 instruction"
   },
   "data_publication": {
     "processed_files": 86,
     "scenario_arrays_hash_verified": 84,
     "source_commit": "5dbe19d",
     "note": "Compact arrays were ignored; now intentionally published without regeneration."
+  },
+  "execution_boundary": {
+    "authorized_through_step": 19,
+    "stop_after": "Step19 complete and verified",
+    "step20_onwards": "Await user input and instructions; do not auto-execute",
+    "basis": "User explicitly requested stopping after verified Step19 on2026-11-17"
   }
 }

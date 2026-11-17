@@ -7,6 +7,8 @@ This is the deliverables specification requested in planning Step 1. It defines 
 
 ## Submission/presentation separation (revision:18 November2026)
 
+Submission execution is complete through Step22: eight-page report, balanced four-policy analysis, evaluator README and checked75.53MB focused ZIP. All179 final sessions reproduce from raw evidence; all835 curated source inputs were retrieved from published Git. Contribution details remain deliberately blank. The user handles portal upload; Step23 is deferred.
+
 This revision and roadmap Steps20-23 supersede older combined hand-in wording below. Steps8-19 are completed evidence; no new training or browser experiment campaign is planned.
 
 - Main scientific story: compare original CMAB, improved CMAB, conventional A2C and LEO-aware A2C together. Main table/figures use the common two repeats across ten cases (80 sessions). Preserve the third CMAB repeats, guard-only/native baselines, ablations and9 raw replays as explicitly labelled support. Raw replay has no A2C comparison; do not imply otherwise. Add direct matched pair contrasts and disclose small-repeat/fixed-case uncertainty.

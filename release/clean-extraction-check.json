@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "archive": "C:\\Users\\HP\\Desktop\\LEO\\LEO_ABR_RL\\release\\Group4-submission.zip",
+  "zip_sha256": "676ee5e28514f373d125a253a1c66609ea0588e53d781d568a3601ec3ed08011",
+  "verified_payload_files": 837,
+  "portable_event_runs": 185,
+  "extracted_to": "C:\\Users\\HP\\AppData\\Local\\LEO-RL-final-artifacts\\submission-final\\LEO_ABR_RL",
+  "python": "C:\\Users\\HP\\AppData\\Local\\LEO-RL-final-artifacts\\results-only-venv\\Scripts\\python.exe",
+  "scientific_reproduction": "Exact JSON agreement for full179-session analysis, balanced80-session/all6 contrasts, supporting contrasts and deployment summaries",
+  "source_preparation": "Verified player source snapshot without Git/submodule metadata",
+  "payload_checks": "Every file hash/size, exact inventory, no duplicate or unsafe paths, no presentation/video/cache files, exact portable event-index closure",
+  "scope": "Saved evidence recomputation and source preparation, not a second179-session browser campaign"
+}

@@ -375,7 +375,7 @@ Planning is authorized now; execution of Steps20-22 awaits the user's remaining 
 **Verification / exit:** source-backed readable report with the four-policy comparison central; all required report sections covered; contribution omission only if explicitly retained by user. README commands and code map are concrete and consistent with the inventory. No presentation/demo requirement or generated presentation asset.
 
 ### Step 22 - Build, verify and publish the focused submission release
-**Status:** Running. **Dependencies:**20-21. **Deliverables:** release/Group4-submission.zip, release/manifest.json, checksums/clean-extraction evidence and published final GitHub revision.
+**Status:** Complete. Final ZIP and clean/public retrieval receipts are in release/ and artifacts/final/remote-retrieval-check.json. **Dependencies:**20-21. **Deliverables:** release/Group4-submission.zip, release/manifest.json, checksums/clean-extraction evidence and published final GitHub revision.
 
 **Objective / intuition:** give the evaluator a clean usable package, while retaining the complete research record in the existing repository.
 
@@ -432,9 +432,9 @@ Autonomous execution is active; see the per-step tracker and artifacts/final/sta
 | 17 | Complete | 10.004million main interactions across10 fresh-seed fits; selected median seeds167/101; 394 JS fixtures and6 valid Chrome checks PASS; observer-free RTT and real fallback playback PASS; late training decline retained |
 | 18 | Complete | All179 frozen sessions complete:170 controlled +9 raw replay;303 source files,2 models, clocks/cutoffs, actual input/action/feedback, schedules and portable metrics verified. Guest NTP restored. |
 | 19 | Complete | F3-F5 and T3-T4/T7-T8 generated and reviewed; primary effect+1.272 [1.227,1.315], stalls-64.87percent;7/10 case gains. Direct guard/LEO contrasts include zero; regressions and coefficient sensitivity retained. STOP beforeStep20. |
-| 20 | Complete | Balanced80-session four-policy synthesis and all6 paired contrasts generated;185 required portable runs and830 files inventoried via explicit roots/import closure. Frozen303 files/models unchanged; export helper exact parity verified. |
+| 20 | Complete | Balanced80-session/all6 contrasts;835 final curated inputs classified and publicly recoverable. Frozen303 files/models unchanged. |
 | 21 | Complete | Eight-page academic report; all pages visually reviewed; result/margin/link checks PASS; contribution fields blank. Focused README, code map and reproduction/index complete. |
-| 22 | Running | Initial ZIP exact179/80-session reproduction PASS in results-only venv;85 arrays regenerated plus Victoria cache verified;full native export nine assets byte-identical; final publication/package checks next. |
+| 22 | Complete | Final75.53MB ZIP,837 files/185 event runs; every byte verified; exact179-session/full and80-session/all6 contrasts reproduced in clean results-only venv; public835-source retrieval PASS. Data/build/nine-asset full-export checks PASS. Contributions blank by request; user uploads. |
 | 23 | Deferred | After18November08:00 and new instruction: PPT/demo/learning/human rehearsal |
 
 ### Method references used for this revision

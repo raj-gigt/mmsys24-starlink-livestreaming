@@ -1,0 +1,3552 @@
+{
+  "evaluator_entry": "ZIP root README maps final implementations and commands; historical research remains in existing GitHub repository",
+  "excluded_categories": [
+    "presentation/demo/learning materials",
+    "verbose execution logs",
+    "PhaseA reports",
+    "unused pilot/reference weights",
+    "redundant seed checkpoints/resume caches",
+    "unrelated upstream infrastructure",
+    "Git internals/environments/scratch"
+  ],
+  "files": {
+    ".dockerignore": {
+      "category": "build_data_license",
+      "reason": "Referenced build configuration, raw verification/data input or retained attribution"
+    },
+    ".gitattributes": {
+      "category": "build_data_license",
+      "reason": "Referenced build configuration, raw verification/data input or retained attribution"
+    },
+    ".gitmodules": {
+      "category": "build_data_license",
+      "reason": "Referenced build configuration, raw verification/data input or retained attribution"
+    },
+    "Dockerfile-nginx-emulation": {
+      "category": "build_data_license",
+      "reason": "Referenced build configuration, raw verification/data input or retained attribution"
+    },
+    "Dockerfile-player-anjan": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "Dockerfile-runner": {
+      "category": "build_data_license",
+      "reason": "Referenced build configuration, raw verification/data input or retained attribution"
+    },
+    "LICENSE": {
+      "category": "build_data_license",
+      "reason": "Referenced build configuration, raw verification/data input or retained attribution"
+    },
+    "README.md": {
+      "category": "build_data_license",
+      "reason": "Referenced build configuration, raw verification/data input or retained attribution"
+    },
+    "artifacts/final/calibration/benchmark-cpu.json": {
+      "category": "calibration",
+      "reason": "Quantified model/environment fidelity or compute benchmark"
+    },
+    "artifacts/final/calibration/benchmark-cuda.json": {
+      "category": "calibration",
+      "reason": "Quantified model/environment fidelity or compute benchmark"
+    },
+    "artifacts/final/calibration/comparison.json": {
+      "category": "calibration",
+      "reason": "Quantified model/environment fidelity or compute benchmark"
+    },
+    "artifacts/final/calibration/environment-checks.json": {
+      "category": "calibration",
+      "reason": "Quantified model/environment fidelity or compute benchmark"
+    },
+    "artifacts/final/calibration/runs.json": {
+      "category": "calibration",
+      "reason": "Quantified model/environment fidelity or compute benchmark"
+    },
+    "artifacts/final/development/context-guard-v2/runs.json": {
+      "category": "supporting_study",
+      "reason": "Source ledger for main evidence, calibration, H1-H6 or validation"
+    },
+    "artifacts/final/development/feedback-v1/runs.json": {
+      "category": "supporting_study",
+      "reason": "Source ledger for main evidence, calibration, H1-H6 or validation"
+    },
+    "artifacts/final/development/memory-startup-v1/runs.json": {
+      "category": "supporting_study",
+      "reason": "Source ledger for main evidence, calibration, H1-H6 or validation"
+    },
+    "artifacts/final/evaluation/analysis.json": {
+      "category": "evaluation_evidence",
+      "reason": "Frozen inputs or final reproducible analysis"
+    },
+    "artifacts/final/evaluation/contrasts.json": {
+      "category": "evaluation_evidence",
+      "reason": "Frozen inputs or final reproducible analysis"
+    },
+    "artifacts/final/evaluation/deployment.json": {
+      "category": "evaluation_evidence",
+      "reason": "Frozen inputs or final reproducible analysis"
+    },
+    "artifacts/final/evaluation/four-policy-analysis.json": {
+      "category": "evaluation_evidence",
+      "reason": "Frozen inputs or final reproducible analysis"
+    },
+    "artifacts/final/evaluation/freeze.json": {
+      "category": "evaluation_evidence",
+      "reason": "Frozen inputs or final reproducible analysis"
+    },
+    "artifacts/final/evaluation/publication.json": {
+      "category": "evaluation_evidence",
+      "reason": "Frozen inputs or final reproducible analysis"
+    },
+    "artifacts/final/evaluation/runs.json": {
+      "category": "evaluation_evidence",
+      "reason": "Frozen inputs or final reproducible analysis"
+    },
+    "artifacts/final/evaluation/saved-results-check.json": {
+      "category": "evaluation_evidence",
+      "reason": "Frozen inputs or final reproducible analysis"
+    },
+    "artifacts/final/evaluation/step19-review.json": {
+      "category": "evaluation_evidence",
+      "reason": "Frozen inputs or final reproducible analysis"
+    },
+    "artifacts/final/evidence/index.json": {
+      "category": "portable_event_index",
+      "reason": "ZIP transforms this into a subset containing only bundled run payloads"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T090107-222a90.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T090708-119493.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T091908-bec614.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T092508-d9bb4a.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T093707-586bc0.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T094307-fdab9d.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T095508-605281.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T100108-761317.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T101307-603ebb.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T101908-d33ea0.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T103708-cc7463.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T105207-89a0f7.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T105508-454b62.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T111008-8d4027.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T112808-db1d1e.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T113408-331e2e.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T114608-224caa.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T115208-30c921.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T120408-feb9a8.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T121008-bcf86b.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T122808-60413c.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T123408-9866f8.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T124608-22071b.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T125208-a8a67e.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T130408-4cb849.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T131008-016d24.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T132208-0a7bf1.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T132808-8c9535.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T134608-a4913e.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T140108-d6532e.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T140409-c63216.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T141908-b6eab2.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T143708-404491.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T144308-7a0195.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T145508-3f7f93.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T150108-c94adc.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T151308-66ea11.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T151908-bb1e5e.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T153108-c682d9.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanRL-20261117T153709-07a78c.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanSimple-20261117T052017-94e776.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanSimple-20261117T052237-d48279.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanSimple-20261117T052437-576100.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanSimple-20261117T052637-a3ffbc.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanSimple-20261117T053244-9507e6.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrAnjanSimple-20261117T053437-2e76d7.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrBola-20261117T084946-611709.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrBola-20261117T092808-eda788.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrBola-20261117T094608-3da91b.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrBola-20261117T100408-292a6e.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrBola-20261117T102208-c3189e.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrBola-20261117T104008-1c19a5.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrBola-20261117T105808-dea88e.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrBola-20261117T111608-cc609d.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrBola-20261117T115508-383d30.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrBola-20261117T121308-13e8e5.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrBola-20261117T123708-814c71.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrBola-20261117T125509-1ff887.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrBola-20261117T131308-05baaa.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrBola-20261117T133108-dd6053.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrBola-20261117T134908-8b742f.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrBola-20261117T140708-21733e.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrBola-20261117T142508-6f0078.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrBola-20261117T150408-076860.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrBola-20261117T152208-fc42ac.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrBola-20261117T154008-b4e421.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T085508-0a7e9f.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T091307-a9a911.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T093108-778d47.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T101007-eda7b4.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T102807-a154a6.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T104607-f30d2f.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T110408-ecc13a.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T112207-713b2c.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T114008-3b0dd8.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T115808-be2817.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T122208-714c41.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T124007-c01c20.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T131908-9397b4.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T133708-c552ec.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T135508-37f2e0.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T141307-6e7248.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T143108-9fbdc2.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T144907-56b6a3.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T150707-5160eb.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T154608-dead21.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T155208-d767e3.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T155808-a08385.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T161308-4731a0.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T161908-0ad77a.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T162508-7de286.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T164008-fb49af.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T164608-4e64ca.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T165208-c81c66.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T170708-9a50d1.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T171308-4e817d.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T171908-7dc262.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T173915-88f80a.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMAB-20261117T174715-27513e.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T085808-43bbe1.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T090408-bd7e4c.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T091607-2b4f43.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T092208-c72a58.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T093407-65bd2a.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T094009-cb7f9e.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T095208-16b68c.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T095808-44040d.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T101608-a7e94f.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T103107-28d5b4.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T103407-1128c1.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T104908-cdf1c0.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T110708-2bcefb.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T111308-0c825a.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T112508-9c7dd2.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T113108-a8046f.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T114308-eca69e.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T114908-ba440d.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T120108-52a64f.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T120708-d55aa8.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T122508-604e6f.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T123108-b4b5d8.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T124308-ce34e4.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T124909-1877c7.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T130107-ec13fa.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T130708-968051.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T132509-b47f49.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T134008-cf166b.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T134308-dece40.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T135808-89a48f.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T141608-fd0382.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T142209-3ca56d.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T143408-6fb49e.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T144008-267fbf.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T145208-0f3d14.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T145809-199e6b.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T151008-992809.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T151608-7e5ab5.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T152808-8de183.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T153409-3114c1.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T154908-7e7fd9.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T155508-689231.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T160109-6c829d.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T160409-9c66ca.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T160708-9b7a9a.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T161008-f069bf.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T161608-15398e.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T162208-cc0ad4.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T162808-54bf12.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T163108-6abfb2.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T163408-b0478d.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T163708-b685a3.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T164308-c35156.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T164908-d45a02.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T165508-bd3a2c.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T165808-2a6417.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T170108-8d97f2.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T170408-678168.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T171008-0e5d77.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T171608-e16303.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T172313-e1ace3.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T172712-dc9cd4.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T173112-1edc01.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T173514-cc9da0.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T174316-f70f37.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrCMABImproved-20261117T175116-892424.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrThroughput-20261117T085208-627b90.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrThroughput-20261117T091008-883d96.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrThroughput-20261117T094907-1cd249.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrThroughput-20261117T100707-83b2bf.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrThroughput-20261117T102508-e2f4f7.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrThroughput-20261117T104307-49d109.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrThroughput-20261117T110108-b92ad8.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrThroughput-20261117T111908-7210ce.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrThroughput-20261117T113708-9a5a23.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrThroughput-20261117T121608-8798b8.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrThroughput-20261117T121908-e40719.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrThroughput-20261117T125807-1d770f.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrThroughput-20261117T131607-6c251a.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrThroughput-20261117T133407-06fea1.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrThroughput-20261117T135208-fe50bb.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrThroughput-20261117T141008-36c0bf.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrThroughput-20261117T142808-7eb6bf.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrThroughput-20261117T144608-84bcaa.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrThroughput-20261117T152508-f0932b.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/evidence/phasea-abrThroughput-20261117T154308-7a6db4.json.gz": {
+      "category": "portable_event_evidence",
+      "reason": "Hash-checked final or calibration raw events; no MongoDB dependency"
+    },
+    "artifacts/final/training/learning-checks.json": {
+      "category": "training_summary",
+      "reason": "Selection, multi-seed learning or integrity evidence"
+    },
+    "artifacts/final/training/main-checks.json": {
+      "category": "training_summary",
+      "reason": "Selection, multi-seed learning or integrity evidence"
+    },
+    "artifacts/final/training/main-selection.json": {
+      "category": "training_summary",
+      "reason": "Selection, multi-seed learning or integrity evidence"
+    },
+    "artifacts/final/training/main/conventional-101/curve.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/conventional-101/initialization.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/conventional-101/manifest.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/conventional-101/selected-validation.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/conventional-131/curve.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/conventional-131/initialization.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/conventional-131/manifest.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/conventional-131/selected-validation.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/conventional-167/curve.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/conventional-167/initialization.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/conventional-167/manifest.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/conventional-167/selected-validation.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/conventional-167/selected.zip": {
+      "category": "export_dependency",
+      "reason": "Exact selected native checkpoint required by export_final; other seed weights stay in GitHub history"
+    },
+    "artifacts/final/training/main/conventional-47/curve.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/conventional-47/initialization.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/conventional-47/manifest.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/conventional-47/selected-validation.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/conventional-71/curve.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/conventional-71/initialization.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/conventional-71/manifest.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/conventional-71/selected-validation.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/leo-101/curve.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/leo-101/initialization.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/leo-101/manifest.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/leo-101/selected-validation.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/leo-101/selected.zip": {
+      "category": "export_dependency",
+      "reason": "Exact selected native checkpoint required by export_final; other seed weights stay in GitHub history"
+    },
+    "artifacts/final/training/main/leo-131/curve.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/leo-131/initialization.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/leo-131/manifest.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/leo-131/selected-validation.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/leo-167/curve.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/leo-167/initialization.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/leo-167/manifest.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/leo-167/selected-validation.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/leo-47/curve.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/leo-47/initialization.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/leo-47/manifest.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/leo-47/selected-validation.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/leo-71/curve.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/leo-71/initialization.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/leo-71/manifest.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/main/leo-71/selected-validation.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen-checks.json": {
+      "category": "training_summary",
+      "reason": "Selection, multi-seed learning or integrity evidence"
+    },
+    "artifacts/final/training/screen-selection.json": {
+      "category": "training_summary",
+      "reason": "Selection, multi-seed learning or integrity evidence"
+    },
+    "artifacts/final/training/screen/conventional-a-11/curve.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-a-11/initialization.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-a-11/manifest.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-a-11/selected-validation.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-a-29/curve.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-a-29/initialization.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-a-29/manifest.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-a-29/selected-validation.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-b-11/curve.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-b-11/initialization.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-b-11/manifest.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-b-11/selected-validation.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-b-29/curve.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-b-29/initialization.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-b-29/manifest.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-b-29/selected-validation.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-c-11/curve.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-c-11/initialization.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-c-11/manifest.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-c-11/selected-validation.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-c-29/curve.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-c-29/initialization.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-c-29/manifest.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-c-29/selected-validation.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-d-11/curve.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-d-11/initialization.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-d-11/manifest.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-d-11/selected-validation.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-d-29/curve.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-d-29/initialization.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-d-29/manifest.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/conventional-d-29/selected-validation.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-a-11/curve.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-a-11/initialization.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-a-11/manifest.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-a-11/selected-validation.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-a-29/curve.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-a-29/initialization.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-a-29/manifest.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-a-29/selected-validation.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-b-11/curve.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-b-11/initialization.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-b-11/manifest.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-b-11/selected-validation.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-b-29/curve.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-b-29/initialization.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-b-29/manifest.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-b-29/selected-validation.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-c-11/curve.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-c-11/initialization.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-c-11/manifest.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-c-11/selected-validation.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-c-29/curve.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-c-29/initialization.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-c-29/manifest.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-c-29/selected-validation.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-d-11/curve.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-d-11/initialization.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-d-11/manifest.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-d-11/selected-validation.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-d-29/curve.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-d-29/initialization.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-d-29/manifest.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/training/screen/leo-d-29/selected-validation.json": {
+      "category": "training_summary",
+      "reason": "Small seed/recipe records; resume caches and redundant weights excluded"
+    },
+    "artifacts/final/validation/finalists-v2/runs.json": {
+      "category": "supporting_study",
+      "reason": "Source ledger for main evidence, calibration, H1-H6 or validation"
+    },
+    "artifacts/final/validation/finalists-v2/selection.json": {
+      "category": "selection",
+      "reason": "Validation-only controller selection"
+    },
+    "configs/final/cmab-interface.json": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "configs/final/cmab_variants.json": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "configs/final/neural-interface.json": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "configs/final/project.json": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "configs/final/protocol.json": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "configs/final/simulator.json": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "configs/final/validation-selection.json": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "configs/final/workloads/development.json": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "configs/final/workloads/paper_replay.json": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "configs/final/workloads/reserve.json": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "configs/final/workloads/test.json": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "configs/final/workloads/validation.json": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "dash.js/LICENSE.md": {
+      "category": "build_data_license",
+      "reason": "Referenced build configuration, raw verification/data input or retained attribution"
+    },
+    "dash.js/package.json": {
+      "category": "build_data_license",
+      "reason": "Referenced build configuration, raw verification/data input or retained attribution"
+    },
+    "dash.js/samples/starlink/testplayer/main.css": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/samples/starlink/testplayer/main.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/samples/starlink/testplayer/testplayer.html": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/core/Debug.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/core/EventBus.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/core/FactoryMaker.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/core/Logger.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/core/Settings.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/core/Utils.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/core/Version.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/core/errors/Errors.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/core/errors/ErrorsBase.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/core/events/CoreEvents.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/core/events/Events.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/core/events/EventsBase.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/DashAdapter.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/DashHandler.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/DashMetrics.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/SegmentBaseLoader.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/WebmSegmentBaseLoader.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/constants/DashConstants.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/controllers/ContentSteeringController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/controllers/RepresentationController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/controllers/SegmentBaseController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/controllers/SegmentsController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/controllers/ServiceDescriptionController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/models/DashManifestModel.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/models/PatchManifestModel.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/parser/DashParser.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/parser/maps/CommonProperty.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/parser/maps/MapNode.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/parser/maps/RepresentationBaseValuesMap.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/parser/maps/SegmentValuesMap.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/parser/matchers/BaseMatcher.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/parser/matchers/DateTimeMatcher.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/parser/matchers/DurationMatcher.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/parser/matchers/LangMatcher.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/parser/matchers/NumericMatcher.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/parser/matchers/StringMatcher.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/parser/objectiron.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/utils/ListSegmentsGetter.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/utils/Round10.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/utils/SegmentBaseGetter.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/utils/SegmentsUtils.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/utils/TemplateSegmentsGetter.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/utils/TimelineConverter.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/utils/TimelineSegmentsGetter.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/vo/AdaptationSet.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/vo/BaseURL.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/vo/ContentSteering.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/vo/ContentSteeringRequest.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/vo/ContentSteeringResponse.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/vo/DescriptorType.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/vo/Event.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/vo/EventStream.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/vo/ManifestInfo.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/vo/MediaInfo.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/vo/Mpd.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/vo/MpdLocation.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/vo/PatchLocation.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/vo/PatchOperation.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/vo/Period.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/vo/ProducerReferenceTime.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/vo/Representation.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/vo/RepresentationInfo.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/vo/Segment.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/vo/SimpleXPath.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/vo/StreamInfo.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/dash/vo/UTCTiming.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/mss/MssFragmentInfoController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/mss/MssFragmentMoofProcessor.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/mss/MssFragmentMoovProcessor.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/mss/MssFragmentProcessor.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/mss/MssHandler.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/mss/errors/MssErrors.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/mss/index.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/mss/parser/MssParser.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/offline/OfflineDownload.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/offline/OfflineStream.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/offline/OfflineStreamProcessor.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/offline/constants/OfflineConstants.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/offline/controllers/OfflineController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/offline/controllers/OfflineStoreController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/offline/errors/OfflineErrors.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/offline/events/OfflineEvents.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/offline/index.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/offline/net/IndexDBOfflineLoader.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/offline/storage/IndexDBStore.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/offline/utils/OfflineIndexDBManifestParser.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/offline/utils/OfflineUrlUtils.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/offline/vo/OfflineDownloadVo.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/FragmentLoader.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/FragmentSink.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/ManifestLoader.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/ManifestUpdater.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/MediaPlayer.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/MediaPlayerEvents.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/MediaPlayerFactory.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/PreBufferSink.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/SourceBufferSink.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/Stream.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/StreamProcessor.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/XlinkLoader.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/constants/ConformanceViolationConstants.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/constants/Constants.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/constants/MetricsConstants.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/constants/ProtectionConstants.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/controllers/AbrController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/controllers/BaseURLController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/controllers/BlacklistController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/controllers/BufferController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/controllers/CatchupController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/controllers/EventController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/controllers/FragmentController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/controllers/GapController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/controllers/MediaController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/controllers/MediaSourceController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/controllers/PlaybackController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/controllers/ScheduleController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/controllers/StreamController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/controllers/TimeSyncController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/controllers/XlinkController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/metrics/MetricsReporting.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/metrics/MetricsReportingEvents.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/metrics/controllers/MetricsCollectionController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/metrics/controllers/MetricsController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/metrics/controllers/MetricsHandlersController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/metrics/controllers/RangeController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/metrics/controllers/ReportingController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/metrics/metrics/MetricsHandlerFactory.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/metrics/metrics/handlers/BufferLevelHandler.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/metrics/metrics/handlers/DVBErrorsHandler.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/metrics/metrics/handlers/GenericMetricHandler.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/metrics/metrics/handlers/HttpListHandler.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/metrics/reporting/ReportingFactory.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/metrics/reporting/reporters/DVBReporting.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/metrics/utils/DVBErrorsTranslator.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/metrics/utils/HandlerHelpers.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/metrics/utils/ManifestParsing.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/metrics/utils/MetricSerialiser.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/metrics/utils/RNG.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/metrics/vo/DVBErrors.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/metrics/vo/Metrics.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/metrics/vo/Range.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/metrics/vo/Reporting.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/models/BaseURLTreeModel.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/models/CmcdModel.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/models/CmsdModel.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/models/CustomParametersModel.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/models/FragmentModel.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/models/LowLatencyThroughputModel.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/models/ManifestModel.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/models/MediaPlayerModel.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/models/MetricsModel.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/models/URIFragmentModel.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/models/VideoModel.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/net/FetchLoader.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/net/HTTPLoader.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/net/SchemeLoaderFactory.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/net/URLLoader.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/net/XHRLoader.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/CommonEncryption.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/Protection.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/ProtectionEvents.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/controllers/ProtectionController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/controllers/ProtectionKeyController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/drm/KeySystem.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/drm/KeySystemClearKey.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/drm/KeySystemPlayReady.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/drm/KeySystemW3CClearKey.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/drm/KeySystemWidevine.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/errors/ProtectionErrors.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/models/ProtectionModel.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/models/ProtectionModel_01b.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/models/ProtectionModel_21Jan2015.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/models/ProtectionModel_3Feb2014.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/servers/ClearKey.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/servers/DRMToday.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/servers/LicenseServer.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/servers/PlayReady.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/servers/Widevine.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/vo/ClearKeyKeySet.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/vo/KeyMessage.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/vo/KeyPair.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/vo/KeySystemAccess.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/vo/KeySystemConfiguration.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/vo/LicenseRequest.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/vo/LicenseRequestComplete.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/vo/LicenseResponse.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/vo/MediaCapability.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/vo/NeedKey.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/vo/ProtectionData.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/protection/vo/SessionToken.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/rules/DroppedFramesHistory.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/rules/RulesContext.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/rules/SwitchRequest.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/rules/SwitchRequestHistory.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/rules/ThroughputHistory.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/rules/abr/ABRRulesCollection.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/rules/abr/AbandonRequestsRule.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/rules/abr/BolaRule.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/rules/abr/DroppedFramesRule.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/rules/abr/InsufficientBufferRule.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/rules/abr/L2ARule.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/rules/abr/NetworkObservations.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/rules/abr/SwitchHistoryRule.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/rules/abr/ThroughputRule.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/rules/abr/anjan/AnjanRule.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/rules/abr/cmab/CMABAbrController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/rules/abr/cmab/CMABFeedback.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/rules/abr/cmab/CMABImprovedController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/rules/abr/cmab/CMABImprovedRule.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/rules/abr/cmab/CMABRule.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/rules/abr/cmab/CMABRuntime.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/rules/abr/lolp/LearningAbrController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/rules/abr/lolp/LoLpQoEEvaluator.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/rules/abr/lolp/LoLpRule.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/rules/abr/lolp/LoLpWeightSelector.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/rules/abr/lolp/QoeInfo.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/text/EmbeddedTextHtmlRender.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/text/NotFragmentedTextBufferController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/text/TextController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/text/TextSourceBuffer.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/text/TextTracks.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/thumbnail/ThumbnailController.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/thumbnail/ThumbnailTracks.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/utils/BaseURLSelector.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/utils/BoxParser.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/utils/Capabilities.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/utils/CapabilitiesFilter.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/utils/CustomTimeRanges.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/utils/DOMStorage.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/utils/DefaultURLUtils.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/utils/EBMLParser.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/utils/ErrorHandler.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/utils/InitCache.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/utils/IsoFile.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/utils/LocationSelector.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/utils/ObjectUtils.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/utils/RequestModifier.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/utils/SegmentResponseModifier.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/utils/SupervisorTools.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/utils/TTMLParser.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/utils/TimeUtils.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/utils/URLUtils.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/utils/VTTParser.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/utils/VttCustomRenderingParser.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/utils/baseUrlResolution/BasicSelector.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/utils/baseUrlResolution/ContentSteeringSelector.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/utils/baseUrlResolution/DVBSelector.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/vo/BitrateInfo.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/vo/DashJSError.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/vo/DataChunk.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/vo/FragmentRequest.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/vo/HeadRequest.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/vo/IsoBox.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/vo/IsoBoxSearchInfo.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/vo/MetricsList.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/vo/TextRequest.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/vo/TextTrackInfo.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/vo/Thumbnail.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/vo/ThumbnailTrackInfo.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/vo/URIFragmentData.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/vo/metrics/BufferLevel.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/vo/metrics/BufferState.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/vo/metrics/DVRInfo.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/vo/metrics/DroppedFrames.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/vo/metrics/HTTPRequest.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/vo/metrics/ManifestUpdate.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/vo/metrics/PlayList.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/vo/metrics/RepresentationSwitch.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/vo/metrics/RequestsQueue.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/vo/metrics/SchedulingInfo.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "dash.js/src/streaming/vo/metrics/TCPConnection.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "data/manifests/external-access.json": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/manifests/lens-reserve.json": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/manifests/media.json": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/manifests/sources.json": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/manifests/split-policy.json": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/manifests/test.json": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/manifests/train.json": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/manifests/validation.json": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/final/victoria-1hz.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/rtt-1hz.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/test/test-bandwidth_variation-3100.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/test/test-bandwidth_variation-3101.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/test/test-bandwidth_variation-3102.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/test/test-handover_interruption-3300.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/test/test-handover_interruption-3301.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/test/test-handover_interruption-3302.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/test/test-mixed_shifted-3500.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/test/test-mixed_shifted-3501.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/test/test-mixed_shifted-3502.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/test/test-post_handover_recovery-3400.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/test/test-post_handover_recovery-3401.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/test/test-post_handover_recovery-3402.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/test/test-rtt_variation-3200.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/test/test-rtt_variation-3201.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/test/test-rtt_variation-3202.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/test/test-steady_bandwidth-3000.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/test/test-steady_bandwidth-3001.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/test/test-steady_bandwidth-3002.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-bandwidth_variation-1100.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-bandwidth_variation-1101.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-bandwidth_variation-1102.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-bandwidth_variation-1103.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-bandwidth_variation-1104.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-bandwidth_variation-1105.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-bandwidth_variation-1106.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-bandwidth_variation-1107.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-handover_interruption-1300.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-handover_interruption-1301.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-handover_interruption-1302.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-handover_interruption-1303.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-handover_interruption-1304.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-handover_interruption-1305.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-handover_interruption-1306.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-handover_interruption-1307.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-mixed_shifted-1500.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-mixed_shifted-1501.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-mixed_shifted-1502.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-mixed_shifted-1503.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-mixed_shifted-1504.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-mixed_shifted-1505.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-mixed_shifted-1506.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-mixed_shifted-1507.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-post_handover_recovery-1400.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-post_handover_recovery-1401.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-post_handover_recovery-1402.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-post_handover_recovery-1403.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-post_handover_recovery-1404.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-post_handover_recovery-1405.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-post_handover_recovery-1406.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-post_handover_recovery-1407.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-rtt_variation-1200.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-rtt_variation-1201.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-rtt_variation-1202.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-rtt_variation-1203.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-rtt_variation-1204.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-rtt_variation-1205.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-rtt_variation-1206.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-rtt_variation-1207.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-steady_bandwidth-1000.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-steady_bandwidth-1001.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-steady_bandwidth-1002.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-steady_bandwidth-1003.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-steady_bandwidth-1004.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-steady_bandwidth-1005.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-steady_bandwidth-1006.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/train/train-steady_bandwidth-1007.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/validation/validation-bandwidth_variation-2100.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/validation/validation-bandwidth_variation-2101.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/validation/validation-bandwidth_variation-2102.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/validation/validation-handover_interruption-2300.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/validation/validation-handover_interruption-2301.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/validation/validation-handover_interruption-2302.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/validation/validation-mixed_shifted-2500.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/validation/validation-mixed_shifted-2501.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/validation/validation-mixed_shifted-2502.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/validation/validation-post_handover_recovery-2400.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/validation/validation-post_handover_recovery-2401.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/validation/validation-post_handover_recovery-2402.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/validation/validation-rtt_variation-2200.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/validation/validation-rtt_variation-2201.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/validation/validation-rtt_variation-2202.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/validation/validation-steady_bandwidth-2000.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/validation/validation-steady_bandwidth-2001.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "data/processed/scenarios/validation/validation-steady_bandwidth-2002.npz": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "docker-compose-emulation.yaml": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "docker-compose.final.yaml": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "docker-compose.lock.yaml": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "docker-compose.phase-a.yaml": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "docker-compose.player.yaml": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "etc/nginx/conf.d/livesim2.conf": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "experiments/batch-example.json": {
+      "category": "build_data_license",
+      "reason": "Referenced build configuration, raw verification/data input or retained attribution"
+    },
+    "models/final/cmab/example-state.json": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "models/final/cmab/manifest.json": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "models/final/conventional/actor.json": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "models/final/conventional/checkpoint.zip": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "models/final/conventional/fixtures.json": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "models/final/conventional/manifest.json": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "models/final/leo/actor.json": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "models/final/leo/checkpoint.zip": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "models/final/leo/fixtures.json": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "models/final/leo/manifest.json": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "poetry.lock": {
+      "category": "build_data_license",
+      "reason": "Referenced build configuration, raw verification/data input or retained attribution"
+    },
+    "pyproject.toml": {
+      "category": "build_data_license",
+      "reason": "Referenced build configuration, raw verification/data input or retained attribution"
+    },
+    "release/component-check.json": {
+      "category": "build_data_license",
+      "reason": "Referenced build configuration, raw verification/data input or retained attribution"
+    },
+    "release/report-check.json": {
+      "category": "build_data_license",
+      "reason": "Referenced build configuration, raw verification/data input or retained attribution"
+    },
+    "reports/final/Group4-final-report.pdf": {
+      "category": "report_document",
+      "reason": "Final paper or focused supporting/reproduction documentation"
+    },
+    "reports/final/cmab-audit.md": {
+      "category": "report_document",
+      "reason": "Final paper or focused supporting/reproduction documentation"
+    },
+    "reports/final/figures/F1-system.png": {
+      "category": "report_figure",
+      "reason": "Selected report figure"
+    },
+    "reports/final/figures/F1-system.svg": {
+      "category": "report_figure",
+      "reason": "Selected report figure"
+    },
+    "reports/final/figures/F3-four-policy.png": {
+      "category": "report_figure",
+      "reason": "Selected report figure"
+    },
+    "reports/final/figures/F3-four-policy.svg": {
+      "category": "report_figure",
+      "reason": "Selected report figure"
+    },
+    "reports/final/figures/F4-four-policy.png": {
+      "category": "report_figure",
+      "reason": "Selected report figure"
+    },
+    "reports/final/figures/F4-four-policy.svg": {
+      "category": "report_figure",
+      "reason": "Selected report figure"
+    },
+    "reports/final/figures/F5-four-policy-regression.png": {
+      "category": "report_figure",
+      "reason": "Selected report figure"
+    },
+    "reports/final/figures/F5-four-policy-regression.svg": {
+      "category": "report_figure",
+      "reason": "Selected report figure"
+    },
+    "reports/final/figures/F6-validation-components.png": {
+      "category": "report_figure",
+      "reason": "Selected report figure"
+    },
+    "reports/final/figures/F6-validation-components.svg": {
+      "category": "report_figure",
+      "reason": "Selected report figure"
+    },
+    "reports/final/figures/F7-report-training.png": {
+      "category": "report_figure",
+      "reason": "Selected report figure"
+    },
+    "reports/final/figures/F7-report-training.svg": {
+      "category": "report_figure",
+      "reason": "Selected report figure"
+    },
+    "reports/final/reproduction.md": {
+      "category": "report_document",
+      "reason": "Final paper or focused supporting/reproduction documentation"
+    },
+    "reports/final/tables/T1-policy-design.csv": {
+      "category": "result_table",
+      "reason": "Compact scientific results or metric/contribution definitions"
+    },
+    "reports/final/tables/T2-data-scenarios.csv": {
+      "category": "result_table",
+      "reason": "Compact scientific results or metric/contribution definitions"
+    },
+    "reports/final/tables/T2-media-ladder.csv": {
+      "category": "result_table",
+      "reason": "Compact scientific results or metric/contribution definitions"
+    },
+    "reports/final/tables/T3-common-settings.csv": {
+      "category": "result_table",
+      "reason": "Compact scientific results or metric/contribution definitions"
+    },
+    "reports/final/tables/T3-per-run.csv": {
+      "category": "result_table",
+      "reason": "Compact scientific results or metric/contribution definitions"
+    },
+    "reports/final/tables/T4-direct-contrasts.csv": {
+      "category": "result_table",
+      "reason": "Compact scientific results or metric/contribution definitions"
+    },
+    "reports/final/tables/T4-families.csv": {
+      "category": "result_table",
+      "reason": "Compact scientific results or metric/contribution definitions"
+    },
+    "reports/final/tables/T4-four-policy-families.csv": {
+      "category": "result_table",
+      "reason": "Compact scientific results or metric/contribution definitions"
+    },
+    "reports/final/tables/T4-four-policy-pairs.csv": {
+      "category": "result_table",
+      "reason": "Compact scientific results or metric/contribution definitions"
+    },
+    "reports/final/tables/T4-four-policy.csv": {
+      "category": "result_table",
+      "reason": "Compact scientific results or metric/contribution definitions"
+    },
+    "reports/final/tables/T4-overall.csv": {
+      "category": "result_table",
+      "reason": "Compact scientific results or metric/contribution definitions"
+    },
+    "reports/final/tables/T4-paired-effects.csv": {
+      "category": "result_table",
+      "reason": "Compact scientific results or metric/contribution definitions"
+    },
+    "reports/final/tables/T4-raw-replay.csv": {
+      "category": "result_table",
+      "reason": "Compact scientific results or metric/contribution definitions"
+    },
+    "reports/final/tables/T4-recovery.csv": {
+      "category": "result_table",
+      "reason": "Compact scientific results or metric/contribution definitions"
+    },
+    "reports/final/tables/T4-score-components.csv": {
+      "category": "result_table",
+      "reason": "Compact scientific results or metric/contribution definitions"
+    },
+    "reports/final/tables/T5-development-effects.csv": {
+      "category": "result_table",
+      "reason": "Compact scientific results or metric/contribution definitions"
+    },
+    "reports/final/tables/T5-hypothesis-summary.csv": {
+      "category": "result_table",
+      "reason": "Compact scientific results or metric/contribution definitions"
+    },
+    "reports/final/tables/T5-validation-summary.csv": {
+      "category": "result_table",
+      "reason": "Compact scientific results or metric/contribution definitions"
+    },
+    "reports/final/tables/T6-contributions-template.csv": {
+      "category": "result_table",
+      "reason": "Compact scientific results or metric/contribution definitions"
+    },
+    "reports/final/tables/T7-metric-definitions.csv": {
+      "category": "result_table",
+      "reason": "Compact scientific results or metric/contribution definitions"
+    },
+    "reports/final/tables/T8-deployment.csv": {
+      "category": "result_table",
+      "reason": "Compact scientific results or metric/contribution definitions"
+    },
+    "reports/final/tables/T8-neural-screen.csv": {
+      "category": "result_table",
+      "reason": "Compact scientific results or metric/contribution definitions"
+    },
+    "reports/final/tables/T8-neural-training.csv": {
+      "category": "result_table",
+      "reason": "Compact scientific results or metric/contribution definitions"
+    },
+    "requirements-browser.txt": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "requirements-phase-a.txt": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "requirements-report.txt": {
+      "category": "build_data_license",
+      "reason": "Referenced build configuration, raw verification/data input or retained attribution"
+    },
+    "requirements-results.txt": {
+      "category": "build_data_license",
+      "reason": "Referenced build configuration, raw verification/data input or retained attribution"
+    },
+    "rl/__init__.py": {
+      "category": "training_or_metrics",
+      "reason": "Final training/export/metric dependency; pilot_env is an active base class"
+    },
+    "rl/decision_validation.py": {
+      "category": "training_or_metrics",
+      "reason": "Final training/export/metric dependency; pilot_env is an active base class"
+    },
+    "rl/evidence.py": {
+      "category": "training_or_metrics",
+      "reason": "Final training/export/metric dependency; pilot_env is an active base class"
+    },
+    "rl/export_final.py": {
+      "category": "training_or_metrics",
+      "reason": "Final training/export/metric dependency; pilot_env is an active base class"
+    },
+    "rl/export_layers.py": {
+      "category": "training_or_metrics",
+      "reason": "Final training/export/metric dependency; pilot_env is an active base class"
+    },
+    "rl/features.py": {
+      "category": "training_or_metrics",
+      "reason": "Final training/export/metric dependency; pilot_env is an active base class"
+    },
+    "rl/final_env.py": {
+      "category": "training_or_metrics",
+      "reason": "Final training/export/metric dependency; pilot_env is an active base class"
+    },
+    "rl/metrics.py": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "rl/pilot_env.py": {
+      "category": "training_or_metrics",
+      "reason": "Final training/export/metric dependency; pilot_env is an active base class"
+    },
+    "rl/recovery.py": {
+      "category": "training_or_metrics",
+      "reason": "Final training/export/metric dependency; pilot_env is an active base class"
+    },
+    "rl/reference/LICENSE.abr_rl_test": {
+      "category": "build_data_license",
+      "reason": "Referenced build configuration, raw verification/data input or retained attribution"
+    },
+    "rl/replay_validation.py": {
+      "category": "python_dependency",
+      "reason": "Transitive local import of scripts/reproduce_final.py"
+    },
+    "rl/train_final.py": {
+      "category": "training_or_metrics",
+      "reason": "Final training/export/metric dependency; pilot_env is an active base class"
+    },
+    "rl/warmstart.py": {
+      "category": "training_or_metrics",
+      "reason": "Final training/export/metric dependency; pilot_env is an active base class"
+    },
+    "rl/web/build_identity.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "rl/web/final_core.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "rl/web/final_models.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "rl/web/final_setup.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "rl/web/pilot_model.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "rl/web/pilot_setup.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "rl/web/policy_core.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "rl/web/sync_actor.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "rl/web/telemetry.js": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "runner/batch_runner.py": {
+      "category": "inherited_build",
+      "reason": "Upstream runner Dockerfile source dependency"
+    },
+    "runner/config.py": {
+      "category": "inherited_build",
+      "reason": "Upstream runner Dockerfile source dependency"
+    },
+    "runner/plot.py": {
+      "category": "inherited_build",
+      "reason": "Upstream runner Dockerfile source dependency"
+    },
+    "runner/single_runner.py": {
+      "category": "inherited_build",
+      "reason": "Upstream runner Dockerfile source dependency"
+    },
+    "runner/tc-trace.py": {
+      "category": "inherited_build",
+      "reason": "Upstream runner Dockerfile source dependency"
+    },
+    "runner/tc.py": {
+      "category": "inherited_build",
+      "reason": "Upstream runner Dockerfile source dependency"
+    },
+    "runner/trace/irtt/seychelles-irtt-10ms-1h-2024-01-30-01-00-00.csv": {
+      "category": "build_data_license",
+      "reason": "Referenced build configuration, raw verification/data input or retained attribution"
+    },
+    "runner/trace/isl-trace.csv": {
+      "category": "build_data_license",
+      "reason": "Referenced build configuration, raw verification/data input or retained attribution"
+    },
+    "runner/video.py": {
+      "category": "inherited_build",
+      "reason": "Upstream runner Dockerfile source dependency"
+    },
+    "scripts/analyse_final.py": {
+      "category": "entry_point",
+      "reason": "Saved-results, build, data, analysis or experiment command"
+    },
+    "scripts/analyse_final_contrasts.py": {
+      "category": "entry_point",
+      "reason": "Saved-results, build, data, analysis or experiment command"
+    },
+    "scripts/analyse_four_policies.py": {
+      "category": "entry_point",
+      "reason": "Saved-results, build, data, analysis or experiment command"
+    },
+    "scripts/archive_final_runs.py": {
+      "category": "entry_point",
+      "reason": "Saved-results, build, data, analysis or experiment command"
+    },
+    "scripts/browser_trial.py": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "scripts/build_final_report.py": {
+      "category": "entry_point",
+      "reason": "Saved-results, build, data, analysis or experiment command"
+    },
+    "scripts/build_submission.py": {
+      "category": "entry_point",
+      "reason": "Saved-results, build, data, analysis or experiment command"
+    },
+    "scripts/check_final_export.cjs": {
+      "category": "build_data_license",
+      "reason": "Referenced build configuration, raw verification/data input or retained attribution"
+    },
+    "scripts/experiment_clock.py": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "scripts/freeze_final.py": {
+      "category": "entry_point",
+      "reason": "Saved-results, build, data, analysis or experiment command"
+    },
+    "scripts/plot_cmab_ablation.py": {
+      "category": "entry_point",
+      "reason": "Saved-results, build, data, analysis or experiment command"
+    },
+    "scripts/plot_cmab_validation.py": {
+      "category": "entry_point",
+      "reason": "Saved-results, build, data, analysis or experiment command"
+    },
+    "scripts/plot_final_architecture.py": {
+      "category": "entry_point",
+      "reason": "Saved-results, build, data, analysis or experiment command"
+    },
+    "scripts/plot_run_timeline.py": {
+      "category": "python_dependency",
+      "reason": "Transitive local import of scripts/browser_trial.py"
+    },
+    "scripts/prepare_data.py": {
+      "category": "entry_point",
+      "reason": "Saved-results, build, data, analysis or experiment command"
+    },
+    "scripts/prepare_final_workloads.py": {
+      "category": "entry_point",
+      "reason": "Saved-results, build, data, analysis or experiment command"
+    },
+    "scripts/prepare_player.py": {
+      "category": "entry_point",
+      "reason": "Saved-results, build, data, analysis or experiment command"
+    },
+    "scripts/reproduce_final.py": {
+      "category": "entry_point",
+      "reason": "Saved-results, build, data, analysis or experiment command"
+    },
+    "scripts/run_final_matrix.py": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "scripts/select_cmab_final.py": {
+      "category": "entry_point",
+      "reason": "Saved-results, build, data, analysis or experiment command"
+    },
+    "scripts/submission_inventory.py": {
+      "category": "entry_point",
+      "reason": "Saved-results, build, data, analysis or experiment command"
+    },
+    "scripts/summarize_final_deployment.py": {
+      "category": "entry_point",
+      "reason": "Saved-results, build, data, analysis or experiment command"
+    },
+    "scripts/testbed.sh": {
+      "category": "build_data_license",
+      "reason": "Referenced build configuration, raw verification/data input or retained attribution"
+    },
+    "scripts/verify_remote_publication.py": {
+      "category": "entry_point",
+      "reason": "Saved-results, build, data, analysis or experiment command"
+    },
+    "scripts/verify_submission.py": {
+      "category": "entry_point",
+      "reason": "Saved-results, build, data, analysis or experiment command"
+    },
+    "shaper/entrypoint.sh": {
+      "category": "build_data_license",
+      "reason": "Referenced build configuration, raw verification/data input or retained attribution"
+    },
+    "shaper/supervisord.conf": {
+      "category": "build_data_license",
+      "reason": "Referenced build configuration, raw verification/data input or retained attribution"
+    },
+    "shaper/tc-final.py": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "shaper/tc-phase-a.py": {
+      "category": "build_data_license",
+      "reason": "Referenced build configuration, raw verification/data input or retained attribution"
+    },
+    "stats-server/Dockerfile": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "stats-server/app.py": {
+      "category": "measured_source",
+      "reason": "Required unchanged measured source/config or player-build snapshot"
+    },
+    "stats-server/docker-compose.yaml": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "stats-server/requirements.txt": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    },
+    "stats-server/templates/ws-index.html": {
+      "category": "runtime_data_configuration",
+      "reason": "Final service/configuration, processed data, model contracts/weights"
+    }
+  },
+  "format": "group4-submission-inventory-v1",
+  "missing_required": [],
+  "planned_generated": [
+    "reports/final/Group4-final-report.pdf"
+  ],
+  "portable_run_ids": [
+    "phasea-abrAnjanRL-20261117T090107-222a90",
+    "phasea-abrAnjanRL-20261117T090708-119493",
+    "phasea-abrAnjanRL-20261117T091908-bec614",
+    "phasea-abrAnjanRL-20261117T092508-d9bb4a",
+    "phasea-abrAnjanRL-20261117T093707-586bc0",
+    "phasea-abrAnjanRL-20261117T094307-fdab9d",
+    "phasea-abrAnjanRL-20261117T095508-605281",
+    "phasea-abrAnjanRL-20261117T100108-761317",
+    "phasea-abrAnjanRL-20261117T101307-603ebb",
+    "phasea-abrAnjanRL-20261117T101908-d33ea0",
+    "phasea-abrAnjanRL-20261117T103708-cc7463",
+    "phasea-abrAnjanRL-20261117T105207-89a0f7",
+    "phasea-abrAnjanRL-20261117T105508-454b62",
+    "phasea-abrAnjanRL-20261117T111008-8d4027",
+    "phasea-abrAnjanRL-20261117T112808-db1d1e",
+    "phasea-abrAnjanRL-20261117T113408-331e2e",
+    "phasea-abrAnjanRL-20261117T114608-224caa",
+    "phasea-abrAnjanRL-20261117T115208-30c921",
+    "phasea-abrAnjanRL-20261117T120408-feb9a8",
+    "phasea-abrAnjanRL-20261117T121008-bcf86b",
+    "phasea-abrAnjanRL-20261117T122808-60413c",
+    "phasea-abrAnjanRL-20261117T123408-9866f8",
+    "phasea-abrAnjanRL-20261117T124608-22071b",
+    "phasea-abrAnjanRL-20261117T125208-a8a67e",
+    "phasea-abrAnjanRL-20261117T130408-4cb849",
+    "phasea-abrAnjanRL-20261117T131008-016d24",
+    "phasea-abrAnjanRL-20261117T132208-0a7bf1",
+    "phasea-abrAnjanRL-20261117T132808-8c9535",
+    "phasea-abrAnjanRL-20261117T134608-a4913e",
+    "phasea-abrAnjanRL-20261117T140108-d6532e",
+    "phasea-abrAnjanRL-20261117T140409-c63216",
+    "phasea-abrAnjanRL-20261117T141908-b6eab2",
+    "phasea-abrAnjanRL-20261117T143708-404491",
+    "phasea-abrAnjanRL-20261117T144308-7a0195",
+    "phasea-abrAnjanRL-20261117T145508-3f7f93",
+    "phasea-abrAnjanRL-20261117T150108-c94adc",
+    "phasea-abrAnjanRL-20261117T151308-66ea11",
+    "phasea-abrAnjanRL-20261117T151908-bb1e5e",
+    "phasea-abrAnjanRL-20261117T153108-c682d9",
+    "phasea-abrAnjanRL-20261117T153709-07a78c",
+    "phasea-abrAnjanSimple-20261117T052017-94e776",
+    "phasea-abrAnjanSimple-20261117T052237-d48279",
+    "phasea-abrAnjanSimple-20261117T052437-576100",
+    "phasea-abrAnjanSimple-20261117T052637-a3ffbc",
+    "phasea-abrAnjanSimple-20261117T053244-9507e6",
+    "phasea-abrAnjanSimple-20261117T053437-2e76d7",
+    "phasea-abrBola-20261117T084946-611709",
+    "phasea-abrBola-20261117T092808-eda788",
+    "phasea-abrBola-20261117T094608-3da91b",
+    "phasea-abrBola-20261117T100408-292a6e",
+    "phasea-abrBola-20261117T102208-c3189e",
+    "phasea-abrBola-20261117T104008-1c19a5",
+    "phasea-abrBola-20261117T105808-dea88e",
+    "phasea-abrBola-20261117T111608-cc609d",
+    "phasea-abrBola-20261117T115508-383d30",
+    "phasea-abrBola-20261117T121308-13e8e5",
+    "phasea-abrBola-20261117T123708-814c71",
+    "phasea-abrBola-20261117T125509-1ff887",
+    "phasea-abrBola-20261117T131308-05baaa",
+    "phasea-abrBola-20261117T133108-dd6053",
+    "phasea-abrBola-20261117T134908-8b742f",
+    "phasea-abrBola-20261117T140708-21733e",
+    "phasea-abrBola-20261117T142508-6f0078",
+    "phasea-abrBola-20261117T150408-076860",
+    "phasea-abrBola-20261117T152208-fc42ac",
+    "phasea-abrBola-20261117T154008-b4e421",
+    "phasea-abrCMAB-20261117T085508-0a7e9f",
+    "phasea-abrCMAB-20261117T091307-a9a911",
+    "phasea-abrCMAB-20261117T093108-778d47",
+    "phasea-abrCMAB-20261117T101007-eda7b4",
+    "phasea-abrCMAB-20261117T102807-a154a6",
+    "phasea-abrCMAB-20261117T104607-f30d2f",
+    "phasea-abrCMAB-20261117T110408-ecc13a",
+    "phasea-abrCMAB-20261117T112207-713b2c",
+    "phasea-abrCMAB-20261117T114008-3b0dd8",
+    "phasea-abrCMAB-20261117T115808-be2817",
+    "phasea-abrCMAB-20261117T122208-714c41",
+    "phasea-abrCMAB-20261117T124007-c01c20",
+    "phasea-abrCMAB-20261117T131908-9397b4",
+    "phasea-abrCMAB-20261117T133708-c552ec",
+    "phasea-abrCMAB-20261117T135508-37f2e0",
+    "phasea-abrCMAB-20261117T141307-6e7248",
+    "phasea-abrCMAB-20261117T143108-9fbdc2",
+    "phasea-abrCMAB-20261117T144907-56b6a3",
+    "phasea-abrCMAB-20261117T150707-5160eb",
+    "phasea-abrCMAB-20261117T154608-dead21",
+    "phasea-abrCMAB-20261117T155208-d767e3",
+    "phasea-abrCMAB-20261117T155808-a08385",
+    "phasea-abrCMAB-20261117T161308-4731a0",
+    "phasea-abrCMAB-20261117T161908-0ad77a",
+    "phasea-abrCMAB-20261117T162508-7de286",
+    "phasea-abrCMAB-20261117T164008-fb49af",
+    "phasea-abrCMAB-20261117T164608-4e64ca",
+    "phasea-abrCMAB-20261117T165208-c81c66",
+    "phasea-abrCMAB-20261117T170708-9a50d1",
+    "phasea-abrCMAB-20261117T171308-4e817d",
+    "phasea-abrCMAB-20261117T171908-7dc262",
+    "phasea-abrCMAB-20261117T173915-88f80a",
+    "phasea-abrCMAB-20261117T174715-27513e",
+    "phasea-abrCMABImproved-20261117T085808-43bbe1",
+    "phasea-abrCMABImproved-20261117T090408-bd7e4c",
+    "phasea-abrCMABImproved-20261117T091607-2b4f43",
+    "phasea-abrCMABImproved-20261117T092208-c72a58",
+    "phasea-abrCMABImproved-20261117T093407-65bd2a",
+    "phasea-abrCMABImproved-20261117T094009-cb7f9e",
+    "phasea-abrCMABImproved-20261117T095208-16b68c",
+    "phasea-abrCMABImproved-20261117T095808-44040d",
+    "phasea-abrCMABImproved-20261117T101608-a7e94f",
+    "phasea-abrCMABImproved-20261117T103107-28d5b4",
+    "phasea-abrCMABImproved-20261117T103407-1128c1",
+    "phasea-abrCMABImproved-20261117T104908-cdf1c0",
+    "phasea-abrCMABImproved-20261117T110708-2bcefb",
+    "phasea-abrCMABImproved-20261117T111308-0c825a",
+    "phasea-abrCMABImproved-20261117T112508-9c7dd2",
+    "phasea-abrCMABImproved-20261117T113108-a8046f",
+    "phasea-abrCMABImproved-20261117T114308-eca69e",
+    "phasea-abrCMABImproved-20261117T114908-ba440d",
+    "phasea-abrCMABImproved-20261117T120108-52a64f",
+    "phasea-abrCMABImproved-20261117T120708-d55aa8",
+    "phasea-abrCMABImproved-20261117T122508-604e6f",
+    "phasea-abrCMABImproved-20261117T123108-b4b5d8",
+    "phasea-abrCMABImproved-20261117T124308-ce34e4",
+    "phasea-abrCMABImproved-20261117T124909-1877c7",
+    "phasea-abrCMABImproved-20261117T130107-ec13fa",
+    "phasea-abrCMABImproved-20261117T130708-968051",
+    "phasea-abrCMABImproved-20261117T132509-b47f49",
+    "phasea-abrCMABImproved-20261117T134008-cf166b",
+    "phasea-abrCMABImproved-20261117T134308-dece40",
+    "phasea-abrCMABImproved-20261117T135808-89a48f",
+    "phasea-abrCMABImproved-20261117T141608-fd0382",
+    "phasea-abrCMABImproved-20261117T142209-3ca56d",
+    "phasea-abrCMABImproved-20261117T143408-6fb49e",
+    "phasea-abrCMABImproved-20261117T144008-267fbf",
+    "phasea-abrCMABImproved-20261117T145208-0f3d14",
+    "phasea-abrCMABImproved-20261117T145809-199e6b",
+    "phasea-abrCMABImproved-20261117T151008-992809",
+    "phasea-abrCMABImproved-20261117T151608-7e5ab5",
+    "phasea-abrCMABImproved-20261117T152808-8de183",
+    "phasea-abrCMABImproved-20261117T153409-3114c1",
+    "phasea-abrCMABImproved-20261117T154908-7e7fd9",
+    "phasea-abrCMABImproved-20261117T155508-689231",
+    "phasea-abrCMABImproved-20261117T160109-6c829d",
+    "phasea-abrCMABImproved-20261117T160409-9c66ca",
+    "phasea-abrCMABImproved-20261117T160708-9b7a9a",
+    "phasea-abrCMABImproved-20261117T161008-f069bf",
+    "phasea-abrCMABImproved-20261117T161608-15398e",
+    "phasea-abrCMABImproved-20261117T162208-cc0ad4",
+    "phasea-abrCMABImproved-20261117T162808-54bf12",
+    "phasea-abrCMABImproved-20261117T163108-6abfb2",
+    "phasea-abrCMABImproved-20261117T163408-b0478d",
+    "phasea-abrCMABImproved-20261117T163708-b685a3",
+    "phasea-abrCMABImproved-20261117T164308-c35156",
+    "phasea-abrCMABImproved-20261117T164908-d45a02",
+    "phasea-abrCMABImproved-20261117T165508-bd3a2c",
+    "phasea-abrCMABImproved-20261117T165808-2a6417",
+    "phasea-abrCMABImproved-20261117T170108-8d97f2",
+    "phasea-abrCMABImproved-20261117T170408-678168",
+    "phasea-abrCMABImproved-20261117T171008-0e5d77",
+    "phasea-abrCMABImproved-20261117T171608-e16303",
+    "phasea-abrCMABImproved-20261117T172313-e1ace3",
+    "phasea-abrCMABImproved-20261117T172712-dc9cd4",
+    "phasea-abrCMABImproved-20261117T173112-1edc01",
+    "phasea-abrCMABImproved-20261117T173514-cc9da0",
+    "phasea-abrCMABImproved-20261117T174316-f70f37",
+    "phasea-abrCMABImproved-20261117T175116-892424",
+    "phasea-abrThroughput-20261117T085208-627b90",
+    "phasea-abrThroughput-20261117T091008-883d96",
+    "phasea-abrThroughput-20261117T094907-1cd249",
+    "phasea-abrThroughput-20261117T100707-83b2bf",
+    "phasea-abrThroughput-20261117T102508-e2f4f7",
+    "phasea-abrThroughput-20261117T104307-49d109",
+    "phasea-abrThroughput-20261117T110108-b92ad8",
+    "phasea-abrThroughput-20261117T111908-7210ce",
+    "phasea-abrThroughput-20261117T113708-9a5a23",
+    "phasea-abrThroughput-20261117T121608-8798b8",
+    "phasea-abrThroughput-20261117T121908-e40719",
+    "phasea-abrThroughput-20261117T125807-1d770f",
+    "phasea-abrThroughput-20261117T131607-6c251a",
+    "phasea-abrThroughput-20261117T133407-06fea1",
+    "phasea-abrThroughput-20261117T135208-fe50bb",
+    "phasea-abrThroughput-20261117T141008-36c0bf",
+    "phasea-abrThroughput-20261117T142808-7eb6bf",
+    "phasea-abrThroughput-20261117T144608-84bcaa",
+    "phasea-abrThroughput-20261117T152508-f0932b",
+    "phasea-abrThroughput-20261117T154308-7a6db4"
+  ],
+  "preserved_dependencies": [
+    "complete measured dash.js source/testplayer and rl/web snapshot",
+    "pilot_env base class",
+    "selected seed checkpoints for export",
+    "frozen Compose build paths"
+  ]
+}

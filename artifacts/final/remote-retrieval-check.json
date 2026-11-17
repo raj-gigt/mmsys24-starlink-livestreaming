@@ -1,8 +1,9 @@
 {
   "status": "PASS",
-  "parent_revision": "888d59d2bfc7d7c5620c6abdd19103f35d30ed98",
+  "parent_revision": "54cde413b4ca6bc6ace42e4c5e675ef195eb8ede",
   "player_revision": "60f56693032bb7e12c174951da4ee05818383527",
   "verified_frozen_files": 303,
+  "verified_submission_source_files": 835,
   "method": "Fresh public shallow fetches, tar object contents and parent submodule pin; not local remote-tracking refs",
-  "scope": "Measured file contents recoverable from published parent and player fork"
+  "scope": "Every curated submission input, final report byte content and measured source recoverable from published parent and pinned player fork; text line endings normalized"
 }

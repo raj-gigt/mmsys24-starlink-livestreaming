@@ -69,7 +69,7 @@
     },
     "20": {
       "status": "Complete",
-      "evidence": "Balanced80-session four-policy synthesis and all6 paired contrasts generated;185 required portable runs and830 files inventoried via explicit roots/import closure. Frozen303 files/models unchanged; export helper exact parity verified.",
+      "evidence": "Balanced80-session four-policy synthesis and all6 paired contrasts generated;835 final curated inputs classified via exact roots/import closure and recovered from published source. Frozen303 files/models unchanged.",
       "updated_utc": "2026-11-17T19:09:06.559953+00:00"
     },
     "21": {
@@ -78,16 +78,16 @@
       "updated_utc": "2026-11-17T19:33:01.076478+00:00"
     },
     "22": {
-      "status": "Running",
-      "evidence": "Initial focused ZIP passes full179-session and balanced80-session exact reproduction in fresh results-only venv. All86 arrays verified (85 regenerated plus Victoria cache); all four workload manifests exact; all build inputs present; nine full export assets byte-identical. Publishing and final immutable ZIP verification next.",
-      "updated_utc": "2026-11-17T19:33:01.076478+00:00"
+      "status": "Complete",
+      "evidence": "Final75,529,450-byte ZIP:837 files,185 raw-event runs. Fresh results-only venv (no torch/selenium/pymongo) verifies every byte and exactly reproduces179-session full plus80-session/all6 pair analyses. Public fresh fetch checks all835 source inputs and303 frozen files. PDF8 pages visually verified, all contribution details blank. Data/build/full-export checks PASS. No presentation material included.",
+      "updated_utc": "2026-11-17T19:37:59.364610+00:00"
     },
     "23": {
       "status": "Deferred",
       "evidence": "Revised plan only; Deferred presentation/demo/learning/rehearsal"
     }
   },
-  "updated_utc": "2026-11-17T19:33:01.076478+00:00",
+  "updated_utc": "2026-11-17T19:37:59.364610+00:00",
   "current_step": 22,
   "contribution_section": "User requested blank contribution template; fill later, do not invent teammate work",
   "active_experiment": {
@@ -100,7 +100,7 @@
     "resume": "Same command skips completed keys; do not edit frozen sources/models/configs. Clock helper holds/restores guest NTP automatically.",
     "source_publication": "be131536f260d64a6c7e6e4478d51e01e60bcf62; player60f56693032bb7e12c174951da4ee05818383527",
     "do_not_modify": "Every file in freeze.sources, or add files under dash.js/src, testplayer or rl/web; no heavy training or parallel browser experiments while measured matrix runs.",
-    "next": "Measured campaign complete. Submission release Step22 active; Step23 deferred.",
+    "next": "No active experiments. Submission verified; presentation Step23 remains deferred.",
     "analysis_followthrough_session": null,
     "followthrough": "After179 and automatic clock release, archive complete/invalid raw events and run reproduce_final --saved-results; source/model/metric/cutoff/replay checks then analyse_final. Visual checks and report/deck/demo/package still require continuation.",
     "last_saved_trials": 179,
@@ -123,10 +123,10 @@
     "report_source": "scripts/build_final_report.py",
     "external_build_root": "C:/Users/HP/AppData/Local/LEO-RL-final-artifacts",
     "runtime": "C:/Program Files/WindowsApps/OpenAI.CodexPrimaryRuntime.v26-1112-737-0_26.1112.737.0_x64__3k8sg7r9htsxt/dependencies",
-    "latest_pushed_parent": "5dbe19d",
     "draft_assembly_session": null,
     "future_process": "Disabled. Presentation Step23 requires new user instruction.",
-    "draft_assembly_status": "Cancelled session29217 before report/PPT generation per user stop-after-Step19 instruction"
+    "draft_assembly_status": "Cancelled session29217 before report/PPT generation per user stop-after-Step19 instruction",
+    "verified_submission_source_parent": "54cde413b4ca6bc6ace42e4c5e675ef195eb8ede"
   },
   "data_publication": {
     "processed_files": 86,
@@ -140,7 +140,7 @@
     "step23": "Deferred presentation; no execution before new user instruction",
     "basis": "User: begin submission run"
   },
-  "execution_state": "Submission run active: Steps20-22 only",
+  "execution_state": "Submission run complete through Step22; await user instruction for deferred Step23.",
   "resolved_protocol_refinements": [
     "Full raw tc log implemented and source-verified479 events versus256 bounded status; physical outage/100ms/recovery PASS. Need final replay checks after actual runs.",
     "Per-sample epoch/performance consistency and production neural adapter prepared; build only after final actor export.",
@@ -163,5 +163,25 @@
     "zip_restrictions": "No known size/name/layout restrictions",
     "portal_upload": "User will upload",
     "status": "Confirmed and execution authorized; contribution details intentionally remain empty."
+  },
+  "submission_release": {
+    "archive": "release/Group4-submission.zip",
+    "zip_bytes": 75529450,
+    "sha256": "676ee5e28514f373d125a253a1c66609ea0588e53d781d568a3601ec3ed08011",
+    "payload_files_including_manifest": 837,
+    "portable_event_runs": 185,
+    "report_pages": 8,
+    "source_revision": "54cde413b4ca6bc6ace42e4c5e675ef195eb8ede",
+    "player_revision": "60f56693032bb7e12c174951da4ee05818383527",
+    "verified_at_utc": "2026-11-17T19:37:59.364610+00:00",
+    "contribution_statements": "Intentionally empty per user instruction",
+    "portal_upload": "User will upload",
+    "presentation": "Not executed; deferred until new user instruction",
+    "verification": [
+      "release/clean-extraction-check.json",
+      "release/component-check.json",
+      "release/report-check.json",
+      "artifacts/final/remote-retrieval-check.json"
+    ]
   }
 }
